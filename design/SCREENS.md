@@ -1,17 +1,17 @@
-# Between Us — All 13 interactive screen concepts
+# Between Us v2.0 · demo navigation
 
-These links open the live, clickable phone mockups. They contain example content only.
+Open the [live demo](https://oxieg3n.github.io/Between-us/) and switch between **Kid / teen** and **Parent** in the role switcher.
 
-1. [Welcome](https://oxieg3n.github.io/Between-us/?screen=welcome)
-2. [Create family](https://oxieg3n.github.io/Between-us/?screen=pair_parent)
-3. [Join family](https://oxieg3n.github.io/Between-us/?screen=pair_child)
-4. [Kid home](https://oxieg3n.github.io/Between-us/?screen=kid_home)
-5. [Kid writing](https://oxieg3n.github.io/Between-us/?screen=kid_compose)
-6. [Kid review](https://oxieg3n.github.io/Between-us/?screen=kid_review)
-7. [Parent home](https://oxieg3n.github.io/Between-us/?screen=parent_home)
-8. [Parent writing](https://oxieg3n.github.io/Between-us/?screen=parent_compose)
-9. [Parent review](https://oxieg3n.github.io/Between-us/?screen=parent_review)
-10. [Schedule check-in](https://oxieg3n.github.io/Between-us/?screen=schedule)
-11. [Child check-in](https://oxieg3n.github.io/Between-us/?screen=checkin_kid)
-12. [Shared conversation](https://oxieg3n.github.io/Between-us/?screen=conversation)
-13. [Privacy](https://oxieg3n.github.io/Between-us/?screen=privacy)
+- [Kid home](https://oxieg3n.github.io/Between-us/?screen=home&role=kid)
+- [Kid journal](https://oxieg3n.github.io/Between-us/?screen=journal&role=kid)
+- [My Circle](https://oxieg3n.github.io/Between-us/?screen=circle&role=kid)
+- [Start a conversation](https://oxieg3n.github.io/Between-us/?screen=compose&role=kid)
+- [Sample messages](https://oxieg3n.github.io/Between-us/?screen=messages&role=kid)
+- [Child check-in](https://oxieg3n.github.io/Between-us/?screen=open-door&role=kid)
+- [Parent home](https://oxieg3n.github.io/Between-us/?screen=home&role=parent)
+- [Parent journal](https://oxieg3n.github.io/Between-us/?screen=journal&role=parent)
+- [Parent contact approval](https://oxieg3n.github.io/Between-us/?screen=circle&role=parent)
+- [Check-in scheduler](https://oxieg3n.github.io/Between-us/?screen=open-door&role=parent)
+- [Privacy and safety](https://oxieg3n.github.io/Between-us/?screen=privacy)
+
+The earlier design boards and workflow blueprint are retained for reference. The v2 experience is a fresh implementation, not a functional messaging platform.
