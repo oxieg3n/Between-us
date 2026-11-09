@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Between Us - small app icon</title>
+  <rect x="8" y="8" width="1008" height="1008" rx="218" fill="#E5F4F6"/>
+  <!-- Two large unmistakable conversation bubbles, with no tiny ellipses. -->
+  <path d="M185 152 C234 101 390 101 456 152 C530 209 501 308 429 341 L394 395 L383 347 C271 353 180 310 171 240 C166 202 170 173 185 152Z" fill="#A9D6DD" stroke="#111820" stroke-width="18" stroke-linejoin="round"/>
+  <circle cx="333" cy="228" r="27" fill="#253746"/>
+  <path d="M577 177 C644 134 805 141 851 208 C893 272 848 349 735 356 L702 402 L684 351 C585 349 530 316 521 255 C518 224 539 198 577 177Z" fill="#F0B8A4" stroke="#111820" stroke-width="18" stroke-linejoin="round"/>
+  <circle cx="690" cy="247" r="27" fill="#253746"/>
+  <!-- Two faceless people, unchanged concept, simplified shapes. -->
+  <circle cx="341" cy="494" r="93" fill="#2F6077" stroke="#111820" stroke-width="19"/>
+  <circle cx="682" cy="501" r="89" fill="#F0B8A4" stroke="#111820" stroke-width="19"/>
+  <path d="M158 844 C169 680 241 603 341 603 C448 603 505 691 512 843Z" fill="#2F6077" stroke="#111820" stroke-width="19" stroke-linejoin="round"/>
+  <path d="M510 843 C521 684 580 612 682 612 C786 612 851 694 864 844Z" fill="#F0B8A4" stroke="#111820" stroke-width="19" stroke-linejoin="round"/>
+  <!-- Small heart at center -->
+  <path d="M513 756 C478 712 436 725 436 761 C436 805 483 838 513 856 C546 831 586 799 586 762 C586 723 540 716 513 756Z" fill="#253746" stroke="#111820" stroke-width="14" stroke-linejoin="round"/>
+  <!-- Retain the protective harbor-shaped embrace -->
+  <path d="M120 774 C230 953 785 967 903 776" fill="none" stroke="#111820" stroke-width="67" stroke-linecap="round"/>
+  <path d="M120 774 C230 953 785 967 903 776" fill="none" stroke="#A9D6DD" stroke-width="52" stroke-linecap="round"/>
+</svg>
