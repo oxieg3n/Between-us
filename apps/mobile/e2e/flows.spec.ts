@@ -256,3 +256,55 @@ test("circle permissions, optional check-ins and schedule management remain func
     }),
   ).toBeVisible();
 });
+
+test("phone and tablet layouts keep navigation and keyboard-accessible writing controls reachable", async ({
+  page,
+}) => {
+  await explore(page);
+  for (const viewport of [
+    { width: 320, height: 640 },
+    { width: 430, height: 932 },
+    { width: 960, height: 1280 },
+  ]) {
+    await page.setViewportSize(viewport);
+    for (const name of ["Home", "Journal", "Chats", "Circle"]) {
+      await expect(tab(page, name)).toBeInViewport();
+    }
+    await expect
+      .poll(() =>
+        page.evaluate(
+          () => document.documentElement.scrollWidth <= window.innerWidth,
+        ),
+      )
+      .toBe(true);
+    await tab(page, "Journal").click();
+    await button(page, "New entry").click();
+    const title = page.getByRole("textbox", {
+      name: "Entry title",
+      exact: true,
+    });
+    const body = page.getByRole("textbox", {
+      name: "Your private demo words",
+      exact: true,
+    });
+    await title.focus();
+    await expect(title).toBeFocused();
+    await title.fill(`Fictional ${viewport.width} page`);
+    await page.keyboard.press("Tab");
+    await expect(body).toBeFocused();
+    await body.fill(`Fictional writing at viewport ${viewport.width}.`);
+    await page.keyboard.press("Tab");
+    await expect(button(page, "Save entry")).toBeFocused();
+    await page.keyboard.press("Enter");
+    await expect(button(page, "Saved in this session")).toBeDisabled();
+    await tab(page, "Home").click();
+    await expect(tab(page, "Home")).toHaveAttribute("aria-selected", "true");
+    await expect
+      .poll(() =>
+        page.evaluate(
+          () => document.documentElement.scrollWidth <= window.innerWidth,
+        ),
+      )
+      .toBe(true);
+  }
+});

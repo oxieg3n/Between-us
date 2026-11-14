@@ -56,18 +56,21 @@ export function Button({
         {
           backgroundColor: primary
             ? t.primary
-            : quiet
-              ? "transparent"
-              : t.surface,
-          borderColor: focused ? t.primary : quiet ? "transparent" : t.border,
-          borderWidth: focused ? 2 : 1,
+            : selected
+              ? t.soft
+              : quiet
+                ? "transparent"
+                : t.surface,
+          borderColor:
+            focused || selected ? t.primary : quiet ? "transparent" : t.border,
+          borderWidth: focused || selected ? 2 : 1,
           opacity: disabled ? 0.45 : pressed ? 0.72 : 1,
         },
       ]}
     >
       <Text
         style={{
-          color: primary ? t.onPrimary : quiet ? t.primary : t.text,
+          color: primary ? t.onPrimary : selected || quiet ? t.primary : t.text,
           fontSize: 16,
           lineHeight: 23,
           fontWeight: "600",
