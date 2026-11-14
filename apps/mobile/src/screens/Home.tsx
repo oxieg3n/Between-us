@@ -223,12 +223,19 @@ export function SafetyScreen() {
 }
 export function OnboardingScreen() {
   const { switchRole, go } = useApp();
+  const { theme: t } = useAppearance();
   return (
     <View style={{ gap: 28, paddingTop: 20 }}>
       <Image
         source={require("../../assets/brand/symbol.png")}
         accessibilityLabel="Approved Between Us symbol"
-        style={{ width: 90, height: 90, resizeMode: "contain" }}
+        style={{
+          width: 90,
+          height: 90,
+          resizeMode: "contain",
+          backgroundColor: t.logoSurface,
+          borderRadius: 10,
+        }}
       />
       <Eyebrow>BETWEEN US</Eyebrow>
       <Heading large>A place to find{"\n"}your words.</Heading>

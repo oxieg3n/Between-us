@@ -15,6 +15,7 @@ export type Theme = {
   onOutgoing: string;
   danger: string;
   soft: string;
+  logoSurface: string;
 };
 
 export const light: Theme = {
@@ -34,6 +35,7 @@ export const light: Theme = {
   onOutgoing: "#FFFFFF",
   danger: "#9A3838",
   soft: "#EDF4F5",
+  logoSurface: "#F7FAFC",
 };
 
 export const dark: Theme = {
@@ -53,6 +55,7 @@ export const dark: Theme = {
   onOutgoing: "#172730",
   danger: "#F0B8A4",
   soft: "#20343E",
+  logoSurface: "#F7FAFC",
 };
 
 export const themes = { light, dark };

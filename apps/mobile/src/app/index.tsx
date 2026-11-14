@@ -143,12 +143,27 @@ function Application() {
       <View style={[styles.header, { borderColor: t.border }]}>
         {tabs.some((x) => x.screen === screen) || screen === "Onboarding" ? (
           <View style={styles.brand}>
-            <Image
-              source={require("../../assets/brand/symbol.png")}
-              accessibilityLabel="Between Us approved symbol"
-              style={{ width: 36, height: 36, resizeMode: "contain" }}
-            />
-            <Text style={{ color: t.text, fontSize: 19, fontWeight: "600" }}>
+            <View
+              style={{
+                backgroundColor: t.logoSurface,
+                padding: 4,
+                borderRadius: 10,
+              }}
+            >
+              <Image
+                source={require("../../assets/brand/symbol.png")}
+                accessibilityLabel="Between Us approved symbol"
+                style={{ width: 36, height: 36, resizeMode: "contain" }}
+              />
+            </View>
+            <Text
+              style={{
+                color: t.text,
+                fontSize: 19,
+                fontWeight: "600",
+                flexShrink: 1,
+              }}
+            >
               Between Us
             </Text>
           </View>
@@ -288,7 +303,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
   },
-  brand: { flexDirection: "row", gap: 10, alignItems: "center" },
+  brand: { flex: 1, flexDirection: "row", gap: 10, alignItems: "center" },
   settings: {
     minWidth: 48,
     minHeight: 48,
