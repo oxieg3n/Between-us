@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "Between Us",
+    "slug": "between-us",
+    "version": "0.1.0",
+    "orientation": "default",
+    "icon": "./assets/brand/app-icon.png",
+    "scheme": "between-us",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.oxieg3n.betweenus"
+    },
+    "android": {
+      "package": "com.oxieg3n.betweenus",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/brand/app-icon.png",
+        "backgroundColor": "#F7FAFC"
+      }
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/brand/app-icon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F7FAFC",
+          "image": "./assets/brand/symbol.png",
+          "imageWidth": 160
+        }
+      ]
+    ]
+  }
+}

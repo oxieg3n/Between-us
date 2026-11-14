@@ -34,3 +34,57 @@ This is **not** a functioning, secured communication app. There is no real authe
 A future production release needs age-appropriate consent, verified contacts, moderation and reporting, abuse prevention, securely stored and access-controlled journal entries, strong encryption, and well-designed paths to seek another trusted adult when a parent is unsafe.
 
 Built with care by [Powered By Oxieg3n](https://poweredby.oxieg3n.com/).
+
+## Mobile foundation
+
+A fictional, memory-only Expo SDK 58 / React Native / TypeScript / Expo Router application lives in `apps/mobile/`. The original Pages demo is unchanged. Both roles have journals, local conversation prompts, My Circle, composition/review, simulated conversations, optional check-ins and safety information. The approved symbol and Safe Harbor light/dark themes are reused.
+
+### Windows PowerShell startup
+
+```powershell
+Set-Location 'D:\proejcts\BetweenUs\apps\mobile'
+npm ci
+npm start
+```
+
+Run `npm run web` for a browser preview. Use fictional information only. Memory resets on reload. Role switching clears editors/drafts and is a demo inspection control, not authentication. No real messaging, reporting, encryption, identity verification, notification delivery, analytics, external AI, or server storage is implemented.
+
+### Android testing
+
+Start the emulator in one PowerShell window:
+
+```powershell
+$env:ANDROID_HOME = "$env:LOCALAPPDATA\Android\Sdk"
+$env:PATH = "$env:ANDROID_HOME\platform-tools;$env:ANDROID_HOME\emulator;$env:PATH"
+emulator -avd Pixel_10
+```
+
+In another PowerShell window:
+
+```powershell
+$env:ANDROID_HOME = "$env:LOCALAPPDATA\Android\Sdk"
+$env:PATH = "$env:ANDROID_HOME\platform-tools;$env:ANDROID_HOME\emulator;$env:PATH"
+Set-Location 'D:\proejcts\BetweenUs\apps\mobile'
+npm run android
+```
+
+Expo CLI opens compatible Expo Go. A physical test phone needs access to Metro and an Expo Go version supporting SDK 58; run `npm start` and scan its QR code. If the store version is incompatible, use Expo's official matching client download or a reviewed development build. Native Gradle/APK builds require a supported JDK; the bundled Android Studio JBR is Java 25 and has not been validated for building. iOS native builds require macOS; iOS runtime is untested.
+
+### Validation
+
+```powershell
+npm run typecheck
+npm run lint
+npm test
+npm run test:ui
+npx expo install --check
+npx expo-doctor
+npx expo export --platform web
+npx expo export --platform android
+```
+
+UI tests use installed Google Chrome at 390 × 844, with a local Metro server on port 8081. They exercise core flows and run an axe scan on the safety screen. This is not whole-app accessibility certification. Screenshots go to `apps/mobile/test-results/`; selected session evidence is in `spec/qa/`.
+
+Parents add/remove contacts directly and approve child requests. New contacts cannot message: approval alone establishes neither acceptance nor identity. Seed verification is fictional. Review is required before simulated sends; journal text is never copied automatically. Children can skip check-ins without penalty or seek another safe adult without approval.
+
+See [architecture/backend comparison](spec/MOBILE_ARCHITECTURE.md), [security boundaries](spec/security/BOUNDARIES.md), [mobile design](design/MOBILE_SYSTEM.md), [QA checklist](spec/MOBILE_QA.md), and [session results](spec/BUILD_REPORT.md). No backend is selected. Real use requires reviewed identity, consent, authorization, storage/key recovery, abuse operations and notification design. Paid services, credentials and production deployment require owner approval.
