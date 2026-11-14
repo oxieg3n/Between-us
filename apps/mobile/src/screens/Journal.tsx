@@ -37,7 +37,9 @@ export function JournalOverview() {
       <Heading large>My Journal</Heading>
       <View style={styles.private}>
         <Icon name="lock" size={16} />
-        <Body muted>Private to your demo role</Body>
+        <Body muted style={{ flexShrink: 1 }}>
+          Private to your demo role
+        </Body>
       </View>
       <Body muted>
         Write what you want to keep for yourself. Nothing here becomes a

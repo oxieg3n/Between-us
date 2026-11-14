@@ -71,7 +71,11 @@ function Application() {
           ? "Circle"
           : screen;
   useEffect(() => {
-    scroll.current?.scrollTo({ y: 0, animated: false });
+    if (screen === "Conversation") {
+      requestAnimationFrame(() =>
+        scroll.current?.scrollToEnd({ animated: false }),
+      );
+    } else scroll.current?.scrollTo({ y: 0, animated: false });
   }, [screen]);
   const navigation = (
     <View
@@ -140,121 +144,138 @@ function Application() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: t.background }}>
       <StatusBar style={t.name === "Night Harbor" ? "light" : "dark"} />
-      <View style={[styles.header, { borderColor: t.border }]}>
-        {tabs.some((x) => x.screen === screen) || screen === "Onboarding" ? (
-          <View style={styles.brand}>
-            <View
-              style={{
-                backgroundColor: t.logoSurface,
-                padding: 4,
-                borderRadius: 10,
-              }}
-            >
-              <Image
-                source={require("../../assets/brand/symbol.png")}
-                accessibilityLabel="Between Us approved symbol"
-                style={{ width: 36, height: 36, resizeMode: "contain" }}
-              />
-            </View>
-            <Text
-              style={{
-                color: t.text,
-                fontSize: 19,
-                fontWeight: "600",
-                flexShrink: 1,
-              }}
-            >
-              Between Us
-            </Text>
-          </View>
-        ) : (
-          <Pressable
-            accessibilityRole="button"
-            accessibilityLabel="Back"
-            onPress={back}
-            style={styles.back}
-          >
-            <Icon name="back" />
-            <Text style={{ color: t.text, fontSize: 16 }}>Back</Text>
-          </Pressable>
-        )}
-        <Pressable
-          accessibilityRole="button"
-          accessibilityLabel="Profile & settings"
-          onPress={() => go("Settings")}
-          style={styles.settings}
-        >
-          <Icon name="settings" />
-        </Pressable>
-      </View>
-      <View style={{ flex: 1, flexDirection: "row" }}>
-        {rail && screen !== "Onboarding" && navigation}
-        <KeyboardAvoidingView
-          style={{ flex: 1 }}
-          behavior={Platform.OS === "ios" ? "padding" : "height"}
-        >
-          <ScrollView
-            key={screen}
-            ref={scroll}
-            keyboardShouldPersistTaps="handled"
-            keyboardDismissMode="on-drag"
-            contentContainerStyle={[styles.content, rail && { maxWidth: 720 }]}
-            onContentSizeChange={() => {
-              if (screen === "Conversation")
-                scroll.current?.scrollToEnd({ animated: false });
-            }}
-          >
-            {screen !== "Home" && screen !== "Onboarding" && (
-              <View style={{ marginBottom: 8 }}>
-                <Text
-                  accessibilityRole="header"
-                  style={{ color: t.muted, fontSize: 15, fontWeight: "600" }}
-                >
-                  {titles[screen]}
-                </Text>
-              </View>
-            )}
-            <Text style={{ color: t.muted, fontSize: 11, letterSpacing: 0.5 }}>
-              FICTIONAL DEMO · MEMORY ONLY
-            </Text>
-            {!!notice && (
+      <KeyboardAvoidingView
+        style={{ flex: 1 }}
+        behavior={
+          Platform.OS === "ios" || Platform.OS === "android"
+            ? "padding"
+            : undefined
+        }
+      >
+        <View style={[styles.header, { borderColor: t.border }]}>
+          {tabs.some((x) => x.screen === screen) || screen === "Onboarding" ? (
+            <View style={styles.brand}>
               <View
-                style={[
-                  styles.notice,
-                  { backgroundColor: t.soft, borderColor: t.border },
-                ]}
+                style={{
+                  backgroundColor: t.logoSurface,
+                  padding: 4,
+                  borderRadius: 10,
+                }}
               >
-                <Text
-                  accessibilityRole="alert"
-                  accessibilityLiveRegion="polite"
-                  style={{ color: t.text, fontSize: 15, lineHeight: 23 }}
-                >
-                  {notice}
-                </Text>
-              </View>
-            )}
-            {screens[screen]}
-            {![
-              "Safety",
-              "Settings",
-              "Circle",
-              "Contact",
-              "Onboarding",
-              "Conversation",
-            ].includes(screen) && (
-              <View style={{ marginTop: 20 }}>
-                <Button
-                  quiet
-                  label="Privacy & safety"
-                  onPress={() => go("Safety")}
+                <Image
+                  source={require("../../assets/brand/symbol.png")}
+                  accessibilityLabel="Between Us approved symbol"
+                  style={{ width: 36, height: 36, resizeMode: "contain" }}
                 />
               </View>
-            )}
-          </ScrollView>
-          {screen === "Conversation" && <ConversationComposer />}
-        </KeyboardAvoidingView>
-      </View>
-      {!rail && screen !== "Onboarding" && navigation}
+              <Text
+                style={{
+                  color: t.text,
+                  fontSize: 19,
+                  fontWeight: "600",
+                  flexShrink: 1,
+                }}
+              >
+                Between Us
+              </Text>
+            </View>
+          ) : (
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="Back"
+              onPress={back}
+              style={styles.back}
+            >
+              <Icon name="back" />
+              <Text style={{ color: t.text, fontSize: 16 }}>Back</Text>
+            </Pressable>
+          )}
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel="Profile & settings"
+            onPress={() => go("Settings")}
+            style={styles.settings}
+          >
+            <Icon name="settings" />
+          </Pressable>
+        </View>
+        <View style={{ flex: 1, flexDirection: "row" }}>
+          {rail && screen !== "Onboarding" && navigation}
+          <View style={{ flex: 1 }}>
+            <ScrollView
+              key={screen}
+              ref={scroll}
+              keyboardShouldPersistTaps="handled"
+              keyboardDismissMode="on-drag"
+              contentContainerStyle={[
+                styles.content,
+                rail && { maxWidth: 720 },
+              ]}
+              onLayout={() => {
+                if (screen === "Conversation")
+                  requestAnimationFrame(() =>
+                    scroll.current?.scrollToEnd({ animated: false }),
+                  );
+              }}
+              onContentSizeChange={() => {
+                if (screen === "Conversation")
+                  scroll.current?.scrollToEnd({ animated: false });
+              }}
+            >
+              {screen !== "Home" && screen !== "Onboarding" && (
+                <View style={{ marginBottom: 8 }}>
+                  <Text
+                    accessibilityRole="header"
+                    style={{ color: t.muted, fontSize: 15, fontWeight: "600" }}
+                  >
+                    {titles[screen]}
+                  </Text>
+                </View>
+              )}
+              <Text
+                style={{ color: t.muted, fontSize: 11, letterSpacing: 0.5 }}
+              >
+                FICTIONAL DEMO · MEMORY ONLY
+              </Text>
+              {!!notice && (
+                <View
+                  style={[
+                    styles.notice,
+                    { backgroundColor: t.soft, borderColor: t.border },
+                  ]}
+                >
+                  <Text
+                    accessibilityRole="alert"
+                    accessibilityLiveRegion="polite"
+                    style={{ color: t.text, fontSize: 15, lineHeight: 23 }}
+                  >
+                    {notice}
+                  </Text>
+                </View>
+              )}
+              {screens[screen]}
+              {![
+                "Safety",
+                "Settings",
+                "Circle",
+                "Contact",
+                "Onboarding",
+                "Conversation",
+              ].includes(screen) && (
+                <View style={{ marginTop: 20 }}>
+                  <Button
+                    quiet
+                    label="Privacy & safety"
+                    onPress={() => go("Safety")}
+                  />
+                </View>
+              )}
+            </ScrollView>
+            {screen === "Conversation" && <ConversationComposer />}
+          </View>
+        </View>
+        {!rail && screen !== "Onboarding" && navigation}
+      </KeyboardAvoidingView>
       <Modal
         visible={!!dialog}
         transparent
