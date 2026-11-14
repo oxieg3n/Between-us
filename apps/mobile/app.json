@@ -2,7 +2,7 @@
   "expo": {
     "name": "Between Us",
     "slug": "between-us",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "orientation": "default",
     "icon": "./assets/brand/app-icon.png",
     "scheme": "between-us",
@@ -32,6 +32,9 @@
           "imageWidth": 160
         }
       ]
-    ]
+    ],
+    "extra": {
+      "buildId": "1114-OpenLetterRedesign"
+    }
   }
 }

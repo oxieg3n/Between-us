@@ -7,11 +7,11 @@ Read `spec/JOURNAL_AND_CIRCLE.md`, `spec/MOBILE_ARCHITECTURE.md`, and `spec/secu
 - Work in `D:\proejcts\BetweenUs` (intentional spelling), on a feature branch. Never force-push, merge to main, or publish without owner approval.
 - Preserve `docs/`, root `index.html`, approved brand assets and repository history. The GitHub Pages prototype is a separate deliverable.
 - Keep the mobile app in `apps/mobile/`. Prefer ordinary Expo/React Native components and local modules over additional frameworks or workspace tooling.
-- Use the existing logo, official tagline and Safe Harbor palette. No rebrand or corporate theme.
+- Use the existing logo and official tagline with the approved Open Letter direction, Safe Harbor light theme and Night Harbor dark theme. See `design/OPEN_LETTER_DESIGN_SYSTEM.md`. No unapproved rebrand or corporate theme.
 
 ## Prototype boundaries
 
-- Fictional data only. Journals, drafts and simulated messages remain in memory. No persistence, analytics, network content processing, AI provider, credentials or paid services.
+- Fictional data only. Journals, drafts and simulated messages remain in memory. The owner-approved exception is the appearance preference (system/light/dark), stored under one local key. No content persistence, analytics, network content processing, AI provider, credentials or paid services.
 - A role selector is a demo control, never authentication. Parent administration never grants access to another author's journal or unsent drafts.
 - Only an explicit review action may share a separately composed message. Never copy journal text automatically.
 - Local optional reflections may suggest a conversation; never diagnose, analyze emotions, give treatment or solve the underlying problem.

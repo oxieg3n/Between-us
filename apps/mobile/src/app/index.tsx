@@ -1,809 +1,336 @@
-import { router, useLocalSearchParams } from "expo-router";
-import React, { useEffect, useState } from "react";
+import { AppProvider, useApp, type Screen } from "../state";
+import { useAppearance } from "../appearance";
+import { useEffect, useRef, useState } from "react";
 import {
-  BackHandler,
   Image,
   KeyboardAvoidingView,
+  Modal,
   Platform,
+  Pressable,
   ScrollView,
   StyleSheet,
   Text,
-  TextInput,
-  useColorScheme,
+  useWindowDimensions,
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
+import { Body, Button, Heading, Icon, type IconName } from "../ui";
 import {
-  canManage,
-  canMessage,
-  reflection,
-  type Contact,
-  type Role,
-} from "../communication";
+  HomeScreen,
+  OnboardingScreen,
+  SafetyScreen,
+  SettingsScreen,
+} from "../screens/Home";
+import { JournalEditor, JournalOverview } from "../screens/Journal";
 import {
-  newId,
-  createMessage,
-  initialJournals,
-  seedContacts,
-  updateContact,
-  type Checkin,
-  type Entry,
-  type Message,
-} from "../model";
-import { Button } from "../ui";
-import { light, dark } from "../theme";
-type Screen =
-  | "Home"
-  | "Journal"
-  | "Circle"
-  | "Write"
-  | "Review"
-  | "Messages"
-  | "Check-ins"
-  | "Safety";
-const responses = [
-  "Just listen",
-  "Give me ideas",
-  "Talk later",
-  "Talk in person",
+  ChatsList,
+  ConversationDetail,
+  ConversationComposer,
+  ComposeScreen,
+  ReviewScreen,
+} from "../screens/Messaging";
+import { CircleScreen, ContactScreen } from "../screens/Circle";
+import { CheckinsScreen, SchedulerScreen } from "../screens/Checkins";
+const tabs: { screen: Screen; label: string; icon: IconName }[] = [
+  { screen: "Home", label: "Home", icon: "home" },
+  { screen: "Journal", label: "Journal", icon: "journal" },
+  { screen: "Chats", label: "Chats", icon: "chats" },
+  { screen: "Circle", label: "Circle", icon: "circle" },
 ];
-function setScreen(screen: Screen) {
-  router.setParams({ screen });
-}
-export default function App() {
-  const { screen: screenParam } = useLocalSearchParams<{ screen?: string }>();
-  const screens: Screen[] = [
-    "Home",
-    "Journal",
-    "Circle",
-    "Write",
-    "Review",
-    "Messages",
-    "Check-ins",
-    "Safety",
-  ];
-  const screen: Screen = screens.includes(screenParam as Screen)
-    ? (screenParam as Screen)
-    : "Home";
-  const systemDark = useColorScheme() === "dark";
-  const [appearance, setAppearance] = useState<"system" | "light" | "dark">(
-    "system",
-  );
-  const t = (appearance === "system" ? systemDark : appearance === "dark")
-    ? dark
-    : light;
-  const [role, setRole] = useState<Role>("child");
-  const [journals, setJournals] = useState(initialJournals),
-    [contacts, setContacts] = useState(seedContacts);
-  const [entry, setEntry] = useState<Entry>({ id: "", title: "", body: "" }),
-    [suggestion, setSuggestion] = useState("");
-  const [draft, setDraft] = useState(""),
-    [recipient, setRecipient] = useState("alex"),
-    [response, setResponse] = useState(responses[0]),
-    [inPerson, setInPerson] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([]),
-    [contactName, setContactName] = useState(""),
-    [category, setCategory] = useState("Trusted adult");
-  const [notice, setNotice] = useState(""),
-    [question, setQuestion] = useState("What made you smile today?"),
-    [schedule, setSchedule] = useState("Fridays at 17:00");
-  const [checkins, setCheckins] = useState<Checkin[]>([
-    {
-      id: "example",
-      prompt: "What is one thing you would like to do together?",
-      schedule: "Example Friday at 17:00",
-      status: "open",
-    },
-  ]);
-  const [deleteId, setDeleteId] = useState("");
-  const mine = contacts.filter(
-    (c) => c.id !== (role === "child" ? "sam" : "alex"),
-  );
-  function go(next: Screen) {
-    setNotice("");
-    setDeleteId("");
-    setScreen(next);
-  }
+const titles: Record<Screen, string> = {
+  Home: "Between Us",
+  Journal: "My Journal",
+  JournalEditor: "A page for you",
+  Chats: "Conversations",
+  Conversation: "Conversation",
+  Compose: "Find the words",
+  Review: "Review your words",
+  Circle: "My Circle",
+  Contact: "Trusted person",
+  Checkins: "Open the Door",
+  Scheduler: "Schedule a check-in",
+  Settings: "Profile & appearance",
+  Safety: "Privacy & safety",
+  Onboarding: "Between Us",
+};
+function Application() {
+  const { screen, tab, go, back, notice, dialog, setDialog, scheduleId } =
+    useApp();
+  const { theme: t } = useAppearance();
+  const { width } = useWindowDimensions();
+  const rail = width >= 760;
+  const [focusedTab, setFocusedTab] = useState("");
+  const scroll = useRef<React.ElementRef<typeof ScrollView>>(null);
+  const selected =
+    screen === "JournalEditor"
+      ? "Journal"
+      : ["Conversation", "Compose", "Review"].includes(screen)
+        ? "Chats"
+        : screen === "Contact"
+          ? "Circle"
+          : screen;
   useEffect(() => {
-    const sub = BackHandler.addEventListener("hardwareBackPress", () => {
-      if (screen === "Home") return false;
-      setScreen(screen === "Review" ? "Write" : "Home");
-      return true;
-    });
-    return () => sub.remove();
+    scroll.current?.scrollTo({ y: 0, animated: false });
   }, [screen]);
-  function switchRole(next: Role) {
-    if (next === role) return;
-    setRole(next);
-    setScreen("Home");
-    setEntry({ id: "", title: "", body: "" });
-    setDraft("");
-    setSuggestion("");
-    setNotice("");
-    setDeleteId("");
-    setContactName("");
-    setRecipient(next === "child" ? "alex" : "sam");
-    setInPerson(false);
-  }
-  function compose(value = "") {
-    setDraft(value);
-    setInPerson(false);
-    go("Write");
-  }
-  function changeContact(
-    id: string,
-    status: "approved" | "removed" | "blocked",
-  ) {
-    setContacts((old) => updateContact(role, old, id, status));
-    setNotice(
-      `Contact ${status} in this demo. No invitation or verification was sent.`,
-    );
-  }
-  const button = (
-    label: string,
-    action: () => void,
-    primary = false,
-    disabled = false,
-  ) => (
-    <Button
-      key={label}
-      label={label}
-      onPress={action}
-      primary={primary}
-      disabled={disabled}
-      theme={t}
-    />
-  );
-  const text = (value: string, big = false) => (
-    <Text style={[big ? s.title : s.body, { color: t.text }]}>{value}</Text>
-  );
-  const field = (
-    label: string,
-    value: string,
-    change: (v: string) => void,
-    multiline = false,
-  ) => (
-    <View style={s.field}>
-      <Text style={[s.label, { color: t.text }]}>{label}</Text>
-      <TextInput
-        accessibilityLabel={label}
-        value={value}
-        onChangeText={change}
-        multiline={multiline}
-        maxLength={multiline ? 5000 : 150}
-        placeholder={multiline ? "Use fictional words for this demo…" : ""}
-        placeholderTextColor={t.muted}
-        style={[
-          s.input,
-          multiline && s.multiline,
-          { backgroundColor: t.surface, color: t.text, borderColor: t.border },
-        ]}
-      />
-    </View>
-  );
-  const card = (children: React.ReactNode, accent = false) => (
+  const navigation = (
     <View
+      accessibilityRole="tablist"
       style={[
-        s.card,
-        {
-          backgroundColor: accent ? t.accent : t.surface,
-          borderColor: t.border,
-        },
+        styles.nav,
+        rail ? styles.rail : styles.bottom,
+        { borderColor: t.border, backgroundColor: t.background },
       ]}
     >
-      {children}
+      {tabs.map((item) => (
+        <Pressable
+          key={item.screen}
+          accessibilityRole="tab"
+          aria-selected={selected === item.screen}
+          accessibilityLabel={item.label}
+          accessibilityState={{ selected: selected === item.screen }}
+          onPress={() => tab(item.screen)}
+          onFocus={() => setFocusedTab(item.screen)}
+          onBlur={() => setFocusedTab("")}
+          style={({ pressed }) => [
+            styles.tab,
+            {
+              backgroundColor:
+                selected === item.screen ? t.soft : "transparent",
+              opacity: pressed ? 0.7 : 1,
+              borderWidth: focusedTab === item.screen ? 2 : 0,
+              borderColor: t.primary,
+            },
+          ]}
+        >
+          <Icon
+            name={item.icon}
+            color={selected === item.screen ? t.primary : t.muted}
+          />
+          <Text
+            style={{
+              color: selected === item.screen ? t.primary : t.muted,
+              fontSize: 12,
+              fontWeight: selected === item.screen ? "700" : "400",
+              textAlign: "center",
+            }}
+          >
+            {item.label}
+          </Text>
+        </Pressable>
+      ))}
     </View>
   );
+  const screens: Record<Screen, React.ReactNode> = {
+    Home: <HomeScreen />,
+    Journal: <JournalOverview />,
+    JournalEditor: <JournalEditor />,
+    Chats: <ChatsList />,
+    Conversation: <ConversationDetail />,
+    Compose: <ComposeScreen />,
+    Review: <ReviewScreen />,
+    Circle: <CircleScreen />,
+    Contact: <ContactScreen />,
+    Checkins: <CheckinsScreen />,
+    Scheduler: <SchedulerScreen key={scheduleId} />,
+    Settings: <SettingsScreen />,
+    Safety: <SafetyScreen />,
+    Onboarding: <OnboardingScreen />,
+  };
   return (
-    <SafeAreaView style={[s.safe, { backgroundColor: t.background }]}>
-      <StatusBar style={t === dark ? "light" : "dark"} />
-      <KeyboardAvoidingView
-        style={s.safe}
-        behavior={Platform.OS === "ios" ? "padding" : undefined}
-      >
-        <ScrollView
-          keyboardShouldPersistTaps="handled"
-          contentContainerStyle={s.content}
-        >
-          <View style={s.brand}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: t.background }}>
+      <StatusBar style={t.name === "Night Harbor" ? "light" : "dark"} />
+      <View style={[styles.header, { borderColor: t.border }]}>
+        {tabs.some((x) => x.screen === screen) || screen === "Onboarding" ? (
+          <View style={styles.brand}>
             <Image
               source={require("../../assets/brand/symbol.png")}
-              style={s.logo}
-              accessibilityLabel="Between Us: two people sharing a conversation"
+              accessibilityLabel="Between Us approved symbol"
+              style={{ width: 36, height: 36, resizeMode: "contain" }}
             />
-            <View style={s.brandCopy}>
-              {text("Between Us", true)}
-              <Text style={{ color: t.muted, fontSize: 13 }}>
-                when it&apos;s hard to find the words, start here
-              </Text>
-            </View>
-          </View>
-          <Text style={[s.demo, { color: t.muted }]}>
-            FICTIONAL DEMO · memory only · resets on reload
-          </Text>
-          <View style={s.row}>
-            {button(role === "child" ? "● Kid / teen" : "Kid / teen", () =>
-              switchRole("child"),
-            )}
-            {button(role === "parent" ? "● Parent" : "Parent", () =>
-              switchRole("parent"),
-            )}
-          </View>
-          <View style={s.row}>
-            {(
-              ["Home", "Journal", "Circle", "Messages", "Check-ins"] as Screen[]
-            ).map((item) =>
-              button(screen === item ? `● ${item}` : item, () => go(item)),
-            )}
-          </View>
-          {screen !== "Home" &&
-            text(
-              (
-                {
-                  Write: "Start a conversation",
-                  Review: "Your words, your choice",
-                  Journal: "My Journal",
-                  Circle: "My Circle",
-                  "Check-ins": "Open the Door",
-                } as Partial<Record<Screen, string>>
-              )[screen] || screen,
-              true,
-            )}
-          {!!notice && (
-            <Text
-              accessibilityRole="alert"
-              accessibilityLiveRegion="polite"
-              style={[s.notice, { color: t.text, backgroundColor: t.accent }]}
-            >
-              {notice}
-            </Text>
-          )}
-          {screen === "Home" && (
-            <>
-              {text(
-                role === "child"
-                  ? "A small start\ncan open a door."
-                  : "Make room for\na little conversation.",
-                true,
-              )}
-              {text(
-                role === "child"
-                  ? "You choose the words, the person, and when you are ready."
-                  : "Start with a question. Leave space for an answer, whenever they are ready.",
-              )}
-              {button("Start a conversation", () => compose(), true)}
-              {card(
-                <>
-                  {text("Just for you", true)}
-                  {text(
-                    "A quiet place to write. Nothing in your journal is copied into a message.",
-                  )}
-                  {button("Open My Journal", () => go("Journal"))}
-                </>,
-              )}
-              {card(
-                <>
-                  {text("Little Conversations", true)}
-                  {text(
-                    "If we could make up a new family tradition, what would it be?",
-                  )}
-                  {button("Try this conversation", () =>
-                    compose(
-                      "If we could make up a new family tradition, what would it be?",
-                    ),
-                  )}
-                </>,
-                true,
-              )}
-              {role === "parent" &&
-                button("Manage trusted people", () => go("Circle"))}
-            </>
-          )}
-          {screen === "Journal" && (
-            <>
-              {text(
-                "Only your demo role sees these entries. Switching roles clears the editor. This shared-device prototype has no secure account separation.",
-              )}
-              {journals[role].map((e) => (
-                <View key={e.id}>
-                  {card(
-                    <>
-                      {text(e.title || "Untitled", true)}
-                      {button(`Revisit ${e.title || "entry"}`, () => {
-                        setEntry({ ...e });
-                        setSuggestion("");
-                        setDeleteId("");
-                      })}
-                      {button(`Delete ${e.title || "entry"}`, () =>
-                        setDeleteId(e.id),
-                      )}
-                      {deleteId === e.id && (
-                        <>
-                          {text("Delete this entry from this session?")}
-                          {button("Confirm delete", () => {
-                            setJournals((old) => ({
-                              ...old,
-                              [role]: old[role].filter(
-                                (item) => item.id !== e.id,
-                              ),
-                            }));
-                            if (entry.id === e.id)
-                              setEntry({ id: "", title: "", body: "" });
-                            setSuggestion("");
-                            setDeleteId("");
-                          })}
-                          {button("Keep entry", () => setDeleteId(""))}
-                        </>
-                      )}
-                    </>,
-                  )}
-                </View>
-              ))}
-              {button("New entry", () => {
-                setEntry({ id: "", title: "", body: "" });
-                setSuggestion("");
-              })}
-              {field("Entry title", entry.title, (title) =>
-                setEntry((old) => ({ ...old, title })),
-              )}
-              {field(
-                "Your private demo words",
-                entry.body,
-                (body) => {
-                  setEntry((old) => ({ ...old, body }));
-                  setSuggestion("");
-                },
-                true,
-              )}
-              {button(
-                "Save entry in memory",
-                () => {
-                  const saved = { ...entry, id: entry.id || `${newId()}` };
-                  setJournals((old) => ({
-                    ...old,
-                    [role]: [
-                      ...old[role].filter((e) => e.id !== saved.id),
-                      saved,
-                    ],
-                  }));
-                  setEntry(saved);
-                  setNotice("Saved only in this session. Nothing was shared.");
-                },
-                true,
-                !entry.body.trim(),
-              )}
-              {button(
-                "Help me find someone to talk to",
-                () => setSuggestion(reflection(entry.body).suggestion),
-                false,
-                !entry.body.trim(),
-              )}
-              {!!suggestion &&
-                card(
-                  <>
-                    {text(suggestion)}
-                    {button("Prepare separate words", () =>
-                      compose("Can we talk?"),
-                    )}
-                    {button("Dismiss suggestion", () => setSuggestion(""))}
-                  </>,
-                )}
-            </>
-          )}
-          {screen === "Circle" && (
-            <>
-              {text(
-                "All people and connection checks here are fictional. Adding or approving a person does not enable messaging.",
-              )}
-              {mine.map((c) => (
-                <View key={c.id}>
-                  {card(
-                    <>
-                      {text(c.name, true)}
-                      {text(
-                        `${c.category} · ${c.status}${canMessage(c) ? " (simulated checks)" : ""}`,
-                      )}
-                      {canMessage(c) &&
-                        button(`Write to ${c.name}`, () => {
-                          setRecipient(c.id);
-                          compose();
-                        })}
-                      {c.status !== "blocked" &&
-                        c.status !== "removed" &&
-                        button(`Block ${c.name}`, () =>
-                          changeContact(c.id, "blocked"),
-                        )}
-                      {button(`Report ${c.name}`, () =>
-                        setNotice(
-                          "Demo report noted only here. No report was sent. Open Privacy & safety for human help options.",
-                        ),
-                      )}
-                      {canManage(role) &&
-                        c.status !== "removed" &&
-                        button(`Remove ${c.name}`, () =>
-                          changeContact(c.id, "removed"),
-                        )}
-                      {canManage(role) &&
-                        c.status === "requested" &&
-                        button(`Approve ${c.name}`, () =>
-                          changeContact(c.id, "approved"),
-                        )}
-                    </>,
-                  )}
-                </View>
-              ))}
-              {field("Fictional contact name", contactName, setContactName)}
-              {field("Relationship or category", category, setCategory)}
-              {button(
-                role === "parent"
-                  ? "Add trusted person"
-                  : "Request trusted person",
-                () => {
-                  if (!contactName.trim()) return;
-                  const c: Contact = {
-                    id: `${newId()}`,
-                    name: contactName.trim(),
-                    category: category.trim() || "Trusted person",
-                    status: canManage(role) ? "approved" : "requested",
-                    accepted: false,
-                    verified: false,
-                  };
-                  setContacts((old) => [...old, c]);
-                  setContactName("");
-                  setNotice(
-                    role === "parent"
-                      ? "Added directly. Acceptance and verification are still required; messaging stays disabled."
-                      : "Request added for the demo parent. No real invitation was sent.",
-                  );
-                },
-                true,
-                !contactName.trim(),
-              )}
-            </>
-          )}
-          {screen === "Write" && (
-            <>
-              {text(
-                "You can simply ask, “Can we talk?” Review every message before simulating a send.",
-              )}
-              {button(
-                inPerson
-                  ? "Switch to demo message"
-                  : "Prepare for an in-person talk",
-                () => setInPerson(!inPerson),
-              )}
-              {inPerson ? (
-                text(
-                  "Choose someone you feel safe with. They do not need the app. These words stay here.",
-                )
-              ) : (
-                <>
-                  {text("Choose a simulated connection:")}
-                  {mine
-                    .filter(canMessage)
-                    .map((c) =>
-                      button(`${recipient === c.id ? "● " : ""}${c.name}`, () =>
-                        setRecipient(c.id),
-                      ),
-                    )}
-                  {!mine.some(canMessage) &&
-                    text(
-                      "No permitted connections. You can still prepare words in person.",
-                    )}
-                </>
-              )}
-              {field("Your message", draft, setDraft, true)}
-              {button("Use “Can we talk?”", () => setDraft("Can we talk?"))}
-              {role === "parent" && (
-                <View style={s.row}>
-                  {button("An apology starter", () =>
-                    setDraft(
-                      "I would like to apologize. Can we find a time to talk?",
-                    ),
-                  )}
-                  {button("Family changes starter", () =>
-                    setDraft(
-                      "There is a family change I would like to talk about. When would be a good time?",
-                    ),
-                  )}
-                </View>
-              )}
-              {text("What kind of response would help?")}
-              <View style={s.row}>
-                {responses.map((r) =>
-                  button(`${response === r ? "● " : ""}${r}`, () =>
-                    setResponse(r),
-                  ),
-                )}
-              </View>
-              {button(
-                "Review my words",
-                () => go("Review"),
-                true,
-                !draft.trim() ||
-                  (!inPerson &&
-                    !mine.some((c) => c.id === recipient && canMessage(c))),
-              )}
-            </>
-          )}
-          {screen === "Review" && (
-            <>
-              {card(
-                <>
-                  {text(
-                    inPerson
-                      ? "For an in-person conversation"
-                      : `To: ${contacts.find((c) => c.id === recipient)?.name || "Unavailable person"}`,
-                    true,
-                  )}
-                  {text(draft)}
-                  {text(`Response wanted: ${response}`)}
-                </>,
-              )}
-              {text(
-                "Only these words are included. Your journal and other drafts are never attached.",
-              )}
-              {button("Edit my words", () => go("Write"))}
-              {button(
-                inPerson
-                  ? "Keep words here for practice"
-                  : "Simulate sending this message",
-                () => {
-                  if (inPerson) {
-                    setNotice(
-                      "Ready to practice. Nothing was sent or stored outside this session.",
-                    );
-                    return;
-                  }
-                  const m = createMessage(
-                    role,
-                    contacts.find((c) => c.id === recipient),
-                    draft,
-                    response,
-                  );
-                  if (!m) {
-                    setNotice(
-                      "This connection cannot receive messages. Return to My Circle.",
-                    );
-                    return;
-                  }
-                  setMessages((old) => [...old, m]);
-                  setDraft("");
-                  go("Messages");
-                  setNotice("Simulated only. No message was delivered.");
-                },
-                true,
-              )}
-            </>
-          )}
-          {screen === "Messages" && (
-            <>
-              {text(
-                "Simulated conversation history. No network delivery or automatic replies.",
-              )}
-              {messages
-                .filter(
-                  (m) =>
-                    m.author === role ||
-                    m.recipient === (role === "child" ? "sam" : "alex"),
-                )
-                .map((m) => (
-                  <View key={m.id}>
-                    {card(
-                      <>
-                        {text(
-                          `${m.author === role ? "You" : "Demo family member"} → ${contacts.find((c) => c.id === m.recipient)?.name || "Removed contact"}`,
-                        )}
-                        {text(m.text)}
-                        {text(m.response)}
-                        {m.author !== role &&
-                          button("Help me reply", () => {
-                            setRecipient(role === "child" ? "alex" : "sam");
-                            compose(
-                              "Thank you for telling me. Would you like me to listen, or find a time to talk?",
-                            );
-                          })}
-                      </>,
-                    )}
-                  </View>
-                ))}
-              {!messages.length &&
-                text("Your first small hello can start here.")}
-              {button("Start a conversation", () => compose(), true)}
-              {button("Conversation Do-Over", () =>
-                compose(
-                  "Could we start again? I would like to try saying that differently.",
-                ),
-              )}
-            </>
-          )}
-          {screen === "Check-ins" && (
-            <>
-              {text(
-                "Invitations, never obligations. Schedules and notifications are simulated. No reminders, scores, or penalties.",
-              )}
-              {checkins
-                .filter((c) => role === "parent" || c.status === "open")
-                .map((c) => (
-                  <View key={c.id}>
-                    {card(
-                      <>
-                        {text(c.prompt, true)}
-                        {text(`${c.schedule} · simulated`)}
-                        {role === "child" ? (
-                          <>
-                            {button("Answer / write more", () => {
-                              setRecipient("alex");
-                              compose();
-                            })}
-                            {button("Can we talk?", () => {
-                              setRecipient("alex");
-                              compose("Can we talk?");
-                            })}
-                            {button("A small good thing happened", () => {
-                              setRecipient("alex");
-                              compose(
-                                "A small good thing happened today. Can I tell you about it?",
-                              );
-                            })}
-                            {button("Answer later", () => {
-                              setCheckins((old) =>
-                                old.map((item) =>
-                                  item.id === c.id
-                                    ? { ...item, status: "later" }
-                                    : item,
-                                ),
-                              );
-                              setNotice("Set aside. No reminder will be sent.");
-                            })}
-                            {button("Skip this check-in", () => {
-                              setCheckins((old) =>
-                                old.map((item) =>
-                                  item.id === c.id
-                                    ? { ...item, status: "skipped" }
-                                    : item,
-                                ),
-                              );
-                              setNotice("Skipped. You do not owe an answer.");
-                            })}
-                          </>
-                        ) : (
-                          button("Answer this prompt myself", () =>
-                            compose(c.prompt),
-                          )
-                        )}
-                      </>,
-                    )}
-                  </View>
-                ))}
-              {role === "child" &&
-                checkins.some((c) => c.status === "later") &&
-                button("Show invitations I set aside", () =>
-                  setCheckins((old) =>
-                    old.map((c) =>
-                      c.status === "later" ? { ...c, status: "open" } : c,
-                    ),
-                  ),
-                )}
-              {role === "parent" && (
-                <>
-                  {field("Check-in question", question, setQuestion)}
-                  {field("Example recurring schedule", schedule, setSchedule)}
-                  {text(
-                    `Preview for Sam: ${question} · ${schedule} · Reply, later, or skip.`,
-                  )}
-                  {button(
-                    "Create simulated check-in",
-                    () => {
-                      if (!canManage(role)) return;
-                      setCheckins((old) => [
-                        ...old,
-                        {
-                          id: `${newId()}`,
-                          prompt: question.trim(),
-                          schedule: schedule.trim(),
-                          status: "open",
-                        },
-                      ]);
-                      setNotice(
-                        "Example check-in added. No notification was scheduled.",
-                      );
-                    },
-                    true,
-                    !question.trim() || !schedule.trim(),
-                  )}
-                </>
-              )}
-            </>
-          )}
-          {screen === "Safety" && (
-            <>
-              {card(
-                <>
-                  {text("Your words belong to you", true)}
-                  {text(
-                    "Journals and unsent drafts are not shared with the other demo role. Parents manage contacts; that does not give them journal access. This prototype has no login or encryption. Use fictional information only.",
-                  )}
-                </>,
-              )}
-              {text(
-                "If someone makes you feel unsafe, you can speak with another trusted adult, such as a teacher, school counselor, relative, or coach. You do not need a parent’s permission to seek safety information or emergency help.",
-              )}
-              {text(
-                "If a parent is the person you are worried about, you can choose a different trusted adult. If there is immediate danger, contact local emergency services or reach a safe adult nearby.",
-              )}
-              {text(
-                "Blocking disables that demo connection. Reporting here is simulated and does not reach a safety team. Between Us is a communication tool, not a therapist or emergency service.",
-              )}
-              {button(
-                "Prepare words for another trusted adult",
-                () => {
-                  compose(
-                    "I would like to talk with you privately. Can we find a time?",
-                  );
-                  setInPerson(true);
-                },
-                true,
-              )}
-              {text("Appearance")}
-              <View style={s.row}>
-                {(["system", "light", "dark"] as const).map((a) =>
-                  button(`${appearance === a ? "● " : ""}${a}`, () =>
-                    setAppearance(a),
-                  ),
-                )}
-              </View>
-            </>
-          )}
-          <View style={s.footer}>
-            {button("Privacy & safety", () => go("Safety"))}
-            <Text style={{ color: t.muted, fontSize: 12 }}>
-              Powered By Oxieg3n · Nothing is sent to a server
+            <Text style={{ color: t.text, fontSize: 19, fontWeight: "600" }}>
+              Between Us
             </Text>
           </View>
-        </ScrollView>
-      </KeyboardAvoidingView>
+        ) : (
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel="Back"
+            onPress={back}
+            style={styles.back}
+          >
+            <Icon name="back" />
+            <Text style={{ color: t.text, fontSize: 16 }}>Back</Text>
+          </Pressable>
+        )}
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Profile & settings"
+          onPress={() => go("Settings")}
+          style={styles.settings}
+        >
+          <Icon name="settings" />
+        </Pressable>
+      </View>
+      <View style={{ flex: 1, flexDirection: "row" }}>
+        {rail && screen !== "Onboarding" && navigation}
+        <KeyboardAvoidingView
+          style={{ flex: 1 }}
+          behavior={Platform.OS === "ios" ? "padding" : "height"}
+        >
+          <ScrollView
+            key={screen}
+            ref={scroll}
+            keyboardShouldPersistTaps="handled"
+            keyboardDismissMode="on-drag"
+            contentContainerStyle={[styles.content, rail && { maxWidth: 720 }]}
+            onContentSizeChange={() => {
+              if (screen === "Conversation")
+                scroll.current?.scrollToEnd({ animated: false });
+            }}
+          >
+            {screen !== "Home" && screen !== "Onboarding" && (
+              <View style={{ marginBottom: 8 }}>
+                <Text
+                  accessibilityRole="header"
+                  style={{ color: t.muted, fontSize: 15, fontWeight: "600" }}
+                >
+                  {titles[screen]}
+                </Text>
+              </View>
+            )}
+            <Text style={{ color: t.muted, fontSize: 11, letterSpacing: 0.5 }}>
+              FICTIONAL DEMO · MEMORY ONLY
+            </Text>
+            {!!notice && (
+              <View
+                style={[
+                  styles.notice,
+                  { backgroundColor: t.soft, borderColor: t.border },
+                ]}
+              >
+                <Text
+                  accessibilityRole="alert"
+                  accessibilityLiveRegion="polite"
+                  style={{ color: t.text, fontSize: 15, lineHeight: 23 }}
+                >
+                  {notice}
+                </Text>
+              </View>
+            )}
+            {screens[screen]}
+            {![
+              "Safety",
+              "Settings",
+              "Circle",
+              "Contact",
+              "Onboarding",
+              "Conversation",
+            ].includes(screen) && (
+              <View style={{ marginTop: 20 }}>
+                <Button
+                  quiet
+                  label="Privacy & safety"
+                  onPress={() => go("Safety")}
+                />
+              </View>
+            )}
+          </ScrollView>
+          {screen === "Conversation" && <ConversationComposer />}
+        </KeyboardAvoidingView>
+      </View>
+      {!rail && screen !== "Onboarding" && navigation}
+      <Modal
+        visible={!!dialog}
+        transparent
+        animationType="none"
+        onRequestClose={() => setDialog(null)}
+      >
+        <View style={styles.scrim}>
+          <View
+            accessibilityViewIsModal
+            style={[
+              styles.dialog,
+              { backgroundColor: t.surface, borderColor: t.border },
+            ]}
+          >
+            <Heading>{dialog?.title}</Heading>
+            <Body>{dialog?.body}</Body>
+            <Button
+              label="Confirm"
+              primary
+              onPress={() => {
+                const action = dialog?.action;
+                setDialog(null);
+                action?.();
+              }}
+            />
+            <Button label="Cancel" quiet onPress={() => setDialog(null)} />
+          </View>
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 }
-const s = StyleSheet.create({
-  safe: { flex: 1 },
+export default function App() {
+  return (
+    <AppProvider>
+      <Application />
+    </AppProvider>
+  );
+}
+const styles = StyleSheet.create({
+  header: {
+    minHeight: 64,
+    borderBottomWidth: 1,
+    paddingHorizontal: 22,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  brand: { flexDirection: "row", gap: 10, alignItems: "center" },
+  settings: {
+    minWidth: 48,
+    minHeight: 48,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  back: { minHeight: 48, flexDirection: "row", alignItems: "center", gap: 8 },
   content: {
-    padding: 22,
-    paddingBottom: 48,
-    gap: 16,
-    maxWidth: 650,
+    paddingHorizontal: 26,
+    paddingTop: 20,
+    paddingBottom: 32,
+    gap: 20,
+    maxWidth: 620,
+    width: "100%",
+    alignSelf: "center",
+    flexGrow: 1,
+  },
+  nav: { gap: 4, padding: 8 },
+  bottom: { borderTopWidth: 1, flexDirection: "row" },
+  rail: { width: 110, borderRightWidth: 1, paddingTop: 28, gap: 18 },
+  tab: {
+    flex: 1,
+    minHeight: 64,
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 6,
+    borderRadius: 10,
+  },
+  notice: { borderWidth: 1, padding: 14, borderRadius: 8 },
+  scrim: {
+    flex: 1,
+    backgroundColor: "rgba(0,0,0,0.45)",
+    justifyContent: "center",
+    padding: 24,
+  },
+  dialog: {
+    borderWidth: 1,
+    borderRadius: 16,
+    padding: 24,
+    gap: 20,
+    maxWidth: 460,
     width: "100%",
     alignSelf: "center",
   },
-  brand: { flexDirection: "row", alignItems: "center", gap: 14 },
-  brandCopy: { flex: 1, gap: 4 },
-  logo: { width: 68, height: 68, resizeMode: "contain" },
-  title: { fontSize: 29, fontWeight: "700", lineHeight: 36 },
-  body: { fontSize: 17, lineHeight: 26 },
-  demo: { fontSize: 11, letterSpacing: 0.7 },
-  row: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
-  button: {
-    minHeight: 48,
-    borderWidth: 1,
-    borderRadius: 16,
-    paddingHorizontal: 17,
-    paddingVertical: 13,
-    justifyContent: "center",
-  },
-  buttonText: { fontSize: 15, fontWeight: "600", textAlign: "center" },
-  card: { borderWidth: 1, borderRadius: 24, padding: 22, gap: 14 },
-  field: { gap: 8 },
-  label: { fontSize: 15, fontWeight: "600" },
-  input: {
-    borderWidth: 1,
-    borderRadius: 16,
-    padding: 15,
-    fontSize: 17,
-    minHeight: 50,
-  },
-  multiline: { minHeight: 150, textAlignVertical: "top" },
-  notice: { padding: 16, borderRadius: 16, fontSize: 16, lineHeight: 24 },
-  footer: { marginTop: 24, gap: 16 },
 });

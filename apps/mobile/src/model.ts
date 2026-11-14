@@ -11,12 +11,16 @@ export type Message = {
   recipient: string;
   text: string;
   response: string;
+  createdAt: number;
 };
 export type Checkin = {
   id: string;
   prompt: string;
   schedule: string;
   status: "open" | "skipped" | "later";
+  days?: string[];
+  time?: string;
+  recipient?: string;
 };
 export const seedContacts: Contact[] = [
   {
@@ -83,6 +87,7 @@ export function createMessage(
     author: role,
     recipient: contact.id,
     text: text.trim(),
+    createdAt: Date.now(),
     response,
   };
 }
