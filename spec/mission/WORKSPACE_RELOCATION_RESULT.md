@@ -71,3 +71,11 @@ Only continue once the helper prints COMPLETE and the deprecated path is absent.
 ## Push receipt
 
 The relocation checkpoint is committed and pushed explicitly from `D:\projects\BetweenUs` on the development branch. The timestamped verified push receipt is added below after the command succeeds. This push documents the migration and remaining empty-directory lock; it does not publish a feature implementation or claim that lock cleanup succeeded.
+
+Verified checkpoint push at 2026-11-15T16:11:55.8533935-05:00:
+
+- Working directory: `D:\projects\BetweenUs`.
+- Command: `git -C 'D:\projects\BetweenUs' push origin feature/mobile-foundation` — success.
+- Pushed checkpoint and independently observed remote HEAD: `8a1ec0f57ea08a8ff42c61e6f154469631164b88` (`git ls-remote --heads` matched local HEAD).
+- This receipt is a documentation-only follow-up, so its own commit advances the branch beyond the verified checkpoint. The final session reply reports that latest commit and push verification.
+- The original diagnostic remains untracked and was not pushed. Old empty-directory retirement remains pending; new features remain gated on closing that handle and completing the guarded script.
