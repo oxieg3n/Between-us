@@ -1,23 +1,20 @@
-﻿# Combined mission progress
+# Combined mission progress
 
-Canonical repository: `D:\projects\BetweenUs`, branch `feature/mobile-foundation`.
+Canonical root: `D:\projects\BetweenUs`; branch `feature/mobile-foundation`.
 
-## Current checkpoint: relocation before features
+## Dependency map and checklist
 
-- Existing repository contents, including `.git`, ignored dependencies and untracked owner diagnostic, moved from the deprecated directory without cloning or overwriting data.
-- Original local HEAD `36a25a2` and all pre-move refs/index/config/reflog hashes preserved.
-- Documentation changes fetched and fast-forwarded to `3a6ad34` from the new root; no divergence or discarded local work.
-- Remaining gate: Windows holds the vacated, empty `D:\proejcts\BetweenUs` open. It has no `.git` or files. Close old-path terminals/Codex and run `Scripts/Complete-WorkspaceRelocation.ps1` from the new root. See WORKSPACE_RELOCATION_RESULT.md.
-- Feature development has not started. The relocation addendum requires a fresh canonical-root session when the old session retains the working-directory handle.
+- [x] Relocation COMPLETE. Exact old-directory handle belonged to old ADB server; stopped with official command, helper succeeded, restarted at new root. Git/diagnostic preserved; remote synchronized.
+- [x] Stage 0: inspect mission, linked product/security/design specs and existing source. No existing finance or intelligent-journal implementation. Baseline type/lint and 13 unit tests pass.
+- [ ] Stage 1: parallel finance contracts, local inference feasibility, payment/security/UX review.
+- [ ] Stage 2: task occurrences -> submission -> parent approval -> idempotent earnings -> payout eligibility. Parallel journal contract, contextual fallback and adversarial tests.
+- [ ] Stage 3: multiple goals -> allocations/rules/transfers -> payout holds -> capped matching/reveal. Parallel native model feasibility and journal customization.
+- [ ] Stage 4: role-aware finance and optional journal UI using existing Open Letter components and four tabs.
+- [ ] Stage 5: full checks, serialized Pixel_10 interactions, both themes and actual screenshots. Correct defects and recapture.
+- [ ] Stage 6: document verified functionality, unavailable capabilities, security release gates; commit and push verified branch.
 
-## Resume after closing the old directory handle
+## File ownership
 
-1. Run the guarded completion script, verify old root absent, and inspect Git status. Preserve the owner's untracked `Scripts/Narrator-One-Time-Diagnostic-eb5cb0e.txt`; it must not be published accidentally.
-2. Read the complete MASTER_MISSION_CHORES_SAVINGS_INTELLIGENT_JOURNAL.md and its linked product/security specifications; the remote commits are specifications, not implemented finance/AI features.
-3. Stage 0: finish the mission audit and establish typed contracts and dependency map.
-4. Stage 1: partition finance-domain, local-inference feasibility, UX and security investigations with separate ownership.
-5. Implement in order: task occurrence → submission → parent approval → idempotent earnings → multiple savings goals → allocation → capped parent matching/reveal → manual payment bridge. Keep hidden match commitments out of child DTOs, accessibility content and progress.
-6. Build optional on-device journal suggestions as an independent opt-in, no-cloud workstream; verify native compatibility/licenses and measure real local inference before claiming it works. Keep explicit message review and safe recipient choice.
-7. Integrate UI, then serialize native QA/screenshots and update the mission build report.
+Master: app state/navigation/Home, finance and journal UI, package/build configuration, integration tests, native QA and source control. Finance Domain Agent: src/finance/, finance unit tests, allowance/goal specs. Journal Engine Agent: src/journal-intelligence/, its tests, model/design/security specs. Security/Payment/UX Reviewer: payment guide, finance threat model and integration design. Helpers do not mutate packages, Git, ADB or master-owned files. Master reviews contributions.
 
-Only appearance persists. Finance and journals remain fictional and memory-only. No real transfers, payment credentials, paid services, real child data, production publishing or main merge are authorized.
+Only appearance persists. Finance and journals remain fictional and memory-only. No real transfers, credentials, paid services, real child data, production publishing or main merge. Optional on-device inference is authorized by current mission; cloud processing remains prohibited. Original owner diagnostic stays untracked.

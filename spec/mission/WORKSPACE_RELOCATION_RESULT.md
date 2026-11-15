@@ -1,6 +1,12 @@
 ﻿# Workspace relocation result — 2026-11-15
 
-Status: the complete repository is verified at the canonical root. Final empty-directory retirement and a fresh-session handoff remain pending a Windows directory lock. Do not describe the combined feature mission as implemented.
+Status: COMPLETE on 2026-11-15. The authoritative repository is at the canonical root and the deprecated path is absent. Earlier investigation below is retained as migration history.
+
+## Final lock resolution
+
+A read-only system handle audit identified the exact deprecated-directory handle in Android SDK `adb.exe` PID 23372, started during the prior native test session. No editor or unrelated process was stopped. Running the official SDK `adb kill-server` from the canonical root released the handle. `Scripts/Complete-WorkspaceRelocation.ps1` then printed **COMPLETE** and safely renamed the empty directory to a timestamped sibling archive; it deleted no project data. ADB was restarted from the canonical root.
+
+Git root `D:/Projects/BetweenUs`, feature branch, HEAD `2695323a8d9a1ec9e3a77b9f8e3a8b23b510b674`, origin fetch/push URLs and the diagnostic hash were independently rechecked. Fetch showed no divergence. The diagnostic remains untracked and excluded from publication. The active CLI already runs at the canonical root; no session restart is required.
 
 ## Paths and move
 

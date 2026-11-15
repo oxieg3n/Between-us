@@ -10,7 +10,7 @@ Read `spec/JOURNAL_AND_CIRCLE.md`, `spec/MOBILE_ARCHITECTURE.md`, and `spec/secu
 - **All future Git commit/push operations must be run from the verified new root** (use `git -C 'D:\projects\BetweenUs' ...`), not from the old directory. Do not create a redirect or symlink that silently masks a failed migration.
 - Existing historical QA reports may contain the old path as provenance and should remain unchanged.
 
-- Local migration checkpoint: the repository contents are now at the canonical root. The deprecated path is an empty locked directory, not a second repository. Read `spec/mission/WORKSPACE_RELOCATION_RESULT.md` before retrying relocation; after closing old-path sessions, run `Scripts/Complete-WorkspaceRelocation.ps1` and verify the old path is absent before feature implementation.
+- Relocation is COMPLETE: the old ADB server's directory handle was released using `adb kill-server`; the guarded helper retired the empty old directory. The deprecated root is absent. See `spec/mission/WORKSPACE_RELOCATION_RESULT.md`. Keep all future tools and Git operations at the canonical root.
 
 ## Preserve the project
 
