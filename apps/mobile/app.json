@@ -2,7 +2,7 @@
   "expo": {
     "name": "Between Us",
     "slug": "between-us",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "orientation": "default",
     "icon": "./assets/brand/app-icon.png",
     "scheme": "between-us",
@@ -16,7 +16,14 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/brand/app-icon.png",
         "backgroundColor": "#F7FAFC"
-      }
+      },
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.VIBRATE",
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {
       "output": "static",
@@ -31,10 +38,12 @@
           "image": "./assets/brand/symbol.png",
           "imageWidth": 160
         }
-      ]
+      ],
+      "llama.rn",
+      "./plugins/with-short-native-paths"
     ],
     "extra": {
-      "buildId": "1114-OpenLetterRedesign-r3"
+      "buildId": "1115-FamilyEnvelopes-Journal-r1"
     }
   }
 }
