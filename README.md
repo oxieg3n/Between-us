@@ -39,10 +39,16 @@ Built with care by [Powered By Oxieg3n](https://poweredby.oxieg3n.com/).
 
 A fictional, memory-only Expo SDK 58 / React Native / TypeScript / Expo Router application lives in `apps/mobile/`. The original Pages demo is unchanged. Both roles have journals, local conversation prompts, My Circle, composition/review, simulated conversations, optional check-ins and safety information. The approved symbol is preserved. The Open Letter interface uses Safe Harbor light and Night Harbor dark themes, with Home, Journal, Chats and Circle navigation. Build: `1114-OpenLetterRedesign-r3` (app version 0.2.2).
 
+### Canonical local directory
+
+As of 2026-11-15, the repository must live at `D:\projects\BetweenUs` on Windows (`/mnt/d/projects/BetweenUs` in WSL). If your earlier working copy is in `D:\proejcts\BetweenUs`, follow [Workspace relocation addendum](spec/WORKSPACE_RELOCATION_ADDENDUM.md) **before** launching Codex, Metro, an emulator build or making further Git pushes.
+
+All future push commands must originate from the verified `D:\projects\BetweenUs` Git checkout. Moving the entire existing folder preserves the Git history and origin; do not reclone over or discard local commits.
+
 ### Windows PowerShell startup
 
 ```powershell
-Set-Location 'D:\proejcts\BetweenUs\apps\mobile'
+Set-Location 'D:\projects\BetweenUs\apps\mobile'
 npm ci
 npx expo start --clear
 ```
@@ -64,7 +70,7 @@ In another PowerShell window:
 ```powershell
 $env:ANDROID_HOME = "$env:LOCALAPPDATA\Android\Sdk"
 $env:PATH = "$env:ANDROID_HOME\platform-tools;$env:ANDROID_HOME\emulator;$env:PATH"
-Set-Location 'D:\proejcts\BetweenUs\apps\mobile'
+Set-Location 'D:\projects\BetweenUs\apps\mobile'
 npm run android
 ```
 

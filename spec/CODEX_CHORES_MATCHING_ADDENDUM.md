@@ -2,7 +2,7 @@
 
 ## Starting context
 
-Windows project: `D:\proejcts\BetweenUs` (spelling is intentional).
+Windows project: `D:\projects\BetweenUs` (canonical corrected path).
 GitHub: https://github.com/oxieg3n/Between-us
 Feature branch: `feature/mobile-foundation`
 Product: Between Us, The Open Letter, Safe Harbor light, Night Harbor dark.
@@ -18,6 +18,10 @@ Current approved matching default:
 - No Cash App/Venmo money movement is assumed
 
 Authoritative specification: `spec/PARENT_SAVINGS_MATCHING.md` and `spec/CHORES_AND_GOALS.md`.
+
+## Relocation dependency
+
+Before performing this feature's work, execute [WORKSPACE_RELOCATION_ADDENDUM.md](WORKSPACE_RELOCATION_ADDENDUM.md) if the local checkout still lives under the misspelled `D:\proejcts` folder. Run all Git operations from `D:\projects\BetweenUs` after verification.
 
 ## First steps
 

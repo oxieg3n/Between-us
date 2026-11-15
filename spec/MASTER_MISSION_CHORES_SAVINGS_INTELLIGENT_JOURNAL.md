@@ -3,7 +3,7 @@
 
 **Status:** Owner-approved combined implementation mission; NOT a statement that these features already exist.
 **Research snapshot:** 2026-11-15 (recheck provider docs before shipping).
-**Windows workspace:** D:\proejcts\BetweenUs (the spelling "proejcts" is intentional).
+**Windows workspace:** D:\projects\BetweenUs (corrected canonical location).
 **Repository:** https://github.com/oxieg3n/Between-us
 **Working development branch:** feature/mobile-foundation
 **Verified source baseline:** 36a25a2 (Open Letter mobile); the current remote spec-only commit adds this mission.
@@ -15,6 +15,12 @@
 > **ONE MISSION, ONE ORDERED PLAN.** This file is the implementation coordinator. Earlier detailed specs stay authoritative for their specific approved requirements: [CHORES_AND_GOALS.md](CHORES_AND_GOALS.md), [PARENT_SAVINGS_MATCHING.md](PARENT_SAVINGS_MATCHING.md), [JOURNAL_AND_CIRCLE.md](JOURNAL_AND_CIRCLE.md), [../AGENTS.md](../AGENTS.md), and [../design/OPEN_LETTER_DESIGN_SYSTEM.md](../design/OPEN_LETTER_DESIGN_SYSTEM.md). Read them before changing code. Where an older document describes a prior prototype limitation (for example "no AI provider" or "journal suggestions only after save"), this new owner-approved mission authorizes **optional on-device inference with fictional data, no remote text processing**, and proposes updating the related engineering docs once behavior is implemented. It does NOT approve cloud AI, real money transfers, or real-person data.
 
 ---
+
+## MANDATORY FIRST STEP: relocate the existing local Git working copy
+
+**Before Stage 0 or any development**, follow [WORKSPACE_RELOCATION_ADDENDUM.md](WORKSPACE_RELOCATION_ADDENDUM.md) to move the **existing** `D:\proejcts\BetweenUs` folder to `D:\projects\BetweenUs` safely, preserving the complete `.git` directory, branches, unpushed work, ignored assets, and worktree metadata. If the destination already exists, inspect before touching it. Verify `git -C 'D:\projects\BetweenUs' rev-parse --show-toplevel`, branch, status, origin and push behavior. Never push from the deprecated directory. Close old Codex/Metro sessions, then start Codex from the new root. Old paths in historical reports are provenance, not active setup instructions.
+
+This relocation has **not** been performed on the Windows computer by the GitHub commit itself. Codex must execute and verify it locally.
 
 ## 0. Definition of success
 

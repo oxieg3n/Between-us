@@ -2,9 +2,17 @@
 
 Read `spec/JOURNAL_AND_CIRCLE.md`, `spec/MOBILE_ARCHITECTURE.md`, and `spec/security/BOUNDARIES.md` before changing behavior. Role-specific task contracts are in `agents/`; the master assigns explicit file ownership and reviews integration.
 
+## Mandatory workspace relocation (2026-11-15)
+
+- Canonical Windows repository root: `D:\projects\BetweenUs`; WSL: `/mnt/d/projects/BetweenUs`.
+- If the original directory `D:\proejcts\BetweenUs` exists, **first** execute `spec/WORKSPACE_RELOCATION_ADDENDUM.md` before implementation, Git push, native builds, or starting a fresh Codex session. Stop local development tools using the old path before moving.
+- Preserve the **entire** Git directory, uncommitted changes, ignored files, submodules, worktrees, remote and branch. Never create a second independent clone or silently overwrite an existing destination.
+- **All future Git commit/push operations must be run from the verified new root** (use `git -C 'D:\projects\BetweenUs' ...`), not from the old directory. Do not create a redirect or symlink that silently masks a failed migration.
+- Existing historical QA reports may contain the old path as provenance and should remain unchanged.
+
 ## Preserve the project
 
-- Work in `D:\proejcts\BetweenUs` (intentional spelling), on a feature branch. Never force-push, merge to main, or publish without owner approval.
+- Work in `D:\projects\BetweenUs` (corrected canonical path), on a feature branch. Never force-push, merge to main, or publish without owner approval.
 - Preserve `docs/`, root `index.html`, approved brand assets and repository history. The GitHub Pages prototype is a separate deliverable.
 - Keep the mobile app in `apps/mobile/`. Prefer ordinary Expo/React Native components and local modules over additional frameworks or workspace tooling.
 - Use the existing logo and official tagline with the approved Open Letter direction, Safe Harbor light theme and Night Harbor dark theme. See `design/OPEN_LETTER_DESIGN_SYSTEM.md`. No unapproved rebrand or corporate theme.
