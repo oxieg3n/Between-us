@@ -26,9 +26,9 @@ function useFinanceModel() {
   const actor = { role: app.role, childId: "sam" } as const;
   const calendarDay = localDate(new Date().toISOString(), ledger.timezone);
   // Refresh calendar-based payouts at local midnight without replaying finances on journal keystrokes.
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const view = useMemo(
     () => financeView(ledger, { role: app.role, childId: "sam" }, "sam"),
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- Refresh at family-local midnight as well as ledger/role changes.
     [ledger, app.role, calendarDay],
   );
   function run(action: FinanceAction | (() => FinanceAction)) {
