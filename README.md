@@ -106,3 +106,7 @@ powershell -NoProfile -File .\scripts\open-letter-comparisons.ps1
 ```
 
 The capture script navigates the actual Android UI through ADB. It records actions, hashes, source commit and build identifier; comparison sheets use those original PNGs. Existing capture protection and recapture options are described by `python .\scripts\capture-open-letter.py --help`. Run emulator tasks serially. `python` uses only the standard library; comparison generation uses Windows System.Drawing.
+
+## Workspace relocation checkpoint
+
+The existing repository was physically moved to `D:\projects\BetweenUs` without cloning. See [relocation verification and restart instructions](spec/mission/WORKSPACE_RELOCATION_RESULT.md). A Windows handle still locks the vacated empty old directory; close old-path terminals/Codex and run `Scripts/Complete-WorkspaceRelocation.ps1` before resuming the [combined feature mission](spec/MASTER_MISSION_CHORES_SAVINGS_INTELLIGENT_JOURNAL.md). The owner diagnostic file remains untracked and must not be published accidentally.
