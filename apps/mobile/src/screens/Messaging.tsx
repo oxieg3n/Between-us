@@ -290,7 +290,7 @@ export function ConversationComposer() {
   const contact = app.contacts.find(
     (person) => person.id === app.activeContact,
   );
-  const permitted = !!contact && canMessage(contact);
+  const permitted = !!contact && app.recipientAllowed(contact) && canMessage(contact);
   return (
     <View
       style={[
@@ -351,7 +351,7 @@ export function ComposeScreen() {
   const [helpers, setHelpers] = useState(false);
   const [showNeeds, setShowNeeds] = useState(false);
   const people = app.contacts.filter(
-    (person) => person.id !== personId(app.role) && canMessage(person),
+    (person) => person.id !== personId(app.role) && app.recipientAllowed(person) && canMessage(person),
   );
   const permitted = people.some((person) => person.id === app.recipient);
   return (
@@ -523,7 +523,7 @@ export function ReviewScreen() {
   const { theme: t } = useAppearance();
   const person = app.contacts.find((contact) => contact.id === app.recipient);
   const permitted =
-    !!person && person.id !== personId(app.role) && canMessage(person);
+    !!person && app.recipientAllowed(person) && person.id !== personId(app.role) && canMessage(person);
   return (
     <View style={styles.section}>
       <Eyebrow>Before you share</Eyebrow>

@@ -8,7 +8,11 @@ import React, {
 } from "react";
 import { BackHandler } from "react-native";
 import { router, useLocalSearchParams } from "expo-router";
-import { canManage, type Role } from "./communication";
+import { canManage, type Role, type Contact } from "./communication";
+import {
+  isRecipientAllowed,
+  type SuggestionResult,
+} from "./journal-intelligence";
 import {
   createMessage,
   initialJournals,
@@ -32,7 +36,16 @@ export type Screen =
   | "Checkins"
   | "Scheduler"
   | "Settings"
+  | "LocalModel"
   | "Safety"
+  | "Finance"
+  | "Chores"
+  | "Budget"
+  | "Goals"
+  | "GoalDetail"
+  | "Matching"
+  | "Payouts"
+  | "FinanceHistory"
   | "Onboarding";
 const screens: Screen[] = [
   "Home",
@@ -47,7 +60,16 @@ const screens: Screen[] = [
   "Checkins",
   "Scheduler",
   "Settings",
+  "LocalModel",
   "Safety",
+  "Finance",
+  "Chores",
+  "Budget",
+  "Goals",
+  "GoalDetail",
+  "Matching",
+  "Payouts",
+  "FinanceHistory",
   "Onboarding",
 ];
 export const emptyEntry = (): Entry => ({ id: "", title: "", body: "" });
@@ -84,6 +106,14 @@ function useStateModel() {
   const [activeContact, setActiveContact] = useState("alex");
   const [response, setResponse] = useState("Just listen");
   const [inPerson, setInPerson] = useState(false);
+  const [conversationIdeas, setConversationIdeas] = useState<
+    Record<Role, boolean>
+  >({ child: false, parent: false });
+  const [recipientRestrictions, setRecipientRestrictions] = useState<
+    Pick<SuggestionResult, "excludedContactIds" | "excludedCategories">
+  >({ excludedContactIds: [], excludedCategories: [] });
+  const recipientAllowed = (contact: Contact) =>
+    isRecipientAllowed(contact, recipientRestrictions);
   const [notice, setNotice] = useState("");
   const [dialog, setDialog] = useState<{
     title: string;
@@ -148,6 +178,10 @@ function useStateModel() {
       setActiveContact(next === "child" ? "alex" : "sam");
       setResponse("Just listen");
       setInPerson(false);
+      setRecipientRestrictions({
+        excludedContactIds: [],
+        excludedCategories: [],
+      });
       setDialog(null);
       tab("Home");
     };
@@ -169,12 +203,17 @@ function useStateModel() {
     value = "",
     person = role === "child" ? "alex" : "sam",
     offline = false,
+    exclusions: Pick<
+      SuggestionResult,
+      "excludedContactIds" | "excludedCategories"
+    > = { excludedContactIds: [], excludedCategories: [] },
   ) {
     const perform = () => {
       setMessageDraft(value);
       setRecipient(person);
       setActiveContact(person);
       setInPerson(offline);
+      setRecipientRestrictions(exclusions);
       go("Compose");
     };
     if (messageDraft.trim() && messageDraft !== value)
@@ -187,6 +226,13 @@ function useStateModel() {
   }
   function openConversation(id: string) {
     const perform = () => {
+      if (
+        contacts.some((c) => c.id === id && !recipientAllowed(c)) &&
+        messageDraft.trim()
+      ) {
+        setNotice("Choose another person for these prepared words.");
+        return;
+      }
       if (activeContact !== id) setMessageDraft("");
       setActiveContact(id);
       setRecipient(id);
@@ -227,7 +273,10 @@ function useStateModel() {
       return;
     }
     const contact = contacts.find(
-      (c) => c.id === recipient && c.id !== (role === "child" ? "sam" : "alex"),
+      (c) =>
+        c.id === recipient &&
+        recipientAllowed(c) &&
+        c.id !== (role === "child" ? "sam" : "alex"),
     );
     const message = createMessage(role, contact, messageDraft, response);
     if (!message) {
@@ -239,6 +288,10 @@ function useStateModel() {
     setMessages((old) => [...old, message]);
     setActiveContact(recipient);
     setMessageDraft("");
+    setRecipientRestrictions({
+      excludedContactIds: [],
+      excludedCategories: [],
+    });
     go("Conversation");
     setNotice("Simulated message only. Nothing was delivered.");
   }
@@ -302,6 +355,9 @@ function useStateModel() {
     response,
     setResponse,
     inPerson,
+    conversationIdeas,
+    setConversationIdeas,
+    recipientAllowed,
     setInPerson,
     compose,
     openConversation,

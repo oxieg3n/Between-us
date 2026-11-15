@@ -32,6 +32,17 @@ import {
 } from "../screens/Messaging";
 import { CircleScreen, ContactScreen } from "../screens/Circle";
 import { CheckinsScreen, SchedulerScreen } from "../screens/Checkins";
+import { FinanceProvider } from "../finance-state";
+import { LocalModelScreen } from "../screens/LocalModel";
+import {
+  FinanceOverview,
+  ChoresScreen,
+  BudgetScreen,
+  GoalsScreen,
+  MatchingScreen,
+  PayoutsScreen,
+  FinanceHistory,
+} from "../screens/Finance";
 const tabs: { screen: Screen; label: string; icon: IconName }[] = [
   { screen: "Home", label: "Home", icon: "home" },
   { screen: "Journal", label: "Journal", icon: "journal" },
@@ -51,8 +62,17 @@ const titles: Record<Screen, string> = {
   Checkins: "Open the Door",
   Scheduler: "Schedule a check-in",
   Settings: "Profile & appearance",
+  LocalModel: "On-device conversation ideas",
   Safety: "Privacy & safety",
   Onboarding: "Between Us",
+  Finance: "Chores & Goals",
+  Chores: "Chores & allowances",
+  Budget: "Allowance settings",
+  Goals: "Savings goals",
+  GoalDetail: "Your savings goal",
+  Matching: "Savings matching",
+  Payouts: "Earnings & payouts",
+  FinanceHistory: "Financial history",
 };
 function Application() {
   const { screen, tab, go, back, notice, dialog, setDialog, scheduleId } =
@@ -69,7 +89,18 @@ function Application() {
         ? "Chats"
         : screen === "Contact"
           ? "Circle"
-          : screen;
+          : [
+                "Finance",
+                "Chores",
+                "Budget",
+                "Goals",
+                "GoalDetail",
+                "Matching",
+                "Payouts",
+                "FinanceHistory",
+              ].includes(screen)
+            ? "Home"
+            : screen;
   useEffect(() => {
     if (screen === "Conversation") {
       requestAnimationFrame(() =>
@@ -138,8 +169,17 @@ function Application() {
     Checkins: <CheckinsScreen />,
     Scheduler: <SchedulerScreen key={scheduleId} />,
     Settings: <SettingsScreen />,
+    LocalModel: <LocalModelScreen />,
     Safety: <SafetyScreen />,
     Onboarding: <OnboardingScreen />,
+    Finance: <FinanceOverview />,
+    Chores: <ChoresScreen />,
+    Budget: <BudgetScreen />,
+    Goals: <GoalsScreen />,
+    GoalDetail: <GoalsScreen />,
+    Matching: <MatchingScreen />,
+    Payouts: <PayoutsScreen />,
+    FinanceHistory: <FinanceHistory />,
   };
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: t.background }}>
@@ -290,18 +330,23 @@ function Application() {
               { backgroundColor: t.surface, borderColor: t.border },
             ]}
           >
-            <Heading>{dialog?.title}</Heading>
-            <Body>{dialog?.body}</Body>
-            <Button
-              label="Confirm"
-              primary
-              onPress={() => {
-                const action = dialog?.action;
-                setDialog(null);
-                action?.();
-              }}
-            />
-            <Button label="Cancel" quiet onPress={() => setDialog(null)} />
+            <ScrollView
+              keyboardShouldPersistTaps="handled"
+              contentContainerStyle={{ padding: 24, gap: 20 }}
+            >
+              <Heading>{dialog?.title}</Heading>
+              <Body>{dialog?.body}</Body>
+              <Button
+                label="Confirm"
+                primary
+                onPress={() => {
+                  const action = dialog?.action;
+                  setDialog(null);
+                  action?.();
+                }}
+              />
+              <Button label="Cancel" quiet onPress={() => setDialog(null)} />
+            </ScrollView>
           </View>
         </View>
       </Modal>
@@ -311,7 +356,9 @@ function Application() {
 export default function App() {
   return (
     <AppProvider>
-      <Application />
+      <FinanceProvider>
+        <Application />
+      </FinanceProvider>
     </AppProvider>
   );
 }
@@ -363,7 +410,7 @@ const styles = StyleSheet.create({
   dialog: {
     borderWidth: 1,
     borderRadius: 16,
-    padding: 24,
+    maxHeight: "100%",
     gap: 20,
     maxWidth: 460,
     width: "100%",

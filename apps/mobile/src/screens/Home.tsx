@@ -66,6 +66,11 @@ export function HomeScreen() {
           />
         </View>
       )}
+      <View style={{ gap: 8 }}>
+        <Eyebrow>SMALL TASKS, PERSONAL PLANS</Eyebrow>
+        <Button label="Chores & Goals" onPress={() => go("Finance")} />
+        <Body muted>Plan allowances and savings together. This demo tracks fictional amounts.</Body>
+      </View>
       {recent && (
         <View style={{ gap: 10 }}>
           <Eyebrow>A RECENT CONVERSATION</Eyebrow>
@@ -134,8 +139,8 @@ export function SettingsScreen() {
         </View>
       ))}
       <Body muted>
-        Only this appearance preference is saved on this device. Your journal
-        and messages are not stored.
+        Appearance is the only saved preference. Optional model downloads save
+        model files. Your journal, messages and fictional finances stay in memory.
       </Body>
       {!!error && (
         <>
@@ -146,6 +151,7 @@ export function SettingsScreen() {
         </>
       )}
       <Divider />
+      <Button label="On-device conversation ideas" onPress={() => go("LocalModel")} />
       <Eyebrow>DEMO ACCOUNT</Eyebrow>
       <Body>
         {role === "child" ? "Sam · kid / teen" : "Alex · parent / guardian"}
@@ -204,7 +210,7 @@ export function SafetyScreen() {
         onPress={() =>
           compose(
             "I would like to talk with you privately. Can we find a time?",
-            undefined,
+            "",
             true,
           )
         }

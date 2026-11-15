@@ -69,8 +69,10 @@ export function recipientBoundaries(request: JournalRequest) {
   const excludedContactIds = request.contacts.filter(contact => {
     if (contact.status === "blocked" || contact.status === "removed" || explicit.has(contact.id)) return true;
     if (excludedCategories.includes(categoryOf(contact))) return true;
-    const name = clean(contact.name).toLowerCase();
-    return !!name && sentences.some(sentence => sentence.toLowerCase().includes(name) && harm.test(sentence));
+    const name = clean(contact.name).toLowerCase().split(/\s+-\s+|\s+—\s+/)[0];
+    const firstName = name.replace(/^(?:teacher|coach|mr\.?|ms\.?|dr\.?)\s+/, "").split(/\s+/)[0];
+    const aliases = [name, firstName].filter(alias => alias.length >= 2).map(alias => new RegExp(`(?:^|[^a-z])${alias.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?:$|[^a-z])`, "i"));
+    return sentences.some(sentence => harm.test(sentence) && aliases.some(alias => alias.test(sentence)));
   }).map(contact => contact.id);
   return { excludedContactIds, excludedCategories };
 }
@@ -117,7 +119,7 @@ function titleFor(category: RecipientCategory) {
 }
 
 /** No transport, persistence or model initialization. Call only after the author's opt-in/action. */
-export function suggestConversation(request: JournalRequest, fallbackReason = "A native model is not enabled in this build."): SuggestionResult {
+export function suggestConversation(request: JournalRequest, fallbackReason = "A local model is not loaded for this request."): SuggestionResult {
   const bounds = recipientBoundaries(request);
   const text = clean(request.text);
   const result: SuggestionResult = { ...bounds, suggestions: [], source: "local-template", label: "Local conversation templates · no AI model", fallbackReason };

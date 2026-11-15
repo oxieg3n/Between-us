@@ -58,6 +58,14 @@ test("unsafe category/name and explicit exclusions remove recipients, including 
   assert.ok(explicit.excludedContactIds.includes("sibling"));
 });
 
+test("unsafe people named by first name remain excluded when contact labels include relationship annotations", () => {
+  const labelled = [{...contacts[0], name: "Alex - parent"}, {...contacts[1], name: "Teacher Lee"}];
+  const result = suggestConversation({...request("Alex threatened me. Lee is hurting me. I want another person to listen."), contacts: labelled});
+  assert.deepEqual(result.excludedContactIds, ["alex", "lee"]);
+  const differentName = suggestConversation({...request("Alexis hurt me. I want someone else to listen."), contacts: labelled});
+  assert.equal(differentName.excludedContactIds.includes("alex"), false);
+});
+
 test("parent wording remains age neutral and all styles preserve the stated topic", () => {
   const text = "We are moving soon and I want to talk with my child about our move.";
   const variants: SuggestionVariant[] = ["shorter", "simpler", "direct", "like-me", "another"];
