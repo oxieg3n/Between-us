@@ -1,0 +1,174 @@
+[
+  {
+    "time": "2026-11-14T18:57:09-0500",
+    "message": "Native capture: feature/mobile-foundation; 1114-OpenLetterRedesign-r3; source HEAD 1e640665d01d854a7245f40b42237e00e8582a01; dirty=True; Android 17; 1080x2424"
+  },
+  {
+    "time": "2026-11-14T18:57:16-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:57:24-0500",
+    "message": "Verified native Settings build: 1114-OpenLetterRedesign-r3"
+  },
+  {
+    "time": "2026-11-14T18:57:28-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-14T18:57:36-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:57:42-0500",
+    "message": "Tapped: Light mode"
+  },
+  {
+    "time": "2026-11-14T18:57:48-0500",
+    "message": "Captured light/build-identifier.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:57:50-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-14T18:57:56-0500",
+    "message": "Tapped: Open check-in"
+  },
+  {
+    "time": "2026-11-14T18:57:59-0500",
+    "message": "Captured light/child-checkin-actions.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:58:01-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:58:10-0500",
+    "message": "Tapped: Switch to parent demo"
+  },
+  {
+    "time": "2026-11-14T18:58:16-0500",
+    "message": "Tapped: Circle"
+  },
+  {
+    "time": "2026-11-14T18:58:18-0500",
+    "message": "Tapped: Open Teacher Lee,"
+  },
+  {
+    "time": "2026-11-14T18:58:24-0500",
+    "message": "Captured light/parent-contact-actions.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:58:26-0500",
+    "message": "Tapped: Remove Teacher Lee"
+  },
+  {
+    "time": "2026-11-14T18:58:29-0500",
+    "message": "Captured light/contact-removal-confirmation.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:58:31-0500",
+    "message": "Tapped: Cancel"
+  },
+  {
+    "time": "2026-11-14T18:58:34-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-14T18:58:42-0500",
+    "message": "Tapped: Schedule a check-in"
+  },
+  {
+    "time": "2026-11-14T18:58:51-0500",
+    "message": "Captured light/checkin-scheduler-save.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:58:53-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:59:02-0500",
+    "message": "Tapped: Switch to child demo"
+  },
+  {
+    "time": "2026-11-14T18:59:08-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:59:14-0500",
+    "message": "Tapped: Dark mode"
+  },
+  {
+    "time": "2026-11-14T18:59:22-0500",
+    "message": "Captured dark/build-identifier.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:59:24-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-14T18:59:30-0500",
+    "message": "Tapped: Open check-in"
+  },
+  {
+    "time": "2026-11-14T18:59:33-0500",
+    "message": "Captured dark/child-checkin-actions.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:59:36-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:59:44-0500",
+    "message": "Tapped: Switch to parent demo"
+  },
+  {
+    "time": "2026-11-14T18:59:50-0500",
+    "message": "Tapped: Circle"
+  },
+  {
+    "time": "2026-11-14T18:59:53-0500",
+    "message": "Tapped: Open Teacher Lee,"
+  },
+  {
+    "time": "2026-11-14T18:59:58-0500",
+    "message": "Captured dark/parent-contact-actions.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T19:00:01-0500",
+    "message": "Tapped: Remove Teacher Lee"
+  },
+  {
+    "time": "2026-11-14T19:00:03-0500",
+    "message": "Captured dark/contact-removal-confirmation.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T19:00:06-0500",
+    "message": "Tapped: Cancel"
+  },
+  {
+    "time": "2026-11-14T19:00:08-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-14T19:00:17-0500",
+    "message": "Tapped: Schedule a check-in"
+  },
+  {
+    "time": "2026-11-14T19:00:25-0500",
+    "message": "Captured dark/checkin-scheduler-save.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T19:00:28-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T19:00:36-0500",
+    "message": "Tapped: Switch to child demo"
+  },
+  {
+    "time": "2026-11-14T19:00:39-0500",
+    "message": "Completed 10 genuine native screenshots. Manifest: D:\\proejcts\\BetweenUs\\spec\\qa\\open-letter\\capture-manifest-both-supplement.json"
+  }
+]

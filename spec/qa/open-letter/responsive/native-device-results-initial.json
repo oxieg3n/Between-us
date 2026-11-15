@@ -1,0 +1,77 @@
+{
+  "source": "0707b124ebf53b676f24fb637a6c28bb002f8436",
+  "results": [
+    {
+      "case": "native appearance persistence",
+      "result": "Dark mode remained selected after force-stop and re-opening Expo Go; only fictional process memory was reset."
+    },
+    {
+      "case": "small",
+      "pixels": [
+        840,
+        1680
+      ],
+      "density": 420,
+      "dp": [
+        320,
+        640
+      ],
+      "navigation": "passed",
+      "journal": "opened",
+      "note": "Viewport override on the same Pixel_10 AVD; not separate hardware."
+    },
+    {
+      "case": "standard",
+      "pixels": [
+        1080,
+        2424
+      ],
+      "density": 420,
+      "dp": [
+        411,
+        923
+      ],
+      "navigation": "passed",
+      "journal": "opened",
+      "note": "Viewport override on the same Pixel_10 AVD; not separate hardware."
+    },
+    {
+      "case": "large",
+      "pixels": [
+        1260,
+        2730
+      ],
+      "density": 420,
+      "dp": [
+        480,
+        1040
+      ],
+      "navigation": "passed",
+      "journal": "opened",
+      "note": "Viewport override on the same Pixel_10 AVD; not separate hardware."
+    },
+    {
+      "case": "tablet",
+      "pixels": [
+        1920,
+        2560
+      ],
+      "density": 320,
+      "dp": [
+        960,
+        1280
+      ],
+      "navigation": "passed",
+      "journal": "opened",
+      "note": "Viewport override on the same Pixel_10 AVD; not separate hardware."
+    },
+    {
+      "failed": "Native control/text not found: Home"
+    }
+  ],
+  "restored": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "font_scale": "1.0"
+  }
+}

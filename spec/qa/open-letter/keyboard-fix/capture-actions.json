@@ -1,0 +1,50 @@
+[
+  {
+    "time": "2026-11-14T18:40:41-0500",
+    "message": "Tapped: Back"
+  },
+  {
+    "time": "2026-11-14T18:40:46-0500",
+    "message": "Tapped: Message draft"
+  },
+  {
+    "time": "2026-11-14T18:40:56-0500",
+    "message": "Tapped: Review"
+  },
+  {
+    "time": "2026-11-14T18:41:01-0500",
+    "message": "Tapped: Journal"
+  },
+  {
+    "time": "2026-11-14T18:41:03-0500",
+    "message": "Tapped: New entry"
+  },
+  {
+    "time": "2026-11-14T18:41:06-0500",
+    "message": "Tapped: Your private demo words"
+  },
+  {
+    "time": "2026-11-14T18:41:16-0500",
+    "message": "Tapped: Save entry"
+  },
+  {
+    "time": "2026-11-14T18:41:21-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:41:30-0500",
+    "message": "Tapped: Switch to parent demo"
+  },
+  {
+    "time": "2026-11-14T18:41:35-0500",
+    "message": "Tapped: Confirm"
+  },
+  {
+    "time": "2026-11-14T18:41:39-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:41:48-0500",
+    "message": "Tapped: Switch to child demo"
+  }
+]

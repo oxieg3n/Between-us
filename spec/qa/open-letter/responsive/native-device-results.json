@@ -1,0 +1,107 @@
+{
+  "source": "1e640665d01d854a7245f40b42237e00e8582a01",
+  "results": [
+    {
+      "case": "native appearance persistence",
+      "result": "Dark mode remained selected after force-stop and re-opening Expo Go; only fictional process memory was reset."
+    },
+    {
+      "case": "small",
+      "pixels": [
+        840,
+        1680
+      ],
+      "density": 420,
+      "dp": [
+        320,
+        640
+      ],
+      "navigation": "passed",
+      "journal": "opened",
+      "note": "Viewport override on the same Pixel_10 AVD; not separate hardware."
+    },
+    {
+      "case": "standard",
+      "pixels": [
+        1080,
+        2424
+      ],
+      "density": 420,
+      "dp": [
+        411,
+        923
+      ],
+      "navigation": "passed",
+      "journal": "opened",
+      "note": "Viewport override on the same Pixel_10 AVD; not separate hardware."
+    },
+    {
+      "case": "large",
+      "pixels": [
+        1260,
+        2730
+      ],
+      "density": 420,
+      "dp": [
+        480,
+        1040
+      ],
+      "navigation": "passed",
+      "journal": "opened",
+      "note": "Viewport override on the same Pixel_10 AVD; not separate hardware."
+    },
+    {
+      "case": "tablet",
+      "pixels": [
+        1920,
+        2560
+      ],
+      "density": 320,
+      "dp": [
+        960,
+        1280
+      ],
+      "navigation": "passed",
+      "journal": "opened",
+      "note": "Viewport override on the same Pixel_10 AVD; not separate hardware."
+    },
+    {
+      "case": "native font scale 200%",
+      "navigation": "all four destinations reachable",
+      "journal": "opened",
+      "visual_review": "required"
+    },
+    {
+      "case": "visible keyboard geometry",
+      "ime_top": 1541,
+      "controls": {
+        "Message draft": [
+          53,
+          1161,
+          767,
+          1298
+        ],
+        "Review": [
+          793,
+          1168,
+          1028,
+          1297
+        ]
+      },
+      "result": "full input and Review bounds are above visible IME"
+    },
+    {
+      "case": "native keyboard and review",
+      "result": "typed fictional text, tapped Review above visible IME, Back preserved draft, re-reviewed and simulated send completed"
+    },
+    {
+      "case": "Android nested Back",
+      "result": "returned from conversation to prior review screen"
+    }
+  ],
+  "restored": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "font_scale": "1.0"
+  }
+}

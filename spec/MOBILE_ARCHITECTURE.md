@@ -14,7 +14,7 @@ Node 26.13.0, npm 11.20.0 and Git 2.56.0.windows.4 are available. Java, adb and 
 
 Use `apps/mobile/` as an independent npm package with its own lockfile. Expo + React Native + TypeScript + Expo Router provide one Android/iOS codebase and a web preview. Use the template's compatible dependency versions and Expo install checks rather than guessing native package versions. Official [create-expo-app guidance](https://docs.expo.dev/more/create-expo/) and [Router introduction](https://docs.expo.dev/router/introduction/) describe the setup. The resolved version is recorded in `apps/mobile/package.json` and its lockfile.
 
-Keep a local communication module inside the application. There is only one consumer, so a shared `packages/communication/` package and workspace orchestration are not justified yet. Use memory-only state, fictional author IDs and explicit contact states. No AsyncStorage, journal files, backend, telemetry or external AI requests. Native platform memory, screenshots and developer tools are outside the prototype's privacy guarantee.
+Keep a local communication module inside the application. There is only one consumer, so a shared `packages/communication/` package and workspace orchestration are not justified yet. Use memory-only state, fictional author IDs and explicit contact states. The Open Letter continuation authorizes AsyncStorage for the sole non-sensitive `between-us.appearance` key. Journals, drafts, contacts, schedules and messages remain memory-only: no content persistence, journal files, backend, telemetry or external AI requests. Native platform memory, screenshots and developer tools are outside the prototype's privacy guarantee.
 
 The shared design system belongs in `design/`; security design belongs in `spec/security/`; task contracts belong in `agents/`. The existing Pages demo remains independent. App UI, domain rules and focused tests have separate file owners; dependency and native-test operations are serialized by the master.
 
@@ -40,3 +40,7 @@ Official references checked: [D1 limits](https://developers.cloudflare.com/d1/pl
 4. Review journal storage separately: key custody, device lock, recovery, backups, deletion, export, multi-device and shared-device threats. Select reviewed libraries/protocols; do not invent encryption or promise end-to-end encryption prematurely.
 5. Add real messaging, abuse operations, notification delivery receipts/retries and timezone-aware check-ins only after authorization, consent and operational readiness pass.
 6. Owner approval is required before credentials, paid connections or production deployments. Real children's data additionally requires completed security/privacy and child-safety review.
+
+## Open Letter continuation
+
+Current UI build: `1114-OpenLetterRedesign-r3`, app 0.2.2. See `spec/OPEN_LETTER_BUILD_REPORT.md` and `design/OPEN_LETTER_DESIGN_SYSTEM.md` for current navigation/design/QA. This adds theme preference storage only; it does not authorize sensitive content storage. The original foundation audit above is historical.

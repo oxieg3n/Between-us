@@ -48,3 +48,6 @@ example
 /assets/images/
 /assets/expo.icon/
 /.vscode/
+# Python QA helper bytecode
+__pycache__/
+*.pyc

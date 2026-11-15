@@ -1,0 +1,4 @@
+﻿Build: 1114-OpenLetterRedesign-r3
+Android: 17
+PASS: native navigation, author-specific journal overview, editor, account switching and contextual check-in destination.
+No messages were sent and no journal entries were changed.

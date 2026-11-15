@@ -1,0 +1,150 @@
+[
+  {
+    "time": "2026-11-14T18:22:54-0500",
+    "message": "Native capture: feature/mobile-foundation; 1114-OpenLetterRedesign-r2; source HEAD 0707b124ebf53b676f24fb637a6c28bb002f8436; dirty=True; Android 17; 1080x2424"
+  },
+  {
+    "time": "2026-11-14T18:23:01-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:23:10-0500",
+    "message": "Verified native Settings build: 1114-OpenLetterRedesign-r2"
+  },
+  {
+    "time": "2026-11-14T18:23:13-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-14T18:23:21-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:23:27-0500",
+    "message": "Tapped: Light mode"
+  },
+  {
+    "time": "2026-11-14T18:23:33-0500",
+    "message": "Captured light/build-identifier.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:23:35-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-14T18:23:41-0500",
+    "message": "Tapped: Open check-in"
+  },
+  {
+    "time": "2026-11-14T18:23:44-0500",
+    "message": "Captured light/child-checkin-actions.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:23:46-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:23:55-0500",
+    "message": "Tapped: Switch to parent demo"
+  },
+  {
+    "time": "2026-11-14T18:24:01-0500",
+    "message": "Tapped: Circle"
+  },
+  {
+    "time": "2026-11-14T18:24:03-0500",
+    "message": "Tapped: Open Teacher Lee,"
+  },
+  {
+    "time": "2026-11-14T18:24:08-0500",
+    "message": "Captured light/parent-contact-actions.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:24:11-0500",
+    "message": "Tapped: Remove Teacher Lee"
+  },
+  {
+    "time": "2026-11-14T18:24:13-0500",
+    "message": "Captured light/contact-removal-confirmation.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:24:16-0500",
+    "message": "Tapped: Cancel"
+  },
+  {
+    "time": "2026-11-14T18:24:18-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:24:27-0500",
+    "message": "Tapped: Switch to child demo"
+  },
+  {
+    "time": "2026-11-14T18:24:33-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:24:39-0500",
+    "message": "Tapped: Dark mode"
+  },
+  {
+    "time": "2026-11-14T18:24:44-0500",
+    "message": "Captured dark/build-identifier.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:24:46-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-14T18:24:52-0500",
+    "message": "Tapped: Open check-in"
+  },
+  {
+    "time": "2026-11-14T18:24:55-0500",
+    "message": "Captured dark/child-checkin-actions.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:24:57-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:25:06-0500",
+    "message": "Tapped: Switch to parent demo"
+  },
+  {
+    "time": "2026-11-14T18:25:12-0500",
+    "message": "Tapped: Circle"
+  },
+  {
+    "time": "2026-11-14T18:25:14-0500",
+    "message": "Tapped: Open Teacher Lee,"
+  },
+  {
+    "time": "2026-11-14T18:25:20-0500",
+    "message": "Captured dark/parent-contact-actions.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:25:22-0500",
+    "message": "Tapped: Remove Teacher Lee"
+  },
+  {
+    "time": "2026-11-14T18:25:25-0500",
+    "message": "Captured dark/contact-removal-confirmation.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:25:27-0500",
+    "message": "Tapped: Cancel"
+  },
+  {
+    "time": "2026-11-14T18:25:29-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:25:38-0500",
+    "message": "Tapped: Switch to child demo"
+  },
+  {
+    "time": "2026-11-14T18:25:41-0500",
+    "message": "Completed 8 genuine native screenshots. Manifest: D:\\proejcts\\BetweenUs\\spec\\qa\\open-letter\\capture-manifest-both-supplement.json"
+  }
+]

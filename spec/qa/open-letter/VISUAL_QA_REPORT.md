@@ -1,0 +1,128 @@
+# Open Letter native visual QA
+
+## Build and environment
+
+**Status: R3 native visual QA and evidence packaging complete; owner design approval remains pending.** The keyboard/font defects discovered during R2 were corrected and retested before the complete R3 recapture. The known limitations below remain part of the handoff.
+
+The final source is **1114-OpenLetterRedesign-r3**, app **0.2.2**, commit `1e640665d01d854a7245f40b42237e00e8582a01`. Type/lint/unit/browser/axe/Expo checks and the serial native device/input/smoke checks passed before final capture.
+
+Final build: **1114-OpenLetterRedesign-r3**, app version **0.2.2**. Frozen application source: `1e640665d01d854a7245f40b42237e00e8582a01`. Branch: `feature/mobile-foundation`.
+
+Screens were captured from the running React Native application in **Expo Go SDK 58**, on **Pixel_10 / emulator-5554**, Android **17**, model `sdk_gphone16k_x86_64`, at **1080 × 2424 pixels**. This is an emulator runtime inspection, not a standalone APK or physical-device certification.
+
+The capture agent navigated actual native controls using UIAutomator labels and ADB taps/swipes. It verified the build string in Settings, chose both appearances through the app's real settings, and saved original PNG bytes with `adb shell screencap -p` and `adb pull`. Only fictional Sam, Alex and Teacher Lee fixture information appears. No journal text, messages, contacts or schedules were edited during the capture pass.
+
+## Required captures
+
+All **24 required images** were captured successfully from R3. None are browser renders, generated artwork or static design files. Each link below is repository-relative to this report.
+
+| Screen | Safe Harbor | Night Harbor |
+| --- | --- | --- |
+| Child home | [Light](light/child-home.png) | [Dark](dark/child-home.png) |
+| Parent home | [Light](light/parent-home.png) | [Dark](dark/parent-home.png) |
+| Journal overview | [Light](light/journal-overview.png) | [Dark](dark/journal-overview.png) |
+| Journal writing editor | [Light](light/journal-editor.png) | [Dark](dark/journal-editor.png) |
+| Journal conversation suggestion | [Light](light/journal-reflection.png) | [Dark](dark/journal-reflection.png) |
+| Conversation list | [Light](light/conversations.png) | [Dark](dark/conversations.png) |
+| Active conversation | [Light](light/active-conversation.png) | [Dark](dark/active-conversation.png) |
+| My Circle | [Light](light/my-circle.png) | [Dark](dark/my-circle.png) |
+| Parent contact management | [Light](light/parent-contacts.png) | [Dark](dark/parent-contacts.png) |
+| Open the Door scheduler | [Light](light/checkin-scheduler.png) | [Dark](dark/checkin-scheduler.png) |
+| Child check-in | [Light](light/child-checkin.png) | [Dark](dark/child-checkin.png) |
+| Appearance settings | [Light](light/appearance-settings.png) | [Dark](dark/appearance-settings.png) |
+
+The initial viewport is preserved in each required image. Longer screens intentionally scroll. The reflection image focuses the optional suggestion after it is revealed; it does not crop or alter the native viewport.
+
+Additional scheduler scroll views document days, time and preview: [light](light/checkin-scheduler-preview.png), [dark](dark/checkin-scheduler-preview.png). Supplemental captures cover the build footer, child later/skip controls, parent management actions and the actual removal confirmation dialog; the dialog is canceled without removing a contact. The supplemental manifest records these separately from the required matrix.
+
+There are **36 final native screenshots** in total: the 24 required views, two scheduler previews and these ten interaction/build views:
+
+| Additional evidence | Safe Harbor | Night Harbor |
+| --- | --- | --- |
+| Build identifier in Settings | [Light](light/build-identifier.png) | [Dark](dark/build-identifier.png) |
+| Child later/skip controls | [Light](light/child-checkin-actions.png) | [Dark](dark/child-checkin-actions.png) |
+| Parent management actions | [Light](light/parent-contact-actions.png) | [Dark](dark/parent-contact-actions.png) |
+| Removal confirmation, canceled | [Light](light/contact-removal-confirmation.png) | [Dark](dark/contact-removal-confirmation.png) |
+| Complete scheduler Save action | [Light](light/checkin-scheduler-save.png) | [Dark](dark/checkin-scheduler-save.png) |
+
+## Comparisons
+
+The four sheets use **unscaled full source screenshots**, Safe Harbor on the left and Night Harbor on the right. Only neutral margins and theme/screen labels were added outside the screenshot pixels. Each sheet is **2256 × 2606 pixels**, retaining both original **1080 × 2424** viewports.
+
+- [Home comparison](comparisons/home-side-by-side.png)
+- [Journal comparison](comparisons/journal-side-by-side.png)
+- [Conversation comparison](comparisons/conversation-side-by-side.png)
+- [Navigation comparison](comparisons/navigation-overview.png)
+
+## Review performed
+
+The capture and design agents inspected the required native views and the four comparison sheets. The review checked alignment, safe areas, fixed bottom navigation, selected states, wrapping, editorial hierarchy, body readability, paper treatment, incoming/outgoing message distinction, input surfaces, branding, privacy wording and simulated-action labels. Native accessibility names were used to navigate the application rather than relying only on screenshots.
+
+Sampled blank screenshot-margin pixels agree with the approved backgrounds on every required screen: **#F7FAFC** in Safe Harbor and **#172730** in Night Harbor. Night Harbor uses slate paper/input surfaces and light text; it is not an inverted light screen. The Ivory plate behind the exact approved brand symbol is intentional to preserve its dark outlines. The status bar changes appropriately between themes.
+
+The journal editor preserves a comfortable multiline writing area, with Save/Saved status visible and the optional conversation action below. The reflection remains communication-only and visibly offers separate words, an in-person option and dismissal. Chat bubbles have distinct alignment/color and a separate composer above bottom navigation. Contact lists use rows; administrator actions stay on the person screen rather than exposing journal access. Child check-ins visibly offer later and skip without pressure.
+
+No significant clipping, overlapping controls, missing glyphs or forgotten light surfaces inside dark mode were found in the final baseline phone images. Some long content naturally continues below the viewport and can be reached by native scrolling. Disabled Save/Review controls are intentionally muted; they are not enabled actions with falsely reported success.
+
+## Defects found and fixes verified
+
+1. **Weekday selection was invisible.** In the first native scheduler capture, all seven day buttons looked identical despite Friday being selected. Capture was paused, and the design agent added a soft selected fill, primary outline/text and accessible selection state. R2 was type/lint/unit/browser checked by the master, then all 24 required views were recaptured. Friday is now plainly selected in both scheduler preview images. The resulting 4+3 wrap is natural and remains readable/reachable.
+2. **Brand outlines needed protection at night.** R2 gives the original symbol a small Ivory surface rather than recoloring or replacing the image. The final dark home/Circle screenshots and comparisons show the complete recognizable mark.
+3. **Capture obstruction, not an app defect.** Expo Go's developer menu and floating Tools control initially obscured the app/header target. The agent inspected the real native screen, closed the menu and relaunched with Expo's developer-FAB/onboarding suppression flags. Final review images contain the app without that overlay. Initial debug images and logs are preserved as capture history rather than presented as final design evidence.
+
+Pre-fix history is preserved under [initial baseline](baseline-ed96bd1/) and [R2 baseline](baseline-0707b12-r2/), including the original input-defect evidence. These are not the final R3 set. No production demo or prior-session screenshot was overwritten.
+
+## Interaction and accessibility limits
+
+The native capture exercised onboarding, Settings/build identification, immediate light/dark selection, parent/child switching, all four tabs, journal opening, saved-entry reflection, conversation opening, contacts, parent scheduler and child check-ins. Supplemental removal confirmation is opened and canceled. Capturing a control does not prove that a future delivery backend exists; messaging, verification, reporting, scheduling and notifications remain simulated.
+
+The master separately records TypeScript/lint/unit/browser/axe checks and serial native keyboard, size, font and smoke checks. Native UIAutomator names establish that these controls are discoverable, but this is not a complete TalkBack or VoiceOver audit. No iOS runtime testing, physical-phone testing, production authentication, encryption, secure journal storage, delivery or abuse-response operation is certified here.
+
+## Remaining work
+
+Subsequent native input testing found two defects outside the keyboard-dismissed baseline matrix: the conversation composer/Review action appeared behind visible Gboard, and at 200% font scale the journal's private-status row overflowed horizontally. The initial accessibility-bounds keyboard check was a false positive because it checked physical-screen bounds rather than the area above the IME. The messaging agent corrected shell keyboard handling, and the master constrained the journal privacy labels to their available row width. Actual corrected keyboard/font views passed visual reinspection and the full R3 native rerun; all required screens were recaptured from R3. No remaining blocking phone redesign was identified after those corrections.
+
+Preserved defect evidence: [R2 composer hidden behind keyboard](baseline-0707b12-r2/responsive-r2/conversation-keyboard.png), [R2 journal at 200% font scale](baseline-0707b12-r2/responsive-r2/font-scale-200-journal.png), and [initial input automation result](baseline-0707b12-r2/responsive-r2/native-input-results.json). The initial result's claim that Review remained reachable is superseded by direct pixel/IME inspection; it must not be cited as a passed keyboard check.
+
+Follow-up usability work should test families with longer names/content, multilingual text, screen readers and prolonged writing interactions. Contextual nested screens use a Back header and neutral tab states; highlighting their parent tab could improve wayfinding. The tablet rail is functional but its flex-expanded selected area is taller than a conventional compact rail group; compact grouping is future visual polish. Android launcher masking and small-icon recognition still need a standalone application build.
+
+Additional device-size/font/keyboard results are recorded below after the screenshot agent released exclusive ADB access. They are separate interaction checks; they are not inferred from the baseline screenshots.
+
+## R3 native device and input retest
+
+The master reran the native device/input suite against `1e640665d01d854a7245f40b42237e00e8582a01`. [Current native results](responsive/native-device-results.json) records successful cases and restoration of the original device size, density and font scale. These are **viewport/density overrides on the same Pixel_10 emulator**, not four separate devices or physical-hardware certification.
+
+| Case | Logical size | PNG size | Density | Native evidence |
+| --- | --- | --- | --- | --- |
+| Small phone | 320 × 640 dp | 840 × 1680 | 420 | [Home](responsive/small-home.png), [Journal](responsive/small-journal.png) |
+| Standard phone | 411 × 923 dp | 1080 × 2424 | 420 | [Home](responsive/standard-home.png), [Journal](responsive/standard-journal.png) |
+| Large phone | 480 × 1040 dp | 1260 × 2730 | 420 | [Home](responsive/large-home.png), [Journal](responsive/large-journal.png) |
+| Tablet | 960 × 1280 dp | 1920 × 2560 | 320 | [Home](responsive/tablet-home.png), [Journal](responsive/tablet-journal.png) |
+
+All four native viewports kept their navigation reachable and opened the journal. Small-phone headlines wrap naturally and remain scrollable. The tablet uses a rail and a restrained content column; its oversized flex-expanded selected region remains a documented compact-grouping polish item.
+
+Dark appearance persisted after an actual Expo Go force-stop/reopen: [native preference after process restart](responsive/appearance-after-process-restart.png). A cold Expo Go start once returned to the launcher; a plain warm deep-link retry recovered the app. This development-client startup quirk is recorded rather than represented as a clean first-attempt launch.
+
+At **200% system font scale**, all four navigation destinations remained reachable and the journal opened. Actual [Home](responsive/font-scale-200-home.png) and [Journal](responsive/font-scale-200-journal.png) images were reviewed: writing/privacy text stays within the viewport, the privacy-label correction is visible, and the profile gear remains present. This is a focused text-scale check, not a complete screen-reader audit.
+
+The corrected [visible keyboard screenshot](responsive/conversation-keyboard.png) now shows the full draft field and Review action **above** Gboard. Recorded IME top is `1541 px`; input bounds are `[53,1161,767,1298]`, and Review bounds are `[793,1168,1028,1297]`, so both controls' bottom edges are above the actual IME boundary. The master typed fictional words, tapped Review while the keyboard was open, verified Back preserved the draft, reviewed again and completed a simulated send. [Exact review](responsive/native-message-review.png) and [simulated message](responsive/native-simulated-message.png) evidence accompanies the geometry proof. Android nested Back also returned from conversation to its prior review screen.
+
+The main light/dark matrix has been fully recaptured from a fresh R3 seed session after the native checks. It does not mix R2 and R3 source captures.
+
+The updated [R3 PowerShell native smoke result](smoke/20261114-184819/RESULT.txt) passed navigation, author-specific journal overview/editor, account switching and the contextual check-in destination on Android 17 without changing journals or sending messages. Final R3 source remained unchanged while the subsequent fresh-session screenshot pass began.
+
+## Reproduction and evidence
+
+From `apps/mobile`, while the tested app is running in the emulator and the master has frozen source:
+
+```powershell
+python .\scripts\capture-open-letter.py
+python .\scripts\capture-open-letter.py --supplement
+powershell -NoProfile -File .\scripts\open-letter-comparisons.ps1
+```
+
+The capture script refuses to overwrite images unless `--replace` is explicitly supplied for a documented recapture after preserving the prior set. The comparison script similarly requires `-Replace` for existing sheets. Capture scripts use no third-party image dependency.
+
+[Required capture manifest](capture-manifest-both.json) includes source SHA, build, device/resolution, action log and SHA256 for every required PNG plus scheduler preview. [Supplemental capture manifest](capture-manifest-both-supplement.json) records the extra controls/build/dialog evidence. These manifests describe source provenance even though evidence files were still uncommitted when captured.
+
+Evidence checks passed: all 36 native PNG hashes match their manifests and all are 1080 × 2424; all four comparisons are 2256 × 2606; every report link resolves. The screenshot agent inspected the supplemental dialogs/build/Save controls and all comparison sheets without altering source screenshots. No required screen is missing. Initial failed capture logs, developer-overlay debug PNGs and native XML were moved without deletion/overwrite into [baseline debug history](baseline-ed96bd1/debug/), keeping the final root manifests unambiguous.

@@ -1,0 +1,4 @@
+# Non-app startup/OS diagnostics stay local; retain actual app defect PNGs and results.
+**/*debug*.png
+**/*-window.txt
+**/*.xml

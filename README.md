@@ -35,19 +35,19 @@ A future production release needs age-appropriate consent, verified contacts, mo
 
 Built with care by [Powered By Oxieg3n](https://poweredby.oxieg3n.com/).
 
-## Mobile foundation
+## Open Letter mobile application
 
-A fictional, memory-only Expo SDK 58 / React Native / TypeScript / Expo Router application lives in `apps/mobile/`. The original Pages demo is unchanged. Both roles have journals, local conversation prompts, My Circle, composition/review, simulated conversations, optional check-ins and safety information. The approved symbol and Safe Harbor light/dark themes are reused.
+A fictional, memory-only Expo SDK 58 / React Native / TypeScript / Expo Router application lives in `apps/mobile/`. The original Pages demo is unchanged. Both roles have journals, local conversation prompts, My Circle, composition/review, simulated conversations, optional check-ins and safety information. The approved symbol is preserved. The Open Letter interface uses Safe Harbor light and Night Harbor dark themes, with Home, Journal, Chats and Circle navigation. Build: `1114-OpenLetterRedesign-r3` (app version 0.2.2).
 
 ### Windows PowerShell startup
 
 ```powershell
 Set-Location 'D:\proejcts\BetweenUs\apps\mobile'
 npm ci
-npm start
+npx expo start --clear
 ```
 
-Run `npm run web` for a browser preview. Use fictional information only. Memory resets on reload. Role switching clears editors/drafts and is a demo inspection control, not authentication. No real messaging, reporting, encryption, identity verification, notification delivery, analytics, external AI, or server storage is implemented.
+Run `npm run web` for a browser preview. Use fictional information only. Journals, contacts, drafts and messages reset on reload. Only the appearance preference persists locally; Follow device appearance is the default. Role switching warns before clearing unsaved editors/drafts and is a demo inspection control, not authentication. No real messaging, reporting, encryption, identity verification, notification delivery, analytics, external AI, or server storage is implemented.
 
 ### Android testing
 
@@ -83,8 +83,20 @@ npx expo export --platform web
 npx expo export --platform android
 ```
 
-UI tests use installed Google Chrome at 390 × 844, with a local Metro server on port 8081. They exercise core flows and run an axe scan on the safety screen. This is not whole-app accessibility certification. Screenshots go to `apps/mobile/test-results/`; selected session evidence is in `spec/qa/`.
+UI tests use installed Google Chrome at 390 × 844, with a local Metro server on port 8081. They exercise journal, message, contact, schedule, skip and appearance flows, including six axe scans across Home, Journal and Settings in both themes. This is not whole-app accessibility certification. Native Android evidence and theme comparisons are in [`spec/qa/open-letter/`](spec/qa/open-letter/). The [visual QA report](spec/qa/open-letter/VISUAL_QA_REPORT.md) records capture provenance and remaining limits.
 
 Parents add/remove contacts directly and approve child requests. New contacts cannot message: approval alone establishes neither acceptance nor identity. Seed verification is fictional. Review is required before simulated sends; journal text is never copied automatically. Children can skip check-ins without penalty or seek another safe adult without approval.
 
-See [architecture/backend comparison](spec/MOBILE_ARCHITECTURE.md), [security boundaries](spec/security/BOUNDARIES.md), [mobile design](design/MOBILE_SYSTEM.md), [QA checklist](spec/MOBILE_QA.md), and [session results](spec/BUILD_REPORT.md). No backend is selected. Real use requires reviewed identity, consent, authorization, storage/key recovery, abuse operations and notification design. Paid services, credentials and production deployment require owner approval.
+See [architecture/backend comparison](spec/MOBILE_ARCHITECTURE.md), [security boundaries](spec/security/BOUNDARIES.md), [Open Letter design system](design/OPEN_LETTER_DESIGN_SYSTEM.md), [QA checklist](spec/MOBILE_QA.md), and [Open Letter session results](spec/OPEN_LETTER_BUILD_REPORT.md). No backend is selected. Real use requires reviewed identity, consent, authorization, storage/key recovery, abuse operations and notification design. Paid services, credentials and production deployment require owner approval.
+
+### Native evidence and smoke checks
+
+With the app open in Expo Go, run these from `apps/mobile`:
+
+```powershell
+powershell -NoProfile -File .\scripts\android-smoke.ps1
+python .\scripts\capture-open-letter.py
+powershell -NoProfile -File .\scripts\open-letter-comparisons.ps1
+```
+
+The capture script navigates the actual Android UI through ADB. It records actions, hashes, source commit and build identifier; comparison sheets use those original PNGs. Existing capture protection and recapture options are described by `python .\scripts\capture-open-letter.py --help`. Run emulator tasks serially. `python` uses only the standard library; comparison generation uses Windows System.Drawing.

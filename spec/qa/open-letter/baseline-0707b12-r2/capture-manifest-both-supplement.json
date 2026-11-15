@@ -1,0 +1,227 @@
+{
+  "build_id": "1114-OpenLetterRedesign-r2",
+  "source_head_at_capture": "0707b124ebf53b676f24fb637a6c28bb002f8436",
+  "working_tree_dirty": true,
+  "branch": "feature/mobile-foundation",
+  "serial": "emulator-5554",
+  "emulator": "Pixel_10",
+  "model": "sdk_gphone16k_x86_64",
+  "android": "17",
+  "resolution": [
+    1080,
+    2424
+  ],
+  "capture_method": "ADB shell screencap -p then adb pull; original PNG bytes",
+  "screens": [
+    {
+      "file": "light/build-identifier.png",
+      "theme": "light",
+      "description": "Native Settings footer showing the tested build identifier.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "bc4b515c3c4b748f63814e92cb6ddb5903faee7c1450a877f79228102eea233d"
+    },
+    {
+      "file": "light/child-checkin-actions.png",
+      "theme": "light",
+      "description": "Additional full viewport showing optional later/skip controls without activating them.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "d00842f9b3de125ed10b6fcaf2fa36f554b5c81fb2ef8463a180803f9d0abdba"
+    },
+    {
+      "file": "light/parent-contact-actions.png",
+      "theme": "light",
+      "description": "Parent block/report/remove controls in the real lower management viewport.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "4788af55ebc4dac2713af768d27e61a7f2ab1ec8e7056cf7f5d72553e988c4b6"
+    },
+    {
+      "file": "light/contact-removal-confirmation.png",
+      "theme": "light",
+      "description": "Actual parent removal confirmation dialog; Cancel is used immediately after capture.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "55d83cc1552a22055dc4792dfac0a79e895da7ca7bd048f6e5c1a219cbd62de0"
+    },
+    {
+      "file": "dark/build-identifier.png",
+      "theme": "dark",
+      "description": "Native Settings footer showing the tested build identifier.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "003bc5b73f033b084f99b67d7e564fbed5dc0818fd40bb0376f8802de4967698"
+    },
+    {
+      "file": "dark/child-checkin-actions.png",
+      "theme": "dark",
+      "description": "Additional full viewport showing optional later/skip controls without activating them.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "0737890bf943d02ab3fa211d1e19d5c622e0e8777794126dd58b55e6d5efb5bc"
+    },
+    {
+      "file": "dark/parent-contact-actions.png",
+      "theme": "dark",
+      "description": "Parent block/report/remove controls in the real lower management viewport.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "ea8a8b969043a4aa9d90494da7fb6f9f5604b00a95754c7ab437cae51df07943"
+    },
+    {
+      "file": "dark/contact-removal-confirmation.png",
+      "theme": "dark",
+      "description": "Actual parent removal confirmation dialog; Cancel is used immediately after capture.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "bd52b0dcced1c1b04c1f565f7a9ad919eaebcaf3112a695c341849254880c75a"
+    }
+  ],
+  "actions": [
+    {
+      "time": "2026-11-14T18:22:54-0500",
+      "message": "Native capture: feature/mobile-foundation; 1114-OpenLetterRedesign-r2; source HEAD 0707b124ebf53b676f24fb637a6c28bb002f8436; dirty=True; Android 17; 1080x2424"
+    },
+    {
+      "time": "2026-11-14T18:23:01-0500",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-14T18:23:10-0500",
+      "message": "Verified native Settings build: 1114-OpenLetterRedesign-r2"
+    },
+    {
+      "time": "2026-11-14T18:23:13-0500",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-14T18:23:21-0500",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-14T18:23:27-0500",
+      "message": "Tapped: Light mode"
+    },
+    {
+      "time": "2026-11-14T18:23:33-0500",
+      "message": "Captured light/build-identifier.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:23:35-0500",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-14T18:23:41-0500",
+      "message": "Tapped: Open check-in"
+    },
+    {
+      "time": "2026-11-14T18:23:44-0500",
+      "message": "Captured light/child-checkin-actions.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:23:46-0500",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-14T18:23:55-0500",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-14T18:24:01-0500",
+      "message": "Tapped: Circle"
+    },
+    {
+      "time": "2026-11-14T18:24:03-0500",
+      "message": "Tapped: Open Teacher Lee,"
+    },
+    {
+      "time": "2026-11-14T18:24:08-0500",
+      "message": "Captured light/parent-contact-actions.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:24:11-0500",
+      "message": "Tapped: Remove Teacher Lee"
+    },
+    {
+      "time": "2026-11-14T18:24:13-0500",
+      "message": "Captured light/contact-removal-confirmation.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:24:16-0500",
+      "message": "Tapped: Cancel"
+    },
+    {
+      "time": "2026-11-14T18:24:18-0500",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-14T18:24:27-0500",
+      "message": "Tapped: Switch to child demo"
+    },
+    {
+      "time": "2026-11-14T18:24:33-0500",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-14T18:24:39-0500",
+      "message": "Tapped: Dark mode"
+    },
+    {
+      "time": "2026-11-14T18:24:44-0500",
+      "message": "Captured dark/build-identifier.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:24:46-0500",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-14T18:24:52-0500",
+      "message": "Tapped: Open check-in"
+    },
+    {
+      "time": "2026-11-14T18:24:55-0500",
+      "message": "Captured dark/child-checkin-actions.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:24:57-0500",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-14T18:25:06-0500",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-14T18:25:12-0500",
+      "message": "Tapped: Circle"
+    },
+    {
+      "time": "2026-11-14T18:25:14-0500",
+      "message": "Tapped: Open Teacher Lee,"
+    },
+    {
+      "time": "2026-11-14T18:25:20-0500",
+      "message": "Captured dark/parent-contact-actions.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:25:22-0500",
+      "message": "Tapped: Remove Teacher Lee"
+    },
+    {
+      "time": "2026-11-14T18:25:25-0500",
+      "message": "Captured dark/contact-removal-confirmation.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:25:27-0500",
+      "message": "Tapped: Cancel"
+    },
+    {
+      "time": "2026-11-14T18:25:29-0500",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-14T18:25:38-0500",
+      "message": "Tapped: Switch to child demo"
+    }
+  ]
+}

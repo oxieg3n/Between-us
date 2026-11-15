@@ -1,0 +1,24 @@
+{
+  "source": "0707b124ebf53b676f24fb637a6c28bb002f8436",
+  "results": [
+    {
+      "case": "native font scale 200%",
+      "navigation": "all four destinations reachable",
+      "journal": "opened",
+      "visual_review": "required"
+    },
+    {
+      "case": "native keyboard and review",
+      "result": "typed fictional text, Review stayed reachable, keyboard dismissed with Back, exact review and simulated send completed"
+    },
+    {
+      "case": "Android nested Back",
+      "result": "returned from conversation to prior review screen"
+    }
+  ],
+  "restored": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "font_scale": "1.0"
+  }
+}

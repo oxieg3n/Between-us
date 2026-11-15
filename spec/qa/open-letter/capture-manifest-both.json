@@ -1,0 +1,499 @@
+{
+  "build_id": "1114-OpenLetterRedesign-r3",
+  "source_head_at_capture": "1e640665d01d854a7245f40b42237e00e8582a01",
+  "working_tree_dirty": true,
+  "branch": "feature/mobile-foundation",
+  "serial": "emulator-5554",
+  "emulator": "Pixel_10",
+  "model": "sdk_gphone16k_x86_64",
+  "android": "17",
+  "resolution": [
+    1080,
+    2424
+  ],
+  "capture_method": "ADB shell screencap -p then adb pull; original PNG bytes",
+  "screens": [
+    {
+      "file": "light/appearance-settings.png",
+      "theme": "light",
+      "description": "Appearance selected through the app's actual settings.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "f244c75711f778975b8f161dd71a1528200123861762463017b20fdf43bec1b0"
+    },
+    {
+      "file": "light/child-home.png",
+      "theme": "light",
+      "description": "Child home, saved example content, no input changes.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "1e5be78c3a06cf78f63a6d9299e94551569c8389e508ef5aa989dc9d56e468a1"
+    },
+    {
+      "file": "light/journal-overview.png",
+      "theme": "light",
+      "description": "Child journal overview; only the child fixture is listed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "d91c9554aca93fd359c2c8d6af4826bc60c7766681827c5176df69c946218448"
+    },
+    {
+      "file": "light/journal-editor.png",
+      "theme": "light",
+      "description": "Saved child journal in the real writing editor; keyboard dismissed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "f7b55ef40a70fa8248bafc302b5b65e09c30cf2646fc4aee6de5c25b2f51ad54"
+    },
+    {
+      "file": "light/journal-reflection.png",
+      "theme": "light",
+      "description": "Opt-in local conversation suggestion after a saved entry.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "a4e5209f902d27d8000259f1f4754b59e1cf218723b846cdb6a36a2e67daeeaa"
+    },
+    {
+      "file": "light/conversations.png",
+      "theme": "light",
+      "description": "Modern conversation list containing the fictional Alex thread.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "3a5d9d39c272d571679a09414e4418a1b54772ce7d22127881ac317228968055"
+    },
+    {
+      "file": "light/active-conversation.png",
+      "theme": "light",
+      "description": "Actual incoming/outgoing seed thread with keyboard-aware composer.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "306272910638a0d1aff8b1f243c88b3b6aa6302a66526cce138365939467f4c1"
+    },
+    {
+      "file": "light/my-circle.png",
+      "theme": "light",
+      "description": "Child's trusted contact list and fixed bottom navigation.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "4f3ca82a6d0f4ede900699eea120f42cefda00e052fad4076ceeb23d5ddea7b1"
+    },
+    {
+      "file": "light/parent-home.png",
+      "theme": "light",
+      "description": "Parent home, identical family fixtures and theme.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "39e63ac2a22d232744798feafda06229e3881f30bd82f342ac0b77bf4ed0fd07"
+    },
+    {
+      "file": "light/parent-contacts.png",
+      "theme": "light",
+      "description": "Parent contact management for fictional invited teacher; no changes made.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "3e3a6587a7011bc618e114538d958f520188e3b0573e8ed744d7072bcc468253"
+    },
+    {
+      "file": "light/checkin-scheduler.png",
+      "theme": "light",
+      "description": "Parent example scheduler, recipient, days and time; no real notifications.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "5f00a17baef817bc87c7571a3b83fdaf6ef722de563024bed8720f4774e197d9"
+    },
+    {
+      "file": "light/checkin-scheduler-preview.png",
+      "theme": "light",
+      "description": "Additional lower scheduler view showing preview and Save action.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "3994f4b20824027cff295e2fb430f5bf23dffa2073c2c30334987e7441e1728c"
+    },
+    {
+      "file": "light/child-checkin.png",
+      "theme": "light",
+      "description": "Child optional check-in controls; no answer, skip or schedule changed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "fa5cd5bce86d7691d8e4868f395347c7cf0b36b94aff9e1c6c7179c02c7a7632"
+    },
+    {
+      "file": "dark/appearance-settings.png",
+      "theme": "dark",
+      "description": "Appearance selected through the app's actual settings.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "839bf6fbd11ea28f2916328a70162dfcb613cec9e0b897b89cae9a96b50f6ae7"
+    },
+    {
+      "file": "dark/child-home.png",
+      "theme": "dark",
+      "description": "Child home, saved example content, no input changes.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "43960d0c160849ede94af9dec6e26bbed95fe5ce0c594f111c5985f6c0f43860"
+    },
+    {
+      "file": "dark/journal-overview.png",
+      "theme": "dark",
+      "description": "Child journal overview; only the child fixture is listed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "48c377755f98f31915d135dfccc6002b6d4a3a5ea12f221cfbe1fb6c20b4f9b1"
+    },
+    {
+      "file": "dark/journal-editor.png",
+      "theme": "dark",
+      "description": "Saved child journal in the real writing editor; keyboard dismissed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "6887bfb782984f9ff3345dbe338f2b4e2d7de0cd77b121fc5eb8fb65ae24a407"
+    },
+    {
+      "file": "dark/journal-reflection.png",
+      "theme": "dark",
+      "description": "Opt-in local conversation suggestion after a saved entry.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "fa3a6c36165d718422ab8b79c22905cfd6bbf21064d0d928121daf80f2fdfe7c"
+    },
+    {
+      "file": "dark/conversations.png",
+      "theme": "dark",
+      "description": "Modern conversation list containing the fictional Alex thread.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "93b49c2c883a80a392d02e0490bb4a6e21d8c9bce08057b35d7ad7edccfc42cf"
+    },
+    {
+      "file": "dark/active-conversation.png",
+      "theme": "dark",
+      "description": "Actual incoming/outgoing seed thread with keyboard-aware composer.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "d07fb12254a66516186ed98319cdcd87d792915c0bfbfae0b4084b744856b211"
+    },
+    {
+      "file": "dark/my-circle.png",
+      "theme": "dark",
+      "description": "Child's trusted contact list and fixed bottom navigation.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "2dd8863c102bf4a119f40c011f827d8ce8a7e3eed20e9ef2911680a718b90800"
+    },
+    {
+      "file": "dark/parent-home.png",
+      "theme": "dark",
+      "description": "Parent home, identical family fixtures and theme.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "4071ce08cc3fc69ec9261f7f7c0419aacd3a38395b1a1ec011af8a3a9a773809"
+    },
+    {
+      "file": "dark/parent-contacts.png",
+      "theme": "dark",
+      "description": "Parent contact management for fictional invited teacher; no changes made.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "6dbf99c50478c5c3c711b616b5e6806893a3cb6bec3ad444d368f3aa0e58d74c"
+    },
+    {
+      "file": "dark/checkin-scheduler.png",
+      "theme": "dark",
+      "description": "Parent example scheduler, recipient, days and time; no real notifications.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "7610221a3ec44d7d84a4e3a0776a94a466b370880540834d0fdeb2ff0e5d34ce"
+    },
+    {
+      "file": "dark/checkin-scheduler-preview.png",
+      "theme": "dark",
+      "description": "Additional lower scheduler view showing preview and Save action.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "788dba40ecb2041ed1c5875a132e378992fab6fec6bb6980f8b17e3e6eb3b9ce"
+    },
+    {
+      "file": "dark/child-checkin.png",
+      "theme": "dark",
+      "description": "Child optional check-in controls; no answer, skip or schedule changed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "8b813a69d1d24f25c4c64f5852daad15551edacc75c24639740647d86016e005"
+    }
+  ],
+  "actions": [
+    {
+      "time": "2026-11-14T18:51:12-0500",
+      "message": "Native capture: feature/mobile-foundation; 1114-OpenLetterRedesign-r3; source HEAD 1e640665d01d854a7245f40b42237e00e8582a01; dirty=True; Android 17; 1080x2424"
+    },
+    {
+      "time": "2026-11-14T18:51:14-0500",
+      "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+    },
+    {
+      "time": "2026-11-14T18:52:02-0500",
+      "message": "Tapped: Explore as Sam"
+    },
+    {
+      "time": "2026-11-14T18:52:04-0500",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-14T18:52:13-0500",
+      "message": "Verified native Settings build: 1114-OpenLetterRedesign-r3"
+    },
+    {
+      "time": "2026-11-14T18:52:16-0500",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-14T18:52:25-0500",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-14T18:52:31-0500",
+      "message": "Tapped: Light mode"
+    },
+    {
+      "time": "2026-11-14T18:52:34-0500",
+      "message": "Captured light/appearance-settings.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:52:37-0500",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-14T18:52:43-0500",
+      "message": "Captured light/child-home.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:52:46-0500",
+      "message": "Tapped: Journal"
+    },
+    {
+      "time": "2026-11-14T18:52:50-0500",
+      "message": "Captured light/journal-overview.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:52:52-0500",
+      "message": "Tapped: Revisit A little space to think"
+    },
+    {
+      "time": "2026-11-14T18:52:56-0500",
+      "message": "Captured light/journal-editor.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:52:59-0500",
+      "message": "Tapped: Help me find someone to talk to"
+    },
+    {
+      "time": "2026-11-14T18:53:07-0500",
+      "message": "Captured light/journal-reflection.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:53:09-0500",
+      "message": "Tapped: Chats"
+    },
+    {
+      "time": "2026-11-14T18:53:13-0500",
+      "message": "Captured light/conversations.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:53:16-0500",
+      "message": "Tapped: Open conversation with Alex."
+    },
+    {
+      "time": "2026-11-14T18:53:19-0500",
+      "message": "Captured light/active-conversation.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:53:22-0500",
+      "message": "Tapped: Circle"
+    },
+    {
+      "time": "2026-11-14T18:53:26-0500",
+      "message": "Captured light/my-circle.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:53:28-0500",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-14T18:53:37-0500",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-14T18:53:41-0500",
+      "message": "Captured light/parent-home.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:53:43-0500",
+      "message": "Tapped: Circle"
+    },
+    {
+      "time": "2026-11-14T18:53:46-0500",
+      "message": "Tapped: Open Teacher Lee,"
+    },
+    {
+      "time": "2026-11-14T18:53:50-0500",
+      "message": "Captured light/parent-contacts.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:53:52-0500",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-14T18:54:01-0500",
+      "message": "Tapped: Schedule a check-in"
+    },
+    {
+      "time": "2026-11-14T18:54:05-0500",
+      "message": "Captured light/checkin-scheduler.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:54:10-0500",
+      "message": "Captured light/checkin-scheduler-preview.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:54:13-0500",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-14T18:54:22-0500",
+      "message": "Tapped: Switch to child demo"
+    },
+    {
+      "time": "2026-11-14T18:54:27-0500",
+      "message": "Tapped: Open check-in"
+    },
+    {
+      "time": "2026-11-14T18:54:31-0500",
+      "message": "Captured light/child-checkin.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:54:34-0500",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-14T18:54:40-0500",
+      "message": "Tapped: Dark mode"
+    },
+    {
+      "time": "2026-11-14T18:54:44-0500",
+      "message": "Captured dark/appearance-settings.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:54:46-0500",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-14T18:54:52-0500",
+      "message": "Captured dark/child-home.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:54:55-0500",
+      "message": "Tapped: Journal"
+    },
+    {
+      "time": "2026-11-14T18:54:59-0500",
+      "message": "Captured dark/journal-overview.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:55:01-0500",
+      "message": "Tapped: Revisit A little space to think"
+    },
+    {
+      "time": "2026-11-14T18:55:05-0500",
+      "message": "Captured dark/journal-editor.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:55:07-0500",
+      "message": "Tapped: Help me find someone to talk to"
+    },
+    {
+      "time": "2026-11-14T18:55:16-0500",
+      "message": "Captured dark/journal-reflection.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:55:18-0500",
+      "message": "Tapped: Chats"
+    },
+    {
+      "time": "2026-11-14T18:55:22-0500",
+      "message": "Captured dark/conversations.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:55:24-0500",
+      "message": "Tapped: Open conversation with Alex."
+    },
+    {
+      "time": "2026-11-14T18:55:28-0500",
+      "message": "Captured dark/active-conversation.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:55:31-0500",
+      "message": "Tapped: Circle"
+    },
+    {
+      "time": "2026-11-14T18:55:35-0500",
+      "message": "Captured dark/my-circle.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:55:37-0500",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-14T18:55:46-0500",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-14T18:55:50-0500",
+      "message": "Captured dark/parent-home.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:55:52-0500",
+      "message": "Tapped: Circle"
+    },
+    {
+      "time": "2026-11-14T18:55:55-0500",
+      "message": "Tapped: Open Teacher Lee,"
+    },
+    {
+      "time": "2026-11-14T18:55:59-0500",
+      "message": "Captured dark/parent-contacts.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:56:01-0500",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-14T18:56:10-0500",
+      "message": "Tapped: Schedule a check-in"
+    },
+    {
+      "time": "2026-11-14T18:56:14-0500",
+      "message": "Captured dark/checkin-scheduler.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:56:19-0500",
+      "message": "Captured dark/checkin-scheduler-preview.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-14T18:56:22-0500",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-14T18:56:31-0500",
+      "message": "Tapped: Switch to child demo"
+    },
+    {
+      "time": "2026-11-14T18:56:36-0500",
+      "message": "Tapped: Open check-in"
+    },
+    {
+      "time": "2026-11-14T18:56:40-0500",
+      "message": "Captured dark/child-checkin.png (1080 x 2424)"
+    }
+  ]
+}

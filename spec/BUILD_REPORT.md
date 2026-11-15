@@ -1,4 +1,6 @@
-﻿# Between Us mobile foundation session
+> Historical foundation report. The current Open Letter build is `1114-OpenLetterRedesign-r3` (0.2.2). See [the current development report](OPEN_LETTER_BUILD_REPORT.md) and [native visual QA](qa/open-letter/VISUAL_QA_REPORT.md).
+
+# Between Us mobile foundation session
 
 Date: 2026-11-14. Location: `D:\proejcts\BetweenUs`. Branch: `feature/mobile-foundation`. No push, merge, production publishing, service connection, credentials or global Codex changes.
 

@@ -1,0 +1,218 @@
+[
+  {
+    "time": "2026-11-14T18:09:44-0500",
+    "message": "Native capture: feature/mobile-foundation; 1114-OpenLetterRedesign; source HEAD ed96bd13a7c2ad312bc973a1e0920df93d851c3b; dirty=True; Android 17; 1080x2424"
+  },
+  {
+    "time": "2026-11-14T18:09:51-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:10:00-0500",
+    "message": "Verified native Settings build: 1114-OpenLetterRedesign"
+  },
+  {
+    "time": "2026-11-14T18:10:05-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-14T18:10:14-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:10:21-0500",
+    "message": "Tapped: Light mode"
+  },
+  {
+    "time": "2026-11-14T18:10:26-0500",
+    "message": "Captured light/appearance-settings.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:10:28-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-14T18:10:35-0500",
+    "message": "Captured light/child-home.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:10:38-0500",
+    "message": "Tapped: Journal"
+  },
+  {
+    "time": "2026-11-14T18:10:42-0500",
+    "message": "Captured light/journal-overview.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:10:45-0500",
+    "message": "Tapped: Revisit A little space to think"
+  },
+  {
+    "time": "2026-11-14T18:10:50-0500",
+    "message": "Captured light/journal-editor.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:10:52-0500",
+    "message": "Tapped: Help me find someone to talk to"
+  },
+  {
+    "time": "2026-11-14T18:11:00-0500",
+    "message": "Captured light/journal-reflection.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:11:03-0500",
+    "message": "Tapped: Chats"
+  },
+  {
+    "time": "2026-11-14T18:11:07-0500",
+    "message": "Captured light/conversations.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:11:10-0500",
+    "message": "Tapped: Open conversation with Alex."
+  },
+  {
+    "time": "2026-11-14T18:11:15-0500",
+    "message": "Captured light/active-conversation.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:11:17-0500",
+    "message": "Tapped: Circle"
+  },
+  {
+    "time": "2026-11-14T18:11:22-0500",
+    "message": "Captured light/my-circle.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:11:25-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:11:34-0500",
+    "message": "Tapped: Switch to parent demo"
+  },
+  {
+    "time": "2026-11-14T18:11:39-0500",
+    "message": "Captured light/parent-home.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:11:42-0500",
+    "message": "Tapped: Circle"
+  },
+  {
+    "time": "2026-11-14T18:11:44-0500",
+    "message": "Tapped: Open Teacher Lee,"
+  },
+  {
+    "time": "2026-11-14T18:11:49-0500",
+    "message": "Captured light/parent-contacts.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:11:52-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-14T18:12:01-0500",
+    "message": "Tapped: Schedule a check-in"
+  },
+  {
+    "time": "2026-11-14T18:12:06-0500",
+    "message": "Captured light/checkin-scheduler.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:12:11-0500",
+    "message": "Captured light/checkin-scheduler-preview.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:12:14-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:12:23-0500",
+    "message": "Tapped: Switch to child demo"
+  },
+  {
+    "time": "2026-11-14T18:12:30-0500",
+    "message": "Tapped: Open check-in"
+  },
+  {
+    "time": "2026-11-14T18:12:35-0500",
+    "message": "Captured light/child-checkin.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:12:37-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:12:44-0500",
+    "message": "Tapped: Dark mode"
+  },
+  {
+    "time": "2026-11-14T18:12:49-0500",
+    "message": "Captured dark/appearance-settings.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:12:52-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-14T18:12:59-0500",
+    "message": "Captured dark/child-home.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:13:01-0500",
+    "message": "Tapped: Journal"
+  },
+  {
+    "time": "2026-11-14T18:13:06-0500",
+    "message": "Captured dark/journal-overview.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:13:08-0500",
+    "message": "Tapped: Revisit A little space to think"
+  },
+  {
+    "time": "2026-11-14T18:13:13-0500",
+    "message": "Captured dark/journal-editor.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:13:16-0500",
+    "message": "Tapped: Help me find someone to talk to"
+  },
+  {
+    "time": "2026-11-14T18:13:24-0500",
+    "message": "Captured dark/journal-reflection.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:13:27-0500",
+    "message": "Tapped: Chats"
+  },
+  {
+    "time": "2026-11-14T18:13:31-0500",
+    "message": "Captured dark/conversations.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:13:34-0500",
+    "message": "Tapped: Open conversation with Alex."
+  },
+  {
+    "time": "2026-11-14T18:13:38-0500",
+    "message": "Captured dark/active-conversation.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:13:41-0500",
+    "message": "Tapped: Circle"
+  },
+  {
+    "time": "2026-11-14T18:13:46-0500",
+    "message": "Captured dark/my-circle.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-14T18:13:48-0500",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-14T18:13:58-0500",
+    "message": "Tapped: Switch to parent demo"
+  }
+]

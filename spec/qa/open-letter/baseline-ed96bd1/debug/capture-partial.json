@@ -1,0 +1,29 @@
+{
+  "screens": [],
+  "actions": [
+    {
+      "time": "2026-11-14T18:07:22-0500",
+      "message": "Native capture: feature/mobile-foundation; 1114-OpenLetterRedesign; source HEAD ed96bd13a7c2ad312bc973a1e0920df93d851c3b; dirty=True; Android 17; 1080x2424"
+    },
+    {
+      "time": "2026-11-14T18:07:24-0500",
+      "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+    },
+    {
+      "time": "2026-11-14T18:08:06-0500",
+      "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+    },
+    {
+      "time": "2026-11-14T18:08:32-0500",
+      "message": "Tapped: Explore as Sam"
+    },
+    {
+      "time": "2026-11-14T18:08:34-0500",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-14T18:09:04-0500",
+      "message": "CAPTURE FAILED: RuntimeError: Native control/text not found: Make yourself at home."
+    }
+  ]
+}

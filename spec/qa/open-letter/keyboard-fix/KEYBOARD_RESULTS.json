@@ -1,0 +1,24 @@
+{
+  "source": "R3 working-tree implementation subsequently committed as 1e640665d01d854a7245f40b42237e00e8582a01",
+  "changes": "Outer padding KeyboardAvoidingView encloses header, content/composer and navigation; default zero offset avoids doubled safe-area displacement. Scroll viewport layout follows thread end.",
+  "records": [
+    {
+      "theme": "dark",
+      "imeTop": 1541,
+      "composerBounds": "[53,1098][767,1298]",
+      "reviewBounds": "[793,1168][1028,1297]",
+      "actualReviewTapWhileImeVisible": "passed"
+    },
+    {
+      "theme": "light",
+      "imeTop": 1541,
+      "composerBounds": "[53,1098][767,1298]",
+      "reviewBounds": "[793,1168][1028,1297]",
+      "actualReviewTapWhileImeVisible": "passed"
+    }
+  ],
+  "backDraftPreserved": true,
+  "journalKeyboardSave": "typed fictional journal text, scrolled editor using native keyboard-dismiss-on-drag, and saved successfully",
+  "postTestState": "Child Home, unsent message draft cleared through account-switch confirmation; fictional saved journal keyboard entry remains only in process memory.",
+  "captureState": "Captured before the R3 commit; implementation matches committed source. Required final screen matrix is captured separately after source freeze."
+}
