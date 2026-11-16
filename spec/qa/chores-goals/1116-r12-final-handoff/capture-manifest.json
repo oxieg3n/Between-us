@@ -1,0 +1,72 @@
+{
+  "source_head_at_capture": "8607573e37dadd66ede3bb368389e0a2531ef6d8",
+  "branch": "feature/mobile-foundation",
+  "canonical_root": "D:\\Projects\\BetweenUs",
+  "app_package": "com.oxieg3n.betweenus",
+  "metro_port": 8082,
+  "emulator": "Pixel_10",
+  "android": "17",
+  "resolution": [
+    1080,
+    2424
+  ],
+  "density": "Physical density: 420",
+  "font_scale": "1.0",
+  "screen_off_timeout": "2147483647",
+  "stay_on_while_plugged_in": "1",
+  "section": "final owner handoff; not extra functional test cases",
+  "build_id": "1115-FamilyEnvelopes-Journal-r12",
+  "completed": true,
+  "error": null,
+  "capture_method": "Actual ADB shell screencap -p, adb pull, original unaltered PNG bytes",
+  "screens": [
+    {
+      "file": "spec/qa/chores-goals/1116-r12-final-handoff/system/appearance-settings.png",
+      "theme": "system",
+      "description": "Actual r12 settings with Follow Device selected; original device power/display preferences restored.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "3c6fc22f56aadefa8524d6a68d5f0f2866a8c22bbe4bfbe135be6b86c5c4ade6",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1116-r12-final-handoff/system/child-home.png",
+      "theme": "system",
+      "description": "Main Between Us application returned to Sam Home for owner review, using the actual device appearance.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "09d62628c9dce80efa4633922017a8698211432d574d18dd00157bcf23ff7440",
+      "area": "finance"
+    }
+  ],
+  "actions": [
+    {
+      "time": "2026-11-16T08:01:31.582761+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T08:01:48.760880+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+    },
+    {
+      "time": "2026-11-16T08:01:58.284913+00:00",
+      "message": "Tapped: Follow device appearance"
+    },
+    {
+      "time": "2026-11-16T08:02:07.959060+00:00",
+      "message": "Captured system/appearance-settings.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T08:02:10.638420+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T08:02:29.649181+00:00",
+      "message": "Captured system/child-home.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T08:02:29.650812+00:00",
+      "message": "Final owner handoff complete. Main application is on Home; no new simulated message or payment was performed."
+    }
+  ]
+}

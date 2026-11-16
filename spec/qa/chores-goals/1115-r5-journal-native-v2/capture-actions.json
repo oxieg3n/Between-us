@@ -1,0 +1,230 @@
+[
+  {
+    "time": "2026-11-16T01:11:05.773126+00:00",
+    "message": "Native mission capture: 1115-FamilyEnvelopes-Journal-r5; feature/mobile-foundation; HEAD afca46fa881b6c17b40c2c32bee9d97cd45c3554; 1080x2424"
+  },
+  {
+    "time": "2026-11-16T01:11:05.774136+00:00",
+    "message": "Resetting fictional com.oxieg3n.betweenus process memory for light; appearance storage remains intact."
+  },
+  {
+    "time": "2026-11-16T01:11:11.213917+00:00",
+    "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+  },
+  {
+    "time": "2026-11-16T01:11:26.240409+00:00",
+    "message": "Tapped: Explore as Sam"
+  },
+  {
+    "time": "2026-11-16T01:11:35.829636+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T01:11:45.345795+00:00",
+    "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r5"
+  },
+  {
+    "time": "2026-11-16T01:11:49.201459+00:00",
+    "message": "Tapped: Light mode"
+  },
+  {
+    "time": "2026-11-16T01:11:54.003403+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T01:12:07.194468+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T01:12:16.400753+00:00",
+    "message": "Tapped: On-device conversation ideas"
+  },
+  {
+    "time": "2026-11-16T01:12:21.251235+00:00",
+    "message": "Tapped: Load downloaded model"
+  },
+  {
+    "time": "2026-11-16T01:12:37.689270+00:00",
+    "message": "Captured light/optional-model-loaded.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T01:12:42.494503+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T01:12:54.370295+00:00",
+    "message": "Tapped: Journal"
+  },
+  {
+    "time": "2026-11-16T01:13:01.652170+00:00",
+    "message": "Captured light/journal-overview.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T01:13:06.589111+00:00",
+    "message": "Tapped: New entry"
+  },
+  {
+    "time": "2026-11-16T01:13:23.482750+00:00",
+    "message": "Filled fictional field: Entry title"
+  },
+  {
+    "time": "2026-11-16T01:13:47.927792+00:00",
+    "message": "Filled fictional field: Your private demo words"
+  },
+  {
+    "time": "2026-11-16T01:13:50.729892+00:00",
+    "message": "Tapped: Save entry"
+  },
+  {
+    "time": "2026-11-16T01:13:54.998004+00:00",
+    "message": "Captured light/journal-editor.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T01:14:00.606377+00:00",
+    "message": "Tapped: Find words to share"
+  },
+  {
+    "time": "2026-11-16T01:14:11.541473+00:00",
+    "message": "Actual journal suggestion source in light: on-device-model"
+  },
+  {
+    "time": "2026-11-16T01:14:17.357962+00:00",
+    "message": "Captured light/journal-inline-suggestions.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T01:14:20.152639+00:00",
+    "message": "Tapped: Prepare separate words"
+  },
+  {
+    "time": "2026-11-16T01:14:23.156097+00:00",
+    "message": "Captured light/journal-recipient-choice.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T01:14:25.713106+00:00",
+    "message": "Tapped: Alex"
+  },
+  {
+    "time": "2026-11-16T01:14:31.234113+00:00",
+    "message": "Tapped: Review my words"
+  },
+  {
+    "time": "2026-11-16T01:14:34.332943+00:00",
+    "message": "Captured light/journal-message-review.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T01:14:36.841486+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T01:14:36.842244+00:00",
+    "message": "Resetting fictional com.oxieg3n.betweenus process memory for dark; appearance storage remains intact."
+  },
+  {
+    "time": "2026-11-16T01:14:54.488468+00:00",
+    "message": "Tapped: Explore as Sam"
+  },
+  {
+    "time": "2026-11-16T01:15:04.699116+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T01:15:13.764734+00:00",
+    "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r5"
+  },
+  {
+    "time": "2026-11-16T01:15:17.745474+00:00",
+    "message": "Tapped: Dark mode"
+  },
+  {
+    "time": "2026-11-16T01:15:22.764347+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T01:15:36.230414+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T01:15:45.402563+00:00",
+    "message": "Tapped: On-device conversation ideas"
+  },
+  {
+    "time": "2026-11-16T01:15:50.310823+00:00",
+    "message": "Tapped: Load downloaded model"
+  },
+  {
+    "time": "2026-11-16T01:15:53.862554+00:00",
+    "message": "Captured dark/optional-model-loaded.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T01:15:56.417564+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T01:16:02.663518+00:00",
+    "message": "Tapped: Journal"
+  },
+  {
+    "time": "2026-11-16T01:16:06.935200+00:00",
+    "message": "Captured dark/journal-overview.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T01:16:09.469677+00:00",
+    "message": "Tapped: New entry"
+  },
+  {
+    "time": "2026-11-16T01:16:23.621858+00:00",
+    "message": "Filled fictional field: Entry title"
+  },
+  {
+    "time": "2026-11-16T01:16:47.149967+00:00",
+    "message": "Filled fictional field: Your private demo words"
+  },
+  {
+    "time": "2026-11-16T01:16:49.650457+00:00",
+    "message": "Tapped: Save entry"
+  },
+  {
+    "time": "2026-11-16T01:16:54.274315+00:00",
+    "message": "Captured dark/journal-editor.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T01:16:59.865407+00:00",
+    "message": "Tapped: Find words to share"
+  },
+  {
+    "time": "2026-11-16T01:17:12.012642+00:00",
+    "message": "Actual journal suggestion source in dark: on-device-model"
+  },
+  {
+    "time": "2026-11-16T01:17:18.095505+00:00",
+    "message": "Captured dark/journal-inline-suggestions.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T01:17:20.657335+00:00",
+    "message": "Tapped: Prepare separate words"
+  },
+  {
+    "time": "2026-11-16T01:17:23.589211+00:00",
+    "message": "Captured dark/journal-recipient-choice.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T01:17:26.127679+00:00",
+    "message": "Tapped: Alex"
+  },
+  {
+    "time": "2026-11-16T01:17:31.504880+00:00",
+    "message": "Tapped: Review my words"
+  },
+  {
+    "time": "2026-11-16T01:17:34.482561+00:00",
+    "message": "Captured dark/journal-message-review.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T01:17:37.111679+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T01:17:37.113290+00:00",
+    "message": "Completed 12 genuine screenshots. Manifest: D:\\Projects\\BetweenUs\\spec\\qa\\chores-goals\\1115-r5-journal-native-v2\\capture-manifest.json"
+  }
+]

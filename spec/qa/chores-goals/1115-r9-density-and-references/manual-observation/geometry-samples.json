@@ -1,0 +1,53 @@
+[
+  {
+    "sample": 0,
+    "bounds": [
+      {
+        "label": "Profile & settings",
+        "bounds": "[1780,165][1876,261]"
+      },
+      {
+        "label": "Home",
+        "bounds": "[16,334][202,844]"
+      },
+      {
+        "label": "Circle",
+        "bounds": "[16,1971][202,2480]"
+      }
+    ]
+  },
+  {
+    "sample": 1,
+    "bounds": [
+      {
+        "label": "Profile & settings",
+        "bounds": "[1780,165][1876,261]"
+      },
+      {
+        "label": "Home",
+        "bounds": "[16,334][202,844]"
+      },
+      {
+        "label": "Circle",
+        "bounds": "[16,1971][202,2480]"
+      }
+    ]
+  },
+  {
+    "sample": 2,
+    "bounds": [
+      {
+        "label": "Profile & settings",
+        "bounds": "[1780,165][1876,261]"
+      },
+      {
+        "label": "Home",
+        "bounds": "[16,334][202,844]"
+      },
+      {
+        "label": "Circle",
+        "bounds": "[16,1971][202,2480]"
+      }
+    ]
+  }
+]

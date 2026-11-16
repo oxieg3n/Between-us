@@ -1,0 +1,28 @@
+{
+  "source_head": "443a2e6cf2e9b43b95f437344504b3be7e41ce39",
+  "build": "1115-FamilyEnvelopes-Journal-r9",
+  "kind": "Diagnostic observations after failed target; not acceptance screenshots",
+  "method": "Original ADB screencap/pull, copied without alteration",
+  "records": [
+    {
+      "file": "settled-tablet-with-development-refresh.png",
+      "sha256": "bc9abc4a6f16d00c8da77678941eddbde13424600e85b7c62c4ef23b012b24e0",
+      "resolution": [
+        1920,
+        2560
+      ]
+    },
+    {
+      "file": "restored-phone.png",
+      "sha256": "d2beb7fe272703d7896246d21bcebf158027ed939d4aee7b8c5d6db420610140",
+      "resolution": [
+        1080,
+        2424
+      ]
+    },
+    {
+      "file": "geometry-samples.json",
+      "sha256": "020ed430515ab7eaa74d6f2e7ead35b71d8f7d28fe454462c5d634bad8250701"
+    }
+  ]
+}

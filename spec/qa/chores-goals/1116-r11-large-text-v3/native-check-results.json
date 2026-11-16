@@ -1,0 +1,68 @@
+{
+  "build_id": "1115-FamilyEnvelopes-Journal-r11",
+  "source_head": "4442c4858d79ed07ca0ce776aeb6ab6b0b0231f5",
+  "results": [
+    {
+      "case": "light font scale 200%",
+      "result": "passed",
+      "navigation": {
+        "Home": [
+          21,
+          2172,
+          273,
+          2340
+        ],
+        "Journal": [
+          283,
+          2172,
+          535,
+          2340
+        ],
+        "Chats": [
+          545,
+          2172,
+          797,
+          2340
+        ],
+        "Circle": [
+          807,
+          2172,
+          1059,
+          2340
+        ]
+      },
+      "confirm_bounds": [
+        129,
+        1625,
+        951,
+        1787
+      ],
+      "cancel_bounds": [
+        129,
+        1840,
+        951,
+        2002
+      ],
+      "interaction": "Scrolled confirmation and cancelled without saving settings."
+    },
+    {
+      "case": "failure",
+      "result": "failed",
+      "error": "RuntimeError: Native control/text not found: Build 1115-FamilyEnvelopes-Journal-r11"
+    },
+    {
+      "case": "device restoration",
+      "result": "verified restored",
+      "properties": [
+        "size/density",
+        "font_scale"
+      ],
+      "errors": []
+    }
+  ],
+  "original_device_overrides": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "font_scale": "1.0"
+  }
+}

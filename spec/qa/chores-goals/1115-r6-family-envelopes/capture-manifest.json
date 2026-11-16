@@ -1,0 +1,1650 @@
+{
+  "source_head_at_capture": "2f151d15607240be2d36df1d05fa661640abd7f4",
+  "branch": "feature/mobile-foundation",
+  "canonical_root": "D:\\Projects\\BetweenUs",
+  "tracked_source_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "tracked_source_dirty": false,
+  "serial": "emulator-5554",
+  "app_package": "com.oxieg3n.betweenus",
+  "metro_port": 8082,
+  "local_model_requested": false,
+  "emulator": "Pixel_10",
+  "model": "sdk_gphone16k_x86_64",
+  "android": "17",
+  "resolution": [
+    1080,
+    2424
+  ],
+  "density": "Physical density: 420",
+  "section": "finance",
+  "build_id": "1115-FamilyEnvelopes-Journal-r6",
+  "completed": true,
+  "error": null,
+  "capture_method": "Actual ADB shell screencap -p, adb pull, original unaltered PNG bytes",
+  "screens": [
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/child-chores.png",
+      "theme": "light",
+      "description": "Child chores before completion; rewards are planned, not yet earned.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "f1bf9f44212d03036e16a1fa42f5d762e37dfa55d4615befd2803856e3f2fa7a",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/child-awaiting-review.png",
+      "theme": "light",
+      "description": "Child submissions awaiting parent approval; no self-approved earnings.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "bfc36b01007d06fa032dfc8dff0359a8f8fce23de53b03b8f89045d277d570e6",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/parent-chores-review.png",
+      "theme": "light",
+      "description": "Parent's actual completion review queue, with approval and retry controls.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "514c308304cdcf7b4016f72d18ec40ff9b7f01a1955704f7c42897aff5d3cdc4",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/parent-approval-confirmation.png",
+      "theme": "light",
+      "description": "Actual parent approval confirmation; Confirm creates one fictional earning.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "afcc1b2df6ff7429e704ee2842c90168abdfd9c26934f1a567d52e2606be9b70",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/allowance-budget.png",
+      "theme": "light",
+      "description": "Parent allowance budget and independent reminder cadence; no automatic transfer.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "a5e2c2707114930c8863090c9bdb6a1a814e46790645cae7c68e1b6fd8f93a11",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/payout-schedule.png",
+      "theme": "light",
+      "description": "Actual lower parent payout scheduling controls and explicit review action.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "c891e3624191861324bf7692357d9148c19c942f0ad2c44130b444973c1a27ea",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/matching-setup.png",
+      "theme": "light",
+      "description": "Approved illustrative 100%/$20 separate-budget/Surprise setup, before explicit enabling.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "d3ccaa02b80a378de1cead949d6bd9c6af0e103b8cb7ca9660c13476d1707648",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/matching-enable-confirmation.png",
+      "theme": "light",
+      "description": "Actual prospective rule confirmation before the parent intentionally enables matching.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "07b934d31f512fe02f21c59754ff15f389889bb0c6d38005b0497de098cfc494",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/child-earnings.png",
+      "theme": "light",
+      "description": "$23 of parent-approved fictional earnings before allocation, distinct from planned rewards.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "8cfeebad2793e23bfe95d3dff91223607600f4effa25c24ebf053699bde26378",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/child-goal-before-reveal.png",
+      "theme": "light",
+      "description": "Child-owned $8 goal earmark; hidden parent commitments are absent from progress.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "a53899a03b7373146b01f24f5b9c841281e96427fb2767b71cfb3bc7ff092da7",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/child-goals-before-reveal.png",
+      "theme": "light",
+      "description": "Multiple child goals after $8+$15 allocations; only the child's own $23 is displayed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "b18443478f4cc3493b0d6c34a3fdcaadddaadd8cefd7c952797dc918f232ccd8",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/parent-match-ledger.png",
+      "theme": "light",
+      "description": "Actual parent-only shared monthly cap: $20 reserved, $0 cap remaining.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "0b9d9495333cb73853c373ce037d60a74f2e2c8a2f31e4537ed1f6fae7a01a0c",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/parent-match-first.png",
+      "theme": "light",
+      "description": "Parent-only first $8 commitment, hidden from child and not funded.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "13d073c086ebe71192eae8459151c079d8be70bee84cb2aa0e3dc0258f6a5e23",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/parent-match-second.png",
+      "theme": "light",
+      "description": "Second $15 child allocation produces only $12 parent pledge because the shared cap is exhausted.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "412187a1a93956fc8cdf8ada4c7f7fdaa7a421f8fa2a555e0ad49d58d15568ea",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/parent-reveal-confirmation.png",
+      "theme": "light",
+      "description": "Explicit selected-contribution reveal confirmation; revealing does not fund the pledge.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "07020283b5a9a4306f44255f639ecf665a716912477b4804f3ad35bbb92ff84c",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/child-revealed-unpaid.png",
+      "theme": "light",
+      "description": "Revealed $8 is a planned unpaid pledge, excluded from funded goal progress.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "27083199ada3ac7b941117dba5929492e31bb1fc23955fa24b029cdfa46a337f",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/parent-funding-confirmation.png",
+      "theme": "light",
+      "description": "Actual manual parent-reported funding confirmation; no provider verification or money movement.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "ae71dc87af2a47bf7f4a9cc8d88eb1167af261b862808fafdb10bdf3659f42f5",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/child-revealed-funded.png",
+      "theme": "light",
+      "description": "Child sees own $8 and separately parent-reported $8 after explicit reveal and funding report.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "1436cd5570f56303fefd688cba48dfe9c0eacd1b37675333f9bace8acd383b36",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/child-cashout-request.png",
+      "theme": "light",
+      "description": "$5 request reserves only free earnings; the $23 goal earmarks remain excluded.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "a3d3032adec3f0b22174fa7e2a2df7922a4ca0b9e0126fbdc00230e02f3f934c",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/parent-payout-workspace.png",
+      "theme": "light",
+      "description": "Parent manual payout worksheet, distinct earned/earmarked/reserved/paid amounts.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "c6d533478cdf559b3dbccd7593aaee8d75adc3d041fef35957ac5ffda069b5ac",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/parent-payment-confirmation.png",
+      "theme": "light",
+      "description": "Actual $2 partial-payment confirmation using cash; the application never initiates a transfer.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "5e61f7956120c30f6c9bce4792f51b91b135b255b2fbad8acab90bf2ea15245e",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/parent-partial-payment.png",
+      "theme": "light",
+      "description": "Parent reported $2 paid; remaining $3 is still reserved, never provider-confirmed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "2b0593645c41bd176c18282ca525e162fd6a6e2b95b4d13573e6c0cb2b6692bc",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/child-payment-acknowledged.png",
+      "theme": "light",
+      "description": "Child's explicit receipt acknowledgment; still a family report rather than provider evidence.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "1172ee8f5e75f00a4016f86dc521bdbc8f8bcce64dd28b70a81667ff34887d80",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/parent-payout-remainder-cancelled.png",
+      "theme": "light",
+      "description": "Only the unpaid $3 hold is released; $2 reported payment remains in history.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "4b8355a2925c605088af04a089738208324e70630db99b00762d7864b4b65fae",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/light/financial-history.png",
+      "theme": "light",
+      "description": "Append-only fictional financial activity with manual correction history; no journal content.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "37ff55c33272b1a766aba2c9fb4bef7957cee20ab6540d85d225c5f06c074f73",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/child-chores.png",
+      "theme": "dark",
+      "description": "Child chores before completion; rewards are planned, not yet earned.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "0191261d71387a5bb663121b7a415dbeb3254a8ef38196b475776bbfa54905ca",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/child-awaiting-review.png",
+      "theme": "dark",
+      "description": "Child submissions awaiting parent approval; no self-approved earnings.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "af620b9f83dcad9367bcc49eb73c73354f8062fd8391e33c2d1554d890311039",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/parent-chores-review.png",
+      "theme": "dark",
+      "description": "Parent's actual completion review queue, with approval and retry controls.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "5a259215f31531892c087d862a99c8bbdc3a3eb59db26f93728332e638ca07d4",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/parent-approval-confirmation.png",
+      "theme": "dark",
+      "description": "Actual parent approval confirmation; Confirm creates one fictional earning.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "2045fda580c3cf47c8b59cae4e7a64b1fe79343970d0c34fc11edb2b4d9fd740",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/allowance-budget.png",
+      "theme": "dark",
+      "description": "Parent allowance budget and independent reminder cadence; no automatic transfer.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "72ab230ca5da28eb9032ef7980394a8bc59e8c8e6101322996d5717df199aac7",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/payout-schedule.png",
+      "theme": "dark",
+      "description": "Actual lower parent payout scheduling controls and explicit review action.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "735349042286f6f9fa5803a6a30b80a6b920bdfd6fbee421edc480913512f39b",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/matching-setup.png",
+      "theme": "dark",
+      "description": "Approved illustrative 100%/$20 separate-budget/Surprise setup, before explicit enabling.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "a680a3ce92860c8b0bbfdf7267b429de1e6b9bfe908395a245fb663bd94bbf14",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/matching-enable-confirmation.png",
+      "theme": "dark",
+      "description": "Actual prospective rule confirmation before the parent intentionally enables matching.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "63f7281e9974521aab381ac2ff4ab2b44ae4a43d5787e203b53fa8dfdb1fa2d3",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/child-earnings.png",
+      "theme": "dark",
+      "description": "$23 of parent-approved fictional earnings before allocation, distinct from planned rewards.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "f03ae76b1ab527bd9726ae553425eccc1710cef263dc00b589fe7f4d476bc9a4",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/child-goal-before-reveal.png",
+      "theme": "dark",
+      "description": "Child-owned $8 goal earmark; hidden parent commitments are absent from progress.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "ffd694677d0804116379a4036e316711cf35b635ef30201021f8ba1c30c3fd6e",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/child-goals-before-reveal.png",
+      "theme": "dark",
+      "description": "Multiple child goals after $8+$15 allocations; only the child's own $23 is displayed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "e711507335190d1d3520790cde340e132842a4e9bcdcf4e234636aa3a8a644ce",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/parent-match-ledger.png",
+      "theme": "dark",
+      "description": "Actual parent-only shared monthly cap: $20 reserved, $0 cap remaining.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "cd938d282e6904ed3625e0dafdeb16708db76000a5dc8b2235a49f04e2284df2",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/parent-match-first.png",
+      "theme": "dark",
+      "description": "Parent-only first $8 commitment, hidden from child and not funded.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "e78d18a79394558846a43129939cd133941a506ce285963f585725fed4a73cbe",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/parent-match-second.png",
+      "theme": "dark",
+      "description": "Second $15 child allocation produces only $12 parent pledge because the shared cap is exhausted.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "b5d9a24805634dbd8c2e29d3eefb1a5b90b441ecef7cb4eb924d521a63cccc24",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/parent-reveal-confirmation.png",
+      "theme": "dark",
+      "description": "Explicit selected-contribution reveal confirmation; revealing does not fund the pledge.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "006df2a2f38584255d78196e9867584bc5d865134740211ab8287c768ac8ef96",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/child-revealed-unpaid.png",
+      "theme": "dark",
+      "description": "Revealed $8 is a planned unpaid pledge, excluded from funded goal progress.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "933957a5583ae524b65f731b84198edb70819ff89ca689c7f4a57dac9a14f3cd",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/parent-funding-confirmation.png",
+      "theme": "dark",
+      "description": "Actual manual parent-reported funding confirmation; no provider verification or money movement.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "74b0771af3dc67faf53adefcc29f7b0a1b1b0bb087d7bdf451bf82b916f6c13c",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/child-revealed-funded.png",
+      "theme": "dark",
+      "description": "Child sees own $8 and separately parent-reported $8 after explicit reveal and funding report.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "8983993ec1dd7fc75146f9b9ea34cdbaefeda4b6a032d89d35d30990ba3c67aa",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/child-cashout-request.png",
+      "theme": "dark",
+      "description": "$5 request reserves only free earnings; the $23 goal earmarks remain excluded.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "4d5125bfb370ad5cde053cc22a93333053a682420ed650d292f3fb0fc8a99899",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/parent-payout-workspace.png",
+      "theme": "dark",
+      "description": "Parent manual payout worksheet, distinct earned/earmarked/reserved/paid amounts.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "d605f5da542cb0876acbe0b3612ed30cffd8c4e2e5c1f0acbddfd8430b8eeaaf",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/parent-payment-confirmation.png",
+      "theme": "dark",
+      "description": "Actual $2 partial-payment confirmation using cash; the application never initiates a transfer.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "0a25836bab7350e8570490f9d20d16378b124c9a63d382d3e7e6bbce2ba2d3ef",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/parent-partial-payment.png",
+      "theme": "dark",
+      "description": "Parent reported $2 paid; remaining $3 is still reserved, never provider-confirmed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "d1e257ce2f517f1ac3c7c4f3495dfe6050e3d48eb37a525523721b43ddaef12c",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/child-payment-acknowledged.png",
+      "theme": "dark",
+      "description": "Child's explicit receipt acknowledgment; still a family report rather than provider evidence.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "4b03aae605264a0527c1da3863db93151591de236b7bb57f4255dd857b3dba89",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/parent-payout-remainder-cancelled.png",
+      "theme": "dark",
+      "description": "Only the unpaid $3 hold is released; $2 reported payment remains in history.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "4bbecfa90e4a0386fe3d5f4d8ea424da3d2d70546cfe8378a18dec659dc267a4",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-family-envelopes/dark/financial-history.png",
+      "theme": "dark",
+      "description": "Append-only fictional financial activity with manual correction history; no journal content.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "f2aef6af586f7b0b7898b0548fa45617bb39c97baa43ecdcdd3a9b15fd420293",
+      "area": "finance"
+    }
+  ],
+  "actions": [
+    {
+      "time": "2026-11-16T01:39:00.580052+00:00",
+      "message": "Native mission capture: 1115-FamilyEnvelopes-Journal-r6; feature/mobile-foundation; HEAD 2f151d15607240be2d36df1d05fa661640abd7f4; 1080x2424"
+    },
+    {
+      "time": "2026-11-16T01:39:00.581030+00:00",
+      "message": "Resetting fictional com.oxieg3n.betweenus process memory for light; appearance storage remains intact."
+    },
+    {
+      "time": "2026-11-16T01:39:03.540994+00:00",
+      "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+    },
+    {
+      "time": "2026-11-16T01:39:18.620524+00:00",
+      "message": "Tapped: Explore as Sam"
+    },
+    {
+      "time": "2026-11-16T01:39:27.966987+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T01:39:36.911408+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r6"
+    },
+    {
+      "time": "2026-11-16T01:39:40.963716+00:00",
+      "message": "Tapped: Light mode"
+    },
+    {
+      "time": "2026-11-16T01:39:45.776044+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:39:56.411382+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:40:02.658539+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:40:07.624900+00:00",
+      "message": "Tapped: My chores"
+    },
+    {
+      "time": "2026-11-16T01:40:09.478638+00:00",
+      "message": "Captured light/child-chores.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:40:12.281347+00:00",
+      "message": "Tapped: Mark done: Take out the recycling"
+    },
+    {
+      "time": "2026-11-16T01:40:17.850192+00:00",
+      "message": "Tapped: Mark done: Tidy my room"
+    },
+    {
+      "time": "2026-11-16T01:40:20.792620+00:00",
+      "message": "Captured light/child-awaiting-review.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:40:25.598659+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T01:40:34.785944+00:00",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-16T01:40:41.082530+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:40:47.303361+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:40:52.161412+00:00",
+      "message": "Tapped: Assign & review chores"
+    },
+    {
+      "time": "2026-11-16T01:40:54.012403+00:00",
+      "message": "Captured light/parent-chores-review.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:41:14.950248+00:00",
+      "message": "Tapped: Approve: Take out the recycling"
+    },
+    {
+      "time": "2026-11-16T01:41:17.866780+00:00",
+      "message": "Captured light/parent-approval-confirmation.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:41:20.526242+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T01:41:49.577051+00:00",
+      "message": "Tapped: Approve: Tidy my room"
+    },
+    {
+      "time": "2026-11-16T01:41:54.408419+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T01:42:17.201676+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:42:23.340446+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:42:31.141111+00:00",
+      "message": "Tapped: Allowance budget & payout schedule"
+    },
+    {
+      "time": "2026-11-16T01:42:33.083283+00:00",
+      "message": "Captured light/allowance-budget.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:42:39.030078+00:00",
+      "message": "Captured light/payout-schedule.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:42:41.587396+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:42:47.810097+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:42:55.536161+00:00",
+      "message": "Tapped: Savings matching"
+    },
+    {
+      "time": "2026-11-16T01:42:57.376780+00:00",
+      "message": "Captured light/matching-setup.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:43:00.009075+00:00",
+      "message": "Tapped: Enable savings matching"
+    },
+    {
+      "time": "2026-11-16T01:43:05.423323+00:00",
+      "message": "Tapped: Review matching settings"
+    },
+    {
+      "time": "2026-11-16T01:43:08.477938+00:00",
+      "message": "Captured light/matching-enable-confirmation.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:43:10.980753+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T01:43:38.466924+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T01:43:47.838199+00:00",
+      "message": "Tapped: Switch to child demo"
+    },
+    {
+      "time": "2026-11-16T01:43:54.008379+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:44:00.068935+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:44:04.873102+00:00",
+      "message": "Tapped: My earnings & cash-out"
+    },
+    {
+      "time": "2026-11-16T01:44:09.190704+00:00",
+      "message": "Captured light/child-earnings.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:44:11.731909+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:44:17.792696+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:44:22.589644+00:00",
+      "message": "Tapped: Savings goals"
+    },
+    {
+      "time": "2026-11-16T01:44:25.167676+00:00",
+      "message": "Tapped: Open goal: A new video game"
+    },
+    {
+      "time": "2026-11-16T01:44:39.799672+00:00",
+      "message": "Filled fictional field: Amount (USD)"
+    },
+    {
+      "time": "2026-11-16T01:44:42.407554+00:00",
+      "message": "Tapped: Allocate to this goal"
+    },
+    {
+      "time": "2026-11-16T01:45:08.166124+00:00",
+      "message": "Captured light/child-goal-before-reveal.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:45:10.875165+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:45:16.984892+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:45:21.922174+00:00",
+      "message": "Tapped: Savings goals"
+    },
+    {
+      "time": "2026-11-16T01:45:27.351357+00:00",
+      "message": "Tapped: Open goal: A bicycle"
+    },
+    {
+      "time": "2026-11-16T01:45:41.957166+00:00",
+      "message": "Filled fictional field: Amount (USD)"
+    },
+    {
+      "time": "2026-11-16T01:45:44.541301+00:00",
+      "message": "Tapped: Allocate to this goal"
+    },
+    {
+      "time": "2026-11-16T01:46:10.377667+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:46:16.526249+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:46:21.318983+00:00",
+      "message": "Tapped: Savings goals"
+    },
+    {
+      "time": "2026-11-16T01:46:23.150336+00:00",
+      "message": "Captured light/child-goals-before-reveal.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:46:28.042371+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T01:46:37.134333+00:00",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-16T01:46:43.253190+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:46:49.254059+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:46:56.972936+00:00",
+      "message": "Tapped: Savings matching"
+    },
+    {
+      "time": "2026-11-16T01:47:03.399302+00:00",
+      "message": "Captured light/parent-match-ledger.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:47:24.772061+00:00",
+      "message": "Captured light/parent-match-first.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:47:30.924113+00:00",
+      "message": "Captured light/parent-match-second.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:47:51.837216+00:00",
+      "message": "Tapped: Reveal contribution 1"
+    },
+    {
+      "time": "2026-11-16T01:47:54.780737+00:00",
+      "message": "Captured light/parent-reveal-confirmation.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:47:57.277488+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T01:48:29.106160+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T01:48:38.092032+00:00",
+      "message": "Tapped: Switch to child demo"
+    },
+    {
+      "time": "2026-11-16T01:48:44.420335+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:48:50.652304+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:48:55.427380+00:00",
+      "message": "Tapped: Savings goals"
+    },
+    {
+      "time": "2026-11-16T01:48:57.982656+00:00",
+      "message": "Tapped: Open goal: A new video game"
+    },
+    {
+      "time": "2026-11-16T01:49:02.408361+00:00",
+      "message": "Captured light/child-revealed-unpaid.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:49:07.335224+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T01:49:16.272847+00:00",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-16T01:49:22.485527+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:49:28.633633+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:49:36.221127+00:00",
+      "message": "Tapped: Savings matching"
+    },
+    {
+      "time": "2026-11-16T01:49:45.346145+00:00",
+      "message": "Tapped: Record funding for contribution 1"
+    },
+    {
+      "time": "2026-11-16T01:49:48.275110+00:00",
+      "message": "Captured light/parent-funding-confirmation.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:49:50.872124+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T01:50:19.374614+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T01:50:28.436931+00:00",
+      "message": "Tapped: Switch to child demo"
+    },
+    {
+      "time": "2026-11-16T01:50:34.832952+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:50:41.062748+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:50:45.897570+00:00",
+      "message": "Tapped: Savings goals"
+    },
+    {
+      "time": "2026-11-16T01:50:48.474654+00:00",
+      "message": "Tapped: Open goal: A new video game"
+    },
+    {
+      "time": "2026-11-16T01:50:52.996241+00:00",
+      "message": "Captured light/child-revealed-funded.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:50:55.576431+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:51:01.697606+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:51:06.520556+00:00",
+      "message": "Tapped: My chores"
+    },
+    {
+      "time": "2026-11-16T01:51:11.942959+00:00",
+      "message": "Tapped: Mark done: Water the plants"
+    },
+    {
+      "time": "2026-11-16T01:51:16.779261+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T01:51:25.859039+00:00",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-16T01:51:32.178190+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:51:38.261385+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:51:43.238217+00:00",
+      "message": "Tapped: Assign & review chores"
+    },
+    {
+      "time": "2026-11-16T01:51:49.001893+00:00",
+      "message": "Tapped: Approve: Water the plants"
+    },
+    {
+      "time": "2026-11-16T01:51:53.826236+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T01:52:18.933880+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T01:52:28.019452+00:00",
+      "message": "Tapped: Switch to child demo"
+    },
+    {
+      "time": "2026-11-16T01:52:34.154628+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:52:40.465794+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:52:45.617783+00:00",
+      "message": "Tapped: My earnings & cash-out"
+    },
+    {
+      "time": "2026-11-16T01:52:57.690691+00:00",
+      "message": "Filled fictional field: Payout amount (USD)"
+    },
+    {
+      "time": "2026-11-16T01:53:00.362154+00:00",
+      "message": "Tapped: Request cash-out"
+    },
+    {
+      "time": "2026-11-16T01:53:03.597520+00:00",
+      "message": "Captured light/child-cashout-request.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:53:08.723556+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T01:53:18.033113+00:00",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-16T01:53:24.194387+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:53:30.272965+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:53:35.089362+00:00",
+      "message": "Tapped: Payout workspace"
+    },
+    {
+      "time": "2026-11-16T01:53:36.986908+00:00",
+      "message": "Captured light/parent-payout-workspace.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:53:52.191233+00:00",
+      "message": "Filled fictional field: Payout amount (USD)"
+    },
+    {
+      "time": "2026-11-16T01:53:58.074468+00:00",
+      "message": "Tapped: Record payment for payout 1"
+    },
+    {
+      "time": "2026-11-16T01:54:01.180783+00:00",
+      "message": "Captured light/parent-payment-confirmation.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:54:03.792320+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T01:54:43.647815+00:00",
+      "message": "Captured light/parent-partial-payment.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:54:48.704858+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T01:54:57.925899+00:00",
+      "message": "Tapped: Switch to child demo"
+    },
+    {
+      "time": "2026-11-16T01:55:04.118999+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:55:10.330970+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:55:15.246512+00:00",
+      "message": "Tapped: My earnings & cash-out"
+    },
+    {
+      "time": "2026-11-16T01:55:21.099547+00:00",
+      "message": "Tapped: Confirm receipt 1.1"
+    },
+    {
+      "time": "2026-11-16T01:55:26.084964+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T01:55:52.198028+00:00",
+      "message": "Captured light/child-payment-acknowledged.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:55:56.981448+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T01:56:06.159660+00:00",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-16T01:56:12.361988+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:56:18.447812+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:56:23.340864+00:00",
+      "message": "Tapped: Payout workspace"
+    },
+    {
+      "time": "2026-11-16T01:56:32.462657+00:00",
+      "message": "Tapped: Cancel payout 1"
+    },
+    {
+      "time": "2026-11-16T01:56:37.277961+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T01:57:11.647519+00:00",
+      "message": "Captured light/parent-payout-remainder-cancelled.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:57:14.223462+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:57:20.400906+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:57:28.117316+00:00",
+      "message": "Tapped: Financial history"
+    },
+    {
+      "time": "2026-11-16T01:57:29.990531+00:00",
+      "message": "Captured light/financial-history.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:57:35.253657+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T01:57:44.403207+00:00",
+      "message": "Tapped: Switch to child demo"
+    },
+    {
+      "time": "2026-11-16T01:57:47.884202+00:00",
+      "message": "Resetting fictional com.oxieg3n.betweenus process memory for dark; appearance storage remains intact."
+    },
+    {
+      "time": "2026-11-16T01:58:06.099684+00:00",
+      "message": "Tapped: Explore as Sam"
+    },
+    {
+      "time": "2026-11-16T01:58:15.685236+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T01:58:24.553633+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r6"
+    },
+    {
+      "time": "2026-11-16T01:58:28.408988+00:00",
+      "message": "Tapped: Dark mode"
+    },
+    {
+      "time": "2026-11-16T01:58:33.638549+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:58:44.474089+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:58:50.620092+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:58:55.476899+00:00",
+      "message": "Tapped: My chores"
+    },
+    {
+      "time": "2026-11-16T01:58:57.429014+00:00",
+      "message": "Captured dark/child-chores.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:59:00.041548+00:00",
+      "message": "Tapped: Mark done: Take out the recycling"
+    },
+    {
+      "time": "2026-11-16T01:59:05.670564+00:00",
+      "message": "Tapped: Mark done: Tidy my room"
+    },
+    {
+      "time": "2026-11-16T01:59:08.691871+00:00",
+      "message": "Captured dark/child-awaiting-review.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T01:59:13.556819+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T01:59:22.958391+00:00",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-16T01:59:29.119119+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T01:59:35.196421+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T01:59:40.103488+00:00",
+      "message": "Tapped: Assign & review chores"
+    },
+    {
+      "time": "2026-11-16T01:59:42.107193+00:00",
+      "message": "Captured dark/parent-chores-review.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:00:03.467552+00:00",
+      "message": "Tapped: Approve: Take out the recycling"
+    },
+    {
+      "time": "2026-11-16T02:00:06.641934+00:00",
+      "message": "Captured dark/parent-approval-confirmation.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:00:09.174256+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T02:00:38.659109+00:00",
+      "message": "Tapped: Approve: Tidy my room"
+    },
+    {
+      "time": "2026-11-16T02:00:43.747124+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T02:01:06.824438+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:01:13.008718+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:01:20.710007+00:00",
+      "message": "Tapped: Allowance budget & payout schedule"
+    },
+    {
+      "time": "2026-11-16T02:01:22.546811+00:00",
+      "message": "Captured dark/allowance-budget.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:01:28.353642+00:00",
+      "message": "Captured dark/payout-schedule.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:01:31.085344+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:01:37.241379+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:01:45.121580+00:00",
+      "message": "Tapped: Savings matching"
+    },
+    {
+      "time": "2026-11-16T02:01:46.973069+00:00",
+      "message": "Captured dark/matching-setup.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:01:49.621156+00:00",
+      "message": "Tapped: Enable savings matching"
+    },
+    {
+      "time": "2026-11-16T02:01:55.646607+00:00",
+      "message": "Tapped: Review matching settings"
+    },
+    {
+      "time": "2026-11-16T02:01:58.832918+00:00",
+      "message": "Captured dark/matching-enable-confirmation.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:02:01.377105+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T02:02:26.907003+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T02:02:36.078544+00:00",
+      "message": "Tapped: Switch to child demo"
+    },
+    {
+      "time": "2026-11-16T02:02:42.243130+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:02:48.338054+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:02:53.255256+00:00",
+      "message": "Tapped: My earnings & cash-out"
+    },
+    {
+      "time": "2026-11-16T02:02:57.433512+00:00",
+      "message": "Captured dark/child-earnings.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:03:00.058033+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:03:06.261807+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:03:11.256180+00:00",
+      "message": "Tapped: Savings goals"
+    },
+    {
+      "time": "2026-11-16T02:03:13.794462+00:00",
+      "message": "Tapped: Open goal: A new video game"
+    },
+    {
+      "time": "2026-11-16T02:03:28.594255+00:00",
+      "message": "Filled fictional field: Amount (USD)"
+    },
+    {
+      "time": "2026-11-16T02:03:31.448262+00:00",
+      "message": "Tapped: Allocate to this goal"
+    },
+    {
+      "time": "2026-11-16T02:03:56.933400+00:00",
+      "message": "Captured dark/child-goal-before-reveal.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:03:59.541965+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:04:05.784345+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:04:10.745796+00:00",
+      "message": "Tapped: Savings goals"
+    },
+    {
+      "time": "2026-11-16T02:04:16.251030+00:00",
+      "message": "Tapped: Open goal: A bicycle"
+    },
+    {
+      "time": "2026-11-16T02:04:30.832159+00:00",
+      "message": "Filled fictional field: Amount (USD)"
+    },
+    {
+      "time": "2026-11-16T02:04:33.434461+00:00",
+      "message": "Tapped: Allocate to this goal"
+    },
+    {
+      "time": "2026-11-16T02:05:00.193419+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:05:06.460669+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:05:11.422872+00:00",
+      "message": "Tapped: Savings goals"
+    },
+    {
+      "time": "2026-11-16T02:05:13.470980+00:00",
+      "message": "Captured dark/child-goals-before-reveal.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:05:18.357636+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T02:05:27.441062+00:00",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-16T02:05:33.799722+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:05:40.061364+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:05:47.871444+00:00",
+      "message": "Tapped: Savings matching"
+    },
+    {
+      "time": "2026-11-16T02:05:54.044164+00:00",
+      "message": "Captured dark/parent-match-ledger.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:06:15.816831+00:00",
+      "message": "Captured dark/parent-match-first.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:06:21.991025+00:00",
+      "message": "Captured dark/parent-match-second.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:06:42.597962+00:00",
+      "message": "Tapped: Reveal contribution 1"
+    },
+    {
+      "time": "2026-11-16T02:06:45.656731+00:00",
+      "message": "Captured dark/parent-reveal-confirmation.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:06:48.122604+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T02:07:20.188461+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T02:07:29.189820+00:00",
+      "message": "Tapped: Switch to child demo"
+    },
+    {
+      "time": "2026-11-16T02:07:35.247327+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:07:41.490994+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:07:46.396962+00:00",
+      "message": "Tapped: Savings goals"
+    },
+    {
+      "time": "2026-11-16T02:07:49.150809+00:00",
+      "message": "Tapped: Open goal: A new video game"
+    },
+    {
+      "time": "2026-11-16T02:07:53.408028+00:00",
+      "message": "Captured dark/child-revealed-unpaid.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:07:58.269661+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T02:08:07.474649+00:00",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-16T02:08:13.589833+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:08:19.690444+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:08:27.306625+00:00",
+      "message": "Tapped: Savings matching"
+    },
+    {
+      "time": "2026-11-16T02:08:36.538165+00:00",
+      "message": "Tapped: Record funding for contribution 1"
+    },
+    {
+      "time": "2026-11-16T02:08:39.543540+00:00",
+      "message": "Captured dark/parent-funding-confirmation.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:08:42.099020+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T02:09:10.840687+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T02:09:20.222106+00:00",
+      "message": "Tapped: Switch to child demo"
+    },
+    {
+      "time": "2026-11-16T02:09:26.340389+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:09:32.508805+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:09:37.350144+00:00",
+      "message": "Tapped: Savings goals"
+    },
+    {
+      "time": "2026-11-16T02:09:40.062258+00:00",
+      "message": "Tapped: Open goal: A new video game"
+    },
+    {
+      "time": "2026-11-16T02:09:44.472952+00:00",
+      "message": "Captured dark/child-revealed-funded.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:09:47.070294+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:09:53.148304+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:09:57.987915+00:00",
+      "message": "Tapped: My chores"
+    },
+    {
+      "time": "2026-11-16T02:10:03.649112+00:00",
+      "message": "Tapped: Mark done: Water the plants"
+    },
+    {
+      "time": "2026-11-16T02:10:08.513018+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T02:10:17.665952+00:00",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-16T02:10:23.833601+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:10:30.156679+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:10:35.029373+00:00",
+      "message": "Tapped: Assign & review chores"
+    },
+    {
+      "time": "2026-11-16T02:10:40.770445+00:00",
+      "message": "Tapped: Approve: Water the plants"
+    },
+    {
+      "time": "2026-11-16T02:10:45.666158+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T02:11:11.110085+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T02:11:20.243234+00:00",
+      "message": "Tapped: Switch to child demo"
+    },
+    {
+      "time": "2026-11-16T02:11:26.265631+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:11:32.344352+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:11:37.141679+00:00",
+      "message": "Tapped: My earnings & cash-out"
+    },
+    {
+      "time": "2026-11-16T02:11:48.490038+00:00",
+      "message": "Filled fictional field: Payout amount (USD)"
+    },
+    {
+      "time": "2026-11-16T02:11:51.170010+00:00",
+      "message": "Tapped: Request cash-out"
+    },
+    {
+      "time": "2026-11-16T02:11:54.098710+00:00",
+      "message": "Captured dark/child-cashout-request.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:11:58.907403+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T02:12:08.411416+00:00",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-16T02:12:14.620969+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:12:20.718302+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:12:25.590272+00:00",
+      "message": "Tapped: Payout workspace"
+    },
+    {
+      "time": "2026-11-16T02:12:27.354230+00:00",
+      "message": "Captured dark/parent-payout-workspace.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:12:42.234524+00:00",
+      "message": "Filled fictional field: Payout amount (USD)"
+    },
+    {
+      "time": "2026-11-16T02:12:48.081470+00:00",
+      "message": "Tapped: Record payment for payout 1"
+    },
+    {
+      "time": "2026-11-16T02:12:51.066652+00:00",
+      "message": "Captured dark/parent-payment-confirmation.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:12:53.551124+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T02:13:34.721540+00:00",
+      "message": "Captured dark/parent-partial-payment.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:13:39.609615+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T02:13:48.812824+00:00",
+      "message": "Tapped: Switch to child demo"
+    },
+    {
+      "time": "2026-11-16T02:13:54.994889+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:14:01.127633+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:14:06.085773+00:00",
+      "message": "Tapped: My earnings & cash-out"
+    },
+    {
+      "time": "2026-11-16T02:14:11.722916+00:00",
+      "message": "Tapped: Confirm receipt 1.1"
+    },
+    {
+      "time": "2026-11-16T02:14:16.582600+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T02:14:42.749216+00:00",
+      "message": "Captured dark/child-payment-acknowledged.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:14:47.552891+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T02:14:56.662332+00:00",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-16T02:15:02.794631+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:15:09.050450+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:15:13.918948+00:00",
+      "message": "Tapped: Payout workspace"
+    },
+    {
+      "time": "2026-11-16T02:15:22.873295+00:00",
+      "message": "Tapped: Cancel payout 1"
+    },
+    {
+      "time": "2026-11-16T02:15:27.707265+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T02:15:58.798964+00:00",
+      "message": "Captured dark/parent-payout-remainder-cancelled.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:16:01.562317+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:16:07.834673+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:16:15.548286+00:00",
+      "message": "Tapped: Financial history"
+    },
+    {
+      "time": "2026-11-16T02:16:17.416028+00:00",
+      "message": "Captured dark/financial-history.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:16:23.024919+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T02:16:32.086469+00:00",
+      "message": "Tapped: Switch to child demo"
+    },
+    {
+      "time": "2026-11-16T02:16:35.698343+00:00",
+      "message": "Completed 50 genuine screenshots. Manifest: D:\\Projects\\BetweenUs\\spec\\qa\\chores-goals\\1115-r6-family-envelopes\\capture-manifest.json"
+    }
+  ]
+}

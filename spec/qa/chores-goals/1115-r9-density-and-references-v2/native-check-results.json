@@ -1,0 +1,71 @@
+{
+  "build_id": "1115-FamilyEnvelopes-Journal-r9",
+  "source_head": "5b2ae211b933f6da14bd395d5b596547ef77e8df",
+  "results": [
+    {
+      "case": "light density draft retention",
+      "result": "passed",
+      "interaction": "Typed through native fields before density change and verified identical unsaved text afterward."
+    },
+    {
+      "case": "light tablet responsive",
+      "result": "passed",
+      "pixels": [
+        1920,
+        2560
+      ],
+      "density": 320,
+      "dp": [
+        960,
+        1280
+      ],
+      "navigation": {
+        "Home": [
+          16,
+          334,
+          202,
+          844
+        ],
+        "Journal": [
+          16,
+          880,
+          202,
+          1389
+        ],
+        "Chats": [
+          16,
+          1425,
+          202,
+          1935
+        ],
+        "Circle": [
+          16,
+          1971,
+          202,
+          2480
+        ]
+      },
+      "goal_back": "native Back returned to goal overview",
+      "limitation": "Viewport overrides on one Pixel_10 AVD, not separate physical hardware."
+    },
+    {
+      "case": "failure",
+      "result": "failed",
+      "error": "AssertionError: Display layout did not settle within the bounded wait: Header does not reach the current viewport's right edge after display change."
+    },
+    {
+      "case": "device restoration",
+      "result": "verified restored",
+      "properties": [
+        "size/density",
+        "font_scale"
+      ],
+      "errors": []
+    }
+  ],
+  "original_device_overrides": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "font_scale": "1.0"
+  }
+}

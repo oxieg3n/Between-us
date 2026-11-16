@@ -1,0 +1,50 @@
+{
+  "source_head_at_capture": "4442c4858d79ed07ca0ce776aeb6ab6b0b0231f5",
+  "branch": "feature/mobile-foundation",
+  "app_package": "com.oxieg3n.betweenus",
+  "metro_port": 8082,
+  "android": "17",
+  "emulator": "Pixel_10",
+  "serial": "emulator-5554",
+  "original_resolution": [
+    1080,
+    2424
+  ],
+  "build_id": "1115-FamilyEnvelopes-Journal-r11",
+  "completed": false,
+  "error": "RuntimeError: Between Us did not reach its native header within the startup wait.",
+  "capture_method": "Actual ADB shell screencap -p, adb pull, original unaltered PNG bytes",
+  "screens": [
+    {
+      "file": "spec/qa/chores-goals/1116-r11-dark-large-text-swiftshader/dark/failure-state.png",
+      "theme": "dark",
+      "description": "Actual failed native state before restoring device overrides; not a passing screenshot.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "ace989b9eb5cc55cdc25f9b86f0dc5f17f463bf908a09422471e6ecf4f94473a",
+      "area": "finance"
+    }
+  ],
+  "actions": [
+    {
+      "time": "2026-11-16T05:45:17.301763+00:00",
+      "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+    },
+    {
+      "time": "2026-11-16T05:45:21.851386+00:00",
+      "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+    },
+    {
+      "time": "2026-11-16T05:46:07.902048+00:00",
+      "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+    },
+    {
+      "time": "2026-11-16T05:46:50.992125+00:00",
+      "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+    },
+    {
+      "time": "2026-11-16T05:47:23.485767+00:00",
+      "message": "Captured dark/failure-state.png (1080 x 2424)"
+    }
+  ]
+}

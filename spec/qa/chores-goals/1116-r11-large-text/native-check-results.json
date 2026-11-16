@@ -1,0 +1,25 @@
+{
+  "build_id": "1115-FamilyEnvelopes-Journal-r11",
+  "source_head": "38f7d640d3fa8d54a512b6f6da5d774dda290d3c",
+  "results": [
+    {
+      "case": "failure",
+      "result": "failed",
+      "error": "RuntimeError: Native transition did not reach: Hi, Sam."
+    },
+    {
+      "case": "device restoration",
+      "result": "verified restored",
+      "properties": [
+        "size/density",
+        "font_scale"
+      ],
+      "errors": []
+    }
+  ],
+  "original_device_overrides": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "font_scale": "1.0"
+  }
+}

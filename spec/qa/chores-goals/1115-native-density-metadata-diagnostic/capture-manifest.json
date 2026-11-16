@@ -1,0 +1,92 @@
+{
+  "kind": "DEBUG-only native geometry diagnostic; not an acceptance build",
+  "build_id": "1115-FamilyEnvelopes-Journal-r10",
+  "source_head": "b7760b9f6cc457ef20aa7030d1279f5a9799d23b",
+  "tracked_source_dirty": true,
+  "diagnostic_apk_sha256": "2DE85E4BCD372E7129D35EF8B76691A2071CCC0962D1A05ACFB22B747FA6F774",
+  "native_probe": "Geometry, class names and density only; no view text or personal content logged",
+  "original_size": "Physical size: 1080x2424",
+  "original_density": "Physical density: 420",
+  "completed": true,
+  "error": null,
+  "capture_method": "Actual ADB shell screencap -p, adb pull, original unaltered PNG bytes",
+  "screens": [
+    {
+      "file": "spec/qa/chores-goals/1115-native-density-metadata-diagnostic/light/phone-before.png",
+      "theme": "light",
+      "description": "Actual phone before the diagnostic display round trip.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "77393fe92ef520c6040de2998d68478d17a79ca55782d771f13987648c0e5413",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-native-density-metadata-diagnostic/light/tablet.png",
+      "theme": "light",
+      "description": "Actual diagnostic tablet state; original ADB capture.",
+      "width": 1920,
+      "height": 2560,
+      "sha256": "1eae85de24d819ec8a21cc125d4994da39a6ef3e8bea6a63ba2f93a51111b0a4",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-native-density-metadata-diagnostic/light/phone-return.png",
+      "theme": "light",
+      "description": "Actual diagnostic phone-return state, including any defect.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "c71431cebbfb433954199e31759a02d09046c6f0ac2d03b73c777224bb2232b8",
+      "area": "finance"
+    }
+  ],
+  "actions": [
+    {
+      "time": "2026-11-16T04:13:38.192606+00:00",
+      "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+    },
+    {
+      "time": "2026-11-16T04:14:08.115567+00:00",
+      "message": "Tapped: Explore as Sam"
+    },
+    {
+      "time": "2026-11-16T04:14:17.939625+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T04:14:28.593862+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r10"
+    },
+    {
+      "time": "2026-11-16T04:14:33.268097+00:00",
+      "message": "Tapped: Light mode"
+    },
+    {
+      "time": "2026-11-16T04:14:38.277384+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T04:14:50.564450+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T04:14:57.494123+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T04:15:02.680165+00:00",
+      "message": "Tapped: Savings goals"
+    },
+    {
+      "time": "2026-11-16T04:15:06.226687+00:00",
+      "message": "Captured light/phone-before.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T04:15:16.587946+00:00",
+      "message": "Captured light/tablet.png (1920 x 2560)"
+    },
+    {
+      "time": "2026-11-16T04:15:29.657075+00:00",
+      "message": "Captured light/phone-return.png (1080 x 2424)"
+    }
+  ]
+}

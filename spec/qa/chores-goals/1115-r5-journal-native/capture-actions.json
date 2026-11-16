@@ -1,0 +1,14 @@
+[
+  {
+    "time": "2026-11-16T01:07:10.253774+00:00",
+    "message": "Native mission capture: 1115-FamilyEnvelopes-Journal-r5; feature/mobile-foundation; HEAD 56c2106220a1202f9b811c9de6ec35fefa1b8427; 1080x2424"
+  },
+  {
+    "time": "2026-11-16T01:07:10.255787+00:00",
+    "message": "Resetting fictional com.oxieg3n.betweenus process memory for light; appearance storage remains intact."
+  },
+  {
+    "time": "2026-11-16T01:07:54.673902+00:00",
+    "message": "CAPTURE FAILED: RuntimeError: Native transition did not reach: Profile & settings"
+  }
+]

@@ -1,0 +1,246 @@
+[
+  {
+    "time": "2026-11-16T04:33:25.813263+00:00",
+    "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+  },
+  {
+    "time": "2026-11-16T04:33:29.695082+00:00",
+    "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+  },
+  {
+    "time": "2026-11-16T04:33:53.253327+00:00",
+    "message": "Tapped: Explore as Sam"
+  },
+  {
+    "time": "2026-11-16T04:34:03.321350+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T04:34:18.229194+00:00",
+    "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r11"
+  },
+  {
+    "time": "2026-11-16T04:34:22.719415+00:00",
+    "message": "Tapped: Light mode"
+  },
+  {
+    "time": "2026-11-16T04:34:27.945746+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:34:46.794685+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:34:54.235517+00:00",
+    "message": "Captured light/small-home.png (840 x 1680)"
+  },
+  {
+    "time": "2026-11-16T04:34:56.963966+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:35:11.948780+00:00",
+    "message": "Tapped: Chores & Goals"
+  },
+  {
+    "time": "2026-11-16T04:35:24.623930+00:00",
+    "message": "Tapped: Savings goals"
+  },
+  {
+    "time": "2026-11-16T04:35:34.415314+00:00",
+    "message": "Captured light/small-goals.png (840 x 1680)"
+  },
+  {
+    "time": "2026-11-16T04:35:44.255099+00:00",
+    "message": "Tapped: Open goal: A new video game"
+  },
+  {
+    "time": "2026-11-16T04:35:50.571279+00:00",
+    "message": "Captured light/small-goal-detail.png (840 x 1680)"
+  },
+  {
+    "time": "2026-11-16T04:36:03.743560+00:00",
+    "message": "Captured light/small-goal-after-back.png (840 x 1680)"
+  },
+  {
+    "time": "2026-11-16T04:36:12.576597+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:36:20.188370+00:00",
+    "message": "Captured light/standard-home.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T04:36:23.216840+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:36:30.121350+00:00",
+    "message": "Tapped: Chores & Goals"
+  },
+  {
+    "time": "2026-11-16T04:36:35.567731+00:00",
+    "message": "Tapped: Savings goals"
+  },
+  {
+    "time": "2026-11-16T04:36:41.653991+00:00",
+    "message": "Captured light/standard-goals.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T04:36:44.717560+00:00",
+    "message": "Tapped: Open goal: A new video game"
+  },
+  {
+    "time": "2026-11-16T04:36:50.412792+00:00",
+    "message": "Captured light/standard-goal-detail.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T04:36:56.239443+00:00",
+    "message": "Captured light/standard-goal-after-back.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T04:37:07.518227+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:37:16.067741+00:00",
+    "message": "Captured light/large-home.png (1260 x 2730)"
+  },
+  {
+    "time": "2026-11-16T04:37:18.665714+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:37:25.787611+00:00",
+    "message": "Tapped: Chores & Goals"
+  },
+  {
+    "time": "2026-11-16T04:37:31.114752+00:00",
+    "message": "Tapped: Savings goals"
+  },
+  {
+    "time": "2026-11-16T04:37:36.365452+00:00",
+    "message": "Captured light/large-goals.png (1260 x 2730)"
+  },
+  {
+    "time": "2026-11-16T04:37:38.980057+00:00",
+    "message": "Tapped: Open goal: A new video game"
+  },
+  {
+    "time": "2026-11-16T04:37:45.432500+00:00",
+    "message": "Captured light/large-goal-detail.png (1260 x 2730)"
+  },
+  {
+    "time": "2026-11-16T04:37:51.486411+00:00",
+    "message": "Captured light/large-goal-after-back.png (1260 x 2730)"
+  },
+  {
+    "time": "2026-11-16T04:37:54.410248+00:00",
+    "message": "Tapped: Journal"
+  },
+  {
+    "time": "2026-11-16T04:37:57.418957+00:00",
+    "message": "Tapped: New entry"
+  },
+  {
+    "time": "2026-11-16T04:38:16.417152+00:00",
+    "message": "Filled fictional field: Entry title"
+  },
+  {
+    "time": "2026-11-16T04:38:47.316413+00:00",
+    "message": "Filled fictional field: Your private demo words"
+  },
+  {
+    "time": "2026-11-16T04:39:06.628114+00:00",
+    "message": "Full tablet geometry stable across two samples (2 total)."
+  },
+  {
+    "time": "2026-11-16T04:39:14.141456+00:00",
+    "message": "Captured light/tablet-draft-retained.png (1920 x 2560)"
+  },
+  {
+    "time": "2026-11-16T04:39:17.272169+00:00",
+    "message": "Tapped: Save entry"
+  },
+  {
+    "time": "2026-11-16T04:39:23.407466+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:39:30.759703+00:00",
+    "message": "Captured light/tablet-home.png (1920 x 2560)"
+  },
+  {
+    "time": "2026-11-16T04:39:33.371391+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:39:39.421131+00:00",
+    "message": "Tapped: Chores & Goals"
+  },
+  {
+    "time": "2026-11-16T04:39:44.804000+00:00",
+    "message": "Tapped: Savings goals"
+  },
+  {
+    "time": "2026-11-16T04:39:50.480567+00:00",
+    "message": "Captured light/tablet-goals.png (1920 x 2560)"
+  },
+  {
+    "time": "2026-11-16T04:39:53.192152+00:00",
+    "message": "Tapped: Open goal: A new video game"
+  },
+  {
+    "time": "2026-11-16T04:39:59.003296+00:00",
+    "message": "Captured light/tablet-goal-detail.png (1920 x 2560)"
+  },
+  {
+    "time": "2026-11-16T04:40:05.475610+00:00",
+    "message": "Captured light/tablet-goal-after-back.png (1920 x 2560)"
+  },
+  {
+    "time": "2026-11-16T04:40:23.053726+00:00",
+    "message": "Full phone geometry stable across two samples (2 total)."
+  },
+  {
+    "time": "2026-11-16T04:40:24.093934+00:00",
+    "message": "Captured light/phone-after-density-return.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T04:40:26.971550+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:40:37.395912+00:00",
+    "message": "Captured light/home-finance-entry-visible.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T04:40:42.528203+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T04:40:53.425433+00:00",
+    "message": "Tapped: Switch to parent demo"
+  },
+  {
+    "time": "2026-11-16T04:41:00.948110+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:41:08.726803+00:00",
+    "message": "Tapped: Chores & Goals"
+  },
+  {
+    "time": "2026-11-16T04:41:17.906802+00:00",
+    "message": "Tapped: Savings matching"
+  },
+  {
+    "time": "2026-11-16T04:41:27.909763+00:00",
+    "message": "Tapped: Review matching settings"
+  },
+  {
+    "time": "2026-11-16T04:41:31.817252+00:00",
+    "message": "Captured light/failure-state.png (1080 x 2424)"
+  }
+]

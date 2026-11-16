@@ -1,0 +1,75 @@
+{
+  "source_head_at_capture": "e5433521bd46c051a584702e24855a92702e1586",
+  "branch": "feature/mobile-foundation",
+  "build_id": "1115-FamilyEnvelopes-Journal-r2",
+  "app_package": "com.oxieg3n.betweenus",
+  "section": "initial-model-setup",
+  "serial": "emulator-5554",
+  "android": "17",
+  "resolution": [
+    1080,
+    2424
+  ],
+  "completed": false,
+  "error": null,
+  "capture_method": "Actual ADB shell screencap -p, adb pull, original unaltered PNG bytes",
+  "screens": [
+    {
+      "file": "spec/qa/journal-intelligence/1115-model-setup-r2b-20261115/light/model-setup.png",
+      "theme": "light",
+      "description": "Actual native model setup before any download.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "01f731e9acfaba422c6a61620fc578af7e614589becfa5f2b3d464c5a6e8be3f",
+      "area": "journal"
+    },
+    {
+      "file": "spec/qa/journal-intelligence/1115-model-setup-r2b-20261115/light/download-consent.png",
+      "theme": "light",
+      "description": "Explicit consent for the licensed 369 MiB model; no private text transfer.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "bb5fdf73f8089c4d99cd98145eba4f3df2b8100eca8b0c9c691d788d18980963",
+      "area": "journal"
+    }
+  ],
+  "actions": [
+    {
+      "time": "2026-11-16T00:14:07.376946+00:00",
+      "message": "Tapped: Explore as Sam"
+    },
+    {
+      "time": "2026-11-16T00:14:13.787791+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T00:14:26.668842+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r2"
+    },
+    {
+      "time": "2026-11-16T00:14:30.670602+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T00:14:37.125402+00:00",
+      "message": "Tapped: Light mode"
+    },
+    {
+      "time": "2026-11-16T00:14:43.281864+00:00",
+      "message": "Tapped: On-device conversation ideas"
+    },
+    {
+      "time": "2026-11-16T00:15:02.785366+00:00",
+      "message": "Captured light/model-setup.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T00:15:07.924290+00:00",
+      "message": "Tapped: Download & load optional model"
+    },
+    {
+      "time": "2026-11-16T00:15:12.641614+00:00",
+      "message": "Captured light/download-consent.png (1080 x 2424)"
+    }
+  ],
+  "full_manifest": "spec/qa/chores-goals/1115-model-setup-r2b-20261115/capture-manifest.json"
+}

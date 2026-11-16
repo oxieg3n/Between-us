@@ -1,0 +1,30 @@
+[
+  {
+    "time": "2026-11-16T08:01:31.582761+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T08:01:48.760880+00:00",
+    "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+  },
+  {
+    "time": "2026-11-16T08:01:58.284913+00:00",
+    "message": "Tapped: Follow device appearance"
+  },
+  {
+    "time": "2026-11-16T08:02:07.959060+00:00",
+    "message": "Captured system/appearance-settings.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T08:02:10.638420+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T08:02:29.649181+00:00",
+    "message": "Captured system/child-home.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T08:02:29.650812+00:00",
+    "message": "Final owner handoff complete. Main application is on Home; no new simulated message or payment was performed."
+  }
+]

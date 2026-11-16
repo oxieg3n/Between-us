@@ -1,0 +1,261 @@
+{
+  "source_head_at_capture": "1f3ac9948e766d98d5a25026758918abc751487f",
+  "branch": "feature/mobile-foundation",
+  "app_package": "com.oxieg3n.betweenus",
+  "metro_port": 8082,
+  "android": "17",
+  "emulator": "Pixel_10",
+  "serial": "emulator-5554",
+  "original_resolution": [
+    1080,
+    2424
+  ],
+  "build_id": "1115-FamilyEnvelopes-Journal-r6",
+  "completed": false,
+  "error": "RuntimeError: Native control/text not found: Home",
+  "capture_method": "Actual ADB shell screencap -p, adb pull, original unaltered PNG bytes",
+  "screens": [
+    {
+      "file": "spec/qa/chores-goals/1115-r6-native-usability/light/small-home.png",
+      "theme": "light",
+      "description": "Actual single-AVD viewport override; four native navigation destinations remain visible.",
+      "width": 840,
+      "height": 1680,
+      "sha256": "6c458b2cdf4d382af93c6590fbf12c449e124dd27afc1f07d6566c08d4f14da4",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-native-usability/light/small-goals.png",
+      "theme": "light",
+      "description": "Actual savings overview at this viewport size; fictional memory-only fixtures.",
+      "width": 840,
+      "height": 1680,
+      "sha256": "9deec033657a31f7009f2bf4a57c7e92dfd7ed81702c294f55c921b63dc43336",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-native-usability/light/small-goal-detail.png",
+      "theme": "light",
+      "description": "Actual nested goal detail before testing the Android Back action.",
+      "width": 840,
+      "height": 1680,
+      "sha256": "87dda5b70a48a917d1d568a68aae7751a03b29a72ae91839f1a8b3c977b48019",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-native-usability/light/small-goal-after-back.png",
+      "theme": "light",
+      "description": "Actual Android Back returned from goal detail to the goal overview.",
+      "width": 840,
+      "height": 1680,
+      "sha256": "3bd9d31233cb8846ee5db7e73cd1a69cad5e1eb2d8ebce1219793595b8d1cfeb",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-native-usability/light/standard-home.png",
+      "theme": "light",
+      "description": "Actual single-AVD viewport override; four native navigation destinations remain visible.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "f970fddfac6d264851b8238b0ca549aed24212af46ea016d6712e5df6fe431f3",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-native-usability/light/standard-goals.png",
+      "theme": "light",
+      "description": "Actual savings overview at this viewport size; fictional memory-only fixtures.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "18535a7ba00ca663836a5bb92510058f904af95b6ccc88b8a28ad76755f6d44d",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-native-usability/light/standard-goal-detail.png",
+      "theme": "light",
+      "description": "Actual nested goal detail before testing the Android Back action.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "bccf52ec12abdcac4417c7362d34a476aa175a0a2b56dbc871bef351d4ae39ba",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-native-usability/light/standard-goal-after-back.png",
+      "theme": "light",
+      "description": "Actual Android Back returned from goal detail to the goal overview.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "8fac72cb3e18dc971a40f2eae436b04222529a7598510ea96e138b3c9fd859e0",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-native-usability/light/large-home.png",
+      "theme": "light",
+      "description": "Actual single-AVD viewport override; four native navigation destinations remain visible.",
+      "width": 1260,
+      "height": 2730,
+      "sha256": "e40f0b9a7fd77e0bf83f1c7fc6eecf49aa1abf875b73794927530ec83df289c3",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-native-usability/light/large-goals.png",
+      "theme": "light",
+      "description": "Actual savings overview at this viewport size; fictional memory-only fixtures.",
+      "width": 1260,
+      "height": 2730,
+      "sha256": "26af79f4080df5e872982275c4f0d2d5594fb44dc61eb7a90ec5bdbbc300aed7",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-native-usability/light/large-goal-detail.png",
+      "theme": "light",
+      "description": "Actual nested goal detail before testing the Android Back action.",
+      "width": 1260,
+      "height": 2730,
+      "sha256": "b70ac7b59a0f7ee2516941322967df7b1074aa0391722528d2461244d5a62a2d",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-r6-native-usability/light/large-goal-after-back.png",
+      "theme": "light",
+      "description": "Actual Android Back returned from goal detail to the goal overview.",
+      "width": 1260,
+      "height": 2730,
+      "sha256": "75f8678476a31beeab96860d733d1d7120af765af4910641060e4dbae6d9ecbc",
+      "area": "finance"
+    }
+  ],
+  "actions": [
+    {
+      "time": "2026-11-16T02:16:39.060531+00:00",
+      "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+    },
+    {
+      "time": "2026-11-16T02:17:01.290538+00:00",
+      "message": "Tapped: Explore as Sam"
+    },
+    {
+      "time": "2026-11-16T02:17:11.077655+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T02:17:20.211509+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r6"
+    },
+    {
+      "time": "2026-11-16T02:17:24.056512+00:00",
+      "message": "Tapped: Light mode"
+    },
+    {
+      "time": "2026-11-16T02:17:29.007186+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:17:48.689958+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:18:02.996121+00:00",
+      "message": "Captured light/small-home.png (840 x 1680)"
+    },
+    {
+      "time": "2026-11-16T02:18:05.571216+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:18:14.760599+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:18:22.547672+00:00",
+      "message": "Tapped: Savings goals"
+    },
+    {
+      "time": "2026-11-16T02:18:29.783981+00:00",
+      "message": "Captured light/small-goals.png (840 x 1680)"
+    },
+    {
+      "time": "2026-11-16T02:18:35.351971+00:00",
+      "message": "Tapped: Open goal: A new video game"
+    },
+    {
+      "time": "2026-11-16T02:18:39.849391+00:00",
+      "message": "Captured light/small-goal-detail.png (840 x 1680)"
+    },
+    {
+      "time": "2026-11-16T02:18:48.142392+00:00",
+      "message": "Captured light/small-goal-after-back.png (840 x 1680)"
+    },
+    {
+      "time": "2026-11-16T02:18:54.123964+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:19:07.665312+00:00",
+      "message": "Captured light/standard-home.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:19:10.450036+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:19:17.038839+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:19:22.022345+00:00",
+      "message": "Tapped: Savings goals"
+    },
+    {
+      "time": "2026-11-16T02:19:26.209545+00:00",
+      "message": "Captured light/standard-goals.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:19:28.792396+00:00",
+      "message": "Tapped: Open goal: A new video game"
+    },
+    {
+      "time": "2026-11-16T02:19:33.298841+00:00",
+      "message": "Captured light/standard-goal-detail.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:19:38.619401+00:00",
+      "message": "Captured light/standard-goal-after-back.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T02:19:44.501995+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:19:57.944822+00:00",
+      "message": "Captured light/large-home.png (1260 x 2730)"
+    },
+    {
+      "time": "2026-11-16T02:20:00.463614+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T02:20:06.722897+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T02:20:11.630321+00:00",
+      "message": "Tapped: Savings goals"
+    },
+    {
+      "time": "2026-11-16T02:20:15.860474+00:00",
+      "message": "Captured light/large-goals.png (1260 x 2730)"
+    },
+    {
+      "time": "2026-11-16T02:20:18.389970+00:00",
+      "message": "Tapped: Open goal: A new video game"
+    },
+    {
+      "time": "2026-11-16T02:20:22.736945+00:00",
+      "message": "Captured light/large-goal-detail.png (1260 x 2730)"
+    },
+    {
+      "time": "2026-11-16T02:20:28.104314+00:00",
+      "message": "Captured light/large-goal-after-back.png (1260 x 2730)"
+    }
+  ]
+}

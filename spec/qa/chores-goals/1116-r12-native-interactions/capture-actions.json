@@ -1,0 +1,270 @@
+[
+  {
+    "time": "2026-11-16T06:55:24.912567+00:00",
+    "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+  },
+  {
+    "time": "2026-11-16T06:55:31.753538+00:00",
+    "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+  },
+  {
+    "time": "2026-11-16T06:55:43.708534+00:00",
+    "message": "Tapped: Explore as Sam"
+  },
+  {
+    "time": "2026-11-16T06:55:53.328673+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:56:10.505731+00:00",
+    "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+  },
+  {
+    "time": "2026-11-16T06:56:19.839588+00:00",
+    "message": "Tapped: Light mode"
+  },
+  {
+    "time": "2026-11-16T06:56:24.773732+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T06:56:48.203724+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T06:57:06.814804+00:00",
+    "message": "Tapped: Journal"
+  },
+  {
+    "time": "2026-11-16T06:57:09.489902+00:00",
+    "message": "Tapped: New entry"
+  },
+  {
+    "time": "2026-11-16T06:57:25.015937+00:00",
+    "message": "Filled fictional field: Entry title"
+  },
+  {
+    "time": "2026-11-16T06:57:47.287812+00:00",
+    "message": "Filled fictional field: Your private demo words"
+  },
+  {
+    "time": "2026-11-16T06:57:47.871893+00:00",
+    "message": "Captured light/journal-keyboard.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:57:51.017039+00:00",
+    "message": "Tapped: Save entry"
+  },
+  {
+    "time": "2026-11-16T06:57:56.098232+00:00",
+    "message": "Tapped: Journal"
+  },
+  {
+    "time": "2026-11-16T06:57:58.991755+00:00",
+    "message": "Tapped: Revisit Fictional light keyboard page"
+  },
+  {
+    "time": "2026-11-16T06:58:03.967825+00:00",
+    "message": "Tapped: Chats"
+  },
+  {
+    "time": "2026-11-16T06:58:06.657143+00:00",
+    "message": "Tapped: Open conversation with Alex."
+  },
+  {
+    "time": "2026-11-16T06:58:24.443272+00:00",
+    "message": "Filled fictional field: Message draft"
+  },
+  {
+    "time": "2026-11-16T06:58:29.513264+00:00",
+    "message": "Captured light/conversation-keyboard.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:58:32.179344+00:00",
+    "message": "Tapped: Review"
+  },
+  {
+    "time": "2026-11-16T06:58:35.105958+00:00",
+    "message": "Captured light/native-message-review.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:58:37.692411+00:00",
+    "message": "Tapped: Edit my words"
+  },
+  {
+    "time": "2026-11-16T06:59:00.073112+00:00",
+    "message": "Filled fictional field: Your message"
+  },
+  {
+    "time": "2026-11-16T06:59:02.692607+00:00",
+    "message": "Tapped: Review my words"
+  },
+  {
+    "time": "2026-11-16T06:59:05.431081+00:00",
+    "message": "Captured light/native-edited-message-review.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:59:08.059530+00:00",
+    "message": "Tapped: Simulate send"
+  },
+  {
+    "time": "2026-11-16T06:59:53.595441+00:00",
+    "message": "Captured light/native-simulated-conversation.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:59:57.166739+00:00",
+    "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+  },
+  {
+    "time": "2026-11-16T07:00:04.003369+00:00",
+    "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+  },
+  {
+    "time": "2026-11-16T07:00:17.685404+00:00",
+    "message": "Tapped: Explore as Sam"
+  },
+  {
+    "time": "2026-11-16T07:00:27.352971+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T07:00:44.593422+00:00",
+    "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+  },
+  {
+    "time": "2026-11-16T07:00:53.985933+00:00",
+    "message": "Tapped: Dark mode"
+  },
+  {
+    "time": "2026-11-16T07:00:59.222260+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T07:01:22.617802+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T07:01:41.458850+00:00",
+    "message": "Tapped: Journal"
+  },
+  {
+    "time": "2026-11-16T07:01:44.131367+00:00",
+    "message": "Tapped: New entry"
+  },
+  {
+    "time": "2026-11-16T07:01:59.094598+00:00",
+    "message": "Filled fictional field: Entry title"
+  },
+  {
+    "time": "2026-11-16T07:02:20.921906+00:00",
+    "message": "Filled fictional field: Your private demo words"
+  },
+  {
+    "time": "2026-11-16T07:02:21.457179+00:00",
+    "message": "Captured dark/journal-keyboard.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T07:02:24.681936+00:00",
+    "message": "Tapped: Save entry"
+  },
+  {
+    "time": "2026-11-16T07:02:29.696752+00:00",
+    "message": "Tapped: Journal"
+  },
+  {
+    "time": "2026-11-16T07:02:32.367439+00:00",
+    "message": "Tapped: Revisit Fictional dark keyboard page"
+  },
+  {
+    "time": "2026-11-16T07:02:37.362654+00:00",
+    "message": "Tapped: Chats"
+  },
+  {
+    "time": "2026-11-16T07:02:40.050059+00:00",
+    "message": "Tapped: Open conversation with Alex."
+  },
+  {
+    "time": "2026-11-16T07:02:57.548856+00:00",
+    "message": "Filled fictional field: Message draft"
+  },
+  {
+    "time": "2026-11-16T07:03:02.956708+00:00",
+    "message": "Captured dark/conversation-keyboard.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T07:03:05.749645+00:00",
+    "message": "Tapped: Review"
+  },
+  {
+    "time": "2026-11-16T07:03:08.784731+00:00",
+    "message": "Captured dark/native-message-review.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T07:03:11.415825+00:00",
+    "message": "Tapped: Edit my words"
+  },
+  {
+    "time": "2026-11-16T07:03:33.191269+00:00",
+    "message": "Filled fictional field: Your message"
+  },
+  {
+    "time": "2026-11-16T07:03:35.774760+00:00",
+    "message": "Tapped: Review my words"
+  },
+  {
+    "time": "2026-11-16T07:03:38.508783+00:00",
+    "message": "Captured dark/native-edited-message-review.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T07:03:41.128064+00:00",
+    "message": "Tapped: Simulate send"
+  },
+  {
+    "time": "2026-11-16T07:04:26.402135+00:00",
+    "message": "Captured dark/native-simulated-conversation.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T07:04:33.883988+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T07:04:45.436133+00:00",
+    "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+  },
+  {
+    "time": "2026-11-16T07:04:52.720739+00:00",
+    "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+  },
+  {
+    "time": "2026-11-16T07:05:06.956283+00:00",
+    "message": "Tapped: Explore as Sam"
+  },
+  {
+    "time": "2026-11-16T07:05:16.874727+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T07:05:34.872882+00:00",
+    "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+  },
+  {
+    "time": "2026-11-16T07:05:44.832705+00:00",
+    "message": "Captured dark/appearance-after-restart.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T07:05:47.560024+00:00",
+    "message": "Tapped: Follow device appearance"
+  },
+  {
+    "time": "2026-11-16T07:05:50.742221+00:00",
+    "message": "Captured system/appearance-follow-device.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T07:05:53.452013+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T07:06:11.009704+00:00",
+    "message": "Native mission checks passed. Evidence: D:\\Projects\\BetweenUs\\spec\\qa\\chores-goals\\1116-r12-native-interactions"
+  }
+]

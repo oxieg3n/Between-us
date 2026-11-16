@@ -1,0 +1,37 @@
+{
+  "source_head_at_capture": "5bbd9e912eff49e15e8b13af9428bb6bccdc7020",
+  "branch": "feature/mobile-foundation",
+  "build_id": "1115-FamilyEnvelopes-Journal-r2",
+  "app_package": "com.oxieg3n.betweenus",
+  "section": "initial-model-setup",
+  "serial": "emulator-5554",
+  "android": "17",
+  "resolution": [
+    1080,
+    2424
+  ],
+  "completed": true,
+  "error": null,
+  "capture_method": "Actual ADB shell screencap -p, adb pull, original unaltered PNG bytes",
+  "screens": [
+    {
+      "file": "spec/qa/journal-intelligence/1115-model-ready-r2c-20261115/light/model-ready.png",
+      "theme": "light",
+      "description": "Actual app verified the downloaded hash and loaded its optional native model.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "51177a91b5c1c202e448632e1d08d99c2f9ba1fa0319cd9edf393712c3e74ed0",
+      "area": "journal"
+    }
+  ],
+  "actions": [
+    {
+      "time": "2026-11-16T00:25:00.200757+00:00",
+      "message": "Observe setup already explicitly confirmed in preceding model-setup-r2b run; do not start another download."
+    },
+    {
+      "time": "2026-11-16T00:28:09.682521+00:00",
+      "message": "Captured light/model-ready.png (1080 x 2424)"
+    }
+  ]
+}

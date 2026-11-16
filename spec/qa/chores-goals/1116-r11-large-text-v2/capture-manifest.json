@@ -1,0 +1,38 @@
+{
+  "source_head_at_capture": "fb4cdf9c973fa89c1e95dc16a6cc21bafcdb1a5d",
+  "branch": "feature/mobile-foundation",
+  "app_package": "com.oxieg3n.betweenus",
+  "metro_port": 8082,
+  "android": "17",
+  "emulator": "Pixel_10",
+  "serial": "emulator-5554",
+  "original_resolution": [
+    1080,
+    2424
+  ],
+  "build_id": "1115-FamilyEnvelopes-Journal-r11",
+  "completed": false,
+  "error": "RuntimeError: Fresh native UI snapshot unavailable; no stale coordinates used.",
+  "capture_method": "Actual ADB shell screencap -p, adb pull, original unaltered PNG bytes",
+  "screens": [
+    {
+      "file": "spec/qa/chores-goals/1116-r11-large-text-v2/light/failure-state.png",
+      "theme": "light",
+      "description": "Actual failed native state before restoring device overrides; not a passing screenshot.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "92e11200540e0e84ba6d2d2c522b405c45380b849ae39390aa5f804f6207220c",
+      "area": "finance"
+    }
+  ],
+  "actions": [
+    {
+      "time": "2026-11-16T05:13:31.124861+00:00",
+      "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+    },
+    {
+      "time": "2026-11-16T05:13:44.601104+00:00",
+      "message": "Captured light/failure-state.png (1080 x 2424)"
+    }
+  ]
+}

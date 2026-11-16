@@ -231,14 +231,14 @@ class NativeChecks(LIB.MissionCapture):
         self.capture(theme, "font-200-confirmation-top", "Actual long confirmation dialog at 200% font; content remains scrollable.")
         confirm = self.locate("Confirm", clickable=True)
         confirm_bounds = self.complete_bounds(confirm, "Confirm")
-        self.capture(theme, "font-200-confirmation-action", "Scrolled native modal makes the full Confirm action reachable at 200% font scale.")
+        self.capture(theme, "font-200-confirmation-action", "Full Confirm action is visible and reachable at 200% font scale; scrolling is used only if needed.")
         cancel = self.locate("Cancel", clickable=True)
         cancel_bounds = self.complete_bounds(cancel, "Cancel")
-        self.capture(theme, "font-200-confirmation-cancel", "Scrolled native modal makes Cancel fully reachable; no financial rule is changed.")
+        self.capture(theme, "font-200-confirmation-cancel", "Cancel is fully visible and reachable; no financial rule is changed.")
         self.tap("Cancel", scroll=False)
         self.result(f"{theme} font scale 200%", result="passed", navigation=nav,
                     confirm_bounds=confirm_bounds, cancel_bounds=cancel_bounds,
-                    interaction="Scrolled confirmation and cancelled without saving settings.")
+                    interaction="Located full confirmation controls and cancelled without saving settings.")
         self.command("shell", "am", "force-stop", self.args.app_package)
         self.command("shell", "settings", "put", "system", "font_scale", "1.0")
         self.fresh_theme(theme)

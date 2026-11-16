@@ -1,0 +1,622 @@
+[
+  {
+    "time": "2026-11-16T06:27:18.184612+00:00",
+    "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+  },
+  {
+    "time": "2026-11-16T06:27:25.153365+00:00",
+    "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+  },
+  {
+    "time": "2026-11-16T06:27:42.606731+00:00",
+    "message": "Tapped: Explore as Sam"
+  },
+  {
+    "time": "2026-11-16T06:27:52.101007+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:28:09.823999+00:00",
+    "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+  },
+  {
+    "time": "2026-11-16T06:28:18.948701+00:00",
+    "message": "Tapped: Light mode"
+  },
+  {
+    "time": "2026-11-16T06:28:23.938902+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T06:28:44.405079+00:00",
+    "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+  },
+  {
+    "time": "2026-11-16T06:28:51.420193+00:00",
+    "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+  },
+  {
+    "time": "2026-11-16T06:29:02.508787+00:00",
+    "message": "Tapped: Explore as Sam"
+  },
+  {
+    "time": "2026-11-16T06:29:12.037771+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:29:28.962816+00:00",
+    "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+  },
+  {
+    "time": "2026-11-16T06:29:38.048964+00:00",
+    "message": "Tapped: Light mode"
+  },
+  {
+    "time": "2026-11-16T06:29:42.932448+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T06:30:05.887028+00:00",
+    "message": "Tapped: Circle"
+  },
+  {
+    "time": "2026-11-16T06:30:08.558395+00:00",
+    "message": "Tapped: Open Alex - parent,"
+  },
+  {
+    "time": "2026-11-16T06:30:16.672390+00:00",
+    "message": "Tapped: Block Alex - parent"
+  },
+  {
+    "time": "2026-11-16T06:30:23.827420+00:00",
+    "message": "Tapped: Confirm"
+  },
+  {
+    "time": "2026-11-16T06:31:04.272838+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:31:21.962313+00:00",
+    "message": "Tapped: Switch to parent demo"
+  },
+  {
+    "time": "2026-11-16T06:31:33.637653+00:00",
+    "message": "Tapped: Chats"
+  },
+  {
+    "time": "2026-11-16T06:31:36.222950+00:00",
+    "message": "Tapped: Open conversation with Sam."
+  },
+  {
+    "time": "2026-11-16T06:31:43.869270+00:00",
+    "message": "Captured light/child-block-incoming-denied.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:31:46.515597+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T06:32:10.824516+00:00",
+    "message": "Tapped: Schedule a check-in"
+  },
+  {
+    "time": "2026-11-16T06:32:19.348690+00:00",
+    "message": "Captured light/child-block-checkin-denied.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:32:24.195324+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:32:41.171645+00:00",
+    "message": "Tapped: Switch to child demo"
+  },
+  {
+    "time": "2026-11-16T06:32:52.749413+00:00",
+    "message": "Tapped: Circle"
+  },
+  {
+    "time": "2026-11-16T06:33:00.931571+00:00",
+    "message": "Tapped: Privacy & safety"
+  },
+  {
+    "time": "2026-11-16T06:33:08.921543+00:00",
+    "message": "Tapped: Prepare words for another trusted adult"
+  },
+  {
+    "time": "2026-11-16T06:33:17.118105+00:00",
+    "message": "Tapped: Review my words"
+  },
+  {
+    "time": "2026-11-16T06:33:19.769282+00:00",
+    "message": "Tapped: Keep words for practice"
+  },
+  {
+    "time": "2026-11-16T06:33:22.448743+00:00",
+    "message": "Captured light/child-block-safety-practice.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:33:22.450026+00:00",
+    "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+  },
+  {
+    "time": "2026-11-16T06:33:29.461666+00:00",
+    "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+  },
+  {
+    "time": "2026-11-16T06:33:40.496710+00:00",
+    "message": "Tapped: Explore as Sam"
+  },
+  {
+    "time": "2026-11-16T06:33:49.939536+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:34:06.974346+00:00",
+    "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+  },
+  {
+    "time": "2026-11-16T06:34:16.310063+00:00",
+    "message": "Tapped: Light mode"
+  },
+  {
+    "time": "2026-11-16T06:34:21.196196+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T06:34:46.560947+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:35:03.595998+00:00",
+    "message": "Tapped: Switch to parent demo"
+  },
+  {
+    "time": "2026-11-16T06:35:15.265734+00:00",
+    "message": "Tapped: Circle"
+  },
+  {
+    "time": "2026-11-16T06:35:17.829196+00:00",
+    "message": "Tapped: Open Sam - teen,"
+  },
+  {
+    "time": "2026-11-16T06:35:25.940379+00:00",
+    "message": "Tapped: Block Sam - teen"
+  },
+  {
+    "time": "2026-11-16T06:35:33.204325+00:00",
+    "message": "Tapped: Confirm"
+  },
+  {
+    "time": "2026-11-16T06:36:13.997448+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:36:31.118160+00:00",
+    "message": "Tapped: Switch to child demo"
+  },
+  {
+    "time": "2026-11-16T06:36:42.668535+00:00",
+    "message": "Tapped: Chats"
+  },
+  {
+    "time": "2026-11-16T06:36:45.244627+00:00",
+    "message": "Tapped: Open conversation with Alex."
+  },
+  {
+    "time": "2026-11-16T06:36:52.718038+00:00",
+    "message": "Captured light/parent-block-incoming-denied.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:36:57.665716+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:37:14.707823+00:00",
+    "message": "Tapped: Switch to parent demo"
+  },
+  {
+    "time": "2026-11-16T06:37:26.412091+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T06:37:50.306853+00:00",
+    "message": "Tapped: Schedule a check-in"
+  },
+  {
+    "time": "2026-11-16T06:37:58.759826+00:00",
+    "message": "Captured light/parent-block-checkin-denied.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:38:03.616266+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:38:20.768531+00:00",
+    "message": "Tapped: Switch to child demo"
+  },
+  {
+    "time": "2026-11-16T06:38:32.275892+00:00",
+    "message": "Tapped: Circle"
+  },
+  {
+    "time": "2026-11-16T06:38:40.441840+00:00",
+    "message": "Tapped: Privacy & safety"
+  },
+  {
+    "time": "2026-11-16T06:38:48.553476+00:00",
+    "message": "Tapped: Prepare words for another trusted adult"
+  },
+  {
+    "time": "2026-11-16T06:38:56.791989+00:00",
+    "message": "Tapped: Review my words"
+  },
+  {
+    "time": "2026-11-16T06:38:59.370664+00:00",
+    "message": "Tapped: Keep words for practice"
+  },
+  {
+    "time": "2026-11-16T06:39:02.142000+00:00",
+    "message": "Captured light/parent-block-safety-practice.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:39:02.143563+00:00",
+    "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+  },
+  {
+    "time": "2026-11-16T06:39:09.625302+00:00",
+    "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+  },
+  {
+    "time": "2026-11-16T06:39:20.828026+00:00",
+    "message": "Tapped: Explore as Sam"
+  },
+  {
+    "time": "2026-11-16T06:39:30.358713+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:39:47.302886+00:00",
+    "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+  },
+  {
+    "time": "2026-11-16T06:39:56.594712+00:00",
+    "message": "Tapped: Light mode"
+  },
+  {
+    "time": "2026-11-16T06:40:01.474824+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T06:40:22.592081+00:00",
+    "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+  },
+  {
+    "time": "2026-11-16T06:40:28.701626+00:00",
+    "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+  },
+  {
+    "time": "2026-11-16T06:40:40.084841+00:00",
+    "message": "Tapped: Explore as Sam"
+  },
+  {
+    "time": "2026-11-16T06:40:49.638137+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:41:06.479915+00:00",
+    "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+  },
+  {
+    "time": "2026-11-16T06:41:15.713534+00:00",
+    "message": "Tapped: Dark mode"
+  },
+  {
+    "time": "2026-11-16T06:41:20.873958+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T06:41:41.104868+00:00",
+    "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+  },
+  {
+    "time": "2026-11-16T06:41:48.509371+00:00",
+    "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+  },
+  {
+    "time": "2026-11-16T06:41:59.648089+00:00",
+    "message": "Tapped: Explore as Sam"
+  },
+  {
+    "time": "2026-11-16T06:42:09.290378+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:42:26.183996+00:00",
+    "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+  },
+  {
+    "time": "2026-11-16T06:42:35.343008+00:00",
+    "message": "Tapped: Dark mode"
+  },
+  {
+    "time": "2026-11-16T06:42:40.148174+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T06:43:03.330543+00:00",
+    "message": "Tapped: Circle"
+  },
+  {
+    "time": "2026-11-16T06:43:05.976120+00:00",
+    "message": "Tapped: Open Alex - parent,"
+  },
+  {
+    "time": "2026-11-16T06:43:14.278774+00:00",
+    "message": "Tapped: Block Alex - parent"
+  },
+  {
+    "time": "2026-11-16T06:43:21.357197+00:00",
+    "message": "Tapped: Confirm"
+  },
+  {
+    "time": "2026-11-16T06:44:02.095412+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:44:19.291304+00:00",
+    "message": "Tapped: Switch to parent demo"
+  },
+  {
+    "time": "2026-11-16T06:44:30.792173+00:00",
+    "message": "Tapped: Chats"
+  },
+  {
+    "time": "2026-11-16T06:44:33.356477+00:00",
+    "message": "Tapped: Open conversation with Sam."
+  },
+  {
+    "time": "2026-11-16T06:44:41.101378+00:00",
+    "message": "Captured dark/child-block-incoming-denied.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:44:43.680687+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T06:45:07.921146+00:00",
+    "message": "Tapped: Schedule a check-in"
+  },
+  {
+    "time": "2026-11-16T06:45:16.447577+00:00",
+    "message": "Captured dark/child-block-checkin-denied.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:45:21.401754+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:45:38.942262+00:00",
+    "message": "Tapped: Switch to child demo"
+  },
+  {
+    "time": "2026-11-16T06:45:50.760923+00:00",
+    "message": "Tapped: Circle"
+  },
+  {
+    "time": "2026-11-16T06:45:59.124043+00:00",
+    "message": "Tapped: Privacy & safety"
+  },
+  {
+    "time": "2026-11-16T06:46:07.452880+00:00",
+    "message": "Tapped: Prepare words for another trusted adult"
+  },
+  {
+    "time": "2026-11-16T06:46:15.975736+00:00",
+    "message": "Tapped: Review my words"
+  },
+  {
+    "time": "2026-11-16T06:46:18.730715+00:00",
+    "message": "Tapped: Keep words for practice"
+  },
+  {
+    "time": "2026-11-16T06:46:21.507595+00:00",
+    "message": "Captured dark/child-block-safety-practice.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:46:21.509058+00:00",
+    "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+  },
+  {
+    "time": "2026-11-16T06:46:29.038847+00:00",
+    "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+  },
+  {
+    "time": "2026-11-16T06:46:42.702899+00:00",
+    "message": "Tapped: Explore as Sam"
+  },
+  {
+    "time": "2026-11-16T06:46:52.410951+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:47:09.760740+00:00",
+    "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+  },
+  {
+    "time": "2026-11-16T06:47:18.926836+00:00",
+    "message": "Tapped: Dark mode"
+  },
+  {
+    "time": "2026-11-16T06:47:23.897916+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T06:47:49.453407+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:48:06.838011+00:00",
+    "message": "Tapped: Switch to parent demo"
+  },
+  {
+    "time": "2026-11-16T06:48:18.756861+00:00",
+    "message": "Tapped: Circle"
+  },
+  {
+    "time": "2026-11-16T06:48:21.431542+00:00",
+    "message": "Tapped: Open Sam - teen,"
+  },
+  {
+    "time": "2026-11-16T06:48:29.938438+00:00",
+    "message": "Tapped: Block Sam - teen"
+  },
+  {
+    "time": "2026-11-16T06:48:37.232628+00:00",
+    "message": "Tapped: Confirm"
+  },
+  {
+    "time": "2026-11-16T06:49:18.484380+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:49:35.853631+00:00",
+    "message": "Tapped: Switch to child demo"
+  },
+  {
+    "time": "2026-11-16T06:49:47.720380+00:00",
+    "message": "Tapped: Chats"
+  },
+  {
+    "time": "2026-11-16T06:49:50.378300+00:00",
+    "message": "Tapped: Open conversation with Alex."
+  },
+  {
+    "time": "2026-11-16T06:49:58.064511+00:00",
+    "message": "Captured dark/parent-block-incoming-denied.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:50:02.995999+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:50:20.532952+00:00",
+    "message": "Tapped: Switch to parent demo"
+  },
+  {
+    "time": "2026-11-16T06:50:32.249535+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T06:50:56.807853+00:00",
+    "message": "Tapped: Schedule a check-in"
+  },
+  {
+    "time": "2026-11-16T06:51:05.532846+00:00",
+    "message": "Captured dark/parent-block-checkin-denied.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:51:10.544226+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:51:27.887491+00:00",
+    "message": "Tapped: Switch to child demo"
+  },
+  {
+    "time": "2026-11-16T06:51:39.602088+00:00",
+    "message": "Tapped: Circle"
+  },
+  {
+    "time": "2026-11-16T06:51:47.904151+00:00",
+    "message": "Tapped: Privacy & safety"
+  },
+  {
+    "time": "2026-11-16T06:51:56.163828+00:00",
+    "message": "Tapped: Prepare words for another trusted adult"
+  },
+  {
+    "time": "2026-11-16T06:52:04.581356+00:00",
+    "message": "Tapped: Review my words"
+  },
+  {
+    "time": "2026-11-16T06:52:07.215332+00:00",
+    "message": "Tapped: Keep words for practice"
+  },
+  {
+    "time": "2026-11-16T06:52:10.118857+00:00",
+    "message": "Captured dark/parent-block-safety-practice.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:52:10.120613+00:00",
+    "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+  },
+  {
+    "time": "2026-11-16T06:52:17.145880+00:00",
+    "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+  },
+  {
+    "time": "2026-11-16T06:52:30.711012+00:00",
+    "message": "Tapped: Explore as Sam"
+  },
+  {
+    "time": "2026-11-16T06:52:40.362267+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:52:57.620389+00:00",
+    "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+  },
+  {
+    "time": "2026-11-16T06:53:07.004520+00:00",
+    "message": "Tapped: Dark mode"
+  },
+  {
+    "time": "2026-11-16T06:53:11.973170+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T06:53:37.632223+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:53:49.361413+00:00",
+    "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+  },
+  {
+    "time": "2026-11-16T06:53:56.718473+00:00",
+    "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+  },
+  {
+    "time": "2026-11-16T06:54:10.522159+00:00",
+    "message": "Tapped: Explore as Sam"
+  },
+  {
+    "time": "2026-11-16T06:54:20.238193+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T06:54:37.380234+00:00",
+    "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+  },
+  {
+    "time": "2026-11-16T06:54:46.937749+00:00",
+    "message": "Captured dark/appearance-after-restart.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:54:49.514026+00:00",
+    "message": "Tapped: Follow device appearance"
+  },
+  {
+    "time": "2026-11-16T06:54:52.522412+00:00",
+    "message": "Captured system/appearance-follow-device.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T06:54:55.128705+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T06:55:11.855244+00:00",
+    "message": "Native mission checks passed. Evidence: D:\\Projects\\BetweenUs\\spec\\qa\\chores-goals\\1116-r12-bidirectional-blocks"
+  }
+]

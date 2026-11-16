@@ -1,0 +1,55 @@
+# Production security and delivery gates
+
+The current mobile app is a fictional, memory-only prototype. Working arithmetic, local inference and native UI tests do not establish production security. No backend, live financial transfer, real child data or public release is authorized by this document.
+
+## Identity and authority
+
+Replace the demo role selector with reviewed authentication, age/consent and verified family relationships. Derive roles and child IDs from the authenticated session, never client fields. Review shared-device switching, account recovery, guardian disputes, revocation and confidential help when a guardian is unsafe. Parent administration must never authorize reading another author's journal or unsent drafts.
+
+Evaluate the existing [backend comparison](../MOBILE_ARCHITECTURE.md) against adversarial authorization tests before selecting a provider. Workers/D1 with managed OIDC, Supabase and Firebase remain candidates, not configured services. A free tier is not a guarantee of perpetual zero operating cost. Paid resources, credentials and production deployment need owner approval.
+
+## Financial records
+
+Move command authorization and the append-only ledger into a transactional service before cross-device or real-world tracking. Atomically enforce occurrence approval uniqueness, idempotency, payout holds, allocation source lots and each child's family-local monthly match cap. Test concurrent requests, retries, offline replay, cross-family access, clock manipulation and restoration from backups. Retain compensating events and distinguish parent declarations, family acknowledgment and independently verified provider evidence.
+
+Produce child projections on the server; never send a parent ledger and hide it in the client. Preserve equivalent-world tests for surprise matching, including amounts, errors, IDs, accessibility, activity, exports and notifications. Journal information must never influence chores, rewards, matching or financial eligibility.
+
+Family Savings Envelopes remains a household planning ledger with no custody or automatic transfers. Manual provider handoffs require current eligibility/fee guidance. Merchant APIs are not family P2P payout APIs. Any future supported integration needs separate provider approval, reconciliation, abuse controls and security review; no credentials belong in a mobile bundle.
+
+## Private writing and local inference
+
+Threat-model secure local storage separately from family administration: device lock, hardware-backed key custody, recovery, backups, deletion, export, multi-device synchronization and compromised/shared devices. Choose reviewed libraries/protocols after independent review; do not invent encryption or claim end-to-end security. Real journals and financial records remain prohibited until this design is approved.
+
+Optional model assets are the only additional persisted files beyond appearance preference. Keep journal text, prompts, tensor/KV sessions and model responses out of files, telemetry, crash payloads, analytics, notifications and cloud inference. Verify pinned model integrity/licenses, interrupt stale work and clear native caches before another author can generate. Audit native logging and background/app-switcher behavior on hardware. The current English safety matcher and constrained output validator require broader child-safety evaluation; they cannot establish truth or guarantee a safe relationship.
+
+The selected native runtime is pinned to a release candidate. Review its versioned native-artifact downloads, hashes, bundled notices and model-parser attack surface; no arbitrary model picker or unverified download should bypass the pinned asset check. Keep a clearly labeled fallback when a device, input budget, output validator or cancellation path cannot support generation. Separate build compatibility from accepted journal output and from supported physical-device performance.
+
+## Native and operational validation
+
+- Supported physical Android device: at least 20 warmed generations, cold load, median/p95, peak memory, output acceptance/fallback rates, thermal and low-memory behavior, offline operation and cancellation across role/background changes.
+- iOS: macOS build, eligible-device runtime, safe area/keyboard, VoiceOver, local model memory and lifecycle checks. Android results cannot substitute.
+- Accessibility: complete TalkBack/VoiceOver spoken navigation, large text, focus/confirmation behavior and representative hardware sizes. Browser axe results support this work but do not certify the native application.
+- Release builds: signed build, launcher masks, permission minimization, release logging, dependency/license review and reproducible artifacts. Development APKs and emulator screenshots are not store approval.
+- Operations: abuse/report intake with confidential case permissions, escalation staffing, consent withdrawal, retention/deletion, incident response and neutral delivery notifications. Simulated reports and check-ins must not be relabeled as operational.
+
+## Prototype delivery checkpoint
+
+Current build is `1115-FamilyEnvelopes-Journal-r12`, runtime source commit `8607573`. Its complete nine-command gate passed: 84 unit tests, 19 browser scenarios, clean TypeScript/lint, audit zero, Doctor 20/20, SDK compatibility and both exports. No retries/skips occurred; the 81-file runtime hash stayed `189973cfa2432096335e69c06f873ba55402a133ce6b725f3e9e6e480883dcd1`. Separate ordinary-phone native blocking and interaction runs passed in both themes: 14 and 12 original captures independently inspected and hash/dimension verified. They cover disabled messaging/new schedule Save after either author blocks, safety/practice access, exact journal Save/revisit, keyboard-open Review/edit/simulated Send/Back and appearance persistence, with verified display/font restoration. The r12 core recapture also passed review: all 48 originals and four comparison sheets verified, including actual Skip/Save/new invitation and the previously missing scrolled finance entry. The model recapture also passed both themes: twelve originals independently verified, accepted native wording, deliberate recipient and exact Review without Send. After 86 stable ordinary-phone captures on warm SwiftShader, the isolated cold-app 200% retry passed BOTH themes: twelve additional originals independently verified, full Confirm/Cancel controls, appearance persistence and display/font restoration. Two master-reviewed handoff images bring current evidence to 100 originals; they are not extra functional test cases. No general display-stress or production sign-off follows. Earlier r11's 74/17 gate remains historical, not relabeled. See [command outcomes](AUTOMATED_QA.md) and [build report](BUILD_REPORT.md).
+
+R12's clean prebuild removed temporary geometry diagnostics. The x86_64 debug APK built successfully in 1 minute 5 seconds, SHA-256 `34716578ABD1C9DCB9C255C9993E66F3B00BB532B29AC7DE953095302C8FB6E9`. This is not a release-signed artifact. The final send boundary now rechecks both authors' independent blocks, even against a stale verified contact after review. Parent base-contact administration cannot erase a child's block. Journal recipient choice and new check-in scheduling use the same denial; existing history may remain visible. These are two fictional-author in-memory controls, not server authorization.
+
+Reviewed native evidence preserves original build provenance: r5 core has 26 originals/four comparisons, r5 journal 12 with accepted native wording and explicit recipient/review, r6 finance 50 in both themes, r7 usability 56 and r7 supplementary controls 22. See the [current review index](../qa/open-letter/CURRENT_BUILD.md). Images are not relabeled as a newer build.
+
+The r6 finance UI exercised shared matching caps, hidden promises, explicit reveal, separate unpaid/funded contributions and partial family-reported payouts. Its final fictional ledger reconciles $28 earned = $23 own savings + $3 free + $2 reported paid. No provider balance, transfer or real delivery was verified or activated. Native QA found and corrected Hermes BigInt currency formatting while keeping integer ledger arithmetic exact.
+
+R7 verified small/standard/large/tablet viewport overrides, native Back, unsaved writing across live density changes, 200% text after fresh launch, keyboard-open review, editing/simulated Send and appearance persistence. Clean r11 LIGHT checks subsequently verified the full caption, strict tablet/phone roundtrip, exact unsaved writing and native UUIDs using the original Stack. The same run later failed during another workflow and is not an overall both-theme pass. Earlier failures remain preserved. DARK 200% could not be completed: host-rendered PNG corruption was followed by a System UI ANR after a cold SwiftShader boot. The standard Wait action recovered the system, but the root cause is unproven. The later r12 warm-software retry passed the scoped cold-app 200% case in both themes. No corruption/ANR reproduced there, but the earlier root cause remains unproven. This is not hot font-change draft retention or physical-device qualification. Hot font-change draft preservation, complete spoken screen-reader testing, physical-device performance and iOS are not established by those passes.
+
+Source review found sequential references could reveal counts of hidden parent/private activity. R8 replaces them with platform UUIDv4 generation and no counter/timestamp/weak fallback; three unit regressions pass. Clean r11 LIGHT native invocation subsequently produced the expected UUIDv4 reference. Broader native coverage remains separately tracked. Identifiers are record references, never authorization tokens.
+
+The native model setup also corrected slow JavaScript hashing with SDK-native SHA-256 and cleanup that could delete a moved finalized model. Final r5 journal proof demonstrates one fictional accepted example in each theme, not a qualified safety corpus or physical performance benchmark. Underlying IME behavior needs hardware coverage despite the verified app-level mitigation. Remaining nonblocking Home discovery and screenshot framing concerns are documented in visual reports.
+
+The master verified through the GitHub Pages API that the public demo uses the legacy deployment from `main` at the repository root, with no `.github` workflow. The authorized feature-branch push does not change that configured source. Main integration and public release still require owner approval.
+
+The current UI uses fictional Sam/Alex accounts. Domain sibling-isolation tests do not implement production family-member management, authenticated account switching or server-issued child permissions. Real multi-family operation requires the identity and authorization gates above.
+
+The next authorized production step is a reviewed identity/storage design and a synthetic-account authorization spike, alongside physical-device local-model and accessibility validation. Do not collect real children's information or deploy services while these gates remain open.

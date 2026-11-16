@@ -1,0 +1,115 @@
+{
+  "source_head_at_capture": "f65a319731da6dd860b9a49b282be66a69afd98f",
+  "branch": "feature/mobile-foundation",
+  "build_id": "1115-FamilyEnvelopes-Journal-r4",
+  "app_package": "com.oxieg3n.betweenus",
+  "section": "initial-model-setup",
+  "serial": "emulator-5554",
+  "android": "17",
+  "resolution": [
+    1080,
+    2424
+  ],
+  "completed": true,
+  "error": null,
+  "capture_method": "Actual ADB shell screencap -p, adb pull, original unaltered PNG bytes",
+  "screens": [
+    {
+      "file": "spec/qa/journal-intelligence/1115-model-setup-r4-20261115/light/model-setup.png",
+      "theme": "light",
+      "description": "Actual native model setup before any download.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "1bda90b63afb4945befdea5f82415d8b96181d2d5340229b201d6cbd81e441c4",
+      "area": "journal"
+    },
+    {
+      "file": "spec/qa/journal-intelligence/1115-model-setup-r4-20261115/light/download-consent.png",
+      "theme": "light",
+      "description": "Explicit consent for the licensed 369 MiB model; no private text transfer.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "cf8fd3f07658811ba44542f8daad024b4f33b98df8cae4d73dcf1ef93ffbded8",
+      "area": "journal"
+    },
+    {
+      "file": "spec/qa/journal-intelligence/1115-model-setup-r4-20261115/light/model-ready.png",
+      "theme": "light",
+      "description": "Native application verified, downloaded and loaded its optional model.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "f198f88e844388910696041df6a3aa9873720c259e48cf5ce02835adcf361bb4",
+      "area": "journal"
+    }
+  ],
+  "actions": [
+    {
+      "time": "2026-11-16T00:38:17.644284+00:00",
+      "message": "Resetting fictional com.oxieg3n.betweenus process memory for light; appearance storage remains intact."
+    },
+    {
+      "time": "2026-11-16T00:38:40.481756+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T00:38:49.981561+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r4"
+    },
+    {
+      "time": "2026-11-16T00:38:54.066860+00:00",
+      "message": "Tapped: Light mode"
+    },
+    {
+      "time": "2026-11-16T00:38:59.162456+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T00:39:15.793910+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T00:39:25.214613+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r4"
+    },
+    {
+      "time": "2026-11-16T00:39:31.298068+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T00:39:37.382641+00:00",
+      "message": "Tapped: Light mode"
+    },
+    {
+      "time": "2026-11-16T00:39:42.839876+00:00",
+      "message": "Tapped: On-device conversation ideas"
+    },
+    {
+      "time": "2026-11-16T00:39:46.974602+00:00",
+      "message": "Captured light/model-setup.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T00:39:51.762080+00:00",
+      "message": "Tapped: Download & load optional model"
+    },
+    {
+      "time": "2026-11-16T00:39:54.675610+00:00",
+      "message": "Captured light/download-consent.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T00:39:57.587291+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T00:39:57.588568+00:00",
+      "message": "Explicitly requested the pinned model download using the real application control."
+    },
+    {
+      "time": "2026-11-16T00:41:56.414735+00:00",
+      "message": "Verified finalized model file persists after setup cleanup: 386404992 bytes."
+    },
+    {
+      "time": "2026-11-16T00:42:02.838608+00:00",
+      "message": "Captured light/model-ready.png (1080 x 2424)"
+    }
+  ]
+}

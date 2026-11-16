@@ -1,0 +1,83 @@
+{
+  "build_id": "1115-FamilyEnvelopes-Journal-r10",
+  "source_head": "b7760b9f6cc457ef20aa7030d1279f5a9799d23b",
+  "results": [
+    {
+      "case": "light density draft retention",
+      "result": "passed",
+      "interaction": "Typed through native fields before density change and verified identical unsaved text afterward."
+    },
+    {
+      "case": "light tablet responsive",
+      "result": "passed",
+      "pixels": [
+        1920,
+        2560
+      ],
+      "density": 320,
+      "dp": [
+        960,
+        1280
+      ],
+      "navigation": {
+        "Home": [
+          16,
+          334,
+          202,
+          844
+        ],
+        "Journal": [
+          16,
+          880,
+          202,
+          1389
+        ],
+        "Chats": [
+          16,
+          1425,
+          202,
+          1935
+        ],
+        "Circle": [
+          16,
+          1971,
+          202,
+          2480
+        ]
+      },
+      "goal_back": "native Back returned to goal overview",
+      "limitation": "Viewport overrides on one Pixel_10 AVD, not separate physical hardware."
+    },
+    {
+      "case": "light density round trip geometry",
+      "result": "passed",
+      "interaction": "Verified right header edge and lower navigation in tablet and restored phone, without restarting the app."
+    },
+    {
+      "case": "light native opaque references",
+      "result": "passed",
+      "reference": "Reference: local-a0d73231-30ee-440c-9c29-effa9d92b47f",
+      "interaction": "Saved journal, changed parent-only matching settings, created child goal, inspected actual child history UUIDv4."
+    },
+    {
+      "case": "native appearance persistence",
+      "result": "passed",
+      "selection": "Safe Harbor \u00b7 Selected",
+      "interaction": "Verified selected appearance before and after force-stop/relaunch without setting it again."
+    },
+    {
+      "case": "device restoration",
+      "result": "verified restored",
+      "properties": [
+        "size/density",
+        "font_scale"
+      ],
+      "errors": []
+    }
+  ],
+  "original_device_overrides": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "font_scale": "1.0"
+  }
+}

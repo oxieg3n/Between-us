@@ -1,0 +1,25 @@
+{
+  "build_id": "1115-FamilyEnvelopes-Journal-r9",
+  "source_head": "443a2e6cf2e9b43b95f437344504b3be7e41ce39",
+  "results": [
+    {
+      "case": "failure",
+      "result": "failed",
+      "error": "AssertionError: Header does not reach the current viewport's right edge after display change."
+    },
+    {
+      "case": "device restoration",
+      "result": "verified restored",
+      "properties": [
+        "size/density",
+        "font_scale"
+      ],
+      "errors": []
+    }
+  ],
+  "original_device_overrides": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "font_scale": "1.0"
+  }
+}

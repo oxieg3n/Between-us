@@ -1,0 +1,473 @@
+{
+  "source_head_at_capture": "8607573e37dadd66ede3bb368389e0a2531ef6d8",
+  "branch": "feature/mobile-foundation",
+  "app_package": "com.oxieg3n.betweenus",
+  "metro_port": 8082,
+  "android": "17",
+  "emulator": "Pixel_10",
+  "serial": "emulator-5554",
+  "original_resolution": [
+    1080,
+    2424
+  ],
+  "build_id": "1115-FamilyEnvelopes-Journal-r12",
+  "completed": true,
+  "error": null,
+  "capture_method": "Actual ADB shell screencap -p, adb pull, original unaltered PNG bytes",
+  "screens": [
+    {
+      "file": "spec/qa/chores-goals/1116-r12-large-text-warm-software/light/font-200-home.png",
+      "theme": "light",
+      "description": "Actual 200% Android font scale; navigation remains reachable without clipping.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "18964fc76b3a110368a1bd24de52ed434276ef22a3b868e714e985e63a2465bd",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1116-r12-large-text-warm-software/light/font-200-goal.png",
+      "theme": "light",
+      "description": "Actual goal writing/planning controls at 200% system font scale.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "130ea656a8be49495b45a8896fd4762cd26de1a370f9bbfda0258ec0b98ac217",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1116-r12-large-text-warm-software/light/font-200-confirmation-top.png",
+      "theme": "light",
+      "description": "Actual long confirmation dialog at 200% font; content remains scrollable.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "cd2380e61be28cda778a5e01eff1e2ec495e7809326246b8a2c713cf096600d4",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1116-r12-large-text-warm-software/light/font-200-confirmation-action.png",
+      "theme": "light",
+      "description": "Scrolled native modal makes the full Confirm action reachable at 200% font scale.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "cd2380e61be28cda778a5e01eff1e2ec495e7809326246b8a2c713cf096600d4",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1116-r12-large-text-warm-software/light/font-200-confirmation-cancel.png",
+      "theme": "light",
+      "description": "Scrolled native modal makes Cancel fully reachable; no financial rule is changed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "cd2380e61be28cda778a5e01eff1e2ec495e7809326246b8a2c713cf096600d4",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1116-r12-large-text-warm-software/dark/font-200-home.png",
+      "theme": "dark",
+      "description": "Actual 200% Android font scale; navigation remains reachable without clipping.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "2317fb525a7b36bbb9ff006f61d5e65f6778dda8ec487dfa7f03dea815aaa0bb",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1116-r12-large-text-warm-software/dark/font-200-goal.png",
+      "theme": "dark",
+      "description": "Actual goal writing/planning controls at 200% system font scale.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "487e11ce65aac60a220bd73d5f610928aafc13b7d11e725487a884ee2688422b",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1116-r12-large-text-warm-software/dark/font-200-confirmation-top.png",
+      "theme": "dark",
+      "description": "Actual long confirmation dialog at 200% font; content remains scrollable.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "672bdc8823e3723b878c8688a07554d69e4ed4088e4ca3ca28c5506b71a07ff3",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1116-r12-large-text-warm-software/dark/font-200-confirmation-action.png",
+      "theme": "dark",
+      "description": "Scrolled native modal makes the full Confirm action reachable at 200% font scale.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "672bdc8823e3723b878c8688a07554d69e4ed4088e4ca3ca28c5506b71a07ff3",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1116-r12-large-text-warm-software/dark/font-200-confirmation-cancel.png",
+      "theme": "dark",
+      "description": "Scrolled native modal makes Cancel fully reachable; no financial rule is changed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "672bdc8823e3723b878c8688a07554d69e4ed4088e4ca3ca28c5506b71a07ff3",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1116-r12-large-text-warm-software/dark/appearance-after-restart.png",
+      "theme": "dark",
+      "description": "Actual stored appearance selection survived a full native process restart.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "882243c178cad5664f3c4085501b302d74dea6ae1788d2b6fd55f32825eca712",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1116-r12-large-text-warm-software/system/appearance-follow-device.png",
+      "theme": "system",
+      "description": "Returned the demo to its approved Follow Device default through actual settings; actual colors follow the device.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "8972d66e28615f121ef78e60b37af14056786983e6447192a7569d6aa92fd157",
+      "area": "finance"
+    }
+  ],
+  "actions": [
+    {
+      "time": "2026-11-16T07:42:59.007065+00:00",
+      "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+    },
+    {
+      "time": "2026-11-16T07:43:05.232857+00:00",
+      "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+    },
+    {
+      "time": "2026-11-16T07:43:16.118559+00:00",
+      "message": "Tapped: Explore as Sam"
+    },
+    {
+      "time": "2026-11-16T07:43:25.831217+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T07:43:49.146406+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+    },
+    {
+      "time": "2026-11-16T07:43:58.467608+00:00",
+      "message": "Tapped: Light mode"
+    },
+    {
+      "time": "2026-11-16T07:44:03.797645+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T07:44:25.354166+00:00",
+      "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+    },
+    {
+      "time": "2026-11-16T07:44:34.387720+00:00",
+      "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+    },
+    {
+      "time": "2026-11-16T07:44:51.834573+00:00",
+      "message": "Tapped: Explore as Sam"
+    },
+    {
+      "time": "2026-11-16T07:45:01.537111+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T07:45:30.872440+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+    },
+    {
+      "time": "2026-11-16T07:45:40.223525+00:00",
+      "message": "Tapped: Light mode"
+    },
+    {
+      "time": "2026-11-16T07:45:45.344006+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T07:46:09.354771+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T07:46:28.673913+00:00",
+      "message": "Captured light/font-200-home.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T07:46:31.287238+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T07:46:55.874428+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T07:47:06.765069+00:00",
+      "message": "Tapped: Savings goals"
+    },
+    {
+      "time": "2026-11-16T07:47:15.090088+00:00",
+      "message": "Tapped: Open goal: A new video game"
+    },
+    {
+      "time": "2026-11-16T07:47:18.116219+00:00",
+      "message": "Captured light/font-200-goal.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T07:47:31.503030+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T07:47:54.867847+00:00",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-16T07:48:06.933190+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T07:48:31.502559+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T07:48:47.955322+00:00",
+      "message": "Tapped: Savings matching"
+    },
+    {
+      "time": "2026-11-16T07:49:02.138919+00:00",
+      "message": "Tapped: Review matching settings"
+    },
+    {
+      "time": "2026-11-16T07:49:05.150537+00:00",
+      "message": "Captured light/font-200-confirmation-top.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T07:49:07.950599+00:00",
+      "message": "Captured light/font-200-confirmation-action.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T07:49:10.720235+00:00",
+      "message": "Captured light/font-200-confirmation-cancel.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T07:49:13.284125+00:00",
+      "message": "Tapped: Cancel"
+    },
+    {
+      "time": "2026-11-16T07:49:13.772051+00:00",
+      "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+    },
+    {
+      "time": "2026-11-16T07:49:23.178781+00:00",
+      "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+    },
+    {
+      "time": "2026-11-16T07:49:35.183124+00:00",
+      "message": "Tapped: Explore as Sam"
+    },
+    {
+      "time": "2026-11-16T07:49:44.832183+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T07:50:02.385114+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+    },
+    {
+      "time": "2026-11-16T07:50:11.890943+00:00",
+      "message": "Tapped: Light mode"
+    },
+    {
+      "time": "2026-11-16T07:50:17.001332+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T07:50:38.663004+00:00",
+      "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+    },
+    {
+      "time": "2026-11-16T07:50:45.986006+00:00",
+      "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+    },
+    {
+      "time": "2026-11-16T07:50:57.886828+00:00",
+      "message": "Tapped: Explore as Sam"
+    },
+    {
+      "time": "2026-11-16T07:51:08.013630+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T07:51:25.537890+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+    },
+    {
+      "time": "2026-11-16T07:51:34.905066+00:00",
+      "message": "Tapped: Dark mode"
+    },
+    {
+      "time": "2026-11-16T07:51:40.136837+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T07:52:01.568609+00:00",
+      "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+    },
+    {
+      "time": "2026-11-16T07:52:09.570885+00:00",
+      "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+    },
+    {
+      "time": "2026-11-16T07:52:29.046969+00:00",
+      "message": "Tapped: Explore as Sam"
+    },
+    {
+      "time": "2026-11-16T07:52:38.739155+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T07:53:07.391169+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+    },
+    {
+      "time": "2026-11-16T07:53:16.819441+00:00",
+      "message": "Tapped: Dark mode"
+    },
+    {
+      "time": "2026-11-16T07:53:21.893753+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T07:53:45.601307+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T07:54:05.741838+00:00",
+      "message": "Captured dark/font-200-home.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T07:54:08.736284+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T07:54:33.720460+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T07:54:44.700360+00:00",
+      "message": "Tapped: Savings goals"
+    },
+    {
+      "time": "2026-11-16T07:54:53.468326+00:00",
+      "message": "Tapped: Open goal: A new video game"
+    },
+    {
+      "time": "2026-11-16T07:54:56.552482+00:00",
+      "message": "Captured dark/font-200-goal.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T07:55:10.298609+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T07:55:35.162487+00:00",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-16T07:55:47.077522+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T07:56:11.867854+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T07:56:28.338833+00:00",
+      "message": "Tapped: Savings matching"
+    },
+    {
+      "time": "2026-11-16T07:56:48.356830+00:00",
+      "message": "Tapped: Review matching settings"
+    },
+    {
+      "time": "2026-11-16T07:56:51.554862+00:00",
+      "message": "Captured dark/font-200-confirmation-top.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T07:56:54.381060+00:00",
+      "message": "Captured dark/font-200-confirmation-action.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T07:56:57.362680+00:00",
+      "message": "Captured dark/font-200-confirmation-cancel.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T07:56:59.980095+00:00",
+      "message": "Tapped: Cancel"
+    },
+    {
+      "time": "2026-11-16T07:57:00.434566+00:00",
+      "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+    },
+    {
+      "time": "2026-11-16T07:57:08.337213+00:00",
+      "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+    },
+    {
+      "time": "2026-11-16T07:57:22.082798+00:00",
+      "message": "Tapped: Explore as Sam"
+    },
+    {
+      "time": "2026-11-16T07:57:31.843917+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T07:57:49.386978+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+    },
+    {
+      "time": "2026-11-16T07:57:58.814923+00:00",
+      "message": "Tapped: Dark mode"
+    },
+    {
+      "time": "2026-11-16T07:58:03.925190+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T07:58:30.190518+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T07:58:41.938898+00:00",
+      "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+    },
+    {
+      "time": "2026-11-16T07:58:49.501025+00:00",
+      "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+    },
+    {
+      "time": "2026-11-16T07:59:03.521450+00:00",
+      "message": "Tapped: Explore as Sam"
+    },
+    {
+      "time": "2026-11-16T07:59:13.537268+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T07:59:36.889920+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r12"
+    },
+    {
+      "time": "2026-11-16T07:59:46.377701+00:00",
+      "message": "Captured dark/appearance-after-restart.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T07:59:49.450515+00:00",
+      "message": "Tapped: Follow device appearance"
+    },
+    {
+      "time": "2026-11-16T07:59:52.488768+00:00",
+      "message": "Captured system/appearance-follow-device.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T07:59:55.176346+00:00",
+      "message": "Tapped: Home"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "build_id": "1115-FamilyEnvelopes-Journal-r12",
+  "source_head": "8607573e37dadd66ede3bb368389e0a2531ef6d8",
+  "results": [
+    {
+      "case": "light journal editing",
+      "result": "passed",
+      "visible_ime_top": 1541,
+      "interaction": "Typed title/body through native EditText, saved and revisited identical fictional text."
+    },
+    {
+      "case": "light keyboard and review",
+      "result": "passed",
+      "visible_ime_top": 1541,
+      "control_bounds": {
+        "Message draft": [
+          53,
+          1098,
+          767,
+          1298
+        ],
+        "Review": [
+          793,
+          1168,
+          1028,
+          1297
+        ]
+      },
+      "interaction": "Review tapped with IME open; edited, reviewed, simulated, and Android Back returned to Review."
+    },
+    {
+      "case": "dark journal editing",
+      "result": "passed",
+      "visible_ime_top": 1541,
+      "interaction": "Typed title/body through native EditText, saved and revisited identical fictional text."
+    },
+    {
+      "case": "dark keyboard and review",
+      "result": "passed",
+      "visible_ime_top": 1541,
+      "control_bounds": {
+        "Message draft": [
+          53,
+          1098,
+          767,
+          1298
+        ],
+        "Review": [
+          793,
+          1168,
+          1028,
+          1297
+        ]
+      },
+      "interaction": "Review tapped with IME open; edited, reviewed, simulated, and Android Back returned to Review."
+    },
+    {
+      "case": "native appearance persistence",
+      "result": "passed",
+      "selection": "Night Harbor \u00b7 Selected",
+      "interaction": "Verified selected appearance before and after force-stop/relaunch without setting it again."
+    },
+    {
+      "case": "device restoration",
+      "result": "verified restored",
+      "properties": [
+        "size/density",
+        "font_scale"
+      ],
+      "errors": []
+    }
+  ],
+  "original_device_overrides": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "font_scale": "1.0"
+  }
+}

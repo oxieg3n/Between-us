@@ -1,0 +1,327 @@
+{
+  "source_head_at_capture": "b7760b9f6cc457ef20aa7030d1279f5a9799d23b",
+  "branch": "feature/mobile-foundation",
+  "app_package": "com.oxieg3n.betweenus",
+  "metro_port": 8082,
+  "android": "17",
+  "emulator": "Pixel_10",
+  "serial": "emulator-5554",
+  "original_resolution": [
+    1080,
+    2424
+  ],
+  "build_id": "1115-FamilyEnvelopes-Journal-r10",
+  "completed": true,
+  "error": null,
+  "capture_method": "Actual ADB shell screencap -p, adb pull, original unaltered PNG bytes",
+  "screens": [
+    {
+      "file": "spec/qa/chores-goals/1115-native-screen-state-candidate/light/tablet-draft-retained.png",
+      "theme": "light",
+      "description": "Actual unsaved writing survived the live density change; no content persistence was introduced.",
+      "width": 1920,
+      "height": 2560,
+      "sha256": "1718be7e1232ea192833a1f71ff8e13b74eab892cd8c612de24d28662b10bdc9",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-native-screen-state-candidate/light/tablet-home.png",
+      "theme": "light",
+      "description": "Actual single-AVD viewport override; four native navigation destinations remain visible.",
+      "width": 1920,
+      "height": 2560,
+      "sha256": "01c3157f91de2c4cc3f0efa0be2e8cdceeb09c7137a1dd1db632c92c53f76779",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-native-screen-state-candidate/light/tablet-goals.png",
+      "theme": "light",
+      "description": "Actual savings overview at this viewport size; fictional memory-only fixtures.",
+      "width": 1920,
+      "height": 2560,
+      "sha256": "d15fd62129fc8eedaf191d85a5837654f64953e7bb28970e8a59563fb6f90d70",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-native-screen-state-candidate/light/tablet-goal-detail.png",
+      "theme": "light",
+      "description": "Actual nested goal detail before testing the Android Back action.",
+      "width": 1920,
+      "height": 2560,
+      "sha256": "ec418e8521d8a44da69b64c5da427e72775a9966f95b8644eddc63bd9759aa23",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-native-screen-state-candidate/light/tablet-goal-after-back.png",
+      "theme": "light",
+      "description": "Actual Android Back returned from goal detail to the goal overview.",
+      "width": 1920,
+      "height": 2560,
+      "sha256": "895e76525722f2cc91ad6d8904d8e3b16ab895f217fee049581d9a3ef4254365",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-native-screen-state-candidate/light/phone-after-density-return.png",
+      "theme": "light",
+      "description": "Full header and bottom navigation remain within the original phone viewport after returning from tablet density.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "6010b87a89ba0d52fb96483ef54f5f735cff319abd50fb1fd1d33617f866fc86",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-native-screen-state-candidate/light/home-finance-entry-visible.png",
+      "theme": "light",
+      "description": "Actual lower Home viewport with the complete Chores & Goals control above bottom navigation.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "e344e0eba3a0b4477d22b4a176935d77f641dc00b692ef78ce64d83ad00b9199",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-native-screen-state-candidate/light/opaque-child-reference.png",
+      "theme": "light",
+      "description": "Actual native UUID reference after private writing and hidden parent configuration; no activity counter is exposed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "229c15192d444a5bc296c5448154559794a4f41cce72feef2ec29e45540792bd",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-native-screen-state-candidate/light/appearance-after-restart.png",
+      "theme": "light",
+      "description": "Actual stored appearance selection survived a full native process restart.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "b34a1a3ada7b3a127909e819b9dd48de6986d3355ec24d1709a45fc9253c68e7",
+      "area": "finance"
+    },
+    {
+      "file": "spec/qa/chores-goals/1115-native-screen-state-candidate/system/appearance-follow-device.png",
+      "theme": "system",
+      "description": "Returned the demo to its approved Follow Device default through actual settings; actual colors follow the device.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "1400b8826719f3f1a3d9c66a5f64f7e406f7f54876ab036a5260058703e675f6",
+      "area": "finance"
+    }
+  ],
+  "actions": [
+    {
+      "time": "2026-11-16T04:20:59.752590+00:00",
+      "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+    },
+    {
+      "time": "2026-11-16T04:21:03.163916+00:00",
+      "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+    },
+    {
+      "time": "2026-11-16T04:21:27.911758+00:00",
+      "message": "Tapped: Explore as Sam"
+    },
+    {
+      "time": "2026-11-16T04:21:39.314005+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T04:21:53.697840+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r10"
+    },
+    {
+      "time": "2026-11-16T04:21:58.341660+00:00",
+      "message": "Tapped: Light mode"
+    },
+    {
+      "time": "2026-11-16T04:22:03.318179+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T04:22:15.311226+00:00",
+      "message": "Tapped: Journal"
+    },
+    {
+      "time": "2026-11-16T04:22:18.289232+00:00",
+      "message": "Tapped: New entry"
+    },
+    {
+      "time": "2026-11-16T04:22:40.798375+00:00",
+      "message": "Filled fictional field: Entry title"
+    },
+    {
+      "time": "2026-11-16T04:23:09.772524+00:00",
+      "message": "Filled fictional field: Your private demo words"
+    },
+    {
+      "time": "2026-11-16T04:23:32.136700+00:00",
+      "message": "Full tablet geometry stable across two samples (2 total)."
+    },
+    {
+      "time": "2026-11-16T04:23:38.986656+00:00",
+      "message": "Captured light/tablet-draft-retained.png (1920 x 2560)"
+    },
+    {
+      "time": "2026-11-16T04:23:42.069373+00:00",
+      "message": "Tapped: Save entry"
+    },
+    {
+      "time": "2026-11-16T04:23:47.819632+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T04:23:54.960453+00:00",
+      "message": "Captured light/tablet-home.png (1920 x 2560)"
+    },
+    {
+      "time": "2026-11-16T04:23:57.559638+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T04:24:03.767200+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T04:24:08.898181+00:00",
+      "message": "Tapped: Savings goals"
+    },
+    {
+      "time": "2026-11-16T04:24:15.208684+00:00",
+      "message": "Captured light/tablet-goals.png (1920 x 2560)"
+    },
+    {
+      "time": "2026-11-16T04:24:17.776838+00:00",
+      "message": "Tapped: Open goal: A new video game"
+    },
+    {
+      "time": "2026-11-16T04:24:23.838236+00:00",
+      "message": "Captured light/tablet-goal-detail.png (1920 x 2560)"
+    },
+    {
+      "time": "2026-11-16T04:24:29.797091+00:00",
+      "message": "Captured light/tablet-goal-after-back.png (1920 x 2560)"
+    },
+    {
+      "time": "2026-11-16T04:24:46.063402+00:00",
+      "message": "Full phone geometry stable across two samples (2 total)."
+    },
+    {
+      "time": "2026-11-16T04:24:47.127703+00:00",
+      "message": "Captured light/phone-after-density-return.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T04:24:49.940214+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T04:25:00.001988+00:00",
+      "message": "Captured light/home-finance-entry-visible.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T04:25:05.347588+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T04:25:16.474929+00:00",
+      "message": "Tapped: Switch to parent demo"
+    },
+    {
+      "time": "2026-11-16T04:25:23.624107+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T04:25:30.656737+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T04:25:39.510169+00:00",
+      "message": "Tapped: Savings matching"
+    },
+    {
+      "time": "2026-11-16T04:25:49.423444+00:00",
+      "message": "Tapped: Review matching settings"
+    },
+    {
+      "time": "2026-11-16T04:25:53.331466+00:00",
+      "message": "Tapped: Confirm"
+    },
+    {
+      "time": "2026-11-16T04:26:30.170725+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T04:26:41.166340+00:00",
+      "message": "Tapped: Switch to child demo"
+    },
+    {
+      "time": "2026-11-16T04:26:49.037508+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T04:26:56.050522+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T04:27:01.192309+00:00",
+      "message": "Tapped: Savings goals"
+    },
+    {
+      "time": "2026-11-16T04:27:04.172199+00:00",
+      "message": "Tapped: Create a savings goal"
+    },
+    {
+      "time": "2026-11-16T04:27:23.040922+00:00",
+      "message": "Filled fictional field: Goal name"
+    },
+    {
+      "time": "2026-11-16T04:27:25.695623+00:00",
+      "message": "Tapped: Save new goal"
+    },
+    {
+      "time": "2026-11-16T04:27:37.832973+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T04:27:45.022575+00:00",
+      "message": "Tapped: Chores & Goals"
+    },
+    {
+      "time": "2026-11-16T04:27:53.957909+00:00",
+      "message": "Tapped: Financial history"
+    },
+    {
+      "time": "2026-11-16T04:27:57.703584+00:00",
+      "message": "Captured light/opaque-child-reference.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T04:28:03.077818+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T04:28:10.040477+00:00",
+      "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+    },
+    {
+      "time": "2026-11-16T04:28:37.567224+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T04:28:51.827362+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r10"
+    },
+    {
+      "time": "2026-11-16T04:28:57.771515+00:00",
+      "message": "Captured light/appearance-after-restart.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T04:29:00.382010+00:00",
+      "message": "Tapped: Follow device appearance"
+    },
+    {
+      "time": "2026-11-16T04:29:03.797964+00:00",
+      "message": "Captured system/appearance-follow-device.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T04:29:06.436231+00:00",
+      "message": "Tapped: Home"
+    }
+  ]
+}

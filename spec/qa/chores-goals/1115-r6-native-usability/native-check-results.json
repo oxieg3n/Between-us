@@ -1,0 +1,148 @@
+{
+  "build_id": "1115-FamilyEnvelopes-Journal-r6",
+  "source_head": "1f3ac9948e766d98d5a25026758918abc751487f",
+  "results": [
+    {
+      "case": "light small responsive",
+      "result": "passed",
+      "pixels": [
+        840,
+        1680
+      ],
+      "density": 420,
+      "dp": [
+        320,
+        640
+      ],
+      "navigation": {
+        "Home": [
+          21,
+          1428,
+          213,
+          1596
+        ],
+        "Journal": [
+          223,
+          1428,
+          415,
+          1596
+        ],
+        "Chats": [
+          425,
+          1428,
+          617,
+          1596
+        ],
+        "Circle": [
+          627,
+          1428,
+          819,
+          1596
+        ]
+      },
+      "goal_back": "native Back returned to goal overview",
+      "limitation": "Viewport overrides on one Pixel_10 AVD, not separate physical hardware."
+    },
+    {
+      "case": "light standard responsive",
+      "result": "passed",
+      "pixels": [
+        1080,
+        2424
+      ],
+      "density": 420,
+      "dp": [
+        411,
+        923
+      ],
+      "navigation": {
+        "Home": [
+          21,
+          2172,
+          273,
+          2340
+        ],
+        "Journal": [
+          283,
+          2172,
+          535,
+          2340
+        ],
+        "Chats": [
+          545,
+          2172,
+          797,
+          2340
+        ],
+        "Circle": [
+          807,
+          2172,
+          1059,
+          2340
+        ]
+      },
+      "goal_back": "native Back returned to goal overview",
+      "limitation": "Viewport overrides on one Pixel_10 AVD, not separate physical hardware."
+    },
+    {
+      "case": "light large responsive",
+      "result": "passed",
+      "pixels": [
+        1260,
+        2730
+      ],
+      "density": 420,
+      "dp": [
+        480,
+        1040
+      ],
+      "navigation": {
+        "Home": [
+          21,
+          2478,
+          318,
+          2646
+        ],
+        "Journal": [
+          328,
+          2478,
+          625,
+          2646
+        ],
+        "Chats": [
+          635,
+          2478,
+          932,
+          2646
+        ],
+        "Circle": [
+          942,
+          2478,
+          1239,
+          2646
+        ]
+      },
+      "goal_back": "native Back returned to goal overview",
+      "limitation": "Viewport overrides on one Pixel_10 AVD, not separate physical hardware."
+    },
+    {
+      "case": "failure",
+      "result": "failed",
+      "error": "RuntimeError: Native control/text not found: Home"
+    },
+    {
+      "case": "device restoration",
+      "result": "verified restored",
+      "properties": [
+        "size/density",
+        "font_scale"
+      ],
+      "errors": []
+    }
+  ],
+  "original_device_overrides": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "font_scale": "1.0"
+  }
+}

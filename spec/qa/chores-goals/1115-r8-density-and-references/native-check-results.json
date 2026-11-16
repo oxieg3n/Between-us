@@ -1,0 +1,71 @@
+{
+  "build_id": "1115-FamilyEnvelopes-Journal-r8",
+  "source_head": "1b20fbb188d05cc11dcbacab62b0861b0af29786",
+  "results": [
+    {
+      "case": "light density draft retention",
+      "result": "passed",
+      "interaction": "Typed through native fields before density change and verified identical unsaved text afterward."
+    },
+    {
+      "case": "light tablet responsive",
+      "result": "passed",
+      "pixels": [
+        1920,
+        2560
+      ],
+      "density": 320,
+      "dp": [
+        960,
+        1280
+      ],
+      "navigation": {
+        "Home": [
+          16,
+          334,
+          202,
+          691
+        ],
+        "Journal": [
+          16,
+          727,
+          202,
+          1084
+        ],
+        "Chats": [
+          16,
+          1120,
+          202,
+          1477
+        ],
+        "Circle": [
+          16,
+          1513,
+          202,
+          1870
+        ]
+      },
+      "goal_back": "native Back returned to goal overview",
+      "limitation": "Viewport overrides on one Pixel_10 AVD, not separate physical hardware."
+    },
+    {
+      "case": "failure",
+      "result": "failed",
+      "error": "RuntimeError: Native control/text not found: Home"
+    },
+    {
+      "case": "device restoration",
+      "result": "verified restored",
+      "properties": [
+        "size/density",
+        "font_scale"
+      ],
+      "errors": []
+    }
+  ],
+  "original_device_overrides": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "font_scale": "1.0"
+  }
+}

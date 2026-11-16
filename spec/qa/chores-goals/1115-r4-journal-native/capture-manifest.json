@@ -1,0 +1,106 @@
+{
+  "source_head_at_capture": "193b1bb04f5db2a0b06756aad218c514136e4450",
+  "branch": "feature/mobile-foundation",
+  "canonical_root": "D:\\Projects\\BetweenUs",
+  "tracked_source_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "tracked_source_dirty": false,
+  "serial": "emulator-5554",
+  "app_package": "com.oxieg3n.betweenus",
+  "metro_port": 8082,
+  "local_model_requested": true,
+  "emulator": "Pixel_10",
+  "model": "sdk_gphone16k_x86_64",
+  "android": "17",
+  "resolution": [
+    1080,
+    2424
+  ],
+  "density": "Physical density: 420",
+  "section": "journal",
+  "build_id": "1115-FamilyEnvelopes-Journal-r4",
+  "completed": false,
+  "error": "AssertionError: Native field did not retain expected fictional value: Entry title",
+  "capture_method": "Actual ADB shell screencap -p, adb pull, original unaltered PNG bytes",
+  "screens": [
+    {
+      "file": "spec/qa/journal-intelligence/1115-r4-journal-native/light/optional-model-loaded.png",
+      "theme": "light",
+      "description": "Actual app setup reports the previously downloaded model loaded; this is not a physical-device validation claim.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "e5dc9ace2b463d8422c375eb31a4cc9e24701f90981b014105d0c8c9afa0e4d3",
+      "area": "journal"
+    },
+    {
+      "file": "spec/qa/journal-intelligence/1115-r4-journal-native/light/journal-overview.png",
+      "theme": "light",
+      "description": "Child's private fictional journal overview in the actual app.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "6b00fd8df04c094bd8c8de7d66cee52951ab135aab95253a017cf568b341e76f",
+      "area": "journal"
+    }
+  ],
+  "actions": [
+    {
+      "time": "2026-11-16T00:43:37.748442+00:00",
+      "message": "Native mission capture: 1115-FamilyEnvelopes-Journal-r4; feature/mobile-foundation; HEAD 193b1bb04f5db2a0b06756aad218c514136e4450; 1080x2424"
+    },
+    {
+      "time": "2026-11-16T00:43:37.749552+00:00",
+      "message": "Resetting fictional com.oxieg3n.betweenus process memory for light; appearance storage remains intact."
+    },
+    {
+      "time": "2026-11-16T00:44:08.612367+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T00:44:18.673868+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r4"
+    },
+    {
+      "time": "2026-11-16T00:44:22.497948+00:00",
+      "message": "Tapped: Light mode"
+    },
+    {
+      "time": "2026-11-16T00:44:27.368096+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T00:44:40.105436+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T00:44:49.084131+00:00",
+      "message": "Tapped: On-device conversation ideas"
+    },
+    {
+      "time": "2026-11-16T00:44:53.853511+00:00",
+      "message": "Tapped: Load downloaded model"
+    },
+    {
+      "time": "2026-11-16T00:45:06.395839+00:00",
+      "message": "Captured light/optional-model-loaded.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T00:45:28.804943+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T00:45:55.587298+00:00",
+      "message": "Tapped: Journal"
+    },
+    {
+      "time": "2026-11-16T00:46:06.086723+00:00",
+      "message": "Captured light/journal-overview.png (1080 x 2424)"
+    },
+    {
+      "time": "2026-11-16T00:46:24.491232+00:00",
+      "message": "Tapped: New entry"
+    },
+    {
+      "time": "2026-11-16T00:47:51.560807+00:00",
+      "message": "CAPTURE FAILED: AssertionError: Native field did not retain expected fictional value: Entry title"
+    }
+  ]
+}

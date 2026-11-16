@@ -1,0 +1,46 @@
+{
+  "build_id": "1115-FamilyEnvelopes-Journal-r12",
+  "source_head": "8607573e37dadd66ede3bb368389e0a2531ef6d8",
+  "results": [
+    {
+      "case": "light child bidirectional block",
+      "result": "passed",
+      "interaction": "Blocked through Circle, changed demo role, checked disabled composer/Review and schedule, then prepared words for another safe adult."
+    },
+    {
+      "case": "light parent bidirectional block",
+      "result": "passed",
+      "interaction": "Blocked through Circle, changed demo role, checked disabled composer/Review and schedule, then prepared words for another safe adult."
+    },
+    {
+      "case": "dark child bidirectional block",
+      "result": "passed",
+      "interaction": "Blocked through Circle, changed demo role, checked disabled composer/Review and schedule, then prepared words for another safe adult."
+    },
+    {
+      "case": "dark parent bidirectional block",
+      "result": "passed",
+      "interaction": "Blocked through Circle, changed demo role, checked disabled composer/Review and schedule, then prepared words for another safe adult."
+    },
+    {
+      "case": "native appearance persistence",
+      "result": "passed",
+      "selection": "Night Harbor \u00b7 Selected",
+      "interaction": "Verified selected appearance before and after force-stop/relaunch without setting it again."
+    },
+    {
+      "case": "device restoration",
+      "result": "verified restored",
+      "properties": [
+        "size/density",
+        "font_scale"
+      ],
+      "errors": []
+    }
+  ],
+  "original_device_overrides": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "font_scale": "1.0"
+  }
+}

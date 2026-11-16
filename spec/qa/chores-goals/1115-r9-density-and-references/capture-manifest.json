@@ -1,0 +1,64 @@
+{
+  "source_head_at_capture": "443a2e6cf2e9b43b95f437344504b3be7e41ce39",
+  "branch": "feature/mobile-foundation",
+  "app_package": "com.oxieg3n.betweenus",
+  "metro_port": 8082,
+  "android": "17",
+  "emulator": "Pixel_10",
+  "serial": "emulator-5554",
+  "original_resolution": [
+    1080,
+    2424
+  ],
+  "build_id": "1115-FamilyEnvelopes-Journal-r9",
+  "completed": false,
+  "error": "AssertionError: Header does not reach the current viewport's right edge after display change.",
+  "capture_method": "Actual ADB shell screencap -p, adb pull, original unaltered PNG bytes",
+  "screens": [],
+  "actions": [
+    {
+      "time": "2026-11-16T03:46:36.612906+00:00",
+      "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+    },
+    {
+      "time": "2026-11-16T03:46:40.337058+00:00",
+      "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+    },
+    {
+      "time": "2026-11-16T03:47:07.859796+00:00",
+      "message": "Tapped: Explore as Sam"
+    },
+    {
+      "time": "2026-11-16T03:47:18.972177+00:00",
+      "message": "Tapped: Profile & settings"
+    },
+    {
+      "time": "2026-11-16T03:47:33.790800+00:00",
+      "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r9"
+    },
+    {
+      "time": "2026-11-16T03:47:38.504837+00:00",
+      "message": "Tapped: Light mode"
+    },
+    {
+      "time": "2026-11-16T03:47:44.255744+00:00",
+      "message": "Tapped: Home"
+    },
+    {
+      "time": "2026-11-16T03:47:56.612216+00:00",
+      "message": "Tapped: Journal"
+    },
+    {
+      "time": "2026-11-16T03:47:59.582366+00:00",
+      "message": "Tapped: New entry"
+    },
+    {
+      "time": "2026-11-16T03:48:19.049619+00:00",
+      "message": "Filled fictional field: Entry title"
+    },
+    {
+      "time": "2026-11-16T03:48:47.033597+00:00",
+      "message": "Filled fictional field: Your private demo words"
+    }
+  ]
+}

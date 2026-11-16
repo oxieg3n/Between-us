@@ -1,0 +1,222 @@
+[
+  {
+    "time": "2026-11-16T04:20:59.752590+00:00",
+    "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+  },
+  {
+    "time": "2026-11-16T04:21:03.163916+00:00",
+    "message": "Waiting for the native application to finish loading its tested bundle\u2026"
+  },
+  {
+    "time": "2026-11-16T04:21:27.911758+00:00",
+    "message": "Tapped: Explore as Sam"
+  },
+  {
+    "time": "2026-11-16T04:21:39.314005+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T04:21:53.697840+00:00",
+    "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r10"
+  },
+  {
+    "time": "2026-11-16T04:21:58.341660+00:00",
+    "message": "Tapped: Light mode"
+  },
+  {
+    "time": "2026-11-16T04:22:03.318179+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:22:15.311226+00:00",
+    "message": "Tapped: Journal"
+  },
+  {
+    "time": "2026-11-16T04:22:18.289232+00:00",
+    "message": "Tapped: New entry"
+  },
+  {
+    "time": "2026-11-16T04:22:40.798375+00:00",
+    "message": "Filled fictional field: Entry title"
+  },
+  {
+    "time": "2026-11-16T04:23:09.772524+00:00",
+    "message": "Filled fictional field: Your private demo words"
+  },
+  {
+    "time": "2026-11-16T04:23:32.136700+00:00",
+    "message": "Full tablet geometry stable across two samples (2 total)."
+  },
+  {
+    "time": "2026-11-16T04:23:38.986656+00:00",
+    "message": "Captured light/tablet-draft-retained.png (1920 x 2560)"
+  },
+  {
+    "time": "2026-11-16T04:23:42.069373+00:00",
+    "message": "Tapped: Save entry"
+  },
+  {
+    "time": "2026-11-16T04:23:47.819632+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:23:54.960453+00:00",
+    "message": "Captured light/tablet-home.png (1920 x 2560)"
+  },
+  {
+    "time": "2026-11-16T04:23:57.559638+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:24:03.767200+00:00",
+    "message": "Tapped: Chores & Goals"
+  },
+  {
+    "time": "2026-11-16T04:24:08.898181+00:00",
+    "message": "Tapped: Savings goals"
+  },
+  {
+    "time": "2026-11-16T04:24:15.208684+00:00",
+    "message": "Captured light/tablet-goals.png (1920 x 2560)"
+  },
+  {
+    "time": "2026-11-16T04:24:17.776838+00:00",
+    "message": "Tapped: Open goal: A new video game"
+  },
+  {
+    "time": "2026-11-16T04:24:23.838236+00:00",
+    "message": "Captured light/tablet-goal-detail.png (1920 x 2560)"
+  },
+  {
+    "time": "2026-11-16T04:24:29.797091+00:00",
+    "message": "Captured light/tablet-goal-after-back.png (1920 x 2560)"
+  },
+  {
+    "time": "2026-11-16T04:24:46.063402+00:00",
+    "message": "Full phone geometry stable across two samples (2 total)."
+  },
+  {
+    "time": "2026-11-16T04:24:47.127703+00:00",
+    "message": "Captured light/phone-after-density-return.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T04:24:49.940214+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:25:00.001988+00:00",
+    "message": "Captured light/home-finance-entry-visible.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T04:25:05.347588+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T04:25:16.474929+00:00",
+    "message": "Tapped: Switch to parent demo"
+  },
+  {
+    "time": "2026-11-16T04:25:23.624107+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:25:30.656737+00:00",
+    "message": "Tapped: Chores & Goals"
+  },
+  {
+    "time": "2026-11-16T04:25:39.510169+00:00",
+    "message": "Tapped: Savings matching"
+  },
+  {
+    "time": "2026-11-16T04:25:49.423444+00:00",
+    "message": "Tapped: Review matching settings"
+  },
+  {
+    "time": "2026-11-16T04:25:53.331466+00:00",
+    "message": "Tapped: Confirm"
+  },
+  {
+    "time": "2026-11-16T04:26:30.170725+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T04:26:41.166340+00:00",
+    "message": "Tapped: Switch to child demo"
+  },
+  {
+    "time": "2026-11-16T04:26:49.037508+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:26:56.050522+00:00",
+    "message": "Tapped: Chores & Goals"
+  },
+  {
+    "time": "2026-11-16T04:27:01.192309+00:00",
+    "message": "Tapped: Savings goals"
+  },
+  {
+    "time": "2026-11-16T04:27:04.172199+00:00",
+    "message": "Tapped: Create a savings goal"
+  },
+  {
+    "time": "2026-11-16T04:27:23.040922+00:00",
+    "message": "Filled fictional field: Goal name"
+  },
+  {
+    "time": "2026-11-16T04:27:25.695623+00:00",
+    "message": "Tapped: Save new goal"
+  },
+  {
+    "time": "2026-11-16T04:27:37.832973+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:27:45.022575+00:00",
+    "message": "Tapped: Chores & Goals"
+  },
+  {
+    "time": "2026-11-16T04:27:53.957909+00:00",
+    "message": "Tapped: Financial history"
+  },
+  {
+    "time": "2026-11-16T04:27:57.703584+00:00",
+    "message": "Captured light/opaque-child-reference.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T04:28:03.077818+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T04:28:10.040477+00:00",
+    "message": "Restarting fictional com.oxieg3n.betweenus process memory; appearance storage remains intact."
+  },
+  {
+    "time": "2026-11-16T04:28:37.567224+00:00",
+    "message": "Tapped: Profile & settings"
+  },
+  {
+    "time": "2026-11-16T04:28:51.827362+00:00",
+    "message": "Verified native Settings build: 1115-FamilyEnvelopes-Journal-r10"
+  },
+  {
+    "time": "2026-11-16T04:28:57.771515+00:00",
+    "message": "Captured light/appearance-after-restart.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T04:29:00.382010+00:00",
+    "message": "Tapped: Follow device appearance"
+  },
+  {
+    "time": "2026-11-16T04:29:03.797964+00:00",
+    "message": "Captured system/appearance-follow-device.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T04:29:06.436231+00:00",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T04:29:13.268185+00:00",
+    "message": "Native mission checks passed. Evidence: D:\\Projects\\BetweenUs\\spec\\qa\\chores-goals\\1115-native-screen-state-candidate"
+  }
+]

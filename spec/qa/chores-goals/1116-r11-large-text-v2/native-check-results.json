@@ -1,0 +1,25 @@
+{
+  "build_id": "1115-FamilyEnvelopes-Journal-r11",
+  "source_head": "fb4cdf9c973fa89c1e95dc16a6cc21bafcdb1a5d",
+  "results": [
+    {
+      "case": "failure",
+      "result": "failed",
+      "error": "RuntimeError: Fresh native UI snapshot unavailable; no stale coordinates used."
+    },
+    {
+      "case": "device restoration",
+      "result": "verified restored",
+      "properties": [
+        "size/density",
+        "font_scale"
+      ],
+      "errors": []
+    }
+  ],
+  "original_device_overrides": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "font_scale": "1.0"
+  }
+}

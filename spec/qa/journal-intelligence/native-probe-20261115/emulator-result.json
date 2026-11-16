@@ -1,0 +1,18 @@
+{
+  "platform": "Android x86_64 emulator; NOT physical hardware",
+  "cold_ms": 5691,
+  "runs": [
+    {
+      "ms": 1448,
+      "text": "{\n  \"draft\": \"I won an award today and would like to tell someone.\"\n}"
+    },
+    {
+      "ms": 800,
+      "text": "{\n  \"draft\": \"I won an award today and would like to tell someone.\"\n}"
+    },
+    {
+      "ms": 726,
+      "text": "{\n  \"draft\": \"I won an award today and would like to tell someone.\"\n}"
+    }
+  ]
+}

@@ -1,0 +1,502 @@
+{
+  "build_id": "1115-FamilyEnvelopes-Journal-r7",
+  "source_head": "8c89c899ada444dcb4a543a377f780e9b61db0ed",
+  "results": [
+    {
+      "case": "light small responsive",
+      "result": "passed",
+      "pixels": [
+        840,
+        1680
+      ],
+      "density": 420,
+      "dp": [
+        320,
+        640
+      ],
+      "navigation": {
+        "Home": [
+          21,
+          1428,
+          213,
+          1596
+        ],
+        "Journal": [
+          223,
+          1428,
+          415,
+          1596
+        ],
+        "Chats": [
+          425,
+          1428,
+          617,
+          1596
+        ],
+        "Circle": [
+          627,
+          1428,
+          819,
+          1596
+        ]
+      },
+      "goal_back": "native Back returned to goal overview",
+      "limitation": "Viewport overrides on one Pixel_10 AVD, not separate physical hardware."
+    },
+    {
+      "case": "light standard responsive",
+      "result": "passed",
+      "pixels": [
+        1080,
+        2424
+      ],
+      "density": 420,
+      "dp": [
+        411,
+        923
+      ],
+      "navigation": {
+        "Home": [
+          21,
+          2172,
+          273,
+          2340
+        ],
+        "Journal": [
+          283,
+          2172,
+          535,
+          2340
+        ],
+        "Chats": [
+          545,
+          2172,
+          797,
+          2340
+        ],
+        "Circle": [
+          807,
+          2172,
+          1059,
+          2340
+        ]
+      },
+      "goal_back": "native Back returned to goal overview",
+      "limitation": "Viewport overrides on one Pixel_10 AVD, not separate physical hardware."
+    },
+    {
+      "case": "light large responsive",
+      "result": "passed",
+      "pixels": [
+        1260,
+        2730
+      ],
+      "density": 420,
+      "dp": [
+        480,
+        1040
+      ],
+      "navigation": {
+        "Home": [
+          21,
+          2478,
+          318,
+          2646
+        ],
+        "Journal": [
+          328,
+          2478,
+          625,
+          2646
+        ],
+        "Chats": [
+          635,
+          2478,
+          932,
+          2646
+        ],
+        "Circle": [
+          942,
+          2478,
+          1239,
+          2646
+        ]
+      },
+      "goal_back": "native Back returned to goal overview",
+      "limitation": "Viewport overrides on one Pixel_10 AVD, not separate physical hardware."
+    },
+    {
+      "case": "light density draft retention",
+      "result": "passed",
+      "interaction": "Typed through native fields before density change and verified identical unsaved text afterward."
+    },
+    {
+      "case": "light tablet responsive",
+      "result": "passed",
+      "pixels": [
+        1920,
+        2560
+      ],
+      "density": 320,
+      "dp": [
+        960,
+        1280
+      ],
+      "navigation": {
+        "Home": [
+          16,
+          334,
+          202,
+          844
+        ],
+        "Journal": [
+          16,
+          880,
+          202,
+          1389
+        ],
+        "Chats": [
+          16,
+          1425,
+          202,
+          1935
+        ],
+        "Circle": [
+          16,
+          1971,
+          202,
+          2480
+        ]
+      },
+      "goal_back": "native Back returned to goal overview",
+      "limitation": "Viewport overrides on one Pixel_10 AVD, not separate physical hardware."
+    },
+    {
+      "case": "light font scale 200%",
+      "result": "passed",
+      "navigation": {
+        "Home": [
+          21,
+          2172,
+          273,
+          2340
+        ],
+        "Journal": [
+          283,
+          2172,
+          535,
+          2340
+        ],
+        "Chats": [
+          545,
+          2172,
+          797,
+          2340
+        ],
+        "Circle": [
+          807,
+          2172,
+          1059,
+          2340
+        ]
+      },
+      "confirm_bounds": [
+        129,
+        1625,
+        951,
+        1787
+      ],
+      "cancel_bounds": [
+        129,
+        1840,
+        951,
+        2002
+      ],
+      "interaction": "Scrolled confirmation and cancelled without saving settings."
+    },
+    {
+      "case": "light journal editing",
+      "result": "passed",
+      "visible_ime_top": 1541,
+      "interaction": "Typed title/body through native EditText, saved and revisited identical fictional text."
+    },
+    {
+      "case": "light keyboard and review",
+      "result": "passed",
+      "visible_ime_top": 1541,
+      "control_bounds": {
+        "Message draft": [
+          53,
+          1098,
+          767,
+          1298
+        ],
+        "Review": [
+          793,
+          1168,
+          1028,
+          1297
+        ]
+      },
+      "interaction": "Review tapped with IME open; edited, reviewed, simulated, and Android Back returned to Review."
+    },
+    {
+      "case": "dark small responsive",
+      "result": "passed",
+      "pixels": [
+        840,
+        1680
+      ],
+      "density": 420,
+      "dp": [
+        320,
+        640
+      ],
+      "navigation": {
+        "Home": [
+          21,
+          1428,
+          213,
+          1596
+        ],
+        "Journal": [
+          223,
+          1428,
+          415,
+          1596
+        ],
+        "Chats": [
+          425,
+          1428,
+          617,
+          1596
+        ],
+        "Circle": [
+          627,
+          1428,
+          819,
+          1596
+        ]
+      },
+      "goal_back": "native Back returned to goal overview",
+      "limitation": "Viewport overrides on one Pixel_10 AVD, not separate physical hardware."
+    },
+    {
+      "case": "dark standard responsive",
+      "result": "passed",
+      "pixels": [
+        1080,
+        2424
+      ],
+      "density": 420,
+      "dp": [
+        411,
+        923
+      ],
+      "navigation": {
+        "Home": [
+          21,
+          2172,
+          273,
+          2340
+        ],
+        "Journal": [
+          283,
+          2172,
+          535,
+          2340
+        ],
+        "Chats": [
+          545,
+          2172,
+          797,
+          2340
+        ],
+        "Circle": [
+          807,
+          2172,
+          1059,
+          2340
+        ]
+      },
+      "goal_back": "native Back returned to goal overview",
+      "limitation": "Viewport overrides on one Pixel_10 AVD, not separate physical hardware."
+    },
+    {
+      "case": "dark large responsive",
+      "result": "passed",
+      "pixels": [
+        1260,
+        2730
+      ],
+      "density": 420,
+      "dp": [
+        480,
+        1040
+      ],
+      "navigation": {
+        "Home": [
+          21,
+          2478,
+          318,
+          2646
+        ],
+        "Journal": [
+          328,
+          2478,
+          625,
+          2646
+        ],
+        "Chats": [
+          635,
+          2478,
+          932,
+          2646
+        ],
+        "Circle": [
+          942,
+          2478,
+          1239,
+          2646
+        ]
+      },
+      "goal_back": "native Back returned to goal overview",
+      "limitation": "Viewport overrides on one Pixel_10 AVD, not separate physical hardware."
+    },
+    {
+      "case": "dark density draft retention",
+      "result": "passed",
+      "interaction": "Typed through native fields before density change and verified identical unsaved text afterward."
+    },
+    {
+      "case": "dark tablet responsive",
+      "result": "passed",
+      "pixels": [
+        1920,
+        2560
+      ],
+      "density": 320,
+      "dp": [
+        960,
+        1280
+      ],
+      "navigation": {
+        "Home": [
+          16,
+          334,
+          202,
+          844
+        ],
+        "Journal": [
+          16,
+          880,
+          202,
+          1389
+        ],
+        "Chats": [
+          16,
+          1425,
+          202,
+          1935
+        ],
+        "Circle": [
+          16,
+          1971,
+          202,
+          2480
+        ]
+      },
+      "goal_back": "native Back returned to goal overview",
+      "limitation": "Viewport overrides on one Pixel_10 AVD, not separate physical hardware."
+    },
+    {
+      "case": "dark font scale 200%",
+      "result": "passed",
+      "navigation": {
+        "Home": [
+          21,
+          2172,
+          273,
+          2340
+        ],
+        "Journal": [
+          283,
+          2172,
+          535,
+          2340
+        ],
+        "Chats": [
+          545,
+          2172,
+          797,
+          2340
+        ],
+        "Circle": [
+          807,
+          2172,
+          1059,
+          2340
+        ]
+      },
+      "confirm_bounds": [
+        129,
+        1625,
+        951,
+        1787
+      ],
+      "cancel_bounds": [
+        129,
+        1840,
+        951,
+        2002
+      ],
+      "interaction": "Scrolled confirmation and cancelled without saving settings."
+    },
+    {
+      "case": "dark journal editing",
+      "result": "passed",
+      "visible_ime_top": 1541,
+      "interaction": "Typed title/body through native EditText, saved and revisited identical fictional text."
+    },
+    {
+      "case": "dark keyboard and review",
+      "result": "passed",
+      "visible_ime_top": 1541,
+      "control_bounds": {
+        "Message draft": [
+          53,
+          1098,
+          767,
+          1298
+        ],
+        "Review": [
+          793,
+          1168,
+          1028,
+          1297
+        ]
+      },
+      "interaction": "Review tapped with IME open; edited, reviewed, simulated, and Android Back returned to Review."
+    },
+    {
+      "case": "native appearance persistence",
+      "result": "passed",
+      "selection": "Night Harbor \u00b7 Selected",
+      "interaction": "Verified selected appearance before and after force-stop/relaunch without setting it again."
+    },
+    {
+      "case": "device restoration",
+      "result": "verified restored",
+      "properties": [
+        "size/density",
+        "font_scale"
+      ],
+      "errors": []
+    }
+  ],
+  "original_device_overrides": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "font_scale": "1.0"
+  }
+}

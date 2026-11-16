@@ -1,0 +1,25 @@
+{
+  "build_id": "1115-FamilyEnvelopes-Journal-r11",
+  "source_head": "4442c4858d79ed07ca0ce776aeb6ab6b0b0231f5",
+  "results": [
+    {
+      "case": "failure",
+      "result": "failed",
+      "error": "RuntimeError: Between Us did not reach its native header within the startup wait."
+    },
+    {
+      "case": "device restoration",
+      "result": "verified restored",
+      "properties": [
+        "size/density",
+        "font_scale"
+      ],
+      "errors": []
+    }
+  ],
+  "original_device_overrides": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "font_scale": "1.0"
+  }
+}
