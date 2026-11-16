@@ -5,11 +5,11 @@
 | Item | Baseline / approved decision |
 | --- | --- |
 | Product | Between Us, by Powered By Oxieg3n |
-| Windows workspace | \`D:\projects\BetweenUs\` |
+| Windows workspace | `D:\projects\BetweenUs` |
 | GitHub | https://github.com/oxieg3n/Between-us |
-| Starting branch | \`feature/production-foundation\` |
-| Initial verified remote commit | \`53f7ebef85459eaa986d1bad4b6c797a1d2dcc9c\` |
-| Baseline | \`1116-ProductionFoundation-p3\`, mobile 0.4.1, backend 0.1.0 |
+| Starting branch | `feature/production-foundation` |
+| Initial verified remote commit | `53f7ebef85459eaa986d1bad4b6c797a1d2dcc9c` |
+| Baseline | `1116-ProductionFoundation-p3`, mobile 0.4.1, backend 0.1.0 |
 | Canonical live backend target | **Supabase Free** (owner's selected launch infrastructure) |
 | Alternative backend investigation | **Out of scope** unless Supabase is demonstrably unable to meet a mandatory security/functional requirement |
 | Other infrastructure | Existing owner-controlled resources and free, officially supported services only, where needed and separately approved |
@@ -23,16 +23,16 @@
 
 Before any code or deployment, read in full:
 
-1. Root \`AGENTS.md\`; \`apps/mobile/AGENTS.md\`; \`services/backend/AGENTS.md\`.
-2. \`spec/production/DELIVERY_RECEIPT.md\`, \`ARCHITECTURE.md\`, \`SECURITY_REVIEW.md\`, \`RELEASE_CHECKLIST.md\`, \`TEST_RESULTS.md\`, \`SUPPORTED_DEVICES.md\`.
-3. \`spec/production/CHILD_PRIVACY_COMPLIANCE.md\`, \`JOURNAL_STORAGE.md\`, \`COST_ANALYSIS.md\`, \`BACKEND_COMPARISON.md\`, \`runbooks/LOCAL_AND_CI.md\`, \`release/production-checks.workflow.yml\`.
-4. \`spec/security/BOUNDARIES.md\`, \`spec/mission/PRODUCTION_RELEASE_GATES.md\`, \`design/OPEN_LETTER_DESIGN_SYSTEM.md\` and current store policy drafts.
+1. Root `AGENTS.md`; `apps/mobile/AGENTS.md`; `services/backend/AGENTS.md`.
+2. `spec/production/DELIVERY_RECEIPT.md`, `ARCHITECTURE.md`, `SECURITY_REVIEW.md`, `RELEASE_CHECKLIST.md`, `TEST_RESULTS.md`, `SUPPORTED_DEVICES.md`.
+3. `spec/production/CHILD_PRIVACY_COMPLIANCE.md`, `JOURNAL_STORAGE.md`, `COST_ANALYSIS.md`, `BACKEND_COMPARISON.md`, `runbooks/LOCAL_AND_CI.md`, `release/production-checks.workflow.yml`.
+4. `spec/security/BOUNDARIES.md`, `spec/mission/PRODUCTION_RELEASE_GATES.md`, `design/OPEN_LETTER_DESIGN_SYSTEM.md` and current store policy drafts.
 
 **Latest owner decision overrides a generic provider-selection exercise:** Supabase Free is the selected intended launch provider. Keep Supabase Auth/Postgres/Edge Functions/Realtime as the existing authoritative architecture; optimize within Free limits. Do not spend cycles rebuilding the system on Cloudflare, Firebase or a self-hosted auth provider merely to compare options.
 
 **What p3 already accomplished:** Local Supabase authentication and 24 migrations, 926 SQL assertions in 19 files, 55 backend tests, 260 mobile tests, 11 local integration scenarios, 16/19 production/demo browser scenarios respectively, and scoped actual Android debugging with fictional accounts. A documented clean post-keyboard check passed. This is a **local** production-style foundation, not a hosted, signed, independently reviewed or child-ready service. Preserve these passing tests and historical evidence.
 
-Inspect local Git branch/status, worktrees, origin, HEAD, unpushed changes, the deliberately untracked diagnostic, installed SDK, packages, permissions and existing services. The local working copy might be ahead of this document. Never overwrite unfinished work, force-push, reset, or silently delete data. Use \`git -C 'D:\projects\BetweenUs'\` for all Git work. Create an appropriately named release-qualification feature branch from the latest verified \`feature/production-foundation\` state **only after reconciling local work**; use \`feature/staging-release-qualification\` unless it already exists. Do not merge to main or modify \`docs/\` or the public Pages demo.
+Inspect local Git branch/status, worktrees, origin, HEAD, unpushed changes, the deliberately untracked diagnostic, installed SDK, packages, permissions and existing services. The local working copy might be ahead of this document. Never overwrite unfinished work, force-push, reset, or silently delete data. Use `git -C 'D:\projects\BetweenUs'` for all Git work. Create an appropriately named release-qualification feature branch from the latest verified `feature/production-foundation` state **only after reconciling local work**; use `feature/staging-release-qualification` unless it already exists. Do not merge to main or modify `docs/` or the public Pages demo.
 
 ## 1. Free-plan operating contract: build for launch on Supabase Free
 
@@ -68,7 +68,7 @@ At the time this mission was prepared (2026-11-16), Supabase's published Free pr
 
 ## 2. Execution order and agent ownership
 
-Execute without idle phase-by-phase permission requests for ordinary, authorized engineering. Create \`spec/production/staging/PROGRESS.md\` with phase checklist, owner decisions, exact results and blockers. Assign distinct files to specialist agents.
+Execute without idle phase-by-phase permission requests for ordinary, authorized engineering. Create `spec/production/staging/PROGRESS.md` with phase checklist, owner decisions, exact results and blockers. Assign distinct files to specialist agents.
 
 | Phase | Lead | Must finish before |
 | --- | --- | --- |
@@ -87,7 +87,7 @@ Execute without idle phase-by-phase permission requests for ordinary, authorized
 ## 3. Phase A — reproduce and harden baseline
 
 - Re-run typecheck, lint, mobile/backend units, 19 pgTAP files, local Auth/realtime integration and 16/19 production/demo browser scenarios in a controlled environment; preserve true source hashes, exact command outputs and timings, and any failures. Never add historical counts to new counts.
-- Inventory deployed/tested migrations \`001–024\` and pending migrations; test both fresh install and upgrade, rollback strategy, RLS enablement and grant paths.
+- Inventory deployed/tested migrations `001–024` and pending migrations; test both fresh install and upgrade, rollback strategy, RLS enablement and grant paths.
 - Confirm critical code paths: distinct child identities, server authorization, recipient acceptance + independent verification, bidirectional blocking at send/fetch/subscription, client-UUID idempotency, finance transaction CAS and hidden matching equivalent-world privacy, neutral notifications and confidential report access.
 - Test malicious callers directly at SQL/API/Realtime boundary (cross-family IDs, forged role, revoked sessions, replay, stale/offline completions, changed-body idempotency key reuse). UI-hidden buttons are NOT authorization.
 - Correct the observed Night Harbor **white square logo backplate** where possible without redesigning approved brand art or lowering contrast. Re-test both themes and actual Android. No unnecessary rebrand or generic UI.
@@ -131,7 +131,7 @@ Hosting remains synthetic-only until *all* applicable external gates pass.
 
 Free plan lacks managed daily backups, so build the **free, secure alternative as a real operating procedure**, not a Markdown wish:
 
-- Choose a reviewed, version-compatible **logical export** method (\`supabase db dump\`/Postgres tools) under an owner-controlled scheduled host or approved free storage with encryption **before** offsite upload. Use established authenticated encryption, not homemade crypto. Dedicated minimal-scoped credentials, protected key storage and key-rotation/recovery must be documented.
+- Choose a reviewed, version-compatible **logical export** method (`supabase db dump`/Postgres tools) under an owner-controlled scheduled host or approved free storage with encryption **before** offsite upload. Use established authenticated encryption, not homemade crypto. Dedicated minimal-scoped credentials, protected key storage and key-rotation/recovery must be documented.
 - Include metadata required for a truthful restore: schema migration state, external Auth service state and portability limits, selected non-database objects/storage, extensions, roles/policies and separately retained non-secret config. A Postgres dump alone may NOT reconstruct all Auth/storage/provider state. Inventory what is recoverable and what is not.
 - Use encrypted at-rest backups, multiple recovery copies, owner-reviewed access, retention expiry and deletion tombstone replay after restore. Backups must not silently resurrect a child account or withdrawn consent.
 - **Perform an actual restore into disposable isolated synthetic test infrastructure**, verify row and authorization integrity, message/finance idempotency, and deletion/revocation after restore. Measure RPO and RTO; do not claim production recovery if backups are incomplete or the restoring host is the only copy.
@@ -216,23 +216,23 @@ A gate is **PASS** only with a traceable exact artifact/source SHA, environment 
 
 ## 11. Deliverables and maintenance
 
-Create or maintain these tracked files under \`spec/production/staging/\`:
+Create or maintain these tracked files under `spec/production/staging/`:
 
-- \`PROGRESS.md\` — living checklist, branch/source, phase status, owner approvals
-- \`FREE_PLAN_OPERATING_BUDGET.md\` — current quotas and model, nonpaying service limits, degradation thresholds
-- \`DEPLOYMENT_RUNBOOK.md\` — guarded local/staging/production procedures, credentials/placeholders, verified project refs, rollback
-- \`BACKUP_RESTORE_DRILL.md\` — actual backup/restore procedures, RPO/RTO, encryption/key/operator/retention
-- \`HOSTED_STAGING_TEST_RESULTS.md\` — only true hosted proof, separated from local
-- \`AUTH_EMAIL_DELIVERY.md\` — SMTP setup, sender controls, template/rate/deliverability tests, owner action
-- \`NOTIFICATIONS_DEVICE_QA.md\` — provider/mobile results vs mocks
-- \`HARDWARE_ACCESSIBILITY_QA.md\` — exact devices/tests, TalkBack/VoiceOver, local-model perf
-- \`CHILD_PRIVACY_OWNER_DECISIONS.md\` — unresolved age/state/VPC/rights/operator decisions, source links, owners
-- \`OPERATIONS_AND_INCIDENTS.md\` — live report staffing, access, incident drills, safe outages, contact ownership
-- \`RELEASE_ARTIFACT_MANIFEST.md\` — SHA, signed/unsigned state, Android/iOS credentials, licenses/SBOM
-- \`INDEPENDENT_REVIEW_HANDOFF.md\` — qualified external testing package and unresolved findings
-- \`FINAL_RELEASE_QUALIFICATION.md\` — frozen source, actual tests, pass/fail/blocked matrix, cost, owner GO/NO-GO
+- `PROGRESS.md` — living checklist, branch/source, phase status, owner approvals
+- `FREE_PLAN_OPERATING_BUDGET.md` — current quotas and model, nonpaying service limits, degradation thresholds
+- `DEPLOYMENT_RUNBOOK.md` — guarded local/staging/production procedures, credentials/placeholders, verified project refs, rollback
+- `BACKUP_RESTORE_DRILL.md` — actual backup/restore procedures, RPO/RTO, encryption/key/operator/retention
+- `HOSTED_STAGING_TEST_RESULTS.md` — only true hosted proof, separated from local
+- `AUTH_EMAIL_DELIVERY.md` — SMTP setup, sender controls, template/rate/deliverability tests, owner action
+- `NOTIFICATIONS_DEVICE_QA.md` — provider/mobile results vs mocks
+- `HARDWARE_ACCESSIBILITY_QA.md` — exact devices/tests, TalkBack/VoiceOver, local-model perf
+- `CHILD_PRIVACY_OWNER_DECISIONS.md` — unresolved age/state/VPC/rights/operator decisions, source links, owners
+- `OPERATIONS_AND_INCIDENTS.md` — live report staffing, access, incident drills, safe outages, contact ownership
+- `RELEASE_ARTIFACT_MANIFEST.md` — SHA, signed/unsigned state, Android/iOS credentials, licenses/SBOM
+- `INDEPENDENT_REVIEW_HANDOFF.md` — qualified external testing package and unresolved findings
+- `FINAL_RELEASE_QUALIFICATION.md` — frozen source, actual tests, pass/fail/blocked matrix, cost, owner GO/NO-GO
 
-Update existing \`RELEASE_CHECKLIST.md\`, \`TEST_RESULTS.md\`, \`SECURITY_REVIEW.md\`, \`SUPPORTED_DEVICES.md\`, \`CHILD_PRIVACY_COMPLIANCE.md\` with cross-links and new factual evidence **without erasing historical failures**. Keep short, actionable runbooks; don't create dozens of redundant policy documents if a current file already owns the topic. Write safe scripts and tests to back each operational procedure.
+Update existing `RELEASE_CHECKLIST.md`, `TEST_RESULTS.md`, `SECURITY_REVIEW.md`, `SUPPORTED_DEVICES.md`, `CHILD_PRIVACY_COMPLIANCE.md` with cross-links and new factual evidence **without erasing historical failures**. Keep short, actionable runbooks; don't create dozens of redundant policy documents if a current file already owns the topic. Write safe scripts and tests to back each operational procedure.
 
 Implement meaningful code, migrations, tooling and native fixes, not just documents. Re-run necessary tests after each change. End-to-end release QA must include reproducible commands and actual screenshots for nonprivate views, without disabling protected-screen capture. Use exact build IDs and separate runtime/artifact commit identity.
 
@@ -242,10 +242,10 @@ Implement meaningful code, migrations, tooling and native fixes, not just docume
 
 1. Confirm the local worktree and current p3 delivery state. Preserve the untracked diagnostic and existing running local services.
 2. Read this entire master mission and all controlling documents.
-3. Create \`feature/staging-release-qualification\` from latest verified p3, if safe.
+3. Create `feature/staging-release-qualification` from latest verified p3, if safe.
 4. Start concurrent bounded Free-tier operational research, security adversarial inventory, backup/restore tooling and physical-device test planning; then implement the prerequisite phases in the order above.
 5. Do not spend time changing backend provider: **Supabase Free is the approved target**. Deploy synthetic staging only after explicit owner authorization; leave the project unprovisioned otherwise and continue useful local work.
 6. Continue implementation, tests, corrections and documentation until every authorized, technically achievable task is complete and remaining external gates are precisely documented.
-7. Commit and push development code from \`D:\projects\BetweenUs\`, without force or main merge. Provide a factual final qualification report.
+7. Commit and push development code from `D:\projects\BetweenUs`, without force or main merge. Provide a factual final qualification report.
 
 **Do the work. Do not stop at a research document, assume the prototype is already production-approved, silently enable paid services, or bypass children's privacy and safety controls.**
