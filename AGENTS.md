@@ -21,6 +21,10 @@ Read `spec/JOURNAL_AND_CIRCLE.md`, `spec/MOBILE_ARCHITECTURE.md`, and `spec/secu
 
 ## Prototype boundaries
 
+### Production-foundation continuation (2026-11-16)
+
+The owner's production completion directive authorizes backend/mobile implementation and persistent **fictional local/staging** data on `feature/production-foundation`. The memory-only rules below continue to govern the isolated r12 demo. Read `spec/production/ARCHITECTURE.md` and `spec/production/SECURITY_REVIEW.md` for the new domains and deployment gates. No real child information, public enrollment, paid infrastructure, live transfers, main merge or production publication is authorized. Public child enrollment, legal policy approval and operational reporting must fail closed. No guardian journal keys or automatic journal synchronization. Secrets stay out of source and mobile bundles.
+
 - Fictional data only. Journals, drafts, simulated messages and finances remain in memory. Appearance is the only persisted preference. The current master mission additionally permits an explicit, hash-verified download of licensed model weights; only those model assets may be stored. No private content, model prompts/sessions, analytics, cloud inference, credentials or paid services. Optional local inference must retain strict output validation, cancellation and safe fallback.
 - A role selector is a demo control, never authentication. Parent administration never grants access to another author's journal or unsent drafts.
 - Only an explicit review action may share a separately composed message. Never copy journal text automatically.

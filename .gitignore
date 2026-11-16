@@ -1,2 +1,14 @@
 # Generated native object cache; kept short for CMake/Ninja on Windows.
 /.native-build/
+
+# Production backend tools, local synthetic services and credentials.
+/services/backend/node_modules/
+/services/backend/.local/
+/services/backend/dist/
+/services/backend/*.log
+/services/backend/supabase/.temp/
+/services/backend/supabase/.branches/
+/services/backend/supabase/functions/_shared/api.bundle.js
+**/.env
+**/.env.local
+**/.env.*.local
