@@ -344,6 +344,11 @@ class NativeChecks(LIB.MissionCapture):
         except Exception as error:
             run_error = f"{type(error).__name__}: {error}"
             self.result("failure", result="failed", error=run_error)
+            try:
+                self.read_size()
+                self.capture(theme, "failure-state", "Actual failed native state before restoring device overrides; not a passing screenshot.")
+            except Exception as capture_error:
+                self.note(f"Could not capture the failure state: {type(capture_error).__name__}")
             self.write_manifest(error=run_error)
             raise
         finally:

@@ -422,6 +422,7 @@ class MissionCapture(BASE.NativeCapture):
         self.area = "core"
         self.capture_supplement(theme)
         self.home()
+        self.swipe("down")
         self.require("Chores & Goals")
         self.capture(theme, "home-finance-entry", "Actual scrolled Home view showing the contextual Chores & Goals entry.")
         self.tap("Journal", scroll=False)
@@ -492,6 +493,7 @@ class MissionCapture(BASE.NativeCapture):
             if self.args.section in ("all", "core"):
                 self.area = "core"
                 self.capture_theme(theme)
+                self.capture_core_supplement(theme)
             if self.args.section == "supplement":
                 self.capture_core_supplement(theme)
             if self.args.section in ("all", "finance"):

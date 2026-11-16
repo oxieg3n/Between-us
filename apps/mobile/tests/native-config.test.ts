@@ -68,8 +68,9 @@ test("native remeasurement preserves the Activity lifecycle and deep-link handle
   assert.equal(removeContents({ src: patched, tag: "between-us-adaptive-display" }).contents, activityFixture);
   assert.equal(patched.match(/override fun onConfigurationChanged/g)?.length, 1);
   assert.ok(patched.indexOf("super.onConfigurationChanged(newConfig)") < patched.indexOf("window.decorView.post"));
-  assert.match(patched, /if \(!isDestroyed\) reactDelegate\?\.reactRootView\?\.requestLayout\(\)/);
-  assert.doesNotMatch(patched, /recreate\(|reload\(|setContentView\(|unmount|fontScale/);
+  assert.match(patched, /!isDestroyed && root\.isAttachedToWindow && root === reactDelegate\?\.reactRootView/);
+  assert.match(patched, /view\.isAttachedToWindow && !view\.isBeingRemoved/);
+  assert.doesNotMatch(patched, /recreate\(|reload\(|setContentView\(|unmount|fontScale|probeDisplay|android\.util\.Log/);
 
   const oldGenerated = mergeContents({
     src: activityFixture,
@@ -88,6 +89,13 @@ test("native configuration generation rejects unmanaged overrides and ambiguous 
     "  override fun onConfigurationChanged(config: android.content.res.Configuration) { super.onConfigurationChanged(config) }",
   );
   assert.throws(() => addRootRemeasure(unmanaged), /already handles configuration/);
+  const unmanagedHelper = activityFixture.replace(
+    '  override fun getMainComponentName(): String = "main"',
+    "  private fun refreshExistingStackFrames(view: android.view.View) { view.requestLayout() }",
+  );
+  const originalHelperSource = unmanagedHelper;
+  assert.throws(() => addRootRemeasure(unmanagedHelper), /already defines the adaptive display helper/);
+  assert.equal(unmanagedHelper, originalHelperSource);
   assert.throws(() => addRootRemeasure(activityFixture + "// @generated begin between-us-adaptive-display - interrupted\n"), /ambiguous/);
   assert.throws(() => addRootRemeasure(activityFixture.replace("class MainActivity", "class OtherActivity")), /Failed to match/);
 });

@@ -16,17 +16,42 @@ function addRootRemeasure(source) {
   if (/\bfun\s+onConfigurationChanged\s*\(/.test(cleared.contents)) {
     throw new Error("MainActivity already handles configuration changes; review it before adding adaptive display.");
   }
+  if (/\bfun\s+refreshExistingStackFrames\s*\(/.test(cleared.contents)) {
+    throw new Error("MainActivity already defines the adaptive display helper; review it before replacement.");
+  }
   return mergeContents({
     src: cleared.contents,
     tag: activityTag,
     anchor: /^class MainActivity\s*:\s*ReactActivity\(\)\s*\{\s*$/,
     offset: 1,
     comment: "//",
-    newSrc: `  override fun onConfigurationChanged(newConfig: android.content.res.Configuration) {
+    newSrc: `  private fun refreshExistingStackFrames(view: android.view.View) {
+    if (view is com.swmansion.rnscreens.Screen &&
+        view.isAttachedToWindow && !view.isBeingRemoved &&
+        view.container is com.swmansion.rnscreens.ScreenStack &&
+        view.stackPresentation == com.swmansion.rnscreens.Screen.StackPresentation.PUSH &&
+        view.width > 0 && view.height > 0) {
+      // Same pixel bounds can still require new density-dependent screen state.
+      view.updateState(view.width, view.height, view.top)
+      view.requestLayout()
+    }
+    if (view is android.view.ViewGroup) {
+      for (i in 0 until view.childCount) refreshExistingStackFrames(view.getChildAt(i))
+    }
+  }
+
+  override fun onConfigurationChanged(newConfig: android.content.res.Configuration) {
     super.onConfigurationChanged(newConfig)
-    // Remeasure the existing Fabric surface after configuration resources settle.
     window.decorView.post {
-      if (!isDestroyed) reactDelegate?.reactRootView?.requestLayout()
+      if (!isDestroyed) {
+        val root = reactDelegate?.reactRootView ?: return@post
+        root.requestLayout()
+        root.postOnAnimation {
+          if (!isDestroyed && root.isAttachedToWindow && root === reactDelegate?.reactRootView) {
+            refreshExistingStackFrames(root)
+          }
+        }
+      }
     }
   }`,
   }).contents;
