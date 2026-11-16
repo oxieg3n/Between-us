@@ -177,11 +177,10 @@ class NativeChecks(LIB.MissionCapture):
                         navigation=nav, goal_back="native Back returned to goal overview",
                         limitation="Viewport overrides on one Pixel_10 AVD, not separate physical hardware.")
         self.restore_geometry()
-        if density_only:
-            self.wait_adaptive_bounds(tablet=False)
-            self.capture(theme, "phone-after-density-return", "Full header and bottom navigation remain within the original phone viewport after returning from tablet density.")
-            self.result(f"{theme} density round trip geometry", result="passed",
-                        interaction="Verified right header edge and lower navigation in tablet and restored phone, without restarting the app.")
+        self.wait_adaptive_bounds(tablet=False)
+        self.capture(theme, "phone-after-density-return", "Full header and bottom navigation remain within the original phone viewport after returning from tablet density.")
+        self.result(f"{theme} density round trip geometry", result="passed",
+                    interaction="Verified right header edge and lower navigation in tablet and restored phone, without restarting the app.")
 
     def opaque_references(self, theme):
         self.home()
@@ -332,6 +331,8 @@ class NativeChecks(LIB.MissionCapture):
                 self.fresh_theme(theme)
                 if self.args.section in ("all", "responsive"):
                     self.responsive(theme)
+                    if self.args.section == "all":
+                        self.opaque_references(theme)
                     self.font_scale(theme)
                 if self.args.section in ("all", "interaction"):
                     self.keyboard_and_review(theme)

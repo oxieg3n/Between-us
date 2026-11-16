@@ -1,17 +1,14 @@
-import { Stack } from "expo-router";
+import { Slot } from "expo-router";
 import Head from "expo-router/head";
+import { View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { AppearanceProvider, useAppearance } from "../appearance";
 function Navigation() {
   const { theme } = useAppearance();
   return (
-    <Stack
-      screenOptions={{
-        headerShown: false,
-        contentStyle: { backgroundColor: theme.background },
-        animation: "none",
-      }}
-    />
+    <View style={{ flex: 1, backgroundColor: theme.background }}>
+      <Slot />
+    </View>
   );
 }
 export default function Layout() {
