@@ -5,9 +5,11 @@ import { AndroidConfig } from "expo/config-plugins";
 
 type Manifest = Parameters<typeof AndroidConfig.Manifest.getMainActivityOrThrow>[0];
 const pluginRequire = createRequire(__filename);
-const { addDensityConfigChange } = pluginRequire("../plugins/with-adaptive-display") as {
+const { addDensityConfigChange, addRootRemeasure } = pluginRequire("../plugins/with-adaptive-display") as {
   addDensityConfigChange: (manifest: Manifest) => Manifest;
+  addRootRemeasure: (source: string) => string;
 };
+const { removeContents, mergeContents } = pluginRequire("@expo/config-plugins/build/utils/generateCode");
 
 test("adaptive display handles only MainActivity density without changing other configuration", () => {
   const flags = "keyboard|keyboardHidden|orientation|screenSize|screenLayout|uiMode|smallestScreenSize|assetsPaths";
@@ -41,4 +43,51 @@ test("adaptive display handles only MainActivity density without changing other 
   const before = structuredClone(missing);
   assert.throws(() => addDensityConfigChange(missing), /missing the required MainActivity/);
   assert.deepEqual(missing, before);
+});
+
+const activityFixture = `package com.example.family
+import android.content.Intent
+import android.os.Bundle
+import com.facebook.react.ReactActivity
+
+class MainActivity : ReactActivity() {
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(null)
+  }
+  override fun getMainComponentName(): String = "main"
+  override fun onNewIntent(intent: Intent) {
+    super.onNewIntent(intent)
+    setIntent(intent)
+  }
+}
+`;
+
+test("native remeasurement preserves the Activity lifecycle and deep-link handler without replacing the surface", () => {
+  const patched = addRootRemeasure(activityFixture);
+  assert.equal(addRootRemeasure(patched), patched);
+  assert.equal(removeContents({ src: patched, tag: "between-us-adaptive-display" }).contents, activityFixture);
+  assert.equal(patched.match(/override fun onConfigurationChanged/g)?.length, 1);
+  assert.ok(patched.indexOf("super.onConfigurationChanged(newConfig)") < patched.indexOf("window.decorView.post"));
+  assert.match(patched, /if \(!isDestroyed\) reactDelegate\?\.reactRootView\?\.requestLayout\(\)/);
+  assert.doesNotMatch(patched, /recreate\(|reload\(|setContentView\(|unmount|fontScale/);
+
+  const oldGenerated = mergeContents({
+    src: activityFixture,
+    tag: "between-us-adaptive-display",
+    anchor: /^class MainActivity/,
+    offset: 1,
+    comment: "//",
+    newSrc: "  override fun onConfigurationChanged(config: android.content.res.Configuration) { super.onConfigurationChanged(config) }",
+  }).contents;
+  assert.equal(addRootRemeasure(oldGenerated), patched);
+});
+
+test("native configuration generation rejects unmanaged overrides and ambiguous templates", () => {
+  const unmanaged = activityFixture.replace(
+    '  override fun getMainComponentName(): String = "main"',
+    "  override fun onConfigurationChanged(config: android.content.res.Configuration) { super.onConfigurationChanged(config) }",
+  );
+  assert.throws(() => addRootRemeasure(unmanaged), /already handles configuration/);
+  assert.throws(() => addRootRemeasure(activityFixture + "// @generated begin between-us-adaptive-display - interrupted\n"), /ambiguous/);
+  assert.throws(() => addRootRemeasure(activityFixture.replace("class MainActivity", "class OtherActivity")), /Failed to match/);
 });

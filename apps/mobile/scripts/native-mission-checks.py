@@ -93,6 +93,19 @@ class NativeChecks(LIB.MissionCapture):
             positions[label] = self.complete_bounds(node, label)
         return positions
 
+    def adaptive_bounds(self, tablet):
+        settings = self.find("Profile & settings", clickable=True)
+        if settings is None or rectangle(settings)[2] < self.width * 0.9:
+            raise AssertionError("Header does not reach the current viewport's right edge after display change.")
+        nav = self.navigation()
+        if nav["Circle"][3] < self.height * 0.85:
+            raise AssertionError("Navigation does not reach the current viewport's lower edge after display change.")
+        if tablet and nav["Home"][2] > self.width * 0.25:
+            raise AssertionError("Tablet navigation did not adapt to a rail.")
+        if not tablet and nav["Home"][1] < self.height * 0.8:
+            raise AssertionError("Phone navigation did not return to the bottom edge.")
+        return nav
+
     def responsive(self, theme, density_only=False):
         cases = [("small", 840, 1680, 420), ("standard", 1080, 2424, 420),
                  ("large", 1260, 2730, 420), ("tablet", 1920, 2560, 320)]
@@ -110,6 +123,7 @@ class NativeChecks(LIB.MissionCapture):
             self.read_size()
             self.settle()
             if name == "tablet":
+                self.adaptive_bounds(tablet=True)
                 if self.locate_field("Your private demo words").get("text") != draft:
                     raise AssertionError("Display-density change lost or changed the unsaved journal draft.")
                 if any("linking in multiple places" in node.get(key, "").lower()
@@ -141,6 +155,11 @@ class NativeChecks(LIB.MissionCapture):
                         navigation=nav, goal_back="native Back returned to goal overview",
                         limitation="Viewport overrides on one Pixel_10 AVD, not separate physical hardware.")
         self.restore_geometry()
+        if density_only:
+            self.adaptive_bounds(tablet=False)
+            self.capture(theme, "phone-after-density-return", "Full header and bottom navigation remain within the original phone viewport after returning from tablet density.")
+            self.result(f"{theme} density round trip geometry", result="passed",
+                        interaction="Verified right header edge and lower navigation in tablet and restored phone, without restarting the app.")
 
     def opaque_references(self, theme):
         self.home()
@@ -355,7 +374,19 @@ def main():
             raise AssertionError("A hidden keyboard was accepted as proof.")
         assert override_value("size", "Physical size: 1080x2424") == "reset"
         assert override_value("density", "Physical density: 420\nOverride density: 320") == "320"
-        print("PASS: input, visible IME and restoration parsing; no ADB invocation.")
+        sample = object.__new__(NativeChecks)
+        sample.width, sample.height = 1920, 2560
+        sample.find = lambda *args, **kwargs: {"bounds": "[1760,100][1900,220]"}
+        sample.navigation = lambda: {"Home": [0,250,220,700], "Circle": [0,1900,220,2450]}
+        sample.adaptive_bounds(tablet=True)
+        sample.find = lambda *args, **kwargs: {"bounds": "[1300,100][1464,220]"}
+        try:
+            sample.adaptive_bounds(tablet=True)
+        except AssertionError:
+            pass
+        else:
+            raise AssertionError("The observed undersized native root was accepted as full viewport coverage.")
+        print("PASS: input, visible IME, restoration and full-viewport guard; no ADB invocation.")
         return
     args.run_id = args.run_id or f"{LIB.BUILD_ID}-native-checks-{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}"
     NativeChecks(args).run()
