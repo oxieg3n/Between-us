@@ -1,6 +1,6 @@
 # Between Us combined mission build report
 
-Status: **r12 functional prototype and scoped native QA completed; final commit/push receipt remains pending**. All nine automated checks passed: 84 units and 19 browser scenarios without failures/retries/skips. Current native evidence has 98 independently reviewed test originals across both themes: core 48, journal/model 12, blocking 14, keyboard/interactions 12 and cold-app 200% text 12. Two master-reviewed handoff originals bring the total to 100; four comparison sheets preserve eight exact viewports. Screenshot counts are not test-case counts. Both identified prototype security defects are corrected with the coverage stated below. Earlier failures and physical-device/iOS/spoken-accessibility limits remain explicit. This is not production-security certification.
+Status: **r12 functional prototype and scoped native QA completed; source/evidence pushed and independently verified**. All nine automated checks passed: 84 units and 19 browser scenarios without failures/retries/skips. Current native evidence has 98 independently reviewed test originals across both themes: core 48, journal/model 12, blocking 14, keyboard/interactions 12 and cold-app 200% text 12. Two master-reviewed handoff originals bring the total to 100; four comparison sheets preserve eight exact viewports. Screenshot counts are not test-case counts. Both identified prototype security defects are corrected with the coverage stated below. Earlier failures and physical-device/iOS/spoken-accessibility limits remain explicit. This is not production-security certification.
 
 | Item | Current verified value |
 | --- | --- |
@@ -15,14 +15,14 @@ Status: **r12 functional prototype and scoped native QA completed; final commit/
 | Clean-build status | Original Stack restored; clean prebuild removed diagnostic geometry logging before this APK |
 | R12 Android build / installation | Android x86_64 debug BUILD SUCCESSFUL in 1 minute 5 seconds; installed on Pixel_10, ordinary-phone native checks/captures completed |
 | R12 debug APK SHA-256 | `34716578ABD1C9DCB9C255C9993E66F3B00BB532B29AC7DE953095302C8FB6E9` |
-| Final evidence/documentation commit | Pending master delivery |
-| Push receipt / independently checked remote HEAD | Pending master verification |
+| Source/evidence delivery commit | `061775da03d44b8f63c1332d2f0ca5738e74a883` |
+| Verified evidence push / remote ref | Success, exact match `061775da03d44b8f63c1332d2f0ca5738e74a883`; [receipt](DELIVERY_RECEIPT.md) |
 
 ## Workspace and preservation
 
 Relocation is COMPLETE. The entire repository, `.git`, ignored files and owner work are at the canonical root; the deprecated root is absent. The old ADB server held the vacated empty directory; restarting that server released its handle and the guarded helper succeeded. No unrelated process was terminated. See [relocation result](WORKSPACE_RELOCATION_RESULT.md).
 
-All Git operations use the canonical root. The owner diagnostic `Scripts/Narrator-One-Time-Diagnostic-eb5cb0e.txt` remains intentionally untracked and excluded from commits, exports and screenshots. Final secret/unintended-file review and clean-tree verification are delivery gates.
+All Git operations use the canonical root. The owner diagnostic `Scripts/Narrator-One-Time-Diagnostic-eb5cb0e.txt` remains intentionally untracked and excluded from commits, exports and screenshots. Final secret/unintended-file review and evidence-push clean-tree verification passed; see [delivery receipt](DELIVERY_RECEIPT.md).
 
 The public GitHub Pages demo, root redirect and approved assets are preserved. The master verified through the installed GitHub client that Pages uses the legacy `main` root build, with no repository workflow. No main merge, Pages publication or Powered By website change is authorized. Pushing this feature branch does not change that configured Pages source.
 
@@ -112,7 +112,7 @@ R12 then passed its own complete nine-command gate from **2026-11-16 01:22:52 to
 | Android debug build/install | Passed; exact clean APK provenance above |
 | Current Android native workflows | Both-theme core, native model, blocking, journal/keyboard/review, cold-app 200% text and appearance checks passed; normal device settings restored |
 | Final r12 source aggregate equality / nine-command gate | Passed: unchanged 81-file aggregate above |
-| Final push / clean working tree apart from preserved diagnostic | Pending |
+| Evidence push / clean tree apart from preserved diagnostic | Passed; receipt follow-up commit is verified in final session reply |
 
 The native operator uses Pixel_10, Android 17, x86_64, normal resolution 1080 x 2424, density 420 and font scale 1.0. Historical responsive cases sequentially override one AVD; they are not separate physical phone/tablet tests. All linked original PNGs below are actual ADB captures. Comparison sheets derive only from those originals, without concealing defects.
 
@@ -195,7 +195,7 @@ The staging whitespace check flags only the archived raw Android geometry log's 
 | Journal Engine | Contextual fallback/validation, model research/specifications, browser finance flows, native capture/check scripts, independent privacy review and ID correction candidate |
 | Security/Payment/UX Review | No-cost payment guidance, boundaries/integration design, lifecycle tests, dependency/visual QA and native evidence review |
 
-Implementation remains in `apps/mobile/`: `src/finance/`, `finance-state.tsx`, finance/journal/model screens, `journal-intelligence/`, local-model contract/native manager, platform ID helpers, existing state/navigation/theme components, tests/e2e, local plugins and scripts. Design/security/mission reports remain under `design/` and `spec/`. No public demo files were intentionally changed. The final delivery diff, evidence/documentation commit and preservation check are master delivery gates.
+Implementation remains in `apps/mobile/`: `src/finance/`, `finance-state.tsx`, finance/journal/model screens, `journal-intelligence/`, local-model contract/native manager, platform ID helpers, existing state/navigation/theme components, tests/e2e, local plugins and scripts. Design/security/mission reports remain under `design/` and `spec/`. No public demo files were intentionally changed. The final delivery diff, evidence commit and preservation checks passed. The source/evidence push is independently verified in the [receipt](DELIVERY_RECEIPT.md); the receipt follow-up hash is supplied in the final session reply.
 
 ## Exact Windows PowerShell commands
 
@@ -283,7 +283,7 @@ The capture scripts use real controls and ADB screenshots, verify the build, pre
 
 ## Remaining prototype delivery and production gates
 
-R12's full gate, clean APK installation, reviewed core/model/blocking/interaction evidence and both cold-app 200% cases passed. Both identified prototype findings are closed with the bounded coverage above. Final documentation/evidence commits, secret scan and independently verified feature-branch push remain the last delivery step. Historical failures and the unresolved original r8 timeout cause remain explicit. Initial Home discoverability, disclosed scroll framing and the enabled cash-out Request at zero free balance remain non-blocking polish; the domain rejects overspending. Failed runs and original screenshots stay preserved. Commit/push receipt fields must remain pending until the master verifies them.
+R12's full gate, clean APK installation, reviewed core/model/blocking/interaction evidence and both cold-app 200% cases passed. Both identified prototype findings are closed with the bounded coverage above. Source/evidence commit and feature-branch push succeeded and were independently verified, with the scan and preservation checks recorded in the [receipt](DELIVERY_RECEIPT.md). Historical failures and the unresolved original r8 timeout cause remain explicit. Initial Home discoverability, disclosed scroll framing and the enabled cash-out Request at zero free balance remain non-blocking polish; the domain rejects overspending. Failed runs and original screenshots stay preserved. The recorded evidence push is verified; this documentation follow-up is checked again before the final reply.
 
 The prototype has no real authentication, family/age/consent verification, secure journal/finance persistence, encrypted key recovery, cross-device backend, operational messaging/notifications, report intake or provider-confirmed finance. Role switching is a fictional inspector. OS keyboards, process memory, screenshots and explicit clipboard exports are outside its confidentiality guarantees. No actual financial transfer is activated.
 

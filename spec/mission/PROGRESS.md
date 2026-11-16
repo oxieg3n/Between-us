@@ -15,7 +15,7 @@ Canonical root: `D:\projects\BetweenUs`. Branch: `feature/mobile-foundation`. Cu
 - [x] Current automated gate: all nine commands passed; **84 units, 19 browser scenarios**, TypeScript/lint clean, audit zero, Doctor 20/20, SDK compatibility and both exports. Source unchanged throughout. [Exact results](AUTOMATED_QA.md).
 - [x] Current ordinary-phone native acceptance/captures: both-theme blocking, exact journal/keyboard/review flows, core screens and accepted native-model output passed. All 86 originals plus four comparisons independently reviewed. The isolated cold-app 200% retry subsequently passed both themes: twelve more reviewed originals, appearance persistence and restored device settings. Two final handoff originals are master-reviewed; total current evidence is 100 originals, not 100 test cases. Earlier evidence retains its actual build identity.
 - [ ] Remaining hardware/security gates: physical Android/model benchmarks, iOS, spoken TalkBack/VoiceOver, hot font-change draft retention and production identity/consent/storage/abuse operations remain unperformed. The previous cold-app DARK 200% obstruction now has a scoped passing r12 result; historical corruption/ANR and unproven root cause remain documented.
-- [ ] Delivery: final evidence/documentation review, secret/unintended-file scan, focused commit and verified development-branch push pending.
+- [x] Source/evidence delivery: reviewed and committed as `061775da03d44b8f63c1332d2f0ca5738e74a883`, pushed from the canonical root and independently matched to the remote feature ref. Scans passed, owner diagnostic stayed untracked; [receipt](DELIVERY_RECEIPT.md). The documentation receipt follow-up is independently verified in the final session reply.
 
 ## Current verification
 
