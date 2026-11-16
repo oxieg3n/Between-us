@@ -104,13 +104,22 @@ class MissionCapture(BASE.NativeCapture):
         raise RuntimeError(f"Native EditText not found: {label}")
 
     def field(self, label, value, dismiss_keyboard=True):
+        safe_input(value)
         node = self.locate_field(label)
         x, y = self.bounds(node)
         self.command("shell", "input", "tap", x, y)
-        self.command("shell", "input", "keyevent", "123")  # End of existing field.
-        count = min(220, max(12, len(node.get("text", "")) + 4))
-        self.command("shell", "input", "keyevent", *(["67"] * count))
-        self.command("shell", "input", "text", safe_input(value))
+        if self.locate_field(label).get("focused") != "true":
+            raise AssertionError(f"Native field did not receive focus: {label}")
+        self.command("shell", "input", "keycombination", "113", "29")  # Native Ctrl+A.
+        self.command("shell", "input", "keyevent", "67")
+        cleared = self.locate_field(label)
+        if cleared.get("text", "") not in ("", cleared.get("hint", "")):
+            raise AssertionError(f"Native Select All/Delete did not clear: {label}")
+        # Bulk injected keystrokes can outrun controlled inputs. Use ordinary typing pace.
+        for character in value:
+            self.command("shell", "input", "text", safe_input(character))
+            time.sleep(0.06)
+        time.sleep(0.3)
         if dismiss_keyboard:
             self.hide_keyboard()
         after = self.locate_field(label)
@@ -358,7 +367,8 @@ class MissionCapture(BASE.NativeCapture):
         if getattr(self.args, "require_local_model", False) and source != "on-device-model":
             self.capture(theme, "journal-model-fallback", "Actual local-template fallback after requesting native ideas; native output was not accepted.")
             raise AssertionError("The journal displayed templates; --require-local-model requires accepted native output.")
-        self.capture(theme, "journal-inline-suggestions", f"Explicitly requested ideas; actual displayed source is {source}. No unsupported model claim.")
+        self.require("Prepare separate words")
+        self.capture(theme, "journal-inline-suggestions", f"Explicitly requested ideas; actual displayed source is {source}. Full starter and intentional sharing actions visible.")
         self.tap("Prepare separate words")
         self.require("Your message")
         self.capture(theme, "journal-recipient-choice", "Separate editable words require an intentional recipient selection; journal is not automatically sent.")

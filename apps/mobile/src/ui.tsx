@@ -182,6 +182,7 @@ export function Field({
         accessibilityLabel={label}
         value={value}
         onChangeText={onChangeText}
+        autoCorrect={false}
         multiline={multiline}
         maxLength={multiline ? 5000 : 150}
         placeholder={placeholder}

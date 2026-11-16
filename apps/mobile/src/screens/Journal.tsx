@@ -214,6 +214,7 @@ export function JournalEditor() {
             placeholderTextColor={theme.muted}
             maxLength={150}
             autoComplete="off"
+            autoCorrect={false}
             importantForAutofill="no"
             underlineColorAndroid="transparent"
             style={[
@@ -233,6 +234,7 @@ export function JournalEditor() {
             multiline
             maxLength={5000}
             autoComplete="off"
+            autoCorrect={false}
             importantForAutofill="no"
             underlineColorAndroid="transparent"
             textAlignVertical="top"

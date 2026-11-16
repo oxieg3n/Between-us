@@ -310,6 +310,7 @@ export function ConversationComposer() {
           testID="conversation-message-input"
           value={app.messageDraft}
           onChangeText={app.setMessageDraft}
+          autoCorrect={false}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           multiline
