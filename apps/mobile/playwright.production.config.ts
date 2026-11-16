@@ -1,10 +1,10 @@
 import { readFileSync } from "node:fs";
-import { resolve } from "node:path";
+import { localUiFixturePath } from './e2e-production/fixture-path';
 import { defineConfig } from "@playwright/test";
 
 function localFixture() {
   try {
-    const fixture = JSON.parse(readFileSync(resolve(__dirname, "../../services/backend/.local/mobile-fixture.json"), "utf8"));
+    const fixture = JSON.parse(readFileSync(localUiFixturePath(process.env.BETWEENUS_PRODUCTION_UI_FIXTURE), "utf8"));
     for (const endpoint of [fixture.url, fixture.apiUrl]) {
       const url = new URL(endpoint);
       if (url.protocol !== "http:" || !["127.0.0.1", "localhost", "[::1]"].includes(url.hostname) || url.username || url.password) throw new Error();

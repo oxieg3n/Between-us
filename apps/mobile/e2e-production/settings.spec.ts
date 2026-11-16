@@ -1,12 +1,12 @@
 import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { localUiFixturePath } from './fixture-path';
 import { expect, test, type Locator, type Page } from '@playwright/test';
 
 type Credentials = {email:string;password:string};
 type Fixture = {parent:Credentials;child:Credentials & {name:string}};
 function readFixture():Fixture {
   try {
-    const value = JSON.parse(readFileSync(resolve(__dirname,'../../../services/backend/.local/mobile-fixture.json'),'utf8'));
+    const value = JSON.parse(readFileSync(localUiFixturePath(process.env.BETWEENUS_PRODUCTION_UI_FIXTURE),'utf8'));
     if (![value.parent,value.child].every(account => typeof account?.email === 'string' && /^[^@\s]+@[^@\s]+\.test$/i.test(account.email)
       && typeof account?.password === 'string' && account.password.length >= 12) || typeof value.child.name !== 'string' || !value.child.name) throw new Error();
     return value;

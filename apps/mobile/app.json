@@ -2,7 +2,7 @@
   "expo": {
     "name": "Between Us",
     "slug": "between-us",
-    "version": "0.4.1",
+    "version": "0.5.0",
     "orientation": "default",
     "icon": "./assets/brand/app-icon.png",
     "scheme": "between-us",
@@ -10,7 +10,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.oxieg3n.betweenus",
-      "buildNumber": "3"
+      "buildNumber": "4"
     },
     "android": {
       "package": "com.oxieg3n.betweenus",
@@ -21,11 +21,12 @@
       "blockedPermissions": [
         "android.permission.READ_EXTERNAL_STORAGE",
         "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_IMAGES",
         "android.permission.SYSTEM_ALERT_WINDOW",
         "android.permission.VIBRATE",
         "android.permission.RECORD_AUDIO"
       ],
-      "versionCode": 3
+      "versionCode": 4
     },
     "web": {
       "output": "static",
@@ -65,10 +66,11 @@
       ],
       "./plugins/withProductionSigning.cjs",
       "./plugins/withProductionTransport.cjs",
-      "./plugins/withWritingConfiguration.cjs"
+      "./plugins/withWritingConfiguration.cjs",
+      "./plugins/withPrivateCapturePermissions.cjs"
     ],
     "extra": {
-      "buildId": "1116-ProductionFoundation-p3"
+      "buildId": "1116-StagingQualification-r1"
     }
   }
 }

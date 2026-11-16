@@ -141,15 +141,17 @@ function apply(book: ChildBook, command: FinanceCommand, actor: FinanceActor, zo
       if (c.instructions) text(c.instructions, "instructions", 500);
       check(c.recurrence === undefined || ["once", "daily", "weekly"].includes(c.recurrence), "Choose a valid recurrence.");
       check(c.evidenceRequired === undefined || typeof c.evidenceRequired === "boolean", "Choose whether a completion note is required.");
+      const today = localDate(c.at, zone);
       for (const date of c.dates) {
-        validDate(date); check(date >= localDate(c.at, zone), "Assign chores today or later.");
+        validDate(date); check(date >= today, "Assign chores today or later.");
         book.occurrences.push({ id: c.choreId + ":" + date, choreId: c.choreId, title: c.title.trim(), instructions: c.instructions?.trim() ?? "", dueDate: date, rewardCents: c.rewardCents, status: "not_started", note: "", recurrence: c.recurrence ?? "once", evidenceRequired: c.evidenceRequired ?? false });
       }
       checkBudget(book); break;
     }
     case "edit_chore": {
       parent(actor); text(c.title, "a chore title"); cents(c.rewardCents, false);
-      const future = book.occurrences.filter(o => o.choreId === c.choreId && o.dueDate >= localDate(c.at, zone) && o.status === "not_started");
+      const today = localDate(c.at, zone);
+      const future = book.occurrences.filter(o => o.choreId === c.choreId && o.dueDate >= today && o.status === "not_started");
       check(future.length, "Only unstarted future occurrences can change.");
       for (const o of future) { o.title = c.title.trim(); o.rewardCents = c.rewardCents; o.instructions = c.instructions?.trim() ?? o.instructions; }
       checkBudget(book); break;

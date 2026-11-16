@@ -21,6 +21,7 @@ import {
   AccountRpcError,
   type AccountContext,
   backendUrl,
+  deploymentTarget,
   readAccountBoundary,
   getAccountProofCandidate,
   getVerifiedAccountContext,
@@ -84,7 +85,7 @@ type Message = ThreadMessage;
 function NavigationTab({label,selected,onPress}:{label:'Home'|'Journal'|'Chats'|'Circle';selected:boolean;onPress:()=>void}) {
   const {theme}=useAppearance(); const [focused,setFocused]=useState(false);
   const icons={Home:'home',Journal:'journal',Chats:'chats',Circle:'circle'} as const;
-  return <Pressable accessibilityRole="button" accessibilityLabel={label} accessibilityState={{selected}} onFocus={()=>setFocused(true)} onBlur={()=>setFocused(false)} onPress={onPress} style={({pressed})=>({minHeight:64,padding:8,gap:4,alignItems:'center',justifyContent:'center',borderRadius:10,borderWidth:2,borderColor:focused?theme.primary:'transparent',backgroundColor:selected?theme.soft:'transparent',opacity:pressed?0.7:1})}>
+  return <Pressable accessibilityRole="button" accessibilityLabel={label} accessibilityState={{selected}} onFocus={()=>setFocused(true)} onBlur={()=>setFocused(false)} onPress={onPress} style={({pressed})=>({minHeight:64,paddingVertical:8,paddingHorizontal:2,gap:4,alignItems:'center',justifyContent:'center',borderRadius:10,borderWidth:2,borderColor:focused?theme.primary:'transparent',backgroundColor:selected?theme.soft:'transparent',opacity:pressed?0.7:1})}>
     <Icon name={icons[label]} color={selected?theme.primary:theme.muted}/><Text style={{color:selected?theme.primary:theme.text,fontSize:13,fontWeight:selected?'700':'500'}}>{label}</Text>
   </Pressable>;
 }
@@ -1330,7 +1331,7 @@ export default function ProductionApplication() {
         <Image
           source={require("../../assets/brand/symbol.png")}
           accessibilityLabel="Between Us"
-          style={{ width: 42, height: 42, backgroundColor: t.logoSurface }}
+          style={{ width: 42, height: 42, borderRadius: 8, backgroundColor: t.logoSurface }}
         />
         <View style={{ flex: 1, minWidth:0 }}>
           <Body>Between Us</Body>
@@ -1415,7 +1416,7 @@ export default function ProductionApplication() {
             {busy && <Body>Checking with the account service…</Body>}
             {content}
             {['Chats','conversation','review'].includes(screen) && !!connectionNotice && <Body muted>{connectionNotice}</Body>}
-            <Body muted style={{fontSize:11}}>1116-ProductionFoundation-p3 · Fictional staging</Body>
+            <Body muted style={{fontSize:11}}>1116-StagingQualification-r1 · {deploymentTarget.statusLabel}</Body>
             <Button label="Help & safety" quiet onPress={() => go("safety")} />
           </ScrollView>
         </View>

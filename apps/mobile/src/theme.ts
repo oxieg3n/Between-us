@@ -55,7 +55,7 @@ export const dark: Theme = {
   onOutgoing: "#172730",
   danger: "#F0B8A4",
   soft: "#20343E",
-  logoSurface: "#F7FAFC",
+  logoSurface: "#A9D6DD",
 };
 
 export const themes = { light, dark };

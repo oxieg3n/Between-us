@@ -32,7 +32,7 @@ export function createApi(config: ApiConfig) {
   async function route(request: Request): Promise<Response> {
     try {
       const url = new URL(request.url); const path = url.pathname.replace(/^\/functions\/v1\/api/, '');
-      if (request.method === 'GET' && path === '/health') return json({ service: 'between-us', publicEnrollment: false, build: '1116-ProductionFoundation-p3' });
+      if (request.method === 'GET' && path === '/health') return json({ service: 'between-us', publicEnrollment: false, build: '1116-StagingQualification-r1' });
       if (request.method === 'POST' && path === '/v1/enrollment/parent') {
         if (!config.syntheticLocal || !['127.0.0.1', 'localhost', '[::1]'].includes(url.hostname)) return json({ error: 'Enrollment is unavailable.' }, 403);
         const data = await body(request); exact(data, ['email']);

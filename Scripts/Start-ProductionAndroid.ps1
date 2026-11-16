@@ -5,7 +5,7 @@ param(
     [string]$Serial = 'emulator-5554',
     [string]$Adb = "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe",
     [ValidatePattern('^feature/[A-Za-z0-9._/-]+$')]
-    [string]$ExpectedBranch = 'feature/production-foundation',
+    [string]$ExpectedBranch = 'feature/staging-release-qualification',
     [switch]$RestartApp
 )
 
@@ -111,6 +111,16 @@ try {
 } catch { throw 'Local Auth54321/API8787 preflight failed. Start the reviewed local services separately; no raw response/configuration is printed.' }
 
 $metroState = Get-MetroState
+if ($metroState -eq 'unavailable' -and (Test-LocalPort -Port 8081)) {
+    # A cold transform may briefly occupy the verified port before /status responds.
+    # Wait without stopping/replacing its listener; project ownership is still checked below.
+    $readinessDeadline = [DateTime]::UtcNow.AddSeconds(20)
+    do {
+        $metroState = Get-MetroState
+        if ($metroState -ne 'unavailable') { break }
+        Start-Sleep -Milliseconds 250
+    } while ([DateTime]::UtcNow -lt $readinessDeadline)
+}
 if ($metroState -eq 'unowned') { throw 'Port8081 serves a different/unidentified project. Its listener was left running.' }
 if ($metroState -eq 'ready' -and @([Net.NetworkInformation.IPGlobalProperties]::GetIPGlobalProperties().GetActiveTcpListeners() |
     Where-Object { $_.Port -eq 8081 -and -not [Net.IPAddress]::IsLoopback($_.Address) }).Count -gt 0) {

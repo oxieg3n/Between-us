@@ -7,6 +7,7 @@ import {AccountApiError,AccountRpcError,AccountProtocolError} from './account-fa
 import {installAuthCrypto} from './auth-crypto';
 import {runAuthMutation} from './auth-mutation';
 import {createRecoveryProofState, type RecoveryProof} from './recovery-proof';
+import {resolveDeploymentTarget} from './deployment-target';
 export {AccountApiError,AccountRpcError,isTransientAccountFailure} from './account-failures';
 
 export type AccountContext = {
@@ -29,28 +30,15 @@ export type AccountContext = {
     consentPolicyVersion: string | null;
   };
 };
-function endpoint(value: string | undefined): string | null {
-  if (!value) return null;
-  try {
-    const url = new URL(value);
-    if (url.username || url.password || url.search || url.hash) return null;
-    if (
-      url.protocol !== "https:" &&
-      !(
-        __DEV__ &&
-        url.protocol === "http:" &&
-        ["127.0.0.1", "localhost"].includes(url.hostname)
-      )
-    )
-      return null;
-    return value.replace(/\/$/, "");
-  } catch {
-    return null;
-  }
-}
-export const backendUrl = endpoint(process.env.EXPO_PUBLIC_SUPABASE_URL);
-export const apiUrl = endpoint(process.env.EXPO_PUBLIC_API_URL);
 const publicKey = process.env.EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+export const deploymentTarget = resolveDeploymentTarget({
+  development: __DEV__, environment: process.env.EXPO_PUBLIC_DEPLOYMENT_ENVIRONMENT,
+  projectRef: process.env.EXPO_PUBLIC_SUPABASE_PROJECT_REF,
+  supabaseUrl: process.env.EXPO_PUBLIC_SUPABASE_URL, apiUrl: process.env.EXPO_PUBLIC_API_URL,
+  publishableKey: publicKey,
+});
+export const backendUrl = deploymentTarget.backendUrl;
+export const apiUrl = deploymentTarget.apiUrl;
 const sessionKey = "betweenus.production.session";
 const authCryptoReady = installAuthCrypto();
 export const accountClient =

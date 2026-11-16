@@ -9,6 +9,7 @@ function Navigation() {
       screenOptions={{
         headerShown: false,
         contentStyle: { backgroundColor: theme.background },
+        statusBarStyle: theme.name === "Night Harbor" ? "light" : "dark",
         animation: "none",
       }}
     />

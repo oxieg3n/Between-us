@@ -1,5 +1,5 @@
 import { readFileSync } from "node:fs";
-import { resolve } from "node:path";
+import { localUiFixturePath } from './fixture-path';
 import { expect, test, type Locator, type Page } from "@playwright/test";
 import AccessibilityScanner from "@axe-core/playwright";
 
@@ -10,7 +10,7 @@ type MobileFixture = {
   conversation: { id: string };
 };
 function readFixture(): MobileFixture {
-  try { return JSON.parse(readFileSync(resolve(__dirname, "../../../services/backend/.local/mobile-fixture.json"), "utf8")); }
+  try { return JSON.parse(readFileSync(localUiFixturePath(process.env.BETWEENUS_PRODUCTION_UI_FIXTURE), "utf8")); }
   catch { throw new Error("The ignored fictional mobile fixture is unavailable; credential values are suppressed."); }
 }
 const fixture = readFixture();

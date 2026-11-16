@@ -5,6 +5,22 @@ import { applyFinanceCommand, createFinanceState, financeView, formatMoney, loca
 const AT = "2026-11-15T12:00:00.000Z";
 const P: FinanceActor = { role: "parent" };
 const C: FinanceActor = { role: "child", childId: "sam" };
+
+test("batch chore dates and edits follow the family's local day across the UTC boundary", () => {
+  const initial = "2026-11-16T05:00:00.000Z"; // November 15 in Los Angeles.
+  let state = createFinanceState("America/Los_Angeles", [{ id: "sam", name: "Fictional child" }]);
+  state = applyFinanceCommand(state, P, { kind: "configure_plan", id: "local-plan", childId: "sam", at: initial,
+    plan: { budgetCents: 10000, period: "monthly", anchorDate: "2026-11-01", payoutCadence: "per_task", minimumPayoutCents: 0, allowGoalRelease: true } });
+  state = applyFinanceCommand(state, P, { kind: "assign_chore", id: "local-batch", childId: "sam", at: initial,
+    choreId: "local-chore", title: "Original", rewardCents: 100, dates: ["2026-11-15", "2026-11-16", "2026-11-17"] });
+  const nextDay = "2026-11-17T05:00:00.000Z";
+  state = applyFinanceCommand(state, P, { kind: "edit_chore", id: "local-edit", childId: "sam", at: nextDay,
+    choreId: "local-chore", title: "Updated", rewardCents: 200 });
+  assert.deepEqual(financeView(state, P, "sam", nextDay).occurrences.map(o => [o.dueDate, o.title, o.rewardCents]),
+    [["2026-11-15", "Original", 100], ["2026-11-16", "Updated", 200], ["2026-11-17", "Updated", 200]]);
+  assert.throws(() => applyFinanceCommand(state, P, { kind: "assign_chore", id: "local-past", childId: "sam", at: nextDay,
+    choreId: "past", title: "Past", rewardCents: 100, dates: ["2026-11-15", "2026-11-17"] }), /today or later/);
+});
 type Input = FinanceCommand extends infer T ? T extends FinanceCommand ? Omit<T, "id" | "at" | "childId"> & Partial<Pick<T, "id" | "at" | "childId">> : never : never;
 function harness(initial: FinanceState = seedFinanceState(AT)) {
   let state = initial, seq = 0;
