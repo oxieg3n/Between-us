@@ -1,0 +1,129 @@
+{
+  "format": 1,
+  "runId": "505e3d1ee06840159375b2b295dfd374",
+  "scope": "LOCAL synthetic logical recovery",
+  "status": "PASS",
+  "sourceDatabaseMutations": "new owned fixture only",
+  "hostedDR": false,
+  "offsiteCopy": false,
+  "providerDeletion": false,
+  "journalRecovery": false,
+  "targetQuarantined": true,
+  "tool": {
+    "version": "1.3.2",
+    "archiveBytes": 20250704,
+    "archiveSha256": "f48d8f8f9ebe903ab5027ed067652f2cc1db94bc206976430133b905dcd8e8c7",
+    "license": "BSD-3-Clause"
+  },
+  "startedAt": "2026-11-16T19:56:20.560Z",
+  "stage": "complete-quarantine-retained",
+  "databaseVersion": "170011",
+  "dumpVersion": "pg_dump (PostgreSQL) 17.11",
+  "ownFixtureCreated": true,
+  "sourcePostSnapshotRevocation": true,
+  "sourceManagedOldTokenDenied": true,
+  "backup": {
+    "ciphertextHash": "de16bf3e5e95f918164dd0b250ba2bc2c3eab5b8e2144b844daa9834186437a5",
+    "ciphertextBytes": 1096254,
+    "snapshotAt": "2026-11-16T19:56:24.340Z",
+    "tableCount": 74,
+    "totalRows": 5747,
+    "migrations": [
+      "202611160001",
+      "202611160002",
+      "202611160003",
+      "202611160004",
+      "202611160005",
+      "202611160006",
+      "202611160007",
+      "202611160008",
+      "202611160009",
+      "202611160010",
+      "202611160011",
+      "202611160012",
+      "202611160013",
+      "202611160014",
+      "202611160015",
+      "202611160016",
+      "202611160017",
+      "202611160018",
+      "202611160019",
+      "202611160020",
+      "202611160021",
+      "202611160022",
+      "202611160023",
+      "202611160024",
+      "202611160025",
+      "202611160026"
+    ]
+  },
+  "faults": {
+    "corruption": "maintained age CLI denied before target creation",
+    "truncation": "maintained age CLI denied before target creation",
+    "wrongKey": "maintained age CLI denied before target creation"
+  },
+  "snapshotIntegrity": "exact rows, table ACL/RLS, functions/policies, migrations",
+  "restoredSqlSuites": [
+    {
+      "file": "finance.test.sql",
+      "sha256": "8916fe49dc5ad68d59c11edd4d9e90ff6954fe443c78e2f807a69618404f5311",
+      "assertions": 31
+    },
+    {
+      "file": "communication.test.sql",
+      "sha256": "238ce16d1b34592832d23d22cf21875d1aa32023ca7d95b9a9b46095e799254c",
+      "assertions": 82
+    },
+    {
+      "file": "privacy_lifecycle.test.sql",
+      "sha256": "f252a9db047dafad715539a01d5c89092718576079ef7eb96660c4bf78e42c6a",
+      "assertions": 71
+    },
+    {
+      "file": "message_receipts.test.sql",
+      "sha256": "743daf18332deaaba4625eb3da5f8276f511968d52754b10d3ad27b146abb116",
+      "assertions": 16
+    }
+  ],
+  "persistedIdempotency": {
+    "savedMessageUuidCount": 1,
+    "approvalCount": 1,
+    "earnedCents": 400,
+    "changedBodyFinanceDenied": true
+  },
+  "replayAssertions": {
+    "erased": 0,
+    "retained": 1,
+    "commands": 1,
+    "sessions": 0,
+    "operators": 0
+  },
+  "restoreMilliseconds": 7438,
+  "snapshotAgeAtRecoveryMilliseconds": 8237,
+  "replayRuns": 2,
+  "completedAt": "2026-11-16T19:56:32.577Z",
+  "executedBy": "Root operator; cooperating engineering review, not independent audit",
+  "command": "node --import tsx scripts/backup-recovery.mjs drill --execute --confirm-local-synthetic-recovery",
+  "sourceFiles": [
+    {
+      "file": "services/backend/scripts/backup-recovery.mjs",
+      "sha256": "5c727ac9096e7b3d887a5f51a5bddf8a9723d182d04572db364df5d61ad0933f"
+    },
+    {
+      "file": "services/backend/recovery/guards.mjs",
+      "sha256": "b7592e5863113f9e6d690cee55c6bbf79f7f7fb4444790f15f1a5dfdf34eb223"
+    },
+    {
+      "file": "services/backend/recovery/fixture.mjs",
+      "sha256": "4761bf550e75c3ce3e3c5f663da1c5513a9e0697d4464375e65c9f9a04883a91"
+    },
+    {
+      "file": "services/backend/recovery/database.mjs",
+      "sha256": "c2298ebd78a3a161f4dfdba69e57053de93f0ba73140c9c22c4796546d6655f2"
+    },
+    {
+      "file": "services/backend/tests/recovery.test.ts",
+      "sha256": "de69451add6679a9584a29a56fd3db230d78159b2f1c6690110d5ff2aeb6a971"
+    }
+  ]
+}

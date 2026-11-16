@@ -1,0 +1,284 @@
+{
+  "format": 1,
+  "runId": "3266a917cf26473b8b83bda4e02191d1",
+  "status": "PASS",
+  "scope": "LOCAL fresh app migration qualification",
+  "sourceWrites": false,
+  "targetQuarantined": true,
+  "hostedFreshInstall": false,
+  "financialCrashProof": true,
+  "stage": "complete-quarantine-retained",
+  "startedAt": "2026-11-16T20:01:48.256Z",
+  "bootstrap": {
+    "schemas": [
+      "auth",
+      "supabase_migrations"
+    ],
+    "rowsCopied": 0,
+    "omittedAppHooks": [
+      "between_us_auth_profile",
+      "between_us_consume_registration",
+      "between_us_strip_registration"
+    ],
+    "sha256": "523460277da99ceea774891416d76ffd3fedb509d65bae47998ea3ba3b9ca650"
+  },
+  "migrations": [
+    {
+      "file": "202611160001_identity.sql",
+      "sha256": "b622999f0138baa0d6878d6eeca8781358c1c4830c23b09fe7843903d5e76a72"
+    },
+    {
+      "file": "202611160002_communication.sql",
+      "sha256": "4b8dcb093739dd945080106837c68140c5e35ed45eca257e1a8aac09f3d82b88"
+    },
+    {
+      "file": "202611160003_finance.sql",
+      "sha256": "f61d2b75bb613e5f7976de47b783c1cacdc23a79814b6ae39a7c2f6d6fb0e5dd"
+    },
+    {
+      "file": "202611160004_privacy_lifecycle.sql",
+      "sha256": "48fc970218033b6b79f949a764a3ecee6b5d524c3f8b47107cf1867ec94f066a"
+    },
+    {
+      "file": "202611160005_case_authorization.sql",
+      "sha256": "2979b4bab240fd39e85ea4818b5184b00b2eb0953a29efcc4d0818544ea8b9c6"
+    },
+    {
+      "file": "202611160006_auth_metadata.sql",
+      "sha256": "0ca4c7462455e72450e18c5943a032818a1e2036a00e98c8549e6f5beec7c6b0"
+    },
+    {
+      "file": "202611160007_auth_updates.sql",
+      "sha256": "09281514ff1d1a12a9189f8f2660a7af0eec11ae45fca0a6b3a1ab4bca4df590"
+    },
+    {
+      "file": "202611160008_external_contacts.sql",
+      "sha256": "9550b6fe16fdfe76ade4ba8a814fa70f06d5d85612daab4178515ce63ba5777c"
+    },
+    {
+      "file": "202611160009_notification_receipts.sql",
+      "sha256": "7b2a4a667b4006bb8e045e96042bd5bc3fe190b939adb988bde161e6c07fd072"
+    },
+    {
+      "file": "202611160010_checkins.sql",
+      "sha256": "cc7d829432c8b9124cddd605922fa71948d9da7bc8234c61ecb74b7095e5c85c"
+    },
+    {
+      "file": "202611160011_account_management.sql",
+      "sha256": "fe982fecb3ad12e2bc769e3a53693c1433407f26a345a6cdec70ead6b830409a"
+    },
+    {
+      "file": "202611160012_receipt_lock_order.sql",
+      "sha256": "353b9e9cdf99c5176ae7be200ecb0c60c92b85bfaf14c64d94978dc0a4b00a99"
+    },
+    {
+      "file": "202611160013_domain_notifications.sql",
+      "sha256": "8134a0fe4be9e0420bbb77b8e6bd8cb3623a44b766503e9af2cebfb5444c71c9"
+    },
+    {
+      "file": "202611160014_parent_finance_export.sql",
+      "sha256": "3afe9cd0002b22beafda0b109a61fc73dd6800354fe7e8997e6cdd42276bbcf4"
+    },
+    {
+      "file": "202611160015_privacy_execution_fix.sql",
+      "sha256": "20e2a6a4052e504259fc9be631c2afffe16feef5a89cfb8df36aa75bdf977eef"
+    },
+    {
+      "file": "202611160016_conversation_previews.sql",
+      "sha256": "56ba150ea7966d7f31ab87e433483c294b668140135cbdf1d186f34cd829e4dd"
+    },
+    {
+      "file": "202611160017_invalidation_authorization.sql",
+      "sha256": "0e7b47fe65943a1e40a3313acf4cfccef7e80e7e2c3a17238e1353b79935ac32"
+    },
+    {
+      "file": "202611160018_message_response_preferences.sql",
+      "sha256": "08a657c40cc1f1e3805d42b150f0bf45742387f909e60026c65177242abb77df"
+    },
+    {
+      "file": "202611160019_family_administration.sql",
+      "sha256": "02e7246fa142b33db3d8737a1841ef53afa2304891672e16e4c1bac951423495"
+    },
+    {
+      "file": "202611160020_invalidation_retention.sql",
+      "sha256": "8c152791f4fe35c3a430b35355212986cb8d14848117d2f1894a5a7317435b03"
+    },
+    {
+      "file": "202611160021_context_child_eligibility.sql",
+      "sha256": "01894061cd76e93f857113c424e3f07ffd9459782db548d39eae6bb38b51cd66"
+    },
+    {
+      "file": "202611160022_message_receipts.sql",
+      "sha256": "9099f80505c9dbaa55a6fddcafbfcb4e1e0e20263cc0c725379a93d5b9b71c1a"
+    },
+    {
+      "file": "202611160023_finance_notifications.sql",
+      "sha256": "e9351749e9547d5e55307fd1223dd7b046911dfdeecb65948396474e6f6fc978"
+    },
+    {
+      "file": "202611160024_journal_session_lease.sql",
+      "sha256": "1954ccf577a864415547d67ce01ac34c3d0048e056d7941a6f827fb9af80f6c2"
+    },
+    {
+      "file": "202611160025_current_actor_clock.sql",
+      "sha256": "92a41670cf94747acb662bcfacbf7464ccd2b9045d865f1f6c0bf0182c5c5654"
+    },
+    {
+      "file": "202611160026_resource_guardrails.sql",
+      "sha256": "cc4529281429f713c25e610063ab56f6ff7ab634b3c2242638d1c142c809e1cd"
+    }
+  ],
+  "schemaParity": {
+    "tableCount": 74,
+    "functionsPoliciesHash": "b7b5c9d7bf19a340b11b7f4f36be33396f57eee44bfc8eb911be1d3c369d2573",
+    "ownersRlsGrantsAndMigrationsEqual": true
+  },
+  "freshDefaultsClosed": true,
+  "sqlSuites": [
+    {
+      "file": "account_management.test.sql",
+      "sha256": "ec0bcc23304d1e294d927046bde6f75a036d7b6de528c0618f83c0700003aded",
+      "assertions": 76
+    },
+    {
+      "file": "checkins.test.sql",
+      "sha256": "7c53fab748765e966ade8ce5b7b217682e57aeff67eb4f9fa78a553ff60bd1ab",
+      "assertions": 75
+    },
+    {
+      "file": "child_context_eligibility.test.sql",
+      "sha256": "8f0be0345f077e170e8b0e05a6f2afa4278c2b51a8bea20b52bae107ae9fe82d",
+      "assertions": 32
+    },
+    {
+      "file": "communication.test.sql",
+      "sha256": "238ce16d1b34592832d23d22cf21875d1aa32023ca7d95b9a9b46095e799254c",
+      "assertions": 82
+    },
+    {
+      "file": "conversation_previews.test.sql",
+      "sha256": "e2260aee24d40067cfceec5b7badf7c7466e220a5b895bc92103ca60267d7cf6",
+      "assertions": 51
+    },
+    {
+      "file": "domain_notifications.test.sql",
+      "sha256": "ec1ad9e4e775a1d91c13ca82ffb572d2981da2fb22af17647545ad6a966eb935",
+      "assertions": 52
+    },
+    {
+      "file": "external_contacts.test.sql",
+      "sha256": "e9bcac65223984c5b4093fb14ff24d10c1675af8042532b298c1fc94d19940bc",
+      "assertions": 84
+    },
+    {
+      "file": "family_administration.test.sql",
+      "sha256": "c147311e84f3e45584269033d505fa41b8d8d659a457a84b2f17f32a10c98caf",
+      "assertions": 44
+    },
+    {
+      "file": "finance.test.sql",
+      "sha256": "8916fe49dc5ad68d59c11edd4d9e90ff6954fe443c78e2f807a69618404f5311",
+      "assertions": 31
+    },
+    {
+      "file": "finance_notifications.test.sql",
+      "sha256": "80ab7444dfbb0ec9dc858c23251ff8ba58e3df8c67daa974133c55ec896dda64",
+      "assertions": 62
+    },
+    {
+      "file": "identity.test.sql",
+      "sha256": "846dc857eea75b48e5c82a078bdd1225842425e6089b4a9715d22b302e1e6344",
+      "assertions": 48
+    },
+    {
+      "file": "invalidation_authorization.test.sql",
+      "sha256": "ff775a0c5eb56cd8d71ed787d3b456a5f2e43f5eba4f4790f49b97748c02231e",
+      "assertions": 41
+    },
+    {
+      "file": "invalidation_retention.test.sql",
+      "sha256": "2e0ad8c023ea1fe28f94e703409be9678a0d4e567801eb2ee2fd413175ea52d3",
+      "assertions": 33
+    },
+    {
+      "file": "journal_session_lease.test.sql",
+      "sha256": "fbe9be18c5fd80a8d51cd975a3b86ea6e28a218d7b39d4a293884c9bcec3f3fd",
+      "assertions": 33
+    },
+    {
+      "file": "message_receipts.test.sql",
+      "sha256": "743daf18332deaaba4625eb3da5f8276f511968d52754b10d3ad27b146abb116",
+      "assertions": 16
+    },
+    {
+      "file": "message_response_preferences.test.sql",
+      "sha256": "ee5b1c1f7ea70391778e22d944b4678bd002d9da0062a78701c3adb7972c7935",
+      "assertions": 31
+    },
+    {
+      "file": "notification_receipts.test.sql",
+      "sha256": "f0a35b696eb15cf48302749d35cb353a8fbd0cf18cd6d0eec96429a0547ff00a",
+      "assertions": 23
+    },
+    {
+      "file": "parent_finance_export.test.sql",
+      "sha256": "52f2f58121f19a70abb237a2e773152a3eb72dd3e8a5b73f20157417909f498d",
+      "assertions": 41
+    },
+    {
+      "file": "privacy_lifecycle.test.sql",
+      "sha256": "f252a9db047dafad715539a01d5c89092718576079ef7eb96660c4bf78e42c6a",
+      "assertions": 71
+    },
+    {
+      "file": "qualification_security.test.sql",
+      "sha256": "1a326c97c61507954ab97bd8c9c6b5657d250bd5a65468d2c8dde5a49538bcba",
+      "assertions": 25
+    },
+    {
+      "file": "resource_guardrails.test.sql",
+      "sha256": "0080891f7c704223cec13dfbaad9b222e4ba8153f10046b9dd18680b22b6cfeb",
+      "assertions": 74
+    }
+  ],
+  "crashProbe": {
+    "ownConnectionTerminated": true,
+    "uncommittedRowsAfterReconnect": 0,
+    "scope": "disposable atomic probe; not a financial command crash"
+  },
+  "financialSqlCrash": {
+    "sourceSha256": "8916fe49dc5ad68d59c11edd4d9e90ff6954fe443c78e2f807a69618404f5311",
+    "heldTransactionTaps": 31,
+    "stagedEvents": 2,
+    "stagedCommands": 2,
+    "externallyVisibleBeforeTermination": 0,
+    "familiesEventsCommandsAfterReconnect": 0,
+    "ownConnectionTerminated": true,
+    "scope": "actual financial SQL transaction rollback; not network post-COMMIT recovery or an earned-cents claim"
+  },
+  "completedAt": "2026-11-16T20:02:13.534Z",
+  "executedBy": "Root operator; cooperating engineering review, not independent audit",
+  "command": "node scripts/qualification-database.mjs --execute --confirm-local-synthetic-qualification",
+  "sourceFiles": [
+    {
+      "file": "services/backend/scripts/qualification-database.mjs",
+      "sha256": "204ddc56164f0affb20c8e658e17b1f59abe9726db0a8247f54aa75bf6668ac4"
+    },
+    {
+      "file": "services/backend/recovery/qualification.mjs",
+      "sha256": "498e5c3954ba98473777af14d4460a0bf05d3e9f71f24a72bbc8408586cf90b7"
+    },
+    {
+      "file": "services/backend/recovery/database.mjs",
+      "sha256": "c2298ebd78a3a161f4dfdba69e57053de93f0ba73140c9c22c4796546d6655f2"
+    },
+    {
+      "file": "services/backend/recovery/guards.mjs",
+      "sha256": "b7592e5863113f9e6d690cee55c6bbf79f7f7fb4444790f15f1a5dfdf34eb223"
+    },
+    {
+      "file": "services/backend/tests/qualification-database.test.ts",
+      "sha256": "9d679b3ddec43b4e6d55b6bb7422566f846fb32789ccd2297c3bdc5f42173504"
+    }
+  ]
+}

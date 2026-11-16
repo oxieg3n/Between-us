@@ -1,0 +1,625 @@
+{
+  "format": "between-us-free-budget-v1",
+  "source": "synthetic-sample",
+  "generatedAt": "2026-11-16T20:21:34.031Z",
+  "approval": "Engineering defaults 50/70/90%; owner operating approval required.",
+  "enforcement": false,
+  "hostedTelemetryCollected": false,
+  "assessment": {
+    "state": "normal",
+    "reason": "evaluated",
+    "allowMutations": true,
+    "allowBackgroundWork": true,
+    "allowNewFamilies": true,
+    "metrics": [
+      {
+        "name": "databaseBytes",
+        "used": 0,
+        "quota": 500000000,
+        "ratio": 0,
+        "band": "normal"
+      },
+      {
+        "name": "uncachedEgressBytes",
+        "used": 0,
+        "quota": 5000000000,
+        "ratio": 0,
+        "band": "normal"
+      },
+      {
+        "name": "cachedEgressBytes",
+        "used": 0,
+        "quota": 5000000000,
+        "ratio": 0,
+        "band": "normal"
+      },
+      {
+        "name": "storageBytes",
+        "used": 0,
+        "quota": 1000000000,
+        "ratio": 0,
+        "band": "normal"
+      },
+      {
+        "name": "monthlyActiveUsers",
+        "used": 0,
+        "quota": 50000,
+        "ratio": 0,
+        "band": "normal"
+      },
+      {
+        "name": "edgeInvocations",
+        "used": 0,
+        "quota": 500000,
+        "ratio": 0,
+        "band": "normal"
+      },
+      {
+        "name": "realtimeMessages",
+        "used": 0,
+        "quota": 2000000,
+        "ratio": 0,
+        "band": "normal"
+      },
+      {
+        "name": "peakRealtimeConnections",
+        "used": 0,
+        "quota": 200,
+        "ratio": 0,
+        "band": "normal"
+      },
+      {
+        "name": "realtimeMessagesPerSecond",
+        "used": 0,
+        "quota": 100,
+        "ratio": 0,
+        "band": "normal"
+      },
+      {
+        "name": "channelJoinsPerSecond",
+        "used": 0,
+        "quota": 100,
+        "ratio": 0,
+        "band": "normal"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "kind": "estimate",
+      "families": 10,
+      "assumptions": {
+        "accountsPerFamily": 4,
+        "daysPerMonth": 30,
+        "messagesPerFamilyDay": 10,
+        "messageHistoryDays": 30,
+        "storedMessageBytes": 4096,
+        "financeCommandsPerFamilyDay": 6,
+        "financeGrowthDays": 365,
+        "storedFinanceCommandBytes": 1536,
+        "childrenPerFamily": 2,
+        "financeHiddenCommandFraction": 0.1,
+        "financeEventsPerCommand": 1,
+        "identityConsentBytesPerFamily": 65536,
+        "checkinsPerFamilyDay": 2,
+        "checkinHistoryDays": 30,
+        "storedCheckinBytes": 512,
+        "notificationsPerFamilyDay": 12,
+        "notificationHistoryDays": 30,
+        "storedNotificationBytes": 512,
+        "casesPerFamilyMonth": 0.1,
+        "caseHistoryMonths": 6,
+        "storedCaseBytes": 8192,
+        "indexAndOverheadMultiplier": 1.5,
+        "fixedDatabaseBytes": 40000000,
+        "requestsPerAccountDay": 40,
+        "retryMultiplier": 1.1,
+        "egressBytesPerAccountDay": 100000,
+        "fullExportsPerMonth": 4,
+        "logicalExportToDatabaseRatio": 1,
+        "activeAccountFraction": 0.1,
+        "socketsPerActiveAccount": 1.25,
+        "meteredHintsPerMutation": 3
+      },
+      "databaseComponents": {
+        "identityConsentBytes": 655360,
+        "messageBytes": 12288000,
+        "financeBytes": 33638400,
+        "checkinBytes": 307200,
+        "notificationBytes": 1843200,
+        "caseBytes": 49152
+      },
+      "backupEgressBytes": 452687872,
+      "writesPerDay": 300,
+      "applicationCapacity": {
+        "limits": {
+          "visibleEventsPerChild": 128,
+          "hiddenEventsPerChild": 32,
+          "occurrences": 100,
+          "goals": 32,
+          "savingsRules": 8,
+          "payouts": 32,
+          "paymentsPerPayout": 32
+        },
+        "daysUntilVisibleCapacity": 47.407407407407405,
+        "daysUntilHiddenCapacity": 106.66666666666666,
+        "forecastExceedsCurrentApplicationCapacity": true,
+        "actualEventsPerCommandMeasured": false,
+        "automaticDeletion": false
+      },
+      "averageWritesPerSecond": 0.003472222222222222,
+      "estimates": {
+        "databaseBytes": 113171968,
+        "uncachedEgressBytes": 584687872,
+        "cachedEgressBytes": 0,
+        "storageBytes": 0,
+        "monthlyActiveUsers": 40,
+        "edgeInvocations": 52801,
+        "realtimeMessages": 17820,
+        "peakRealtimeConnections": 5
+      },
+      "limits": [
+        {
+          "name": "databaseBytes",
+          "used": 113171968,
+          "quota": 500000000,
+          "ratio": 0.226343936,
+          "band": "normal"
+        },
+        {
+          "name": "uncachedEgressBytes",
+          "used": 584687872,
+          "quota": 5000000000,
+          "ratio": 0.1169375744,
+          "band": "normal"
+        },
+        {
+          "name": "cachedEgressBytes",
+          "used": 0,
+          "quota": 5000000000,
+          "ratio": 0,
+          "band": "normal"
+        },
+        {
+          "name": "storageBytes",
+          "used": 0,
+          "quota": 1000000000,
+          "ratio": 0,
+          "band": "normal"
+        },
+        {
+          "name": "monthlyActiveUsers",
+          "used": 40,
+          "quota": 50000,
+          "ratio": 0.0008,
+          "band": "normal"
+        },
+        {
+          "name": "edgeInvocations",
+          "used": 52801,
+          "quota": 500000,
+          "ratio": 0.105602,
+          "band": "normal"
+        },
+        {
+          "name": "realtimeMessages",
+          "used": 17820,
+          "quota": 2000000,
+          "ratio": 0.00891,
+          "band": "normal"
+        },
+        {
+          "name": "peakRealtimeConnections",
+          "used": 5,
+          "quota": 200,
+          "ratio": 0.025,
+          "band": "normal"
+        }
+      ],
+      "burstCapacityProven": false,
+      "hostingCapacityProven": false
+    },
+    {
+      "kind": "estimate",
+      "families": 100,
+      "assumptions": {
+        "accountsPerFamily": 4,
+        "daysPerMonth": 30,
+        "messagesPerFamilyDay": 10,
+        "messageHistoryDays": 30,
+        "storedMessageBytes": 4096,
+        "financeCommandsPerFamilyDay": 6,
+        "financeGrowthDays": 365,
+        "storedFinanceCommandBytes": 1536,
+        "childrenPerFamily": 2,
+        "financeHiddenCommandFraction": 0.1,
+        "financeEventsPerCommand": 1,
+        "identityConsentBytesPerFamily": 65536,
+        "checkinsPerFamilyDay": 2,
+        "checkinHistoryDays": 30,
+        "storedCheckinBytes": 512,
+        "notificationsPerFamilyDay": 12,
+        "notificationHistoryDays": 30,
+        "storedNotificationBytes": 512,
+        "casesPerFamilyMonth": 0.1,
+        "caseHistoryMonths": 6,
+        "storedCaseBytes": 8192,
+        "indexAndOverheadMultiplier": 1.5,
+        "fixedDatabaseBytes": 40000000,
+        "requestsPerAccountDay": 40,
+        "retryMultiplier": 1.1,
+        "egressBytesPerAccountDay": 100000,
+        "fullExportsPerMonth": 4,
+        "logicalExportToDatabaseRatio": 1,
+        "activeAccountFraction": 0.1,
+        "socketsPerActiveAccount": 1.25,
+        "meteredHintsPerMutation": 3
+      },
+      "databaseComponents": {
+        "identityConsentBytes": 6553600,
+        "messageBytes": 122880000,
+        "financeBytes": 336384000,
+        "checkinBytes": 3072000,
+        "notificationBytes": 18432000,
+        "caseBytes": 491520
+      },
+      "backupEgressBytes": 3086878720,
+      "writesPerDay": 3000,
+      "applicationCapacity": {
+        "limits": {
+          "visibleEventsPerChild": 128,
+          "hiddenEventsPerChild": 32,
+          "occurrences": 100,
+          "goals": 32,
+          "savingsRules": 8,
+          "payouts": 32,
+          "paymentsPerPayout": 32
+        },
+        "daysUntilVisibleCapacity": 47.407407407407405,
+        "daysUntilHiddenCapacity": 106.66666666666666,
+        "forecastExceedsCurrentApplicationCapacity": true,
+        "actualEventsPerCommandMeasured": false,
+        "automaticDeletion": false
+      },
+      "averageWritesPerSecond": 0.034722222222222224,
+      "estimates": {
+        "databaseBytes": 771719680,
+        "uncachedEgressBytes": 4406878720,
+        "cachedEgressBytes": 0,
+        "storageBytes": 0,
+        "monthlyActiveUsers": 400,
+        "edgeInvocations": 528000,
+        "realtimeMessages": 178200,
+        "peakRealtimeConnections": 50
+      },
+      "limits": [
+        {
+          "name": "databaseBytes",
+          "used": 771719680,
+          "quota": 500000000,
+          "ratio": 1.54343936,
+          "band": "unavailable"
+        },
+        {
+          "name": "uncachedEgressBytes",
+          "used": 4406878720,
+          "quota": 5000000000,
+          "ratio": 0.881375744,
+          "band": "restricted"
+        },
+        {
+          "name": "cachedEgressBytes",
+          "used": 0,
+          "quota": 5000000000,
+          "ratio": 0,
+          "band": "normal"
+        },
+        {
+          "name": "storageBytes",
+          "used": 0,
+          "quota": 1000000000,
+          "ratio": 0,
+          "band": "normal"
+        },
+        {
+          "name": "monthlyActiveUsers",
+          "used": 400,
+          "quota": 50000,
+          "ratio": 0.008,
+          "band": "normal"
+        },
+        {
+          "name": "edgeInvocations",
+          "used": 528000,
+          "quota": 500000,
+          "ratio": 1.056,
+          "band": "unavailable"
+        },
+        {
+          "name": "realtimeMessages",
+          "used": 178200,
+          "quota": 2000000,
+          "ratio": 0.0891,
+          "band": "normal"
+        },
+        {
+          "name": "peakRealtimeConnections",
+          "used": 50,
+          "quota": 200,
+          "ratio": 0.25,
+          "band": "normal"
+        }
+      ],
+      "burstCapacityProven": false,
+      "hostingCapacityProven": false
+    },
+    {
+      "kind": "estimate",
+      "families": 500,
+      "assumptions": {
+        "accountsPerFamily": 4,
+        "daysPerMonth": 30,
+        "messagesPerFamilyDay": 10,
+        "messageHistoryDays": 30,
+        "storedMessageBytes": 4096,
+        "financeCommandsPerFamilyDay": 6,
+        "financeGrowthDays": 365,
+        "storedFinanceCommandBytes": 1536,
+        "childrenPerFamily": 2,
+        "financeHiddenCommandFraction": 0.1,
+        "financeEventsPerCommand": 1,
+        "identityConsentBytesPerFamily": 65536,
+        "checkinsPerFamilyDay": 2,
+        "checkinHistoryDays": 30,
+        "storedCheckinBytes": 512,
+        "notificationsPerFamilyDay": 12,
+        "notificationHistoryDays": 30,
+        "storedNotificationBytes": 512,
+        "casesPerFamilyMonth": 0.1,
+        "caseHistoryMonths": 6,
+        "storedCaseBytes": 8192,
+        "indexAndOverheadMultiplier": 1.5,
+        "fixedDatabaseBytes": 40000000,
+        "requestsPerAccountDay": 40,
+        "retryMultiplier": 1.1,
+        "egressBytesPerAccountDay": 100000,
+        "fullExportsPerMonth": 4,
+        "logicalExportToDatabaseRatio": 1,
+        "activeAccountFraction": 0.1,
+        "socketsPerActiveAccount": 1.25,
+        "meteredHintsPerMutation": 3
+      },
+      "databaseComponents": {
+        "identityConsentBytes": 32768000,
+        "messageBytes": 614400000,
+        "financeBytes": 1681920000,
+        "checkinBytes": 15360000,
+        "notificationBytes": 92160000,
+        "caseBytes": 2457600
+      },
+      "backupEgressBytes": 14794393600,
+      "writesPerDay": 15000,
+      "applicationCapacity": {
+        "limits": {
+          "visibleEventsPerChild": 128,
+          "hiddenEventsPerChild": 32,
+          "occurrences": 100,
+          "goals": 32,
+          "savingsRules": 8,
+          "payouts": 32,
+          "paymentsPerPayout": 32
+        },
+        "daysUntilVisibleCapacity": 47.407407407407405,
+        "daysUntilHiddenCapacity": 106.66666666666666,
+        "forecastExceedsCurrentApplicationCapacity": true,
+        "actualEventsPerCommandMeasured": false,
+        "automaticDeletion": false
+      },
+      "averageWritesPerSecond": 0.1736111111111111,
+      "estimates": {
+        "databaseBytes": 3698598400,
+        "uncachedEgressBytes": 21394393600,
+        "cachedEgressBytes": 0,
+        "storageBytes": 0,
+        "monthlyActiveUsers": 2000,
+        "edgeInvocations": 2640000,
+        "realtimeMessages": 891001,
+        "peakRealtimeConnections": 250
+      },
+      "limits": [
+        {
+          "name": "databaseBytes",
+          "used": 3698598400,
+          "quota": 500000000,
+          "ratio": 7.3971968,
+          "band": "unavailable"
+        },
+        {
+          "name": "uncachedEgressBytes",
+          "used": 21394393600,
+          "quota": 5000000000,
+          "ratio": 4.27887872,
+          "band": "unavailable"
+        },
+        {
+          "name": "cachedEgressBytes",
+          "used": 0,
+          "quota": 5000000000,
+          "ratio": 0,
+          "band": "normal"
+        },
+        {
+          "name": "storageBytes",
+          "used": 0,
+          "quota": 1000000000,
+          "ratio": 0,
+          "band": "normal"
+        },
+        {
+          "name": "monthlyActiveUsers",
+          "used": 2000,
+          "quota": 50000,
+          "ratio": 0.04,
+          "band": "normal"
+        },
+        {
+          "name": "edgeInvocations",
+          "used": 2640000,
+          "quota": 500000,
+          "ratio": 5.28,
+          "band": "unavailable"
+        },
+        {
+          "name": "realtimeMessages",
+          "used": 891001,
+          "quota": 2000000,
+          "ratio": 0.4455005,
+          "band": "normal"
+        },
+        {
+          "name": "peakRealtimeConnections",
+          "used": 250,
+          "quota": 200,
+          "ratio": 1.25,
+          "band": "unavailable"
+        }
+      ],
+      "burstCapacityProven": false,
+      "hostingCapacityProven": false
+    },
+    {
+      "kind": "estimate",
+      "families": 1000,
+      "assumptions": {
+        "accountsPerFamily": 4,
+        "daysPerMonth": 30,
+        "messagesPerFamilyDay": 10,
+        "messageHistoryDays": 30,
+        "storedMessageBytes": 4096,
+        "financeCommandsPerFamilyDay": 6,
+        "financeGrowthDays": 365,
+        "storedFinanceCommandBytes": 1536,
+        "childrenPerFamily": 2,
+        "financeHiddenCommandFraction": 0.1,
+        "financeEventsPerCommand": 1,
+        "identityConsentBytesPerFamily": 65536,
+        "checkinsPerFamilyDay": 2,
+        "checkinHistoryDays": 30,
+        "storedCheckinBytes": 512,
+        "notificationsPerFamilyDay": 12,
+        "notificationHistoryDays": 30,
+        "storedNotificationBytes": 512,
+        "casesPerFamilyMonth": 0.1,
+        "caseHistoryMonths": 6,
+        "storedCaseBytes": 8192,
+        "indexAndOverheadMultiplier": 1.5,
+        "fixedDatabaseBytes": 40000000,
+        "requestsPerAccountDay": 40,
+        "retryMultiplier": 1.1,
+        "egressBytesPerAccountDay": 100000,
+        "fullExportsPerMonth": 4,
+        "logicalExportToDatabaseRatio": 1,
+        "activeAccountFraction": 0.1,
+        "socketsPerActiveAccount": 1.25,
+        "meteredHintsPerMutation": 3
+      },
+      "databaseComponents": {
+        "identityConsentBytes": 65536000,
+        "messageBytes": 1228800000,
+        "financeBytes": 3363840000,
+        "checkinBytes": 30720000,
+        "notificationBytes": 184320000,
+        "caseBytes": 4915200
+      },
+      "backupEgressBytes": 29428787200,
+      "writesPerDay": 30000,
+      "applicationCapacity": {
+        "limits": {
+          "visibleEventsPerChild": 128,
+          "hiddenEventsPerChild": 32,
+          "occurrences": 100,
+          "goals": 32,
+          "savingsRules": 8,
+          "payouts": 32,
+          "paymentsPerPayout": 32
+        },
+        "daysUntilVisibleCapacity": 47.407407407407405,
+        "daysUntilHiddenCapacity": 106.66666666666666,
+        "forecastExceedsCurrentApplicationCapacity": true,
+        "actualEventsPerCommandMeasured": false,
+        "automaticDeletion": false
+      },
+      "averageWritesPerSecond": 0.3472222222222222,
+      "estimates": {
+        "databaseBytes": 7357196800,
+        "uncachedEgressBytes": 42628787200,
+        "cachedEgressBytes": 0,
+        "storageBytes": 0,
+        "monthlyActiveUsers": 4000,
+        "edgeInvocations": 5280000,
+        "realtimeMessages": 1782001,
+        "peakRealtimeConnections": 500
+      },
+      "limits": [
+        {
+          "name": "databaseBytes",
+          "used": 7357196800,
+          "quota": 500000000,
+          "ratio": 14.7143936,
+          "band": "unavailable"
+        },
+        {
+          "name": "uncachedEgressBytes",
+          "used": 42628787200,
+          "quota": 5000000000,
+          "ratio": 8.52575744,
+          "band": "unavailable"
+        },
+        {
+          "name": "cachedEgressBytes",
+          "used": 0,
+          "quota": 5000000000,
+          "ratio": 0,
+          "band": "normal"
+        },
+        {
+          "name": "storageBytes",
+          "used": 0,
+          "quota": 1000000000,
+          "ratio": 0,
+          "band": "normal"
+        },
+        {
+          "name": "monthlyActiveUsers",
+          "used": 4000,
+          "quota": 50000,
+          "ratio": 0.08,
+          "band": "normal"
+        },
+        {
+          "name": "edgeInvocations",
+          "used": 5280000,
+          "quota": 500000,
+          "ratio": 10.56,
+          "band": "unavailable"
+        },
+        {
+          "name": "realtimeMessages",
+          "used": 1782001,
+          "quota": 2000000,
+          "ratio": 0.8910005,
+          "band": "restricted"
+        },
+        {
+          "name": "peakRealtimeConnections",
+          "used": 500,
+          "quota": 200,
+          "ratio": 2.5,
+          "band": "unavailable"
+        }
+      ],
+      "burstCapacityProven": false,
+      "hostingCapacityProven": false
+    }
+  ]
+}

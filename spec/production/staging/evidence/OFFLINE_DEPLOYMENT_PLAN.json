@@ -1,0 +1,235 @@
+{
+  "format": "between-us-offline-staging-plan-v1",
+  "mode": "local-inventory",
+  "cliVersion": "3.1.0",
+  "target": {
+    "environment": "local",
+    "syntheticOnly": true,
+    "hostedTarget": false
+  },
+  "fingerprint": "6dd26cdc6abd894330bc01434188a24a3dce520d621c2ee43442b3e48efddafb",
+  "migrations": [
+    {
+      "name": "202611160001_identity.sql",
+      "sha256": "b622999f0138baa0d6878d6eeca8781358c1c4830c23b09fe7843903d5e76a72"
+    },
+    {
+      "name": "202611160002_communication.sql",
+      "sha256": "4b8dcb093739dd945080106837c68140c5e35ed45eca257e1a8aac09f3d82b88"
+    },
+    {
+      "name": "202611160003_finance.sql",
+      "sha256": "f61d2b75bb613e5f7976de47b783c1cacdc23a79814b6ae39a7c2f6d6fb0e5dd"
+    },
+    {
+      "name": "202611160004_privacy_lifecycle.sql",
+      "sha256": "48fc970218033b6b79f949a764a3ecee6b5d524c3f8b47107cf1867ec94f066a"
+    },
+    {
+      "name": "202611160005_case_authorization.sql",
+      "sha256": "2979b4bab240fd39e85ea4818b5184b00b2eb0953a29efcc4d0818544ea8b9c6"
+    },
+    {
+      "name": "202611160006_auth_metadata.sql",
+      "sha256": "0ca4c7462455e72450e18c5943a032818a1e2036a00e98c8549e6f5beec7c6b0"
+    },
+    {
+      "name": "202611160007_auth_updates.sql",
+      "sha256": "09281514ff1d1a12a9189f8f2660a7af0eec11ae45fca0a6b3a1ab4bca4df590"
+    },
+    {
+      "name": "202611160008_external_contacts.sql",
+      "sha256": "9550b6fe16fdfe76ade4ba8a814fa70f06d5d85612daab4178515ce63ba5777c"
+    },
+    {
+      "name": "202611160009_notification_receipts.sql",
+      "sha256": "7b2a4a667b4006bb8e045e96042bd5bc3fe190b939adb988bde161e6c07fd072"
+    },
+    {
+      "name": "202611160010_checkins.sql",
+      "sha256": "cc7d829432c8b9124cddd605922fa71948d9da7bc8234c61ecb74b7095e5c85c"
+    },
+    {
+      "name": "202611160011_account_management.sql",
+      "sha256": "fe982fecb3ad12e2bc769e3a53693c1433407f26a345a6cdec70ead6b830409a"
+    },
+    {
+      "name": "202611160012_receipt_lock_order.sql",
+      "sha256": "353b9e9cdf99c5176ae7be200ecb0c60c92b85bfaf14c64d94978dc0a4b00a99"
+    },
+    {
+      "name": "202611160013_domain_notifications.sql",
+      "sha256": "8134a0fe4be9e0420bbb77b8e6bd8cb3623a44b766503e9af2cebfb5444c71c9"
+    },
+    {
+      "name": "202611160014_parent_finance_export.sql",
+      "sha256": "3afe9cd0002b22beafda0b109a61fc73dd6800354fe7e8997e6cdd42276bbcf4"
+    },
+    {
+      "name": "202611160015_privacy_execution_fix.sql",
+      "sha256": "20e2a6a4052e504259fc9be631c2afffe16feef5a89cfb8df36aa75bdf977eef"
+    },
+    {
+      "name": "202611160016_conversation_previews.sql",
+      "sha256": "56ba150ea7966d7f31ab87e433483c294b668140135cbdf1d186f34cd829e4dd"
+    },
+    {
+      "name": "202611160017_invalidation_authorization.sql",
+      "sha256": "0e7b47fe65943a1e40a3313acf4cfccef7e80e7e2c3a17238e1353b79935ac32"
+    },
+    {
+      "name": "202611160018_message_response_preferences.sql",
+      "sha256": "08a657c40cc1f1e3805d42b150f0bf45742387f909e60026c65177242abb77df"
+    },
+    {
+      "name": "202611160019_family_administration.sql",
+      "sha256": "02e7246fa142b33db3d8737a1841ef53afa2304891672e16e4c1bac951423495"
+    },
+    {
+      "name": "202611160020_invalidation_retention.sql",
+      "sha256": "8c152791f4fe35c3a430b35355212986cb8d14848117d2f1894a5a7317435b03"
+    },
+    {
+      "name": "202611160021_context_child_eligibility.sql",
+      "sha256": "01894061cd76e93f857113c424e3f07ffd9459782db548d39eae6bb38b51cd66"
+    },
+    {
+      "name": "202611160022_message_receipts.sql",
+      "sha256": "9099f80505c9dbaa55a6fddcafbfcb4e1e0e20263cc0c725379a93d5b9b71c1a"
+    },
+    {
+      "name": "202611160023_finance_notifications.sql",
+      "sha256": "e9351749e9547d5e55307fd1223dd7b046911dfdeecb65948396474e6f6fc978"
+    },
+    {
+      "name": "202611160024_journal_session_lease.sql",
+      "sha256": "1954ccf577a864415547d67ce01ac34c3d0048e056d7941a6f827fb9af80f6c2"
+    },
+    {
+      "name": "202611160025_current_actor_clock.sql",
+      "sha256": "92a41670cf94747acb662bcfacbf7464ccd2b9045d865f1f6c0bf0182c5c5654"
+    },
+    {
+      "name": "202611160026_resource_guardrails.sql",
+      "sha256": "cc4529281429f713c25e610063ab56f6ff7ab634b3c2242638d1c142c809e1cd"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "../../apps/mobile/app.json",
+      "sha256": "1be46b06c3ba9114b3fd74096fff4b7f2ddae5cc173a5fdd3db3917b176fd8c4"
+    },
+    {
+      "name": "../../apps/mobile/package-lock.json",
+      "sha256": "5650fb67de40433f9f7e0418ceb02479a85bb780fb47cdc9091c01b7ee9ae86a"
+    },
+    {
+      "name": "../../apps/mobile/package.json",
+      "sha256": "653dbc2df1243842a25f01a1c996b4e7f4484455f6bf5c2eeffc1ca7477ff7be"
+    },
+    {
+      "name": "../../apps/mobile/src/build.ts",
+      "sha256": "f4c7d9e1d78c317dba70dc549fbff4e7b0280487ed08ab1831cf424ca2600063"
+    },
+    {
+      "name": "../../apps/mobile/src/finance/engine.ts",
+      "sha256": "4d285d415ba50338c8abb437458f5f64d5b9068dbdea2708bed34b4efa0262bc"
+    },
+    {
+      "name": "../../apps/mobile/src/finance/money-calendar.ts",
+      "sha256": "63006abd19e84ac8e4de972de71d5e9c41b9a01948af2bd5a5a62531296b5202"
+    },
+    {
+      "name": "../../apps/mobile/src/finance/types.ts",
+      "sha256": "1d2d6d6f0cd817f9008ecdfda21660b587ce15f77949af80b186298479e7de41"
+    },
+    {
+      "name": "../../apps/mobile/src/production/client.ts",
+      "sha256": "c2f9dae487003d5fc3510fce98ea3ee9fd200f5ebdcd7a81face20ff8d9b228a"
+    },
+    {
+      "name": "../../apps/mobile/src/production/deployment-target.ts",
+      "sha256": "3f43cd12ff384432376f7b7a496ee9575ead56e03b714eea2835077553c5c3c4"
+    },
+    {
+      "name": "config/staging/approved-targets.json",
+      "sha256": "6904c60dd78bf87b35c75b5b82ac0b10ce48a71d66fc1d950c71e80050474833"
+    },
+    {
+      "name": "package-lock.json",
+      "sha256": "2fc6ae62460b6d93d0ee6ba51984c52b248d5199b019efa8d26f85b50be6e1d4"
+    },
+    {
+      "name": "package.json",
+      "sha256": "6476a494a177f6009f5267354cf93bc7514960284242b58b5a209b4d994a3bd9"
+    },
+    {
+      "name": "scripts/build.mjs",
+      "sha256": "4105aa482fac6188f4a1ad42f189f9d5c88832b847b7fb402403eafcc03dc047"
+    },
+    {
+      "name": "scripts/staging-plan.mjs",
+      "sha256": "1a85dae50b2c7258021ae9b57cb25a18f218cbf144c8c80e9bb4c09455174025"
+    },
+    {
+      "name": "scripts/staging-preflight.mjs",
+      "sha256": "dd04a508244d5e22167bcb5a91313548ca2ab0cb62b9ff3794ef03bd2f877044"
+    },
+    {
+      "name": "src/api.ts",
+      "sha256": "0356249742f746066e1803010ea70a9c2c3630c7330774869f7dfbdfa8a4a5a2"
+    },
+    {
+      "name": "src/edge-mount.ts",
+      "sha256": "aaf9a2986f28c6c853a46bf8efe2fc7c3ebc303d253ace1bd8382b38a40a42bc"
+    },
+    {
+      "name": "src/finance-notifications.ts",
+      "sha256": "08efa07515d32b117456bc3969611851ad694a8bb7c05f0a23a5fe71a0489171"
+    },
+    {
+      "name": "src/finance.ts",
+      "sha256": "e6c2cdbeb350287f49a2e51914a29a4da68a6d320ba518df47e8fc12c76a4ecf"
+    },
+    {
+      "name": "src/free-plan.ts",
+      "sha256": "1a12bd198fc41a7371e3801e968e6b7e98e6195902e4bc98d02b7a1ca759f27f"
+    },
+    {
+      "name": "src/local-server.ts",
+      "sha256": "2792edf37238146a5cca6ad0f5de78a4085472226ab285eb3c5c850d36585a92"
+    },
+    {
+      "name": "src/notification-cycle.ts",
+      "sha256": "cd7a86693af6e3e2bc290ed0e871d350157f714b26f30f21354a63816c5f6baf"
+    },
+    {
+      "name": "src/notifications.ts",
+      "sha256": "7d486c5b90e2a150d98a81630d80f6303773fd04c1a2b3adf0e16eed0e04aadf"
+    },
+    {
+      "name": "src/privacy.ts",
+      "sha256": "c56df596ad42e5af187638150e5a07a67eb08ba9c765c902f4ea769a0b58c78a"
+    },
+    {
+      "name": "supabase/config.toml",
+      "sha256": "018029d051314b7688048f39e0feb7139b0fd867b04e4ec117bfeba223c21caf"
+    },
+    {
+      "name": "supabase/functions/_shared/api.bundle.js",
+      "sha256": "b31fa5cbf256e303023b8098e09d56d35685c67d3e113f1766694f18fd43dee2"
+    },
+    {
+      "name": "supabase/functions/api/index.ts",
+      "sha256": "13a9a9a7d33a8d4289424f6040960326761e5fe16a7ca0bbb559455a8ca59e3f"
+    }
+  ],
+  "networkPerformed": false,
+  "credentialsRead": false,
+  "hostedPlanVerified": false,
+  "deploymentAuthorized": false,
+  "migrationApplicationVerified": false,
+  "commands": [],
+  "blocked": "OWNER_APPROVED_STAGING_TARGET_REQUIRED",
+  "executed": false
+}

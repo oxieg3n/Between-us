@@ -57,3 +57,7 @@ Specialist ownership: costs/comparison helper owns COST_ANALYSIS.md/BACKEND_COMP
 Public enrollment and real child data stay disabled. Legal launch states/age eligibility/VPC/journal-rights policy, safety operator, hosted credentials/SMTP/push and store/signing approvals are external gates, not permission to stop independent local implementation.
 
 Checkpoint: 413 pgTAP assertions, two real managed-Auth HTTP scenarios, and all 19 original demo browser scenarios pass. Android x86_64 debug compilation succeeds; native runtime and production-screen browser QA are next. See [actual checks](TEST_RESULTS.md). New contact/check-in/vault/model screens are being integrated; their existence is not an operational-service or production-readiness claim.
+
+## Staging r1 qualification - 2026-11-16
+
+Current engineering source is staging r1 / `10aba61d756a8d54f22ec03afc3287c638805060`, separate branch `feature/staging-release-qualification`. The [staging phase ledger](staging/PROGRESS.md) and [final qualification](staging/FINAL_RELEASE_QUALIFICATION.md) supersede optimistic interpretations of historical p3 progress; they preserve prior evidence and distinguish local proof from open internal/external release gates.

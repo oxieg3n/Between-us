@@ -1,0 +1,1231 @@
+{
+    "schemaVersion":  1,
+    "reviewDate":  "2026-11-16",
+    "reviewer":  "security_qualification engineering peer within the implementation team",
+    "independence":  "NOT_THIRD_PARTY; reviewer also authored migration025, qualification tests and deployment-target resolver",
+    "status":  "STATIC_REVIEW_COMPLETE_INTERNAL_AND_EXTERNAL_RELEASE_GATES_OPEN",
+    "baseline":  "f859bfb",
+    "branchReportedByRoot":  "feature/staging-release-qualification",
+    "environment":  "repository source only; fictional local qualification context",
+    "method":  "Connected caller/callee source inspection, permission and data-flow review, adversarial-case design and bounded peer cross-review. Individual source hashes are collected without reading private runtime evidence. Focused review is not an exhaustive audit of every line or dependency.",
+    "prohibitedDataAccess":  [
+                                 "environment secrets",
+                                 "diagnostics",
+                                 "live status",
+                                 "private registry or claims",
+                                 "keys",
+                                 "private payloads"
+                             ],
+    "notPerformedInThisPass":  [
+                                   "DB or service execution",
+                                   "hosted calls",
+                                   "Git operations",
+                                   "ADB or native builds",
+                                   "penetration testing",
+                                   "signed artifact inspection",
+                                   "physical device testing",
+                                   "legal determination"
+                               ],
+    "hashInterpretation":  "SHA-256 and byte length identify inspected source at collection time. They do not bind a generated bundle, deployed database or signed package. Root must freeze and recheck the final source/artifact manifest.",
+    "attributedExecutionCheckpoints":  [
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "migration 025",
+                                               "result":  "951 SQL assertions across 20 files PASS; integration 17 PASS",
+                                               "independentlyRerunHere":  false
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "integrated mobile",
+                                               "result":  "266 tests, type and lint PASS",
+                                               "independentlyRerunHere":  false
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "both npm packages",
+                                               "result":  "0 current dependency advisories reported",
+                                               "independentlyRerunHere":  false,
+                                               "limitation":  "Does not establish dependency provenance, absence of unknown vulnerabilities or signed-build correspondence."
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "migration 026",
+                                               "result":  "1,025 SQL assertions across 21 files PASS; integration 17 PASS",
+                                               "independentlyRerunHere":  false
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "backend before new four qualification tests",
+                                               "result":  "75 tests, type and build PASS; later 79 total not inferred",
+                                               "independentlyRerunHere":  false
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "encrypted 025 recovery drill",
+                                               "result":  "PASS: 72 tables, 5,115 rows, 200 restored SQL assertions; corrupt/truncated/wrong-key denial; two revocation replays; exact 400-cent finance result",
+                                               "rtoMs":  9528,
+                                               "snapshotAgeMs":  10348,
+                                               "independentlyRerunHere":  false,
+                                               "limitation":  "Historical025 checkpoint; later026 drill passed as recorded below. Same-host local restore is not independent disaster recovery."
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "fresh 026 quarantined application database",
+                                               "result":  "PASS: zero bootstrap data rows; all 26 migrations; exact owner/RLS/grant/function parity; full 1,025 fresh SQL assertions; own atomic PostgreSQL connection terminated and reconnected with zero uncommitted rows",
+                                               "independentlyRerunHere":  false,
+                                               "limitation":  "Managed platform schema bootstrap, not a hosted platform from scratch; disposable atomic probe, not a financial command crash."
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "native Android emulator",
+                                               "result":  "APK 4 build PASS: 475 tasks, 148 seconds; upgrade install preserves application data; eight light/dark screens and native status-bar fix verified",
+                                               "independentlyRerunHere":  false,
+                                               "limitation":  "TalkBack 17 enabled and Circle focus verified, but traversal mixed with system prompt/UI automation interference and spoken readout unvalidated: PARTIAL. No physical device, iOS, hosted push or signed-owner release pass."
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "final finance local-date regression",
+                                               "result":  "mobile267 tests, type and lint PASS",
+                                               "independentlyRerunHere":  false
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "final026 encrypted restore",
+                                               "runId":  "505e3d1ee06840159375b2b295dfd374",
+                                               "result":  "PASS:74 tables,200 restored SQL assertions; old real managed token denied after source post-backup revocation; tombstones replayed twice",
+                                               "rtoMs":  7438,
+                                               "snapshotAgeMs":  8237,
+                                               "independentlyRerunHere":  false,
+                                               "safeReceipt":  "spec/production/staging/evidence/backup-restore-026.json",
+                                               "limitation":  "Local same-host drill, not hosted recovery or independently operated key/provenance custody."
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "actual financial SQL transaction crash",
+                                               "runId":  "3266a917cf26473b8b83bda4e02191d1",
+                                               "result":  "PASS:31 pinned finance SQL assertions while BEGIN remains open; writer stages2events/2commands, separate reader sees0; terminate only owned connection; family/events/commands0 after termination and reconnect",
+                                               "independentlyRerunHere":  false,
+                                               "safeReceipt":  "spec/production/staging/evidence/fresh-financial-crash-026.json",
+                                               "limitation":  "Actual financial SQL rollback, not network post-COMMIT recovery or earned-cents behavior;31 supplemental checks are not added to global1025 count."
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "backend checkpoint before late QA path-test addition",
+                                               "result":  "86 tests, type and build PASS",
+                                               "independentlyRerunHere":  false
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "final mobile",
+                                               "result":  "270 tests, type and lint PASS",
+                                               "independentlyRerunHere":  false,
+                                               "limitation":  "Full gate preceded final one-line NavigationTab horizontal padding adjustment; actual native/browser visual checks followed that adjustment."
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "corrected final Android debug-native emulator",
+                                               "result":  "475 Gradle tasks PASS in59 seconds; upgrade install; merged normal DETECT present/photo access absent; startup child greeting; protected conversation actual window FLAG_SECURE; no observed native compatibility crash",
+                                               "targetSdk":  36,
+                                               "compileSdk":  37,
+                                               "minSdk":  24,
+                                               "debugArchitectures":  4,
+                                               "independentlyRerunHere":  false,
+                                               "limitation":  "Background/foreground privacy/route changes observed, but direct Your words script heading expectation failed and is not a PASS. No physical device, iOS or owner-signed release proof."
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "post-navigation-fix200% visual recapture",
+                                               "result":  "Journal whole word on one line; all4 navigation tabs visible",
+                                               "independentlyRerunHere":  false,
+                                               "limitation":  "TalkBack remains PARTIAL: spoken readout not validated. Earlier draft-retention evidence remains a separate267 checkpoint."
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "owned Metro launcher",
+                                               "result":  "Bounded20-second readiness retry; Start-ProductionAndroid -RestartApp PASS with new branch-owned Metro; no stopping or listener replacement",
+                                               "independentlyRerunHere":  false,
+                                               "limitation":  "Operational result attributed to Root; launcher source is outside this84-file inspected source list."
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "preserved shared-fixture browser failure",
+                                               "result":  "15/16; correct30USD allowance rejection after41 accumulated events",
+                                               "independentlyRerunHere":  false,
+                                               "limitation":  "Not the128-event cap or a product money-guard bug; old failure/history retained."
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "isolated fictional UI fixture",
+                                               "result":  "Fresh seed PASS; existing default fixture and mobile environment hashes unchanged",
+                                               "independentlyRerunHere":  false,
+                                               "limitation":  "Reviewer did not read actual private fixture/environment or copy their digests."
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "isolated QA path-focused tests",
+                                               "result":  "3 backend and6 mobile tests PASS; root/parent junction and file symlink actually exercised, no skips",
+                                               "independentlyRerunHere":  false
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "final isolated demo",
+                                               "result":  "19 tests PASS",
+                                               "independentlyRerunHere":  false
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "native public Help cold start with both backend ADB routes absent",
+                                               "result":  "PASS; photographed; all routes restored",
+                                               "independentlyRerunHere":  false,
+                                               "limitation":  "Local emulator offline-help observation, not hosted availability or physical-device qualification."
+                                           },
+                                           {
+                                               "executor":  "Root",
+                                               "scope":  "final frozen engineering source",
+                                               "engineeringCommit":  "10aba61d756a8d54f22ec03afc3287c638805060",
+                                               "result":  "mobile276/type/lint PASS; backend89/type/build PASS including3 QA-tool tests; isolated production browser16 PASS1.8min; isolated demo19 PASS1.9min; Android/iOS/web Expo JavaScript exports PASS",
+                                               "independentlyRerunHere":  false,
+                                               "limitation":  "Old shared-fixture15/16 failure retained. JavaScript exports are not native iOS or physical device proof; all functional/external release gates remain explicit."
+                                           }
+                                       ],
+    "findings":  [
+                     {
+                         "id":  "STATIC-01",
+                         "classification":  "FUNCTIONAL_INTERNAL_RELEASE_GATE",
+                         "securitySeverity":  "No authorization bypass demonstrated",
+                         "status":  "OPEN",
+                         "boundary":  "finance history capacity",
+                         "evidence":  "finance.ts capacity() stops new actions at 128 visible or 32 hidden events per child; further object/payment caps also apply",
+                         "requiredDisposition":  "Internal release acceptance blocked pending bounded archive/checkpoint preserving balances, immutable history, replay, restore/export and hidden-world projection. Semantic caps remain128 visible/32 hidden; raising caps or deleting audit events is insufficient."
+                     },
+                     {
+                         "id":  "STATIC-02",
+                         "classification":  "CONFIDENTIALITY_LIMITATION",
+                         "securitySeverity":  "Unquantified timing/availability channel; no per-child metric disclosure demonstrated",
+                         "status":  "OPEN_EXTERNAL_ASSESSMENT",
+                         "boundary":  "project-wide resource guard",
+                         "evidence":  "Global resource-band transitions can reflect aggregate private activity",
+                         "requiredDisposition":  "Retain timing caveat and test equivalent child-visible worlds under contention and guard transitions; no strict noninterference claim."
+                     },
+                     {
+                         "id":  "STATIC-03",
+                         "classification":  "OPERATION_BOUNDARY_PROOF_GAP",
+                         "securitySeverity":  "No universal instantaneous cancellation claim",
+                         "status":  "DOCUMENTED_LIMIT",
+                         "boundary":  "expiry/revocation after initial actor admission",
+                         "evidence":  "025 checks after session wait and finance family wait; contact/message later waits are distinct checkpoints and held SHARE serializes deletion",
+                         "requiredDisposition":  "Specify required operation checkpoints and independently qualify hosted concurrent behavior before stronger revocation claims."
+                     },
+                     {
+                         "id":  "STATIC-04",
+                         "classification":  "UNSUPPORTED_FEATURE",
+                         "securitySeverity":  "Fail-closed compatibility gap",
+                         "status":  "HOSTED_WEB_AUTH_BLOCKED",
+                         "boundary":  "hosted browser callbacks",
+                         "evidence":  "auth-redirect.ts and auth-callback-policy.ts accept only registered native or exact local-review callback",
+                         "requiredDisposition":  "Separate exact reviewed web callback allowlist and PKCE/recovery integration tests before enabling hosted browser auth."
+                     },
+                     {
+                         "id":  "STATIC-05",
+                         "classification":  "EVIDENCE_INTEGRITY",
+                         "securitySeverity":  "Build identification; no authority impact",
+                         "status":  "CORRECTED_SOURCE_REINSPECTED",
+                         "boundary":  "API health candidate label",
+                         "evidence":  "Root corrected src/api.ts health build to 1116-StagingQualification-r1",
+                         "requiredDisposition":  "Root rebuild and hash actual candidate; label is not bundle proof."
+                     },
+                     {
+                         "id":  "STATIC-06",
+                         "classification":  "NATIVE_COMPATIBILITY_HAZARD",
+                         "securitySeverity":  "Potential native availability failure, not a reproduced crash or authorization disclosure",
+                         "status":  "RESOLVED_IN_SOURCE_BEFORE_FINAL_FREEZE",
+                         "boundary":  "Installed Expo eager screenshot callback and Android normal permission",
+                         "evidence":  "Installed ScreenCaptureModule OnCreate/foreground registers callback on API34+ regardless of JS listeners; Android requires DETECT_SCREEN_CAPTURE. Root retains that normal permission and blocks unused READ_MEDIA_IMAGES; no SDK patch or FLAG_SECURE bypass.",
+                         "requiredDisposition":  "Source hazard corrected by retaining normal DETECT and guarded CNG marker repair. Root actual corrected native startup/protected conversation/foreground checks observed no compatibility crash and actual FLAG_SECURE. Physical devices, iOS and owner-signed release remain unqualified."
+                     },
+                     {
+                         "id":  "STATIC-07",
+                         "classification":  "QA_CONTAINMENT_AND_EVIDENCE_INTEGRITY",
+                         "securitySeverity":  "QA isolation issue, not a product money-authorization defect",
+                         "status":  "CORRECTED_SOURCE_ISOLATED_FULL_RERUN_PASS",
+                         "boundary":  "Accumulated shared fixture and bounded private fixture selection",
+                         "evidence":  "Old shared-fixture browser15/16 correctly hit a30USD allowance after41 accumulated events, not128-event cap. New isolated namespace preserves old fixture/environment/history. Canonical privateRoot equality closes root-junction escape; six actual reader tests include root/inner junction/file symlink with no skips.",
+                         "requiredDisposition":  "Preserve original shared-fixture15/16 budget failure/history. Root actual isolated browser16/16 and mobile276 passed, with backend89 including3 new QA-tool tests. Product money guards unchanged; no inferred counts."
+                     }
+                 ],
+    "correctedIssuesFromEarlierPeerReview":  [
+                                                 "025: live finite expiry after session lock; live account/consent eligibility; finance recheck after family wait; own privacy/reauth and parent export post-lock checks",
+                                                 "Recovery: early encrypted construction receipt and incremental identities; source-bound tombstone chronology; actual saved-message count; partial-child failure cannot roll back retirement of independently verified adult fixtures",
+                                                 "026: exact 10 finite/ranged aggregate metrics checked in table constraint, sample RPC and defensive band calculation; leased insert cannot bypass notification lease guard",
+                                                 "Final native delta: retained normal DETECT_SCREEN_CAPTURE for installed eager callback path, while blocking unused READ_MEDIA_IMAGES; JS ownership-tagged capture prevention unchanged.",
+                                                 "QA reader canonical private-root equality now rejects a redirected whole fixture tree; actual root-junction/inner-parent/file-symlink regressions pass. QA fixture creation is isolated/exclusive and preserves default data/environment; no product authorization change."
+                                             ],
+    "standards":  {
+                      "ASVS":  {
+                                   "version":  "5.0.0",
+                                   "source":  "https://raw.githubusercontent.com/OWASP/ASVS/v5.0.0/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.csv",
+                                   "purpose":  "Requirement-to-existing-test mapping, not certification or a requirement-by-requirement pass"
+                               },
+                      "MASVS":  {
+                                    "source":  "https://mas.owasp.org/MASVS/",
+                                    "purpose":  "All 8 domain mapping, not individual-control conformance"
+                                }
+                  },
+    "requirementMappings":  [
+                                {
+                                    "standard":  "ASVS5",
+                                    "requirements":  [
+                                                         "1.2.4",
+                                                         "1.2.5",
+                                                         "2.2.1",
+                                                         "2.2.2"
+                                                     ],
+                                    "boundary":  "Input, SQL and process arguments",
+                                    "tests":  [
+                                                  "services/backend/tests/api.test.ts",
+                                                  "services/backend/tests/finance-service.test.ts",
+                                                  "services/backend/tests/privacy-service.test.ts",
+                                                  "services/backend/tests/free-plan.test.ts",
+                                                  "services/backend/tests/recovery.test.ts"
+                                              ],
+                                    "missing":  "Hosted gateway and independent injection tests"
+                                },
+                                {
+                                    "standard":  "ASVS5",
+                                    "requirements":  [
+                                                         "2.3.1",
+                                                         "2.3.2",
+                                                         "2.3.3",
+                                                         "2.3.4",
+                                                         "2.4.1"
+                                                     ],
+                                    "boundary":  "Sequencing, limits, transactions, locks",
+                                    "tests":  [
+                                                  "services/backend/supabase/tests/communication.test.sql",
+                                                  "services/backend/supabase/tests/external_contacts.test.sql",
+                                                  "services/backend/supabase/tests/finance.test.sql",
+                                                  "services/backend/supabase/tests/resource_guardrails.test.sql",
+                                                  "services/backend/tests/integration/receipt-locks.test.ts",
+                                                  "services/backend/tests/integration/finance-http.test.ts",
+                                                  "apps/mobile/tests/finance.test.ts"
+                                              ],
+                                    "missing":  "Finance longevity/archive, deployed resource feed and contention"
+                                },
+                                {
+                                    "standard":  "ASVS5",
+                                    "requirements":  [
+                                                         "3.4.2",
+                                                         "12.2.1",
+                                                         "13.1.1"
+                                                     ],
+                                    "boundary":  "CORS, TLS and canonical environment pairing",
+                                    "tests":  [
+                                                  "services/backend/tests/api.test.ts",
+                                                  "apps/mobile/tests/deployment-target.test.ts",
+                                                  "apps/mobile/tests/production-transport.test.ts"
+                                              ],
+                                    "missing":  "Hosted configuration, signed package and network trace"
+                                },
+                                {
+                                    "standard":  "ASVS5",
+                                    "requirements":  [
+                                                         "6.1.3",
+                                                         "7.1.1",
+                                                         "7.3.2",
+                                                         "7.4.1",
+                                                         "7.4.2",
+                                                         "7.5.1",
+                                                         "7.5.3"
+                                                     ],
+                                    "boundary":  "Session and reauthentication lifetime",
+                                    "tests":  [
+                                                  "services/backend/supabase/tests/identity.test.sql",
+                                                  "services/backend/supabase/tests/privacy_lifecycle.test.sql",
+                                                  "services/backend/supabase/tests/journal_session_lease.test.sql",
+                                                  "services/backend/supabase/tests/qualification_security.test.sql",
+                                                  "services/backend/tests/integration/qualification-security.test.ts",
+                                                  "apps/mobile/tests/production-session.test.ts",
+                                                  "apps/mobile/tests/journal-offline-lease.test.ts",
+                                                  "apps/mobile/tests/production-recovery.test.ts"
+                                              ],
+                                    "missing":  "Hosted Auth/device proof and specified in-flight cancellation semantics"
+                                },
+                                {
+                                    "standard":  "ASVS5",
+                                    "requirements":  [
+                                                         "8.2.1",
+                                                         "8.2.2",
+                                                         "8.2.3",
+                                                         "8.3.1",
+                                                         "8.3.2",
+                                                         "8.4.1"
+                                                     ],
+                                    "boundary":  "Current function/object/field and family authority",
+                                    "tests":  [
+                                                  "services/backend/supabase/tests/child_context_eligibility.test.sql",
+                                                  "services/backend/supabase/tests/family_administration.test.sql",
+                                                  "services/backend/supabase/tests/invalidation_authorization.test.sql",
+                                                  "services/backend/supabase/tests/qualification_security.test.sql",
+                                                  "services/backend/tests/integration/accounts.test.ts",
+                                                  "services/backend/tests/integration/parent-export.test.ts",
+                                                  "services/backend/tests/integration/realtime.test.ts"
+                                              ],
+                                    "missing":  "Independent hostile direct-caller and current-role race assessment"
+                                },
+                                {
+                                    "standard":  "ASVS5",
+                                    "requirements":  [
+                                                         "9.1.1",
+                                                         "9.1.2",
+                                                         "9.1.3",
+                                                         "9.2.1",
+                                                         "9.2.3",
+                                                         "10.2.1"
+                                                     ],
+                                    "boundary":  "Managed bearer validation and PKCE",
+                                    "tests":  [
+                                                  "services/backend/tests/api.test.ts",
+                                                  "services/backend/tests/integration/qualification-security.test.ts",
+                                                  "apps/mobile/tests/auth-callback.test.ts",
+                                                  "apps/mobile/tests/auth-crypto.test.ts",
+                                                  "apps/mobile/tests/deployment-target.test.ts"
+                                              ],
+                                    "missing":  "Hosted key rotation, issuer/audience and actual recovery link flows"
+                                },
+                                {
+                                    "standard":  "ASVS5",
+                                    "requirements":  [
+                                                         "11.1.1",
+                                                         "11.4.3",
+                                                         "11.5.1",
+                                                         "13.3.1",
+                                                         "13.3.2"
+                                                     ],
+                                    "boundary":  "Keys, hashes and secret separation",
+                                    "tests":  [
+                                                  "apps/mobile/tests/vault.test.ts",
+                                                  "apps/mobile/tests/vault-exclusive.test.ts",
+                                                  "apps/mobile/tests/message-outbox.test.ts",
+                                                  "apps/mobile/tests/local-model.test.ts",
+                                                  "services/backend/tests/recovery.test.ts"
+                                              ],
+                                    "missing":  "Owner custody/loss/rotation and physical secure-storage proof; record UUIDs are not claimed as128-bit authenticators"
+                                },
+                                {
+                                    "standard":  "ASVS5",
+                                    "requirements":  [
+                                                         "14.1.1",
+                                                         "14.2.1",
+                                                         "14.2.4",
+                                                         "14.2.6",
+                                                         "14.2.7",
+                                                         "14.3.1"
+                                                     ],
+                                    "boundary":  "Private author-local data and minimal outputs",
+                                    "tests":  [
+                                                  "apps/mobile/tests/private-writing-lifetime.test.ts",
+                                                  "apps/mobile/tests/private-message-drafts.test.ts",
+                                                  "apps/mobile/tests/production-journal-model.test.ts",
+                                                  "apps/mobile/tests/durable-message-send.test.ts",
+                                                  "services/backend/tests/notifications.test.ts",
+                                                  "services/backend/tests/finance-notifications.test.ts",
+                                                  "services/backend/tests/privacy-service.test.ts"
+                                              ],
+                                    "missing":  "Physical retention/backup/provider observation and legal rights/retention decisions"
+                                },
+                                {
+                                    "standard":  "ASVS5",
+                                    "requirements":  [
+                                                         "13.4.2",
+                                                         "15.1.1",
+                                                         "16.1.1"
+                                                     ],
+                                    "boundary":  "Release, dependency and error controls",
+                                    "tests":  [
+                                                  "apps/mobile/tests/production-transport.test.ts",
+                                                  "services/backend/tests/recovery.test.ts",
+                                                  "services/backend/tests/notification-cycle.test.ts"
+                                              ],
+                                    "missing":  "Pinned SBOM, remediation ownership, signed provenance and deployed logging inventory"
+                                },
+                                {
+                                    "standard":  "MASVS",
+                                    "requirements":  [
+                                                         "STORAGE"
+                                                     ],
+                                    "tests":  [
+                                                  "apps/mobile/tests/vault.test.ts",
+                                                  "apps/mobile/tests/vault-exclusive.test.ts",
+                                                  "apps/mobile/tests/journal-storage-controls.test.ts",
+                                                  "apps/mobile/tests/message-outbox.test.ts"
+                                              ],
+                                    "missing":  "Physical backup/transfer/keystore/sidecar qualification"
+                                },
+                                {
+                                    "standard":  "MASVS",
+                                    "requirements":  [
+                                                         "CRYPTO"
+                                                     ],
+                                    "tests":  [
+                                                  "apps/mobile/tests/vault.test.ts",
+                                                  "apps/mobile/tests/auth-crypto.test.ts",
+                                                  "apps/mobile/tests/local-model.test.ts"
+                                              ],
+                                    "missing":  "Hardware extraction proof; no custom protocol certification"
+                                },
+                                {
+                                    "standard":  "MASVS",
+                                    "requirements":  [
+                                                         "AUTH"
+                                                     ],
+                                    "tests":  [
+                                                  "apps/mobile/tests/production-session.test.ts",
+                                                  "apps/mobile/tests/journal-offline-lease.test.ts",
+                                                  "apps/mobile/tests/production-recovery.test.ts",
+                                                  "apps/mobile/tests/auth-callback.test.ts"
+                                              ],
+                                    "missing":  "Real biometric/enrollment and hosted recovery behavior"
+                                },
+                                {
+                                    "standard":  "MASVS",
+                                    "requirements":  [
+                                                         "NETWORK"
+                                                     ],
+                                    "tests":  [
+                                                  "apps/mobile/tests/deployment-target.test.ts",
+                                                  "apps/mobile/tests/production-transport.test.ts"
+                                              ],
+                                    "missing":  "Signed Android/iOS traffic and hosted TLS/configuration"
+                                },
+                                {
+                                    "standard":  "MASVS",
+                                    "requirements":  [
+                                                         "PLATFORM"
+                                                     ],
+                                    "tests":  [
+                                                  "apps/mobile/tests/private-screen-capture.test.ts",
+                                                  "apps/mobile/tests/native-config.test.ts",
+                                                  "apps/mobile/tests/auth-callback.test.ts",
+                                                  "apps/mobile/tests/production-capture-permissions.test.ts"
+                                              ],
+                                    "missing":  "OS overlay, screenshot, intent, entitlement and merged permission tests"
+                                },
+                                {
+                                    "standard":  "MASVS",
+                                    "requirements":  [
+                                                         "CODE"
+                                                     ],
+                                    "tests":  [
+                                                  "apps/mobile/tests/account-failures.test.ts",
+                                                  "apps/mobile/tests/finance.test.ts",
+                                                  "apps/mobile/tests/local-model.test.ts",
+                                                  "apps/mobile/tests/production-capture-permissions.test.ts",
+                                                  "apps/mobile/tests/production-writing-configuration.test.ts"
+                                              ],
+                                    "missing":  "Dependency provenance, signed source/bundle correspondence and dynamic analysis"
+                                },
+                                {
+                                    "standard":  "MASVS",
+                                    "requirements":  [
+                                                         "RESILIENCE"
+                                                     ],
+                                    "tests":  [
+                                                  "apps/mobile/tests/vault-exclusive.test.ts",
+                                                  "apps/mobile/tests/private-writing-lifetime.test.ts",
+                                                  "apps/mobile/tests/production-session.test.ts"
+                                              ],
+                                    "missing":  "Rooted/jailbroken or instrumented-device resistance; no anti-tamper claim"
+                                },
+                                {
+                                    "standard":  "MASVS",
+                                    "requirements":  [
+                                                         "PRIVACY"
+                                                     ],
+                                    "tests":  [
+                                                  "apps/mobile/tests/production-journal.test.ts",
+                                                  "apps/mobile/tests/production-journal-model.test.ts",
+                                                  "apps/mobile/tests/reviewed-send-coordinator.test.ts",
+                                                  "apps/mobile/tests/private-message-drafts.test.ts"
+                                              ],
+                                    "missing":  "Legal/guardian rights, store disclosures, provider behavior and timing channels"
+                                }
+                            ],
+    "nativeDesignLimits":  [
+                               "Signing plugin rejects debug fallback and unmanaged signing/flavor blocks; signed artifact not inspected",
+                               "Android cleartext placeholder defaults false for release; merged manifest guard is design evidence, not a packaged-manifest pass",
+                               "iOS ATS arbitrary/media/web loads false but explicit local-network exception remains for platform qualification",
+                               "Android main source allowBackup true with SecureStore exclusions; private module uses no_backup; iOS module verifies backup exclusion on fixed separate stores",
+                               "Installed SecureStore XML describes only its own preference exclusions, not whole-app backup behavior",
+                               "No approved EAS project/live provider transport or physical receipt proven",
+                               "Final installed SDK eagerly registers API34+ callback: normal DETECT_SCREEN_CAPTURE retained; unused READ_MEDIA_IMAGES blocked; CNG repair plugin preserves exact policy; signed owner-release/device qualification still blocked.",
+                               "Root final debug-native emulator observed normal DETECT/no photo access and protected conversation FLAG_SECURE; lifecycle direct-heading script expectation did not pass. Owner-signed release, physical Android/iOS, push and full spoken accessibility remain blocked."
+                           ],
+    "sources":  [
+                    {
+                        "path":  "apps/mobile/app.json",
+                        "sha256":  "1be46b06c3ba9114b3fd74096fff4b7f2ddae5cc173a5fdd3db3917b176fd8c4",
+                        "bytes":  2094,
+                        "reviewScope":  "native-config-full-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/plugins/withProductionSigning.cjs",
+                        "sha256":  "2cddd79ed9be55c97866296dad83de4cbf613b16a50b5513578f80fba1c6ad56",
+                        "bytes":  8190,
+                        "reviewScope":  "native-config-full-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/plugins/withProductionTransport.cjs",
+                        "sha256":  "3eaeda7602fd3273e1159a1d0edb16ccee0460bdd64e2075bd9da7328ca39c2f",
+                        "bytes":  7925,
+                        "reviewScope":  "native-config-full-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/android/app/src/main/AndroidManifest.xml",
+                        "sha256":  "b3f99866f0f4d83362a652639c74c59566b488c47b1111e650d8abc646ce753d",
+                        "bytes":  3117,
+                        "reviewScope":  "native-config-full-source",
+                        "sourceKind":  "generated native source; not merged packaged manifest"
+                    },
+                    {
+                        "path":  "apps/mobile/modules/between-us-protection/android/src/main/java/com/oxieg3n/betweenus/protection/BetweenUsProtectionModule.kt",
+                        "sha256":  "3363cfb0275513768bb585c24396f579b302ee3fdb11396319a48de37faf0223",
+                        "bytes":  3343,
+                        "reviewScope":  "native-config-full-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/modules/between-us-protection/ios/BetweenUsProtectionModule.swift",
+                        "sha256":  "e207074567e2bd289c0e0fa17fc33ffafaa6f86045718cb08785b89bbbd83d83",
+                        "bytes":  3927,
+                        "reviewScope":  "native-config-full-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/node_modules/expo-secure-store/android/src/main/res/xml/secure_store_backup_rules.xml",
+                        "sha256":  "3dc0b1559e85fc6831d08264fe61e2e5846300da443324beb8224d24f00cb416",
+                        "bytes":  240,
+                        "reviewScope":  "native-config-full-source",
+                        "sourceKind":  "installed SDK source; not packaged artifact"
+                    },
+                    {
+                        "path":  "apps/mobile/node_modules/expo-secure-store/android/src/main/res/xml/secure_store_data_extraction_rules.xml",
+                        "sha256":  "b190be6de4f64e123f3835725955d21aaf310f0cb46dfaa837fe3ed18535e9ad",
+                        "bytes":  423,
+                        "reviewScope":  "native-config-full-source",
+                        "sourceKind":  "installed SDK source; not packaged artifact"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/deployment-target.ts",
+                        "sha256":  "3f43cd12ff384432376f7b7a496ee9575ead56e03b714eea2835077553c5c3c4",
+                        "bytes":  6825,
+                        "reviewScope":  "mobile-auth-and-deployment-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/client.ts",
+                        "sha256":  "c2f9dae487003d5fc3510fce98ea3ee9fd200f5ebdcd7a81face20ff8d9b228a",
+                        "bytes":  14408,
+                        "reviewScope":  "mobile-auth-and-deployment-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/auth-callback-policy.ts",
+                        "sha256":  "38fd92fca041709edc2027f550a9dd5ea5a53d941500837c6faad31d84ae74bd",
+                        "bytes":  3348,
+                        "reviewScope":  "mobile-auth-and-deployment-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/auth-redirect.ts",
+                        "sha256":  "124a792a60e278ab2f48236624eb64aef7195f1a6c00cc5c06b701b806b862d7",
+                        "bytes":  950,
+                        "reviewScope":  "mobile-auth-and-deployment-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/session-boundary.ts",
+                        "sha256":  "ab145a5bc1f747b2e99948a2787bf468bec0bcfa01de03c717ea317b9fd04124",
+                        "bytes":  1033,
+                        "reviewScope":  "mobile-auth-and-deployment-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/session-storage.ts",
+                        "sha256":  "67cc7f4df9783dd23da030d3e5920cf913b465d3b58b7ef12605083d5e32890d",
+                        "bytes":  380,
+                        "reviewScope":  "mobile-auth-and-deployment-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/session-storage.native.ts",
+                        "sha256":  "9155988f7aac8deb08427f98c84d46f5117c93bd18a8448b722fc8ff51e1852e",
+                        "bytes":  499,
+                        "reviewScope":  "mobile-auth-and-deployment-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/transport.ts",
+                        "sha256":  "e1f59fb639d40d9b6b687e4e0a74ede18f165479f3cd8e57c6e1f39fd0336568",
+                        "bytes":  1013,
+                        "reviewScope":  "mobile-auth-and-deployment-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/vault/core.ts",
+                        "sha256":  "8a6b38dbe9e951b91a0c384130d1a67b828036bc41f62b20a03bee5bdb97b3d5",
+                        "bytes":  21741,
+                        "reviewScope":  "author-local-writing-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/vault/platform.native.ts",
+                        "sha256":  "adb3165de2e91747211cc6fef1e7f549ac1e5e9fbd39b344eef56804f6ecf0ff",
+                        "bytes":  7859,
+                        "reviewScope":  "author-local-writing-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/message-outbox.native.ts",
+                        "sha256":  "75c719e7f0b384cdb84539d2c64961cb215809c9c407dceb991f56aaa879c805",
+                        "bytes":  6367,
+                        "reviewScope":  "author-local-writing-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/durable-message-send.ts",
+                        "sha256":  "da2699487f4a6e225fc1ab39a6a89c45d32775eb5c5f47e64383f99b2a5c093b",
+                        "bytes":  4838,
+                        "reviewScope":  "author-local-writing-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/journal-access.ts",
+                        "sha256":  "beae6a8435b4e0dcbc1428598bbbde2fdd1c28d8b2c2a75ee9a2be73280dd4d7",
+                        "bytes":  7240,
+                        "reviewScope":  "author-local-writing-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/journal-offline-lease.ts",
+                        "sha256":  "dfc987acec0d561b0a91efca4297de4b86815451f5bcc656ff28a901f49ee796",
+                        "bytes":  3461,
+                        "reviewScope":  "author-local-writing-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/journal-model.ts",
+                        "sha256":  "8230a932065eba9102ec62705f69dc6e7548d71e9d91056aa68c6f3db434445f",
+                        "bytes":  2371,
+                        "reviewScope":  "author-local-writing-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/private-screen-capture-lease.ts",
+                        "sha256":  "c2689779bed9ae378776ac6dbf6415b6b4a28802d239b685e523642423320349",
+                        "bytes":  1799,
+                        "reviewScope":  "author-local-writing-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/local-model-contract.ts",
+                        "sha256":  "b31766f8e95cb827871bdfd0828824056d7a5f4d1c6fb09e4906730a981d6504",
+                        "bytes":  5090,
+                        "reviewScope":  "author-local-writing-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/local-model.native.ts",
+                        "sha256":  "277230c6753c352fe24aa3031ebadf611fcbc99a011b04750f868a9cd7b826ff",
+                        "bytes":  6556,
+                        "reviewScope":  "author-local-writing-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/Notifications.tsx",
+                        "sha256":  "d07db5c272f748de07e8e9e9f9b351b59ea29fd534e79542fe346b1f79591141",
+                        "bytes":  6334,
+                        "reviewScope":  "push-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/push-registration.native.ts",
+                        "sha256":  "803cb3c348b707fe0429f1bd92f78d74a143e8973bf456387e22e88fb8bbe479",
+                        "bytes":  1462,
+                        "reviewScope":  "push-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/src/notifications.ts",
+                        "sha256":  "7d486c5b90e2a150d98a81630d80f6303773fd04c1a2b3adf0e16eed0e04aadf",
+                        "bytes":  13815,
+                        "reviewScope":  "push-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/src/notification-cycle.ts",
+                        "sha256":  "cd7a86693af6e3e2bc290ed0e871d350157f714b26f30f21354a63816c5f6baf",
+                        "bytes":  5363,
+                        "reviewScope":  "push-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/scripts/notification-cycle.mjs",
+                        "sha256":  "2ba39e4929b7f0341eaa671a41bfc6cf683c47c59bbfaecbeb151a3cb22a70c3",
+                        "bytes":  5438,
+                        "reviewScope":  "push-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/src/api.ts",
+                        "sha256":  "0356249742f746066e1803010ea70a9c2c3630c7330774869f7dfbdfa8a4a5a2",
+                        "bytes":  9154,
+                        "reviewScope":  "api-finance-privacy-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/src/finance.ts",
+                        "sha256":  "e6c2cdbeb350287f49a2e51914a29a4da68a6d320ba518df47e8fc12c76a4ecf",
+                        "bytes":  8192,
+                        "reviewScope":  "api-finance-privacy-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/src/privacy.ts",
+                        "sha256":  "c56df596ad42e5af187638150e5a07a67eb08ba9c765c902f4ea769a0b58c78a",
+                        "bytes":  12794,
+                        "reviewScope":  "api-finance-privacy-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/src/local-server.ts",
+                        "sha256":  "2792edf37238146a5cca6ad0f5de78a4085472226ab285eb3c5c850d36585a92",
+                        "bytes":  1625,
+                        "reviewScope":  "api-finance-privacy-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/scripts/build.mjs",
+                        "sha256":  "4105aa482fac6188f4a1ad42f189f9d5c88832b847b7fb402403eafcc03dc047",
+                        "bytes":  254,
+                        "reviewScope":  "api-finance-privacy-connected-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/src/free-plan.ts",
+                        "sha256":  "1a12bd198fc41a7371e3801e968e6b7e98e6195902e4bc98d02b7a1ca759f27f",
+                        "bytes":  8573,
+                        "reviewScope":  "offline-operations-and-recovery-peer-source-review",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/scripts/staging-preflight.mjs",
+                        "sha256":  "dd04a508244d5e22167bcb5a91313548ca2ab0cb62b9ff3794ef03bd2f877044",
+                        "bytes":  7730,
+                        "reviewScope":  "offline-operations-and-recovery-peer-source-review",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/scripts/staging-plan.mjs",
+                        "sha256":  "1a85dae50b2c7258021ae9b57cb25a18f218cbf144c8c80e9bb4c09455174025",
+                        "bytes":  2194,
+                        "reviewScope":  "offline-operations-and-recovery-peer-source-review",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/recovery/guards.mjs",
+                        "sha256":  "b7592e5863113f9e6d690cee55c6bbf79f7f7fb4444790f15f1a5dfdf34eb223",
+                        "bytes":  5659,
+                        "reviewScope":  "offline-operations-and-recovery-peer-source-review",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/recovery/fixture.mjs",
+                        "sha256":  "4761bf550e75c3ce3e3c5f663da1c5513a9e0697d4464375e65c9f9a04883a91",
+                        "bytes":  13163,
+                        "reviewScope":  "offline-operations-and-recovery-peer-source-review",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/recovery/database.mjs",
+                        "sha256":  "c2298ebd78a3a161f4dfdba69e57053de93f0ba73140c9c22c4796546d6655f2",
+                        "bytes":  10210,
+                        "reviewScope":  "offline-operations-and-recovery-peer-source-review",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/recovery/qualification.mjs",
+                        "sha256":  "498e5c3954ba98473777af14d4460a0bf05d3e9f71f24a72bbc8408586cf90b7",
+                        "bytes":  2334,
+                        "reviewScope":  "offline-operations-and-recovery-peer-source-review",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/scripts/backup-recovery.mjs",
+                        "sha256":  "5c727ac9096e7b3d887a5f51a5bddf8a9723d182d04572db364df5d61ad0933f",
+                        "bytes":  21259,
+                        "reviewScope":  "offline-operations-and-recovery-peer-source-review",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/scripts/qualification-database.mjs",
+                        "sha256":  "204ddc56164f0affb20c8e658e17b1f59abe9726db0a8247f54aa75bf6668ac4",
+                        "bytes":  15028,
+                        "reviewScope":  "offline-operations-and-recovery-peer-source-review",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/supabase/migrations/202611160001_identity.sql",
+                        "sha256":  "b622999f0138baa0d6878d6eeca8781358c1c4830c23b09fe7843903d5e76a72",
+                        "bytes":  33659,
+                        "reviewScope":  "sql-focused-authority-grants-locks-and-dataflow",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/supabase/migrations/202611160002_communication.sql",
+                        "sha256":  "4b8dcb093739dd945080106837c68140c5e35ed45eca257e1a8aac09f3d82b88",
+                        "bytes":  48618,
+                        "reviewScope":  "sql-focused-authority-grants-locks-and-dataflow",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/supabase/migrations/202611160003_finance.sql",
+                        "sha256":  "f61d2b75bb613e5f7976de47b783c1cacdc23a79814b6ae39a7c2f6d6fb0e5dd",
+                        "bytes":  15372,
+                        "reviewScope":  "sql-focused-authority-grants-locks-and-dataflow",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/supabase/migrations/202611160004_privacy_lifecycle.sql",
+                        "sha256":  "48fc970218033b6b79f949a764a3ecee6b5d524c3f8b47107cf1867ec94f066a",
+                        "bytes":  44477,
+                        "reviewScope":  "sql-focused-authority-grants-locks-and-dataflow",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/supabase/migrations/202611160005_case_authorization.sql",
+                        "sha256":  "2979b4bab240fd39e85ea4818b5184b00b2eb0953a29efcc4d0818544ea8b9c6",
+                        "bytes":  1583,
+                        "reviewScope":  "sql-focused-authority-grants-locks-and-dataflow",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/supabase/migrations/202611160008_external_contacts.sql",
+                        "sha256":  "9550b6fe16fdfe76ade4ba8a814fa70f06d5d85612daab4178515ce63ba5777c",
+                        "bytes":  47678,
+                        "reviewScope":  "sql-focused-authority-grants-locks-and-dataflow",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/supabase/migrations/202611160014_parent_finance_export.sql",
+                        "sha256":  "3afe9cd0002b22beafda0b109a61fc73dd6800354fe7e8997e6cdd42276bbcf4",
+                        "bytes":  18473,
+                        "reviewScope":  "sql-focused-authority-grants-locks-and-dataflow",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/supabase/migrations/202611160017_invalidation_authorization.sql",
+                        "sha256":  "0e7b47fe65943a1e40a3313acf4cfccef7e80e7e2c3a17238e1353b79935ac32",
+                        "bytes":  2417,
+                        "reviewScope":  "sql-focused-authority-grants-locks-and-dataflow",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/supabase/migrations/202611160022_message_receipts.sql",
+                        "sha256":  "9099f80505c9dbaa55a6fddcafbfcb4e1e0e20263cc0c725379a93d5b9b71c1a",
+                        "bytes":  1431,
+                        "reviewScope":  "sql-focused-authority-grants-locks-and-dataflow",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/supabase/migrations/202611160023_finance_notifications.sql",
+                        "sha256":  "e9351749e9547d5e55307fd1223dd7b046911dfdeecb65948396474e6f6fc978",
+                        "bytes":  33900,
+                        "reviewScope":  "sql-focused-authority-grants-locks-and-dataflow",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/supabase/migrations/202611160024_journal_session_lease.sql",
+                        "sha256":  "1954ccf577a864415547d67ce01ac34c3d0048e056d7941a6f827fb9af80f6c2",
+                        "bytes":  3425,
+                        "reviewScope":  "sql-focused-authority-grants-locks-and-dataflow",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/supabase/migrations/202611160025_current_actor_clock.sql",
+                        "sha256":  "92a41670cf94747acb662bcfacbf7464ccd2b9045d865f1f6c0bf0182c5c5654",
+                        "bytes":  13460,
+                        "reviewScope":  "sql-focused-authority-grants-locks-and-dataflow",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/supabase/migrations/202611160026_resource_guardrails.sql",
+                        "sha256":  "cc4529281429f713c25e610063ab56f6ff7ab634b3c2242638d1c142c809e1cd",
+                        "bytes":  10001,
+                        "reviewScope":  "sql-focused-authority-grants-locks-and-dataflow",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/tests/integration/qualification-security.test.ts",
+                        "sha256":  "26392e0df0a2501187b93cf1466821a1d53c2dd5bd8d8522b8b6b3d262e04737",
+                        "bytes":  14840,
+                        "reviewScope":  "authored-adversarial-tests-or-focused-test-inspection",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/supabase/tests/qualification_security.test.sql",
+                        "sha256":  "1a326c97c61507954ab97bd8c9c6b5657d250bd5a65468d2c8dde5a49538bcba",
+                        "bytes":  10009,
+                        "reviewScope":  "authored-adversarial-tests-or-focused-test-inspection",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/supabase/tests/resource_guardrails.test.sql",
+                        "sha256":  "0080891f7c704223cec13dfbaad9b222e4ba8153f10046b9dd18680b22b6cfeb",
+                        "bytes":  20514,
+                        "reviewScope":  "authored-adversarial-tests-or-focused-test-inspection",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/tests/deployment-target.test.ts",
+                        "sha256":  "ebe3fa5709fa3bdc2087275e7ae2ac1fec33f22bf63bb9c7d7187f925f80d072",
+                        "bytes":  6544,
+                        "reviewScope":  "authored-adversarial-tests-or-focused-test-inspection",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/tests/recovery.test.ts",
+                        "sha256":  "de69451add6679a9584a29a56fd3db230d78159b2f1c6690110d5ff2aeb6a971",
+                        "bytes":  9223,
+                        "reviewScope":  "authored-adversarial-tests-or-focused-test-inspection",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/tests/qualification-database.test.ts",
+                        "sha256":  "9d679b3ddec43b4e6d55b6bb7422566f846fb32789ccd2297c3bdc5f42173504",
+                        "bytes":  3622,
+                        "reviewScope":  "authored-adversarial-tests-or-focused-test-inspection",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/finance/engine.ts",
+                        "sha256":  "4d285d415ba50338c8abb437458f5f64d5b9068dbdea2708bed34b4efa0262bc",
+                        "bytes":  38507,
+                        "reviewScope":  "finance-local-date-delta-and-regression-focused-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/finance/money-calendar.ts",
+                        "sha256":  "63006abd19e84ac8e4de972de71d5e9c41b9a01948af2bd5a5a62531296b5202",
+                        "bytes":  4587,
+                        "reviewScope":  "finance-local-date-delta-and-regression-focused-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/tests/finance.test.ts",
+                        "sha256":  "ede41494fd877f09f1252d7996026667c3bc46fa543cb5173c5a5d102616e6ef",
+                        "bytes":  32084,
+                        "reviewScope":  "finance-local-date-delta-and-regression-focused-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/private-screen-capture.native.ts",
+                        "sha256":  "b699adf3462c4d04263c958c520c51b082228fd7393205377d6ad36aa19af43d",
+                        "bytes":  1222,
+                        "reviewScope":  "native-capture-callers-and-cng-permission-delta",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/Conversation.tsx",
+                        "sha256":  "6d6514f669e11c6829b7b45eda0626dab48dcd89ce20f5c1dcd371418e50fe86",
+                        "bytes":  17323,
+                        "reviewScope":  "native-capture-callers-and-cng-permission-delta",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/Journal.tsx",
+                        "sha256":  "ee6acb0b460bb156c239460e7c4bc3bbbd567b6bf9b8abcb03ecdda71b72b9a8",
+                        "bytes":  57417,
+                        "reviewScope":  "native-capture-callers-and-cng-permission-delta",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/plugins/withPrivateCapturePermissions.cjs",
+                        "sha256":  "189cab22b2c73cc6f18cb03437055b0c4f4357e9a5281812582c6d4fda30e471",
+                        "bytes":  1647,
+                        "reviewScope":  "native-capture-callers-and-cng-permission-delta",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/tests/production-capture-permissions.test.ts",
+                        "sha256":  "e90b024cf73a86f7fe1c8a480c349c9d5c18b3ba6a816eb3090ef55381bdf7a9",
+                        "bytes":  1887,
+                        "reviewScope":  "native-capture-callers-and-cng-permission-delta",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/node_modules/expo-screen-capture/android/src/main/AndroidManifest.xml",
+                        "sha256":  "b78e1fb55b63bed161eb0c0daf2be87ffdf87becf06f5f25ff852b2b51cf8013",
+                        "bytes":  419,
+                        "reviewScope":  "installed-sdk-eager-callback-full-source",
+                        "sourceKind":  "installed SDK source; not packaged artifact"
+                    },
+                    {
+                        "path":  "apps/mobile/node_modules/expo-screen-capture/android/src/main/java/expo/modules/screencapture/ScreenCaptureModule.kt",
+                        "sha256":  "eeec42e01668a5cd931c20120ca24d62a7bcb7b9a0253c7d075c23f6bb0bc93e",
+                        "bytes":  4184,
+                        "reviewScope":  "installed-sdk-eager-callback-full-source",
+                        "sourceKind":  "installed SDK source; not packaged artifact"
+                    },
+                    {
+                        "path":  "services/backend/supabase/tests/finance.test.sql",
+                        "sha256":  "8916fe49dc5ad68d59c11edd4d9e90ff6954fe443c78e2f807a69618404f5311",
+                        "bytes":  11902,
+                        "reviewScope":  "pinned-financial-crash-fixture-source",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/src/production/Application.tsx",
+                        "sha256":  "2d556f952a1199d168b5555bb5259a2dc40fdd78adeaad9d884297d8231ddc74",
+                        "bytes":  79184,
+                        "reviewScope":  "focused NavigationTab padding delta and four flex-column callers",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/scripts/mobile-fixture.mjs",
+                        "sha256":  "6e7b8013463658b78284eec88a0d6c9f012feaf8450c0692481cafcf337c1a32",
+                        "bytes":  10652,
+                        "reviewScope":  "bounded Node-only QA fixture namespace, ownership, canonical path and three consumers",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/recovery/mobile-fixture-path.mjs",
+                        "sha256":  "dbf7fb91adfd11437b3a3aca3874656cfa5d7acf7dd0a2b87bdd1897e9f09557",
+                        "bytes":  609,
+                        "reviewScope":  "bounded Node-only QA fixture namespace, ownership, canonical path and three consumers",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "services/backend/tests/mobile-fixture-path.test.ts",
+                        "sha256":  "80d8388709f42cda212af3244e5d3a15048398b06f18b52f0d62a85853e04bc6",
+                        "bytes":  3558,
+                        "reviewScope":  "bounded Node-only QA fixture namespace, ownership, canonical path and three consumers",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/e2e-production/fixture-path.ts",
+                        "sha256":  "d387ac7f1f5f4620c26a80ebf01fa5f0c0b7ba4664332df79eeb269194d447c6",
+                        "bytes":  1274,
+                        "reviewScope":  "bounded Node-only QA fixture namespace, ownership, canonical path and three consumers",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/tests/production-fixture-path.test.ts",
+                        "sha256":  "f3cd717d8bb226738b0959896aa352edb00dd60013993d7604e43d9d307121fa",
+                        "bytes":  3031,
+                        "reviewScope":  "bounded Node-only QA fixture namespace, ownership, canonical path and three consumers",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/e2e-production/accounts.spec.ts",
+                        "sha256":  "01ad22069c36908b31f572f9a5e5cdb451f28e8c80a1e8ccbc2549ac7c23d856",
+                        "bytes":  19390,
+                        "reviewScope":  "bounded Node-only QA fixture namespace, ownership, canonical path and three consumers",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/e2e-production/settings.spec.ts",
+                        "sha256":  "4ed4793ba6b61b6419e1c973757c775f26e932a77b76966f585a0d93110eee1b",
+                        "bytes":  7326,
+                        "reviewScope":  "bounded Node-only QA fixture namespace, ownership, canonical path and three consumers",
+                        "sourceKind":  "repository source"
+                    },
+                    {
+                        "path":  "apps/mobile/playwright.production.config.ts",
+                        "sha256":  "d8ed57e7c44dfd1d30488fc969407e5aaaba3710d12456718425ea274cdd2a46",
+                        "bytes":  2254,
+                        "reviewScope":  "bounded Node-only QA fixture namespace, ownership, canonical path and three consumers",
+                        "sourceKind":  "repository source"
+                    }
+                ],
+    "hashesCollectedAtUtc":  "2026-11-16T20:51:21.2998868Z",
+    "finalDeltaReview":  {
+                             "sourceFreeze":  "Root engineering commit10aba61d756a8d54f22ec03afc3287c638805060 reported frozen; all84 source hashes rechecked afterward with no drift. Final documentation/evidence integration remains Root-owned.",
+                             "financeHoist":  "assign_chore/edit_chore each compute localDate(c.at,zone) once; inputs are constant through synchronous loop/filter; permissions, dates and caps unchanged",
+                             "regression":  "Los Angeles UTC-boundary batch/edit test keeps past occurrences, edits current/future unstarted occurrences and rejects mixed past assignment",
+                             "prospectiveCapacity":  {
+                                                         "executor":  "Root",
+                                                         "children":  12,
+                                                         "visibleEvents":  512,
+                                                         "hiddenEvents":  128,
+                                                         "measuredNodeCpuMs":  2155,
+                                                         "targetNodeCpuMs":  2000,
+                                                         "result":  "FAIL_PROSPECTIVE_MODEL",
+                                                         "semantics":  "Actual caps remain128 visible/32 hidden. This is neither an implemented increase nor a mobile performance measurement; functional internal release gate remains open."
+                                                     },
+                             "nativeReferences":  [
+                                                      "https://docs.expo.dev/versions/v58.0.0/sdk/screen-capture/",
+                                                      "https://developer.android.com/reference/android/app/Activity#registerScreenCaptureCallback(java.util.concurrent.Executor,%20android.app.Activity.ScreenCaptureCallback)"
+                                                  ],
+                             "permissionDecision":  "Installed native source is more precise than general Expo blocking guidance. Retain normal DETECT; no media read, no broad dependency patch, no proven crash claim. Guarded local config plugin repairs the stale non-clean CNG remove marker;3 focused tests and type pass attributed to Root; generated main manifest re-read by reviewer.",
+                             "originalSourceRecords":  64,
+                             "addedSourceRecords":  20,
+                             "finalSourceRecords":  84,
+                             "navigationDelta":  "NavigationTab paddingHorizontal8 to2 preserves stretched flex-column hit width, minHeight64, vertical8, label/role/selected/focus behavior and normal Text scaling. Root visually confirmed200% Journal label whole on one line and all4 tabs visible."
+                         },
+    "qaIsolationReview":  {
+                              "sourceFileCount":  8,
+                              "productAuthorizationChanged":  false,
+                              "privateRuntimeFixtureOrEnvironmentReadByReviewer":  false,
+                              "review":  "Strict modes before status; fresh32hex namespace; wx/ACL private publication; existing environment/default fixture preserved; scoped known-identity session/operator retirement; bounded canonical Node QA reader and explicit override only in three QA consumers.",
+                              "limitations":  "Session/scope retirement is not complete account/provider erasure. Unknown account-create responses can require protected expected-identity follow-up. QA filesystem checks assume controlled private local custody; no app credential import or hosted authority is added.",
+                              "tests":  [
+                                            "services/backend/tests/mobile-fixture-path.test.ts",
+                                            "apps/mobile/tests/production-fixture-path.test.ts"
+                                        ],
+                              "rootExecutedFocused":  "Backend3 path tests and mobile6 reader tests PASS; actual link tests ran with no skips on Windows.",
+                              "fullResults":  "Root actual final: isolated production browser16 PASS in1.8min; demo19 PASS in1.9min; mobile276/type/lint PASS; backend89/type/build PASS including3 new QA-tool tests. Original shared-fixture15/16 failure retained."
+                          },
+    "sourceCommitReportedByRoot":  "10aba61d756a8d54f22ec03afc3287c638805060",
+    "commitAttribution":  "Root reported the exact engineering commit and clean frozen engineering tree. Reviewer rechecked all84 explicit source hashes; no Git command or private runtime receipt read by reviewer.",
+    "finalRootResults":  {
+                             "engineeringCommit":  "10aba61d756a8d54f22ec03afc3287c638805060",
+                             "engineeringTree":  "Root reported clean/frozen; reviewer did not execute Git",
+                             "mobile":  {
+                                            "tests":  276,
+                                            "type":  "PASS",
+                                            "lint":  "PASS",
+                                            "result":  "PASS",
+                                            "receiptReferenceAsReported":  ".expo/staging-frozen-mobile.log"
+                                        },
+                             "backend":  {
+                                             "tests":  89,
+                                             "type":  "PASS",
+                                             "build":  "PASS",
+                                             "result":  "PASS",
+                                             "includesNewQaToolTests":  3,
+                                             "receiptReferenceAsReported":  ".local/staging-final-isolated-backend.log"
+                                         },
+                             "isolatedProductionBrowser":  {
+                                                               "tests":  16,
+                                                               "result":  "PASS",
+                                                               "durationAsReported":  "1.8min",
+                                                               "receiptReferenceAsReported":  ".expo/staging-final-isolated-production-ui.log"
+                                                           },
+                             "isolatedDemo":  {
+                                                  "tests":  19,
+                                                  "result":  "PASS",
+                                                  "durationAsReported":  "1.9min"
+                                              },
+                             "expoExports":  {
+                                                 "android":  "PASS",
+                                                 "ios":  "PASS",
+                                                 "web":  "PASS",
+                                                 "scope":  "JavaScript exports only; not native iOS build/sign/install or physical qualification"
+                                             },
+                             "preservedFailedRun":  "Old shared-fixture browser15/16 correctly rejected a30USD budget after41 accumulated events; original failure/history/default fixture/environment preserved. Not128-event capacity or a product authorization defect.",
+                             "executionAttribution":  "All execution results in this object are Root-reported actual receipts. Reviewer did not rerun runtime checks or inspect private logs."
+                         }
+}

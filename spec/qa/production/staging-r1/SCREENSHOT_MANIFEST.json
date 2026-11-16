@@ -1,0 +1,327 @@
+{
+  "build": "1116-StagingQualification-r1",
+  "device": "Pixel_10 emulator-5554 Android17/API37 x86_64",
+  "scope": "Synthetic Android debug QA. Some images preserve setup failures; not all are successful journeys. Metro JS was live during capture, not a frozen signed release. Source/audio/physical-device qualification is separate.",
+  "files": [
+    {
+      "path": "comparisons/appearance-side-by-side.png",
+      "sha256": "807611b268eea499e08ba0af13a17db24f2be9de7afc2bdd9d92b63f4c77bb91",
+      "bytes": 311937,
+      "width": 2160,
+      "height": 2496,
+      "kind": "derived comparison from native PNGs",
+      "capturedAtUtc": "2026-11-16T20:15:45.912529+00:00",
+      "nativeArtifactSha256": null
+    },
+    {
+      "path": "comparisons/chats-side-by-side.png",
+      "sha256": "987c15909a100513d2fa145106be73acabb97b4824579acda7097ca0eb1df9e8",
+      "bytes": 343520,
+      "width": 2160,
+      "height": 2496,
+      "kind": "derived comparison from native PNGs",
+      "capturedAtUtc": "2026-11-16T20:15:46.107623+00:00",
+      "nativeArtifactSha256": null
+    },
+    {
+      "path": "comparisons/child-home-reverified-side-by-side.png",
+      "sha256": "b2918c0847e9b696f15a3147b3d4e0bb5784c26ebca3a213f47d8554a4675871",
+      "bytes": 304144,
+      "width": 2160,
+      "height": 2496,
+      "kind": "derived comparison from native PNGs",
+      "capturedAtUtc": "2026-11-16T20:15:45.655552+00:00",
+      "nativeArtifactSha256": null
+    },
+    {
+      "path": "comparisons/parent-home-side-by-side.png",
+      "sha256": "ccd0c310d77a0baaa8a71ee8273c9ae42c0aaee15bd982d03f3e67aa41a42ddd",
+      "bytes": 294616,
+      "width": 2160,
+      "height": 2496,
+      "kind": "derived comparison from native PNGs",
+      "capturedAtUtc": "2026-11-16T20:15:45.465914+00:00",
+      "nativeArtifactSha256": null
+    },
+    {
+      "path": "dark-appearance.png",
+      "sha256": "df83e085d5109a63a2da375f152b1afb3f661e6c7b586b92823e3520345fb975",
+      "bytes": 188926,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T19:49:39.766412+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "dark-chats.png",
+      "sha256": "bd7bcdbb9f4bfe14d8e3471cadfd638b680747bc99324dc307ba49b2fd8f4a92",
+      "bytes": 210631,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T19:49:46.529167+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "dark-child-home-initial.png",
+      "sha256": "77d1ee50db20359d33407bc89505400be84202116407c9b1dba92ca5d53b0da0",
+      "bytes": 184850,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T19:49:43.123479+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "dark-child-home-reverified.png",
+      "sha256": "2cf4ae4c582e9f302b1e290049891ec81583fe7852e86e9a85deaee330b98d90",
+      "bytes": 184740,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T20:10:49.166007+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "dark-circle.png",
+      "sha256": "518a6619d4a3b6ffe700de5676dab4574e366fe3373124b2f72f4c7d776f01c4",
+      "bytes": 209205,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T19:49:49.860126+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "dark-final-parent-home.png",
+      "sha256": "199014a1a348a4b62a941887107def248a41451cf6c6018ae6d2ff2ab3bb00c7",
+      "bytes": 179105,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T20:26:18.405468+00:00",
+      "nativeArtifactSha256": "6051b9729f02eb89557bb6a286698d0f64fccbb6e3dbab01197753e37b14379a"
+    },
+    {
+      "path": "dark-font-200-home-nav-fixed.png",
+      "sha256": "1f73e37a74ee59820e2dc23b217e1f7f4cde67e07a005323258829a12c4c0bdd",
+      "bytes": 223919,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T20:26:19.965032+00:00",
+      "nativeArtifactSha256": "6051b9729f02eb89557bb6a286698d0f64fccbb6e3dbab01197753e37b14379a"
+    },
+    {
+      "path": "dark-font-200-home.png",
+      "sha256": "319fe40cf5e6aa0646bc7a0de0ef5f8a4d577b24d08cbb98d45465874034002f",
+      "bytes": 225104,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T20:01:51.859899+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "dark-large-home.png",
+      "sha256": "d3c751a1d3f3b40cab62f8f0c3e720ce142b8d53ab28dd5ce136b29d3eab9ce6",
+      "bytes": 220294,
+      "width": 1260,
+      "height": 2730,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T20:02:20.489860+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "dark-offline-public-help-final.png",
+      "sha256": "98e1f0e687506c43a73450842f87e7b64d97aa2ff8fcea3c2a340f2e8dc60042",
+      "bytes": 105110,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T20:29:39.334399+00:00",
+      "nativeArtifactSha256": "6051b9729f02eb89557bb6a286698d0f64fccbb6e3dbab01197753e37b14379a"
+    },
+    {
+      "path": "dark-parent-home.png",
+      "sha256": "975a6cb6f86049ae67a9e1d3e0fd5015065d516a7b145349a9f765ec761bd3bd",
+      "bytes": 178355,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T20:12:54.999937+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "dark-small-home.png",
+      "sha256": "baaf362e8a394e9db75bc978c6b4a44f98a3f7480ce4e1c377fb9ea65b5abc12",
+      "bytes": 123580,
+      "width": 840,
+      "height": 1680,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T20:02:06.330648+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "dark-tablet-home.png",
+      "sha256": "9e43ec23bf7709dec62445df58a26459bfe828000eaccd6e7d1527d05e8cb7e5",
+      "bytes": 178123,
+      "width": 1920,
+      "height": 2560,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T20:02:35.966528+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "light-appearance.png",
+      "sha256": "089d3349656b69d766a26ce0b8d35b4c06f033b1faac43accd362bc31749f7c3",
+      "bytes": 186092,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T19:49:23.136189+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "light-chats.png",
+      "sha256": "6831dbdc41b489bb38fa50c9d11139048cfe8103aec2c9492fce373def41edea",
+      "bytes": 207508,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T19:49:29.918653+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "light-child-home-initial.png",
+      "sha256": "6a9daf9dc51b1d1bb28780dd3a349b32e6f7d1147a0b65df5731f0ae3278e080",
+      "bytes": 182643,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T19:49:26.498335+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "light-child-home-reverified.png",
+      "sha256": "bcdf73b7308596ae7bb9ea0d42b441ebb4445c4c11022096d3cd030db4af2ef2",
+      "bytes": 182465,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T20:10:39.546009+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "light-circle.png",
+      "sha256": "da425ce76b16a61318184e6a857c4c57cde9532aba42b0a4e168d65f7c458150",
+      "bytes": 207259,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T19:49:33.339323+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "light-parent-home.png",
+      "sha256": "b5ba94d3706b8e65b974e14f1d223adb31d52ce66f9e18fbe302e904b7709a6b",
+      "bytes": 175814,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T20:12:45.202047+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "talkback-app-focus-1.png",
+      "sha256": "002423c9b1430a49da4f59b301165cb60eb75bffdfae0abd51c72044278f6810",
+      "bytes": 209139,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T19:55:08.886945+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "talkback-app-focus-2.png",
+      "sha256": "7f3bc893c846e9667d1f1ead8d65383c214bbe5ee7535453add797903d375b5b",
+      "bytes": 208809,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T19:55:10.515564+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "talkback-keyboard-action.png",
+      "sha256": "d979960d92060cc31282815525d891497f5fc448596b4c1c9b54b508600a50b2",
+      "bytes": 210804,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T19:55:35.849808+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "talkback-keyboard-activation.png",
+      "sha256": "3db324145bfdac68441604bcf9a2389e49c5f9dab3e0670fdd8b11e9d4f73b47",
+      "bytes": 169582,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T19:53:21.268039+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "talkback-keyboard-focus.png",
+      "sha256": "7f3bc893c846e9667d1f1ead8d65383c214bbe5ee7535453add797903d375b5b",
+      "bytes": 208809,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T19:55:34.619721+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "talkback-notification-prompt.png",
+      "sha256": "2ed175a81ab34749ac5bd8b4eb11f92ee80d80cff56795e2827d1284e2d073b8",
+      "bytes": 168090,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T19:51:22.374210+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "talkback-setup-retry-1.png",
+      "sha256": "2ed175a81ab34749ac5bd8b4eb11f92ee80d80cff56795e2827d1284e2d073b8",
+      "bytes": 168090,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T19:51:55.194983+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "talkback-setup-retry-2.png",
+      "sha256": "2ed175a81ab34749ac5bd8b4eb11f92ee80d80cff56795e2827d1284e2d073b8",
+      "bytes": 168090,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T19:51:56.737803+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    },
+    {
+      "path": "talkback-setup-retry-3.png",
+      "sha256": "2ed175a81ab34749ac5bd8b4eb11f92ee80d80cff56795e2827d1284e2d073b8",
+      "bytes": 168090,
+      "width": 1080,
+      "height": 2424,
+      "kind": "original ADB PNG",
+      "capturedAtUtc": "2026-11-16T19:51:58.202126+00:00",
+      "nativeArtifactSha256": "c15c9d3e794dd289e92cd4126ab935b61941cc04d6b806c639d6497763aca87b"
+    }
+  ]
+}

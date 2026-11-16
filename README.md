@@ -97,3 +97,16 @@ See [production progress](spec/production/PROGRESS.md), [actual checks](spec/pro
 Android debug transport/build has passed locally. Native release cleartext is denied; the signing plugin removes the generated debug-release signing fallback and fails closed without reviewed owner signing material. Root observed that missing-signing guard fail as expected. **No signed release is established.** Physical Android/biometry/backup restore, iOS, spoken accessibility, device push, hosted configuration, legal age/state/consent/journal-rights review and trained report operators remain release gates. Keep journal/chat/Review capture protection enabled; do not bypass `FLAG_SECURE` for screenshots.
 
 Family Savings Envelopes is a virtual household ledger, not a bank or custodian. See [payment bridge](spec/NO_COST_PAYMENT_BRIDGE.md), [ledger model](spec/ALLOWANCE_LEDGER.md), [production architecture](spec/production/ARCHITECTURE.md), [security review](spec/production/SECURITY_REVIEW.md) and [privacy review](spec/production/CHILD_PRIVACY_COMPLIANCE.md). No main merge, publication, paid service, real child information or actual transfer is authorized by these instructions.
+
+### Current staging qualification: 1116-StagingQualification-r1
+
+Mobile 0.5.0 / build 4, branch `feature/staging-release-qualification`, engineering commit `10aba61d756a8d54f22ec03afc3287c638805060`. Supabase Free remains selected. [Actual qualification and NO-GO gates](spec/production/staging/FINAL_RELEASE_QUALIFICATION.md), [artifact/source hashes](spec/production/staging/RELEASE_ARTIFACT_MANIFEST.md), [actual Android images](spec/qa/production/staging-r1/VISUAL_QA_REPORT.md), and [current PowerShell launch/test commands](spec/production/staging/DEPLOYMENT_RUNBOOK.md#canonical-local-powershell-launch-and-qualification) supersede historical p3 assumptions.
+
+With the existing local stack/API and Pixel_10 running:
+
+```powershell
+Set-Location 'D:\projects\BetweenUs'
+powershell -NoProfile -File .\Scripts\Start-ProductionAndroid.ps1
+```
+
+The helper verifies this branch and canonical Metro/device ownership. Current checks pass:276 mobile tests, 89 backend tests, 1,025 SQL assertions across 21 files, 17 local integration tests, 16 production browser scenarios and 19 demo scenarios; three-platform JavaScript export and debug Android build pass. Browser qualification now supports a fresh isolated fictional family without overwriting the default fixture or environment. Public enrollment, hosted delivery, physical/iOS/signing/push/legal/operator qualification remain blocked. Financial checkpoint/archive and actual hosted Edge capacity are internal release work; existing limits were retained after measured evidence ruled out a blind increase.

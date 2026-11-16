@@ -1,0 +1,2136 @@
+{
+  "build": "1116-StagingQualification-r1",
+  "applicationSource": "10aba61d756a8d54f22ec03afc3287c638805060",
+  "branch": "feature/staging-release-qualification",
+  "generatedAtUtc": "2026-11-16T20:52:09.900577+00:00",
+  "scope": "Actual local engineering file bytes and canonical Git blob bytes. Reports/evidence commit is separate. Debug APK depends on live Metro; exported JS compiles an unapproved target and is not operational hosted staging or native iOS.",
+  "sourceFiles": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 5282,
+      "sha256": "362cacd8a6386693c6e70b214637dc70acc149060a9b4430d3e6f6394ccf3be7",
+      "gitBlobSha256": "0f5f5eb81e4091c6e499f17d161828c335ad0353f693a7db54579fa180a94afd"
+    },
+    {
+      "path": "Scripts/Start-ProductionAndroid.ps1",
+      "bytes": 15138,
+      "sha256": "53663fd2ca5da4b2707d9015cd1ae5710c06019256acab5b7e3c7c9e55382944",
+      "gitBlobSha256": "53663fd2ca5da4b2707d9015cd1ae5710c06019256acab5b7e3c7c9e55382944"
+    },
+    {
+      "path": "apps/mobile/.gitignore",
+      "bytes": 664,
+      "sha256": "9e35c1b012c61f4c8a83dba0783470b48e9b194f024a9ba81724b736a64425a3",
+      "gitBlobSha256": "486938e51a19a7f057c7c79d6184feb90f2c1528ca16c513305e4aad82fa2c74"
+    },
+    {
+      "path": "apps/mobile/AGENTS.md",
+      "bytes": 2598,
+      "sha256": "b7d381dd55800d242252e8bf89a40b026586d254e34908210931bc35582396a3",
+      "gitBlobSha256": "b7d381dd55800d242252e8bf89a40b026586d254e34908210931bc35582396a3"
+    },
+    {
+      "path": "apps/mobile/LICENSE",
+      "bytes": 1106,
+      "sha256": "fb3ca4a837f5779e83cef89b78253a8949cfb9429c340309f62d0465ec6610b4",
+      "gitBlobSha256": "fb3ca4a837f5779e83cef89b78253a8949cfb9429c340309f62d0465ec6610b4"
+    },
+    {
+      "path": "apps/mobile/README.md",
+      "bytes": 684,
+      "sha256": "9fafc75b022da64277812e93723c3bb094c3f33b49c330664d119e576c974686",
+      "gitBlobSha256": "4cdeca94dec54222d2d11b3832a31950abbff185e97a388e4a7ea8595bf947dd"
+    },
+    {
+      "path": "apps/mobile/app.json",
+      "bytes": 2094,
+      "sha256": "1be46b06c3ba9114b3fd74096fff4b7f2ddae5cc173a5fdd3db3917b176fd8c4",
+      "gitBlobSha256": "4edb535046e3bae14d5ad7c2ab871c1de7ecea82010a8a2c58a34c59fa579643"
+    },
+    {
+      "path": "apps/mobile/assets/brand/app-icon.png",
+      "bytes": 630688,
+      "sha256": "f89844840f3c336ff77e0066728ce6acb6dc9402c82131550a83c5da5041ba1d",
+      "gitBlobSha256": "f89844840f3c336ff77e0066728ce6acb6dc9402c82131550a83c5da5041ba1d"
+    },
+    {
+      "path": "apps/mobile/assets/brand/symbol.png",
+      "bytes": 750407,
+      "sha256": "eb7e597c19c1b1cc883cef7f365c13738377d3194d2b840bba6a754414ca230e",
+      "gitBlobSha256": "eb7e597c19c1b1cc883cef7f365c13738377d3194d2b840bba6a754414ca230e"
+    },
+    {
+      "path": "apps/mobile/e2e-production/accounts.spec.ts",
+      "bytes": 19390,
+      "sha256": "01ad22069c36908b31f572f9a5e5cdb451f28e8c80a1e8ccbc2549ac7c23d856",
+      "gitBlobSha256": "937697dbb455addda275283975a4359a70bf7503d5ec0a0d7d79f2ee3413e2ba"
+    },
+    {
+      "path": "apps/mobile/e2e-production/fixture-path.ts",
+      "bytes": 1274,
+      "sha256": "d387ac7f1f5f4620c26a80ebf01fa5f0c0b7ba4664332df79eeb269194d447c6",
+      "gitBlobSha256": "d387ac7f1f5f4620c26a80ebf01fa5f0c0b7ba4664332df79eeb269194d447c6"
+    },
+    {
+      "path": "apps/mobile/e2e-production/settings.spec.ts",
+      "bytes": 7326,
+      "sha256": "4ed4793ba6b61b6419e1c973757c775f26e932a77b76966f585a0d93110eee1b",
+      "gitBlobSha256": "4ed4793ba6b61b6419e1c973757c775f26e932a77b76966f585a0d93110eee1b"
+    },
+    {
+      "path": "apps/mobile/e2e/appearance.spec.ts",
+      "bytes": 2245,
+      "sha256": "c412c6f7c52c8c8a7f9ea13dbe2f6365ca49e81b22a3b5c71ca5f53031cc17cd",
+      "gitBlobSha256": "c412c6f7c52c8c8a7f9ea13dbe2f6365ca49e81b22a3b5c71ca5f53031cc17cd"
+    },
+    {
+      "path": "apps/mobile/e2e/blocking.spec.ts",
+      "bytes": 3413,
+      "sha256": "30f71a48f2b9c0d2df9f79fb738499c421daf45af1ef0dcaf76f8b9d7ac1b62c",
+      "gitBlobSha256": "30f71a48f2b9c0d2df9f79fb738499c421daf45af1ef0dcaf76f8b9d7ac1b62c"
+    },
+    {
+      "path": "apps/mobile/e2e/finance-advanced.spec.ts",
+      "bytes": 8928,
+      "sha256": "f4aeec046681b332e4e96f963c2544ed11cab294d24aca47c0e1b090a0615c21",
+      "gitBlobSha256": "f4aeec046681b332e4e96f963c2544ed11cab294d24aca47c0e1b090a0615c21"
+    },
+    {
+      "path": "apps/mobile/e2e/finance.spec.ts",
+      "bytes": 11624,
+      "sha256": "037439ac2e5f35666a26cc75b6693356d72f3a83e7b32562a9a66db96091b39f",
+      "gitBlobSha256": "037439ac2e5f35666a26cc75b6693356d72f3a83e7b32562a9a66db96091b39f"
+    },
+    {
+      "path": "apps/mobile/e2e/flows.spec.ts",
+      "bytes": 12213,
+      "sha256": "a999a7032a196f3a02ca6b3fb8bfb22c63dad3f02e29108860e6715d50cb1bc3",
+      "gitBlobSha256": "a999a7032a196f3a02ca6b3fb8bfb22c63dad3f02e29108860e6715d50cb1bc3"
+    },
+    {
+      "path": "apps/mobile/e2e/journal-intelligence.spec.ts",
+      "bytes": 5636,
+      "sha256": "a74ee6d2773eca07488ca8120906f8fa272de73b12aa34aaaffc38c2e1b36b9d",
+      "gitBlobSha256": "a74ee6d2773eca07488ca8120906f8fa272de73b12aa34aaaffc38c2e1b36b9d"
+    },
+    {
+      "path": "apps/mobile/e2e/local-model.spec.ts",
+      "bytes": 905,
+      "sha256": "74226fb9235dba768fde351e69ce160a302491272437c6fcd2e8f4c24e45b7aa",
+      "gitBlobSha256": "74226fb9235dba768fde351e69ce160a302491272437c6fcd2e8f4c24e45b7aa"
+    },
+    {
+      "path": "apps/mobile/eslint.config.js",
+      "bytes": 177,
+      "sha256": "fa19738add7062e19b3ea980f90c2c1e090f207473b2f9924a8e3d00e8fbf15b",
+      "gitBlobSha256": "fa19738add7062e19b3ea980f90c2c1e090f207473b2f9924a8e3d00e8fbf15b"
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/.gitignore",
+      "bytes": 126,
+      "sha256": "6342787b4ab298195d8078b45f0b08c5915fb174d0c7589c3d4951d45e2d494c",
+      "gitBlobSha256": "6342787b4ab298195d8078b45f0b08c5915fb174d0c7589c3d4951d45e2d494c"
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/README.md",
+      "bytes": 3031,
+      "sha256": "1632871f9b05d33daf1db3aeff22ea9c69ba359b4fc3e5f1495d64bd4995329d",
+      "gitBlobSha256": "1632871f9b05d33daf1db3aeff22ea9c69ba359b4fc3e5f1495d64bd4995329d"
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/android/build.gradle",
+      "bytes": 247,
+      "sha256": "c00b5d9a215ca78faa2b988f10ef6b110ca65d771d2a2158bc7d5a2cc8a33b85",
+      "gitBlobSha256": "c00b5d9a215ca78faa2b988f10ef6b110ca65d771d2a2158bc7d5a2cc8a33b85"
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/android/src/main/AndroidManifest.xml",
+      "bytes": 72,
+      "sha256": "343d5be1ac17cdd45d1a2f2ddc616c509290e655869125a9422a96d88aa66066",
+      "gitBlobSha256": "343d5be1ac17cdd45d1a2f2ddc616c509290e655869125a9422a96d88aa66066"
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/android/src/main/java/com/oxieg3n/betweenus/protection/BetweenUsProtectionModule.kt",
+      "bytes": 3343,
+      "sha256": "3363cfb0275513768bb585c24396f579b302ee3fdb11396319a48de37faf0223",
+      "gitBlobSha256": "3363cfb0275513768bb585c24396f579b302ee3fdb11396319a48de37faf0223"
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/expo-module.config.json",
+      "bytes": 189,
+      "sha256": "ab558091028289deb1a06cd06186fc637e29c6ddf0a07dbf63cc24547dd4ef12",
+      "gitBlobSha256": "ab558091028289deb1a06cd06186fc637e29c6ddf0a07dbf63cc24547dd4ef12"
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/index.ts",
+      "bytes": 517,
+      "sha256": "124191ee3163126a75d2a43a2e5fc6c2c4dca946c30034f061a6771705d788b4",
+      "gitBlobSha256": "124191ee3163126a75d2a43a2e5fc6c2c4dca946c30034f061a6771705d788b4"
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/ios/BetweenUsProtection.podspec",
+      "bytes": 584,
+      "sha256": "c9624a04d7c65d2923d35e429afa47367f62a19d99371f89f875518f3ba21237",
+      "gitBlobSha256": "c9624a04d7c65d2923d35e429afa47367f62a19d99371f89f875518f3ba21237"
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/ios/BetweenUsProtectionModule.swift",
+      "bytes": 3927,
+      "sha256": "e207074567e2bd289c0e0fa17fc33ffafaa6f86045718cb08785b89bbbd83d83",
+      "gitBlobSha256": "e207074567e2bd289c0e0fa17fc33ffafaa6f86045718cb08785b89bbbd83d83"
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/package.json",
+      "bytes": 101,
+      "sha256": "2f8581f105d0ef672d25f54dd323acff7a78f8e1ed5fcc833f7e4086ef425510",
+      "gitBlobSha256": "2f8581f105d0ef672d25f54dd323acff7a78f8e1ed5fcc833f7e4086ef425510"
+    },
+    {
+      "path": "apps/mobile/package-lock.json",
+      "bytes": 480329,
+      "sha256": "5650fb67de40433f9f7e0418ceb02479a85bb780fb47cdc9091c01b7ee9ae86a",
+      "gitBlobSha256": "a02f7495f81d02644dcb07f7e741a10ecb5c78852c6cae0834933c617efec70d"
+    },
+    {
+      "path": "apps/mobile/package.json",
+      "bytes": 1992,
+      "sha256": "653dbc2df1243842a25f01a1c996b4e7f4484455f6bf5c2eeffc1ca7477ff7be",
+      "gitBlobSha256": "7e7752d4d78c37d7d395404f290c5e3eadc0629fb91a7482ab11493f6fe5877c"
+    },
+    {
+      "path": "apps/mobile/playwright.config.ts",
+      "bytes": 609,
+      "sha256": "a5d4fdb5103c14f1f4b1876bbcb0d49a48aab78e1125c732ff0e6886cf4e4ef2",
+      "gitBlobSha256": "a5d4fdb5103c14f1f4b1876bbcb0d49a48aab78e1125c732ff0e6886cf4e4ef2"
+    },
+    {
+      "path": "apps/mobile/playwright.production.config.ts",
+      "bytes": 2254,
+      "sha256": "d8ed57e7c44dfd1d30488fc969407e5aaaba3710d12456718425ea274cdd2a46",
+      "gitBlobSha256": "d8ed57e7c44dfd1d30488fc969407e5aaaba3710d12456718425ea274cdd2a46"
+    },
+    {
+      "path": "apps/mobile/plugins/with-adaptive-display.js",
+      "bytes": 4361,
+      "sha256": "685d34280068f2838b9261db3f53a5484424f54ac01687d4d239bc80725402fb",
+      "gitBlobSha256": "c3b9fcf129b11398757be7b6ec9e707591f0995f20ecb4f613176e0a74409141"
+    },
+    {
+      "path": "apps/mobile/plugins/with-short-native-paths.js",
+      "bytes": 1702,
+      "sha256": "9604a4b8a6f60caeed5ab8e97e3412ce71e354b7ac7f06ee64a2fad164e8d6c1",
+      "gitBlobSha256": "9604a4b8a6f60caeed5ab8e97e3412ce71e354b7ac7f06ee64a2fad164e8d6c1"
+    },
+    {
+      "path": "apps/mobile/plugins/withPrivateCapturePermissions.cjs",
+      "bytes": 1647,
+      "sha256": "189cab22b2c73cc6f18cb03437055b0c4f4357e9a5281812582c6d4fda30e471",
+      "gitBlobSha256": "189cab22b2c73cc6f18cb03437055b0c4f4357e9a5281812582c6d4fda30e471"
+    },
+    {
+      "path": "apps/mobile/plugins/withProductionSigning.cjs",
+      "bytes": 8190,
+      "sha256": "2cddd79ed9be55c97866296dad83de4cbf613b16a50b5513578f80fba1c6ad56",
+      "gitBlobSha256": "2cddd79ed9be55c97866296dad83de4cbf613b16a50b5513578f80fba1c6ad56"
+    },
+    {
+      "path": "apps/mobile/plugins/withProductionTransport.cjs",
+      "bytes": 7925,
+      "sha256": "3eaeda7602fd3273e1159a1d0edb16ccee0460bdd64e2075bd9da7328ca39c2f",
+      "gitBlobSha256": "3eaeda7602fd3273e1159a1d0edb16ccee0460bdd64e2075bd9da7328ca39c2f"
+    },
+    {
+      "path": "apps/mobile/plugins/withWritingConfiguration.cjs",
+      "bytes": 1299,
+      "sha256": "2c5bb659f90bfeec22788e50a85c5ac541697f060b1666db095e1dcfd4b3f2ae",
+      "gitBlobSha256": "2c5bb659f90bfeec22788e50a85c5ac541697f060b1666db095e1dcfd4b3f2ae"
+    },
+    {
+      "path": "apps/mobile/scripts/android-smoke.ps1",
+      "bytes": 8045,
+      "sha256": "affcaf4276560594de73623e687d29ff9e7492db6c24035512b481014f8f2c73",
+      "gitBlobSha256": "8fc4bb9fe7b01e2f55e5709f612fccfcbfeaecd3c4c98bab14f9a8790f3508e2"
+    },
+    {
+      "path": "apps/mobile/scripts/capture-mission.py",
+      "bytes": 32614,
+      "sha256": "29b560f5c5ca36731f40fe3bfbf302acbadd9c119d09311919989eb0cdee3ad5",
+      "gitBlobSha256": "29b560f5c5ca36731f40fe3bfbf302acbadd9c119d09311919989eb0cdee3ad5"
+    },
+    {
+      "path": "apps/mobile/scripts/capture-open-letter.py",
+      "bytes": 16267,
+      "sha256": "d6deb6f5ecbb438f336a14e82752b23153428e95f67d61f6f00c8d1bbcbbf6f6",
+      "gitBlobSha256": "d6deb6f5ecbb438f336a14e82752b23153428e95f67d61f6f00c8d1bbcbbf6f6"
+    },
+    {
+      "path": "apps/mobile/scripts/native-device-checks.py",
+      "bytes": 7179,
+      "sha256": "f41b550e5bb852e7fcbf7329b82f6305e8cadfa9df312a6da0c667306cc86a12",
+      "gitBlobSha256": "9f7d4ba8636eb585bf08593df8c2dcd3801ccb99db1be5c56637eb669982b2ca"
+    },
+    {
+      "path": "apps/mobile/scripts/native-mission-checks.py",
+      "bytes": 27691,
+      "sha256": "938d685a535ec22643b521abce1fe7543ea1fdebe82c8c2abb33234c7a79a160",
+      "gitBlobSha256": "938d685a535ec22643b521abce1fe7543ea1fdebe82c8c2abb33234c7a79a160"
+    },
+    {
+      "path": "apps/mobile/scripts/open-letter-comparisons.ps1",
+      "bytes": 3593,
+      "sha256": "9929e99e4bb9378b8b5ead22dd7caca860bacc313a85964fbf0fb25160b71a4a",
+      "gitBlobSha256": "9929e99e4bb9378b8b5ead22dd7caca860bacc313a85964fbf0fb25160b71a4a"
+    },
+    {
+      "path": "apps/mobile/scripts/test-native-snapshot.py",
+      "bytes": 2749,
+      "sha256": "c77dfdc9e734be2815e17d0e48658c71e2e9c3603a5fa973e1e066180d764b73",
+      "gitBlobSha256": "c77dfdc9e734be2815e17d0e48658c71e2e9c3603a5fa973e1e066180d764b73"
+    },
+    {
+      "path": "apps/mobile/src/adaptive-writing-text.tsx",
+      "bytes": 4409,
+      "sha256": "55dc65b4a5ebe9b849e8a34aff4420bd115fa2ac876856c63cd9b8390487d121",
+      "gitBlobSha256": "55dc65b4a5ebe9b849e8a34aff4420bd115fa2ac876856c63cd9b8390487d121"
+    },
+    {
+      "path": "apps/mobile/src/app/_layout.tsx",
+      "bytes": 785,
+      "sha256": "ddb28c2c79dc02971b7b996a1962c35d40fa0af424a3f631fb85a88d07cf20fc",
+      "gitBlobSha256": "ddb28c2c79dc02971b7b996a1962c35d40fa0af424a3f631fb85a88d07cf20fc"
+    },
+    {
+      "path": "apps/mobile/src/app/accounts.tsx",
+      "bytes": 53,
+      "sha256": "a8bce0f8525ca6b42a463d7fcb5c9ff657c47002c7e363fc002e03f88959ff30",
+      "gitBlobSha256": "a8bce0f8525ca6b42a463d7fcb5c9ff657c47002c7e363fc002e03f88959ff30"
+    },
+    {
+      "path": "apps/mobile/src/app/auth/callback.tsx",
+      "bytes": 3824,
+      "sha256": "c3726f8d846ceac7ebb93a51e5f9a737e614cf3b43c1ec0aa69b9b04fded72ac",
+      "gitBlobSha256": "c3726f8d846ceac7ebb93a51e5f9a737e614cf3b43c1ec0aa69b9b04fded72ac"
+    },
+    {
+      "path": "apps/mobile/src/app/index.tsx",
+      "bytes": 13378,
+      "sha256": "afb294cafb59cbe466a1ee51515a11c1bd7661d8c75f63886f5aad5e81fd94e7",
+      "gitBlobSha256": "1d9c92efcdb3399c0ce044aef4ed19564358f97366a14e4b3363d18bc1f8d87c"
+    },
+    {
+      "path": "apps/mobile/src/app/native-check.tsx",
+      "bytes": 2038,
+      "sha256": "1a237ef4eddae0e45b0396b5134a25ab4cbbb65c73e477b6236ba1c3e81c2e1e",
+      "gitBlobSha256": "1aeb28217abd5b17381e70083623d93f62b2a18a3e6adb2a1ca9750dc638b1de"
+    },
+    {
+      "path": "apps/mobile/src/appearance.tsx",
+      "bytes": 2584,
+      "sha256": "797f2dca5d1e5a6e8d91a4cae1daa8bb95594c2470f9b9b15ff7047a2faaea22",
+      "gitBlobSha256": "797f2dca5d1e5a6e8d91a4cae1daa8bb95594c2470f9b9b15ff7047a2faaea22"
+    },
+    {
+      "path": "apps/mobile/src/build.ts",
+      "bytes": 61,
+      "sha256": "f4c7d9e1d78c317dba70dc549fbff4e7b0280487ed08ab1831cf424ca2600063",
+      "gitBlobSha256": "3b7964eba43b69d5d126efe53b127abf12eff7e989629cf35c387f4c69515401"
+    },
+    {
+      "path": "apps/mobile/src/communication.ts",
+      "bytes": 3364,
+      "sha256": "4d70a76bb24cf84902b865e7e5b955d1864b2fd460d306e36434124bf177f03c",
+      "gitBlobSha256": "4d70a76bb24cf84902b865e7e5b955d1864b2fd460d306e36434124bf177f03c"
+    },
+    {
+      "path": "apps/mobile/src/finance-state.tsx",
+      "bytes": 2243,
+      "sha256": "5b19f75aa8b77095fd782ca040f53d6c0dc7a4cb3efcd06110a5cb78e0f7f567",
+      "gitBlobSha256": "5b19f75aa8b77095fd782ca040f53d6c0dc7a4cb3efcd06110a5cb78e0f7f567"
+    },
+    {
+      "path": "apps/mobile/src/finance/engine.ts",
+      "bytes": 38507,
+      "sha256": "4d285d415ba50338c8abb437458f5f64d5b9068dbdea2708bed34b4efa0262bc",
+      "gitBlobSha256": "4d285d415ba50338c8abb437458f5f64d5b9068dbdea2708bed34b4efa0262bc"
+    },
+    {
+      "path": "apps/mobile/src/finance/fixtures.ts",
+      "bytes": 1946,
+      "sha256": "51035fdf2b34d9ec4a5e6a52de7de01eea5795b2c2fa90b4c39c6c0842cee43c",
+      "gitBlobSha256": "51035fdf2b34d9ec4a5e6a52de7de01eea5795b2c2fa90b4c39c6c0842cee43c"
+    },
+    {
+      "path": "apps/mobile/src/finance/index.ts",
+      "bytes": 113,
+      "sha256": "94da45fc8381aa18fddc07e5740b8d2d2d9e5bcd9a5050323fe2e67cc2b90920",
+      "gitBlobSha256": "94da45fc8381aa18fddc07e5740b8d2d2d9e5bcd9a5050323fe2e67cc2b90920"
+    },
+    {
+      "path": "apps/mobile/src/finance/money-calendar.ts",
+      "bytes": 4587,
+      "sha256": "63006abd19e84ac8e4de972de71d5e9c41b9a01948af2bd5a5a62531296b5202",
+      "gitBlobSha256": "63006abd19e84ac8e4de972de71d5e9c41b9a01948af2bd5a5a62531296b5202"
+    },
+    {
+      "path": "apps/mobile/src/finance/types.ts",
+      "bytes": 5800,
+      "sha256": "1d2d6d6f0cd817f9008ecdfda21660b587ce15f77949af80b186298479e7de41",
+      "gitBlobSha256": "1d2d6d6f0cd817f9008ecdfda21660b587ce15f77949af80b186298479e7de41"
+    },
+    {
+      "path": "apps/mobile/src/id.native.ts",
+      "bytes": 182,
+      "sha256": "67ab634d4173bff4cfc2521d3ed8c55e3e2f1722a7dfecb31ae7ba94ce89dd07",
+      "gitBlobSha256": "67ab634d4173bff4cfc2521d3ed8c55e3e2f1722a7dfecb31ae7ba94ce89dd07"
+    },
+    {
+      "path": "apps/mobile/src/id.ts",
+      "bytes": 300,
+      "sha256": "b4aa236b6a2a161bffd0a10c13b6c56de89077d8811dfe38621159eb1f7d0706",
+      "gitBlobSha256": "b4aa236b6a2a161bffd0a10c13b6c56de89077d8811dfe38621159eb1f7d0706"
+    },
+    {
+      "path": "apps/mobile/src/journal-intelligence/index.ts",
+      "bytes": 16429,
+      "sha256": "6e00ffb92726959632d9b3c5649b506d530d5ea3840a3eaaac0469173ce48a92",
+      "gitBlobSha256": "6e00ffb92726959632d9b3c5649b506d530d5ea3840a3eaaac0469173ce48a92"
+    },
+    {
+      "path": "apps/mobile/src/journal.ts",
+      "bytes": 454,
+      "sha256": "76d3425ea333fdfdd93d28148124eafe93f473cd6a18f1b2882297affa7fdba7",
+      "gitBlobSha256": "76d3425ea333fdfdd93d28148124eafe93f473cd6a18f1b2882297affa7fdba7"
+    },
+    {
+      "path": "apps/mobile/src/local-model-contract.ts",
+      "bytes": 5090,
+      "sha256": "b31766f8e95cb827871bdfd0828824056d7a5f4d1c6fb09e4906730a981d6504",
+      "gitBlobSha256": "b31766f8e95cb827871bdfd0828824056d7a5f4d1c6fb09e4906730a981d6504"
+    },
+    {
+      "path": "apps/mobile/src/local-model.native.ts",
+      "bytes": 6556,
+      "sha256": "277230c6753c352fe24aa3031ebadf611fcbc99a011b04750f868a9cd7b826ff",
+      "gitBlobSha256": "277230c6753c352fe24aa3031ebadf611fcbc99a011b04750f868a9cd7b826ff"
+    },
+    {
+      "path": "apps/mobile/src/local-model.ts",
+      "bytes": 953,
+      "sha256": "5698ce9bf7cff69515fdb19d4cc9782899cfec9b3e142a195463bb67d9d503b3",
+      "gitBlobSha256": "5698ce9bf7cff69515fdb19d4cc9782899cfec9b3e142a195463bb67d9d503b3"
+    },
+    {
+      "path": "apps/mobile/src/messaging-logic.ts",
+      "bytes": 1066,
+      "sha256": "4967c20fe04c19beb255e5d03ccc2f22af596bdd28fffd599549727d7f949954",
+      "gitBlobSha256": "4967c20fe04c19beb255e5d03ccc2f22af596bdd28fffd599549727d7f949954"
+    },
+    {
+      "path": "apps/mobile/src/model.ts",
+      "bytes": 2094,
+      "sha256": "6b78e03ea80f3fd03935e45ea9dd1788d65ebc83b29c1e372241b2f0f2ad357e",
+      "gitBlobSha256": "6b78e03ea80f3fd03935e45ea9dd1788d65ebc83b29c1e372241b2f0f2ad357e"
+    },
+    {
+      "path": "apps/mobile/src/native-text-host.ts",
+      "bytes": 1130,
+      "sha256": "f4846cb003e4af269326643f22d6aa6e7c84340ee89c5c591ce99ae0a9037445",
+      "gitBlobSha256": "f4846cb003e4af269326643f22d6aa6e7c84340ee89c5c591ce99ae0a9037445"
+    },
+    {
+      "path": "apps/mobile/src/production/Account.tsx",
+      "bytes": 19088,
+      "sha256": "b7bc35becd725f4d30900b436a560fa9edcd4c0fcf2973fb90e811ff971766f1",
+      "gitBlobSha256": "3b67690f9d1f29f331096101dd742d4ff5829733b12eda5f63f93235da4cc6e5"
+    },
+    {
+      "path": "apps/mobile/src/production/Application.tsx",
+      "bytes": 79184,
+      "sha256": "2d556f952a1199d168b5555bb5259a2dc40fdd78adeaad9d884297d8231ddc74",
+      "gitBlobSha256": "582c36143399c362fbed49cedf749b127ca20e1b5810db6979c23275fe2784e0"
+    },
+    {
+      "path": "apps/mobile/src/production/Checkins.tsx",
+      "bytes": 18644,
+      "sha256": "b1d1bab92f515703d9279d142e7939d230b73c76596189a6d214549681a5e43b",
+      "gitBlobSha256": "d6936a90bf9ebd3cf357c0330bc612123bbe1f765474db58a1b942931f1e0a76"
+    },
+    {
+      "path": "apps/mobile/src/production/Circle.tsx",
+      "bytes": 26507,
+      "sha256": "17a20b381aa389320f5f4086fffb36b346752cac3830c22d8667f48401d0d911",
+      "gitBlobSha256": "9c174febb3dbae76e48fb093d787eab5b23bc2c0916953cb26187fde1e4a97a0"
+    },
+    {
+      "path": "apps/mobile/src/production/Conversation.tsx",
+      "bytes": 17323,
+      "sha256": "6d6514f669e11c6829b7b45eda0626dab48dcd89ce20f5c1dcd371418e50fe86",
+      "gitBlobSha256": "07fe20347696f3f9d2d37dbad53d695b8dee1f3e955e5ae729ca2fc1b59f9fec"
+    },
+    {
+      "path": "apps/mobile/src/production/Family.tsx",
+      "bytes": 10858,
+      "sha256": "92afe9ced860386e4050ede5b8bbd3bb90090f3f661e599ffa8d31fa5af9a9c1",
+      "gitBlobSha256": "a9752f7a2a4cf8a06f037287da7c711d96b78f136fa1de3662e4cb0511b7cdfb"
+    },
+    {
+      "path": "apps/mobile/src/production/Finance.tsx",
+      "bytes": 37715,
+      "sha256": "434cd9e78cdfc886b5cff6678c73e03bafcaf9006127284e22b895c40920d18a",
+      "gitBlobSha256": "fd3dd23c4839cecea99835bef7e1b3d68045ea937d0c22de6bb65e227528b0db"
+    },
+    {
+      "path": "apps/mobile/src/production/Journal.tsx",
+      "bytes": 57417,
+      "sha256": "ee6acb0b460bb156c239460e7c4bc3bbbd567b6bf9b8abcb03ecdda71b72b9a8",
+      "gitBlobSha256": "ee6acb0b460bb156c239460e7c4bc3bbbd567b6bf9b8abcb03ecdda71b72b9a8"
+    },
+    {
+      "path": "apps/mobile/src/production/Notifications.tsx",
+      "bytes": 6334,
+      "sha256": "d07db5c272f748de07e8e9e9f9b351b59ea29fd534e79542fe346b1f79591141",
+      "gitBlobSha256": "a20ef10d52048b5b7212ba264ee4cae79004a003cd6da5ad0a4c0b4e26596db9"
+    },
+    {
+      "path": "apps/mobile/src/production/account-failures.ts",
+      "bytes": 2581,
+      "sha256": "11bfbf614c89dd3dfb8e82e3814e99a233327293e603186bb2b2a7480c41b0dc",
+      "gitBlobSha256": "11bfbf614c89dd3dfb8e82e3814e99a233327293e603186bb2b2a7480c41b0dc"
+    },
+    {
+      "path": "apps/mobile/src/production/app-privacy.native.ts",
+      "bytes": 605,
+      "sha256": "1238f5ea48c76478739cac8f04028707f79bcc067a478667996c9b646f56b735",
+      "gitBlobSha256": "1238f5ea48c76478739cac8f04028707f79bcc067a478667996c9b646f56b735"
+    },
+    {
+      "path": "apps/mobile/src/production/app-privacy.ts",
+      "bytes": 177,
+      "sha256": "b61f3b4291b7f39339c90acd1aad729380718d39aec8c14ce7dc11df91ff9d95",
+      "gitBlobSha256": "b61f3b4291b7f39339c90acd1aad729380718d39aec8c14ce7dc11df91ff9d95"
+    },
+    {
+      "path": "apps/mobile/src/production/auth-callback-policy.ts",
+      "bytes": 3348,
+      "sha256": "38fd92fca041709edc2027f550a9dd5ea5a53d941500837c6faad31d84ae74bd",
+      "gitBlobSha256": "38fd92fca041709edc2027f550a9dd5ea5a53d941500837c6faad31d84ae74bd"
+    },
+    {
+      "path": "apps/mobile/src/production/auth-crypto-policy.ts",
+      "bytes": 2413,
+      "sha256": "ffaed09faa35af8c58289b45760d20b33aa7432f279f9c12acf1fd89b0097c58",
+      "gitBlobSha256": "ffaed09faa35af8c58289b45760d20b33aa7432f279f9c12acf1fd89b0097c58"
+    },
+    {
+      "path": "apps/mobile/src/production/auth-crypto.native.ts",
+      "bytes": 889,
+      "sha256": "39ec7d2a0684500f3506d00d17ed13f318563069b8806752f0147c842bac178d",
+      "gitBlobSha256": "39ec7d2a0684500f3506d00d17ed13f318563069b8806752f0147c842bac178d"
+    },
+    {
+      "path": "apps/mobile/src/production/auth-crypto.ts",
+      "bytes": 344,
+      "sha256": "cfd5ae6fb78eeded346a34734fdfcd5d2f969d0b374debddc6173214b8837e55",
+      "gitBlobSha256": "cfd5ae6fb78eeded346a34734fdfcd5d2f969d0b374debddc6173214b8837e55"
+    },
+    {
+      "path": "apps/mobile/src/production/auth-mutation.ts",
+      "bytes": 1131,
+      "sha256": "3ce0a8ef5ad6f78523405699b7913a36382896d5df4d50412fb9509b76b4cc1e",
+      "gitBlobSha256": "3ce0a8ef5ad6f78523405699b7913a36382896d5df4d50412fb9509b76b4cc1e"
+    },
+    {
+      "path": "apps/mobile/src/production/auth-redirect.ts",
+      "bytes": 950,
+      "sha256": "124a792a60e278ab2f48236624eb64aef7195f1a6c00cc5c06b701b806b862d7",
+      "gitBlobSha256": "124a792a60e278ab2f48236624eb64aef7195f1a6c00cc5c06b701b806b862d7"
+    },
+    {
+      "path": "apps/mobile/src/production/client.ts",
+      "bytes": 14408,
+      "sha256": "c2f9dae487003d5fc3510fce98ea3ee9fd200f5ebdcd7a81face20ff8d9b228a",
+      "gitBlobSha256": "96573a4d4c6a33d7abea067027cbffed89383d489f3bcc84ed9e4cfd2df30e58"
+    },
+    {
+      "path": "apps/mobile/src/production/deployment-target.ts",
+      "bytes": 6825,
+      "sha256": "3f43cd12ff384432376f7b7a496ee9575ead56e03b714eea2835077553c5c3c4",
+      "gitBlobSha256": "3f43cd12ff384432376f7b7a496ee9575ead56e03b714eea2835077553c5c3c4"
+    },
+    {
+      "path": "apps/mobile/src/production/durable-message-send.ts",
+      "bytes": 4838,
+      "sha256": "da2699487f4a6e225fc1ab39a6a89c45d32775eb5c5f47e64383f99b2a5c093b",
+      "gitBlobSha256": "da2699487f4a6e225fc1ab39a6a89c45d32775eb5c5f47e64383f99b2a5c093b"
+    },
+    {
+      "path": "apps/mobile/src/production/journal-access.ts",
+      "bytes": 7240,
+      "sha256": "beae6a8435b4e0dcbc1428598bbbde2fdd1c28d8b2c2a75ee9a2be73280dd4d7",
+      "gitBlobSha256": "beae6a8435b4e0dcbc1428598bbbde2fdd1c28d8b2c2a75ee9a2be73280dd4d7"
+    },
+    {
+      "path": "apps/mobile/src/production/journal-contacts.ts",
+      "bytes": 2952,
+      "sha256": "2cc354f9ab955506b28f23c36d02be07e51d31aef50459ea2fb25775efa417f5",
+      "gitBlobSha256": "2cc354f9ab955506b28f23c36d02be07e51d31aef50459ea2fb25775efa417f5"
+    },
+    {
+      "path": "apps/mobile/src/production/journal-draft.ts",
+      "bytes": 4383,
+      "sha256": "07204ff7f96f620b1761a2889617a82b121c0822b11b0df0db5a09b3178a858a",
+      "gitBlobSha256": "07204ff7f96f620b1761a2889617a82b121c0822b11b0df0db5a09b3178a858a"
+    },
+    {
+      "path": "apps/mobile/src/production/journal-model.ts",
+      "bytes": 2371,
+      "sha256": "8230a932065eba9102ec62705f69dc6e7548d71e9d91056aa68c6f3db434445f",
+      "gitBlobSha256": "8230a932065eba9102ec62705f69dc6e7548d71e9d91056aa68c6f3db434445f"
+    },
+    {
+      "path": "apps/mobile/src/production/journal-offline-lease.ts",
+      "bytes": 3461,
+      "sha256": "dfc987acec0d561b0a91efca4297de4b86815451f5bcc656ff28a901f49ee796",
+      "gitBlobSha256": "dfc987acec0d561b0a91efca4297de4b86815451f5bcc656ff28a901f49ee796"
+    },
+    {
+      "path": "apps/mobile/src/production/journal-storage-controls.ts",
+      "bytes": 3035,
+      "sha256": "18dfff54611e588152925da56f1076f9cd26637872c20239b08ea14e3afb6573",
+      "gitBlobSha256": "18dfff54611e588152925da56f1076f9cd26637872c20239b08ea14e3afb6573"
+    },
+    {
+      "path": "apps/mobile/src/production/message-outbox-policy.ts",
+      "bytes": 9990,
+      "sha256": "c90dd9e7d03de3185877c2b6088fb4ca5a52d671795c9e8f7e9be6e135ee9471",
+      "gitBlobSha256": "c90dd9e7d03de3185877c2b6088fb4ca5a52d671795c9e8f7e9be6e135ee9471"
+    },
+    {
+      "path": "apps/mobile/src/production/message-outbox.native.ts",
+      "bytes": 6367,
+      "sha256": "75c719e7f0b384cdb84539d2c64961cb215809c9c407dceb991f56aaa879c805",
+      "gitBlobSha256": "75c719e7f0b384cdb84539d2c64961cb215809c9c407dceb991f56aaa879c805"
+    },
+    {
+      "path": "apps/mobile/src/production/message-outbox.ts",
+      "bytes": 470,
+      "sha256": "8291cc32e99e31e95c925576703791d090ba5a4d6723fbcdfc6ab4464ae337bf",
+      "gitBlobSha256": "8291cc32e99e31e95c925576703791d090ba5a4d6723fbcdfc6ab4464ae337bf"
+    },
+    {
+      "path": "apps/mobile/src/production/native-check.native.ts",
+      "bytes": 3785,
+      "sha256": "2972d12e0c7427b5135e1abc352cf1bcc0e5b659f13a552c3bb6d0869c33694d",
+      "gitBlobSha256": "2972d12e0c7427b5135e1abc352cf1bcc0e5b659f13a552c3bb6d0869c33694d"
+    },
+    {
+      "path": "apps/mobile/src/production/native-check.ts",
+      "bytes": 232,
+      "sha256": "8cb12f14aa02e093b06f79e308520f4c1a1ba316cf72eeb4b6327daf91a2b217",
+      "gitBlobSha256": "8cb12f14aa02e093b06f79e308520f4c1a1ba316cf72eeb4b6327daf91a2b217"
+    },
+    {
+      "path": "apps/mobile/src/production/pending-finance-policy.ts",
+      "bytes": 14865,
+      "sha256": "8993221bb2b5c661c325000e99ec902a8d98cbc0809fbae116b09e28b318f13c",
+      "gitBlobSha256": "8993221bb2b5c661c325000e99ec902a8d98cbc0809fbae116b09e28b318f13c"
+    },
+    {
+      "path": "apps/mobile/src/production/pending-finance.native.ts",
+      "bytes": 729,
+      "sha256": "5756d66ad216c98162cfba316d31355dc07aa8abdd1162a9f5d5c31bde18cb94",
+      "gitBlobSha256": "5756d66ad216c98162cfba316d31355dc07aa8abdd1162a9f5d5c31bde18cb94"
+    },
+    {
+      "path": "apps/mobile/src/production/pending-finance.ts",
+      "bytes": 499,
+      "sha256": "5b95722d80156caa586a8c2f8915552144681b030fbe233680c1b4f3254e7d3a",
+      "gitBlobSha256": "5b95722d80156caa586a8c2f8915552144681b030fbe233680c1b4f3254e7d3a"
+    },
+    {
+      "path": "apps/mobile/src/production/private-message-draft-policy.ts",
+      "bytes": 8850,
+      "sha256": "964019490ea90e45cce76add45e1b3512083a914148d2082e5203c7740cb0257",
+      "gitBlobSha256": "964019490ea90e45cce76add45e1b3512083a914148d2082e5203c7740cb0257"
+    },
+    {
+      "path": "apps/mobile/src/production/private-message-drafts.native.ts",
+      "bytes": 2051,
+      "sha256": "f13cf8b5067d0819ee5e10606d83291e01f3b197141fe869cb96d4f199996586",
+      "gitBlobSha256": "f13cf8b5067d0819ee5e10606d83291e01f3b197141fe869cb96d4f199996586"
+    },
+    {
+      "path": "apps/mobile/src/production/private-message-drafts.ts",
+      "bytes": 539,
+      "sha256": "6c89fd70f62aca6041b8046e7337a939d97e252221c8a9a4cf67eaba780448f6",
+      "gitBlobSha256": "6c89fd70f62aca6041b8046e7337a939d97e252221c8a9a4cf67eaba780448f6"
+    },
+    {
+      "path": "apps/mobile/src/production/private-screen-capture-lease.ts",
+      "bytes": 1799,
+      "sha256": "c2689779bed9ae378776ac6dbf6415b6b4a28802d239b685e523642423320349",
+      "gitBlobSha256": "c2689779bed9ae378776ac6dbf6415b6b4a28802d239b685e523642423320349"
+    },
+    {
+      "path": "apps/mobile/src/production/private-screen-capture.native.ts",
+      "bytes": 1222,
+      "sha256": "b699adf3462c4d04263c958c520c51b082228fd7393205377d6ad36aa19af43d",
+      "gitBlobSha256": "b699adf3462c4d04263c958c520c51b082228fd7393205377d6ad36aa19af43d"
+    },
+    {
+      "path": "apps/mobile/src/production/private-screen-capture.ts",
+      "bytes": 313,
+      "sha256": "7c97f3e79a1fa82eb4d0f93801b353b5b575dfe85e25e7aba7436d5ea1a6141b",
+      "gitBlobSha256": "7c97f3e79a1fa82eb4d0f93801b353b5b575dfe85e25e7aba7436d5ea1a6141b"
+    },
+    {
+      "path": "apps/mobile/src/production/private-writing-lifetime.ts",
+      "bytes": 1630,
+      "sha256": "e48e80cbbb4579fc4ab654beb8f035982daa8aa9a2e7957d0c3f21acc1fd0d29",
+      "gitBlobSha256": "e48e80cbbb4579fc4ab654beb8f035982daa8aa9a2e7957d0c3f21acc1fd0d29"
+    },
+    {
+      "path": "apps/mobile/src/production/push-registration.native.ts",
+      "bytes": 1462,
+      "sha256": "803cb3c348b707fe0429f1bd92f78d74a143e8973bf456387e22e88fb8bbe479",
+      "gitBlobSha256": "c1ce4e2e915f034af389a98297ef44ed9131d7dc3c8cd0f8f65c0e837990f188"
+    },
+    {
+      "path": "apps/mobile/src/production/push-registration.ts",
+      "bytes": 246,
+      "sha256": "9f996f3230b892acb07b344c24397c9a316508fcf4c0c086fd26448b51655bc8",
+      "gitBlobSha256": "9f996f3230b892acb07b344c24397c9a316508fcf4c0c086fd26448b51655bc8"
+    },
+    {
+      "path": "apps/mobile/src/production/recovery-proof.ts",
+      "bytes": 939,
+      "sha256": "4368b962c838a5aae3dc97fda26d8fa31cc3eb03d15dd8e7651c135ac3e95b34",
+      "gitBlobSha256": "4368b962c838a5aae3dc97fda26d8fa31cc3eb03d15dd8e7651c135ac3e95b34"
+    },
+    {
+      "path": "apps/mobile/src/production/reviewed-send-coordinator.ts",
+      "bytes": 4878,
+      "sha256": "151c5734bbe04f71c663597168968a844e06f3a4ba7a7e62e898086a985b448b",
+      "gitBlobSha256": "151c5734bbe04f71c663597168968a844e06f3a4ba7a7e62e898086a985b448b"
+    },
+    {
+      "path": "apps/mobile/src/production/reviewed-send.ts",
+      "bytes": 2515,
+      "sha256": "f1d41e98d18d4a5c37bfb45f8518841a2b4beee762340087a4fef900ba033d7c",
+      "gitBlobSha256": "f1d41e98d18d4a5c37bfb45f8518841a2b4beee762340087a4fef900ba033d7c"
+    },
+    {
+      "path": "apps/mobile/src/production/session-boundary.ts",
+      "bytes": 1033,
+      "sha256": "ab145a5bc1f747b2e99948a2787bf468bec0bcfa01de03c717ea317b9fd04124",
+      "gitBlobSha256": "ab145a5bc1f747b2e99948a2787bf468bec0bcfa01de03c717ea317b9fd04124"
+    },
+    {
+      "path": "apps/mobile/src/production/session-storage.native.ts",
+      "bytes": 499,
+      "sha256": "9155988f7aac8deb08427f98c84d46f5117c93bd18a8448b722fc8ff51e1852e",
+      "gitBlobSha256": "9155988f7aac8deb08427f98c84d46f5117c93bd18a8448b722fc8ff51e1852e"
+    },
+    {
+      "path": "apps/mobile/src/production/session-storage.ts",
+      "bytes": 380,
+      "sha256": "67cc7f4df9783dd23da030d3e5920cf913b465d3b58b7ef12605083d5e32890d",
+      "gitBlobSha256": "67cc7f4df9783dd23da030d3e5920cf913b465d3b58b7ef12605083d5e32890d"
+    },
+    {
+      "path": "apps/mobile/src/production/transport.ts",
+      "bytes": 1013,
+      "sha256": "e1f59fb639d40d9b6b687e4e0a74ede18f165479f3cd8e57c6e1f39fd0336568",
+      "gitBlobSha256": "e1f59fb639d40d9b6b687e4e0a74ede18f165479f3cd8e57c6e1f39fd0336568"
+    },
+    {
+      "path": "apps/mobile/src/production/vault/README.md",
+      "bytes": 9031,
+      "sha256": "787ab13831156a5659a1e53de2b9eebe95a89b7edc952f0e1336dc0dd852355c",
+      "gitBlobSha256": "787ab13831156a5659a1e53de2b9eebe95a89b7edc952f0e1336dc0dd852355c"
+    },
+    {
+      "path": "apps/mobile/src/production/vault/core.ts",
+      "bytes": 21741,
+      "sha256": "8a6b38dbe9e951b91a0c384130d1a67b828036bc41f62b20a03bee5bdb97b3d5",
+      "gitBlobSha256": "8a6b38dbe9e951b91a0c384130d1a67b828036bc41f62b20a03bee5bdb97b3d5"
+    },
+    {
+      "path": "apps/mobile/src/production/vault/exclusive.ts",
+      "bytes": 893,
+      "sha256": "7aac4ec5c50d5989008b66b967cfc94694c91daf112033a671be38ba5bbf2c08",
+      "gitBlobSha256": "7aac4ec5c50d5989008b66b967cfc94694c91daf112033a671be38ba5bbf2c08"
+    },
+    {
+      "path": "apps/mobile/src/production/vault/index.ts",
+      "bytes": 73,
+      "sha256": "91cb31593f8f4beca9a952a2dcb774b7a4ca0ecece4e248765171bef8c2adb05",
+      "gitBlobSha256": "91cb31593f8f4beca9a952a2dcb774b7a4ca0ecece4e248765171bef8c2adb05"
+    },
+    {
+      "path": "apps/mobile/src/production/vault/platform.native.ts",
+      "bytes": 7859,
+      "sha256": "adb3165de2e91747211cc6fef1e7f549ac1e5e9fbd39b344eef56804f6ecf0ff",
+      "gitBlobSha256": "22549aee7e7da4898598d2f7ae71bf71fab674ffc3651e6a8f506ebf492febae"
+    },
+    {
+      "path": "apps/mobile/src/production/vault/platform.ts",
+      "bytes": 1327,
+      "sha256": "d12fe0c235d380eac334383d1a20382cba1b7b1c003ff159c5b9502e7aae710b",
+      "gitBlobSha256": "d12fe0c235d380eac334383d1a20382cba1b7b1c003ff159c5b9502e7aae710b"
+    },
+    {
+      "path": "apps/mobile/src/production/vault/types.ts",
+      "bytes": 4341,
+      "sha256": "fde6d82869889788f573d1bf01d886c5037dea01f99159d63101adf840ae4d23",
+      "gitBlobSha256": "fde6d82869889788f573d1bf01d886c5037dea01f99159d63101adf840ae4d23"
+    },
+    {
+      "path": "apps/mobile/src/screens/Checkins.tsx",
+      "bytes": 8404,
+      "sha256": "6ecf89e1d5a3fbf5144d6e4f6303b50857ba4d1e9f8bb7715b2f54c21f8387c3",
+      "gitBlobSha256": "6ecf89e1d5a3fbf5144d6e4f6303b50857ba4d1e9f8bb7715b2f54c21f8387c3"
+    },
+    {
+      "path": "apps/mobile/src/screens/Circle.tsx",
+      "bytes": 9962,
+      "sha256": "0f873055cfc85e1ffda5a00407550d79c756f6afed71acfd2c4969a7cbf6f19e",
+      "gitBlobSha256": "0f873055cfc85e1ffda5a00407550d79c756f6afed71acfd2c4969a7cbf6f19e"
+    },
+    {
+      "path": "apps/mobile/src/screens/Finance.tsx",
+      "bytes": 53395,
+      "sha256": "d9e37c83f54886902d557de5c56dff97fe938372b8d33cf53dd4ed0294624b64",
+      "gitBlobSha256": "d9e37c83f54886902d557de5c56dff97fe938372b8d33cf53dd4ed0294624b64"
+    },
+    {
+      "path": "apps/mobile/src/screens/Home.tsx",
+      "bytes": 8624,
+      "sha256": "c8a7e70a6c81f97daa3c6ab4f9213b9750d8f9aa8e8857ec9eb4569b65655101",
+      "gitBlobSha256": "c8a7e70a6c81f97daa3c6ab4f9213b9750d8f9aa8e8857ec9eb4569b65655101"
+    },
+    {
+      "path": "apps/mobile/src/screens/Journal.tsx",
+      "bytes": 13140,
+      "sha256": "924ea2e888c0e7bcf3b0978d4a8d9a0c1fd6aa15a264d87c5ae6be3669548454",
+      "gitBlobSha256": "924ea2e888c0e7bcf3b0978d4a8d9a0c1fd6aa15a264d87c5ae6be3669548454"
+    },
+    {
+      "path": "apps/mobile/src/screens/LocalModel.tsx",
+      "bytes": 4419,
+      "sha256": "c16b598ca46ec786462efc9ac1b61a07efa44fef7cecd04e75269662a5377b0e",
+      "gitBlobSha256": "c16b598ca46ec786462efc9ac1b61a07efa44fef7cecd04e75269662a5377b0e"
+    },
+    {
+      "path": "apps/mobile/src/screens/Messaging.tsx",
+      "bytes": 21247,
+      "sha256": "d5965b9a559d4ee2c34ff9559279b3950593f08c4d5d6c40c528d51c3dfe4682",
+      "gitBlobSha256": "d5965b9a559d4ee2c34ff9559279b3950593f08c4d5d6c40c528d51c3dfe4682"
+    },
+    {
+      "path": "apps/mobile/src/state.tsx",
+      "bytes": 11291,
+      "sha256": "1b6ad496a19efe2a77b59857efc04869314fce5987be1fec69114f5e761a1bd5",
+      "gitBlobSha256": "1b6ad496a19efe2a77b59857efc04869314fce5987be1fec69114f5e761a1bd5"
+    },
+    {
+      "path": "apps/mobile/src/theme.ts",
+      "bytes": 1606,
+      "sha256": "1aa9abed252b2b831adf6a761bac120b4a4a4352fe3877f94608fbad2dffc24b",
+      "gitBlobSha256": "1aa9abed252b2b831adf6a761bac120b4a4a4352fe3877f94608fbad2dffc24b"
+    },
+    {
+      "path": "apps/mobile/src/ui.tsx",
+      "bytes": 8567,
+      "sha256": "d04becac89f271ce85a941470ba32a38e3608af78d72f0591242b691d9f1c44c",
+      "gitBlobSha256": "7daabcf0257eb1e2ab50d47436323c231d98fa74305e7a5a7b6b41272c594aea"
+    },
+    {
+      "path": "apps/mobile/src/writing-keyboard-view.tsx",
+      "bytes": 896,
+      "sha256": "3cb2230e5a8e7cd43a9223c404ff0426b386f05a08a7ee8faf03ad7ecaeb17a1",
+      "gitBlobSha256": "3cb2230e5a8e7cd43a9223c404ff0426b386f05a08a7ee8faf03ad7ecaeb17a1"
+    },
+    {
+      "path": "apps/mobile/tests/account-failures.test.ts",
+      "bytes": 5831,
+      "sha256": "32f960afeb4b2706f821bcb287f242143fcadd0aac762c783473d53e0dbdaee2",
+      "gitBlobSha256": "32f960afeb4b2706f821bcb287f242143fcadd0aac762c783473d53e0dbdaee2"
+    },
+    {
+      "path": "apps/mobile/tests/auth-callback.test.ts",
+      "bytes": 4043,
+      "sha256": "33b486fdbc7655cb9fd768754d75e1992fc1570d0af6498c45f22c70858dcd01",
+      "gitBlobSha256": "33b486fdbc7655cb9fd768754d75e1992fc1570d0af6498c45f22c70858dcd01"
+    },
+    {
+      "path": "apps/mobile/tests/auth-crypto.test.ts",
+      "bytes": 3903,
+      "sha256": "1d15c26874e2b6f75ca3a03ed4888a4e8c65019f74e9710ccd3e16301a968a20",
+      "gitBlobSha256": "1d15c26874e2b6f75ca3a03ed4888a4e8c65019f74e9710ccd3e16301a968a20"
+    },
+    {
+      "path": "apps/mobile/tests/auth-mutation.test.ts",
+      "bytes": 4992,
+      "sha256": "8635b42967e175320eac902f283a7fec98a63227110f711ce030be60701dd798",
+      "gitBlobSha256": "8635b42967e175320eac902f283a7fec98a63227110f711ce030be60701dd798"
+    },
+    {
+      "path": "apps/mobile/tests/blocking.test.ts",
+      "bytes": 6000,
+      "sha256": "42ec61790b87d03790ec23f7c308ca099a2f24b937381f4d7181fc213dc9e9b6",
+      "gitBlobSha256": "42ec61790b87d03790ec23f7c308ca099a2f24b937381f4d7181fc213dc9e9b6"
+    },
+    {
+      "path": "apps/mobile/tests/communication.test.ts",
+      "bytes": 2851,
+      "sha256": "4bf0ab617a4a5e1361c1c8960dc6a75d1ecc1fb6266d6585b64fda065327bab3",
+      "gitBlobSha256": "4bf0ab617a4a5e1361c1c8960dc6a75d1ecc1fb6266d6585b64fda065327bab3"
+    },
+    {
+      "path": "apps/mobile/tests/dependency-compat.test.ts",
+      "bytes": 1073,
+      "sha256": "03ae955c5e0098e622ed6f4423bfe0b9f6f74e8c2dca0683d273fbd7ff236fdb",
+      "gitBlobSha256": "03ae955c5e0098e622ed6f4423bfe0b9f6f74e8c2dca0683d273fbd7ff236fdb"
+    },
+    {
+      "path": "apps/mobile/tests/deployment-target.test.ts",
+      "bytes": 6544,
+      "sha256": "ebe3fa5709fa3bdc2087275e7ae2ac1fec33f22bf63bb9c7d7187f925f80d072",
+      "gitBlobSha256": "ebe3fa5709fa3bdc2087275e7ae2ac1fec33f22bf63bb9c7d7187f925f80d072"
+    },
+    {
+      "path": "apps/mobile/tests/durable-message-send.test.ts",
+      "bytes": 6721,
+      "sha256": "7fd3ab1a5eade15918755594e08b8266ed9a1c2c9f632ca95944ab3c8baf20d2",
+      "gitBlobSha256": "7fd3ab1a5eade15918755594e08b8266ed9a1c2c9f632ca95944ab3c8baf20d2"
+    },
+    {
+      "path": "apps/mobile/tests/finance.test.ts",
+      "bytes": 32084,
+      "sha256": "ede41494fd877f09f1252d7996026667c3bc46fa543cb5173c5a5d102616e6ef",
+      "gitBlobSha256": "ede41494fd877f09f1252d7996026667c3bc46fa543cb5173c5a5d102616e6ef"
+    },
+    {
+      "path": "apps/mobile/tests/id.test.ts",
+      "bytes": 4015,
+      "sha256": "6e9986c164e050b25a8a19d3fed18209ff8fff608fe8a177e091095b5eb5dd20",
+      "gitBlobSha256": "6e9986c164e050b25a8a19d3fed18209ff8fff608fe8a177e091095b5eb5dd20"
+    },
+    {
+      "path": "apps/mobile/tests/journal-contacts.test.ts",
+      "bytes": 3014,
+      "sha256": "0ef10b0a50faa4c6196b52a78e38810e52f08e278ab9faa807a344a68d39e9b3",
+      "gitBlobSha256": "0ef10b0a50faa4c6196b52a78e38810e52f08e278ab9faa807a344a68d39e9b3"
+    },
+    {
+      "path": "apps/mobile/tests/journal-draft.test.ts",
+      "bytes": 6430,
+      "sha256": "d7294afa999d0176a05175545913c7a98b938f23cf0794b1db19ad30db19edb8",
+      "gitBlobSha256": "d7294afa999d0176a05175545913c7a98b938f23cf0794b1db19ad30db19edb8"
+    },
+    {
+      "path": "apps/mobile/tests/journal-intelligence.test.ts",
+      "bytes": 11472,
+      "sha256": "5d599ec8a2188f9dc7a911dd2a532f96c8c8035a6a0872368a25662785e27abc",
+      "gitBlobSha256": "5d599ec8a2188f9dc7a911dd2a532f96c8c8035a6a0872368a25662785e27abc"
+    },
+    {
+      "path": "apps/mobile/tests/journal-offline-lease.test.ts",
+      "bytes": 7395,
+      "sha256": "fdf9ecd53f3298c52bff88eae428d2664b172bfd40481825f555f1635ca5be33",
+      "gitBlobSha256": "fdf9ecd53f3298c52bff88eae428d2664b172bfd40481825f555f1635ca5be33"
+    },
+    {
+      "path": "apps/mobile/tests/journal-storage-controls.test.ts",
+      "bytes": 6099,
+      "sha256": "534f90786912b407466ca5bff956c5d4e97d5161a76926aab6b93292f7b372e2",
+      "gitBlobSha256": "534f90786912b407466ca5bff956c5d4e97d5161a76926aab6b93292f7b372e2"
+    },
+    {
+      "path": "apps/mobile/tests/journal.test.ts",
+      "bytes": 1207,
+      "sha256": "1dcd8c486af0411bff8d12dc684a63930b38f5f2ec93102694685942d214d679",
+      "gitBlobSha256": "1dcd8c486af0411bff8d12dc684a63930b38f5f2ec93102694685942d214d679"
+    },
+    {
+      "path": "apps/mobile/tests/local-model.test.ts",
+      "bytes": 7404,
+      "sha256": "a298a37e72f5a27c067f0b6ce3305f8fa46aa8324351c409dfe20b6c97734c84",
+      "gitBlobSha256": "a298a37e72f5a27c067f0b6ce3305f8fa46aa8324351c409dfe20b6c97734c84"
+    },
+    {
+      "path": "apps/mobile/tests/message-outbox.test.ts",
+      "bytes": 8304,
+      "sha256": "f105ad1fbc971748889776542a3a8818bd6466504dc61ef3be95a512f0d676b4",
+      "gitBlobSha256": "f105ad1fbc971748889776542a3a8818bd6466504dc61ef3be95a512f0d676b4"
+    },
+    {
+      "path": "apps/mobile/tests/messaging.test.ts",
+      "bytes": 1474,
+      "sha256": "e9af3224267f628cadc78bf72ee70207b6f408fd06b8dace6c19945432ddd200",
+      "gitBlobSha256": "e9af3224267f628cadc78bf72ee70207b6f408fd06b8dace6c19945432ddd200"
+    },
+    {
+      "path": "apps/mobile/tests/model.test.ts",
+      "bytes": 4399,
+      "sha256": "e750c165afddb13cf1514f2efed9920c6a3f0017545eb063cc9c68bad15977c0",
+      "gitBlobSha256": "e750c165afddb13cf1514f2efed9920c6a3f0017545eb063cc9c68bad15977c0"
+    },
+    {
+      "path": "apps/mobile/tests/native-config.test.ts",
+      "bytes": 6873,
+      "sha256": "31567bafef9a504e472b98e31a20bcb72f2174b95886365abba17b60b5c27ff0",
+      "gitBlobSha256": "31567bafef9a504e472b98e31a20bcb72f2174b95886365abba17b60b5c27ff0"
+    },
+    {
+      "path": "apps/mobile/tests/native-text-host.test.ts",
+      "bytes": 2957,
+      "sha256": "4a050add83aec6495c4de7d49744840b46521a62d94f2d446dc085cce7c443dc",
+      "gitBlobSha256": "4a050add83aec6495c4de7d49744840b46521a62d94f2d446dc085cce7c443dc"
+    },
+    {
+      "path": "apps/mobile/tests/pending-finance.test.ts",
+      "bytes": 11670,
+      "sha256": "5d29b2a5cfe84e0ca944239d9e06c9642d908db6e4226455dab52019deba5192",
+      "gitBlobSha256": "5d29b2a5cfe84e0ca944239d9e06c9642d908db6e4226455dab52019deba5192"
+    },
+    {
+      "path": "apps/mobile/tests/private-message-drafts.test.ts",
+      "bytes": 10212,
+      "sha256": "9452d4a166e68cb150737fee6fdfe4759c58a89d05760f16229ef0fe5cc0c896",
+      "gitBlobSha256": "9452d4a166e68cb150737fee6fdfe4759c58a89d05760f16229ef0fe5cc0c896"
+    },
+    {
+      "path": "apps/mobile/tests/private-screen-capture.test.ts",
+      "bytes": 5599,
+      "sha256": "7df6deb231c71dc994284f3e721d0e6b2404c2ecbe84cc577f0077cec56cc5df",
+      "gitBlobSha256": "7df6deb231c71dc994284f3e721d0e6b2404c2ecbe84cc577f0077cec56cc5df"
+    },
+    {
+      "path": "apps/mobile/tests/private-writing-lifetime.test.ts",
+      "bytes": 5735,
+      "sha256": "8a0ee947bca9ffcac5c27dddcd6cbc1659032e1d1a59d90447008e6a3e883b04",
+      "gitBlobSha256": "8a0ee947bca9ffcac5c27dddcd6cbc1659032e1d1a59d90447008e6a3e883b04"
+    },
+    {
+      "path": "apps/mobile/tests/production-capture-permissions.test.ts",
+      "bytes": 1887,
+      "sha256": "e90b024cf73a86f7fe1c8a480c349c9d5c18b3ba6a816eb3090ef55381bdf7a9",
+      "gitBlobSha256": "e90b024cf73a86f7fe1c8a480c349c9d5c18b3ba6a816eb3090ef55381bdf7a9"
+    },
+    {
+      "path": "apps/mobile/tests/production-circle.test.ts",
+      "bytes": 7838,
+      "sha256": "13e913f9dc4212617fbcea9a30d46d435b42bb4e99adf4191e8a63a4f196b461",
+      "gitBlobSha256": "13e913f9dc4212617fbcea9a30d46d435b42bb4e99adf4191e8a63a4f196b461"
+    },
+    {
+      "path": "apps/mobile/tests/production-finance.test.ts",
+      "bytes": 7712,
+      "sha256": "ebed2f16fb7b7201117e19b1e65c2520ff569f6048c0c47d38e6d2afd8393876",
+      "gitBlobSha256": "a8cac84bf70a6eb81ae980dff56460dfc88692edf335c6b70439dd569c3104dc"
+    },
+    {
+      "path": "apps/mobile/tests/production-fixture-path.test.ts",
+      "bytes": 3031,
+      "sha256": "f3cd717d8bb226738b0959896aa352edb00dd60013993d7604e43d9d307121fa",
+      "gitBlobSha256": "f3cd717d8bb226738b0959896aa352edb00dd60013993d7604e43d9d307121fa"
+    },
+    {
+      "path": "apps/mobile/tests/production-journal-model.test.ts",
+      "bytes": 4535,
+      "sha256": "7b217d12ef8c5ac08d8bd3542d937967e3442c18f3f5799baeaf4b26a58c752d",
+      "gitBlobSha256": "7b217d12ef8c5ac08d8bd3542d937967e3442c18f3f5799baeaf4b26a58c752d"
+    },
+    {
+      "path": "apps/mobile/tests/production-journal.test.ts",
+      "bytes": 12749,
+      "sha256": "4fb4f8ee75fcbd5269fcb7f75a0334e0a18eaabe8bc3d232bb13cc4aa08977be",
+      "gitBlobSha256": "4fb4f8ee75fcbd5269fcb7f75a0334e0a18eaabe8bc3d232bb13cc4aa08977be"
+    },
+    {
+      "path": "apps/mobile/tests/production-messaging.test.ts",
+      "bytes": 2532,
+      "sha256": "92b107fff36da0a11596a6597dfadbd844d6ed085639fb11824e818b8703fa86",
+      "gitBlobSha256": "92b107fff36da0a11596a6597dfadbd844d6ed085639fb11824e818b8703fa86"
+    },
+    {
+      "path": "apps/mobile/tests/production-recovery.test.ts",
+      "bytes": 1347,
+      "sha256": "da5fa842faa49871b567d169fcb17d9c1473895e3e17fdc7d0cdc9f8f8d9e177",
+      "gitBlobSha256": "da5fa842faa49871b567d169fcb17d9c1473895e3e17fdc7d0cdc9f8f8d9e177"
+    },
+    {
+      "path": "apps/mobile/tests/production-session.test.ts",
+      "bytes": 2057,
+      "sha256": "8a7a5fa330a4549acf7ff7924fdb89fa5250dc89ce62ebcc2247e221aca7fb69",
+      "gitBlobSha256": "8a7a5fa330a4549acf7ff7924fdb89fa5250dc89ce62ebcc2247e221aca7fb69"
+    },
+    {
+      "path": "apps/mobile/tests/production-transport.test.ts",
+      "bytes": 5946,
+      "sha256": "1e442d1bfbcd0dcf19d8440c5b57108f79eca86a81754bb12f3c894a1cb4491a",
+      "gitBlobSha256": "1e442d1bfbcd0dcf19d8440c5b57108f79eca86a81754bb12f3c894a1cb4491a"
+    },
+    {
+      "path": "apps/mobile/tests/production-writing-configuration.test.ts",
+      "bytes": 4593,
+      "sha256": "b5c94a6c6418932feef374b3acfdfa16a90508689c3cb06c8c61cc17cf4a8ab4",
+      "gitBlobSha256": "b5c94a6c6418932feef374b3acfdfa16a90508689c3cb06c8c61cc17cf4a8ab4"
+    },
+    {
+      "path": "apps/mobile/tests/reviewed-send-coordinator.test.ts",
+      "bytes": 8943,
+      "sha256": "f30e7af926b27d359b454ca1400bfd8e5ede7f135f30680a34853db1ad128b0d",
+      "gitBlobSha256": "f30e7af926b27d359b454ca1400bfd8e5ede7f135f30680a34853db1ad128b0d"
+    },
+    {
+      "path": "apps/mobile/tests/vault-exclusive.test.ts",
+      "bytes": 1325,
+      "sha256": "0c0740dacbced2cd385fe8fa167d0b1ebfcdbfc4b5d6f848e76f3532ebd0025f",
+      "gitBlobSha256": "0c0740dacbced2cd385fe8fa167d0b1ebfcdbfc4b5d6f848e76f3532ebd0025f"
+    },
+    {
+      "path": "apps/mobile/tests/vault.test.ts",
+      "bytes": 23301,
+      "sha256": "f27eab2fc499c1b470e46c312c3d148e8f21960dcff3eab256adb4cca4e0da0a",
+      "gitBlobSha256": "f27eab2fc499c1b470e46c312c3d148e8f21960dcff3eab256adb4cca4e0da0a"
+    },
+    {
+      "path": "apps/mobile/tsconfig.json",
+      "bytes": 285,
+      "sha256": "e407e1e6b3b74f33f4995d2de7615f60f83c9ab8b48783b02af3da042f8f672a",
+      "gitBlobSha256": "e407e1e6b3b74f33f4995d2de7615f60f83c9ab8b48783b02af3da042f8f672a"
+    },
+    {
+      "path": "design/OPEN_LETTER_DESIGN_SYSTEM.md",
+      "bytes": 8985,
+      "sha256": "8b79d6315f2386a815ab9b0195d0c6fea0818e06a28439eab280f58224a9fff5",
+      "gitBlobSha256": "8b79d6315f2386a815ab9b0195d0c6fea0818e06a28439eab280f58224a9fff5"
+    },
+    {
+      "path": "services/backend/AGENTS.md",
+      "bytes": 1599,
+      "sha256": "3317b8838b2847bd69e32c77fda3c12a9a7a000e56865d1410fa9fb63082a4ec",
+      "gitBlobSha256": "3317b8838b2847bd69e32c77fda3c12a9a7a000e56865d1410fa9fb63082a4ec"
+    },
+    {
+      "path": "services/backend/config/staging/approved-targets.json",
+      "bytes": 42,
+      "sha256": "6904c60dd78bf87b35c75b5b82ac0b10ce48a71d66fc1d950c71e80050474833",
+      "gitBlobSha256": "6904c60dd78bf87b35c75b5b82ac0b10ce48a71d66fc1d950c71e80050474833"
+    },
+    {
+      "path": "services/backend/config/staging/mobile.env.names",
+      "bytes": 171,
+      "sha256": "52db02dc35c64ae81b448604f7404b01b613d8ff4adf2553f28d1a581587fbd2",
+      "gitBlobSha256": "52db02dc35c64ae81b448604f7404b01b613d8ff4adf2553f28d1a581587fbd2"
+    },
+    {
+      "path": "services/backend/config/staging/operator.env.names",
+      "bytes": 155,
+      "sha256": "63e075c53ddaf287e9f5360eea9c28ce7662d90289eb36e1f57fbaefa450dc45",
+      "gitBlobSha256": "63e075c53ddaf287e9f5360eea9c28ce7662d90289eb36e1f57fbaefa450dc45"
+    },
+    {
+      "path": "services/backend/config/staging/server.env.names",
+      "bytes": 214,
+      "sha256": "aa87f056704cda0dd3c83c536fe199ebd3df54955d349d09426fff1c764cc8d6",
+      "gitBlobSha256": "aa87f056704cda0dd3c83c536fe199ebd3df54955d349d09426fff1c764cc8d6"
+    },
+    {
+      "path": "services/backend/package-lock.json",
+      "bytes": 33900,
+      "sha256": "2fc6ae62460b6d93d0ee6ba51984c52b248d5199b019efa8d26f85b50be6e1d4",
+      "gitBlobSha256": "2fc6ae62460b6d93d0ee6ba51984c52b248d5199b019efa8d26f85b50be6e1d4"
+    },
+    {
+      "path": "services/backend/package.json",
+      "bytes": 615,
+      "sha256": "6476a494a177f6009f5267354cf93bc7514960284242b58b5a209b4d994a3bd9",
+      "gitBlobSha256": "6476a494a177f6009f5267354cf93bc7514960284242b58b5a209b4d994a3bd9"
+    },
+    {
+      "path": "services/backend/recovery/database.mjs",
+      "bytes": 10210,
+      "sha256": "c2298ebd78a3a161f4dfdba69e57053de93f0ba73140c9c22c4796546d6655f2",
+      "gitBlobSha256": "c2298ebd78a3a161f4dfdba69e57053de93f0ba73140c9c22c4796546d6655f2"
+    },
+    {
+      "path": "services/backend/recovery/fixture.mjs",
+      "bytes": 13163,
+      "sha256": "4761bf550e75c3ce3e3c5f663da1c5513a9e0697d4464375e65c9f9a04883a91",
+      "gitBlobSha256": "4761bf550e75c3ce3e3c5f663da1c5513a9e0697d4464375e65c9f9a04883a91"
+    },
+    {
+      "path": "services/backend/recovery/guards.mjs",
+      "bytes": 5659,
+      "sha256": "b7592e5863113f9e6d690cee55c6bbf79f7f7fb4444790f15f1a5dfdf34eb223",
+      "gitBlobSha256": "b7592e5863113f9e6d690cee55c6bbf79f7f7fb4444790f15f1a5dfdf34eb223"
+    },
+    {
+      "path": "services/backend/recovery/mobile-fixture-path.mjs",
+      "bytes": 609,
+      "sha256": "dbf7fb91adfd11437b3a3aca3874656cfa5d7acf7dd0a2b87bdd1897e9f09557",
+      "gitBlobSha256": "dbf7fb91adfd11437b3a3aca3874656cfa5d7acf7dd0a2b87bdd1897e9f09557"
+    },
+    {
+      "path": "services/backend/recovery/qualification.mjs",
+      "bytes": 2334,
+      "sha256": "498e5c3954ba98473777af14d4460a0bf05d3e9f71f24a72bbc8408586cf90b7",
+      "gitBlobSha256": "498e5c3954ba98473777af14d4460a0bf05d3e9f71f24a72bbc8408586cf90b7"
+    },
+    {
+      "path": "services/backend/scripts/backup-recovery.mjs",
+      "bytes": 21259,
+      "sha256": "5c727ac9096e7b3d887a5f51a5bddf8a9723d182d04572db364df5d61ad0933f",
+      "gitBlobSha256": "5c727ac9096e7b3d887a5f51a5bddf8a9723d182d04572db364df5d61ad0933f"
+    },
+    {
+      "path": "services/backend/scripts/build.mjs",
+      "bytes": 254,
+      "sha256": "4105aa482fac6188f4a1ad42f189f9d5c88832b847b7fb402403eafcc03dc047",
+      "gitBlobSha256": "4105aa482fac6188f4a1ad42f189f9d5c88832b847b7fb402403eafcc03dc047"
+    },
+    {
+      "path": "services/backend/scripts/finance-capacity-benchmark.mjs",
+      "bytes": 26875,
+      "sha256": "10cc5dc96d81aaa27b35f9418903fa4e38c132f54177d808f23a09f507fb50bb",
+      "gitBlobSha256": "10cc5dc96d81aaa27b35f9418903fa4e38c132f54177d808f23a09f507fb50bb"
+    },
+    {
+      "path": "services/backend/scripts/free-plan-dashboard.mjs",
+      "bytes": 5398,
+      "sha256": "06c699c7c19a64d547751eaba6ca0c2c4a9058dd73547148f48c1e06368178c5",
+      "gitBlobSha256": "06c699c7c19a64d547751eaba6ca0c2c4a9058dd73547148f48c1e06368178c5"
+    },
+    {
+      "path": "services/backend/scripts/mobile-fixture.mjs",
+      "bytes": 10652,
+      "sha256": "6e7b8013463658b78284eec88a0d6c9f012feaf8450c0692481cafcf337c1a32",
+      "gitBlobSha256": "6e7b8013463658b78284eec88a0d6c9f012feaf8450c0692481cafcf337c1a32"
+    },
+    {
+      "path": "services/backend/scripts/notification-cycle.mjs",
+      "bytes": 5438,
+      "sha256": "2ba39e4929b7f0341eaa671a41bfc6cf683c47c59bbfaecbeb151a3cb22a70c3",
+      "gitBlobSha256": "2ba39e4929b7f0341eaa671a41bfc6cf683c47c59bbfaecbeb151a3cb22a70c3"
+    },
+    {
+      "path": "services/backend/scripts/qualification-database.mjs",
+      "bytes": 15028,
+      "sha256": "204ddc56164f0affb20c8e658e17b1f59abe9726db0a8247f54aa75bf6668ac4",
+      "gitBlobSha256": "204ddc56164f0affb20c8e658e17b1f59abe9726db0a8247f54aa75bf6668ac4"
+    },
+    {
+      "path": "services/backend/scripts/release-inventory.mjs",
+      "bytes": 15088,
+      "sha256": "6bb19ff3cd8e661cd7c7fd6ec3a5d0c1319192d7b8c6f04e680d8529f1e973a4",
+      "gitBlobSha256": "6bb19ff3cd8e661cd7c7fd6ec3a5d0c1319192d7b8c6f04e680d8529f1e973a4"
+    },
+    {
+      "path": "services/backend/scripts/seed-local.mjs",
+      "bytes": 1664,
+      "sha256": "f032c8052df829e2b039d0b4d91b1101f2dca797504b63665b1f9e1506525d65",
+      "gitBlobSha256": "f032c8052df829e2b039d0b4d91b1101f2dca797504b63665b1f9e1506525d65"
+    },
+    {
+      "path": "services/backend/scripts/staging-plan.mjs",
+      "bytes": 2194,
+      "sha256": "1a85dae50b2c7258021ae9b57cb25a18f218cbf144c8c80e9bb4c09455174025",
+      "gitBlobSha256": "1a85dae50b2c7258021ae9b57cb25a18f218cbf144c8c80e9bb4c09455174025"
+    },
+    {
+      "path": "services/backend/scripts/staging-preflight.mjs",
+      "bytes": 7730,
+      "sha256": "dd04a508244d5e22167bcb5a91313548ca2ab0cb62b9ff3794ef03bd2f877044",
+      "gitBlobSha256": "dd04a508244d5e22167bcb5a91313548ca2ab0cb62b9ff3794ef03bd2f877044"
+    },
+    {
+      "path": "services/backend/src/api.ts",
+      "bytes": 9154,
+      "sha256": "0356249742f746066e1803010ea70a9c2c3630c7330774869f7dfbdfa8a4a5a2",
+      "gitBlobSha256": "9662f642e97514eae5bb1c8c64d491eff0d55195e81a09811c4c49f2194110d0"
+    },
+    {
+      "path": "services/backend/src/edge-mount.ts",
+      "bytes": 631,
+      "sha256": "aaf9a2986f28c6c853a46bf8efe2fc7c3ebc303d253ace1bd8382b38a40a42bc",
+      "gitBlobSha256": "aaf9a2986f28c6c853a46bf8efe2fc7c3ebc303d253ace1bd8382b38a40a42bc"
+    },
+    {
+      "path": "services/backend/src/finance-notifications.ts",
+      "bytes": 7150,
+      "sha256": "08efa07515d32b117456bc3969611851ad694a8bb7c05f0a23a5fe71a0489171",
+      "gitBlobSha256": "08efa07515d32b117456bc3969611851ad694a8bb7c05f0a23a5fe71a0489171"
+    },
+    {
+      "path": "services/backend/src/finance.ts",
+      "bytes": 8192,
+      "sha256": "e6c2cdbeb350287f49a2e51914a29a4da68a6d320ba518df47e8fc12c76a4ecf",
+      "gitBlobSha256": "e6c2cdbeb350287f49a2e51914a29a4da68a6d320ba518df47e8fc12c76a4ecf"
+    },
+    {
+      "path": "services/backend/src/free-plan.ts",
+      "bytes": 8573,
+      "sha256": "1a12bd198fc41a7371e3801e968e6b7e98e6195902e4bc98d02b7a1ca759f27f",
+      "gitBlobSha256": "1a12bd198fc41a7371e3801e968e6b7e98e6195902e4bc98d02b7a1ca759f27f"
+    },
+    {
+      "path": "services/backend/src/local-server.ts",
+      "bytes": 1625,
+      "sha256": "2792edf37238146a5cca6ad0f5de78a4085472226ab285eb3c5c850d36585a92",
+      "gitBlobSha256": "2792edf37238146a5cca6ad0f5de78a4085472226ab285eb3c5c850d36585a92"
+    },
+    {
+      "path": "services/backend/src/notification-cycle.ts",
+      "bytes": 5363,
+      "sha256": "cd7a86693af6e3e2bc290ed0e871d350157f714b26f30f21354a63816c5f6baf",
+      "gitBlobSha256": "cd7a86693af6e3e2bc290ed0e871d350157f714b26f30f21354a63816c5f6baf"
+    },
+    {
+      "path": "services/backend/src/notifications.ts",
+      "bytes": 13815,
+      "sha256": "7d486c5b90e2a150d98a81630d80f6303773fd04c1a2b3adf0e16eed0e04aadf",
+      "gitBlobSha256": "7d486c5b90e2a150d98a81630d80f6303773fd04c1a2b3adf0e16eed0e04aadf"
+    },
+    {
+      "path": "services/backend/src/privacy.ts",
+      "bytes": 12794,
+      "sha256": "c56df596ad42e5af187638150e5a07a67eb08ba9c765c902f4ea769a0b58c78a",
+      "gitBlobSha256": "c56df596ad42e5af187638150e5a07a67eb08ba9c765c902f4ea769a0b58c78a"
+    },
+    {
+      "path": "services/backend/supabase/.gitignore",
+      "bytes": 72,
+      "sha256": "507699eb91144818edf61d3a079212cacf31d8db520eae428e3b48fcf0d6919c",
+      "gitBlobSha256": "507699eb91144818edf61d3a079212cacf31d8db520eae428e3b48fcf0d6919c"
+    },
+    {
+      "path": "services/backend/supabase/config.toml",
+      "bytes": 16690,
+      "sha256": "018029d051314b7688048f39e0feb7139b0fd867b04e4ec117bfeba223c21caf",
+      "gitBlobSha256": "018029d051314b7688048f39e0feb7139b0fd867b04e4ec117bfeba223c21caf"
+    },
+    {
+      "path": "services/backend/supabase/functions/api/index.ts",
+      "bytes": 354,
+      "sha256": "13a9a9a7d33a8d4289424f6040960326761e5fe16a7ca0bbb559455a8ca59e3f",
+      "gitBlobSha256": "13a9a9a7d33a8d4289424f6040960326761e5fe16a7ca0bbb559455a8ca59e3f"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160001_identity.sql",
+      "bytes": 33659,
+      "sha256": "b622999f0138baa0d6878d6eeca8781358c1c4830c23b09fe7843903d5e76a72",
+      "gitBlobSha256": "b622999f0138baa0d6878d6eeca8781358c1c4830c23b09fe7843903d5e76a72"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160002_communication.sql",
+      "bytes": 48618,
+      "sha256": "4b8dcb093739dd945080106837c68140c5e35ed45eca257e1a8aac09f3d82b88",
+      "gitBlobSha256": "4b8dcb093739dd945080106837c68140c5e35ed45eca257e1a8aac09f3d82b88"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160003_finance.sql",
+      "bytes": 15372,
+      "sha256": "f61d2b75bb613e5f7976de47b783c1cacdc23a79814b6ae39a7c2f6d6fb0e5dd",
+      "gitBlobSha256": "f61d2b75bb613e5f7976de47b783c1cacdc23a79814b6ae39a7c2f6d6fb0e5dd"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160004_privacy_lifecycle.sql",
+      "bytes": 44477,
+      "sha256": "48fc970218033b6b79f949a764a3ecee6b5d524c3f8b47107cf1867ec94f066a",
+      "gitBlobSha256": "48fc970218033b6b79f949a764a3ecee6b5d524c3f8b47107cf1867ec94f066a"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160005_case_authorization.sql",
+      "bytes": 1583,
+      "sha256": "2979b4bab240fd39e85ea4818b5184b00b2eb0953a29efcc4d0818544ea8b9c6",
+      "gitBlobSha256": "fa78ebe4507cd893b72ef1784ab55de2f774a4d9c3eda6d63c7155b21ceece79"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160006_auth_metadata.sql",
+      "bytes": 1509,
+      "sha256": "0ca4c7462455e72450e18c5943a032818a1e2036a00e98c8549e6f5beec7c6b0",
+      "gitBlobSha256": "0ca4c7462455e72450e18c5943a032818a1e2036a00e98c8549e6f5beec7c6b0"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160007_auth_updates.sql",
+      "bytes": 807,
+      "sha256": "09281514ff1d1a12a9189f8f2660a7af0eec11ae45fca0a6b3a1ab4bca4df590",
+      "gitBlobSha256": "09281514ff1d1a12a9189f8f2660a7af0eec11ae45fca0a6b3a1ab4bca4df590"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160008_external_contacts.sql",
+      "bytes": 47678,
+      "sha256": "9550b6fe16fdfe76ade4ba8a814fa70f06d5d85612daab4178515ce63ba5777c",
+      "gitBlobSha256": "9550b6fe16fdfe76ade4ba8a814fa70f06d5d85612daab4178515ce63ba5777c"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160009_notification_receipts.sql",
+      "bytes": 9958,
+      "sha256": "7b2a4a667b4006bb8e045e96042bd5bc3fe190b939adb988bde161e6c07fd072",
+      "gitBlobSha256": "7b2a4a667b4006bb8e045e96042bd5bc3fe190b939adb988bde161e6c07fd072"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160010_checkins.sql",
+      "bytes": 22643,
+      "sha256": "cc7d829432c8b9124cddd605922fa71948d9da7bc8234c61ecb74b7095e5c85c",
+      "gitBlobSha256": "cc7d829432c8b9124cddd605922fa71948d9da7bc8234c61ecb74b7095e5c85c"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160011_account_management.sql",
+      "bytes": 11156,
+      "sha256": "fe982fecb3ad12e2bc769e3a53693c1433407f26a345a6cdec70ead6b830409a",
+      "gitBlobSha256": "fe982fecb3ad12e2bc769e3a53693c1433407f26a345a6cdec70ead6b830409a"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160012_receipt_lock_order.sql",
+      "bytes": 3753,
+      "sha256": "353b9e9cdf99c5176ae7be200ecb0c60c92b85bfaf14c64d94978dc0a4b00a99",
+      "gitBlobSha256": "353b9e9cdf99c5176ae7be200ecb0c60c92b85bfaf14c64d94978dc0a4b00a99"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160013_domain_notifications.sql",
+      "bytes": 37032,
+      "sha256": "8134a0fe4be9e0420bbb77b8e6bd8cb3623a44b766503e9af2cebfb5444c71c9",
+      "gitBlobSha256": "a4aa77334df3b6ad4471636df37f0d669ce25775cc686548ad5732140f111513"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160014_parent_finance_export.sql",
+      "bytes": 18473,
+      "sha256": "3afe9cd0002b22beafda0b109a61fc73dd6800354fe7e8997e6cdd42276bbcf4",
+      "gitBlobSha256": "3afe9cd0002b22beafda0b109a61fc73dd6800354fe7e8997e6cdd42276bbcf4"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160015_privacy_execution_fix.sql",
+      "bytes": 1489,
+      "sha256": "20e2a6a4052e504259fc9be631c2afffe16feef5a89cfb8df36aa75bdf977eef",
+      "gitBlobSha256": "20e2a6a4052e504259fc9be631c2afffe16feef5a89cfb8df36aa75bdf977eef"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160016_conversation_previews.sql",
+      "bytes": 4979,
+      "sha256": "56ba150ea7966d7f31ab87e433483c294b668140135cbdf1d186f34cd829e4dd",
+      "gitBlobSha256": "56ba150ea7966d7f31ab87e433483c294b668140135cbdf1d186f34cd829e4dd"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160017_invalidation_authorization.sql",
+      "bytes": 2417,
+      "sha256": "0e7b47fe65943a1e40a3313acf4cfccef7e80e7e2c3a17238e1353b79935ac32",
+      "gitBlobSha256": "0e7b47fe65943a1e40a3313acf4cfccef7e80e7e2c3a17238e1353b79935ac32"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160018_message_response_preferences.sql",
+      "bytes": 2498,
+      "sha256": "08a657c40cc1f1e3805d42b150f0bf45742387f909e60026c65177242abb77df",
+      "gitBlobSha256": "08a657c40cc1f1e3805d42b150f0bf45742387f909e60026c65177242abb77df"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160019_family_administration.sql",
+      "bytes": 2913,
+      "sha256": "02e7246fa142b33db3d8737a1841ef53afa2304891672e16e4c1bac951423495",
+      "gitBlobSha256": "02e7246fa142b33db3d8737a1841ef53afa2304891672e16e4c1bac951423495"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160020_invalidation_retention.sql",
+      "bytes": 4207,
+      "sha256": "8c152791f4fe35c3a430b35355212986cb8d14848117d2f1894a5a7317435b03",
+      "gitBlobSha256": "ea9214f463d6432db5689eba495f784238b2dd282a26f7bdbfc4df45ae815eeb"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160021_context_child_eligibility.sql",
+      "bytes": 2094,
+      "sha256": "01894061cd76e93f857113c424e3f07ffd9459782db548d39eae6bb38b51cd66",
+      "gitBlobSha256": "f2d0bfe4464c4896d3003c6315f7725173f60f875a991916cd6b03d61af7c331"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160022_message_receipts.sql",
+      "bytes": 1431,
+      "sha256": "9099f80505c9dbaa55a6fddcafbfcb4e1e0e20263cc0c725379a93d5b9b71c1a",
+      "gitBlobSha256": "9099f80505c9dbaa55a6fddcafbfcb4e1e0e20263cc0c725379a93d5b9b71c1a"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160023_finance_notifications.sql",
+      "bytes": 33900,
+      "sha256": "e9351749e9547d5e55307fd1223dd7b046911dfdeecb65948396474e6f6fc978",
+      "gitBlobSha256": "2082c438c1106841128b08e5b9a36b4c27f13490306e2718b8e204e9359f976f"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160024_journal_session_lease.sql",
+      "bytes": 3425,
+      "sha256": "1954ccf577a864415547d67ce01ac34c3d0048e056d7941a6f827fb9af80f6c2",
+      "gitBlobSha256": "1954ccf577a864415547d67ce01ac34c3d0048e056d7941a6f827fb9af80f6c2"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160025_current_actor_clock.sql",
+      "bytes": 13460,
+      "sha256": "92a41670cf94747acb662bcfacbf7464ccd2b9045d865f1f6c0bf0182c5c5654",
+      "gitBlobSha256": "92a41670cf94747acb662bcfacbf7464ccd2b9045d865f1f6c0bf0182c5c5654"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160026_resource_guardrails.sql",
+      "bytes": 10001,
+      "sha256": "cc4529281429f713c25e610063ab56f6ff7ab634b3c2242638d1c142c809e1cd",
+      "gitBlobSha256": "cc4529281429f713c25e610063ab56f6ff7ab634b3c2242638d1c142c809e1cd"
+    },
+    {
+      "path": "services/backend/supabase/templates/confirmation.html",
+      "bytes": 1995,
+      "sha256": "fb79df60f8841c79803914e1496d11cb634348742b76c549bc9559735debb5c8",
+      "gitBlobSha256": "fb79df60f8841c79803914e1496d11cb634348742b76c549bc9559735debb5c8"
+    },
+    {
+      "path": "services/backend/supabase/templates/recovery.html",
+      "bytes": 2002,
+      "sha256": "ef975a1d44010051c3775c063ab7075e28321eb05b30cfaebd680f318d251c2f",
+      "gitBlobSha256": "ef975a1d44010051c3775c063ab7075e28321eb05b30cfaebd680f318d251c2f"
+    },
+    {
+      "path": "services/backend/supabase/tests/account_management.test.sql",
+      "bytes": 20496,
+      "sha256": "ec0bcc23304d1e294d927046bde6f75a036d7b6de528c0618f83c0700003aded",
+      "gitBlobSha256": "ec0bcc23304d1e294d927046bde6f75a036d7b6de528c0618f83c0700003aded"
+    },
+    {
+      "path": "services/backend/supabase/tests/checkins.test.sql",
+      "bytes": 24093,
+      "sha256": "7c53fab748765e966ade8ce5b7b217682e57aeff67eb4f9fa78a553ff60bd1ab",
+      "gitBlobSha256": "7c53fab748765e966ade8ce5b7b217682e57aeff67eb4f9fa78a553ff60bd1ab"
+    },
+    {
+      "path": "services/backend/supabase/tests/child_context_eligibility.test.sql",
+      "bytes": 10408,
+      "sha256": "8f0be0345f077e170e8b0e05a6f2afa4278c2b51a8bea20b52bae107ae9fe82d",
+      "gitBlobSha256": "8f0be0345f077e170e8b0e05a6f2afa4278c2b51a8bea20b52bae107ae9fe82d"
+    },
+    {
+      "path": "services/backend/supabase/tests/communication.test.sql",
+      "bytes": 25118,
+      "sha256": "238ce16d1b34592832d23d22cf21875d1aa32023ca7d95b9a9b46095e799254c",
+      "gitBlobSha256": "238ce16d1b34592832d23d22cf21875d1aa32023ca7d95b9a9b46095e799254c"
+    },
+    {
+      "path": "services/backend/supabase/tests/conversation_previews.test.sql",
+      "bytes": 15652,
+      "sha256": "e2260aee24d40067cfceec5b7badf7c7466e220a5b895bc92103ca60267d7cf6",
+      "gitBlobSha256": "e2260aee24d40067cfceec5b7badf7c7466e220a5b895bc92103ca60267d7cf6"
+    },
+    {
+      "path": "services/backend/supabase/tests/domain_notifications.test.sql",
+      "bytes": 22365,
+      "sha256": "ec1ad9e4e775a1d91c13ca82ffb572d2981da2fb22af17647545ad6a966eb935",
+      "gitBlobSha256": "ec1ad9e4e775a1d91c13ca82ffb572d2981da2fb22af17647545ad6a966eb935"
+    },
+    {
+      "path": "services/backend/supabase/tests/external_contacts.test.sql",
+      "bytes": 31191,
+      "sha256": "e9bcac65223984c5b4093fb14ff24d10c1675af8042532b298c1fc94d19940bc",
+      "gitBlobSha256": "e9bcac65223984c5b4093fb14ff24d10c1675af8042532b298c1fc94d19940bc"
+    },
+    {
+      "path": "services/backend/supabase/tests/family_administration.test.sql",
+      "bytes": 11829,
+      "sha256": "c147311e84f3e45584269033d505fa41b8d8d659a457a84b2f17f32a10c98caf",
+      "gitBlobSha256": "c147311e84f3e45584269033d505fa41b8d8d659a457a84b2f17f32a10c98caf"
+    },
+    {
+      "path": "services/backend/supabase/tests/finance.test.sql",
+      "bytes": 11902,
+      "sha256": "8916fe49dc5ad68d59c11edd4d9e90ff6954fe443c78e2f807a69618404f5311",
+      "gitBlobSha256": "8916fe49dc5ad68d59c11edd4d9e90ff6954fe443c78e2f807a69618404f5311"
+    },
+    {
+      "path": "services/backend/supabase/tests/finance_notifications.test.sql",
+      "bytes": 28273,
+      "sha256": "80ab7444dfbb0ec9dc858c23251ff8ba58e3df8c67daa974133c55ec896dda64",
+      "gitBlobSha256": "1e51ef5dffc03ac65beaea62ba5f57d14a312fc95146692a860919713aa5d817"
+    },
+    {
+      "path": "services/backend/supabase/tests/identity.test.sql",
+      "bytes": 13894,
+      "sha256": "846dc857eea75b48e5c82a078bdd1225842425e6089b4a9715d22b302e1e6344",
+      "gitBlobSha256": "846dc857eea75b48e5c82a078bdd1225842425e6089b4a9715d22b302e1e6344"
+    },
+    {
+      "path": "services/backend/supabase/tests/invalidation_authorization.test.sql",
+      "bytes": 11258,
+      "sha256": "ff775a0c5eb56cd8d71ed787d3b456a5f2e43f5eba4f4790f49b97748c02231e",
+      "gitBlobSha256": "ff775a0c5eb56cd8d71ed787d3b456a5f2e43f5eba4f4790f49b97748c02231e"
+    },
+    {
+      "path": "services/backend/supabase/tests/invalidation_retention.test.sql",
+      "bytes": 10373,
+      "sha256": "2e0ad8c023ea1fe28f94e703409be9678a0d4e567801eb2ee2fd413175ea52d3",
+      "gitBlobSha256": "2e0ad8c023ea1fe28f94e703409be9678a0d4e567801eb2ee2fd413175ea52d3"
+    },
+    {
+      "path": "services/backend/supabase/tests/journal_session_lease.test.sql",
+      "bytes": 12766,
+      "sha256": "fbe9be18c5fd80a8d51cd975a3b86ea6e28a218d7b39d4a293884c9bcec3f3fd",
+      "gitBlobSha256": "fbe9be18c5fd80a8d51cd975a3b86ea6e28a218d7b39d4a293884c9bcec3f3fd"
+    },
+    {
+      "path": "services/backend/supabase/tests/message_receipts.test.sql",
+      "bytes": 6621,
+      "sha256": "743daf18332deaaba4625eb3da5f8276f511968d52754b10d3ad27b146abb116",
+      "gitBlobSha256": "743daf18332deaaba4625eb3da5f8276f511968d52754b10d3ad27b146abb116"
+    },
+    {
+      "path": "services/backend/supabase/tests/message_response_preferences.test.sql",
+      "bytes": 9992,
+      "sha256": "ee5b1c1f7ea70391778e22d944b4678bd002d9da0062a78701c3adb7972c7935",
+      "gitBlobSha256": "ee5b1c1f7ea70391778e22d944b4678bd002d9da0062a78701c3adb7972c7935"
+    },
+    {
+      "path": "services/backend/supabase/tests/notification_receipts.test.sql",
+      "bytes": 10856,
+      "sha256": "f0a35b696eb15cf48302749d35cb353a8fbd0cf18cd6d0eec96429a0547ff00a",
+      "gitBlobSha256": "f0a35b696eb15cf48302749d35cb353a8fbd0cf18cd6d0eec96429a0547ff00a"
+    },
+    {
+      "path": "services/backend/supabase/tests/parent_finance_export.test.sql",
+      "bytes": 19136,
+      "sha256": "52f2f58121f19a70abb237a2e773152a3eb72dd3e8a5b73f20157417909f498d",
+      "gitBlobSha256": "52f2f58121f19a70abb237a2e773152a3eb72dd3e8a5b73f20157417909f498d"
+    },
+    {
+      "path": "services/backend/supabase/tests/privacy_lifecycle.test.sql",
+      "bytes": 25305,
+      "sha256": "f252a9db047dafad715539a01d5c89092718576079ef7eb96660c4bf78e42c6a",
+      "gitBlobSha256": "f252a9db047dafad715539a01d5c89092718576079ef7eb96660c4bf78e42c6a"
+    },
+    {
+      "path": "services/backend/supabase/tests/qualification_security.test.sql",
+      "bytes": 10009,
+      "sha256": "1a326c97c61507954ab97bd8c9c6b5657d250bd5a65468d2c8dde5a49538bcba",
+      "gitBlobSha256": "1a326c97c61507954ab97bd8c9c6b5657d250bd5a65468d2c8dde5a49538bcba"
+    },
+    {
+      "path": "services/backend/supabase/tests/resource_guardrails.test.sql",
+      "bytes": 20514,
+      "sha256": "0080891f7c704223cec13dfbaad9b222e4ba8153f10046b9dd18680b22b6cfeb",
+      "gitBlobSha256": "0080891f7c704223cec13dfbaad9b222e4ba8153f10046b9dd18680b22b6cfeb"
+    },
+    {
+      "path": "services/backend/tests/api.test.ts",
+      "bytes": 1280,
+      "sha256": "bdde45b0c6e77f813fac5f48761369b24d7984c289eb92864959137a7d90ec41",
+      "gitBlobSha256": "bdde45b0c6e77f813fac5f48761369b24d7984c289eb92864959137a7d90ec41"
+    },
+    {
+      "path": "services/backend/tests/edge-mount.test.ts",
+      "bytes": 1355,
+      "sha256": "211fe9362850f8863bec7b0ac1abc6a46f8f926db5633998284d5600604da3b3",
+      "gitBlobSha256": "211fe9362850f8863bec7b0ac1abc6a46f8f926db5633998284d5600604da3b3"
+    },
+    {
+      "path": "services/backend/tests/finance-capacity-benchmark.test.ts",
+      "bytes": 4100,
+      "sha256": "b0826e92a3c9a2a8db717668c174faf9d64712a95849c14105f8141c4e55c036",
+      "gitBlobSha256": "b0826e92a3c9a2a8db717668c174faf9d64712a95849c14105f8141c4e55c036"
+    },
+    {
+      "path": "services/backend/tests/finance-notifications.test.ts",
+      "bytes": 8188,
+      "sha256": "ac36699d209e2f8f1892b54accce1fa5d6d714eec121088fbda8100a47028a39",
+      "gitBlobSha256": "ac36699d209e2f8f1892b54accce1fa5d6d714eec121088fbda8100a47028a39"
+    },
+    {
+      "path": "services/backend/tests/finance-service.test.ts",
+      "bytes": 9911,
+      "sha256": "6c206edd7d14c77b40239ab650f816061c551386ee770a3d3780ea12b09efd88",
+      "gitBlobSha256": "6c206edd7d14c77b40239ab650f816061c551386ee770a3d3780ea12b09efd88"
+    },
+    {
+      "path": "services/backend/tests/free-plan.test.ts",
+      "bytes": 11005,
+      "sha256": "693562a8bf831bf2dc240baa87ea0cdbc398634b9ad8603ffc505c3499f42112",
+      "gitBlobSha256": "693562a8bf831bf2dc240baa87ea0cdbc398634b9ad8603ffc505c3499f42112"
+    },
+    {
+      "path": "services/backend/tests/integration/accounts.test.ts",
+      "bytes": 9808,
+      "sha256": "ee6541a8d309c5f1e4a6b5c1f1d364aaebb4421fedf77fdf123a9f2f5449bb57",
+      "gitBlobSha256": "ee6541a8d309c5f1e4a6b5c1f1d364aaebb4421fedf77fdf123a9f2f5449bb57"
+    },
+    {
+      "path": "services/backend/tests/integration/finance-http.test.ts",
+      "bytes": 6719,
+      "sha256": "937036bbc02db6c7c34a4e3b3636a8c9cb018e1a2c6844723011f286831c5115",
+      "gitBlobSha256": "937036bbc02db6c7c34a4e3b3636a8c9cb018e1a2c6844723011f286831c5115"
+    },
+    {
+      "path": "services/backend/tests/integration/finance-notification-locks.test.ts",
+      "bytes": 9035,
+      "sha256": "7b72cfdfaa3d51a683a3c9b787f1a2c36d06b92256c289359bdbe4b2e4b14935",
+      "gitBlobSha256": "7b72cfdfaa3d51a683a3c9b787f1a2c36d06b92256c289359bdbe4b2e4b14935"
+    },
+    {
+      "path": "services/backend/tests/integration/integration-fixtures.ts",
+      "bytes": 9754,
+      "sha256": "f0eb6b67f704a2e53ff5a3a3b0f9bc61c7444f85dbf87edbdbd93939c37f346a",
+      "gitBlobSha256": "f0eb6b67f704a2e53ff5a3a3b0f9bc61c7444f85dbf87edbdbd93939c37f346a"
+    },
+    {
+      "path": "services/backend/tests/integration/parent-export.test.ts",
+      "bytes": 11177,
+      "sha256": "02f7d212abbdcde5e64b39eeee29b733c0cf27f76b56c815cdd0e965ca6c5cc7",
+      "gitBlobSha256": "02f7d212abbdcde5e64b39eeee29b733c0cf27f76b56c815cdd0e965ca6c5cc7"
+    },
+    {
+      "path": "services/backend/tests/integration/privacy-http.test.ts",
+      "bytes": 12304,
+      "sha256": "df88b19d18954472e339c31d498e9414fa0a3f6ee25d2919715a9e45de3bb045",
+      "gitBlobSha256": "df88b19d18954472e339c31d498e9414fa0a3f6ee25d2919715a9e45de3bb045"
+    },
+    {
+      "path": "services/backend/tests/integration/qualification-security.test.ts",
+      "bytes": 14840,
+      "sha256": "26392e0df0a2501187b93cf1466821a1d53c2dd5bd8d8522b8b6b3d262e04737",
+      "gitBlobSha256": "26392e0df0a2501187b93cf1466821a1d53c2dd5bd8d8522b8b6b3d262e04737"
+    },
+    {
+      "path": "services/backend/tests/integration/realtime.test.ts",
+      "bytes": 20598,
+      "sha256": "73c918fae3c1bd52c1739fd217df23b8d9696a9208b24c4c0f79425a81bcbca1",
+      "gitBlobSha256": "73c918fae3c1bd52c1739fd217df23b8d9696a9208b24c4c0f79425a81bcbca1"
+    },
+    {
+      "path": "services/backend/tests/integration/receipt-locks.test.ts",
+      "bytes": 11681,
+      "sha256": "b5d0a1bd9cfc5bee1048b8cead86c557b2f235ab8805e18e4ae38170b37d58d5",
+      "gitBlobSha256": "b5d0a1bd9cfc5bee1048b8cead86c557b2f235ab8805e18e4ae38170b37d58d5"
+    },
+    {
+      "path": "services/backend/tests/mobile-fixture-path.test.ts",
+      "bytes": 3558,
+      "sha256": "80d8388709f42cda212af3244e5d3a15048398b06f18b52f0d62a85853e04bc6",
+      "gitBlobSha256": "80d8388709f42cda212af3244e5d3a15048398b06f18b52f0d62a85853e04bc6"
+    },
+    {
+      "path": "services/backend/tests/notification-cycle.test.ts",
+      "bytes": 12513,
+      "sha256": "21f09c391d57b1adc9a73295c02be95c81374951c0b602e2b0ff9569c4720b98",
+      "gitBlobSha256": "21f09c391d57b1adc9a73295c02be95c81374951c0b602e2b0ff9569c4720b98"
+    },
+    {
+      "path": "services/backend/tests/notifications.test.ts",
+      "bytes": 9886,
+      "sha256": "22e96147acb6a79ce4e7745f52c04acc10cf636a1077847d739617cf430c8084",
+      "gitBlobSha256": "22e96147acb6a79ce4e7745f52c04acc10cf636a1077847d739617cf430c8084"
+    },
+    {
+      "path": "services/backend/tests/privacy-service.test.ts",
+      "bytes": 16868,
+      "sha256": "43ffa7c8b2d45750e1d52f8bb91d6c33ff78a03ee9354d0d60fe0a44720d8945",
+      "gitBlobSha256": "43ffa7c8b2d45750e1d52f8bb91d6c33ff78a03ee9354d0d60fe0a44720d8945"
+    },
+    {
+      "path": "services/backend/tests/qualification-database.test.ts",
+      "bytes": 3622,
+      "sha256": "9d679b3ddec43b4e6d55b6bb7422566f846fb32789ccd2297c3bdc5f42173504",
+      "gitBlobSha256": "9d679b3ddec43b4e6d55b6bb7422566f846fb32789ccd2297c3bdc5f42173504"
+    },
+    {
+      "path": "services/backend/tests/recovery.test.ts",
+      "bytes": 9223,
+      "sha256": "de69451add6679a9584a29a56fd3db230d78159b2f1c6690110d5ff2aeb6a971",
+      "gitBlobSha256": "de69451add6679a9584a29a56fd3db230d78159b2f1c6690110d5ff2aeb6a971"
+    },
+    {
+      "path": "services/backend/tsconfig.json",
+      "bytes": 298,
+      "sha256": "293bb3e53453eb877a58bf2c26c6620820b8c39b174e1e8ae6809eab6c39c4cc",
+      "gitBlobSha256": "293bb3e53453eb877a58bf2c26c6620820b8c39b174e1e8ae6809eab6c39c4cc"
+    }
+  ],
+  "localArtifacts": [
+    {
+      "path": "apps/mobile/android/app/build/outputs/apk/debug/app-debug.apk",
+      "bytes": 414316013,
+      "sha256": "6051b9729f02eb89557bb6a286698d0f64fccbb6e3dbab01197753e37b14379a"
+    },
+    {
+      "path": "apps/mobile/android/app/build/intermediates/merged_manifests/debug/processDebugManifest/AndroidManifest.xml",
+      "bytes": 15897,
+      "sha256": "40166b86955b6dc47f364cc143b494deaf0eab8eecb34c72669b3c4bfca51d2c"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-gradle-dependencies.log",
+      "bytes": 181020,
+      "sha256": "ad5536ec8373e3fc3e7cdaae2dbe3c72949582a2903ffa4458fa0fb8bbb5680d"
+    },
+    {
+      "path": "services/backend/supabase/functions/_shared/api.bundle.js",
+      "bytes": 818114,
+      "sha256": "b31fa5cbf256e303023b8098e09d56d35685c67d3e113f1766694f18fd43dee2"
+    }
+  ],
+  "exportedFiles": [
+    {
+      "path": "apps/mobile/.expo/staging-release-export/+not-found.html",
+      "bytes": 20712,
+      "sha256": "aa3054b818cb821c8fa532de126bf81764782715c33ec42b2d36c6160b6e5289"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/_expo/.routes.json",
+      "bytes": 21,
+      "sha256": "18234e6b8c5aee837883245f400d379f3f9686f1396b7d90d7ebcdad76c51d47"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/_expo/static/js/android/entry-4ff91be5779ae3b6ba663e3a9b8da875.hbc",
+      "bytes": 4493010,
+      "sha256": "3596ed1bde906aedfcc8e5d56aeab90b21a2884765b7653f1595949c49b05630"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/_expo/static/js/ios/entry-349b98437a54ac4679ace16c8afdab38.hbc",
+      "bytes": 4500319,
+      "sha256": "0eea762e59a4f6bef2407caf3d80abc119ab29c9e94b18d50c1887dcccc59f9f"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/_expo/static/js/web/__common-3e696f217f979fd69619df3d7253ef23.js",
+      "bytes": 426991,
+      "sha256": "3dc333b1132d5c5ece6b9f139dd9d1f98c7efb2447053488b1dc27f5c480c44d"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/_expo/static/js/web/__expo-metro-runtime-9f1a7b6acd20011e290bc79f0164ae37.js",
+      "bytes": 9884,
+      "sha256": "140415269cc2e3324e3d674839d15dc9bf468174e059958b29db4a5b78725162"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/_expo/static/js/web/_layout-e0e0b4b9baa1d2ac9529ed5b2550e62e.js",
+      "bytes": 734,
+      "sha256": "f42337eb8e9e14050f093f10d2451f5ae88605f9df723f15d3a996db01288d10"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/_expo/static/js/web/accounts-9d146d09ffa3cd33b9f32a30e607dc47.js",
+      "bytes": 250593,
+      "sha256": "50d7c4afea1f9867d997c2329b007d736dbfd07f3a9ad0425b9eac2035859598"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/_expo/static/js/web/callback-ef292263f59013440ee7229fdece15be.js",
+      "bytes": 2941,
+      "sha256": "ddd3088053b901f09c38b363e61f620eb14bb31ecba12d2be79c2c9f18850f99"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/_expo/static/js/web/entry-6a8d026949de060580e15c2e93108d37.js",
+      "bytes": 1118891,
+      "sha256": "dda71218d5d9051e9a3c165778f18121f1c12d4e2e3d5d7dcf53962cce8c6e04"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/_expo/static/js/web/index-e63a01275db597433bf2426fa9a64e9e.js",
+      "bytes": 125743,
+      "sha256": "07476cca9ef5e92f69a9fa0f916aeb74d1a7c5aee3f70092cb3ce26dca686235"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/_expo/static/js/web/native-check-650876d54d59b70c939d3a5290c82e46.js",
+      "bytes": 788,
+      "sha256": "9f79f1626241f435f3a68f3b56f5b14734dd0630e1d303bd563b6b53177a0019"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/_sitemap.html",
+      "bytes": 20712,
+      "sha256": "aa3054b818cb821c8fa532de126bf81764782715c33ec42b2d36c6160b6e5289"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/accounts.html",
+      "bytes": 27344,
+      "sha256": "5d996fc374bd80bfa318d1654e567ed796c7c8e6e7c02f528c2c241a0543ce6a"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/017bc6ba3fc25503e5eb5e53826d48a8",
+      "bytes": 9456,
+      "sha256": "6deca32b56b97fa1fa87facd6996b46cc45190a553400e7febdf1d2093099b57"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/02bc1fa7c0313217bde2d65ccbff40c9",
+      "bytes": 167,
+      "sha256": "ffa7ee45b76405ba73921495008f7d68c9de6395f4b6941db063465f6e382320"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/069d99eb1fa6712c0b9034a58c6b57dd",
+      "bytes": 483,
+      "sha256": "5300f50be3659d17d8cee868ec4e6c0d3f4e89944fd5899d3c20f6a767a045f5"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/0747a1317bbe9c6fc340b889ef8ab3ae",
+      "bytes": 332,
+      "sha256": "2325c53a73e54c438cbbc60dffdd8b513d471ba42e2f56713ef404b95e0ca1fc"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/0a328cd9c1afd0afe8e3b1ec5165b1b4",
+      "bytes": 653,
+      "sha256": "9adb8c5efca932e2b732b293da813bd2e31952263056bce9e2517fec0f0b6a76"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/0ea69b5077e7c4696db85dbcba75b0e1",
+      "bytes": 761,
+      "sha256": "3ddd0773ed27e23d25789f301731b3ac455ad8be5aa27a0a1b838f89c6d27225"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/1190ab078c57159f4245a328118fcd9a",
+      "bytes": 201,
+      "sha256": "cbdf9213e55f65c48d076acd8423b7c9aee4f1b81101ff6c95a38c4cd8a86461"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/19eeb73b9593a38f8e9f418337fc7d10",
+      "bytes": 138,
+      "sha256": "a69a2edb5b6c60b8433d5b6d23c69f520ccd8a602f3f60e7996e489718bc175c"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/20e71bdf79e3a97bf55fd9e164041578",
+      "bytes": 4752,
+      "sha256": "efc79da3c4c97dfb1571bff6202958ab0529c5aa31e8392600578b3e359d1447"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/286d67d3f74808a60a78d3ebf1a5fb57",
+      "bytes": 928,
+      "sha256": "5d075e0c287c4f4441b5b5c8fc7ea5cd27c11bb617ecea09755955bcb1889083"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/2d0a9133e39524f138be6d4db9f4851f",
+      "bytes": 809,
+      "sha256": "92ed8176ac8cb44362a5fc6a3703626a0006ac6b7cb272ee99f5850262ec070e"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/35ba0eaec5a4f5ed12ca16fabeae451d",
+      "bytes": 207,
+      "sha256": "84cf5eb3b20250f69e0e4733beb4da5f417f0682892a5ad1b5e62570753c21b1"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/3cd68ccdb8938e3711da2e8831b85493",
+      "bytes": 645,
+      "sha256": "c86bb485eee687e06c500fc4234f51a6784b4530c2ae11d0c76481110bce3105"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/412dd9275b6b48ad28f5e3d81bb1f626",
+      "bytes": 465,
+      "sha256": "acf691957a3bcce7d195856dce98a5cf14dce10bea28aa5c10b3550c078e23b5"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/4403c6117ec30c859bc95d70ce4a71d3",
+      "bytes": 258,
+      "sha256": "ba722fb24bff0a4c52e656cdf205deac5c5df85e5bae2bf6d30713bd50c6d5f7"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/61ca7e64b7d605716c57706cef640b9a",
+      "bytes": 220,
+      "sha256": "d03a5cd7a66ef10c5147916f9d5878b2d0a0a5ad46f405a31cd9967efaa55afd"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/778ffc9fe8773a878e9c30a6304784de",
+      "bytes": 100,
+      "sha256": "8b61a4c7ef70dc92753f0494976482f66fd4150ec23dfc772ab65e10373afa55"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/78c625386b4d0690b421eb0fc78f7b9c",
+      "bytes": 266,
+      "sha256": "d05c9d30d79f45a78e5585a2e7ec67c6a06a883dd9137e1d5059e8c87b33ce76"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/7d40544b395c5949f4646f5e150fe020",
+      "bytes": 290,
+      "sha256": "2cdfeb8e5ccde7976f7012fb8cce73af2229029ee21d4f1509fed114871c6cd8"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/86f0af1d477c449171d0c74a8fa44a4b",
+      "bytes": 750407,
+      "sha256": "eb7e597c19c1b1cc883cef7f365c13738377d3194d2b840bba6a754414ca230e"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/98a4e3d00dbf5d65da99a69b38a7def2",
+      "bytes": 307,
+      "sha256": "e53f1e69f862e595f5d119c042863ff2a444fe42996d22bbab876b30073d0fba"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/9b5cb09b4e669ed0f28f3b3f2871a0a5",
+      "bytes": 312,
+      "sha256": "fda3f183ae85e63bcbce70a74276ea220332ae841f746c370b0b2ab40355a357"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/a132ecc4ba5c1517ff83c0fb321bc7fc",
+      "bytes": 405,
+      "sha256": "2b7443a9a58e92ca11a575bdc11598615a57dde305cd8ce70d602606b302cd98"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/ab19f4cbc543357183a20571f68380a3",
+      "bytes": 364,
+      "sha256": "27f4d229d440925bf7212d5dfffa45d596b2c7b3bb2905c96b839b2081a1dbeb"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/aff2c65b39a296d4f7e96d0f58169170",
+      "bytes": 334,
+      "sha256": "ab5613d2ce70fa67c5926e831353664945199fc195fa6fe76c5fe3cec452e31a"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/assets/brand/symbol.86f0af1d477c449171d0c74a8fa44a4b.png",
+      "bytes": 750407,
+      "sha256": "eb7e597c19c1b1cc883cef7f365c13738377d3194d2b840bba6a754414ca230e"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/c3273c9e5321f20d1e42c2efae2578c4",
+      "bytes": 728,
+      "sha256": "6c8f11bfd1c7e22769dc135c16ecd0e053bb55554da88b9611d9cf71d12136f1"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/c79c3606a1cf168006ad3979763c7e0c",
+      "bytes": 134,
+      "sha256": "906666dd689346ada232ce3689adef907b4257fa1b593f03638d2b9497f64884"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/d1ea1496f9057eb392d5bbf3732a61b7",
+      "bytes": 469,
+      "sha256": "c15ec72a74d13957211808313d5c35deb7f7606c6d22dbddceb0000d4e0547ad"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/d62ddc38b69aff346c20a28774933d6a",
+      "bytes": 839,
+      "sha256": "b434a7cf18c2d4ce747c70942ea2fee2d4412d93967ed92b372f810bb9261ea5"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/d84e297c3b3e49a614248143d53e40ca",
+      "bytes": 141,
+      "sha256": "b1bc1810ca23e2c38cd76971c43591d726161061240d8b792b05757196ddb528"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/d8b800c443b8972542883e0b9de2bdc6",
+      "bytes": 188,
+      "sha256": "708a79cf561b8a2a4850ce0254584d3a5231046be08fb7fadf4b6edfdb31178b"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/d8e7601e3df962f83c62371ac14964d8",
+      "bytes": 502,
+      "sha256": "c4e54e6a0a7de636aa153378fbc62ea4a41695bfedf807f90df7b18ffd733f67"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/dad2fa9f4394a630f0f9a0d6dabd44bc",
+      "bytes": 317,
+      "sha256": "dc56b976bd45638e1125f6689743525e6886ae0bef2c8f4651994833685a831f"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/f3a81967828232c893d547162e922764",
+      "bytes": 589,
+      "sha256": "ef13fc0dfc52ec23817585fd7e109fbdf593a3b2549c40ce71ac9b0eda12cc2c"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/node_modules/expo-router/assets/arrow_down.017bc6ba3fc25503e5eb5e53826d48a8.png",
+      "bytes": 9456,
+      "sha256": "6deca32b56b97fa1fa87facd6996b46cc45190a553400e7febdf1d2093099b57"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/node_modules/expo-router/assets/error.d1ea1496f9057eb392d5bbf3732a61b7.png",
+      "bytes": 469,
+      "sha256": "c15ec72a74d13957211808313d5c35deb7f7606c6d22dbddceb0000d4e0547ad"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/node_modules/expo-router/assets/file.19eeb73b9593a38f8e9f418337fc7d10.png",
+      "bytes": 138,
+      "sha256": "a69a2edb5b6c60b8433d5b6d23c69f520ccd8a602f3f60e7996e489718bc175c"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/node_modules/expo-router/assets/forward.d8b800c443b8972542883e0b9de2bdc6.png",
+      "bytes": 188,
+      "sha256": "708a79cf561b8a2a4850ce0254584d3a5231046be08fb7fadf4b6edfdb31178b"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/node_modules/expo-router/assets/pkg.ab19f4cbc543357183a20571f68380a3.png",
+      "bytes": 364,
+      "sha256": "27f4d229d440925bf7212d5dfffa45d596b2c7b3bb2905c96b839b2081a1dbeb"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/node_modules/expo-router/assets/react-navigation/elements/back-icon-mask.0a328cd9c1afd0afe8e3b1ec5165b1b4.png",
+      "bytes": 653,
+      "sha256": "9adb8c5efca932e2b732b293da813bd2e31952263056bce9e2517fec0f0b6a76"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/node_modules/expo-router/assets/react-navigation/elements/back-icon.35ba0eaec5a4f5ed12ca16fabeae451d.png",
+      "bytes": 207,
+      "sha256": "84cf5eb3b20250f69e0e4733beb4da5f417f0682892a5ad1b5e62570753c21b1"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/node_modules/expo-router/assets/react-navigation/elements/clear-icon.c94f6478e7ae0cdd9f15de1fcb9e5e55.png",
+      "bytes": 220,
+      "sha256": "d03a5cd7a66ef10c5147916f9d5878b2d0a0a5ad46f405a31cd9967efaa55afd"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/node_modules/expo-router/assets/react-navigation/elements/clear-icon.c94f6478e7ae0cdd9f15de1fcb9e5e55@2x.png",
+      "bytes": 334,
+      "sha256": "ab5613d2ce70fa67c5926e831353664945199fc195fa6fe76c5fe3cec452e31a"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/node_modules/expo-router/assets/react-navigation/elements/clear-icon.c94f6478e7ae0cdd9f15de1fcb9e5e55@3x.png",
+      "bytes": 502,
+      "sha256": "c4e54e6a0a7de636aa153378fbc62ea4a41695bfedf807f90df7b18ffd733f67"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/node_modules/expo-router/assets/react-navigation/elements/clear-icon.c94f6478e7ae0cdd9f15de1fcb9e5e55@4x.png",
+      "bytes": 645,
+      "sha256": "c86bb485eee687e06c500fc4234f51a6784b4530c2ae11d0c76481110bce3105"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/node_modules/expo-router/assets/react-navigation/elements/close-icon.808e1b1b9b53114ec2838071a7e6daa7.png",
+      "bytes": 141,
+      "sha256": "b1bc1810ca23e2c38cd76971c43591d726161061240d8b792b05757196ddb528"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/node_modules/expo-router/assets/react-navigation/elements/close-icon.808e1b1b9b53114ec2838071a7e6daa7@2x.png",
+      "bytes": 201,
+      "sha256": "cbdf9213e55f65c48d076acd8423b7c9aee4f1b81101ff6c95a38c4cd8a86461"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/node_modules/expo-router/assets/react-navigation/elements/close-icon.808e1b1b9b53114ec2838071a7e6daa7@3x.png",
+      "bytes": 266,
+      "sha256": "d05c9d30d79f45a78e5585a2e7ec67c6a06a883dd9137e1d5059e8c87b33ce76"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/node_modules/expo-router/assets/react-navigation/elements/close-icon.808e1b1b9b53114ec2838071a7e6daa7@4x.png",
+      "bytes": 332,
+      "sha256": "2325c53a73e54c438cbbc60dffdd8b513d471ba42e2f56713ef404b95e0ca1fc"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/node_modules/expo-router/assets/react-navigation/elements/search-icon.286d67d3f74808a60a78d3ebf1a5fb57.png",
+      "bytes": 928,
+      "sha256": "5d075e0c287c4f4441b5b5c8fc7ea5cd27c11bb617ecea09755955bcb1889083"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/node_modules/expo-router/assets/sitemap.412dd9275b6b48ad28f5e3d81bb1f626.png",
+      "bytes": 465,
+      "sha256": "acf691957a3bcce7d195856dce98a5cf14dce10bea28aa5c10b3550c078e23b5"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/assets/node_modules/expo-router/assets/unmatched.20e71bdf79e3a97bf55fd9e164041578.png",
+      "bytes": 4752,
+      "sha256": "efc79da3c4c97dfb1571bff6202958ab0529c5aa31e8392600578b3e359d1447"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/auth/callback.html",
+      "bytes": 22656,
+      "sha256": "94111d379e7ce46a67e1980196225c4f3c4b511ed26b74567a3957e2fec11abe"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/favicon.ico",
+      "bytes": 14510,
+      "sha256": "72f4ebef7a0c1c291a2c1ae0ce214158c031820e322fa3d6ffc71472011f6343"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/index.html",
+      "bytes": 21404,
+      "sha256": "94a88001d3aac4ad27d24744a8f5d2654246317b759cbcf2b1cbf25468d7e99e"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/metadata.json",
+      "bytes": 3506,
+      "sha256": "24200b58ea4d984789587a1c9d4fb77df3127fa5ed6be979a4c055c9643d16ac"
+    },
+    {
+      "path": "apps/mobile/.expo/staging-release-export/native-check.html",
+      "bytes": 21674,
+      "sha256": "b9e5e923ee68ae2c93685d5b28cadf632854d6d49ccbe695e219f45d4f9ea0af"
+    }
+  ],
+  "nativeSourceGeneratedNotHandEdited": true,
+  "hostedDeployment": false,
+  "ownerReleaseSigning": false
+}

@@ -74,3 +74,7 @@ Use the exact [Android launch procedure](ANDROID_LAUNCH.md), which checks the ex
 ## CI publication limitation
 
 GitHub rejected the initial push because the current credential lacks workflow scope. CI is therefore retained as an inactive [owner-installable template](release/production-checks.workflow.yml); no credential permission was changed or executable workflow published. Original unpublished commit e271973 remains preserved locally at backup/production-workflow-e271973. Source commits through0c2d325 and all screenshot/report content are preserved. Owner workflow installation/dispatch remains a separate external gate.
+
+## Staging r1 qualification - 2026-11-16
+
+Current development handoff: [staging r1 release qualification](staging/FINAL_RELEASE_QUALIFICATION.md). Engineering source `10aba61d756a8d54f22ec03afc3287c638805060`,0.5.0/code4, build `1116-StagingQualification-r1`. This earlier p3 report remains historical. New work does not authorize hosted provisioning, real-child information, paid resources, signing or production publication.

@@ -79,3 +79,7 @@ Use `[x]` only with dated reviewer/evidence attached. An implemented configurati
 - [ ] Owner signs final go/no-go record with exact reviewed build and verified rollback/operations ownership. A failed or missing material gate means enrollment/publication stays OFF.
 
 Runbooks: [local/CI](runbooks/LOCAL_AND_CI.md), [deployment/rollback](runbooks/DEPLOYMENT_AND_ROLLBACK.md), [recovery/backups/deletion](runbooks/RECOVERY_AND_BACKUPS.md), [incidents/report handoff](runbooks/INCIDENT_AND_REPORTS.md), [cost controls](runbooks/COST_CONTROLS.md). These are reviewable procedures; unperformed steps remain unverified.
+
+## Staging r1 qualification - 2026-11-16
+
+Current release decision: **NO-GO**. See [staging r1 qualification](staging/FINAL_RELEASE_QUALIFICATION.md) for tested local authority/recovery, internal financial capacity work, hosted/legal/operator/device/signing/CI gates and owner actions. Historical p3 checkboxes below/above are not hosted or production approval.

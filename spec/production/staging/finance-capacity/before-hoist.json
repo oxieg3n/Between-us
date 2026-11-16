@@ -1,0 +1,1786 @@
+{
+  "format": "between-us-finance-capacity-benchmark-v1",
+  "generatedAt": "2026-11-16T19:58:25.956Z",
+  "repetitions": 20,
+  "warmups": 3,
+  "runtime": {
+    "node": "v26.13.0",
+    "platform": "win32",
+    "architecture": "x64",
+    "cpuModel": "AMD Ryzen 7 2700X Eight-Core Processor         ",
+    "logicalCpuCount": 16
+  },
+  "method": "Fresh JSON round-trip input, actual applyFinanceCommand, both actual role projections, resulting JSON serialization; independent command attempts against the same fixture.",
+  "fixtureConstruction": "Actual engine builds substantive workflow prefix. Known effect-free finite extensions are constructed then fully replayed by both role projections and equivalent-world checks. Fixture preparation is excluded from timing.",
+  "limitations": [
+    "Node process CPU and wall timings are not hosted Edge CPU measurements.",
+    "Sampled whole-process RSS is not allocation delta, peak RSS or a 256MB Edge isolate measurement.",
+    "No database/RPC/HTTP/concurrency, hosted quota, physical-device or child information used.",
+    "Backend visible/hidden event caps remain unchanged; this script directly probes the pure engine beyond current admission limits.",
+    "Repeated edits/transfers/configuration after a realistic prefix do not represent every possible long-lived household history."
+  ],
+  "rows": [
+    {
+      "profile": "household",
+      "inputEvents": 0,
+      "resultingEvents": 1,
+      "role": "parent",
+      "counts": {
+        "occurrences": 0,
+        "goals": 0,
+        "savingsRules": 0,
+        "payouts": 0,
+        "visibleEvents": 0,
+        "hiddenEvents": 0
+      },
+      "actionCounts": {},
+      "validatedPrefixEvents": 0,
+      "replayValidatedExtensionEvents": 0,
+      "fixtureYear": "2026",
+      "firstEventAt": null,
+      "lastEventAt": null,
+      "serializedStateBytes": 102,
+      "resultingStateBytes": 408,
+      "parentProjectionBytes": 675,
+      "childProjectionBytes": 454,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 73461760,
+      "timing": {
+        "parseMs": {
+          "median": 0.0036499999999932697,
+          "p95": 0.0056000000000153705,
+          "max": 0.007900000000006457,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 0.030850000000000932,
+          "p95": 0.07169999999999277,
+          "max": 0.08260000000001355,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 0.12324999999999875,
+          "p95": 0.17279999999999518,
+          "max": 0.19880000000000564,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 0.11950000000001637,
+          "p95": 0.14650000000000318,
+          "max": 0.1477999999999895,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 0.005450000000010391,
+          "p95": 0.006200000000006867,
+          "max": 0.009800000000012687,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 0.2883000000000209,
+          "p95": 0.39750000000000796,
+          "max": 0.41020000000000323,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 0,
+          "p95": 0,
+          "max": 0,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "household",
+      "inputEvents": 0,
+      "resultingEvents": 1,
+      "role": "child",
+      "counts": {
+        "occurrences": 0,
+        "goals": 0,
+        "savingsRules": 0,
+        "payouts": 0,
+        "visibleEvents": 0,
+        "hiddenEvents": 0
+      },
+      "actionCounts": {},
+      "validatedPrefixEvents": 0,
+      "replayValidatedExtensionEvents": 0,
+      "fixtureYear": "2026",
+      "firstEventAt": null,
+      "lastEventAt": null,
+      "serializedStateBytes": 102,
+      "resultingStateBytes": 363,
+      "parentProjectionBytes": 675,
+      "childProjectionBytes": 454,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 75157504,
+      "timing": {
+        "parseMs": {
+          "median": 0.003950000000003229,
+          "p95": 0.008499999999997954,
+          "max": 0.008700000000004593,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 0.024699999999995725,
+          "p95": 0.054000000000002046,
+          "max": 0.06780000000000541,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 0.1273999999999944,
+          "p95": 0.20869999999999322,
+          "max": 0.23640000000000327,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 0.12434999999997842,
+          "p95": 0.2296000000000049,
+          "max": 0.9209999999999923,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 0.006500000000016826,
+          "p95": 0.01470000000000482,
+          "max": 0.019200000000012096,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 0.2985000000000042,
+          "p95": 0.5216999999999814,
+          "max": 1.1639000000000124,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 0,
+          "p95": 0,
+          "max": 31,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "household",
+      "inputEvents": 128,
+      "resultingEvents": 129,
+      "role": "parent",
+      "counts": {
+        "occurrences": 2,
+        "goals": 2,
+        "savingsRules": 1,
+        "payouts": 1,
+        "visibleEvents": 107,
+        "hiddenEvents": 21
+      },
+      "actionCounts": {
+        "acknowledge_payment": 1,
+        "allocate": 1,
+        "assign_chore": 2,
+        "configure_matching": 20,
+        "configure_plan": 20,
+        "create_goal": 2,
+        "edit_goal": 19,
+        "fund_match": 1,
+        "mark_held": 1,
+        "release_goal": 1,
+        "report_payment": 1,
+        "request_payout": 1,
+        "review_chore": 1,
+        "set_savings_rule": 19,
+        "submit_chore": 1,
+        "transfer_goal": 37
+      },
+      "validatedPrefixEvents": 17,
+      "replayValidatedExtensionEvents": 111,
+      "fixtureYear": "2026",
+      "firstEventAt": "2026-01-01T00:00:00.000Z",
+      "lastEventAt": "2026-12-31T12:00:00.000Z",
+      "serializedStateBytes": 35126,
+      "resultingStateBytes": 35435,
+      "parentProjectionBytes": 24031,
+      "childProjectionBytes": 19535,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 80306176,
+      "timing": {
+        "parseMs": {
+          "median": 0.26505000000000223,
+          "p95": 0.547300000000007,
+          "max": 0.6913000000000125,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 1.5899,
+          "p95": 2.813500000000033,
+          "max": 3.042100000000005,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 1.6255999999999915,
+          "p95": 2.690899999999999,
+          "max": 2.822900000000004,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 1.5888999999999953,
+          "p95": 2.4051999999999794,
+          "max": 2.464999999999975,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 0.11995000000000289,
+          "p95": 0.19619999999997617,
+          "max": 0.2586000000000013,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 5.241700000000009,
+          "p95": 8.076300000000003,
+          "max": 8.0822,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 0,
+          "p95": 16,
+          "max": 16,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "household",
+      "inputEvents": 128,
+      "resultingEvents": 129,
+      "role": "child",
+      "counts": {
+        "occurrences": 2,
+        "goals": 2,
+        "savingsRules": 1,
+        "payouts": 1,
+        "visibleEvents": 107,
+        "hiddenEvents": 21
+      },
+      "actionCounts": {
+        "acknowledge_payment": 1,
+        "allocate": 1,
+        "assign_chore": 2,
+        "configure_matching": 20,
+        "configure_plan": 20,
+        "create_goal": 2,
+        "edit_goal": 19,
+        "fund_match": 1,
+        "mark_held": 1,
+        "release_goal": 1,
+        "report_payment": 1,
+        "request_payout": 1,
+        "review_chore": 1,
+        "set_savings_rule": 19,
+        "submit_chore": 1,
+        "transfer_goal": 37
+      },
+      "validatedPrefixEvents": 17,
+      "replayValidatedExtensionEvents": 111,
+      "fixtureYear": "2026",
+      "firstEventAt": "2026-01-01T00:00:00.000Z",
+      "lastEventAt": "2026-12-31T12:00:00.000Z",
+      "serializedStateBytes": 35126,
+      "resultingStateBytes": 35386,
+      "parentProjectionBytes": 24031,
+      "childProjectionBytes": 19535,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 83509248,
+      "timing": {
+        "parseMs": {
+          "median": 0.23374999999998636,
+          "p95": 0.41770000000002483,
+          "max": 0.5205000000000268,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 1.0663000000000125,
+          "p95": 1.9198000000000093,
+          "max": 2.38779999999997,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 1.074549999999988,
+          "p95": 1.8296000000000276,
+          "max": 1.8993999999999573,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 1.0435999999999979,
+          "p95": 1.7264000000000124,
+          "max": 2.0287999999999897,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 0.11250000000001137,
+          "p95": 0.16020000000003165,
+          "max": 0.16770000000002483,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 3.9105500000000006,
+          "p95": 6.074899999999957,
+          "max": 6.2263000000000375,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 0,
+          "p95": 16,
+          "max": 16,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "household",
+      "inputEvents": 512,
+      "resultingEvents": 513,
+      "role": "parent",
+      "counts": {
+        "occurrences": 2,
+        "goals": 2,
+        "savingsRules": 1,
+        "payouts": 1,
+        "visibleEvents": 427,
+        "hiddenEvents": 85
+      },
+      "actionCounts": {
+        "acknowledge_payment": 1,
+        "allocate": 1,
+        "assign_chore": 2,
+        "configure_matching": 84,
+        "configure_plan": 84,
+        "create_goal": 2,
+        "edit_goal": 83,
+        "fund_match": 1,
+        "mark_held": 1,
+        "release_goal": 1,
+        "report_payment": 1,
+        "request_payout": 1,
+        "review_chore": 1,
+        "set_savings_rule": 83,
+        "submit_chore": 1,
+        "transfer_goal": 165
+      },
+      "validatedPrefixEvents": 17,
+      "replayValidatedExtensionEvents": 495,
+      "fixtureYear": "2026",
+      "firstEventAt": "2026-01-01T00:00:00.000Z",
+      "lastEventAt": "2026-12-31T12:00:00.000Z",
+      "serializedStateBytes": 139830,
+      "resultingStateBytes": 140139,
+      "parentProjectionBytes": 86879,
+      "childProjectionBytes": 71631,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 109985792,
+      "timing": {
+        "parseMs": {
+          "median": 0.8110999999999535,
+          "p95": 1.1831000000000813,
+          "max": 1.2026999999999362,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 4.266550000000052,
+          "p95": 5.989100000000008,
+          "max": 6.754199999999969,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 3.9797499999999673,
+          "p95": 6.450400000000059,
+          "max": 7.7409999999999854,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 4.235450000000014,
+          "p95": 5.710800000000063,
+          "max": 7.251800000000003,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 0.37844999999998663,
+          "p95": 0.4755000000000109,
+          "max": 0.8037000000000489,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 13.947900000000004,
+          "p95": 19.515300000000025,
+          "max": 19.727800000000002,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 16,
+          "p95": 32,
+          "max": 32,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "household",
+      "inputEvents": 512,
+      "resultingEvents": 513,
+      "role": "child",
+      "counts": {
+        "occurrences": 2,
+        "goals": 2,
+        "savingsRules": 1,
+        "payouts": 1,
+        "visibleEvents": 427,
+        "hiddenEvents": 85
+      },
+      "actionCounts": {
+        "acknowledge_payment": 1,
+        "allocate": 1,
+        "assign_chore": 2,
+        "configure_matching": 84,
+        "configure_plan": 84,
+        "create_goal": 2,
+        "edit_goal": 83,
+        "fund_match": 1,
+        "mark_held": 1,
+        "release_goal": 1,
+        "report_payment": 1,
+        "request_payout": 1,
+        "review_chore": 1,
+        "set_savings_rule": 83,
+        "submit_chore": 1,
+        "transfer_goal": 165
+      },
+      "validatedPrefixEvents": 17,
+      "replayValidatedExtensionEvents": 495,
+      "fixtureYear": "2026",
+      "firstEventAt": "2026-01-01T00:00:00.000Z",
+      "lastEventAt": "2026-12-31T12:00:00.000Z",
+      "serializedStateBytes": 139830,
+      "resultingStateBytes": 140090,
+      "parentProjectionBytes": 86879,
+      "childProjectionBytes": 71631,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 110501888,
+      "timing": {
+        "parseMs": {
+          "median": 0.7936500000000137,
+          "p95": 0.9733999999999696,
+          "max": 1.2771000000000186,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 3.6274499999998966,
+          "p95": 4.2082000000000335,
+          "max": 4.977799999999888,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 3.707150000000013,
+          "p95": 4.553700000000049,
+          "max": 4.742500000000064,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 3.6579999999999586,
+          "p95": 5.352000000000089,
+          "max": 5.496399999999994,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 0.3674000000000319,
+          "p95": 0.4572000000000571,
+          "max": 0.5669000000000324,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 12.43365,
+          "p95": 14.03290000000004,
+          "max": 14.64390000000003,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 16,
+          "p95": 16,
+          "max": 16,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "household",
+      "inputEvents": 1024,
+      "resultingEvents": 1025,
+      "role": "parent",
+      "counts": {
+        "occurrences": 2,
+        "goals": 2,
+        "savingsRules": 1,
+        "payouts": 1,
+        "visibleEvents": 854,
+        "hiddenEvents": 170
+      },
+      "actionCounts": {
+        "acknowledge_payment": 1,
+        "allocate": 1,
+        "assign_chore": 2,
+        "configure_matching": 169,
+        "configure_plan": 169,
+        "create_goal": 2,
+        "edit_goal": 168,
+        "fund_match": 1,
+        "mark_held": 1,
+        "release_goal": 1,
+        "report_payment": 1,
+        "request_payout": 1,
+        "review_chore": 1,
+        "set_savings_rule": 168,
+        "submit_chore": 1,
+        "transfer_goal": 337
+      },
+      "validatedPrefixEvents": 17,
+      "replayValidatedExtensionEvents": 1007,
+      "fixtureYear": "2026",
+      "firstEventAt": "2026-01-01T00:00:00.000Z",
+      "lastEventAt": "2026-12-31T12:00:00.000Z",
+      "serializedStateBytes": 279400,
+      "resultingStateBytes": 279710,
+      "parentProjectionBytes": 170675,
+      "childProjectionBytes": 141147,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 153411584,
+      "timing": {
+        "parseMs": {
+          "median": 1.6837500000000318,
+          "p95": 2.016800000000103,
+          "max": 2.2654999999999745,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 10.366050000000087,
+          "p95": 12.15300000000002,
+          "max": 12.994799999999941,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 10.190549999999917,
+          "p95": 13.419300000000021,
+          "max": 14.9683,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 9.809400000000096,
+          "p95": 11.162499999999909,
+          "max": 11.25649999999996,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 0.7388999999999442,
+          "p95": 0.9551000000001295,
+          "max": 1.0090999999999894,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 32.71720000000005,
+          "p95": 36.77520000000004,
+          "max": 38.42000000000007,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 31,
+          "p95": 48,
+          "max": 93,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "household",
+      "inputEvents": 1024,
+      "resultingEvents": 1025,
+      "role": "child",
+      "counts": {
+        "occurrences": 2,
+        "goals": 2,
+        "savingsRules": 1,
+        "payouts": 1,
+        "visibleEvents": 854,
+        "hiddenEvents": 170
+      },
+      "actionCounts": {
+        "acknowledge_payment": 1,
+        "allocate": 1,
+        "assign_chore": 2,
+        "configure_matching": 169,
+        "configure_plan": 169,
+        "create_goal": 2,
+        "edit_goal": 168,
+        "fund_match": 1,
+        "mark_held": 1,
+        "release_goal": 1,
+        "report_payment": 1,
+        "request_payout": 1,
+        "review_chore": 1,
+        "set_savings_rule": 168,
+        "submit_chore": 1,
+        "transfer_goal": 337
+      },
+      "validatedPrefixEvents": 17,
+      "replayValidatedExtensionEvents": 1007,
+      "fixtureYear": "2026",
+      "firstEventAt": "2026-01-01T00:00:00.000Z",
+      "lastEventAt": "2026-12-31T12:00:00.000Z",
+      "serializedStateBytes": 279400,
+      "resultingStateBytes": 279661,
+      "parentProjectionBytes": 170675,
+      "childProjectionBytes": 141147,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 162164736,
+      "timing": {
+        "parseMs": {
+          "median": 1.641550000000052,
+          "p95": 1.8791999999998552,
+          "max": 1.9292999999997846,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 9.350299999999834,
+          "p95": 11.741799999999785,
+          "max": 11.991700000000037,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 9.38200000000029,
+          "p95": 11.141700000000128,
+          "max": 11.734699999999975,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 8.894999999999754,
+          "p95": 9.525900000000092,
+          "max": 11.535999999999603,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 0.7069499999997788,
+          "p95": 1.0353000000000065,
+          "max": 1.1115999999997257,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 30.33699999999999,
+          "p95": 33.46360000000004,
+          "max": 33.67189999999982,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 31,
+          "p95": 32,
+          "max": 47,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "household",
+      "inputEvents": 4096,
+      "resultingEvents": 4097,
+      "role": "parent",
+      "counts": {
+        "occurrences": 2,
+        "goals": 2,
+        "savingsRules": 1,
+        "payouts": 1,
+        "visibleEvents": 3414,
+        "hiddenEvents": 682
+      },
+      "actionCounts": {
+        "acknowledge_payment": 1,
+        "allocate": 1,
+        "assign_chore": 2,
+        "configure_matching": 681,
+        "configure_plan": 681,
+        "create_goal": 2,
+        "edit_goal": 680,
+        "fund_match": 1,
+        "mark_held": 1,
+        "release_goal": 1,
+        "report_payment": 1,
+        "request_payout": 1,
+        "review_chore": 1,
+        "set_savings_rule": 680,
+        "submit_chore": 1,
+        "transfer_goal": 1361
+      },
+      "validatedPrefixEvents": 17,
+      "replayValidatedExtensionEvents": 4079,
+      "fixtureYear": "2026",
+      "firstEventAt": "2026-01-01T00:00:00.000Z",
+      "lastEventAt": "2026-12-31T12:00:00.000Z",
+      "serializedStateBytes": 1117032,
+      "resultingStateBytes": 1117342,
+      "parentProjectionBytes": 673459,
+      "childProjectionBytes": 557915,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 195678208,
+      "timing": {
+        "parseMs": {
+          "median": 6.821749999999611,
+          "p95": 7.939199999998891,
+          "max": 8.134699999999611,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 97.23845000000028,
+          "p95": 118.16460000000006,
+          "max": 130.27460000000065,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 96.20209999999997,
+          "p95": 113.98880000000008,
+          "max": 116.85599999999977,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 94.7494000000006,
+          "p95": 104.4368000000004,
+          "max": 170.67380000000048,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 3.414900000000216,
+          "p95": 4.617200000000594,
+          "max": 5.100199999999859,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 302.1847499999999,
+          "p95": 342.97429999999986,
+          "max": 394.78170000000046,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 297,
+          "p95": 360,
+          "max": 375,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "household",
+      "inputEvents": 4096,
+      "resultingEvents": 4097,
+      "role": "child",
+      "counts": {
+        "occurrences": 2,
+        "goals": 2,
+        "savingsRules": 1,
+        "payouts": 1,
+        "visibleEvents": 3414,
+        "hiddenEvents": 682
+      },
+      "actionCounts": {
+        "acknowledge_payment": 1,
+        "allocate": 1,
+        "assign_chore": 2,
+        "configure_matching": 681,
+        "configure_plan": 681,
+        "create_goal": 2,
+        "edit_goal": 680,
+        "fund_match": 1,
+        "mark_held": 1,
+        "release_goal": 1,
+        "report_payment": 1,
+        "request_payout": 1,
+        "review_chore": 1,
+        "set_savings_rule": 680,
+        "submit_chore": 1,
+        "transfer_goal": 1361
+      },
+      "validatedPrefixEvents": 17,
+      "replayValidatedExtensionEvents": 4079,
+      "fixtureYear": "2026",
+      "firstEventAt": "2026-01-01T00:00:00.000Z",
+      "lastEventAt": "2026-12-31T12:00:00.000Z",
+      "serializedStateBytes": 1117032,
+      "resultingStateBytes": 1117293,
+      "parentProjectionBytes": 673459,
+      "childProjectionBytes": 557915,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 226144256,
+      "timing": {
+        "parseMs": {
+          "median": 6.792849999999817,
+          "p95": 8.056899999999587,
+          "max": 10.165600000000268,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 100.59089999999924,
+          "p95": 130.21860000000015,
+          "max": 165.84339999999975,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 97.10700000000088,
+          "p95": 110.10869999999886,
+          "max": 164.40920000000006,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 97.74445000000105,
+          "p95": 117.84739999999874,
+          "max": 139.21169999999984,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 3.7717499999998836,
+          "p95": 4.825799999998708,
+          "max": 5.738100000000486,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 311.27769999999964,
+          "p95": 346.5699000000004,
+          "max": 480.6298000000006,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 320,
+          "p95": 391,
+          "max": 391,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "collection-stress",
+      "inputEvents": 0,
+      "resultingEvents": 1,
+      "role": "parent",
+      "counts": {
+        "occurrences": 0,
+        "goals": 0,
+        "savingsRules": 0,
+        "payouts": 0,
+        "visibleEvents": 0,
+        "hiddenEvents": 0
+      },
+      "actionCounts": {},
+      "validatedPrefixEvents": 0,
+      "replayValidatedExtensionEvents": 0,
+      "fixtureYear": "2026",
+      "firstEventAt": null,
+      "lastEventAt": null,
+      "serializedStateBytes": 102,
+      "resultingStateBytes": 408,
+      "parentProjectionBytes": 675,
+      "childProjectionBytes": 454,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 227758080,
+      "timing": {
+        "parseMs": {
+          "median": 0.0036999999992985977,
+          "p95": 0.007099999998899875,
+          "max": 0.007300000001123408,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 0.025299999999333522,
+          "p95": 0.03629999999975553,
+          "max": 0.044200000000273576,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 0.1194999999988795,
+          "p95": 0.1804999999985739,
+          "max": 0.19310000000041327,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 0.11915000000044529,
+          "p95": 0.19199999999909778,
+          "max": 0.27180000000225846,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 0.005199999999604188,
+          "p95": 0.009700000002339948,
+          "max": 0.01059999999779393,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 0.26754999999866413,
+          "p95": 0.42260000000169384,
+          "max": 0.4566999999988184,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 0,
+          "p95": 0,
+          "max": 31,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "collection-stress",
+      "inputEvents": 0,
+      "resultingEvents": 1,
+      "role": "child",
+      "counts": {
+        "occurrences": 0,
+        "goals": 0,
+        "savingsRules": 0,
+        "payouts": 0,
+        "visibleEvents": 0,
+        "hiddenEvents": 0
+      },
+      "actionCounts": {},
+      "validatedPrefixEvents": 0,
+      "replayValidatedExtensionEvents": 0,
+      "fixtureYear": "2026",
+      "firstEventAt": null,
+      "lastEventAt": null,
+      "serializedStateBytes": 102,
+      "resultingStateBytes": 363,
+      "parentProjectionBytes": 675,
+      "childProjectionBytes": 454,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 227426304,
+      "timing": {
+        "parseMs": {
+          "median": 0.003299999998489511,
+          "p95": 0.003899999999703141,
+          "max": 0.004300000000512227,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 0.020899999999528518,
+          "p95": 0.024399999998422572,
+          "max": 0.03430000000298605,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 0.11085000000093714,
+          "p95": 0.16370000000097207,
+          "max": 0.2033000000010361,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 0.10709999999926367,
+          "p95": 0.15159999999741558,
+          "max": 0.16489999999976135,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 0.004800000000614091,
+          "p95": 0.005600000000413274,
+          "max": 0.005699999997887062,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 0.2622000000010303,
+          "p95": 0.34389999999984866,
+          "max": 0.3793000000005122,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 0,
+          "p95": 0,
+          "max": 0,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "collection-stress",
+      "inputEvents": 128,
+      "resultingEvents": 129,
+      "role": "parent",
+      "counts": {
+        "occurrences": 100,
+        "goals": 32,
+        "savingsRules": 8,
+        "payouts": 16,
+        "visibleEvents": 123,
+        "hiddenEvents": 5
+      },
+      "actionCounts": {
+        "acknowledge_payment": 16,
+        "assign_chore": 1,
+        "configure_matching": 1,
+        "configure_plan": 1,
+        "create_goal": 32,
+        "fund_match": 4,
+        "report_payment": 16,
+        "request_payout": 16,
+        "review_chore": 16,
+        "set_savings_rule": 8,
+        "submit_chore": 17
+      },
+      "validatedPrefixEvents": 128,
+      "replayValidatedExtensionEvents": 0,
+      "fixtureYear": "2026",
+      "firstEventAt": "2026-01-01T00:00:00.000Z",
+      "lastEventAt": "2026-12-31T12:00:00.000Z",
+      "serializedStateBytes": 58184,
+      "resultingStateBytes": 58493,
+      "parentProjectionBytes": 105173,
+      "childProjectionBytes": 59467,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 422412288,
+      "timing": {
+        "parseMs": {
+          "median": 0.3580499999989115,
+          "p95": 0.3971000000019558,
+          "max": 0.6458000000020547,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 23.76379999999881,
+          "p95": 27.427300000003015,
+          "max": 67.92929999999978,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 24.067549999999756,
+          "p95": 63.759500000000116,
+          "max": 85.13910000000033,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 23.492449999999735,
+          "p95": 24.97530000000188,
+          "max": 60.417199999999866,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 0.17839999999887368,
+          "p95": 0.22889999999824795,
+          "max": 0.29469999999855645,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 71.46130000000085,
+          "p95": 113.83169999999882,
+          "max": 134.45379999999932,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 78,
+          "p95": 125,
+          "max": 140,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "collection-stress",
+      "inputEvents": 128,
+      "resultingEvents": 129,
+      "role": "child",
+      "counts": {
+        "occurrences": 100,
+        "goals": 32,
+        "savingsRules": 8,
+        "payouts": 16,
+        "visibleEvents": 123,
+        "hiddenEvents": 5
+      },
+      "actionCounts": {
+        "acknowledge_payment": 16,
+        "assign_chore": 1,
+        "configure_matching": 1,
+        "configure_plan": 1,
+        "create_goal": 32,
+        "fund_match": 4,
+        "report_payment": 16,
+        "request_payout": 16,
+        "review_chore": 16,
+        "set_savings_rule": 8,
+        "submit_chore": 17
+      },
+      "validatedPrefixEvents": 128,
+      "replayValidatedExtensionEvents": 0,
+      "fixtureYear": "2026",
+      "firstEventAt": "2026-01-01T00:00:00.000Z",
+      "lastEventAt": "2026-12-31T12:00:00.000Z",
+      "serializedStateBytes": 58184,
+      "resultingStateBytes": 58444,
+      "parentProjectionBytes": 105173,
+      "childProjectionBytes": 59467,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 422371328,
+      "timing": {
+        "parseMs": {
+          "median": 0.35024999999950523,
+          "p95": 0.38510000000314903,
+          "max": 0.4313000000001921,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 20.571900000000824,
+          "p95": 23.609300000000076,
+          "max": 55.286800000001676,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 20.696649999999863,
+          "p95": 24.49019999999655,
+          "max": 55.57540000000154,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 20.220100000000457,
+          "p95": 25.900699999998324,
+          "max": 57.05840000000171,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 0.16035000000192667,
+          "p95": 0.22659999999814318,
+          "max": 36.87830000000031,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 62.33964999999989,
+          "p95": 99.86749999999665,
+          "max": 102.76980000000185,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 63,
+          "p95": 109,
+          "max": 109,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "collection-stress",
+      "inputEvents": 512,
+      "resultingEvents": 513,
+      "role": "parent",
+      "counts": {
+        "occurrences": 100,
+        "goals": 32,
+        "savingsRules": 8,
+        "payouts": 32,
+        "visibleEvents": 452,
+        "hiddenEvents": 60
+      },
+      "actionCounts": {
+        "acknowledge_payment": 32,
+        "assign_chore": 1,
+        "configure_matching": 52,
+        "configure_plan": 51,
+        "create_goal": 32,
+        "edit_goal": 50,
+        "fund_match": 8,
+        "report_payment": 32,
+        "request_payout": 32,
+        "review_chore": 32,
+        "set_savings_rule": 58,
+        "submit_chore": 32,
+        "transfer_goal": 100
+      },
+      "validatedPrefixEvents": 211,
+      "replayValidatedExtensionEvents": 301,
+      "fixtureYear": "2026",
+      "firstEventAt": "2026-01-01T00:00:00.000Z",
+      "lastEventAt": "2026-12-31T12:00:00.000Z",
+      "serializedStateBytes": 184850,
+      "resultingStateBytes": 185159,
+      "parentProjectionBytes": 220483,
+      "childProjectionBytes": 120897,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 246247424,
+      "timing": {
+        "parseMs": {
+          "median": 1.035200000002078,
+          "p95": 1.5113000000019383,
+          "max": 1.8915999999990163,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 59.72745000000032,
+          "p95": 71.79279999999926,
+          "max": 72.89450000000215,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 61.515950000000885,
+          "p95": 68.38390000000072,
+          "max": 71.38409999999931,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 57.75669999999991,
+          "p95": 66.42229999999836,
+          "max": 68.65639999999985,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 0.48545000000012806,
+          "p95": 0.6622999999999593,
+          "max": 0.6749999999992724,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 176.19635000000017,
+          "p95": 204.33239999999932,
+          "max": 209.35310000000027,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 172,
+          "p95": 203,
+          "max": 218,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "collection-stress",
+      "inputEvents": 512,
+      "resultingEvents": 513,
+      "role": "child",
+      "counts": {
+        "occurrences": 100,
+        "goals": 32,
+        "savingsRules": 8,
+        "payouts": 32,
+        "visibleEvents": 452,
+        "hiddenEvents": 60
+      },
+      "actionCounts": {
+        "acknowledge_payment": 32,
+        "assign_chore": 1,
+        "configure_matching": 52,
+        "configure_plan": 51,
+        "create_goal": 32,
+        "edit_goal": 50,
+        "fund_match": 8,
+        "report_payment": 32,
+        "request_payout": 32,
+        "review_chore": 32,
+        "set_savings_rule": 58,
+        "submit_chore": 32,
+        "transfer_goal": 100
+      },
+      "validatedPrefixEvents": 211,
+      "replayValidatedExtensionEvents": 301,
+      "fixtureYear": "2026",
+      "firstEventAt": "2026-01-01T00:00:00.000Z",
+      "lastEventAt": "2026-12-31T12:00:00.000Z",
+      "serializedStateBytes": 184850,
+      "resultingStateBytes": 185110,
+      "parentProjectionBytes": 220483,
+      "childProjectionBytes": 120897,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 247447552,
+      "timing": {
+        "parseMs": {
+          "median": 1.026849999998376,
+          "p95": 1.2518000000054599,
+          "max": 1.6965999999956694,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 59.038000000000466,
+          "p95": 73.5370000000039,
+          "max": 76.77949999999691,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 58.14170000000013,
+          "p95": 67.9493999999977,
+          "max": 70.14979999999923,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 61.19919999999911,
+          "p95": 66.46650000000227,
+          "max": 67.49150000000373,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 0.46754999999757274,
+          "p95": 0.5783999999985099,
+          "max": 0.7710999999981141,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 182.8048000000017,
+          "p95": 196.50829999999405,
+          "max": 206.2914000000019,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 187,
+          "p95": 218,
+          "max": 235,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "collection-stress",
+      "inputEvents": 1024,
+      "resultingEvents": 1025,
+      "role": "parent",
+      "counts": {
+        "occurrences": 100,
+        "goals": 32,
+        "savingsRules": 8,
+        "payouts": 32,
+        "visibleEvents": 879,
+        "hiddenEvents": 145
+      },
+      "actionCounts": {
+        "acknowledge_payment": 32,
+        "assign_chore": 1,
+        "configure_matching": 137,
+        "configure_plan": 137,
+        "create_goal": 32,
+        "edit_goal": 136,
+        "fund_match": 8,
+        "report_payment": 32,
+        "request_payout": 32,
+        "review_chore": 32,
+        "set_savings_rule": 143,
+        "submit_chore": 32,
+        "transfer_goal": 270
+      },
+      "validatedPrefixEvents": 211,
+      "replayValidatedExtensionEvents": 813,
+      "fixtureYear": "2026",
+      "firstEventAt": "2026-01-01T00:00:00.000Z",
+      "lastEventAt": "2026-12-31T12:00:00.000Z",
+      "serializedStateBytes": 324397,
+      "resultingStateBytes": 324707,
+      "parentProjectionBytes": 304287,
+      "childProjectionBytes": 190421,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 229330944,
+      "timing": {
+        "parseMs": {
+          "median": 1.8017499999987194,
+          "p95": 5.644999999996799,
+          "max": 5.680599999999686,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 94.9390999999996,
+          "p95": 141.42959999999584,
+          "max": 170.96659999999974,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 96.30849999999919,
+          "p95": 104.58619999999792,
+          "max": 109.56710000000021,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 94.8012000000017,
+          "p95": 110.45890000000509,
+          "max": 121.28770000000077,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 0.8108000000029278,
+          "p95": 1.1690999999991618,
+          "max": 1.5728999999992084,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 293.7313499999982,
+          "p95": 340.5179999999964,
+          "max": 380.9232999999949,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 297,
+          "p95": 345,
+          "max": 359,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "collection-stress",
+      "inputEvents": 1024,
+      "resultingEvents": 1025,
+      "role": "child",
+      "counts": {
+        "occurrences": 100,
+        "goals": 32,
+        "savingsRules": 8,
+        "payouts": 32,
+        "visibleEvents": 879,
+        "hiddenEvents": 145
+      },
+      "actionCounts": {
+        "acknowledge_payment": 32,
+        "assign_chore": 1,
+        "configure_matching": 137,
+        "configure_plan": 137,
+        "create_goal": 32,
+        "edit_goal": 136,
+        "fund_match": 8,
+        "report_payment": 32,
+        "request_payout": 32,
+        "review_chore": 32,
+        "set_savings_rule": 143,
+        "submit_chore": 32,
+        "transfer_goal": 270
+      },
+      "validatedPrefixEvents": 211,
+      "replayValidatedExtensionEvents": 813,
+      "fixtureYear": "2026",
+      "firstEventAt": "2026-01-01T00:00:00.000Z",
+      "lastEventAt": "2026-12-31T12:00:00.000Z",
+      "serializedStateBytes": 324397,
+      "resultingStateBytes": 324658,
+      "parentProjectionBytes": 304287,
+      "childProjectionBytes": 190421,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 232337408,
+      "timing": {
+        "parseMs": {
+          "median": 1.7591000000029453,
+          "p95": 2.23410000000149,
+          "max": 8.942999999999302,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 95.43044999999984,
+          "p95": 108.83229999999458,
+          "max": 170.06300000000192,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 94.86364999999569,
+          "p95": 108.47090000000026,
+          "max": 111.5341999999946,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 94.46900000000096,
+          "p95": 106.91889999999694,
+          "max": 112.14220000000205,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 0.9066500000008091,
+          "p95": 1.26759999999922,
+          "max": 1.2857000000003609,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 289.9097499999989,
+          "p95": 313.6108999999997,
+          "max": 378.89020000000164,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 297,
+          "p95": 359,
+          "max": 359,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "collection-stress",
+      "inputEvents": 4096,
+      "resultingEvents": 4097,
+      "role": "parent",
+      "counts": {
+        "occurrences": 100,
+        "goals": 32,
+        "savingsRules": 8,
+        "payouts": 32,
+        "visibleEvents": 3439,
+        "hiddenEvents": 657
+      },
+      "actionCounts": {
+        "acknowledge_payment": 32,
+        "assign_chore": 1,
+        "configure_matching": 649,
+        "configure_plan": 649,
+        "create_goal": 32,
+        "edit_goal": 648,
+        "fund_match": 8,
+        "report_payment": 32,
+        "request_payout": 32,
+        "review_chore": 32,
+        "set_savings_rule": 655,
+        "submit_chore": 32,
+        "transfer_goal": 1294
+      },
+      "validatedPrefixEvents": 211,
+      "replayValidatedExtensionEvents": 3885,
+      "fixtureYear": "2026",
+      "firstEventAt": "2026-01-01T00:00:00.000Z",
+      "lastEventAt": "2026-12-31T12:00:00.000Z",
+      "serializedStateBytes": 1161517,
+      "resultingStateBytes": 1161827,
+      "parentProjectionBytes": 807071,
+      "childProjectionBytes": 607189,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 212180992,
+      "timing": {
+        "parseMs": {
+          "median": 6.804100000008475,
+          "p95": 8.562099999995553,
+          "max": 9.371500000008382,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 384.76375000000553,
+          "p95": 457.8096000000005,
+          "max": 543.5669999999955,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 385.3121500000052,
+          "p95": 474.1771000000008,
+          "max": 500.8842000000004,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 380.3504999999932,
+          "p95": 414.72030000000086,
+          "max": 416.8668000000034,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 3.655399999996007,
+          "p95": 4.47620000000461,
+          "max": 5.774199999999837,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 1180.7243000000017,
+          "p95": 1291.7497000000003,
+          "max": 1342.0103999999992,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 1195,
+          "p95": 1297,
+          "max": 1375,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "collection-stress",
+      "inputEvents": 4096,
+      "resultingEvents": 4097,
+      "role": "child",
+      "counts": {
+        "occurrences": 100,
+        "goals": 32,
+        "savingsRules": 8,
+        "payouts": 32,
+        "visibleEvents": 3439,
+        "hiddenEvents": 657
+      },
+      "actionCounts": {
+        "acknowledge_payment": 32,
+        "assign_chore": 1,
+        "configure_matching": 649,
+        "configure_plan": 649,
+        "create_goal": 32,
+        "edit_goal": 648,
+        "fund_match": 8,
+        "report_payment": 32,
+        "request_payout": 32,
+        "review_chore": 32,
+        "set_savings_rule": 655,
+        "submit_chore": 32,
+        "transfer_goal": 1294
+      },
+      "validatedPrefixEvents": 211,
+      "replayValidatedExtensionEvents": 3885,
+      "fixtureYear": "2026",
+      "firstEventAt": "2026-01-01T00:00:00.000Z",
+      "lastEventAt": "2026-12-31T12:00:00.000Z",
+      "serializedStateBytes": 1161517,
+      "resultingStateBytes": 1161778,
+      "parentProjectionBytes": 807071,
+      "childProjectionBytes": 607189,
+      "childEquivalentWorldPass": true,
+      "integerConservationPass": true,
+      "maximumSampledProcessRssBytes": 208691200,
+      "timing": {
+        "parseMs": {
+          "median": 6.7942000000039116,
+          "p95": 8.487099999998463,
+          "max": 8.58990000000631,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 387.1554000000033,
+          "p95": 481.5369000000064,
+          "max": 486.2013999999908,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 377.59284999999363,
+          "p95": 419.19689999999537,
+          "max": 448.03029999999853,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 378.69650000000547,
+          "p95": 411.849000000002,
+          "max": 516.4879999999976,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 3.4004999999961,
+          "p95": 4.600900000004913,
+          "max": 4.908299999995506,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 1147.5682000000015,
+          "p95": 1303.9060999999929,
+          "max": 1324.8717999999935,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 1172,
+          "p95": 1298,
+          "max": 1327,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    }
+  ],
+  "sourceManifest": [
+    {
+      "name": "apps/mobile/src/finance/engine.ts",
+      "sha256": "991d1a62c72174d37d88a1289b48b7aeac5719985d6e504d4de8179d87b10398"
+    },
+    {
+      "name": "apps/mobile/src/finance/types.ts",
+      "sha256": "1d2d6d6f0cd817f9008ecdfda21660b587ce15f77949af80b186298479e7de41"
+    },
+    {
+      "name": "apps/mobile/src/finance/money-calendar.ts",
+      "sha256": "63006abd19e84ac8e4de972de71d5e9c41b9a01948af2bd5a5a62531296b5202"
+    },
+    {
+      "name": "services/backend/src/finance.ts",
+      "sha256": "e6c2cdbeb350287f49a2e51914a29a4da68a6d320ba518df47e8fc12c76a4ecf"
+    },
+    {
+      "name": "services/backend/package.json",
+      "sha256": "6476a494a177f6009f5267354cf93bc7514960284242b58b5a209b4d994a3bd9"
+    },
+    {
+      "name": "services/backend/package-lock.json",
+      "sha256": "2fc6ae62460b6d93d0ee6ba51984c52b248d5199b019efa8d26f85b50be6e1d4"
+    },
+    {
+      "name": "apps/mobile/package.json",
+      "sha256": "653dbc2df1243842a25f01a1c996b4e7f4484455f6bf5c2eeffc1ca7477ff7be"
+    },
+    {
+      "name": "apps/mobile/package-lock.json",
+      "sha256": "5650fb67de40433f9f7e0418ceb02479a85bb780fb47cdc9091c01b7ee9ae86a"
+    },
+    {
+      "name": "services/backend/scripts/finance-capacity-benchmark.mjs",
+      "sha256": "0587506126208e17bde8d7732a58a8b60976094cf8fbdaa71948dad1b333812a"
+    }
+  ]
+}

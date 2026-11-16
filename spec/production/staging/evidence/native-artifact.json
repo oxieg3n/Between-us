@@ -1,0 +1,699 @@
+{
+  "build": "1116-StagingQualification-r1",
+  "kind": "Android DEBUG, not owner-signed release",
+  "apkPath": "apps/mobile/android/app/build/outputs/apk/debug/app-debug.apk",
+  "apkSha256": "6051b9729f02eb89557bb6a286698d0f64fccbb6e3dbab01197753e37b14379a",
+  "apkBytes": 414316013,
+  "package": "com.oxieg3n.betweenus",
+  "versionCode": "4",
+  "versionName": "0.5.0",
+  "sdk": {
+    "{http://schemas.android.com/apk/res/android}minSdkVersion": "24",
+    "{http://schemas.android.com/apk/res/android}targetSdkVersion": "36"
+  },
+  "permissions": [
+    "android.permission.ACCESS_LOCAL_NETWORK",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.DETECT_SCREEN_CAPTURE",
+    "android.permission.INTERNET",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.READ_APP_BADGE",
+    "android.permission.RECEIVE_BOOT_COMPLETED",
+    "android.permission.SYSTEM_ALERT_WINDOW",
+    "android.permission.USE_BIOMETRIC",
+    "android.permission.USE_FINGERPRINT",
+    "android.permission.WAKE_LOCK",
+    "com.anddoes.launcher.permission.UPDATE_COUNT",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+    "com.htc.launcher.permission.READ_SETTINGS",
+    "com.htc.launcher.permission.UPDATE_SHORTCUT",
+    "com.huawei.android.launcher.permission.CHANGE_BADGE",
+    "com.huawei.android.launcher.permission.READ_SETTINGS",
+    "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+    "com.majeur.launcher.permission.UPDATE_BADGE",
+    "com.oppo.launcher.permission.READ_SETTINGS",
+    "com.oppo.launcher.permission.WRITE_SETTINGS",
+    "com.oxieg3n.betweenus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "com.sec.android.provider.badge.permission.READ",
+    "com.sec.android.provider.badge.permission.WRITE",
+    "com.sonyericsson.home.permission.BROADCAST_BADGE",
+    "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+    "me.everything.badger.permission.BADGE_COUNT_READ",
+    "me.everything.badger.permission.BADGE_COUNT_WRITE"
+  ],
+  "debugCertificateSha256": "fac61745dc0903786fb9ede62a962b399f7348f0bb6f899b8332667591033b9c",
+  "libraries": [
+    {
+      "path": "lib/arm64-v8a/libappmodules.so",
+      "bytes": 5115016,
+      "sha256": "e58c847464aa8731f343c3016b88103bdc3375857ddf812da25f4c5c30298d2f"
+    },
+    {
+      "path": "lib/arm64-v8a/libc++_shared.so",
+      "bytes": 1292904,
+      "sha256": "3e852764502d06e0cf1080d532ae7c608b7649d946a3a9d7e84e3d4b7d683214"
+    },
+    {
+      "path": "lib/arm64-v8a/libcrypto.so",
+      "bytes": 4978952,
+      "sha256": "da06ab9b38e9e28d2f9ab0040d398ec076d981f3a309325971a978e6135b80b1"
+    },
+    {
+      "path": "lib/arm64-v8a/libdatastore_shared_counter.so",
+      "bytes": 7112,
+      "sha256": "d3e48717c9aa147e0ab21063ba0e8e0211cabf8bf40b222640829519edbf58e1"
+    },
+    {
+      "path": "lib/arm64-v8a/libexpo-modules-core.so",
+      "bytes": 1849960,
+      "sha256": "cd8627811bc71725dab63c13ff3c484a1cf9aa3c1b038ac35263a63aa328451d"
+    },
+    {
+      "path": "lib/arm64-v8a/libexpo-modules-jsi.so",
+      "bytes": 95768,
+      "sha256": "c26d366fcc34deb777a6cefb1f91e7cd04fe053f3f910b3242cd0e3d8af95f6a"
+    },
+    {
+      "path": "lib/arm64-v8a/libexpo-modules-v2.so",
+      "bytes": 1349656,
+      "sha256": "18d0134d699cb7688cde3cf5f0e1fb1be528b4a3b7c3729e2c13965a5ad55963"
+    },
+    {
+      "path": "lib/arm64-v8a/libexpo-modules-worklets.so",
+      "bytes": 140272,
+      "sha256": "7b4a6577b054b297e0959a8933c30f160a9444d9def9d67554fe588b66402725"
+    },
+    {
+      "path": "lib/arm64-v8a/libexpo-sqlite.so",
+      "bytes": 2166368,
+      "sha256": "7d4e4f45710e74eacbb0a6ad671d3472fef1bacb7e6a0479b2c46c70e35b3c1f"
+    },
+    {
+      "path": "lib/arm64-v8a/libfbjni.so",
+      "bytes": 177000,
+      "sha256": "a9e35ba55d3f956920281f519385f8a72475ee24819799cb08375fdd4cce2b22"
+    },
+    {
+      "path": "lib/arm64-v8a/libgesturehandler.so",
+      "bytes": 109880,
+      "sha256": "48176fc3d5596ff0982ee4a57efc9085d6089299df1db2708537d99500a24466"
+    },
+    {
+      "path": "lib/arm64-v8a/libgifimage.so",
+      "bytes": 319088,
+      "sha256": "cfbb51d1fe58ba985ad1f06d4ac0afa70e5323d25517642881f4833d7020e44f"
+    },
+    {
+      "path": "lib/arm64-v8a/libhermestooling.so",
+      "bytes": 568952,
+      "sha256": "833a4e65483eed5b59b222568027bbfd5694eca89ddf30d5137630b664d87e04"
+    },
+    {
+      "path": "lib/arm64-v8a/libhermesvm.so",
+      "bytes": 4021008,
+      "sha256": "3746fede16adc7b214d95a378563ac76dc60912bc20e47aaf311925b0a185cb4"
+    },
+    {
+      "path": "lib/arm64-v8a/libimagepipeline.so",
+      "bytes": 8760,
+      "sha256": "1b377992e4256fa9398ec057722f84a359c7d588e570c8a41f51d930c19ece7d"
+    },
+    {
+      "path": "lib/arm64-v8a/libjsi.so",
+      "bytes": 941232,
+      "sha256": "4cde940e3bb4ca6f9e82585ee50339d7570074210fd5439ce85a6303af653b85"
+    },
+    {
+      "path": "lib/arm64-v8a/libnative-filters.so",
+      "bytes": 277744,
+      "sha256": "bb82aec5ab2a8ac4e1968f41c6477824f1f3fff90c0eeb2c90cdeb1923d69833"
+    },
+    {
+      "path": "lib/arm64-v8a/libnative-imagetranscoder.so",
+      "bytes": 585376,
+      "sha256": "2aed28298a25afd52ac670cf9682398c6c7ba42a57195c01efd565e7ddfe17ca"
+    },
+    {
+      "path": "lib/arm64-v8a/libreact_codegen_rngesturehandler_codegen.so",
+      "bytes": 1626168,
+      "sha256": "1a3b12745c315be059ce25531b7a6bdefc1840a12b7f38295f240f68f920f138"
+    },
+    {
+      "path": "lib/arm64-v8a/libreact_codegen_rnscreens.so",
+      "bytes": 3931600,
+      "sha256": "8ba4b035b266c252e1e914d92743bfb59364554f9b9c96dc2e4e28802d6bd094"
+    },
+    {
+      "path": "lib/arm64-v8a/libreact_codegen_rnsvg.so",
+      "bytes": 2297392,
+      "sha256": "caef2347b436f7400cde3b618595af11d54849e483acd3b211ba8452efc46277"
+    },
+    {
+      "path": "lib/arm64-v8a/libreact_codegen_safeareacontext.so",
+      "bytes": 554304,
+      "sha256": "e64f7db58ead08afb86d7c16eaf3034dab04a08ea806f7018dbc512935ae2834"
+    },
+    {
+      "path": "lib/arm64-v8a/libreactnative.so",
+      "bytes": 24062944,
+      "sha256": "64ad838aeb7c731eeabb836a6bc4a6d00a5e0089788f95c6f2f1a6e467344a8b"
+    },
+    {
+      "path": "lib/arm64-v8a/libreanimated.so",
+      "bytes": 9390776,
+      "sha256": "e8b5dd570c69decc5f0805d53559bce441ef79e8c16a7947eaa6216be293dd71"
+    },
+    {
+      "path": "lib/arm64-v8a/librnllama.so",
+      "bytes": 12647216,
+      "sha256": "cdf3f4983f736754df2df207360a1cabd7c969ee4295bb60a05f03ba358f4501"
+    },
+    {
+      "path": "lib/arm64-v8a/librnllama_jni.so",
+      "bytes": 860904,
+      "sha256": "25ee64c8ac3d018663f5e3f2df19239a0a8e8c26446a1d205ca82e6e7d3ed9dc"
+    },
+    {
+      "path": "lib/arm64-v8a/librnllama_jni_v8.so",
+      "bytes": 860904,
+      "sha256": "248160d37fa9b07ec5024845e3659c6e175c89014ff55331feb7c6aa95efe451"
+    },
+    {
+      "path": "lib/arm64-v8a/librnllama_jni_v8_2.so",
+      "bytes": 854704,
+      "sha256": "548b42893ab49737d7c73a7757b7c9457cabb46ede369d749d9683b906263af9"
+    },
+    {
+      "path": "lib/arm64-v8a/librnllama_jni_v8_2_dotprod.so",
+      "bytes": 854720,
+      "sha256": "8d4cf44589877b42f5c250c840d514969dd8703b47fa6497f74b58da4e308352"
+    },
+    {
+      "path": "lib/arm64-v8a/librnllama_jni_v8_2_dotprod_i8mm.so",
+      "bytes": 854720,
+      "sha256": "ee087a6872a995ef60adedd6ea501e4be41413825f618ec8f9dbc53c42eb9bbd"
+    },
+    {
+      "path": "lib/arm64-v8a/librnllama_jni_v8_2_dotprod_i8mm_hexagon_opencl.so",
+      "bytes": 854784,
+      "sha256": "edb12dd0e04261938e9692bbf75849d22b5de778b7540d3bf1bf32d37b234a7e"
+    },
+    {
+      "path": "lib/arm64-v8a/librnllama_jni_v8_2_i8mm.so",
+      "bytes": 854704,
+      "sha256": "05ee091a3e97d720925d36dc78b78a000d7ae3fa53b2f38bd177531474c30896"
+    },
+    {
+      "path": "lib/arm64-v8a/librnllama_v8.so",
+      "bytes": 12709088,
+      "sha256": "73323a8a445e7a7a0532b6c9d03dceb0a44d97dcb5bb0a1f2adc7a665b022608"
+    },
+    {
+      "path": "lib/arm64-v8a/librnllama_v8_2.so",
+      "bytes": 12704208,
+      "sha256": "58658367089b549b8ee26aa80576392353d24aaabe6c0a527f0066b1279f1acf"
+    },
+    {
+      "path": "lib/arm64-v8a/librnllama_v8_2_dotprod.so",
+      "bytes": 12780752,
+      "sha256": "0f8cf7c3c72b87b8ce849954e86acaae06a0f15e7b558855f09136ca33eae121"
+    },
+    {
+      "path": "lib/arm64-v8a/librnllama_v8_2_dotprod_i8mm.so",
+      "bytes": 12794864,
+      "sha256": "dfaede6c0a8bf371b25f7c1ad2e701f6c77d4bce91c18fabd47ad658c6bdd8f2"
+    },
+    {
+      "path": "lib/arm64-v8a/librnllama_v8_2_dotprod_i8mm_hexagon_opencl.so",
+      "bytes": 16513904,
+      "sha256": "b512cdc9cf29805d426361e0a5d69d2176e5056820f499662f7942f68d7b7af1"
+    },
+    {
+      "path": "lib/arm64-v8a/librnllama_v8_2_i8mm.so",
+      "bytes": 12754816,
+      "sha256": "56969d405a7443339d8992270e33071dc0a8e00d6d752975ccbc11d365619116"
+    },
+    {
+      "path": "lib/arm64-v8a/librnscreens.so",
+      "bytes": 352520,
+      "sha256": "d57b85f90f6c1684bc8969ab1b57ee90ea7bb5a8f689c351941842883ea4dfb4"
+    },
+    {
+      "path": "lib/arm64-v8a/libstatic-webp.so",
+      "bytes": 502112,
+      "sha256": "bfce3139342fad716d25623b559d9901fc795d6b7622ebe21a417b4c84e3a92a"
+    },
+    {
+      "path": "lib/arm64-v8a/libworklets.so",
+      "bytes": 5513488,
+      "sha256": "d59cf1b74f038c0825790075b251ce183c74e50906762206e5ceabb227edfe7a"
+    },
+    {
+      "path": "lib/arm64-v8a/libzstd-kmp.so",
+      "bytes": 731872,
+      "sha256": "10ec47f13bee884450b0911066019ba7aa6b4164a4c1f8c33c9d30dd3fd8868a"
+    },
+    {
+      "path": "lib/armeabi-v7a/libappmodules.so",
+      "bytes": 3359300,
+      "sha256": "f4c565d8675056c1c705f8152e4a521212af85ef84d1c57d28cd5477318a4ebc"
+    },
+    {
+      "path": "lib/armeabi-v7a/libc++_shared.so",
+      "bytes": 872872,
+      "sha256": "84e7d99b7b6df960b37c28e43808cc5c2c62d1bb9449e27683fc53309dea5b6c"
+    },
+    {
+      "path": "lib/armeabi-v7a/libcrypto.so",
+      "bytes": 3396428,
+      "sha256": "fe585fe705a8ebc2f361d9c23e633ef472dae10891fa5fc12346014ed41249bd"
+    },
+    {
+      "path": "lib/armeabi-v7a/libdatastore_shared_counter.so",
+      "bytes": 4416,
+      "sha256": "716c5d8d2cac8ca0edf65da8f139c7886b726ac79d542a14edeb94994ba6d3dc"
+    },
+    {
+      "path": "lib/armeabi-v7a/libexpo-modules-core.so",
+      "bytes": 1340668,
+      "sha256": "99c614d0ccbd61f47777d242ced0d112760c5db9e26829c7e3e08dc968e5e111"
+    },
+    {
+      "path": "lib/armeabi-v7a/libexpo-modules-jsi.so",
+      "bytes": 44764,
+      "sha256": "af29bca15f6e6c8e3300161d2b9f4d6ae3696b51ba49c79a9e2c0903c753e48b"
+    },
+    {
+      "path": "lib/armeabi-v7a/libexpo-modules-v2.so",
+      "bytes": 624508,
+      "sha256": "2250b17ca5e42ab71d5059a90b2c19c1220536861ce959a25a4357ad37b4ba30"
+    },
+    {
+      "path": "lib/armeabi-v7a/libexpo-modules-worklets.so",
+      "bytes": 83720,
+      "sha256": "88ec45e00b777039084647946caeb794f4d83e4947bd1bceb8cc6278dff2a347"
+    },
+    {
+      "path": "lib/armeabi-v7a/libexpo-sqlite.so",
+      "bytes": 1221392,
+      "sha256": "d3ac9500fa4d2ff6b003375ff0cdb78ef38b89b767ccf19d2634774001a0e2b8"
+    },
+    {
+      "path": "lib/armeabi-v7a/libfbjni.so",
+      "bytes": 119456,
+      "sha256": "6739b4db111283fe0a86a3a5fdd80efe5d963355dd161b95ec179f01cc9685d5"
+    },
+    {
+      "path": "lib/armeabi-v7a/libgesturehandler.so",
+      "bytes": 59324,
+      "sha256": "31353c470d259d071c499b61645f169d181bd0dabd7895dc89ba1ee54ecc5acd"
+    },
+    {
+      "path": "lib/armeabi-v7a/libgifimage.so",
+      "bytes": 184492,
+      "sha256": "eeb7990ba342efd33050fd8fde0a0ca4d75f87c6030bd09d153dbb7880326f4a"
+    },
+    {
+      "path": "lib/armeabi-v7a/libhermestooling.so",
+      "bytes": 287176,
+      "sha256": "beb1e32e501b670600f2a946a44f474faf0a692207c35e8ee6d6a9ffe20759aa"
+    },
+    {
+      "path": "lib/armeabi-v7a/libhermesvm.so",
+      "bytes": 2959064,
+      "sha256": "bb9723d9eaeea09ea8fb20ff6c8516b0688b9c6e2e752075c7fd15bbcf8241f3"
+    },
+    {
+      "path": "lib/armeabi-v7a/libimagepipeline.so",
+      "bytes": 5876,
+      "sha256": "0fb5021bcf1cbb6c10630732560bb80bad7187c8b8391e6c001b3f892fa613d5"
+    },
+    {
+      "path": "lib/armeabi-v7a/libjsi.so",
+      "bytes": 628976,
+      "sha256": "ac16d0b45ecd2007a6feac36daa00c18962546a6993fa5fc5eedfcdef5bbe4ca"
+    },
+    {
+      "path": "lib/armeabi-v7a/libnative-filters.so",
+      "bytes": 160224,
+      "sha256": "fb86dd825eba911eba8f31683052a8ff6904808be09f90184c18f5dcdb7a642b"
+    },
+    {
+      "path": "lib/armeabi-v7a/libnative-imagetranscoder.so",
+      "bytes": 341072,
+      "sha256": "40905f1c50315f66362a8e10e2ac19d1df62c3f1800bc2ee639047d09c9f1bd9"
+    },
+    {
+      "path": "lib/armeabi-v7a/libreact_codegen_rngesturehandler_codegen.so",
+      "bytes": 995660,
+      "sha256": "cdd97fdf78131a891e76f340e64d39b8bd8bc5cd37a6d3af75e9b27e7d3c4f5a"
+    },
+    {
+      "path": "lib/armeabi-v7a/libreact_codegen_rnscreens.so",
+      "bytes": 2341340,
+      "sha256": "6316da0723e42ecc4e37c74cb424f9efd2e5c17db3185ddca0cb3313011b7acf"
+    },
+    {
+      "path": "lib/armeabi-v7a/libreact_codegen_rnsvg.so",
+      "bytes": 1444172,
+      "sha256": "00c08cffa8ca4212ddac15171169a14dd1452262f80a55de74edd2cb9a4803fa"
+    },
+    {
+      "path": "lib/armeabi-v7a/libreact_codegen_safeareacontext.so",
+      "bytes": 312588,
+      "sha256": "5ea961fc6432e48a57f2ddfc8696af7993e6c902d86b9e3b8d21f6a6113de592"
+    },
+    {
+      "path": "lib/armeabi-v7a/libreactnative.so",
+      "bytes": 13907676,
+      "sha256": "e71c8f6494cefeddde8c174a3382e9cfb0f347309eba0216c791fc8dbf36fdb0"
+    },
+    {
+      "path": "lib/armeabi-v7a/libreanimated.so",
+      "bytes": 4782796,
+      "sha256": "00420a2bc5544089abb30282aa97c84bc6f302fc6e3f241301b5f2a90fb6c818"
+    },
+    {
+      "path": "lib/armeabi-v7a/librnscreens.so",
+      "bytes": 185616,
+      "sha256": "5c6ddc5f9e903f58248e42a1d2fb75078d7431e5d944b1cd253bfa457ecbb431"
+    },
+    {
+      "path": "lib/armeabi-v7a/libstatic-webp.so",
+      "bytes": 367720,
+      "sha256": "c141428a60bcc58ca93e0541a6bd472962630fd716d2baf19db80bad2ca56b6a"
+    },
+    {
+      "path": "lib/armeabi-v7a/libworklets.so",
+      "bytes": 3251880,
+      "sha256": "466f72f41042d193fecf10b9c64dbe85019179d439c164289be2a4c98cd31e67"
+    },
+    {
+      "path": "lib/armeabi-v7a/libzstd-kmp.so",
+      "bytes": 566996,
+      "sha256": "4b30671d21e9c6953dc84e4b4602e33b88740d61417af96dbc4ddf44b22a8e15"
+    },
+    {
+      "path": "lib/x86/libappmodules.so",
+      "bytes": 4925172,
+      "sha256": "af7c899b7db7c9f20634e2c2250ffde74ac8683f127fc7dc558518e53bde23ed"
+    },
+    {
+      "path": "lib/x86/libc++_shared.so",
+      "bytes": 1254988,
+      "sha256": "3bd6a3c5d1baa1fac3bdd8452ccc403fd1b464b3f80eb9fa207df5ec2d565129"
+    },
+    {
+      "path": "lib/x86/libcrypto.so",
+      "bytes": 4123944,
+      "sha256": "080b5e1d75cd5e82421f4f43c1c196d1c46b9ce5420b4990c22eeb7ac3d8e640"
+    },
+    {
+      "path": "lib/x86/libdatastore_shared_counter.so",
+      "bytes": 5148,
+      "sha256": "cd4a1649e2c8350703146f94a6ee2bf4c3c8c9f172159f805b61a4a2abdf0659"
+    },
+    {
+      "path": "lib/x86/libexpo-modules-core.so",
+      "bytes": 1788960,
+      "sha256": "081d2dbbb169bd427546f462066ba71af44ee01ae0f7c0cfedfd1eacb72c03b3"
+    },
+    {
+      "path": "lib/x86/libexpo-modules-jsi.so",
+      "bytes": 91260,
+      "sha256": "ad627a4493ca522c285783acd97dddf7ecc586f58fcf4d7414e9ccc654adf595"
+    },
+    {
+      "path": "lib/x86/libexpo-modules-v2.so",
+      "bytes": 1454768,
+      "sha256": "2fac6a4bfb0b6cc8d23261071ba8d16b5d19755b3e618be26f63ce38e463980e"
+    },
+    {
+      "path": "lib/x86/libexpo-modules-worklets.so",
+      "bytes": 131760,
+      "sha256": "1d4d20087cd2dd17b1602e6652bebb2d0c8bd1b7c90ef4496cdd181950ed5ee5"
+    },
+    {
+      "path": "lib/x86/libexpo-sqlite.so",
+      "bytes": 2294452,
+      "sha256": "9cdb6c8a113ee1fc5f277bafe1304a1db06b6930ae896b34dd8344b7d21d1ecd"
+    },
+    {
+      "path": "lib/x86/libfbjni.so",
+      "bytes": 166480,
+      "sha256": "735533ea082fe331b293a947f5ac32556ea433c7db1d2fe76e4ac9a440917c65"
+    },
+    {
+      "path": "lib/x86/libgesturehandler.so",
+      "bytes": 104408,
+      "sha256": "bc95e4e2412c5e5b724675ffcb8115043de69ca4bfda2f71230d8b6a321a25a7"
+    },
+    {
+      "path": "lib/x86/libgifimage.so",
+      "bytes": 281560,
+      "sha256": "ec126b207076559fd044292cd8fae4fad2ff9bd78fee25f0623aeba27b029640"
+    },
+    {
+      "path": "lib/x86/libhermestooling.so",
+      "bytes": 522472,
+      "sha256": "3371ca18a3f86042057a26fcd62180d42d79ff7d2918bf847e9466f846b9e08e"
+    },
+    {
+      "path": "lib/x86/libhermesvm.so",
+      "bytes": 5207404,
+      "sha256": "70e210fdb8f33be0935f74b248e8e1b772938f2aa4b44e424b0ae396ffe4992b"
+    },
+    {
+      "path": "lib/x86/libimagepipeline.so",
+      "bytes": 7040,
+      "sha256": "afd22bf7e62e5d08c0ec17ff6c0a273bfc580052c89363c0cb5d72e98d3b4cf4"
+    },
+    {
+      "path": "lib/x86/libjsi.so",
+      "bytes": 915868,
+      "sha256": "bec51eb3cbaae3b2e6b565f85f60abec4bda24184dc89be3942210114d047576"
+    },
+    {
+      "path": "lib/x86/libnative-filters.so",
+      "bytes": 244700,
+      "sha256": "7e3ef5c42b127d87882132b497f36b10cf6ffc31538eece9a2b7c6ae60bd0bf1"
+    },
+    {
+      "path": "lib/x86/libnative-imagetranscoder.so",
+      "bytes": 664736,
+      "sha256": "943c8757e57f59556027d460c0e86738d5969794db905febbe4926fd1d3fa663"
+    },
+    {
+      "path": "lib/x86/libreact_codegen_rngesturehandler_codegen.so",
+      "bytes": 1614624,
+      "sha256": "a0daf14600ec31196491c1830d456a5adc6e1e954b644574fbdbe213f71761b5"
+    },
+    {
+      "path": "lib/x86/libreact_codegen_rnscreens.so",
+      "bytes": 3886704,
+      "sha256": "467ead832698400d29db14d064418de100e821b03abeeeecc1babbe6a5c2dd66"
+    },
+    {
+      "path": "lib/x86/libreact_codegen_rnsvg.so",
+      "bytes": 2438400,
+      "sha256": "4e694fa4356fdb6834d1e41456d576d670ded6d348192c92f2003f7a90f46db1"
+    },
+    {
+      "path": "lib/x86/libreact_codegen_safeareacontext.so",
+      "bytes": 537476,
+      "sha256": "57a933fbfa3519a91be50253872136c7256da971544de50491a4b28896ee0099"
+    },
+    {
+      "path": "lib/x86/libreactnative.so",
+      "bytes": 23150592,
+      "sha256": "a9d1a63dcf1080fd2a04b181fb3832b67377556e1eca116c31c8eb51b80b5f96"
+    },
+    {
+      "path": "lib/x86/libreanimated.so",
+      "bytes": 9631944,
+      "sha256": "43fe850756f00ee81d8f3550a99bece416a57a4fc79c197bd407093f1f741428"
+    },
+    {
+      "path": "lib/x86/librnscreens.so",
+      "bytes": 341440,
+      "sha256": "f4c518f6f2f4b0437949cc6bd013d25e3d4c243e2f7914efc88a479127d8523a"
+    },
+    {
+      "path": "lib/x86/libstatic-webp.so",
+      "bytes": 550364,
+      "sha256": "9a15cf8a3fe967f88ae25cad418fe910e2a744437ec0ba49d94ad75b4398c941"
+    },
+    {
+      "path": "lib/x86/libworklets.so",
+      "bytes": 5410968,
+      "sha256": "06db8fc6ebd29f7125ec4338c13f2560173c76ad36ab4cc1a078e7c2dac3ec79"
+    },
+    {
+      "path": "lib/x86/libzstd-kmp.so",
+      "bytes": 857780,
+      "sha256": "2daf9a5f2984289b93568a96bc4234a9e405aa4905c990b85ef887c5de7fb010"
+    },
+    {
+      "path": "lib/x86_64/libappmodules.so",
+      "bytes": 5004256,
+      "sha256": "050090d137079e8a6753f972ed0522063ff37938e49c245ed2a250f4350c0603"
+    },
+    {
+      "path": "lib/x86_64/libc++_shared.so",
+      "bytes": 1252080,
+      "sha256": "0a2c7afa35b183fdd5a3cb20e2080ad54cbea06c2a4f0bc8f122cb7d1e9e0b9f"
+    },
+    {
+      "path": "lib/x86_64/libcrypto.so",
+      "bytes": 5290856,
+      "sha256": "1fed4b49167584599ff044830544106a801290d4716a8367610df78d0b476cd5"
+    },
+    {
+      "path": "lib/x86_64/libdatastore_shared_counter.so",
+      "bytes": 6224,
+      "sha256": "fb6c9208988c49ae94943bc3236fa763ba584722e044fa4ea9a12d2941027105"
+    },
+    {
+      "path": "lib/x86_64/libexpo-modules-core.so",
+      "bytes": 1796408,
+      "sha256": "66a87bfa397e8c140e7340aaa07353c6e9a5bb6f3c729601d408cfa68fb5aca2"
+    },
+    {
+      "path": "lib/x86_64/libexpo-modules-jsi.so",
+      "bytes": 91176,
+      "sha256": "dc03db221618f5190e5f5a0693d2c0b313f11b8d07e1bb3877fc8a33a4b63b9f"
+    },
+    {
+      "path": "lib/x86_64/libexpo-modules-v2.so",
+      "bytes": 1330936,
+      "sha256": "a60f653677e93f35a4818724ad4bd234faab1e89f56fc8574bc4924e4a25cc7f"
+    },
+    {
+      "path": "lib/x86_64/libexpo-modules-worklets.so",
+      "bytes": 133608,
+      "sha256": "722b39a1be279b6ab396d5a9791f0c4cd93877011bc3d4d53d24c65ce3a03312"
+    },
+    {
+      "path": "lib/x86_64/libexpo-sqlite.so",
+      "bytes": 2144552,
+      "sha256": "99375cd0a6a3697b92d58d9c2a3d3bcd225b454c13c03883b52d107a9a57d345"
+    },
+    {
+      "path": "lib/x86_64/libfbjni.so",
+      "bytes": 172952,
+      "sha256": "a51410366a0394e05bc04052cfb237c70dcf7d4d53a56e1d00a041436cb0b653"
+    },
+    {
+      "path": "lib/x86_64/libgesturehandler.so",
+      "bytes": 104704,
+      "sha256": "72e449e7ea51c1c3b52b4a6be9e4472dff969eaa3df10bac9db4cdb80b8187ea"
+    },
+    {
+      "path": "lib/x86_64/libgifimage.so",
+      "bytes": 303032,
+      "sha256": "4e85a5d783c589339504481797cef97878d064884f86ed94fa7663743d479fd6"
+    },
+    {
+      "path": "lib/x86_64/libhermestooling.so",
+      "bytes": 538144,
+      "sha256": "5a758ae677aed6f5b3b63742e72ae71742d1c5ba8177883c1098087749a6db3c"
+    },
+    {
+      "path": "lib/x86_64/libhermesvm.so",
+      "bytes": 4346392,
+      "sha256": "a7491769ad95caabb0e1a932dcdebf72a7d2c1ed4e610e648868778a71e57753"
+    },
+    {
+      "path": "lib/x86_64/libimagepipeline.so",
+      "bytes": 8464,
+      "sha256": "2e596f4955f65abaa93c891b49eb58b5416581806a04bde0097cc369ae4dbfb3"
+    },
+    {
+      "path": "lib/x86_64/libjsi.so",
+      "bytes": 928304,
+      "sha256": "0ccce3665022d88236060ed37b0311f9ff0e6b177841ba9e5af962b654017c85"
+    },
+    {
+      "path": "lib/x86_64/libnative-filters.so",
+      "bytes": 270784,
+      "sha256": "9bbab21c6c696d06b0e1da6347e871152cb7e26e0c111a6aaf8805cfac58762f"
+    },
+    {
+      "path": "lib/x86_64/libnative-imagetranscoder.so",
+      "bytes": 720432,
+      "sha256": "f6b92ad7f1c30973f40704c46987504757c3d079c7f4ace6efc8b318dd9c22f3"
+    },
+    {
+      "path": "lib/x86_64/libreact_codegen_rngesturehandler_codegen.so",
+      "bytes": 1600272,
+      "sha256": "22d5180c81dd1ac66077956f9374cc3408b876cf444b01cc608de679880f31db"
+    },
+    {
+      "path": "lib/x86_64/libreact_codegen_rnscreens.so",
+      "bytes": 3873560,
+      "sha256": "10b11ee0c6842afa66b11c3013393ae465a019c8b042d5e423daaa1a9383ad48"
+    },
+    {
+      "path": "lib/x86_64/libreact_codegen_rnsvg.so",
+      "bytes": 2406792,
+      "sha256": "78eacad53fe6cc32b82cf8e7b1b01c8a91ab044c4de83211bd51477e891da3d7"
+    },
+    {
+      "path": "lib/x86_64/libreact_codegen_safeareacontext.so",
+      "bytes": 540456,
+      "sha256": "936f35e82db53c2cc9c73d4a633c07ae65d5d5f1a53ad837d06b7b8f0eb9aea2"
+    },
+    {
+      "path": "lib/x86_64/libreactnative.so",
+      "bytes": 23223016,
+      "sha256": "f523d2089c68a2edf6c9b8b05c3980ce259c6d517ba7e4b239c55609787ae19d"
+    },
+    {
+      "path": "lib/x86_64/libreanimated.so",
+      "bytes": 8974072,
+      "sha256": "73c06011afb801d1d885e534b5917460d312d52ff281eaeb41e09c2e93b1fd97"
+    },
+    {
+      "path": "lib/x86_64/librnllama.so",
+      "bytes": 14744552,
+      "sha256": "e49e259b9c48b3fc354e6ade6d4d927741d157da5ade36cc7a612033e0bab8a9"
+    },
+    {
+      "path": "lib/x86_64/librnllama_jni.so",
+      "bytes": 883152,
+      "sha256": "99a31f826255cbec58489edd2568805d6bbed5a45212e03014582904a8442ac3"
+    },
+    {
+      "path": "lib/x86_64/librnllama_jni_x86_64.so",
+      "bytes": 883168,
+      "sha256": "ea0f04bd5806c64dcf6389ea78a32763d8459fdc584d3c2c2b4e9e37d9345cc0"
+    },
+    {
+      "path": "lib/x86_64/librnllama_x86_64.so",
+      "bytes": 14758024,
+      "sha256": "78d7b4ac4cb48cb2ea8f22977a51a8aa37bc556c8f3df65b4c5acf64976876a1"
+    },
+    {
+      "path": "lib/x86_64/librnscreens.so",
+      "bytes": 338504,
+      "sha256": "b0f5f01c969afa1b0e8202241f78d3ee2695cb62409ee71ffb4de25837320d03"
+    },
+    {
+      "path": "lib/x86_64/libstatic-webp.so",
+      "bytes": 561176,
+      "sha256": "6cadccaf9b124cc4ce7025752839c85752fe09f9333441b83f1153c8f1083d06"
+    },
+    {
+      "path": "lib/x86_64/libworklets.so",
+      "bytes": 5287664,
+      "sha256": "f73c6c9a9a69e2cd7da02c3e3e2a21344f63f3ea2e7b6ee609896bbc46c13d8c"
+    },
+    {
+      "path": "lib/x86_64/libzstd-kmp.so",
+      "bytes": 816568,
+      "sha256": "fefcbdcd59580a3043c62380a83d92f13c031c278481e22591a2c75112296e28"
+    }
+  ],
+  "scope": "Actual ZIP-library byte inventory, not transitive native license approval or a signed-release SBOM."
+}

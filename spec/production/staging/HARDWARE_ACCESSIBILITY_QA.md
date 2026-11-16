@@ -1,0 +1,31 @@
+# Native qualification — staging r1
+
+2026-11-16; `1116-StagingQualification-r1`, mobile 0.5.0/code4. This is an Android **debug emulator** run, not signed release or physical-device qualification. Source/artifact identities are maintained in [the artifact manifest](RELEASE_ARTIFACT_MANIFEST.md). Historical [p3 evidence](../../qa/production/p3/NATIVE_QA_REPORT.md) is preserved.
+
+| Environment / check | Actual result |
+| --- | --- |
+| Pixel_10, emulator-5554 | Android17/API37, x86_64/16KB pages; physical viewport1080×2424, density420. Existing AVD cold-booted without wiping data. Boot completed after a slow startup; unrelated Docker/ADB/device state was not reset. |
+| CNG/debug build | Non-clean prebuild; Gradle475 tasks succeeded. Existing package upgraded with `adb install -r`, retaining its data. Debug certificate and four packaged ABIs do not establish ARM hardware compatibility. |
+| Distinct accounts | Actual fictional child Alex and guardian Sam credential sign-ins, separate sessions, role-specific Home/finance tools. Initial persisted session was child Alex; initial Home images were renamed accordingly rather than called parent evidence. |
+| Themes | Safe Harbor/Night Harbor, settings, Chats and Circle; approved artwork unchanged. Night logo uses Mist with a rounded backplate. Native-stack status-bar style now gives dark icons on the light background. |
+| Keyboard | Actual message composer bounds y573–711 and Review y1370–1499, both above visible IME y1541. Review/Android Back retained the unsent fictional draft; no Send action was performed. |
+| Hot text scaling | 200% font change retained that draft and the same process, with editor bounds y1161–1422. Original scale restored. Home/nav inspected at200%; awkward Journal word wrapping found and internal horizontal padding reduced without capping font scaling or shrinking the64dp minimum hit target. Before/after captures are retained. |
+| Viewports | Same-emulator overrides: small840×1680/d420, large1260×2730/d420, tablet1920×2560/d320. Four tabs remained reachable; original size/density restored. These are viewport checks, not separate phone/tablet hardware or a full split-screen matrix. |
+| TalkBack17.0.0.889642762 | PARTIAL. Existing service enabled; actual green focus on Circle observed. First attempts were interrupted by the accessibility suite's notification prompt/automation interaction. Auditory readout and a complete independent user journey were not validated. Service state restored to disabled; optional notification grant removed. Do not mark TalkBack qualification PASS. |
+| Screenshot privacy | Final corrected native build launched; entering a conversation set actual window FLAG_SECURE. No private-writing screenshot was obtained by disabling it. An automation assumption that the editor should immediately remain visible after backgrounding failed; conceal/recheck is intentional and no full background/biometric journey is claimed. |
+| Backend outage/public safety | PASS: cold-started the own app after removing both emulator Auth54321/API8787 routes; actual public Help opened without either backend and was captured. Routes restored in finally; no source service was stopped. Earlier probes failed readiness/automation assumptions and are not passes. This is a device-route outage, not an actual hosted project pause. |
+| Physical ARM64 / secure hardware | BLOCKED: no physical ADB device. No hardware-backed key, enrollment/invalidation, lost-device transfer,15-minute native lease, physical lockout/thermal/battery qualification claimed. Deterministic timer/lease/cancellation tests and prior emulator evidence are separate. |
+| Local model | No new physical model run,20-generation hardware benchmark, peak-RAM or thermal proof. Pinned model/license and local fallback retained; no cloud inference. Three local finance benchmark reports measure Node, not the model or mobile device. |
+| iOS | BLOCKED: no macOS/Xcode/iPhone/VoiceOver/APNs. JavaScript export/static config is not native iOS qualification. |
+
+## Permission correction
+
+The initial merged debug APK inherited `READ_MEDIA_IMAGES` (API33) and `DETECT_SCREEN_CAPTURE` from expo-screen-capture58.0.6. The app uses prevention, not photo access or screenshot listeners. Photo-library permission is now blocked. The installed native module nevertheless eagerly registers an API34+ detection callback, so its normal `DETECT_SCREEN_CAPTURE` permission is retained. General [Expo documentation](https://docs.expo.dev/versions/v58.0.0/sdk/screen-capture/) must be read together with that pinned implementation and the [Android callback contract](https://developer.android.com/reference/android/app/Activity#registerScreenCaptureCallback(java.util.concurrent.Executor,%20android.app.Activity.ScreenCaptureCallback)). No crash is claimed from source review alone.
+
+Non-clean CNG preserved an obsolete removal marker during the first correction. The reviewed `withPrivateCapturePermissions.cjs` plugin repairs only that exact marker and rejects ambiguous/custom declarations or an explicit incompatible block. Three focused tests pass. Final merged manifest has normal DETECT and no READ_MEDIA_IMAGES; corrected debug build/upgrade, actual launch and protected-window checks pass. No library code or screenshot-prevention behavior was weakened.
+
+## Evidence and remaining checks
+
+[Native screenshots and comparisons](../../qa/production/staging-r1/) contain actual ADB captures, including setup failures; comparison sheets only add labels beside full viewports. The screenshot manifest distinguishes capture-time native artifacts from the final binary. Known automation failures are retained in the QA report, not counted as application successes.
+
+Before release, provide author-controlled physical minimum/current Android devices, an eligible Mac/iPhone if iOS is offered, and an accessibility reviewer. Execute the existing supported-device/storage checklist with fictional accounts, actual20+ warm model runs, cold/cancel/memory-pressure cases,15-minute absolute/2-minute idle lease, backup/key-loss/shared-device tests, TalkBack/VoiceOver readout and a complete large-text/IME matrix. Retain signed-artifact hashes and actual provider push evidence separately. See [push gates](NOTIFICATIONS_DEVICE_QA.md) and [external review handoff](INDEPENDENT_REVIEW_HANDOFF.md).

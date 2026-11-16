@@ -1,0 +1,362 @@
+{
+  "format": "between-us-family-finance-capacity-benchmark-v1",
+  "generatedAt": "2026-11-16T20:09:10.689Z",
+  "repetitions": 20,
+  "warmups": 3,
+  "runtime": {
+    "node": "v26.13.0",
+    "platform": "win32",
+    "architecture": "x64",
+    "cpuModel": "AMD Ryzen 7 2700X Eight-Core Processor         ",
+    "logicalCpuCount": 16
+  },
+  "method": "Actual full-family aggregate parse/apply, selected parent and child role projections, and serialization; each replay processes every child book.",
+  "fixtureConstruction": "Individually engine/replay-validated stress histories are remapped with unique subject/event/reference IDs, interleaved chronologically and checked at exact independent visible/hidden budgets. All parent totals and first/last child privacy controls are validated.",
+  "limitations": [
+    "Node CPU/RSS are not Edge CPU or isolate memory qualification.",
+    "Prospective 512/128 is a benchmark fixture; deployed cap remains128/32.",
+    "Current-cap fixture probes one extra valid engine operation to measure growth cost; backend would reject it at its unchanged cap.",
+    "No HTTP/SQL/concurrency/provider or physical-device test was run.",
+    "No cap increase, checkpoint, archive or history deletion was performed."
+  ],
+  "rows": [
+    {
+      "profile": "family-current-128-32",
+      "children": 12,
+      "inputEvents": 1920,
+      "resultingEvents": 1921,
+      "role": "parent",
+      "counts": {
+        "children": 12,
+        "visibleEvents": 1536,
+        "hiddenEvents": 384,
+        "occurrencesPerChild": 100,
+        "goalsPerChild": 32,
+        "savingsRulesPerChild": 8,
+        "payoutsPerChild": 32
+      },
+      "budgetPerChild": {
+        "visible": 128,
+        "hidden": 32
+      },
+      "checkedChildSubjects": 2,
+      "checkedParentSubjects": 12,
+      "childEquivalentWorldPass": true,
+      "childPeerExclusionPass": true,
+      "familyParentTotalsPass": true,
+      "serializedStateBytes": 677660,
+      "resultingStateBytes": 677961,
+      "maximumSampledProcessRssBytes": 287010816,
+      "timing": {
+        "parseMs": {
+          "median": 3.6845000000002983,
+          "p95": 6.274499999999534,
+          "max": 23.010800000000017,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 81.36760000000095,
+          "p95": 120.4376000000002,
+          "max": 141.97370000000046,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 77.88725000000068,
+          "p95": 111.13090000000011,
+          "max": 111.14739999999983,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 79.89474999999993,
+          "p95": 110.0023000000001,
+          "max": 131.44740000000002,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 2.171049999999923,
+          "p95": 3.015599999999722,
+          "max": 8.638500000000022,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 256.8968500000001,
+          "p95": 314.3692000000001,
+          "max": 377.78790000000026,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 265,
+          "p95": 360,
+          "max": 376,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "family-current-128-32",
+      "children": 12,
+      "inputEvents": 1920,
+      "resultingEvents": 1921,
+      "role": "child",
+      "counts": {
+        "children": 12,
+        "visibleEvents": 1536,
+        "hiddenEvents": 384,
+        "occurrencesPerChild": 100,
+        "goalsPerChild": 32,
+        "savingsRulesPerChild": 8,
+        "payoutsPerChild": 32
+      },
+      "budgetPerChild": {
+        "visible": 128,
+        "hidden": 32
+      },
+      "checkedChildSubjects": 2,
+      "checkedParentSubjects": 12,
+      "childEquivalentWorldPass": true,
+      "childPeerExclusionPass": true,
+      "familyParentTotalsPass": true,
+      "serializedStateBytes": 677660,
+      "resultingStateBytes": 677903,
+      "maximumSampledProcessRssBytes": 316256256,
+      "timing": {
+        "parseMs": {
+          "median": 3.8354499999995824,
+          "p95": 12.560999999999694,
+          "max": 14.819800000001123,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 99.30080000000089,
+          "p95": 331.34760000000097,
+          "max": 453.03629999999976,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 88.93459999999959,
+          "p95": 370.7911000000022,
+          "max": 399.7969000000012,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 94.06174999999985,
+          "p95": 338.0645999999979,
+          "max": 348.73729999999887,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 2.3298500000000786,
+          "p95": 10.116000000001804,
+          "max": 12.328700000001845,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 271.0120000000006,
+          "p95": 904.2011999999995,
+          "max": 1176.8369999999995,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 281.5,
+          "p95": 562,
+          "max": 687,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "family-prospective-512-128",
+      "children": 12,
+      "inputEvents": 7680,
+      "resultingEvents": 7681,
+      "role": "parent",
+      "counts": {
+        "children": 12,
+        "visibleEvents": 6144,
+        "hiddenEvents": 1536,
+        "occurrencesPerChild": 100,
+        "goalsPerChild": 32,
+        "savingsRulesPerChild": 8,
+        "payoutsPerChild": 32
+      },
+      "budgetPerChild": {
+        "visible": 512,
+        "hidden": 128
+      },
+      "checkedChildSubjects": 2,
+      "checkedParentSubjects": 12,
+      "childEquivalentWorldPass": true,
+      "childPeerExclusionPass": true,
+      "familyParentTotalsPass": true,
+      "serializedStateBytes": 2757512,
+      "resultingStateBytes": 2757813,
+      "maximumSampledProcessRssBytes": 330309632,
+      "timing": {
+        "parseMs": {
+          "median": 14.929449999999633,
+          "p95": 28.715400000000955,
+          "max": 29.246400000003632,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 655.4266999999963,
+          "p95": 781.2194000000018,
+          "max": 829.6704000000027,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 630.3096499999956,
+          "p95": 725.3674000000028,
+          "max": 731.488400000002,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 636.7781500000056,
+          "p95": 749.1733999999997,
+          "max": 792.8013999999966,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 8.273699999997916,
+          "p95": 10.534299999999348,
+          "max": 12.896600000000035,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 1990.3270500000035,
+          "p95": 2223.6051000000007,
+          "max": 2226.402199999997,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 2031.5,
+          "p95": 2155,
+          "max": 2219,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    },
+    {
+      "profile": "family-prospective-512-128",
+      "children": 12,
+      "inputEvents": 7680,
+      "resultingEvents": 7681,
+      "role": "child",
+      "counts": {
+        "children": 12,
+        "visibleEvents": 6144,
+        "hiddenEvents": 1536,
+        "occurrencesPerChild": 100,
+        "goalsPerChild": 32,
+        "savingsRulesPerChild": 8,
+        "payoutsPerChild": 32
+      },
+      "budgetPerChild": {
+        "visible": 512,
+        "hidden": 128
+      },
+      "checkedChildSubjects": 2,
+      "checkedParentSubjects": 12,
+      "childEquivalentWorldPass": true,
+      "childPeerExclusionPass": true,
+      "familyParentTotalsPass": true,
+      "serializedStateBytes": 2757512,
+      "resultingStateBytes": 2757755,
+      "maximumSampledProcessRssBytes": 328122368,
+      "timing": {
+        "parseMs": {
+          "median": 14.505850000001374,
+          "p95": 17.25110000000859,
+          "max": 34.26239999999234,
+          "samples": 20
+        },
+        "applyMs": {
+          "median": 635.0934500000003,
+          "p95": 725.130600000004,
+          "max": 758.6005000000005,
+          "samples": 20
+        },
+        "parentViewMs": {
+          "median": 641.5322999999989,
+          "p95": 728.0988999999972,
+          "max": 797.8220999999903,
+          "samples": 20
+        },
+        "childViewMs": {
+          "median": 618.3112499999988,
+          "p95": 767.8555000000051,
+          "max": 780.2601999999897,
+          "samples": 20
+        },
+        "serializeMs": {
+          "median": 8.04019999999582,
+          "p95": 12.054799999998068,
+          "max": 15.55930000000808,
+          "samples": 20
+        },
+        "commandPipelineMs": {
+          "median": 1926.0290999999997,
+          "p95": 2093.575899999996,
+          "max": 2150.534400000004,
+          "samples": 20
+        },
+        "nodeCpuMs": {
+          "median": 1953,
+          "p95": 2109,
+          "max": 2140,
+          "samples": 20
+        }
+      },
+      "backendCapsApplied": false,
+      "edgeCpuQualified": false,
+      "edgeMemoryQualified": false
+    }
+  ],
+  "sourceManifest": [
+    {
+      "name": "apps/mobile/src/finance/engine.ts",
+      "sha256": "4d285d415ba50338c8abb437458f5f64d5b9068dbdea2708bed34b4efa0262bc"
+    },
+    {
+      "name": "apps/mobile/src/finance/types.ts",
+      "sha256": "1d2d6d6f0cd817f9008ecdfda21660b587ce15f77949af80b186298479e7de41"
+    },
+    {
+      "name": "apps/mobile/src/finance/money-calendar.ts",
+      "sha256": "63006abd19e84ac8e4de972de71d5e9c41b9a01948af2bd5a5a62531296b5202"
+    },
+    {
+      "name": "services/backend/src/finance.ts",
+      "sha256": "e6c2cdbeb350287f49a2e51914a29a4da68a6d320ba518df47e8fc12c76a4ecf"
+    },
+    {
+      "name": "services/backend/package.json",
+      "sha256": "6476a494a177f6009f5267354cf93bc7514960284242b58b5a209b4d994a3bd9"
+    },
+    {
+      "name": "services/backend/package-lock.json",
+      "sha256": "2fc6ae62460b6d93d0ee6ba51984c52b248d5199b019efa8d26f85b50be6e1d4"
+    },
+    {
+      "name": "apps/mobile/package.json",
+      "sha256": "653dbc2df1243842a25f01a1c996b4e7f4484455f6bf5c2eeffc1ca7477ff7be"
+    },
+    {
+      "name": "apps/mobile/package-lock.json",
+      "sha256": "5650fb67de40433f9f7e0418ceb02479a85bb780fb47cdc9091c01b7ee9ae86a"
+    },
+    {
+      "name": "services/backend/scripts/finance-capacity-benchmark.mjs",
+      "sha256": "10cc5dc96d81aaa27b35f9418903fa4e38c132f54177d808f23a09f507fb50bb"
+    }
+  ]
+}

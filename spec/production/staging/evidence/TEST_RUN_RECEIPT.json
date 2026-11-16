@@ -1,0 +1,132 @@
+{
+  "engineeringCommit": "10aba61d756a8d54f22ec03afc3287c638805060",
+  "build": "1116-StagingQualification-r1",
+  "environment": "LOCAL synthetic",
+  "scope": "Log-hash receipts; local logs remain private. Separate restored/fresh SQL suites are not added to the global count. Native/artifact/hosted gaps remain explicit.",
+  "checks": [
+    {
+      "check": "mobile-source",
+      "result": "PASS",
+      "measurements": {
+        "tests": 276,
+        "typecheck": true,
+        "lint": true
+      },
+      "privateLogPath": "apps/mobile/.expo/staging-frozen-mobile.log",
+      "logSha256": "56faa4bf760ab81d24d9831ac8d3711dbda6b67e425298e6f7c44b846de6fe5e"
+    },
+    {
+      "check": "backend-source",
+      "result": "PASS",
+      "measurements": {
+        "tests": 89,
+        "typecheck": true,
+        "build": true
+      },
+      "privateLogPath": "services/backend/.local/staging-final-isolated-backend.log",
+      "logSha256": "8998dbc2c8af2c0a910b1508c5dc6ec59100a306c66f14aa123f9059bd329f41"
+    },
+    {
+      "check": "sql-upgrade",
+      "result": "PASS",
+      "measurements": {
+        "assertions": 1025,
+        "files": 21
+      },
+      "privateLogPath": "services/backend/.local/staging-sql-026.log",
+      "logSha256": "0e2093c72631e46424e27dbf3006a341411e2c62530d718e08c16af1ba151c8e"
+    },
+    {
+      "check": "managed-integration",
+      "result": "PASS",
+      "measurements": {
+        "scenarios": 17
+      },
+      "privateLogPath": "services/backend/.local/staging-final-integration.log",
+      "logSha256": "3dffd6165cb6b4fc753acc5e4db2b3e3d391ad93a4d99a9ecfda84ca80862d34"
+    },
+    {
+      "check": "production-browser-shared-fixture",
+      "result": "FAIL",
+      "measurements": {
+        "passed": 15,
+        "failed": 1,
+        "reason": "Correct over-budget rejection in accumulated shared fictional data; no financial guard relaxed."
+      },
+      "privateLogPath": "apps/mobile/.expo/staging-final-production-ui.log",
+      "logSha256": "4eed5005e722b0016e517a69719eb4757085dd5d3b5f6bd783b26f336bb538fa"
+    },
+    {
+      "check": "production-browser-isolated",
+      "result": "PASS",
+      "measurements": {
+        "scenarios": 16,
+        "minutes": 1.8
+      },
+      "privateLogPath": "apps/mobile/.expo/staging-final-isolated-production-ui.log",
+      "logSha256": "3f4d9497a2b2153c39dc0488993e508b4ed07b8213677a8d31821627042ba71d"
+    },
+    {
+      "check": "demo-browser",
+      "result": "PASS",
+      "measurements": {
+        "scenarios": 19,
+        "minutes": 1.9
+      },
+      "privateLogPath": "apps/mobile/.expo/staging-final-demo-ui.log",
+      "logSha256": "fb6e26252ece3e681937bea7cae5df46a15f724138abd1e48a9dc1f17c4f0c24"
+    },
+    {
+      "check": "android-corrected-debug",
+      "result": "PASS",
+      "measurements": {
+        "tasks": 475,
+        "seconds": 59,
+        "signedRelease": false
+      },
+      "privateLogPath": "apps/mobile/.expo/staging-gradle-capture.log",
+      "logSha256": "7a91e17c5d8836d44d0787d61dd6d51d412c8a466d188929b4cb9ba8a043127f"
+    },
+    {
+      "check": "release-signing-guard",
+      "result": "EXPECTED_DENIAL",
+      "measurements": {
+        "ownerMaterialAvailable": false
+      },
+      "privateLogPath": "apps/mobile/.expo/staging-signing-guard.log",
+      "logSha256": "9ca4738f102ea4de3e5f2d13e41080af91edfd4485a92ebb12b457a8a6516a48"
+    },
+    {
+      "check": "expo-exports",
+      "result": "PASS",
+      "measurements": {
+        "platforms": [
+          "android",
+          "ios",
+          "web"
+        ],
+        "nativeIos": false
+      },
+      "privateLogPath": "apps/mobile/.expo/staging-export-all.log",
+      "logSha256": "a49e58ae2038eb999a5d647921735310d4cc59accecb20f3f7ce76e18bf5db38"
+    },
+    {
+      "check": "npm-mobile",
+      "result": "PASS",
+      "measurements": {
+        "advisories": 0
+      },
+      "privateLogPath": "apps/mobile/.expo/staging-npm-audit.json",
+      "logSha256": "d97ec1c1f0af6e9d3b42190f4adfbd2298c04a32a6e112e316aee15d99eca6ad"
+    },
+    {
+      "check": "npm-backend",
+      "result": "PASS",
+      "measurements": {
+        "advisories": 0
+      },
+      "privateLogPath": "services/backend/.local/staging-npm-audit.json",
+      "logSha256": "b5bd22f43e59ad6c87d3f8deefc5c25385fbbf00dbdeeb9ade9bc18ff3a6aac4"
+    }
+  ]
+}
