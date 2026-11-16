@@ -220,6 +220,7 @@ class MissionCapture(BASE.NativeCapture):
         """
         if title:
             self.require(title)
+        self.wait_visible("Confirm", clickable=True, timeout=10)
         self.tap("Confirm", scroll=False)
         self.require("Updated the fictional family ledger.", prefix=True)
 
