@@ -86,8 +86,10 @@ class NativeChecks(LIB.MissionCapture):
 
     def navigation(self):
         positions = {}
+        root = self.tree()
         for label in ("Home", "Journal", "Chats", "Circle"):
-            node = self.find(label, clickable=True)
+            node = next((node for node in root.iter("node") if self.matches(node, label)
+                         and node.get("clickable") == "true" and self.bounds(node)), None)
             if node is None:
                 raise AssertionError(f"Visible native navigation control missing: {label}")
             positions[label] = self.complete_bounds(node, label)
@@ -106,6 +108,26 @@ class NativeChecks(LIB.MissionCapture):
             raise AssertionError("Phone navigation did not return to the bottom edge.")
         return nav
 
+    def wait_adaptive_bounds(self, tablet):
+        deadline = time.monotonic() + 30
+        stable = 0
+        samples = 0
+        last_error = "No complete geometry sample"
+        while time.monotonic() < deadline:
+            samples += 1
+            try:
+                nav = self.adaptive_bounds(tablet)
+                stable += 1
+                if stable == 2:
+                    self.note(f"Full {'tablet' if tablet else 'phone'} geometry stable across two samples ({samples} total).")
+                    return nav
+            except AssertionError as error:
+                stable = 0
+                last_error = str(error)
+                self.note(f"Waiting for complete display layout: {last_error}")
+            time.sleep(0.3)
+        raise AssertionError(f"Display layout did not settle within the bounded wait: {last_error}")
+
     def responsive(self, theme, density_only=False):
         cases = [("small", 840, 1680, 420), ("standard", 1080, 2424, 420),
                  ("large", 1260, 2730, 420), ("tablet", 1920, 2560, 320)]
@@ -123,7 +145,7 @@ class NativeChecks(LIB.MissionCapture):
             self.read_size()
             self.settle()
             if name == "tablet":
-                self.adaptive_bounds(tablet=True)
+                self.wait_adaptive_bounds(tablet=True)
                 if self.locate_field("Your private demo words").get("text") != draft:
                     raise AssertionError("Display-density change lost or changed the unsaved journal draft.")
                 if any("linking in multiple places" in node.get(key, "").lower()
@@ -156,7 +178,7 @@ class NativeChecks(LIB.MissionCapture):
                         limitation="Viewport overrides on one Pixel_10 AVD, not separate physical hardware.")
         self.restore_geometry()
         if density_only:
-            self.adaptive_bounds(tablet=False)
+            self.wait_adaptive_bounds(tablet=False)
             self.capture(theme, "phone-after-density-return", "Full header and bottom navigation remain within the original phone viewport after returning from tablet density.")
             self.result(f"{theme} density round trip geometry", result="passed",
                         interaction="Verified right header edge and lower navigation in tablet and restored phone, without restarting the app.")
