@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useId, useRef, useState, useSyncExternalStore } from "react";
-import { AppState, BackHandler, Keyboard, KeyboardAvoidingView, Modal, Platform, ScrollView, StyleSheet, View } from "react-native";
+import { AppState, BackHandler, Keyboard, Modal, Platform, ScrollView, StyleSheet, View } from "react-native";
+import { WritingKeyboardView } from "../writing-keyboard-view";
 import * as ScreenCapture from "expo-screen-capture";
 import { useAppearance } from "../appearance";
 import { Text, TextInput } from "../adaptive-writing-text";
@@ -491,7 +492,7 @@ export function ProductionJournal({ context, onBack, onPrepareConversation, onOp
   const inputPrivacy = { autoComplete: "off" as const, autoCorrect: false, importantForAutofill: "no" as const, underlineColorAndroid: "transparent", editable: !busy };
 
   if (concealed || refreshConcealed || status === "open" && (unlockedAuthor !== context.user.id||!leaseVisible)) return <View style={[styles.cover, { backgroundColor: theme.background }]} accessibilityViewIsModal><Heading>Private journal covered</Heading><Body muted>{status==='open'&&!leaseVisible ? "The current local access window ended or the account changed. Reconnect and unlock your own pages again. Confirmed private drafts remain on this device." : refreshConcealed ? "Checking current account access. A real identity change, background or normal timeout still locks and clears unprotected words." : "Return to the app to continue. Backgrounding locks your journal."}</Body>{refreshConcealed && <Button label="Retry account verification" onPress={() => { void refreshGuard.current?.refresh(); }} />}{onOpenSafety && <Button label="Safety information" quiet onPress={onOpenSafety} />}</View>;
-  return <KeyboardAvoidingView style={styles.fill} behavior={Platform.OS === "ios" ? "padding" : "height"}>
+  return <View style={styles.fill}>
     <ScrollView contentContainerStyle={styles.page} keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag">
       <Button label="Back" quiet onPress={status === "open" ? leave : onBack} disabled={busy} />
       <Eyebrow>A SPACE OF YOUR OWN</Eyebrow><Heading large>My Journal</Heading>
@@ -587,7 +588,7 @@ export function ProductionJournal({ context, onBack, onPrepareConversation, onOp
       {onOpenSafety && <Button label="Privacy and safety information" quiet onPress={() => { clearPrivate(); void vault.current?.lock("manual").catch(() => undefined); onOpenSafety(); }} />}
     </ScrollView>
     <Modal visible={!!confirmation} transparent animationType="none" onRequestClose={() => { setConfirmation(undefined); setConfirmationWords(""); }}>
-      <KeyboardAvoidingView style={styles.fill} behavior={Platform.OS === "ios" ? "padding" : "height"}>
+      <WritingKeyboardView style={styles.fill}>
         <ScrollView contentContainerStyle={[styles.modal, { backgroundColor: theme.background }]} keyboardShouldPersistTaps="handled" accessibilityViewIsModal>
           {confirmation && <Paper><Heading>{confirmation.title}</Heading><Body>{confirmation.description}</Body>
             {confirmation.requiredText && <TextInput {...inputPrivacy} accessibilityLabel={`Type ${confirmation.requiredText} to confirm whole-vault deletion`} value={confirmationWords} onChangeText={setConfirmationWords} maxLength={confirmation.requiredText.length} autoCapitalize="characters" style={inputStyle} />}
@@ -595,9 +596,9 @@ export function ProductionJournal({ context, onBack, onPrepareConversation, onOp
             <Button label={confirmation.label} disabled={busy || !!confirmation.requiredText && confirmationWords !== confirmation.requiredText} onPress={() => { if (confirmation.requiredText && confirmationWords !== confirmation.requiredText) return; const action = confirmation.action; setConfirmation(undefined); setConfirmationWords(""); action(); }} />
           </Paper>}
         </ScrollView>
-      </KeyboardAvoidingView>
+      </WritingKeyboardView>
     </Modal>
-  </KeyboardAvoidingView>;
+  </View>;
 }
 
 const styles = StyleSheet.create({

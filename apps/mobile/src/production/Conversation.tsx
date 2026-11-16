@@ -1,5 +1,5 @@
 import {useEffect,useMemo,useRef,useState} from 'react';
-import { AppState, FlatList, Keyboard, KeyboardAvoidingView, Platform, ScrollView, View } from "react-native";
+import { AppState, FlatList, Keyboard, ScrollView, View } from "react-native";
 import { Text, TextInput } from "../adaptive-writing-text";
 import * as ScreenCapture from 'expo-screen-capture';
 import {randomUUID} from 'expo-crypto';
@@ -35,6 +35,12 @@ function privateDraftFailure(error:unknown){
 }
 export function ProductionConversation(p:Props) {
   const {theme:t}=useAppearance(),[helpers,setHelpers]=useState(false);
+  const [keyboardShown,setKeyboardShown]=useState(()=>Keyboard.isVisible());
+  useEffect(()=>{
+    const show=Keyboard.addListener('keyboardDidShow',()=>setKeyboardShown(true));
+    const hide=Keyboard.addListener('keyboardDidHide',()=>setKeyboardShown(false));
+    return()=>{show.remove();hide.remove();};
+  },[]);
   const [privateTools,setPrivateTools]=useState(false);
   const props=useRef(p);props.current=p;
   const storage=useRef<PrivateMessageDraftController|undefined>(undefined),draftBusy=useRef(false);
@@ -82,9 +88,9 @@ export function ProductionConversation(p:Props) {
   const signature=JSON.stringify([p.words,p.response]),latestProtected=protectedSignature===signature;
   const list=useRef<FlatList<ThreadMessage>>(null),atBottom=useRef(true);
   if(privateCovered)return <View accessibilityViewIsModal style={{flex:1,backgroundColor:t.background,justifyContent:'center',padding:24}}><Heading>Private words are covered</Heading><Body>Return to this account and unlock when ready. No message is sent or automatically saved.</Body></View>;
-  return <KeyboardAvoidingView style={{flex:1}} behavior={Platform.OS==='ios'?'padding':undefined}>
-    <View style={{paddingHorizontal:20,paddingTop:12,gap:6}}><Heading>Your conversation</Heading><Body>{p.peerName}</Body>
-      <Body muted>{p.connectionNotice||'Checking current account permissions…'}</Body>
+  return <View style={{flex:1}}>
+    <View style={{paddingHorizontal:20,paddingTop:12,gap:6}}><Heading>{keyboardShown?p.peerName:'Your conversation'}</Heading>{!keyboardShown&&<><Body>{p.peerName}</Body>
+      <Body muted>{p.connectionNotice||'Checking current account permissions…'}</Body></>}
     </View>
     <FlatList ref={list} style={{flex:1}} data={p.messages} keyExtractor={item=>item.id} keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag"
       contentContainerStyle={{padding:16,gap:10,flexGrow:1}} maintainVisibleContentPosition={{minIndexForVisible:0}}
@@ -101,7 +107,7 @@ export function ProductionConversation(p:Props) {
           <Text style={{color:own?t.onOutgoing:t.muted,fontSize:12,lineHeight:18}}>{new Date(m.createdAt).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'})} · {m.status==='saved'?'Saved on server':m.status==='acknowledged'?'Received by this app':m.status==='available'?'Available to this app':m.status}</Text>
         </View>;
       }}/>
-    <View style={{padding:16,gap:10,maxHeight:'60%',flexShrink:1,borderTopWidth:1,borderColor:t.border,backgroundColor:t.surface}}>
+    <View style={{padding:16,gap:10,maxHeight:keyboardShown?'100%':'60%',flexShrink:1,borderTopWidth:1,borderColor:t.border,backgroundColor:t.surface}}>
       <ScrollView style={{flexGrow:0,flexShrink:1}} contentContainerStyle={{gap:10}} keyboardShouldPersistTaps="handled">
       {!p.canExchange&&<Body>This connection is no longer permitted. New messages cannot be sent.</Body>}
       <TextInput accessibilityLabel="Your words" multiline maxLength={5000} placeholder="Write when you’re ready…" placeholderTextColor={t.muted} value={privateCovered?'':p.words} onChangeText={value=>{
@@ -142,5 +148,5 @@ export function ProductionConversation(p:Props) {
       </ScrollView>
       <Button label="Review message" primary disabled={p.busy||!p.canExchange||!p.words.trim()} onPress={p.onReview}/>
     </View>
-  </KeyboardAvoidingView>;
+  </View>;
 }

@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
-import { AppState, BackHandler, Image, KeyboardAvoidingView, Modal, Platform, Pressable, ScrollView, View } from "react-native";
+import { AppState, BackHandler, Image, Modal, Platform, Pressable, ScrollView, View } from "react-native";
+import { WritingKeyboardView } from "../writing-keyboard-view";
 import { Text, TextInput } from "../adaptive-writing-text";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
@@ -1343,6 +1344,7 @@ export default function ProductionApplication() {
         )}
       </View>
       {screen === 'privacy' && !!notice && <Text accessibilityRole="alert" accessibilityLiveRegion="polite" style={{color:t.text,padding:16}}>{notice}</Text>}
+      <WritingKeyboardView>
       {screen === 'FamilyAccess' && context ? (
         <ProductionFamily key={`${context.user.id}:${accountGeneration}`} context={context} onBack={back} onChanged={refresh} onInvitations={id=>{if(id)setSelectedFamilyId(id);go('guardian');}}/>
       ) : screen === 'conversation' && context && conversation ? (
@@ -1397,10 +1399,7 @@ export default function ProductionApplication() {
           onBack={back}
         />
       ) : (
-        <KeyboardAvoidingView
-          style={{ flex: 1 }}
-          behavior={Platform.OS === "ios" ? "padding" : "height"}
-        >
+        <View style={{ flex: 1 }}>
           <ScrollView
             keyboardShouldPersistTaps="handled"
             contentContainerStyle={{
@@ -1419,8 +1418,9 @@ export default function ProductionApplication() {
             <Body muted style={{fontSize:11}}>1116-ProductionFoundation-p3 · Fictional staging</Body>
             <Button label="Help & safety" quiet onPress={() => go("safety")} />
           </ScrollView>
-        </KeyboardAvoidingView>
+        </View>
       )}
+      </WritingKeyboardView>
       {context?.user.state === "active" &&
         !["Journal", "Finance", "Checkins"].includes(screen) && (
           <View
