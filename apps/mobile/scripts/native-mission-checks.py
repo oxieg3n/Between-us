@@ -206,6 +206,21 @@ class NativeChecks(LIB.MissionCapture):
         self.result(f"{theme} keyboard and review", result="passed", visible_ime_top=ime_top, control_bounds=positions,
                     interaction="Review tapped with IME open; edited, reviewed, simulated, and Android Back returned to Review.")
 
+    def appearance_persistence(self, theme):
+        expected = "Night Harbor · Selected" if theme == "dark" else "Safe Harbor · Selected"
+        self.settings()
+        self.require(expected)
+        self.launch_app()
+        self.verify_build()
+        self.require(expected)
+        self.capture(theme, "appearance-after-restart", "Actual stored appearance selection survived a full native process restart.")
+        self.result("native appearance persistence", result="passed", selection=expected,
+                    interaction="Verified selected appearance before and after force-stop/relaunch without setting it again.")
+        self.tap("Follow device appearance")
+        self.require("Changes with your device · Selected")
+        self.capture(theme, "appearance-follow-device", "Returned the demo to its approved Follow Device default through actual settings.")
+        self.home()
+
     def run(self):
         branch = LIB.git("branch", "--show-current")
         if branch != "feature/mobile-foundation":
@@ -233,6 +248,7 @@ class NativeChecks(LIB.MissionCapture):
                     self.font_scale(theme)
                 if self.args.section in ("all", "interaction"):
                     self.keyboard_and_review(theme)
+            self.appearance_persistence(theme)
             completed = True
         except Exception as error:
             run_error = f"{type(error).__name__}: {error}"

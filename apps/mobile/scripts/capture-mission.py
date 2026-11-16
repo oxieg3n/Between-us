@@ -162,9 +162,9 @@ class MissionCapture(BASE.NativeCapture):
         self.wait_visible("Profile & settings", clickable=True)
         super().settings()
 
-    def fresh_theme(self, theme):
+    def launch_app(self):
         package = self.args.app_package
-        self.note(f"Resetting fictional {package} process memory for {theme}; appearance storage remains intact.")
+        self.note(f"Restarting fictional {package} process memory; appearance storage remains intact.")
         self.command("reverse", f"tcp:{self.args.port}", f"tcp:{self.args.port}")
         self.command("shell", "am", "force-stop", package)
         if package == "host.exp.exponent":
@@ -193,6 +193,9 @@ class MissionCapture(BASE.NativeCapture):
         else:
             raise RuntimeError("Native startup did not expose onboarding or navigation controls.")
         self.wait_visible("Profile & settings", clickable=True)
+
+    def fresh_theme(self, theme):
+        self.launch_app()
         self.verify_build()
         self.tap("Light mode" if theme == "light" else "Dark mode")
         self.require("Safe Harbor" if theme == "light" else "Night Harbor", prefix=True)
