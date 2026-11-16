@@ -144,7 +144,7 @@ class MissionCapture(BASE.NativeCapture):
                         return node
         raise RuntimeError(f"Native text fragment not found: {fragment}")
 
-    def wait_visible(self, label, prefix=False, clickable=False, timeout=30):
+    def wait_visible(self, label, prefix=False, clickable=False, timeout=90):
         """Wait for a transition to render, without scrolling the outgoing screen."""
         deadline = time.monotonic() + timeout
         while True:
@@ -181,9 +181,17 @@ class MissionCapture(BASE.NativeCapture):
             # --port. Launch its real launcher activity, not an Expo Go URL.
             self.command("shell", "monkey", "-p", package, "-c", "android.intent.category.LAUNCHER", "1")
         self.wait_ready()
-        if self.find("Explore as Sam", clickable=True) is not None:
-            self.tap("Explore as Sam")
-            self.wait_visible("Hi, Sam.")
+        deadline = time.monotonic() + 90
+        while time.monotonic() < deadline:
+            if self.find("Explore as Sam", clickable=True) is not None:
+                self.tap("Explore as Sam")
+                self.wait_visible("Hi, Sam.")
+                break
+            if self.find("Home", clickable=True) is not None:
+                break
+            time.sleep(0.25)
+        else:
+            raise RuntimeError("Native startup did not expose onboarding or navigation controls.")
         self.wait_visible("Profile & settings", clickable=True)
         self.verify_build()
         self.tap("Light mode" if theme == "light" else "Dark mode")
