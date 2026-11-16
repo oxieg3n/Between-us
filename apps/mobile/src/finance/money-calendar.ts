@@ -18,7 +18,12 @@ export function parseMoney(text: string): number {
   if (result > BigInt(Number.MAX_SAFE_INTEGER)) throw new Error("Amount is too large.");
   return Number(result);
 }
-export function formatMoney(value: number): string { cents(value); const amount = BigInt(value); return "$" + new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 }).format(amount / 100n) + "." + (amount % 100n).toString().padStart(2, "0"); }
+export function formatMoney(value: number): string {
+  cents(value); const amount = BigInt(value);
+  // Hermes Intl accepts numbers; the whole-dollar quotient is safely below MAX_SAFE_INTEGER.
+  const dollars = Number(amount / 100n);
+  return "$" + new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 }).format(dollars) + "." + (amount % 100n).toString().padStart(2, "0");
+}
 export function moneyInput(value: number): string { cents(value); const amount = BigInt(value); return (amount / 100n).toString() + "." + (amount % 100n).toString().padStart(2, "0"); }
 export function validInstant(value: string): string {
   if (!/^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(?:\.\d{1,3})?Z$/.test(value) || !Number.isFinite(Date.parse(value))) throw new Error("Use a UTC timestamp.");

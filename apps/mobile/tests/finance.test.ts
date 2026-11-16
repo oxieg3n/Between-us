@@ -25,6 +25,37 @@ test("money uses exact integer cents, floor percentages and rejects malformed/ov
   assert.throws(() => percentage(1.5, 100));
 });
 
+test("currency formatting preserves exact cents when platform Intl rejects BigInt", () => {
+  const original = Intl.NumberFormat;
+  const descriptor = Object.getOwnPropertyDescriptor(Intl, "NumberFormat");
+  assert.ok(descriptor);
+  Object.defineProperty(Intl, "NumberFormat", {
+    ...descriptor,
+    value: function NumberOnlyFormat(locales?: string | string[], options?: Intl.NumberFormatOptions) {
+      const formatter = new original(locales, options);
+      const format = formatter.format;
+      Object.defineProperty(formatter, "format", {
+        value: (value: number | bigint) => {
+          if (typeof value === "bigint") throw new TypeError("Cannot convert BigInt to number");
+          return format(value);
+        },
+      });
+      return formatter;
+    },
+  });
+  try {
+    assert.throws(() => new Intl.NumberFormat("en-US").format(1n), /Cannot convert BigInt/);
+    assert.equal(formatMoney(0), "$0.00");
+    assert.equal(formatMoney(1), "$0.01");
+    assert.equal(formatMoney(2300), "$23.00");
+    assert.equal(formatMoney(1234567), "$12,345.67");
+    assert.equal(formatMoney(Number.MAX_SAFE_INTEGER), "$90,071,992,547,409.91");
+  } finally {
+    Object.defineProperty(Intl, "NumberFormat", descriptor);
+  }
+  assert.equal(Intl.NumberFormat, original);
+});
+
 test("seed has unapproved chores, three separate goals, $30 weekly budget and matching OFF", () => {
   const h = harness(), v = h.view(); assert.equal(v.plan?.budgetCents, 3000); assert.equal(v.balances.earnedCents, 0); assert.equal(v.goals.length, 3); assert.equal(v.matching?.rule.enabled, false); assert.ok(v.occurrences.every(o => o.status === "not_started"));
 });
