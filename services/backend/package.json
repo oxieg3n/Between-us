@@ -1,0 +1,23 @@
+{
+  "name": "between-us-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "test:integration": "tsx --test --test-concurrency=1 tests/integration/*.test.ts",
+    "build": "node scripts/build.mjs",
+    "dev": "tsx src/local-server.ts",
+    "supabase": "supabase"
+  },
+  "dependencies": { "@supabase/supabase-js": "2.119.0" },
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "esbuild": "0.28.2",
+    "pg": "8.23.1",
+    "supabase": "3.1.0",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3"
+  }
+}
