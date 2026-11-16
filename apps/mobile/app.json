@@ -2,14 +2,15 @@
   "expo": {
     "name": "Between Us",
     "slug": "between-us",
-    "version": "0.3.0",
+    "version": "0.4.1",
     "orientation": "default",
     "icon": "./assets/brand/app-icon.png",
     "scheme": "between-us",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.oxieg3n.betweenus"
+      "bundleIdentifier": "com.oxieg3n.betweenus",
+      "buildNumber": "3"
     },
     "android": {
       "package": "com.oxieg3n.betweenus",
@@ -23,7 +24,8 @@
         "android.permission.SYSTEM_ALERT_WINDOW",
         "android.permission.VIBRATE",
         "android.permission.RECORD_AUDIO"
-      ]
+      ],
+      "versionCode": 3
     },
     "web": {
       "output": "static",
@@ -41,10 +43,32 @@
       ],
       "llama.rn",
       "./plugins/with-short-native-paths",
-      "./plugins/with-adaptive-display"
+      "./plugins/with-adaptive-display",
+      [
+        "expo-sqlite",
+        {
+          "useSQLCipher": true
+        }
+      ],
+      [
+        "expo-secure-store",
+        {
+          "configureAndroidBackup": true,
+          "faceIDPermission": "Unlock your own private journal on this device."
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Unlock your own private journal on this device."
+        }
+      ],
+      "./plugins/withProductionSigning.cjs",
+      "./plugins/withProductionTransport.cjs",
+      "./plugins/withWritingConfiguration.cjs"
     ],
     "extra": {
-      "buildId": "1115-FamilyEnvelopes-Journal-r12"
+      "buildId": "1116-ProductionFoundation-p3"
     }
   }
 }

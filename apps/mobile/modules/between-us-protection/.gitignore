@@ -1,0 +1,4 @@
+# Local module compilation outputs; preserve source and platform configuration.
+/android/build/
+/android/.gradle/
+/ios/build/

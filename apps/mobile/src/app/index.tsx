@@ -1,4 +1,5 @@
 import { AppProvider, useApp, type Screen } from "../state";
+import { Redirect } from "expo-router";
 import { useAppearance } from "../appearance";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -354,6 +355,7 @@ function Application() {
   );
 }
 export default function App() {
+  if (!(__DEV__ && process.env.EXPO_PUBLIC_APP_MODE === 'demo')) return <Redirect href="/accounts" />;
   return (
     <AppProvider>
       <FinanceProvider>

@@ -3,15 +3,17 @@ export default defineConfig({
   testDir: "./e2e",
   workers: 1,
   use: {
-    baseURL: "http://127.0.0.1:8081",
+    baseURL: "http://127.0.0.1:8084",
     channel: "chrome",
     viewport: { width: 390, height: 844 },
   },
   webServer: {
-    command: "npx expo start --web --localhost --port 8081",
-    url: "http://127.0.0.1:8081",
+    // Run serially with production Metro: Expo's transform cache includes mode-specific public values.
+    env: { EXPO_PUBLIC_APP_MODE: 'demo', CI: '1' },
+    command: "node node_modules/expo/bin/cli start --web --localhost --port 8084 --clear",
+    url: "http://127.0.0.1:8084",
     timeout: 120000,
-    reuseExistingServer: true,
+    reuseExistingServer: false,
   },
   reporter: "list",
 });

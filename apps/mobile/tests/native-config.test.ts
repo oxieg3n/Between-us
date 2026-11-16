@@ -83,6 +83,25 @@ test("native remeasurement preserves the Activity lifecycle and deep-link handle
   assert.equal(addRootRemeasure(oldGenerated), patched);
 });
 
+test("configuration refresh targets only current DeviceInfo and remeasures the existing attached root", () => {
+  const patched = addRootRemeasure(activityFixture);
+  const configuration = patched.slice(patched.indexOf('override fun onConfigurationChanged'));
+  const before = (first: string, second: string) => {
+    assert.ok(configuration.includes(first) && configuration.indexOf(first) < configuration.indexOf(second), `${first} must precede ${second}`);
+  };
+  before('super.onConfigurationChanged(newConfig)', 'window.decorView.post');
+  before('val context = reactDelegate?.currentReactContext ?: return@post', 'context.getNativeModule');
+  before('if (!root.isAttachedToWindow || !context.hasActiveReactInstance()) return@post', 'DisplayMetricsHolder.initDisplayMetrics');
+  before('DisplayMetricsHolder.initDisplayMetrics(this@MainActivity)', 'context.getNativeModule');
+  before('context.getNativeModule(com.facebook.fbreact.specs.NativeDeviceInfoSpec.NAME)', '(deviceInfo as? com.facebook.react.bridge.LifecycleEventListener)?.onHostResume()');
+  before('(deviceInfo as? com.facebook.react.bridge.LifecycleEventListener)?.onHostResume()', 'root.forceLayout()');
+  before('root.forceLayout()', 'root.requestLayout()');
+  assert.equal(patched.match(/onHostResume\(/g)?.length, 1);
+  assert.doesNotMatch(patched, /(?:context|reactHost|reactContext|reactDelegate|super|this)[?.]*onHostResume|onHostPause\(|onHostDestroy\(|onResume\(|emitDeviceEvent|didUpdateDimensions|AppState|setText\(|updateConfiguration/);
+  assert.match(patched, /RN 0\.88: only DeviceInfo/);
+  assert.equal(removeContents({src:patched,tag:'between-us-adaptive-display'}).contents, activityFixture);
+});
+
 test("native configuration generation rejects unmanaged overrides and ambiguous templates", () => {
   const unmanaged = activityFixture.replace(
     '  override fun getMainComponentName(): String = "main"',

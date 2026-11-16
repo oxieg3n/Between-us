@@ -1,0 +1,5 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": { "modules": ["BetweenUsProtectionModule"] },
+  "android": { "modules": ["com.oxieg3n.betweenus.protection.BetweenUsProtectionModule"] }
+}

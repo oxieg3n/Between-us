@@ -1,0 +1,15 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'com.oxieg3n.betweenus'
+version = '1.0.0'
+
+android {
+  namespace 'com.oxieg3n.betweenus.protection'
+  defaultConfig {
+    versionCode 1
+    versionName '1.0.0'
+  }
+}

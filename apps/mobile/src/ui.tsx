@@ -1,15 +1,6 @@
 import { useState, type ReactNode } from "react";
-import {
-  Platform,
-  Pressable,
-  Text,
-  TextInput,
-  View,
-  StyleSheet,
-  type StyleProp,
-  type ViewStyle,
-  type TextStyle,
-} from "react-native";
+import { Platform, Pressable, View, StyleSheet, type StyleProp, type ViewStyle, type TextStyle } from "react-native";
+import { Text, TextInput } from "./adaptive-writing-text";
 import Svg, { Circle, Line, Path, Rect } from "react-native-svg";
 import { useAppearance } from "./appearance";
 import { typography, type Theme } from "./theme";

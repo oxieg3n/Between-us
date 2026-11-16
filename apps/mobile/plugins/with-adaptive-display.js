@@ -45,6 +45,13 @@ function addRootRemeasure(source) {
     window.decorView.post {
       if (!isDestroyed) {
         val root = reactDelegate?.reactRootView ?: return@post
+        val context = reactDelegate?.currentReactContext ?: return@post
+        if (!root.isAttachedToWindow || !context.hasActiveReactInstance()) return@post
+        com.facebook.react.uimanager.DisplayMetricsHolder.initDisplayMetrics(this@MainActivity)
+        // RN 0.88: only DeviceInfo's audited font cache/event refresh, never the host lifecycle.
+        val deviceInfo = context.getNativeModule(com.facebook.fbreact.specs.NativeDeviceInfoSpec.NAME)
+        (deviceInfo as? com.facebook.react.bridge.LifecycleEventListener)?.onHostResume()
+        root.forceLayout()
         root.requestLayout()
         root.postOnAnimation {
           if (!isDestroyed && root.isAttachedToWindow && root === reactDelegate?.reactRootView) {
