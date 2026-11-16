@@ -1,5 +1,8 @@
 # Production foundation P3 build handoff
 
+Git delivery verified on2026-11-16: source/evidence commit **920cf3cceb7e3fbe460e01f64e550da1e6c079bb** is on origin/feature/production-foundation with an exact matching remote ref. Working tree is clean except the intentionally preserved diagnostic. This follow-up supersedes earlier pending-push notes below; application source remains0c2d325. CI is an inactive owner-installable template because the current credential lacks workflow permission. See [delivery receipt](DELIVERY_RECEIPT.md). No main merge, workflow run or production deployment.
+
+
 Final local delivery details, exact launch commands and owner actions: [delivery receipt](DELIVERY_RECEIPT.md). File-byte provenance: [source/migration/artifact manifest](release/SOURCE_MANIFEST.json). These do not approve public release.
 
 2026-11-16. **Local synthetic candidate; release engineering remains incomplete.** Source is frozen at **0c2d325** with mobile 260/type/lint, final production browser 16/16, Android/iOS/web JS exports and the scoped native small-keyboard retest passing. Documentation receipt/push and external qualification remain open. This title is not release approval.

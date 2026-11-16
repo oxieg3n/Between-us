@@ -2,6 +2,8 @@
 
 2026-11-16. **Implemented and tested local synthetic foundation; not approved for real children or public release.** Current build `1116-ProductionFoundation-p3`, app `0.4.1`, Android version code3 / iOS source build3. Work remains on `feature/production-foundation` at `D:\projects\BetweenUs`, origin `https://github.com/oxieg3n/Between-us.git`. This receipt supersedes pending local-test notes in earlier snapshots; external release gates remain open.
 
+Git delivery verified: **920cf3cceb7e3fbe460e01f64e550da1e6c079bb** reached origin/feature/production-foundation with a matching remote ref. The expected clean tree retains only the untracked diagnostic. CI content is published as an inactive template, with the original rejected workflow commit preserved locally. This follow-up records the successful delivery; application source remains0c2d325.
+
 ## Source and preservation
 
 | Commit | Milestone |
