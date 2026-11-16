@@ -42,13 +42,30 @@ export type FinanceCommand = Base & (
 );
 export type FinanceEffect = { kind: "match_committed" | "match_reversed" | "correction_due" | "automatic_allocation"; referenceId: string; cents: number };
 export type FinanceEvent = FinanceCommand & { actor: FinanceActor; effects: FinanceEffect[] };
-export type FinanceState = { timezone: string; children: { id: string; name: string }[]; events: FinanceEvent[] };
+export type FinanceState = { timezone: string; children: { id: string; name: string }[]; events: FinanceEvent[]; checkpoint?: FinanceCheckpoint };
 export type ChoreStatus = "not_started" | "submitted_by_child" | "approved" | "needs_retry" | "declined" | "cancelled" | "expired";
 export type ChoreOccurrence = { id: string; choreId: string; title: string; instructions: string; dueDate: string; rewardCents: number; status: ChoreStatus; note: string; approvedAt?: string; reversed?: boolean; recurrence?: "once" | "daily" | "weekly"; evidenceRequired?: boolean };
 export type FinancePayment = { id: string; amountCents: number; method: PaymentMethod; paidAt: string; note: string; childAcknowledged: boolean; reversed: boolean };
 export type PayoutView = { id: string; amountCents: number; remainingCents: number; paidCents: number; status: "requested" | "prepared" | "partially_paid" | "parent_reported_paid" | "cancelled" | "corrected"; createdAt: string; payments: FinancePayment[] };
 export type MatchView = { id: string; goalId: string; allocationId: string; cents: number; activeCents: number; fundedCents: number; parentReportedFundingCents: number; reconciledCents: number; reversedCents: number; correctionDueCents: number; month: string; revealed: boolean; createdAt: string; status: "pledged" | "partially_parent_reported" | "parent_reported_paid" | "reversed" };
 export type GoalView = { id: string; title: string; targetCents: number; targetDate?: string; status: "active" | "cancelled"; ownCents: number; parentContributedCents: number; parentPlannedCents: number; progressCents: number; progressPercent: number; parentHeldCents: number; locationLabel: string };
+export type BookLot = { earningId: string; cents: number; eligible: boolean; earnedAt: string; matchAllocationId?: string };
+export type BookAllocation = { id: string; goalId: string; lots: BookLot[]; originalCents: number; releasedCents: number; sourceCents: Record<string, number> };
+export type BookGoal = { id: string; title: string; targetCents: number; targetDate?: string; status: "active" | "cancelled"; heldCents: number; locationLabel: string };
+export type BookPayout = { id: string; createdAt: string; amountCents: number; originalAmountCents: number; lots: BookLot[]; payments: (FinancePayment & { lots: BookLot[] })[]; cancelled: boolean; prepared: boolean };
+export type BookMatch = MatchView & { sourceCents: Record<string, number>; invalidatedCents: Record<string, number>; eligibleBaseCents: number };
+export type ArchivedBudgetBasis = { period: FinancePlan["period"]; anchorDate: string; maximumCents: number; byPeriod: Record<string, number>; excludedOccurrenceIds: string[] };
+export type ArchivedMatchBasis = { month: string; usedCents: number; byGoal: Record<string, { activeCents: number; fundedCents: number; revealedFundedCents: number }> };
+export type ChildBook = {
+  plan?: FinancePlan; occurrences: ChoreOccurrence[]; goals: BookGoal[]; free: BookLot[]; allocations: BookAllocation[];
+  payouts: BookPayout[]; matches: BookMatch[]; savingsRules: SavingsRule[]; matchingRule: MatchingRule;
+  earnedCents: number; correctionDueCents: number; archivedPaidCents: number; archivedBudget?: ArchivedBudgetBasis; archivedMatches?: ArchivedMatchBasis;
+};
+export type FinanceCheckpoint = { version: 1; lastEventAt: string | null; books: Record<string, ChildBook>;
+  activity: Record<string, { visible: FinanceView["activity"]; parent: FinanceView["activity"] }> };
+/** Server-only immutable payload; storage identity/hash/CAS/current authorization are separate bindings. */
+export type FinanceSettledCapsule = { version: 1; childId: string; occurrences: ChoreOccurrence[]; payouts: BookPayout[]; allocations: BookAllocation[]; paidCents: number };
+export type FinancePrivateMatchCapsule = { version: 1; childId: string; match: BookMatch };
 export type FinanceView = {
   childId: string; childName: string; timezone: string; plan?: FinancePlan;
   occurrences: ChoreOccurrence[]; goals: GoalView[]; savingsRules: SavingsRule[]; payouts: PayoutView[];

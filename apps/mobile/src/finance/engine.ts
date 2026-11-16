@@ -1,23 +1,14 @@
 import { cents, localDate, percentage, periodKey, payoutPeriod, sum, validDate, validInstant } from "./money-calendar";
-import type { ChoreOccurrence, FinanceActor, FinanceCommand, FinanceEffect, FinanceEvent, FinancePayment, FinancePlan, FinanceState, FinanceView, MatchingRule, MatchView, PaymentMethod, PayoutView, SavingsRule } from "./types";
+import type { BookLot as Lot, BookGoal as Goal, BookPayout as Payout, BookMatch as MatchRecord, ChildBook, ChoreOccurrence, FinanceActor, FinanceCommand, FinanceEffect, FinanceEvent, FinanceState, FinanceView, MatchingRule, MatchView, PaymentMethod, PayoutView } from "./types";
+import { cloneBook, validateCheckpoint, FinanceBudgetBasisError, FinanceCheckpointError } from "./checkpoint";
 
-type Lot = { earningId: string; cents: number; eligible: boolean; earnedAt: string; matchAllocationId?: string };
-type Allocation = { id: string; goalId: string; lots: Lot[]; originalCents: number; releasedCents: number };
-type Goal = { id: string; title: string; targetCents: number; targetDate?: string; status: "active" | "cancelled"; heldCents: number; locationLabel: string };
-type Payout = { id: string; createdAt: string; amountCents: number; originalAmountCents: number; lots: Lot[]; payments: (FinancePayment & { lots: Lot[] })[]; cancelled: boolean; prepared: boolean };
-type MatchRecord = MatchView & { sourceCents: Record<string, number>; invalidatedCents: Record<string, number>; eligibleBaseCents: number };
-type ChildBook = {
-  plan?: FinancePlan; occurrences: ChoreOccurrence[]; goals: Goal[]; free: Lot[]; allocations: Allocation[];
-  payouts: Payout[]; matches: MatchRecord[]; savingsRules: SavingsRule[];
-  matchingRule: MatchingRule; earnedCents: number; correctionDueCents: number;
-};
 const defaultMatching: MatchingRule = { enabled: false, percent: 100, monthlyCapCents: 2000, parentBudgetCents: 2000, surprise: true };
 const commandFields: Record<FinanceCommand["kind"], string[]> = {
   configure_plan: ["plan"], assign_chore: ["choreId", "title", "instructions", "rewardCents", "dates", "recurrence", "evidenceRequired"], edit_chore: ["choreId", "title", "rewardCents", "instructions"], submit_chore: ["occurrenceId", "note"], review_chore: ["occurrenceId", "decision", "note"], close_chore: ["occurrenceId", "status", "note"], reverse_earning: ["occurrenceId", "note"],
   create_goal: ["goalId", "title", "targetCents", "targetDate"], edit_goal: ["goalId", "title", "targetCents", "targetDate"], cancel_goal: ["goalId", "note"], allocate: ["goalId", "amountCents", "percent", "currentAllowancePeriodOnly"], transfer_goal: ["fromGoalId", "toGoalId", "amountCents"], release_goal: ["goalId", "amountCents", "note"], set_savings_rule: ["rule"], mark_held: ["goalId", "amountCents", "locationLabel"], request_payout: ["amountCents"], prepare_payout: ["amountCents"], cancel_payout: ["payoutId", "note"], report_payment: ["payoutId", "amountCents", "method", "paidAt", "note"], acknowledge_payment: ["paymentId"], reverse_payment: ["paymentId", "note"], configure_matching: ["rule"], reveal_match: ["matchId"], fund_match: ["matchId", "amountCents", "method", "paidAt", "note"], reverse_match: ["matchId", "note"],
   reconcile_match: ["matchId", "amountCents", "resolution", "paidAt", "note"],
 };
-const emptyBook = (): ChildBook => ({ occurrences: [], goals: [], free: [], allocations: [], payouts: [], matches: [], savingsRules: [], matchingRule: { ...defaultMatching }, earnedCents: 0, correctionDueCents: 0 });
+const emptyBook = (): ChildBook => ({ occurrences: [], goals: [], free: [], allocations: [], payouts: [], matches: [], savingsRules: [], matchingRule: { ...defaultMatching }, earnedCents: 0, correctionDueCents: 0, archivedPaidCents: 0 });
 const totalLots = (lots: Lot[]) => sum(lots.map(l => l.cents));
 const own = (book: ChildBook, goalId: string) => sum(book.allocations.filter(a => a.goalId === goalId).map(a => totalLots(a.lots)));
 function check(condition: unknown, message: string): asserts condition { if (!condition) throw new Error(message); }
@@ -49,12 +40,17 @@ function take(lots: Lot[], amount: number): Lot[] {
 }
 function checkBudget(book: ChildBook) {
   check(book.plan, "Set an allowance budget first.");
-  const amounts = new Map<string, number>();
+  const basis = book.archivedBudget;
+  if (basis && (basis.period !== book.plan.period || basis.anchorDate !== book.plan.anchorDate)) throw new FinanceBudgetBasisError();
+  const amounts = new Map<string, number>(Object.entries(basis?.byPeriod ?? {}));
   for (const o of book.occurrences) {
     if (["cancelled", "expired", "declined"].includes(o.status)) continue;
     const key = periodKey(o.dueDate, book.plan.period, book.plan.anchorDate);
+    if (basis && !Object.hasOwn(basis.byPeriod, key)) throw new FinanceBudgetBasisError();
+    if (basis?.excludedOccurrenceIds.includes(o.id)) continue;
     amounts.set(key, cents((amounts.get(key) ?? 0) + o.rewardCents));
   }
+  check((basis?.maximumCents ?? 0) <= book.plan.budgetCents, "Planned rewards exceed the allowance budget. Increase the budget or reduce future rewards.");
   check([...amounts.values()].every(v => v <= book.plan!.budgetCents), "Planned rewards exceed the allowance budget. Increase the budget or reduce future rewards.");
 }
 function matchStatus(match: MatchView) {
@@ -79,7 +75,7 @@ function invalidateMatchSource(book: ChildBook, match: MatchRecord, earningId: s
 function fitPromises(book: ChildBook, goalId: string, effects: FinanceEffect[]) {
   const g = goal(book, goalId, false);
   const matches = book.matches.filter(m => m.goalId === goalId);
-  let excess = Math.max(0, sum(matches.map(m => m.activeCents)) + own(book, goalId) - g.targetCents);
+  let excess = Math.max(0, sum(matches.map(m => m.activeCents)) + (book.archivedMatches?.byGoal[goalId]?.activeCents ?? 0) + own(book, goalId) - g.targetCents);
   for (const m of [...matches].reverse()) { const previous = m.activeCents; reverseMatch(book, m, excess, effects); excess -= previous - m.activeCents; }
 }
 function trimHeld(book: ChildBook, goalId: string) { const g = goal(book, goalId, false); g.heldCents = Math.min(g.heldCents, own(book, goalId)); }
@@ -106,14 +102,16 @@ function allocate(book: ChildBook, command: { id: string; at: string; goalId: st
   check(cents(own(book, g.id) + command.amountCents) <= g.targetCents, "Amount exceeds this goal's remaining own-savings target.");
   const source = command.earningId ? book.free.filter(l => l.earningId === command.earningId) : command.currentAllowancePeriodOnly ? currentPeriodLots(book, command.at, zone) : book.free;
   const lots = take(source, command.amountCents);
+  const originalSources: Record<string, number> = {};
+  for (const lot of lots) originalSources[lot.earningId] = cents((originalSources[lot.earningId] ?? 0) + lot.cents);
   const eligible = totalLots(lots.filter(l => l.eligible));
   check(!book.allocations.some(a => a.id === command.id), "Allocation ID already exists.");
-  book.allocations.push({ id: command.id, goalId: g.id, lots: lots.map(l => ({ ...l, matchAllocationId: command.id })), originalCents: command.amountCents, releasedCents: 0 });
+  book.allocations.push({ id: command.id, goalId: g.id, lots: lots.map(l => ({ ...l, matchAllocationId: command.id })), originalCents: command.amountCents, releasedCents: 0, sourceCents: originalSources });
   fitPromises(book, g.id, effects);
   const rule = book.matchingRule, month = localDate(command.at, zone).slice(0, 7);
   if (!eligible || !rule.enabled || (rule.eligibleGoalIds && !rule.eligibleGoalIds.includes(g.id))) return;
-  const used = sum(book.matches.filter(m => m.month === month).map(m => m.activeCents));
-  const promised = sum(book.matches.filter(m => m.goalId === g.id).map(m => m.activeCents));
+  const used = sum(book.matches.filter(m => m.month === month).map(m => m.activeCents)) + (book.archivedMatches?.month === month ? book.archivedMatches.usedCents : 0);
+  const promised = sum(book.matches.filter(m => m.goalId === g.id).map(m => m.activeCents)) + (book.archivedMatches?.byGoal[g.id]?.activeCents ?? 0);
   const limit = Math.min(Math.max(0, rule.monthlyCapCents - used), Math.max(0, rule.parentBudgetCents - used), Math.max(0, g.targetCents - own(book, g.id) - promised));
   const desired = BigInt(eligible) * BigInt(rule.percent) / 100n;
   const amount = Number(desired < BigInt(limit) ? desired : BigInt(limit));
@@ -237,7 +235,9 @@ function apply(book: ChildBook, command: FinanceCommand, actor: FinanceActor, zo
       check(own(book, to.id) + c.amountCents <= to.targetCents, "Amount exceeds the destination target.");
       let left = c.amountCents; const moved: Lot[] = [];
       for (const a of book.allocations.filter(a => a.goalId === c.fromGoalId)) { const amount = Math.min(left, totalLots(a.lots)); if (amount) moved.push(...take(a.lots, amount)); left -= amount; if (!left) break; }
-      book.allocations.push({ id: c.id, goalId: to.id, lots: moved.map(l => ({ ...l })), originalCents: c.amountCents, releasedCents: 0 });
+      const sourceCents: Record<string, number> = {};
+      for (const lot of moved) sourceCents[lot.earningId] = cents((sourceCents[lot.earningId] ?? 0) + lot.cents);
+      book.allocations.push({ id: c.id, goalId: to.id, lots: moved.map(l => ({ ...l })), originalCents: c.amountCents, releasedCents: 0, sourceCents });
       // Existing pledges stay with their original goal; moving money never earns a second match.
       trimHeld(book, c.fromGoalId); fitPromises(book, to.id, effects); break;
     }
@@ -316,10 +316,34 @@ function apply(book: ChildBook, command: FinanceCommand, actor: FinanceActor, zo
   }
 }
 function replay(state: FinanceState): Map<string, ChildBook> {
-  const books = new Map(state.children.map(c => [c.id, emptyBook()]));
+  if (state.checkpoint) validateCheckpoint(state.checkpoint, state.children.map(c => c.id));
+  const books = new Map(state.children.map(c => [c.id, state.checkpoint?.books[c.id] ? cloneBook(state.checkpoint.books[c.id]) : emptyBook()]));
+  if (state.checkpoint?.lastEventAt && state.events.some(e => Date.parse(e.at) < Date.parse(state.checkpoint!.lastEventAt!))) throw new Error("Invalid finance checkpoint tail.");
   for (const e of state.events) apply(books.get(e.childId)!, e, e.actor, state.timezone, []);
   return books;
 }
+/** Server-only derivation: these books include private matching and are never client projections. */
+export function exportBooks(state: FinanceState): Record<string, ChildBook> { return Object.fromEntries(replay(state)); }
+export const replayBooks = exportBooks;
+/** Server-only exact tail activity; includes private actions and never returns cached rows. */
+export function financeEventActivity(state: FinanceState): FinanceView["activity"] {
+  const books = exportBooks(state);
+  return state.events.map(event => activity(books[event.childId], event));
+}
+/** Caller atomically publishes the matching immutable tail/archive before using this state. */
+export function checkpointState(state: FinanceState, books?: Record<string, ChildBook>): FinanceState {
+  const sourceBooks = exportBooks(state);
+  const checkpointBooks = books ?? sourceBooks;
+  if (Object.keys(checkpointBooks).length !== state.children.length || state.children.some(child => !Object.hasOwn(checkpointBooks, child.id))) throw new FinanceCheckpointError();
+  const activityCache = Object.fromEntries(state.children.map(c => [c.id, {
+    visible: [...(state.checkpoint?.activity[c.id]?.visible ?? []), ...state.events.filter(e => e.childId === c.id && !["configure_matching", "reveal_match", "fund_match", "reverse_match", "reconcile_match"].includes(e.kind)).map(e => activity(sourceBooks[c.id], e))].slice(-100),
+    parent: [...(state.checkpoint?.activity[c.id]?.parent ?? []), ...state.events.filter(e => e.childId === c.id).map(e => activity(sourceBooks[c.id], e))].slice(-100),
+  }]));
+  const checkpoint = { version: 1 as const, lastEventAt: state.events.at(-1)?.at ?? state.checkpoint?.lastEventAt ?? null, books: checkpointBooks, activity: activityCache };
+  validateCheckpoint(checkpoint, state.children.map(c => c.id));
+  return freeze({ timezone: state.timezone, children: state.children.map(c => ({ ...c })), events: [], checkpoint: JSON.parse(JSON.stringify(checkpoint)) });
+}
+export const stateCheckpoint = checkpointState;
 export function createFinanceState(timezone = "America/New_York", children = [{ id: "sam", name: "Sam" }, { id: "robin", name: "Robin" }]): FinanceState {
   new Intl.DateTimeFormat("en-US", { timeZone: timezone }).format(new Date(0));
   check(children.length > 0 && new Set(children.map(c => c.id)).size === children.length && children.every(c => c.id && c.name), "Choose distinct child records.");
@@ -334,7 +358,8 @@ export function applyFinanceCommand(state: FinanceState, actor: FinanceActor, co
     check(canonical(oldCommand) === canonical(command) && canonical(oldActor) === canonical(actor), "This operation ID was already used for a different action.");
     return state;
   }
-  check(!state.events.length || Date.parse(command.at) >= Date.parse(state.events[state.events.length - 1].at), "Use chronological event timestamps; retroactive edits require a correction.");
+  const lastAt = state.events.at(-1)?.at ?? state.checkpoint?.lastEventAt;
+  check(!lastAt || Date.parse(command.at) >= Date.parse(lastAt), "Use chronological event timestamps; retroactive edits require a correction.");
   const book = replay(state).get(command.childId)!; const effects: FinanceEffect[] = [];
   apply(book, command, actor, state.timezone, effects);
   const event = JSON.parse(JSON.stringify({ ...command, actor: { ...actor }, effects })) as FinanceEvent;
@@ -371,17 +396,17 @@ function activity(book: ChildBook, event: FinanceEvent): FinanceView["activity"]
 export function financeView(state: FinanceState, actor: FinanceActor, childId: string, at = new Date().toISOString()): FinanceView {
   authorize(state, actor, childId); validInstant(at); const book = replay(state).get(childId)!;
   const visibleMatches = actor.role === "parent" ? book.matches : book.matches.filter(m => m.revealed);
-  const available = totalLots(book.free), earmarked = sum(book.goals.map(g => own(book, g.id))), held = sum(book.payouts.map(p => totalLots(p.lots))), paid = sum(book.payouts.map(p => payoutView(p).paidCents));
+  const available = totalLots(book.free), earmarked = sum(book.goals.map(g => own(book, g.id))), held = sum(book.payouts.map(p => totalLots(p.lots))), paid = cents(book.archivedPaidCents + sum(book.payouts.map(p => payoutView(p).paidCents)));
   const date = localDate(at, state.timezone), period = book.plan ? payoutPeriod(at, state.timezone, book.plan.payoutCadence, book.plan.anchorDate) : "";
   const eligible = sum(book.free.filter(l => !book.plan || book.plan.payoutCadence === "per_task" || payoutPeriod(l.earnedAt, state.timezone, book.plan.payoutCadence, book.plan.anchorDate) !== period).map(l => l.cents));
-  const month = date.slice(0, 7), used = sum(book.matches.filter(m => m.month === month).map(m => m.activeCents));
+  const month = date.slice(0, 7), used = sum(book.matches.filter(m => m.month === month).map(m => m.activeCents)) + (book.archivedMatches?.month === month ? book.archivedMatches.usedCents : 0);
   const hiddenKinds: FinanceCommand["kind"][] = ["configure_matching", "reveal_match", "fund_match", "reverse_match", "reconcile_match"];
   const view: FinanceView = {
     childId, childName: state.children.find(c => c.id === childId)!.name, timezone: state.timezone,
     plan: book.plan ? { ...book.plan } : undefined, occurrences: book.occurrences.map(o => ({ ...o })),
     goals: book.goals.map(g => {
       const matches = visibleMatches.filter(m => m.goalId === g.id && m.revealed);
-      const ownCents = own(book, g.id), contributed = sum(matches.map(m => m.fundedCents)), planned = sum(matches.map(m => Math.max(0, m.activeCents - m.fundedCents)));
+      const ownCents = own(book, g.id), contributed = sum(matches.map(m => m.fundedCents)) + (book.archivedMatches?.byGoal[g.id]?.revealedFundedCents ?? 0), planned = sum(matches.map(m => Math.max(0, m.activeCents - m.fundedCents)));
       // Progress is capped at the target; the two independent source totals remain exact.
       const combined = BigInt(ownCents) + BigInt(contributed);
       const progress = Number(combined < BigInt(g.targetCents) ? combined : BigInt(g.targetCents));
@@ -389,7 +414,8 @@ export function financeView(state: FinanceState, actor: FinanceActor, childId: s
     }), savingsRules: book.savingsRules.map(r => ({ ...r })), payouts: book.payouts.map(payoutView),
     balances: { plannedCents: sum(book.occurrences.filter(o => ["not_started", "needs_retry"].includes(o.status)).map(o => o.rewardCents)), pendingCents: sum(book.occurrences.filter(o => o.status === "submitted_by_child").map(o => o.rewardCents)), earnedCents: book.earnedCents, availableCents: available, earmarkedCents: earmarked, heldPayoutCents: held, paidCents: paid, unpaidCents: sum([available, earmarked, held]), correctionDueCents: book.correctionDueCents },
     payout: { due: eligible > 0 && eligible >= (book.plan?.minimumPayoutCents ?? 0), eligibleCents: eligible, periodKey: period, label: "Manual execution only; schedules are payment reminders." },
-    activity: state.events.filter(e => e.childId === childId && (actor.role === "parent" || !hiddenKinds.includes(e.kind))).map(e => activity(book, e)),
+    activity: [...(state.checkpoint?.activity[childId]?.[actor.role === "parent" ? "parent" : "visible"] ?? []).map(a => ({ ...a, amountCents: a.amountCents, note: a.note })),
+      ...state.events.filter(e => e.childId === childId && (actor.role === "parent" || !hiddenKinds.includes(e.kind))).map(e => activity(book, e))].slice(state.checkpoint ? -100 : 0),
   };
   if (actor.role === "parent") view.matching = { rule: { ...book.matchingRule, eligibleGoalIds: book.matchingRule.eligibleGoalIds ? [...book.matchingRule.eligibleGoalIds] : undefined }, commitments: book.matches.map(({ sourceCents: _source, invalidatedCents: _invalidated, eligibleBaseCents: _base, ...match }) => ({ ...match })), month, usedCents: used, remainingCents: Math.max(0, book.matchingRule.monthlyCapCents - used), parentBudgetRemainingCents: Math.max(0, book.matchingRule.parentBudgetCents - used) };
   return view;
