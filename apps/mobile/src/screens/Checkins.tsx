@@ -190,7 +190,7 @@ export function SchedulerScreen() {
       (c) =>
         c.id === recipient &&
         c.id === "sam" &&
-        c.status !== "blocked" &&
+        !c.messagingBlocked && c.status !== "blocked" &&
         c.status !== "removed",
     ) &&
     question.trim().length > 0 &&
@@ -219,7 +219,7 @@ export function SchedulerScreen() {
       {contacts
         .filter(
           (c) =>
-            c.id === "sam" && c.status !== "removed" && c.status !== "blocked",
+            c.id === "sam" && !c.messagingBlocked && c.status !== "removed" && c.status !== "blocked",
         )
         .map((c) => (
           <Button

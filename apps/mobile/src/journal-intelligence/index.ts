@@ -78,7 +78,7 @@ export function recipientBoundaries(request: JournalRequest) {
 }
 
 export function isRecipientAllowed(contact: Contact, result: Pick<SuggestionResult, "excludedContactIds" | "excludedCategories">): boolean {
-  return contact.status !== "blocked" && contact.status !== "removed" &&
+  return !contact.messagingBlocked && contact.status !== "blocked" && contact.status !== "removed" &&
     !result.excludedContactIds.includes(contact.id) && !result.excludedCategories.includes(categoryOf(contact));
 }
 

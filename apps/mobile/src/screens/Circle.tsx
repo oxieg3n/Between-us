@@ -218,7 +218,7 @@ export function ContactScreen() {
         <Body muted>
           {eligible
             ? "Acceptance and identity checks are represented by fictional demo fixtures. This is not real verification."
-            : "This connection cannot receive in-app messages. Parent approval alone does not establish acceptance or identity."}
+            : "Messaging is unavailable for this connection. You can choose another person or prepare words to say in person. Approval, acceptance and identity checks are separate."}
         </Body>
       </View>
       {eligible && (

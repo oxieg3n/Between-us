@@ -3,12 +3,21 @@ import React, {
   useCallback,
   useContext,
   useEffect,
+  useMemo,
   useRef,
   useState,
 } from "react";
 import { BackHandler } from "react-native";
 import { router, useLocalSearchParams } from "expo-router";
-import { canManage, type Role, type Contact } from "./communication";
+import {
+  blockForAuthor,
+  canExchange,
+  canManage,
+  contactsForAuthor,
+  emptyAuthorBlocks,
+  type Role,
+  type Contact,
+} from "./communication";
 import {
   isRecipientAllowed,
   type SuggestionResult,
@@ -99,7 +108,13 @@ function useStateModel() {
   const [role, setRole] = useState<Role>("child");
   const [journals, setJournals] = useState(initialJournals);
   const [journalDraft, setJournalDraft] = useState<Entry>(emptyEntry);
-  const [contacts, setContacts] = useState(seedContacts);
+  const [contactRecords, setContacts] = useState(seedContacts);
+  const [blocks, setBlocks] = useState(emptyAuthorBlocks);
+  const blocksRef = useRef(blocks);
+  const contacts = useMemo(
+    () => contactsForAuthor(contactRecords, role, blocks),
+    [contactRecords, role, blocks],
+  );
   const [messages, setMessages] = useState(seedMessages);
   const [messageDraft, setMessageDraft] = useState("");
   const [recipient, setRecipient] = useState("alex");
@@ -278,7 +293,13 @@ function useStateModel() {
         recipientAllowed(c) &&
         c.id !== (role === "child" ? "sam" : "alex"),
     );
-    const message = createMessage(role, contact, messageDraft, response);
+    const message = createMessage(
+      role,
+      contact,
+      messageDraft,
+      response,
+      blocksRef.current,
+    );
     if (!message) {
       setNotice(
         "Message not sent. Choose an accepted, verified demo connection and add your words.",
@@ -299,7 +320,18 @@ function useStateModel() {
     id: string,
     status: "approved" | "removed" | "blocked",
   ) {
-    setContacts((old) => updateContact(role, old, id, status));
+    if (
+      !contactRecords.some((c) => c.id === id) ||
+      id === (role === "child" ? "sam" : "alex")
+    ) return;
+    if (status === "blocked") {
+      const next = blockForAuthor(blocksRef.current, role, id);
+      blocksRef.current = next;
+      setBlocks(next);
+    } else {
+      if (!canManage(role)) return;
+      setContacts((old) => updateContact(role, old, id, status));
+    }
     setNotice(
       status === "blocked"
         ? "Blocked in this session. Messaging is disabled."
@@ -313,8 +345,7 @@ function useStateModel() {
         (c) =>
           c.id === item.recipient &&
           c.id === "sam" &&
-          c.status !== "blocked" &&
-          c.status !== "removed",
+          canExchange(role, c, blocksRef.current),
       )
     ) {
       setNotice("Choose an available family member before saving.");

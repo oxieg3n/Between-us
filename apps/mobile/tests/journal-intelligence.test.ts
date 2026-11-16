@@ -100,6 +100,20 @@ test("model contract permits grounded conversation wording and eligible contacts
   assert.equal(validateModelOutput(output("Can we talk about school?", { why: "They are thinking about you" }), req), undefined);
 });
 
+test("journal recipient checks and model validation reject generic bidirectional messaging denial", () => {
+  const unavailable = { ...contacts[0], messagingBlocked: true };
+  const req = { ...request("I had a school project today. There were several pages to finish before lunch."), contacts: [unavailable, ...contacts.slice(1)] };
+  const boundaries = recipientBoundaries(req);
+  assert.equal(unavailable.status, "verified");
+  assert.equal(isRecipientAllowed(unavailable, boundaries), false);
+  assert.equal(isRecipientAllowed(contacts[2], boundaries), true);
+  for (const route of ["in-app", "in-person"]) {
+    assert.equal(validateModelOutput(output("Can we talk about school? I'd like you to listen first.", { recipientId: "alex", route }), req), undefined);
+  }
+  assert.ok(suggestConversation(req).suggestions.every((suggestion) => suggestion.recipientId !== "alex"));
+  assert.equal(validateModelOutput(output("Can we talk about school?", { recipientId: "sibling", route: "in-app" }), req)?.source, "on-device-model");
+});
+
 test("model validation rejects unsafe people, hallucinated facts, advice, excess fields and journal echo", () => {
   const req = request("My teacher bullied my friend yesterday. My parent and I talked about school today.");
   for (const draft of [

@@ -1,6 +1,7 @@
 import {
   canManage,
-  canMessage,
+  canExchange,
+  type AuthorBlocks,
   type Contact,
   type Role,
 } from "./communication";
@@ -81,8 +82,9 @@ export function createMessage(
   contact: Contact | undefined,
   text: string,
   response: string,
+  blocks: AuthorBlocks,
 ): Message | undefined {
-  if (!contact || !canMessage(contact) || !text.trim()) return;
+  if (!contact || !canExchange(role, contact, blocks) || !text.trim()) return;
   return {
     id: newId(),
     author: role,

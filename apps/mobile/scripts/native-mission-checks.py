@@ -295,6 +295,49 @@ class NativeChecks(LIB.MissionCapture):
         self.result(f"{theme} keyboard and review", result="passed", visible_ime_top=ime_top, control_bounds=positions,
                     interaction="Review tapped with IME open; edited, reviewed, simulated, and Android Back returned to Review.")
 
+    def blocking(self, theme):
+        for owner, target, other, peer in (
+            ("child", "Alex - parent", "parent", "Sam"),
+            ("parent", "Sam - teen", "child", "Alex"),
+        ):
+            self.fresh_theme(theme)
+            if owner == "parent":
+                self.role(owner)
+            self.tap("Circle", scroll=False)
+            self.tap(f"Open {target},", prefix=True)
+            self.tap(f"Block {target}")
+            self.require("Block this connection?")
+            self.wait_visible("Confirm", clickable=True, timeout=10)
+            self.tap("Confirm", scroll=False)
+            self.require("Blocked in this session.", prefix=True)
+            self.role(other)
+            self.tap("Chats", scroll=False)
+            self.tap(f"Open conversation with {peer}.", prefix=True)
+            self.require("This connection cannot receive messages.", prefix=True)
+            review = self.find("Review")
+            draft = self.locate_field("Message draft")
+            if review is None or review.get("enabled") != "false" or draft.get("enabled") != "false":
+                raise AssertionError("Reverse-blocked native composer or Review is still enabled.")
+            self.capture(theme, f"{owner}-block-incoming-denied", "Actual peer-role conversation after the other author blocked it; new-message input and Review disabled.")
+            if other != "parent":
+                self.role("parent")
+            self.home()
+            self.tap("Schedule a check-in")
+            save = self.locate("Save example schedule")
+            if save.get("enabled") != "false":
+                raise AssertionError("A blocked exchange can still save a new check-in.")
+            self.capture(theme, f"{owner}-block-checkin-denied", "Actual new check-in Save disabled after an exchange is blocked; existing invitations are historical.")
+            self.role("child")
+            self.tap("Circle", scroll=False)
+            self.tap("Privacy & safety")
+            self.tap("Prepare words for another trusted adult")
+            self.tap("Review my words")
+            self.tap("Keep words for practice")
+            self.require("Your words are ready to practice. Nothing was sent.")
+            self.capture(theme, f"{owner}-block-safety-practice", "Another-safe-adult preparation and explicit practice remain available without parent approval after blocking.")
+            self.result(f"{theme} {owner} bidirectional block", result="passed",
+                        interaction="Blocked through Circle, changed demo role, checked disabled composer/Review and schedule, then prepared words for another safe adult.")
+
     def appearance_persistence(self, theme):
         expected = "Night Harbor · Selected" if theme == "dark" else "Safe Harbor · Selected"
         self.settings()
@@ -340,6 +383,9 @@ class NativeChecks(LIB.MissionCapture):
                     self.font_scale(theme)
                 if self.args.section in ("all", "interaction"):
                     self.keyboard_and_review(theme)
+                if self.args.section == "blocking":
+                    self.blocking(theme)
+                    self.fresh_theme(theme)
                 if self.args.section == "density":
                     self.responsive(theme, density_only=True)
                     self.opaque_references(theme)
@@ -390,7 +436,7 @@ def main():
     parser.add_argument("--app-package", default="com.oxieg3n.betweenus")
     parser.add_argument("--port", type=int, default=8082)
     parser.add_argument("--theme", choices=("light", "dark", "both"), default="both")
-    parser.add_argument("--section", choices=("all", "responsive", "font", "interaction", "density"), default="all")
+    parser.add_argument("--section", choices=("all", "responsive", "font", "interaction", "density", "blocking"), default="all")
     parser.add_argument("--run-id")
     parser.add_argument("--replace", action="store_true")
     parser.add_argument("--self-test", action="store_true")

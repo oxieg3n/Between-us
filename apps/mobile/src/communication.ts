@@ -16,11 +16,74 @@ export interface Contact {
   status: ContactStatus;
   accepted: boolean;
   verified: boolean;
+  messagingBlocked?: boolean;
+}
+
+export type AuthorBlocks = Record<Role, readonly string[]>;
+
+export function emptyAuthorBlocks(): AuthorBlocks {
+  return { child: [], parent: [] };
+}
+
+// These two IDs identify fictional demo authors, never authenticated accounts.
+const authorId = (role: Role) => (role === "child" ? "sam" : "alex");
+
+export function blockForAuthor(
+  blocks: AuthorBlocks,
+  role: Role,
+  contactId: string,
+): AuthorBlocks {
+  if (!contactId.trim() || contactId === authorId(role)) {
+    throw new Error("Choose another person to block.");
+  }
+  if (blocks[role].includes(contactId)) return blocks;
+  return { ...blocks, [role]: [...blocks[role], contactId] };
+}
+
+function exchangeBlocked(role: Role, contactId: string, blocks: AuthorBlocks) {
+  if (blocks[role].includes(contactId)) return true;
+  const recipientRole =
+    contactId === "sam" ? "child" : contactId === "alex" ? "parent" : undefined;
+  return !!recipientRole && blocks[recipientRole].includes(authorId(role));
+}
+
+/** Project only this author's blocks; a reverse block exposes generic unavailability. */
+export function contactsForAuthor(
+  base: readonly Contact[],
+  role: Role,
+  blocks: AuthorBlocks,
+): Contact[] {
+  return base.map((contact) => {
+    if (!exchangeBlocked(role, contact.id, blocks)) return contact;
+    return {
+      ...contact,
+      status: blocks[role].includes(contact.id) ? "blocked" : contact.status,
+      messagingBlocked: true,
+    };
+  });
 }
 
 /** Approval alone never authorizes a connection to receive messages. */
 export function canMessage(contact: Contact): boolean {
-  return contact.status === "verified" && contact.accepted && contact.verified;
+  return (
+    contact.status === "verified" &&
+    contact.accepted &&
+    contact.verified &&
+    !contact.messagingBlocked
+  );
+}
+
+export function canExchange(
+  role: Role,
+  contact: Contact | undefined,
+  blocks: AuthorBlocks,
+): boolean {
+  return (
+    !!contact &&
+    contact.id !== authorId(role) &&
+    canMessage(contact) &&
+    !exchangeBlocked(role, contact.id, blocks)
+  );
 }
 
 export function canManage(role: Role): boolean {
