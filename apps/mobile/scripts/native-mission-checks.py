@@ -57,19 +57,21 @@ class NativeChecks(LIB.MissionCapture):
         self.width, self.height = map(int, sizes[-1])
 
     def settle(self):
-        for _ in range(10):
+        deadline = time.monotonic() + 30
+        while time.monotonic() < deadline:
             try:
                 self.tree()
                 return
-            except Exception:
+            except LIB.BASE.NativeSnapshotUnavailable:
                 time.sleep(0.5)
         raise RuntimeError("Native accessibility tree did not settle after device override.")
 
-    def restore_geometry(self):
+    def restore_geometry(self, wait_for_layout=True):
         self.command("shell", "wm", "size", override_value("size", self.before["size"]))
         self.command("shell", "wm", "density", override_value("density", self.before["density"]))
         self.read_size()
-        self.settle()
+        if wait_for_layout:
+            self.settle()
 
     def restore_font(self):
         if self.before["font_scale"] == "null":
@@ -208,8 +210,9 @@ class NativeChecks(LIB.MissionCapture):
                     interaction="Saved journal, changed parent-only matching settings, created child goal, inspected actual child history UUIDv4.")
 
     def font_scale(self, theme):
+        # This checks cold-launch large text; hot font-change draft retention is a separate gate.
+        self.command("shell", "am", "force-stop", self.args.app_package)
         self.command("shell", "settings", "put", "system", "font_scale", "2.0")
-        self.settle()
         # Font scale remains an OS-managed Activity configuration; start a settled test session.
         self.fresh_theme(theme)
         self.home()
@@ -236,8 +239,8 @@ class NativeChecks(LIB.MissionCapture):
         self.result(f"{theme} font scale 200%", result="passed", navigation=nav,
                     confirm_bounds=confirm_bounds, cancel_bounds=cancel_bounds,
                     interaction="Scrolled confirmation and cancelled without saving settings.")
+        self.command("shell", "am", "force-stop", self.args.app_package)
         self.command("shell", "settings", "put", "system", "font_scale", "1.0")
-        self.settle()
         self.fresh_theme(theme)
 
     def keyboard_and_review(self, theme):
@@ -326,7 +329,8 @@ class NativeChecks(LIB.MissionCapture):
         run_error = None
         try:
             for theme in (["light", "dark"] if self.args.theme == "both" else [self.args.theme]):
-                self.restore_geometry()
+                self.command("shell", "am", "force-stop", self.args.app_package)
+                self.restore_geometry(wait_for_layout=False)
                 self.command("shell", "settings", "put", "system", "font_scale", "1.0")
                 self.fresh_theme(theme)
                 if self.args.section in ("all", "responsive"):
@@ -354,7 +358,9 @@ class NativeChecks(LIB.MissionCapture):
         finally:
             restored = []
             restore_errors = []
-            for label, restore in (("size/density", self.restore_geometry), ("font_scale", self.restore_font)):
+            if self.command("shell", "settings", "get", "system", "font_scale") != self.before["font_scale"]:
+                self.command("shell", "am", "force-stop", self.args.app_package)
+            for label, restore in (("size/density", lambda: self.restore_geometry(wait_for_layout=False)), ("font_scale", self.restore_font)):
                 try:
                     restore()
                     restored.append(label)

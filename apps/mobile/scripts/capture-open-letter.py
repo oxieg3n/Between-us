@@ -27,6 +27,10 @@ SCREEN_NAMES = (
 )
 
 
+class NativeSnapshotUnavailable(RuntimeError):
+    """Transient dump failure; callers must not act on an older snapshot."""
+
+
 class NativeCapture:
     def __init__(self, args):
         self.args = args
@@ -68,7 +72,7 @@ class NativeCapture:
                 except (subprocess.CalledProcessError, subprocess.TimeoutExpired):
                     pass
             time.sleep(0.25)
-        raise RuntimeError("Fresh native UI snapshot unavailable; no stale coordinates used.")
+        raise NativeSnapshotUnavailable("Fresh native UI snapshot unavailable; no stale coordinates used.")
 
     def matches(self, node, label, prefix=False):
         values = (node.get("content-desc", ""), node.get("text", ""))
@@ -171,7 +175,9 @@ class NativeCapture:
         self.top()
 
     def wait_ready(self):
-        for attempt in range(45):
+        deadline = time.monotonic() + 120
+        attempt = 0
+        while time.monotonic() < deadline:
             try:
                 root = self.tree()
                 if any(self.matches(node, "Profile & settings") for node in root.iter("node")):
@@ -182,11 +188,12 @@ class NativeCapture:
                         x, y = self.bounds(close)
                         self.command("shell", "input", "tap", x, y)
                         self.note("Closed Expo Go's native development menu before capture.")
-            except (ET.ParseError, subprocess.CalledProcessError):
+            except (ET.ParseError, subprocess.CalledProcessError, NativeSnapshotUnavailable):
                 pass
             if attempt % 10 == 0:
                 self.note("Waiting for the native application to finish loading its tested bundle…")
             time.sleep(2)
+            attempt += 1
         raise RuntimeError("Between Us did not reach its native header within the startup wait.")
 
     def capture_theme(self, theme):

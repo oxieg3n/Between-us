@@ -43,7 +43,7 @@ class SnapshotTests(unittest.TestCase):
     @patch.object(capture.time, "sleep")
     def test_missing_roots_fail_closed_without_reading_or_tapping(self, _sleep):
         runner, calls = self.runner(["ERROR: null root", "", "ERROR: could not get idle state."], [])
-        with self.assertRaisesRegex(RuntimeError, "no stale coordinates"):
+        with self.assertRaisesRegex(capture.NativeSnapshotUnavailable, "no stale coordinates"):
             runner.tree()
         self.assertFalse(any(c[:2] == ("exec-out", "cat") for c in calls))
         self.assertEqual(len([c for c in calls if c[:3] == ("shell", "uiautomator", "dump")]), 3)

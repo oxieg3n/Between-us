@@ -196,7 +196,7 @@ class MissionCapture(BASE.NativeCapture):
                 node = self.find(label, prefix=prefix, clickable=clickable)
                 if node is not None:
                     return node
-            except (BASE.ET.ParseError, subprocess.CalledProcessError):
+            except (BASE.ET.ParseError, subprocess.CalledProcessError, BASE.NativeSnapshotUnavailable):
                 pass
             if time.monotonic() >= deadline:
                 raise RuntimeError(f"Native transition did not reach: {label}")
@@ -227,9 +227,14 @@ class MissionCapture(BASE.NativeCapture):
         self.wait_ready()
         deadline = time.monotonic() + 90
         while time.monotonic() < deadline:
+            try:
+                root = self.tree()
+            except BASE.NativeSnapshotUnavailable:
+                time.sleep(0.25)
+                continue
             # Large text can place the onboarding action below the first viewport.
             if any((self.matches(node, "Explore as Sam") and node.get("clickable") == "true")
-                   or self.matches(node, "BETWEEN US") for node in self.tree().iter("node")):
+                   or self.matches(node, "BETWEEN US") for node in root.iter("node")):
                 self.tap("Explore as Sam")
                 self.wait_visible("Hi, Sam.")
                 break
