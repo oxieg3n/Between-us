@@ -218,7 +218,7 @@ class NativeChecks(LIB.MissionCapture):
                     interaction="Verified selected appearance before and after force-stop/relaunch without setting it again.")
         self.tap("Follow device appearance")
         self.require("Changes with your device · Selected")
-        self.capture(theme, "appearance-follow-device", "Returned the demo to its approved Follow Device default through actual settings.")
+        self.capture("system", "appearance-follow-device", "Returned the demo to its approved Follow Device default through actual settings; actual colors follow the device.")
         self.home()
 
     def run(self):
