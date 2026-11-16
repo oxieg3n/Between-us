@@ -2,7 +2,7 @@ import { Platform, TurboModuleRegistry } from "react-native";
 import { Directory, File, Paths } from "expo-file-system";
 import type { LocalModelAdapter } from "./journal-intelligence";
 import {
-  createPrivateModelAdapter, LOCAL_MODEL, modelAssetMatches,
+  createPrivateModelAdapter, LOCAL_MODEL, modelAssetMatches, withModelDownloadFile,
   type LocalModelStatus, type PrivateModelContext,
 } from "./local-model-contract";
 export { LOCAL_MODEL } from "./local-model-contract";
@@ -120,14 +120,15 @@ export function downloadAndLoadModel(): Promise<void> {
     const controller = new AbortController(); download = controller;
     message = "Downloading the optional 369 MiB model. Journal text is never included.";
     try {
-      await File.downloadFileAsync(LOCAL_MODEL.url, partial, { signal: controller.signal });
-      await verify(partial, expected);
-      assertCurrent(expected);
-      await partial.move(model, { overwrite: true });
-      await initialize(model, expected);
+      await withModelDownloadFile(partial, (uri) => new File(uri), async () => {
+        await File.downloadFileAsync(LOCAL_MODEL.url, partial, { signal: controller.signal });
+        await verify(partial, expected);
+        assertCurrent(expected);
+        await partial.move(model, { overwrite: true });
+        await initialize(model, expected);
+      });
     } finally {
       if (download === controller) download = undefined;
-      if (partial.exists) partial.delete();
     }
   });
 }

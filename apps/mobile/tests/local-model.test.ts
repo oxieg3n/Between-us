@@ -1,10 +1,27 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { createPrivateModelAdapter, LOCAL_MODEL, modelAssetMatches, type PrivateModelContext } from "../src/local-model-contract";
+import { createPrivateModelAdapter, LOCAL_MODEL, modelAssetMatches, withModelDownloadFile, type PrivateModelContext } from "../src/local-model-contract";
 import { getLocalModelAdapter, getLocalModelStatus, downloadAndLoadModel, loadDownloadedModel, unloadLocalModel } from "../src/local-model";
 
 const request = { text: "Our fictional family is moving house.", role: "child" as const, contacts: [] };
 const result = '{"suggestions":[{"draft":"Can we talk about moving?","recipientCategory":"trusted-person","route":"in-person"}]}';
+test("download cleanup preserves a finalized model after move mutates its handle, including later load failure", async () => {
+  for (const stage of ["success", "download-failure", "load-failure"]) {
+    const files = new Set(["model.download"]);
+    const source = { uri: "model.download" };
+    const work = withModelDownloadFile(source, (uri) => ({
+      get exists() { return files.has(uri); },
+      delete() { files.delete(uri); },
+    }), async () => {
+      if (stage === "download-failure") throw new Error("cancelled");
+      files.delete(source.uri); files.add("model.gguf"); source.uri = "model.gguf";
+      if (stage === "load-failure") throw new Error("load failed");
+    });
+    if (stage === "success") await work; else await assert.rejects(work);
+    assert.equal(files.has("model.download"), false);
+    assert.equal(files.has("model.gguf"), stage !== "download-failure");
+  }
+});
 function deferred<T>() {
   let resolve!: (value: T) => void;
   const promise = new Promise<T>((done) => { resolve = done; });

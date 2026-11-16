@@ -51,6 +51,20 @@ export function modelAssetMatches(bytes: number, digest: string): boolean {
   return bytes === LOCAL_MODEL.bytes && digest === LOCAL_MODEL.sha256;
 }
 
+/** Expo move() mutates a File's URI; cleanup must retain the original download path. */
+export async function withModelDownloadFile(
+  file: { uri: string },
+  open: (uri: string) => { exists: boolean; delete(): void },
+  work: () => Promise<void>,
+) {
+  const downloadUri = file.uri;
+  try { await work(); }
+  finally {
+    const unfinished = open(downloadUri);
+    if (unfinished.exists) unfinished.delete();
+  }
+}
+
 /** Serializes native calls and clears prompt/KV tensor data before another author can run. */
 export function createPrivateModelAdapter(access: {
   context: () => PrivateModelContext | undefined;
