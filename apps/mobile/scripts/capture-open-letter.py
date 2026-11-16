@@ -13,6 +13,7 @@ import re
 import struct
 import subprocess
 import time
+import uuid
 import xml.etree.ElementTree as ET
 
 
@@ -51,9 +52,23 @@ class NativeCapture:
         (CAPTURES / "capture-actions.json").write_text(json.dumps(self.log, indent=2), encoding="utf-8")
 
     def tree(self):
-        self.command("shell", "uiautomator", "dump", "/sdcard/between-us-open-letter.xml")
-        raw = self.command("exec-out", "cat", "/sdcard/between-us-open-letter.xml")
-        return ET.fromstring(raw[raw.find("<?xml"):] if "<?xml" in raw else raw)
+        for _ in range(3):
+            target = f"/sdcard/between-us-ui-{uuid.uuid4().hex}.xml"
+            try:
+                output = self.command("shell", "uiautomator", "dump", target, timeout=15)
+                if "dumped to:" not in output or target not in output:
+                    continue
+                raw = self.command("exec-out", "cat", target, timeout=15)
+                return ET.fromstring(raw[raw.find("<?xml"):] if "<?xml" in raw else raw)
+            except (ET.ParseError, subprocess.CalledProcessError, subprocess.TimeoutExpired):
+                pass
+            finally:
+                try:
+                    self.command("shell", "rm", "-f", target, timeout=10)
+                except (subprocess.CalledProcessError, subprocess.TimeoutExpired):
+                    pass
+            time.sleep(0.25)
+        raise RuntimeError("Fresh native UI snapshot unavailable; no stale coordinates used.")
 
     def matches(self, node, label, prefix=False):
         values = (node.get("content-desc", ""), node.get("text", ""))
