@@ -93,9 +93,11 @@ class NativeChecks(LIB.MissionCapture):
             positions[label] = self.complete_bounds(node, label)
         return positions
 
-    def responsive(self, theme):
+    def responsive(self, theme, density_only=False):
         cases = [("small", 840, 1680, 420), ("standard", 1080, 2424, 420),
                  ("large", 1260, 2730, 420), ("tablet", 1920, 2560, 320)]
+        if density_only:
+            cases = cases[-1:]
         for name, width, height, density in cases:
             draft = "Fictional writing stays here while display size changes."
             if name == "tablet":
@@ -139,6 +141,31 @@ class NativeChecks(LIB.MissionCapture):
                         navigation=nav, goal_back="native Back returned to goal overview",
                         limitation="Viewport overrides on one Pixel_10 AVD, not separate physical hardware.")
         self.restore_geometry()
+
+    def opaque_references(self, theme):
+        self.home()
+        self.swipe("down")
+        entry = self.locate("Chores & Goals", clickable=True)
+        self.complete_bounds(entry, "Chores & Goals", self.height - 180)
+        self.capture(theme, "home-finance-entry-visible", "Actual lower Home viewport with the complete Chores & Goals control above bottom navigation.")
+        self.role("parent")
+        self.finance("Savings matching")
+        self.tap("Review matching settings")
+        self.confirm()
+        self.role("child")
+        self.finance("Savings goals")
+        self.tap("Create a savings goal")
+        self.field("Goal name", "Fictional opaque goal")
+        self.tap("Save new goal")
+        self.require("Open goal: Fictional opaque goal")
+        self.finance("Financial history")
+        reference = self.locate("Reference: local-", prefix=True)
+        value = reference.get("text", "")
+        if not re.fullmatch(r"Reference: local-[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}", value):
+            raise AssertionError(f"Native child reference is not an opaque UUIDv4: {value}")
+        self.capture(theme, "opaque-child-reference", "Actual native UUID reference after private writing and hidden parent configuration; no activity counter is exposed.")
+        self.result(f"{theme} native opaque references", result="passed", reference=value,
+                    interaction="Saved journal, changed parent-only matching settings, created child goal, inspected actual child history UUIDv4.")
 
     def font_scale(self, theme):
         self.command("shell", "settings", "put", "system", "font_scale", "2.0")
@@ -267,6 +294,9 @@ class NativeChecks(LIB.MissionCapture):
                     self.font_scale(theme)
                 if self.args.section in ("all", "interaction"):
                     self.keyboard_and_review(theme)
+                if self.args.section == "density":
+                    self.responsive(theme, density_only=True)
+                    self.opaque_references(theme)
             self.appearance_persistence(theme)
             completed = True
         except Exception as error:
@@ -307,7 +337,7 @@ def main():
     parser.add_argument("--app-package", default="com.oxieg3n.betweenus")
     parser.add_argument("--port", type=int, default=8082)
     parser.add_argument("--theme", choices=("light", "dark", "both"), default="both")
-    parser.add_argument("--section", choices=("all", "responsive", "interaction"), default="all")
+    parser.add_argument("--section", choices=("all", "responsive", "interaction", "density"), default="all")
     parser.add_argument("--run-id")
     parser.add_argument("--replace", action="store_true")
     parser.add_argument("--self-test", action="store_true")

@@ -4,6 +4,7 @@ import {
   type Contact,
   type Role,
 } from "./communication";
+import { newId } from "./id";
 export type Entry = { id: string; title: string; body: string };
 export type Message = {
   id: string;
@@ -83,7 +84,7 @@ export function createMessage(
 ): Message | undefined {
   if (!contact || !canMessage(contact) || !text.trim()) return;
   return {
-    id: `${Date.now()}-${Math.random()}`,
+    id: newId(),
     author: role,
     recipient: contact.id,
     text: text.trim(),
@@ -92,7 +93,4 @@ export function createMessage(
   };
 }
 
-let sequence = 0;
-export function newId() {
-  return "local-" + ++sequence;
-}
+export { newId };

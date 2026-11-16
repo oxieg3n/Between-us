@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { AppState, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { AppState, Pressable, StyleSheet, Text, TextInput, View, useWindowDimensions } from "react-native";
 import { getLocalModelAdapter } from "../local-model";
 import { hasUnsavedWriting, isSavedEntry } from "../journal";
 import {
@@ -115,6 +115,7 @@ export function JournalOverview() {
 export function JournalEditor() {
   const app = useApp();
   const { theme } = useAppearance();
+  const { scale } = useWindowDimensions();
   const runner = useMemo(() => createLatestOnlyRunner(), []);
   const [presentation, setPresentation] = useState<{
     key: string;
@@ -199,7 +200,7 @@ export function JournalEditor() {
     <View style={styles.page}>
       <View style={styles.private}>
         <Icon name="lock" size={16} />
-        <Body muted>Just for you · nothing is shared</Body>
+        <Body key={scale} muted style={{ flexShrink: 1 }}>Just for you · nothing is shared</Body>
       </View>
       <Paper>
         <View style={styles.writing}>
