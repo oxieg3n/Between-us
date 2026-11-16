@@ -413,6 +413,25 @@ class MissionCapture(BASE.NativeCapture):
             raise AssertionError("Existing model failed to load; no download was authorized by this script.")
         return False
 
+    def capture_core_supplement(self, theme):
+        self.area = "core"
+        self.capture_supplement(theme)
+        self.home()
+        self.tap("Open check-in")
+        self.tap("Skip this check-in")
+        self.require("Skipped. You do not owe an answer.")
+        self.require("You have no new check-ins.", prefix=True)
+        self.capture(theme, "child-checkin-skipped", "Actual native Skip completed without a reminder, score or penalty message.")
+        self.role("parent")
+        self.tap("Schedule a check-in")
+        self.tap("Save example schedule")
+        self.require("Example schedule saved. Notifications are simulated.")
+        self.capture(theme, "parent-checkin-saved", "Parent saved the fictional schedule through its real control; delivery remains simulated.")
+        self.role("child")
+        self.tap("Open check-in")
+        self.require("What made you smile today?")
+        self.capture(theme, "child-new-checkin", "Child sees the parent's new fictional invitation, with optional response controls.")
+
     def wait_for_suggestion_source(self):
         deadline = time.monotonic() + 120
         while time.monotonic() < deadline:
@@ -456,6 +475,8 @@ class MissionCapture(BASE.NativeCapture):
             if self.args.section in ("all", "core"):
                 self.area = "core"
                 self.capture_theme(theme)
+            if self.args.section == "supplement":
+                self.capture_core_supplement(theme)
             if self.args.section in ("all", "finance"):
                 self.capture_finance(theme)
             if self.args.section in ("all", "journal"):
@@ -472,7 +493,7 @@ def main():
     parser.add_argument("--app-package", default="host.exp.exponent", help="Installed Expo Go package or the actual native APK package, e.g. com.oxieg3n.betweenus.")
     parser.add_argument("--port", type=int, default=8082)
     parser.add_argument("--theme", choices=("light", "dark", "both"), default="both")
-    parser.add_argument("--section", choices=("all", "core", "finance", "journal"), default="all")
+    parser.add_argument("--section", choices=("all", "core", "finance", "journal", "supplement"), default="all")
     parser.add_argument("--with-local-model", action="store_true", help="Load an already downloaded model through Settings for journal capture; never downloads automatically.")
     parser.add_argument("--require-local-model", action="store_true", help="Fail if the actual journal source label is a template fallback; implies --with-local-model.")
     parser.add_argument("--run-id", help="Optional stable run ID for an explicitly authorized recapture.")
