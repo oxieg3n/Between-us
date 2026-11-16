@@ -1,6 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 import { createFinanceService, FinanceServiceError, type FinanceAction } from './finance.ts';
 import { createPrivacyService, PrivacyServiceError } from './privacy.ts';
+export { mountEdgeApi } from './edge-mount.ts';
 
 export type ApiConfig = { url: string; publicKey: string; serviceKey: string; syntheticLocal: boolean; allowedOrigins?: string[] };
 const headers = { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' };
@@ -31,7 +32,7 @@ export function createApi(config: ApiConfig) {
   async function route(request: Request): Promise<Response> {
     try {
       const url = new URL(request.url); const path = url.pathname.replace(/^\/functions\/v1\/api/, '');
-      if (request.method === 'GET' && path === '/health') return json({ service: 'between-us', publicEnrollment: false, build: '1116-ProductionFoundation-p1' });
+      if (request.method === 'GET' && path === '/health') return json({ service: 'between-us', publicEnrollment: false, build: '1116-ProductionFoundation-p3' });
       if (request.method === 'POST' && path === '/v1/enrollment/parent') {
         if (!config.syntheticLocal || !['127.0.0.1', 'localhost', '[::1]'].includes(url.hostname)) return json({ error: 'Enrollment is unavailable.' }, 403);
         const data = await body(request); exact(data, ['email']);

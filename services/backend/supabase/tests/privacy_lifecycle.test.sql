@@ -2,6 +2,9 @@ begin;
 create extension if not exists pgtap with schema extensions;
 set local search_path=public,extensions,pg_temp;
 select no_plan();
+-- Isolate closed-policy tests from an explicitly seeded fictional local UI environment.
+update app_private.privacy_lifecycle_policy set execution_enabled=false,retention_enabled=false,synthetic_fixture_mode=false,reviewed_policy_id=null,reauth_methods='{}';
+select ok((select count(*)=3 and bool_and(column_default::text='false') from information_schema.columns where table_schema='app_private' and table_name='privacy_lifecycle_policy' and column_name in('execution_enabled','retention_enabled','synthetic_fixture_mode')),'migration boolean defaults remain closed independently of local fixture seeding');
 select ok(not(select execution_enabled or retention_enabled or synthetic_fixture_mode from app_private.privacy_lifecycle_policy),'privacy execution and fixtures default closed');
 select is((select cardinality(reauth_methods) from app_private.privacy_lifecycle_policy),0,'no unreviewed strong-auth method enabled');
 select ok(not has_function_privilege('authenticated','api.record_privacy_reauthentication(uuid,uuid,text,text)','EXECUTE'),'client cannot attest its own reauthentication');
