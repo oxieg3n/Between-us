@@ -1,5 +1,5 @@
 import { Platform, TurboModuleRegistry } from "react-native";
-import { Directory, File, FileMode, Paths } from "expo-file-system";
+import { Directory, File, Paths } from "expo-file-system";
 import type { LocalModelAdapter } from "./journal-intelligence";
 import {
   createPrivateModelAdapter, LOCAL_MODEL, modelAssetMatches,
@@ -14,7 +14,6 @@ type NativeRuntime = {
     n_parallel: number; use_mmap: boolean;
   }): Promise<PrivateModelContext>;
 };
-type IncrementalHash = { update(bytes: Uint8Array): IncrementalHash; digest(): Uint8Array; destroy(): void };
 let context: PrivateModelContext | undefined;
 let lifecycle = Promise.resolve();
 let version = 0;
@@ -58,26 +57,13 @@ function modelFiles() {
   return { directory, model: new File(directory, LOCAL_MODEL.filename), partial: new File(directory, LOCAL_MODEL.filename + ".download") };
 }
 async function verify(file: File, expected: number) {
+  assertCurrent(expected);
   if (!file.exists || file.size !== LOCAL_MODEL.bytes) throw new Error("The optional model is missing or incomplete. Download it explicitly to continue.");
   message = "Checking the optional model download…";
-  // Expo Crypto has no incremental file digest. Hash bounded chunks instead of buffering 369 MiB.
-  // eslint-disable-next-line @typescript-eslint/no-require-imports -- Load optional hashing only during explicit model setup.
-  const { sha256 } = require("@noble/hashes/sha2.js") as { sha256: { create(): IncrementalHash } };
-  const hash = sha256.create();
-  const handle = file.open(FileMode.ReadOnly);
-  let read = 0;
-  try {
-    while (read < LOCAL_MODEL.bytes) {
-      assertCurrent(expected);
-      const chunk = await handle.readBytes(Math.min(1024 * 1024, LOCAL_MODEL.bytes - read));
-      if (!chunk.length) throw new Error("The optional model download is incomplete.");
-      hash.update(chunk); read += chunk.length;
-      await new Promise<void>((resolve) => setTimeout(resolve, 0));
-    }
-    const digest = Array.from(hash.digest(), (byte) => byte.toString(16).padStart(2, "0")).join("");
-    if (!modelAssetMatches(read, digest)) throw new Error("The optional model failed its integrity check. It was not loaded.");
-    assertCurrent(expected);
-  } finally { handle.close(); hash.destroy(); }
+  // SDK 58 streams bounded chunks through native SHA-256, away from the JS thread.
+  const digest = await file.digest("SHA-256");
+  assertCurrent(expected);
+  if (!file.exists || !modelAssetMatches(file.size, digest)) throw new Error("The optional model failed its integrity check. It was not loaded.");
 }
 async function releaseCurrent() {
   await generation.stopAndDrain();
