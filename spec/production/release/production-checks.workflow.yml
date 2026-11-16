@@ -1,0 +1,135 @@
+name: Production foundation checks (manual, local fixtures)
+
+# Never add push/PR/schedule triggers without owner review of quota and execution policy.
+on:
+  workflow_dispatch:
+    inputs:
+      quota_reviewed:
+        description: Owner approved this reviewed commit and verified available free runner quota
+        type: boolean
+        required: true
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-foundation-manual
+  cancel-in-progress: false
+
+jobs:
+  synthetic-checks:
+    if: ${{ inputs.quota_reviewed == true }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      CI: 'true'
+      EXPO_NO_TELEMETRY: '1'
+      SUPABASE_TELEMETRY_DISABLED: '1'
+      DO_NOT_TRACK: '1'
+      SUPABASE_HOME: ${{ runner.temp }}/betweenus-cli
+      NPM_CONFIG_AUDIT: 'false'
+      NPM_CONFIG_FUND: 'false'
+    steps:
+      # Official repositories/tag refs and action.yml verified 2026-11-16.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '26.13.0'
+          package-manager-cache: false
+      - name: Install reviewed lockfiles without lifecycle scripts
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --ignore-scripts --no-audit --no-fund --prefix services/backend
+          npm ci --ignore-scripts --no-audit --no-fund --prefix apps/mobile
+      - name: Check backend source and bundle
+        working-directory: services/backend
+        run: |
+          npm run typecheck
+          npm test
+          npm run build
+      - name: Check mobile source and static web bundle
+        working-directory: apps/mobile
+        run: |
+          npm run typecheck
+          npm run lint
+          npm test
+          npx --no-install expo export --platform web --output-dir .ci-export
+      - name: Guard the isolated local stack
+        working-directory: services/backend
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          mkdir -p .local
+          node --input-type=module <<'JS'
+          import { readdir, readFile } from 'node:fs/promises';
+          const pkg = JSON.parse(await readFile('node_modules/supabase/package.json', 'utf8'));
+          if (pkg.version !== '3.1.0') throw Error('Unreviewed CLI version.');
+          if ((await readdir('supabase/migrations')).some(name => name.endsWith('.pending'))) throw Error('Review and activate staged migrations first.');
+          if (process.env.SUPABASE_ACCESS_TOKEN || process.env.SUPABASE_DB_PASSWORD) throw Error('Hosted credentials are not allowed in this job.');
+          const config = await readFile('supabase/config.toml', 'utf8');
+          if (!config.includes('project_id = "betweenus-production-local"') || !config.includes('schemas = ["api"]')) throw Error('Unexpected local stack configuration.');
+          JS
+          node node_modules/supabase/dist/supabase.js --version
+      - name: Start disposable Supabase without printing generated credentials
+        working-directory: services/backend
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          if ! node node_modules/supabase/dist/supabase.js start >.local/ci-start.log 2>&1; then
+            echo '::error::Isolated local stack failed. Raw diagnostic output is withheld; reproduce locally and redact before sharing.'
+            exit 1
+          fi
+          node node_modules/supabase/dist/supabase.js status --output json >.local/status.json 2>.local/ci-status.log
+          node --input-type=module <<'JS'
+          import { readFile } from 'node:fs/promises';
+          import pg from 'pg';
+          const s = JSON.parse(await readFile('.local/status.json', 'utf8'));
+          if (s.API_URL !== 'http://127.0.0.1:54321' || new URL(s.DB_URL).hostname !== '127.0.0.1' || new URL(s.DB_URL).port !== '54322') throw Error('Refusing nonlocal database.');
+          const db = new pg.Client({ connectionString: s.DB_URL });
+          await db.connect();
+          try {
+            const result = await db.query(`select not d.public_enrollment_enabled and not d.real_child_data_enabled and not d.public_reports_enabled
+              and d.guardian_managed_children and not d.local_synthetic
+              and not c.public_report_intake and not c.staffed_support_promises and not c.push_delivery_enabled
+              and not p.execution_enabled and not p.retention_enabled as closed
+              from app_private.deployment_policy d cross join app_private.communication_policy c cross join app_private.privacy_lifecycle_policy p`);
+            if (result.rows.length !== 1 || result.rows[0].closed !== true) throw Error('Release policies do not default closed.');
+          } finally { await db.end(); }
+          JS
+      - name: Run private SQL and real local Auth integration fixtures
+        working-directory: services/backend
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          if ! node node_modules/supabase/dist/supabase.js test db >.local/ci-sql-tests.log 2>&1; then
+            echo '::error::Local pgTAP failed. Raw SQL output is withheld.'
+            exit 1
+          fi
+          if ! node scripts/seed-local.mjs >.local/ci-seed.log 2>&1; then
+            echo '::error::Loopback-only fictional seed failed.'
+            exit 1
+          fi
+          if ! npm run test:integration >.local/ci-auth-tests.log 2>&1; then
+            echo '::error::Real local Auth fixture tests failed. Raw identity/session output is withheld.'
+            exit 1
+          fi
+          echo 'Local pgTAP and fictional managed Auth integration passed.'
+      - name: Retire only this disposable runner stack
+        if: ${{ always() }}
+        working-directory: services/backend
+        shell: bash
+        run: |
+          mkdir -p .local
+          if [ -f node_modules/supabase/dist/supabase.js ]; then
+            node node_modules/supabase/dist/supabase.js stop --no-backup >.local/ci-stop.log 2>&1 || true
+          fi
+          rm -f .local/status.json .local/ci-start.log .local/ci-status.log .local/ci-sql-tests.log .local/ci-seed.log .local/ci-auth-tests.log .local/ci-stop.log
+          # No credential/log/build artifact upload, deployment, signing or paid resource step.

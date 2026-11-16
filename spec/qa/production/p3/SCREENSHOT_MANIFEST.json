@@ -1,0 +1,470 @@
+{
+    "build":  "1116-ProductionFoundation-p3",
+    "reportedHead":  "e77b725",
+    "device":  "Pixel_10 API 37 Android 17 x86_64",
+    "densityDpi":  420,
+    "originalCount":  30,
+    "originals":  [
+                      {
+                          "path":  "light/child-home-settled.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "c63c53cdf9c2f8178ebd8a85c4d77c75a89d7418a057cd0c531358c0548b2379",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current controlled font 1.0 Home comparison"
+                      },
+                      {
+                          "path":  "light/my-circle.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "62f67a77b248059e655e0f4f8f5e73e9260750d59ea908aec531d7d770bf75a1",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "light/conversations.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "203a05a5f2b41fb2ed20033a781a0a89ceee87df088c1c77773fa148e564de11",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "light/appearance-settings.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "3788d0a72778a9a2230dba913c32fb62b7e3275248e0cfe13203bcefdaf20501",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "light/child-envelopes.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "509cf3d48c5288aa98ff4b86406df376d27c29045671e74bf68d2a63ebccb62f",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "light/child-chores.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "2d62c0fd5957399cc25e06e2be604c96ced4bbb38f9ca8af868d8e3e8a916ba5",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "light/child-checkin.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "c3d34dc7b30d806dec6fb99107f36c83e74e40c6d011a81da93762a6b9216f02",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "light/child-contact-request.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "8f019de1b481146e3a1b1a2bb33f32c21c85955db8e6d26a6d39fb55dbe2e912",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "light/parent-home.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "58f1f4f176ae6fccc6797f246e01f92d774464b2b7941d12f249f6026987b898",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "light/parent-circle.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "eb915e6c083cb45794a1d1291ddc29a1266d253a47a85101b578869f588d2617",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "light/parent-contacts.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "c91f283c8ee85294225d5c0e401ed55c0075bfbd9a972c25716a4e4d350589d6",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "light/checkin-overview.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "4b419f09fe2cc04482aa58b0fc6c949094e0320eedb11ba4e68324b32b07ceca",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "light/checkin-scheduler.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "3e3ba0cd82955575889a8fd877bcabe989f519c72465d50b40152ec7355dc3de",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "light/child-home.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "a04e04d5d8cd8a2d2c59b1b9d2980511cbedded4cb172b495eb02d55e102d8a9",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "regression: older mismatched typography; excluded from final pairs"
+                      },
+                      {
+                          "path":  "light/child-home-current.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "510ff4fad0aa55e7a15816a3b4067df69ef0707427397ea9de63cffb26e3afec",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "evidence: intermediate font 1.0 capture; dark debug warning overlay; excluded from final pairs"
+                      },
+                      {
+                          "path":  "dark/child-home-settled.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "3e00cf39789362079d25cfef81576630baa401c28a26b7a1eed3df49b49a61f6",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current controlled font 1.0 Home comparison"
+                      },
+                      {
+                          "path":  "dark/my-circle.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "fa2a264c043830e579b71d5e068d2b1badd70bc0495972f251ef810b188a35c7",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "dark/conversations.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "54341a5ca9f3468a92628e3404353094eac1ed55557884d21a33e21ca3373d39",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "dark/appearance-settings.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "43ce3e8a2158a9e5e92956c08b893d07d05025cd1a3e54f171184194f935caca",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "dark/child-envelopes.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "67ac71339106de899227e7fdca396c28188235f25abfff3266180c63ef2714d0",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "dark/child-chores.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "1a3f6b5f563ea586065ef91e41abd92fb733886952cc247c3b233c3facb2a41d",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "dark/child-checkin.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "5dbc2c33069b9a862d055ac4287dfae3135dc5f5e3f5e1cc3fc6fcc0b042afb6",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "dark/child-contact-request.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "9da010274464c5874925e234a8545e1d1f0672433f88068c45e2189dd1802ae7",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "dark/parent-home.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "b0d617e6472951e8e740105f0b68b34268d3fc1d6f384966ad5e18cb5ee1b95c",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "dark/parent-circle.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "917bb7f806311fc51b24512121bbeedc5d376a6d80c6ff81b91fae03d1b3905c",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "dark/parent-contacts.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "bbd19f33ff3342808f538db3fc51532dddc14e299072e942c7510a95f1a81ffb",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "dark/checkin-overview.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "bb2b346e4317f90f96a3c616cc147968720558ba5aa00c46026d866a02143f95",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "dark/checkin-scheduler.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "36d4cea476d3e17d9047a9efeb895bb966b7c841e2445b6cf5637f4c10d943dc",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "current intended screen; viewport/scroll limitations documented"
+                      },
+                      {
+                          "path":  "dark/child-home.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "1546dc74a131cf7bca29059bfb90532b6c427e494bbf1e677b02d78807eb2020",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "regression: older mismatched typography; excluded from final pairs"
+                      },
+                      {
+                          "path":  "dark/child-home-current.png",
+                          "width":  1080,
+                          "height":  2424,
+                          "sha256":  "2e98fd492f3a0f32e8808c1e6a44cd70dc774731236e8f95c829dc146a0c4ede",
+                          "visuallyInspected":  true,
+                          "labelMatchesPixels":  true,
+                          "classification":  "evidence: intermediate font 1.0 capture; dark debug warning overlay; excluded from final pairs"
+                      }
+                  ],
+    "composition":  "Root-approved System.Drawing fallback: full-resolution pair panels DrawImageUnscaled; labels outside frames; contact sheets are labelled overview thumbnails only",
+    "finalChildHomeSource":  "child-home-settled.png only; earlier Home originals preserved",
+    "excluded":  "Two historical regressions/ captures are preserved outside the 30 themed-source count",
+    "pending":  "No screenshot-organization work pending; physical-device, comprehensive accessibility/IME and public-release qualification remain outside this task",
+    "derivatives":  [
+                        {
+                            "path":  "comparisons/appearance.png",
+                            "width":  2184,
+                            "height":  2536,
+                            "sha256":  "24cc57e43e8fa607408bde0384a61ee8eae0f1e89b9fb7617e996e86f8c34739",
+                            "kind":  "full viewport pair; no resizing/cropping; labels outside frames"
+                        },
+                        {
+                            "path":  "comparisons/circle-child.png",
+                            "width":  2184,
+                            "height":  2536,
+                            "sha256":  "f14a47109bbea249ae530844f4d25ae2abf2fa5d6913e07d7e322dd1c5a72dc4",
+                            "kind":  "full viewport pair; no resizing/cropping; labels outside frames"
+                        },
+                        {
+                            "path":  "comparisons/contact-sheet-dark.png",
+                            "width":  1168,
+                            "height":  2704,
+                            "sha256":  "a8d5ecc986e3850a3fd7a783e2eb79ebcac2c80ce368fd4096b708866b2f3428",
+                            "kind":  "overview thumbnails only; full original viewport reduced"
+                        },
+                        {
+                            "path":  "comparisons/contact-sheet-light.png",
+                            "width":  1168,
+                            "height":  2704,
+                            "sha256":  "cab3e6a3d6d870955561213bdc59fd67d6b2c74a5f9fdec1c3d9c3913bcc666e",
+                            "kind":  "overview thumbnails only; full original viewport reduced"
+                        },
+                        {
+                            "path":  "comparisons/conversations-list.png",
+                            "width":  2184,
+                            "height":  2536,
+                            "sha256":  "dadc82520f74c58fc6a06fdf6e9c92aa3f9bbc0379bc785028cb5e7b9ab5847b",
+                            "kind":  "full viewport pair; no resizing/cropping; labels outside frames"
+                        },
+                        {
+                            "path":  "comparisons/finance-child-overview.png",
+                            "width":  2184,
+                            "height":  2536,
+                            "sha256":  "115dcb0a074a325143e97776b751e6582da1e607889945fd45effbb6bf432ac5",
+                            "kind":  "full viewport pair; no resizing/cropping; labels outside frames"
+                        },
+                        {
+                            "path":  "comparisons/home-child.png",
+                            "width":  2184,
+                            "height":  2536,
+                            "sha256":  "1df2b8bb344b28196b31d4b6a80f93c5cc80388b018c27008aa036966d46d0b7",
+                            "kind":  "full viewport pair; no resizing/cropping; labels outside frames"
+                        },
+                        {
+                            "path":  "comparisons/home-parent.png",
+                            "width":  2184,
+                            "height":  2536,
+                            "sha256":  "f3894ce415e37919cb7c77725c8843f0d3f038e955b5ed385b87cb8798f0c7d6",
+                            "kind":  "full viewport pair; no resizing/cropping; labels outside frames"
+                        }
+                    ],
+    "pairPlacement":  {
+                          "canvasWidth":  2184,
+                          "canvasHeight":  2536,
+                          "left":  {
+                                       "y":  112,
+                                       "width":  1080,
+                                       "height":  2424,
+                                       "x":  0
+                                   },
+                          "right":  {
+                                        "y":  112,
+                                        "width":  1080,
+                                        "height":  2424,
+                                        "x":  1104
+                                    }
+                      },
+    "extraSizeBucket":  {
+                            "imageCount":  6,
+                            "scope":  "Home only; three resized profiles on one Pixel_10 emulator, not three physical devices",
+                            "images":  [
+                                           {
+                                               "path":  "device-sizes/large-phone-home.png",
+                                               "profile":  "large-phone",
+                                               "width":  1440,
+                                               "height":  3120,
+                                               "densityDpi":  480,
+                                               "phase":  "initial",
+                                               "sha256":  "07aa76514d40040eff9c8f16cb2ca8ceca0d301f595d1ef2e24071dce7b05501",
+                                               "visuallyInspected":  true
+                                           },
+                                           {
+                                               "path":  "device-sizes/large-phone-home-retest.png",
+                                               "profile":  "large-phone",
+                                               "width":  1440,
+                                               "height":  3120,
+                                               "densityDpi":  480,
+                                               "phase":  "retest",
+                                               "sha256":  "dab1ff5f4083e4cdcb45f20581fef020a2efed1076b7d92e19a15f288ccc018b",
+                                               "visuallyInspected":  true
+                                           },
+                                           {
+                                               "path":  "device-sizes/small-phone-home.png",
+                                               "profile":  "small-phone",
+                                               "width":  720,
+                                               "height":  1280,
+                                               "densityDpi":  320,
+                                               "phase":  "initial",
+                                               "sha256":  "01d9d1f3e36f174a001af03bce72cddb751357775f968d701922c8f8418ec7df",
+                                               "visuallyInspected":  true
+                                           },
+                                           {
+                                               "path":  "device-sizes/small-phone-home-retest.png",
+                                               "profile":  "small-phone",
+                                               "width":  720,
+                                               "height":  1280,
+                                               "densityDpi":  320,
+                                               "phase":  "retest",
+                                               "sha256":  "4eff57d80243cfa828b5ea9bd93db7f9c4a64e1aa4544a44e3658ff46e28ffee",
+                                               "visuallyInspected":  true
+                                           },
+                                           {
+                                               "path":  "device-sizes/tablet-home.png",
+                                               "profile":  "tablet",
+                                               "width":  1600,
+                                               "height":  2560,
+                                               "densityDpi":  240,
+                                               "phase":  "initial",
+                                               "sha256":  "27d178b8a9a0db7bad943cb784ae4c9aebfb707e3ba31be56a1b75791d9e4083",
+                                               "visuallyInspected":  true
+                                           },
+                                           {
+                                               "path":  "device-sizes/tablet-home-retest.png",
+                                               "profile":  "tablet",
+                                               "width":  1600,
+                                               "height":  2560,
+                                               "densityDpi":  240,
+                                               "phase":  "retest",
+                                               "sha256":  "286c8d5dc57c461a4ff0e3d7ddde79c670ca3436280d638f065584d222368313",
+                                               "visuallyInspected":  true
+                                           }
+                                       ],
+                            "interactionResults":  [
+                                                       {
+                                                           "path":  "device-sizes/interaction-results.json",
+                                                           "sha256":  "334cfe197068ae3e28ee058f8c5f77cc7139041b4997d3d64fca17aa66bd9270",
+                                                           "provenance":  "Owner-run native UI metadata; not sufficient alone to establish unclipped pixels"
+                                                       },
+                                                       {
+                                                           "path":  "device-sizes/interaction-retest.json",
+                                                           "sha256":  "7fa7a96c46b54dec46218622af46c648142d1fe61cc993ab236d1e0ebe52434d",
+                                                           "provenance":  "Owner-run native UI metadata; not sufficient alone to establish unclipped pixels"
+                                                       },
+                                                       {
+                                                           "path":  "device-sizes/keyboard-results.json",
+                                                           "sha256":  "95cc0a75d68d2a42cb2951b16a21ee3e7b8a92c31e658067ccbd190ea2ecc15a",
+                                                           "provenance":  "Owner-run actual visible-IME tap test; metadata only, no private-screen capture; no message sent"
+                                                       }
+                                                   ],
+                            "restoredOwnerReported":  "1080 x 2424; density 420; font scale 1.0",
+                            "openFinding":  "Unconfirmed subjective extra glyph beside small-phone Help; repeated owner inspection did not corroborate it and no separate text node surfaced; not a proven runtime defect or handoff blocker"
+                        },
+    "sourceUpdatesOwnerReported":  {
+                                       "priorNativeSource":  "07e333e",
+                                       "backendSource":  "467c530",
+                                       "keyboardFixSource":  "0c2d325",
+                                       "nativeReport":  "NATIVE_QA_REPORT.md",
+                                       "captureProvenanceUnchanged":  true
+                                   },
+    "finalInteractionEvidence":  {
+                                     "scope":  "Owner-run interactions on one resized emulator; no new private-screen capture",
+                                     "fontRoundTrip":  "1 to 2 to 1; words and focus retained; appended text succeeded",
+                                     "keyboard":  {
+                                                      "path":  "device-sizes/keyboard-results.json",
+                                                      "profile":  "small-phone",
+                                                      "width":  720,
+                                                      "height":  1280,
+                                                      "densityDpi":  320,
+                                                      "keyboardShown":  true,
+                                                      "yourWordsBounds":  "[32,386][688,490]",
+                                                      "textFieldHeightPx":  104,
+                                                      "textFieldHeightDp":  52,
+                                                      "reviewBounds":  "[32,552][688,650]",
+                                                      "actualTapReachedReviewedSendControls":  true,
+                                                      "messageSent":  false
+                                                  },
+                                     "restored":  "1080 x 2424; density 420; font scale 1.0",
+                                     "imageInventory":  "30 themed originals plus 6 Home-size originals; keyboard evidence is JSON and owner observation only",
+                                     "qualification":  "Not comprehensive accessibility, physical-device or native public-release qualification"
+                                 }
+}

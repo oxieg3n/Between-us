@@ -1,0 +1,66 @@
+# Own account and narrow privacy portal
+
+Source prepared 2026-11-16. Migration `202611160011_account_management.sql.pending` requires 001–010 and root review/serial activation. No migration was executed by this author. This is synthetic development, with public enrollment, real-child data and staffed-response promises OFF. No legal consent/deletion certification is implied.
+
+## Authentication boundary
+
+Managed Supabase Auth remains the sole issuer/verifier of credentials and sessions. The four read RPCs below use 004's `app_private.privacy_identity_actor()`: valid unexpired JWT, live matching Auth session, nonbanned/nondeleted managed user and permitted own profile. They do **not** invoke or weaken ordinary `actor()`, family membership, contact, consent or financial authorization.
+
+A child whose consent was withdrawn can still reach their own identity/case-status portal while ordinary family context/chat/finance remain denied. This works because withdrawal suspends child authority, not their own managed account identity. A removed Auth session, expired JWT, suspended profile, unverified adult, account ban/deletion or another user's session ID is denied. Closed profiles retain only the limited own-identity workflow allowed by 004, not product access. Root integrates the ordinary `get_context` authorization-failure fallback; transport/server failures must not be treated as a successful login.
+
+No family, child directory, email, guardian list, message body, report evidence, financial projection, role override or service credential appears in the minimal context. Safety information/help from another safe adult remains outside this portal and never requires guardian consent.
+
+## Verified native-session projection — ordinary authority only
+
+`get_verified_session({})` returns exactly `{iss,sub,session_id,exp,role:'authenticated'}` from the same PostgREST-verified bearer after ordinary `app_private.actor()` rechecks current managed session/profile/child authority. Expiry is numeric; subject/session are the validated UUIDs. This does not use the historical privacy helper and cannot restore a withdrawn child's family/journal namespace access. It introduces no decoder, signing, token issuance, custom verification cryptography or claim-controlled role grant.
+
+The private RLS `account_management_policy.auth_issuer` defaults NULL, which denies this projection. Root's synthetic local seed must set the exact local Auth issuer `http://127.0.0.1:54321/auth/v1` after migration activation. Hosted release review must explicitly configure the exact project issuer before use; clients also compare this returned signed issuer to the expected backend issuer. Missing/mismatched signed issuer or role other than `authenticated` is denied. The new policy is not client-readable/writable and does not override issuer behavior in older domain helpers. PostgREST/global issuer/audience configuration remains a separate hosted-release qualification.
+
+This RPC supports the native SDK environment where its limited S256 PKCE WebCrypto shim cannot perform ECDSA `getClaims` verification. Root uses this same-token managed-server projection together with managed Auth `getUser`; Node's full-WebCrypto privacy service remains unchanged. SQL fixtures test claims/authorization; only actual HTTP tests can prove the PostgREST signature boundary against a fabricated JWT. No signature-bypass flag is introduced.
+
+## Authenticated RPC signatures
+
+All parameters use JSON object keys exactly as shown. No caller UID/role parameter is accepted. Mobile calls every RPC/API with its captured expected UID as the third client argument.
+
+| RPC | Arguments | Result |
+| --- | --- | --- |
+| `get_privacy_context()` | `{}` | `{userId: UUID, kind: 'parent'\|'child', state: string}` only. |
+| `list_own_sessions()` | `{}` | Latest 50 own nonexpired Auth session records: `{id, createdAt, current, deviceLabel}[]`. Generic labels are “Current signed-in session” / “Other signed-in session”; records are not attested physical devices. No user agent, IP/location, token, refresh secret or other person's session. `createdAt` can be null. Current session is determined from verified JWT session ID, and can fall outside the latest-50 window. |
+| `list_own_case_statuses()` | `{}` | Latest 50 across own reporter safety cases, own requester privacy requests and own lifecycle jobs: `{id,kind:'report'\|'privacy'\|'job',status,response,createdAt}[]`. Response is own operator response or null. No evidence, subject/reported person/operator identity, other person's case or raw artifact. Expired ready artifacts show `expired`; job completion is obtained separately. |
+| `list_own_consent_statuses()` | `{}` | Latest 50 version records for one's own child identity or a currently authorized guardian's child: `{id,childId,status,noticeVersion,policyVersion,expiresAt,current}[]`. `current` means verified and unexpired record, not independent permission to use a domain. No method/evidence/verifier/guardian identity or private case. |
+
+Read RPCs require no fresh password solely to view this minimal own metadata; they still revalidate the managed session on every request. They grant no raw-table privileges. An unassigned operator gets only their own metadata through these calls. Existing assigned-operator functions remain separate and independently authorized.
+
+## Own-data actions and UI
+
+`ProductionAccount({context?,identity?,onBack,onSignOut?,onSignOutOthers?})` accepts either ordinary `AccountContext` or minimal `{userId,kind,state}` identity. It keys the workspace by UID and passes that UID into every `accountRpc` and `accountApi`. Existing context wins if both are supplied; the root must not combine identities from different accounts. Async completions are ignored after unmount/background; secrets/artifact text and local reauth indication clear on background. No local journal is read. UI labels distinguish a request, executed stage, available partial export and completed export. Full deletion always remains explicitly incomplete under the current lifecycle contract.
+
+1. Choose export request, deletion request or retrieval purpose. Enter the **current account's** password and, when required, authenticator code. `POST /v1/privacy/reauthenticate` body `{password,totp?}` uses managed authentication and returns `{expiresAt}`. Root owns the route/restart and managed password/MFA verification; the UI never attests success itself. Values stay in screen memory and are cleared after the attempt/background. No logging, file, clipboard or persistence is introduced.
+2. Request export with `request_own_export({p_client_id: UUID})`, or explicitly confirm deletion then call `request_own_deletion({p_client_id: UUID})`. A single pending command retains the same UUID/kind through uncertain retries; a confirmed authorization/validation rejection releases it. The 004 policy, strong reauthentication and independent review/executor gates still apply. The response is a recorded request, not an executed export/deletion.
+3. Select one's own job from the latest statuses or the just-recorded request. `get_own_privacy_job({p_job_id})` supplies server status, actual stages, generic public blockers and precise completion flags. Nothing here lets a guardian inspect a child's own job or request their journal.
+4. After fresh reauthentication, explicitly choose complete retrieval or available partial retrieval using `get_own_export({p_job_id,p_allow_partial:false|true})`. Only this deliberate button loads own artifact JSON into a selectable private screen. No automatic download, public Downloads path, copy/share or backup is created. Partial/expired data is marked incomplete; hiding/leaving/backgrounding clears the displayed object. A person can deliberately copy selected text using OS controls, which the app cannot later erase from a destination.
+
+The root's service must remain default-closed until reviewed policy/reauth methods/operator evidence exist. Local synthetic fixtures can demonstrate execution; they do not prove real VPC, legal erasure, staffed service or vendor/backups deletion. Held/shared ledger/Auth/vendor/backups records remain explicit blockers. No journal table exists, and an export cannot include device-only writing, hidden parent matching in a child's projection or another person's confidential report. See [lifecycle contract](PRIVACY_LIFECYCLE_API.md).
+
+`withdraw_consent({p_child_id})` preserves 001's signature and current actor/family checks. The screen requires a separate confirmation describing loss of chat/finance access versus deletion. An active child can withdraw their own consent without guardian permission; an active authorized guardian can withdraw a child in their current family. Minimal identity alone does not authorize withdrawal or restore suspended membership. Version metadata is not a consent-grant control. Guardian-managed onboarding remains required at every child/teen age, with distinct own credentials/acceptance and separate legally required teen consent.
+
+The optional `onSignOutOthers(expectedUserId: string): Promise<void>` callback is root-integrated using official managed Auth logout scope `others` against the captured own JWT. It must enforce the passed UID before dispatch and throw on unconfirmed server revocation; only then does this screen show success. The callback does not clear the current account. `onSignOut(expectedUserId?)` remains root-owned. The SQL session list is read-only; there is no custom token issuance, cryptography or session revoker. No device/IP promise or remote journal wipe is implied.
+
+## Resource caps, metadata and lock order
+
+`families.created_by` records the authenticated creator only for future `create_family` calls; historical rows remain NULL rather than guessing from current guardians. Existing signatures and public/child enrollment gates are preserved.
+
+- Maximum four families created by one actor over their recorded history and maximum four active guardian/admin memberships. A shared membership-admission trigger enforces the admin cap for invite acceptance too. Revoking an admin slot does not erase creator attribution or permit unlimited new families. Historical NULL creators still count through their actual active admin memberships; unknown historical authorship is not reconstructed.
+- Maximum twelve nonclosed child registry rows per family, including pending/suspended children. Closing a row releases capacity; it does not certify erasure or bypass hourly budget.
+- Consent requests reuse the same actor/child/current-notice/current-policy pending record under the existing family lock. Changed/old notice versions never bypass the policy check. Parent approval cannot self-verify it.
+- Successful mutation budget: family creation four, child creation 24, new consent requests twelve per actor/server-clock hour. Exact pending-consent reuse does not spend another request. Counters are bounded to one private row per actor/operation and reset atomically at the next server hour. Failed transactions roll back counters; these are committed-resource limits, not a comprehensive network/failed-login rate limiter. No quota can be changed by authenticated callers.
+
+Existing family operations lock the family first. Budget updates follow their family lock. Guardian admission takes a distinct per-administrator advisory lock after existing family locks; creation takes that same administrator lock before creating a **new** family, never before waiting on another existing family. This serializes admission/count checks without adding a reversed existing-family lock. Root should exercise concurrent admission/creation in integration; source tests establish deterministic branches, not a concurrent stress result. No service may bulk reassign cross-user memberships in arbitrary lock order.
+
+The new counters/creator metadata are restricted operational identity metadata, not content or a deletion claim. Full account erasure remains blocked by the existing shared/held/Auth lifecycle limits; final legal data inventory/retention must include these fields. All new helper execution is revoked from public/anon/authenticated; only named own projections and preserved APIs are granted. Raw budget table has RLS and no client grants.
+
+## Validation status
+
+Source tests in `supabase/tests/account_management.test.sql` cover forged roles/sessions, withdrawn-child privacy versus ordinary authorization, reporter confidentiality, no evidence/UA/IP/token projection, latest-50 bounds, active/creator/all-admission family caps, nonclosed child caps, pending reuse and server-hour budgets. Root must activate/run the pending migration serially and record actual pgTAP results. This author has not executed SQL, managed Auth, native builds, Docker or Git for this slice.
+
+Mobile full typecheck and targeted ESLint passed after the account screen changes. Initial targeted lint found escaped-text/effect warnings; those were corrected before the passing checks. Root UI/Auth interactions and activated SQL tests remain unrun by this author. No physical-device/production UI check, actual logout-other-sessions result, hosted resource or public account collection is established here.

@@ -1,0 +1,194 @@
+{
+  "build": "1116-ProductionFoundation-p3",
+  "applicationSource": "0c2d325bd840037eefd5abb78565afc6184b5ed5",
+  "branch": "feature/production-foundation",
+  "hashScope": "SHA-256 of actual local file bytes; source newline normalization may differ in a fresh checkout. No private configuration included.",
+  "locks": [
+    {
+      "path": "apps/mobile/package-lock.json",
+      "sha256": "ee9587c22088e126016107d8b3fa8423857f490aced7cd9159d1fd4f297f4852"
+    },
+    {
+      "path": "services/backend/package-lock.json",
+      "sha256": "2fc6ae62460b6d93d0ee6ba51984c52b248d5199b019efa8d26f85b50be6e1d4"
+    }
+  ],
+  "nativeSource": [
+    {
+      "path": "apps/mobile/app.json",
+      "sha256": "481373d222fcf23cbd21daab0461d842dbf650e224bb481abdeb0303a33df301"
+    },
+    {
+      "path": "apps/mobile/plugins/with-adaptive-display.js",
+      "sha256": "685d34280068f2838b9261db3f53a5484424f54ac01687d4d239bc80725402fb"
+    },
+    {
+      "path": "apps/mobile/plugins/withProductionSigning.cjs",
+      "sha256": "2cddd79ed9be55c97866296dad83de4cbf613b16a50b5513578f80fba1c6ad56"
+    },
+    {
+      "path": "apps/mobile/plugins/withProductionTransport.cjs",
+      "sha256": "3eaeda7602fd3273e1159a1d0edb16ccee0460bdd64e2075bd9da7328ca39c2f"
+    },
+    {
+      "path": "apps/mobile/plugins/withWritingConfiguration.cjs",
+      "sha256": "2c5bb659f90bfeec22788e50a85c5ac541697f060b1666db095e1dcfd4b3f2ae"
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/android/src/main/java/com/oxieg3n/betweenus/protection/BetweenUsProtectionModule.kt",
+      "sha256": "3363cfb0275513768bb585c24396f579b302ee3fdb11396319a48de37faf0223"
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/ios/BetweenUsProtectionModule.swift",
+      "sha256": "e207074567e2bd289c0e0fa17fc33ffafaa6f86045718cb08785b89bbbd83d83"
+    }
+  ],
+  "migrations": [
+    {
+      "path": "services/backend/supabase/migrations/202611160001_identity.sql",
+      "sha256": "b622999f0138baa0d6878d6eeca8781358c1c4830c23b09fe7843903d5e76a72"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160002_communication.sql",
+      "sha256": "4b8dcb093739dd945080106837c68140c5e35ed45eca257e1a8aac09f3d82b88"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160003_finance.sql",
+      "sha256": "f61d2b75bb613e5f7976de47b783c1cacdc23a79814b6ae39a7c2f6d6fb0e5dd"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160004_privacy_lifecycle.sql",
+      "sha256": "48fc970218033b6b79f949a764a3ecee6b5d524c3f8b47107cf1867ec94f066a"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160005_case_authorization.sql",
+      "sha256": "2979b4bab240fd39e85ea4818b5184b00b2eb0953a29efcc4d0818544ea8b9c6"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160006_auth_metadata.sql",
+      "sha256": "0ca4c7462455e72450e18c5943a032818a1e2036a00e98c8549e6f5beec7c6b0"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160007_auth_updates.sql",
+      "sha256": "09281514ff1d1a12a9189f8f2660a7af0eec11ae45fca0a6b3a1ab4bca4df590"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160008_external_contacts.sql",
+      "sha256": "9550b6fe16fdfe76ade4ba8a814fa70f06d5d85612daab4178515ce63ba5777c"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160009_notification_receipts.sql",
+      "sha256": "7b2a4a667b4006bb8e045e96042bd5bc3fe190b939adb988bde161e6c07fd072"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160010_checkins.sql",
+      "sha256": "cc7d829432c8b9124cddd605922fa71948d9da7bc8234c61ecb74b7095e5c85c"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160011_account_management.sql",
+      "sha256": "fe982fecb3ad12e2bc769e3a53693c1433407f26a345a6cdec70ead6b830409a"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160012_receipt_lock_order.sql",
+      "sha256": "353b9e9cdf99c5176ae7be200ecb0c60c92b85bfaf14c64d94978dc0a4b00a99"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160013_domain_notifications.sql",
+      "sha256": "8134a0fe4be9e0420bbb77b8e6bd8cb3623a44b766503e9af2cebfb5444c71c9"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160014_parent_finance_export.sql",
+      "sha256": "3afe9cd0002b22beafda0b109a61fc73dd6800354fe7e8997e6cdd42276bbcf4"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160015_privacy_execution_fix.sql",
+      "sha256": "20e2a6a4052e504259fc9be631c2afffe16feef5a89cfb8df36aa75bdf977eef"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160016_conversation_previews.sql",
+      "sha256": "56ba150ea7966d7f31ab87e433483c294b668140135cbdf1d186f34cd829e4dd"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160017_invalidation_authorization.sql",
+      "sha256": "0e7b47fe65943a1e40a3313acf4cfccef7e80e7e2c3a17238e1353b79935ac32"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160018_message_response_preferences.sql",
+      "sha256": "08a657c40cc1f1e3805d42b150f0bf45742387f909e60026c65177242abb77df"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160019_family_administration.sql",
+      "sha256": "02e7246fa142b33db3d8737a1841ef53afa2304891672e16e4c1bac951423495"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160020_invalidation_retention.sql",
+      "sha256": "8c152791f4fe35c3a430b35355212986cb8d14848117d2f1894a5a7317435b03"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160021_context_child_eligibility.sql",
+      "sha256": "01894061cd76e93f857113c424e3f07ffd9459782db548d39eae6bb38b51cd66"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160022_message_receipts.sql",
+      "sha256": "9099f80505c9dbaa55a6fddcafbfcb4e1e0e20263cc0c725379a93d5b9b71c1a"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160023_finance_notifications.sql",
+      "sha256": "e9351749e9547d5e55307fd1223dd7b046911dfdeecb65948396474e6f6fc978"
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160024_journal_session_lease.sql",
+      "sha256": "1954ccf577a864415547d67ce01ac34c3d0048e056d7941a6f827fb9af80f6c2"
+    }
+  ],
+  "apk": {
+    "path": "apps/mobile/android/app/build/outputs/apk/debug/app-debug.apk",
+    "bytes": 125217918,
+    "sha256": "5fbbc33431e84b401b0fbea137e646a3d3d6bf1eab8767c180e1f811f4dfe594",
+    "kind": "Debug native shell, current JavaScript served separately by Metro; not an embedded signed release"
+  },
+  "localExports": [
+    {
+      "path": "apps/mobile/.expo/export-p3-final/+not-found.html",
+      "bytes": 20712,
+      "sha256": "552e58f6c5479f38c18f99730a9f823fffb34680eb4307fed8bf8e8bb994eada"
+    },
+    {
+      "path": "apps/mobile/.expo/export-p3-final/_expo/static/js/android/entry-7feaad9bd034bcf04180e3c665381a74.hbc",
+      "bytes": 4487215,
+      "sha256": "4b2451470bbab4598de685a3dc34f19dc99a6f3733627247b553c316b108bad4"
+    },
+    {
+      "path": "apps/mobile/.expo/export-p3-final/_expo/static/js/ios/entry-8abf229eca4950d3985cc7ef63b66447.hbc",
+      "bytes": 4494486,
+      "sha256": "55056776cce1fc192e5f75065d0483cd42dcd7b3091e9473f6a564835d875f93"
+    },
+    {
+      "path": "apps/mobile/.expo/export-p3-final/_sitemap.html",
+      "bytes": 20712,
+      "sha256": "552e58f6c5479f38c18f99730a9f823fffb34680eb4307fed8bf8e8bb994eada"
+    },
+    {
+      "path": "apps/mobile/.expo/export-p3-final/accounts.html",
+      "bytes": 27209,
+      "sha256": "422fbcc836d4371c853f0816e8a88c46823c7e14aee904133a2eb4fb6f747425"
+    },
+    {
+      "path": "apps/mobile/.expo/export-p3-final/auth/callback.html",
+      "bytes": 22656,
+      "sha256": "b6191f016afcd00e3dc9acef02250369b51a157116643af1e08515a02b44be8e"
+    },
+    {
+      "path": "apps/mobile/.expo/export-p3-final/index.html",
+      "bytes": 21404,
+      "sha256": "b1ed9d3b9da05a81c59d918b9565268d5fa07da2a131d4ece44e844fc7a8d758"
+    },
+    {
+      "path": "apps/mobile/.expo/export-p3-final/native-check.html",
+      "bytes": 21674,
+      "sha256": "716ffc31b3724359afbff29f5b966f050146f17a308ec45dea32f6c9fcf2079b"
+    }
+  ],
+  "nativeIosBuildTested": false,
+  "publicDemoUnchanged": true
+}

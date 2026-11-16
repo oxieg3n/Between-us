@@ -50,7 +50,7 @@ Auth secrets never use AsyncStorage/plain files; the client adapter handles nati
 
 ## Deployment, controls and review
 
-Local, staging and production have separate projects/secrets, policy records, origin/redirect allowlists and signing identities. Local stack/seed commands are guarded against non-loopback targets. No synthetic consent or staff fixture may be enabled in a release. Production configuration fails on missing HTTPS, legal/retention/operator approvals or private keys in public variables. CI runs migrations, authorization/concurrency/integration tests and app checks; deployment is manual and owner-approved. No main/Pages workflow is changed.
+Local, staging and production have separate projects/secrets, policy records, origin/redirect allowlists and signing identities. Local stack/seed commands are guarded against non-loopback targets. No synthetic consent or staff fixture may be enabled in a release. Production configuration fails on missing HTTPS, legal/retention/operator approvals or private keys in public variables. The inactive CI template prepares migrations, authorization/concurrency/integration tests and app checks; installation requires owner workflow permission and dispatch requires quota approval. Deployment is manual and owner-approved. No main/Pages workflow is changed.
 
 Implement bounded payloads/pagination, transactional rate/budget counters, request IDs without content logs, health/readiness checks, security-event metadata, backup/restore drills, deletion/export jobs and rollback runbooks. Quota budgets reject expensive work before exhaustion; notification delivery defaults disabled and no service silently upgrades a plan. See [security review](SECURITY_REVIEW.md) and release checklist as they evolve.
 

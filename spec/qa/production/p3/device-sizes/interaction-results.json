@@ -1,0 +1,56 @@
+[
+  {
+    "profile": "small-phone",
+    "size": "720x1280",
+    "density": "320",
+    "navLabels": [
+      "Home",
+      "Journal",
+      "Chats",
+      "Circle"
+    ],
+    "navBounds": [
+      "[12,1224][183,1280]",
+      "[187,1224][358,1280]",
+      "[362,1224][533,1280]",
+      "[537,1224][708,1280]"
+    ],
+    "primaryAvailable": true
+  },
+  {
+    "profile": "large-phone",
+    "size": "1440x3120",
+    "density": "480",
+    "navLabels": [
+      "Home",
+      "Journal",
+      "Chats",
+      "Circle"
+    ],
+    "navBounds": [
+      "[18,2838][365,3030]",
+      "[371,2838][717,3030]",
+      "[723,2838][1070,3030]",
+      "[1076,2838][1422,3030]"
+    ],
+    "primaryAvailable": true
+  },
+  {
+    "profile": "tablet",
+    "size": "1600x2560",
+    "density": "240",
+    "navLabels": [
+      "Home",
+      "Journal",
+      "Chats",
+      "Circle"
+    ],
+    "navBounds": [
+      "[9,2407][402,2504]",
+      "[405,2407][799,2504]",
+      "[802,2407][1195,2504]",
+      "[1198,2407][1591,2504]"
+    ],
+    "primaryAvailable": true
+  }
+]
