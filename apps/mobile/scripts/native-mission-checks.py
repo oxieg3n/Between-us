@@ -331,8 +331,8 @@ class NativeChecks(LIB.MissionCapture):
                 self.fresh_theme(theme)
                 if self.args.section in ("all", "responsive"):
                     self.responsive(theme)
-                    if self.args.section == "all":
-                        self.opaque_references(theme)
+                    self.opaque_references(theme)
+                if self.args.section in ("all", "font"):
                     self.font_scale(theme)
                 if self.args.section in ("all", "interaction"):
                     self.keyboard_and_review(theme)
@@ -384,7 +384,7 @@ def main():
     parser.add_argument("--app-package", default="com.oxieg3n.betweenus")
     parser.add_argument("--port", type=int, default=8082)
     parser.add_argument("--theme", choices=("light", "dark", "both"), default="both")
-    parser.add_argument("--section", choices=("all", "responsive", "interaction", "density"), default="all")
+    parser.add_argument("--section", choices=("all", "responsive", "font", "interaction", "density"), default="all")
     parser.add_argument("--run-id")
     parser.add_argument("--replace", action="store_true")
     parser.add_argument("--self-test", action="store_true")
@@ -402,6 +402,12 @@ def main():
             raise AssertionError("A hidden keyboard was accepted as proof.")
         assert override_value("size", "Physical size: 1080x2424") == "reset"
         assert override_value("density", "Physical density: 420\nOverride density: 320") == "320"
+        for rect in ([0, 310, 1080, 2147], [63, 400, 1017, 2200], [0, 310, 1080, 1500]):
+            x1, y1, x2, y2 = LIB.gutter_swipe(rect, "down")
+            assert rect[0] < x1 == x2 < rect[2]
+            assert rect[1] < y2 < y1 < rect[3]
+            assert x1 > rect[2] - 63  # Outside the phone/modal's interactive content padding.
+            assert LIB.gutter_swipe(rect, "up") == (x1, y2, x2, y1)
         sample = object.__new__(NativeChecks)
         sample.width, sample.height = 1920, 2560
         sample.find = lambda *args, **kwargs: {"bounds": "[1760,100][1900,220]"}

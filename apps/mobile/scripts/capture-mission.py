@@ -40,6 +40,16 @@ def edit_text_node(root, label, matches, bounds):
                  and matches(node, label) and bounds(node)), None)
 
 
+def gutter_swipe(rect, direction):
+    left, top, right, bottom = rect
+    if right <= left or bottom <= top or direction not in ("up", "down"):
+        raise ValueError("A valid scroll viewport and direction are required.")
+    x = right - min(24, max(1, (right - left) // 8))
+    high = top + (bottom - top) // 4
+    low = top + (bottom - top) * 3 // 4
+    return (x, low, x, high) if direction == "down" else (x, high, x, low)
+
+
 def git(*parts):
     return subprocess.check_output(
         ["git", "-C", str(PROJECT), *parts], cwd=PROJECT, text=True,
@@ -61,6 +71,40 @@ class MissionCapture(BASE.NativeCapture):
         self.area = "finance"
         self.metadata = {}
         BASE.CAPTURES = self.root
+
+    def swipe(self, direction):
+        # Start in the scroll view's padding, outside buttons, header and navigation.
+        candidates = []
+        for node in self.tree().iter("node"):
+            if node.get("scrollable") == "true" and node.get("class", "").endswith("ScrollView") and self.bounds(node):
+                rect = list(map(int, re.findall(r"-?\d+", node.get("bounds", ""))))
+                if len(rect) == 4:
+                    candidates.append(rect)
+        if not candidates:
+            return
+        rect = max(candidates, key=lambda r: (r[2] - r[0]) * (r[3] - r[1]))
+        self.command("shell", "input", "swipe", *gutter_swipe(rect, direction), 350)
+        time.sleep(0.3)
+
+    def home(self):
+        self.tap("Home", scroll=False)
+        deadline = time.monotonic() + 15
+        while True:
+            home = self.find("Home", clickable=True)
+            if home is not None and home.get("selected") == "true" and self.find("Between Us") is not None:
+                break
+            if time.monotonic() >= deadline:
+                raise RuntimeError("Native navigation did not settle on Home.")
+        self.require("Some things are", prefix=True)
+        self.top()
+        if self.find("Some things are", prefix=True) is None:
+            raise AssertionError("Scrolling Home unexpectedly changed its destination.")
+
+    def role(self, role):
+        self.settings()
+        self.tap(f"Switch to {role} demo")
+        self.wait_visible(f"Hi, {'Sam' if role == 'child' else 'Alex'}.", timeout=15)
+        self.top()
 
     def note(self, message):
         print(message, flush=True)
