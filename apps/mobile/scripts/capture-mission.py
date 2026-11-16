@@ -183,7 +183,9 @@ class MissionCapture(BASE.NativeCapture):
         self.wait_ready()
         deadline = time.monotonic() + 90
         while time.monotonic() < deadline:
-            if self.find("Explore as Sam", clickable=True) is not None:
+            # Large text can place the onboarding action below the first viewport.
+            if any((self.matches(node, "Explore as Sam") and node.get("clickable") == "true")
+                   or self.matches(node, "BETWEEN US") for node in self.tree().iter("node")):
                 self.tap("Explore as Sam")
                 self.wait_visible("Hi, Sam.")
                 break

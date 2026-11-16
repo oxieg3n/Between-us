@@ -97,10 +97,27 @@ class NativeChecks(LIB.MissionCapture):
         cases = [("small", 840, 1680, 420), ("standard", 1080, 2424, 420),
                  ("large", 1260, 2730, 420), ("tablet", 1920, 2560, 320)]
         for name, width, height, density in cases:
+            draft = "Fictional writing stays here while display size changes."
+            if name == "tablet":
+                self.tap("Journal", scroll=False)
+                self.tap("New entry")
+                self.field("Entry title", "Fictional display change")
+                self.field("Your private demo words", draft)
             self.command("shell", "wm", "size", f"{width}x{height}")
             self.command("shell", "wm", "density", density)
             self.read_size()
             self.settle()
+            if name == "tablet":
+                if self.locate_field("Your private demo words").get("text") != draft:
+                    raise AssertionError("Display-density change lost or changed the unsaved journal draft.")
+                if any("linking in multiple places" in node.get(key, "").lower()
+                       for node in self.tree().iter("node") for key in ("text", "content-desc")):
+                    raise AssertionError("Display-density change produced a duplicate-linking warning.")
+                self.capture(theme, "tablet-draft-retained", "Actual unsaved writing survived the live density change; no content persistence was introduced.")
+                self.tap("Save entry")
+                self.result(f"{theme} density draft retention", result="passed",
+                            interaction="Typed through native fields before density change and verified identical unsaved text afterward.")
+            self.wait_visible("Home", clickable=True)
             self.home()
             nav = self.navigation()
             self.capture(theme, f"{name}-home", "Actual single-AVD viewport override; four native navigation destinations remain visible.")
@@ -126,6 +143,8 @@ class NativeChecks(LIB.MissionCapture):
     def font_scale(self, theme):
         self.command("shell", "settings", "put", "system", "font_scale", "2.0")
         self.settle()
+        # Font scale remains an OS-managed Activity configuration; start a settled test session.
+        self.fresh_theme(theme)
         self.home()
         nav = self.navigation()
         self.capture(theme, "font-200-home", "Actual 200% Android font scale; navigation remains reachable without clipping.")
@@ -152,7 +171,7 @@ class NativeChecks(LIB.MissionCapture):
                     interaction="Scrolled confirmation and cancelled without saving settings.")
         self.command("shell", "settings", "put", "system", "font_scale", "1.0")
         self.settle()
-        self.role("child")
+        self.fresh_theme(theme)
 
     def keyboard_and_review(self, theme):
         self.home()

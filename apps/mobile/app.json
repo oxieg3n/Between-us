@@ -40,10 +40,11 @@
         }
       ],
       "llama.rn",
-      "./plugins/with-short-native-paths"
+      "./plugins/with-short-native-paths",
+      "./plugins/with-adaptive-display"
     ],
     "extra": {
-      "buildId": "1115-FamilyEnvelopes-Journal-r6"
+      "buildId": "1115-FamilyEnvelopes-Journal-r7"
     }
   }
 }
