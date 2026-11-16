@@ -20,7 +20,7 @@ let lifecycle = Promise.resolve();
 let version = 0;
 let pending = 0;
 let download: AbortController | undefined;
-let message = "Optional on-device model not loaded. Physical-device validation is still pending.";
+let message = "Optional on-device model not loaded. Local conversation starters are available.";
 
 function nativeAvailable() {
   try {
@@ -114,7 +114,7 @@ async function initialize(file: File, expected: number) {
   const loaded = await runtime.initLlama({ model: file.uri, n_ctx: 1024, n_threads: 2, n_gpu_layers: 0, n_parallel: 1, use_mmap: true });
   if (version !== expected) { await loaded.release(); assertCurrent(expected); }
   context = loaded;
-  message = "Experimental on-device model loaded. Review every starter; physical-device validation is still pending.";
+  message = "Experimental on-device model loaded. Review every starter before sharing.";
 }
 export function loadDownloadedModel(): Promise<void> {
   return manage(async (expected) => {

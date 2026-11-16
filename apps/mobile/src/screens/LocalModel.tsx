@@ -51,40 +51,26 @@ export function LocalModelScreen() {
       <Eyebrow>OPTIONAL · NO CLOUD INFERENCE</Eyebrow>
       <Heading large>Words, on this device.</Heading>
       <Body>
-        Local conversation starters work without a model. An optional language
-        model can suggest wording on a compatible native build. You still choose
-        a person, edit and review every message.
+        Get editable conversation starters on this device. You choose the
+        person, then edit and review before sharing.
       </Body>
       <Body>{status.message}</Body>
-      <Body muted>
-        Experimental prototype. Physical-device validation is pending. Expo Go
-        and web use the labeled local-template fallback.
-      </Body>
-      <Divider />
-      <Body>
-        The optional download is about 369 MiB and needs at least 1 GiB of free
-        storage for setup. Only model files are saved. Journal text, prompts,
-        drafts and financial records stay in memory.
-      </Body>
-      <Body muted>
-        Download uses the public Hugging Face model source. Your writing is
-        never included. There is no paid inference service; ordinary
-        network/data charges may still apply.
-      </Body>
+      {status.available && <Body>Optional download: 369 MiB. Keep at least 1 GiB of storage free. Only model files are saved; your writing stays in memory.</Body>}
+      {(status.ready || !status.available) && <Button label="Write in My Journal" primary onPress={() => app.go("Journal")} />}
       {busy && (
         <Body>
           Setting up the optional model… You can cancel or leave this screen.
           Keep using fictional information.
         </Body>
       )}
-      <Button
+      {status.available && <><Button
         label="Download & load optional model"
-        primary
+        primary={!status.ready}
         disabled={!status.available || busy}
         onPress={() =>
           app.confirm(
             "Download the optional model?",
-            "Download the pinned 369 MiB Apache-2.0 model, verify its SHA-256, then load it on this device? Journal text is never sent. Model files remain until the app’s data is removed.",
+            "Download the pinned 369 MiB Apache-2.0 model from its public Hugging Face source, verify its SHA-256, then load it on this device? Journal text is never sent. Model files remain until the app’s data is removed.",
             () => void perform(downloadAndLoadModel),
           )
         }
@@ -100,6 +86,7 @@ export function LocalModelScreen() {
         disabled={!status.available || (!busy && !status.ready)}
         onPress={() => void perform(unloadLocalModel)}
       />
+      </>}
       <Button
         label={details ? "Hide model details" : "Model details"}
         quiet
@@ -107,6 +94,9 @@ export function LocalModelScreen() {
       />
       {details && (
         <>
+          <Divider />
+          <Body muted>Experimental prototype. Physical-device validation is pending. Unsupported builds use local conversation templates. Journal text, prompts, drafts and financial records stay in memory.</Body>
+          <Body muted>Downloads use the public Hugging Face model source. Your writing is never included. There is no paid inference service; ordinary network/data charges may still apply.</Body>
           <Body>
             {LOCAL_MODEL.name} · {LOCAL_MODEL.license}
           </Body>

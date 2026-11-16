@@ -135,6 +135,24 @@ class MissionCapture(BASE.NativeCapture):
                         return node
         raise RuntimeError(f"Native text fragment not found: {fragment}")
 
+    def wait_visible(self, label, prefix=False, clickable=False, timeout=30):
+        """Wait for a transition to render, without scrolling the outgoing screen."""
+        deadline = time.monotonic() + timeout
+        while True:
+            try:
+                node = self.find(label, prefix=prefix, clickable=clickable)
+                if node is not None:
+                    return node
+            except (BASE.ET.ParseError, subprocess.CalledProcessError):
+                pass
+            if time.monotonic() >= deadline:
+                raise RuntimeError(f"Native transition did not reach: {label}")
+            time.sleep(0.25)
+
+    def settings(self):
+        self.wait_visible("Profile & settings", clickable=True)
+        super().settings()
+
     def fresh_theme(self, theme):
         package = self.args.app_package
         self.note(f"Resetting fictional {package} process memory for {theme}; appearance storage remains intact.")
@@ -156,6 +174,8 @@ class MissionCapture(BASE.NativeCapture):
         self.wait_ready()
         if self.find("Explore as Sam", clickable=True) is not None:
             self.tap("Explore as Sam")
+            self.wait_visible("Hi, Sam.")
+        self.wait_visible("Profile & settings", clickable=True)
         self.verify_build()
         self.tap("Light mode" if theme == "light" else "Dark mode")
         self.require("Safe Harbor" if theme == "light" else "Night Harbor", prefix=True)
@@ -172,6 +192,10 @@ class MissionCapture(BASE.NativeCapture):
             self.tap(destination)
 
     def confirm(self, title=None):
+        """Confirm a finance command and require its ledger success notice.
+
+        Model loading uses its own status waiter, never this financial assertion.
+        """
         if title:
             self.require(title)
         self.tap("Confirm", scroll=False)
@@ -455,6 +479,10 @@ def main():
         duplicate = ET.fromstring('<hierarchy><node class="android.widget.TextView" text="Amount"/><node class="android.widget.EditText" content-desc="Amount" text="8.00"/></hierarchy>')
         found = edit_text_node(duplicate, "Amount", lambda node, label: node.get("text") == label or node.get("content-desc") == label, lambda node: True)
         assert found is not None and found.get("text") == "8.00"
+        transition = MissionCapture.__new__(MissionCapture)
+        nodes = iter((None, found))
+        transition.find = lambda *unused, **kwargs: next(nodes)
+        assert transition.wait_visible("Amount", timeout=1) is found
         print("PASS: bounded fictional input checks; no ADB invocation.")
         return
     capture = MissionCapture(args)
