@@ -1,6 +1,8 @@
 # Between Us: Chores & Goals feature specification
 
 Status: APPROVED PRODUCT REQUIREMENTS, NOT IMPLEMENTED
+
+Implementation update: the fictional mobile prototype now has a tested allowance/savings domain and integrated role-specific workflows. See [mission build report](mission/BUILD_REPORT.md) for actual validation, screenshots and remaining release gates. The approved requirements below remain intact; real payments, authentication and secure persistence are not enabled.
 Parent system: family administrators
 Design: The Open Letter; Safe Harbor and Night Harbor
 Existing branch: feature/mobile-foundation

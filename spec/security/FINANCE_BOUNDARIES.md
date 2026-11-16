@@ -4,7 +4,7 @@ Status: implementation review contract for the approved fictional prototype, 202
 
 ## State and identity
 
-Financial events, journals, drafts, contacts and check-ins remain in memory. Only the existing appearance preference may persist. No analytics, financial/journal logs, provider credentials, remote inference or real transfers. Native tooling can inspect process memory; the role selector is a fictional-user inspector, not authentication.
+Financial events, journals, drafts, contacts and check-ins remain in memory. Appearance is the only persisted preference; the current mission additionally authorizes explicitly downloaded licensed model assets, never personal content or model sessions. No analytics, financial/journal logs, provider credentials, remote inference or real transfers. Native tooling can inspect process memory; the role selector is a fictional-user inspector, not authentication.
 
 Production must derive actor, family and child membership from an authenticated session, independently authorize every object/action and transact ledger updates atomically. Client-provided role flags cannot be trusted. The prototype should still reject unauthorized commands at the pure domain boundary, including commands invoked without a UI button.
 

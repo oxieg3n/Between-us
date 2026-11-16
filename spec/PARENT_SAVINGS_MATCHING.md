@@ -1,6 +1,8 @@
 # Parent Savings Match: approved implementation specification
 
 Status: PRODUCT REQUIREMENTS; IMPLEMENTATION AND PAYMENT INTEGRATION PENDING
+
+Implementation update: matching calculations, surprise-safe projections, manual reveal, parent-reported funding and compensating reconciliation are implemented in the fictional mobile prototype. See [mission build report](mission/BUILD_REPORT.md) for verified results. Provider payment integration and production authorization remain pending.
 Feature: Between Us > Chores & Goals > Savings Matching
 
 ## Locked initial settings

@@ -21,7 +21,7 @@ Read `spec/JOURNAL_AND_CIRCLE.md`, `spec/MOBILE_ARCHITECTURE.md`, and `spec/secu
 
 ## Prototype boundaries
 
-- Fictional data only. Journals, drafts and simulated messages remain in memory. The owner-approved exception is the appearance preference (system/light/dark), stored under one local key. No content persistence, analytics, network content processing, AI provider, credentials or paid services.
+- Fictional data only. Journals, drafts, simulated messages and finances remain in memory. Appearance is the only persisted preference. The current master mission additionally permits an explicit, hash-verified download of licensed model weights; only those model assets may be stored. No private content, model prompts/sessions, analytics, cloud inference, credentials or paid services. Optional local inference must retain strict output validation, cancellation and safe fallback.
 - A role selector is a demo control, never authentication. Parent administration never grants access to another author's journal or unsent drafts.
 - Only an explicit review action may share a separately composed message. Never copy journal text automatically.
 - Local optional reflections may suggest a conversation; never diagnose, analyze emotions, give treatment or solve the underlying problem.

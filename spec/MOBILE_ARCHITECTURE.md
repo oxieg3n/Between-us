@@ -44,3 +44,9 @@ Official references checked: [D1 limits](https://developers.cloudflare.com/d1/pl
 ## Open Letter continuation
 
 Current UI build: `1114-OpenLetterRedesign-r3`, app 0.2.2. See `spec/OPEN_LETTER_BUILD_REPORT.md` and `design/OPEN_LETTER_DESIGN_SYSTEM.md` for current navigation/design/QA. This adds theme preference storage only; it does not authorize sensitive content storage. The original foundation audit above is historical.
+
+## Family Envelopes and local journal continuation
+
+The current mission builds on that foundation as `1115-FamilyEnvelopes-Journal-r1`, app 0.3.0. Pure typed financial commands, a frozen append-only event log and role-safe projections remain inside `apps/mobile/src/finance/`; React screens never receive the raw ledger. Financial state remains in memory. See `ALLOWANCE_LEDGER.md`, `SAVINGS_GOALS.md` and `mission/PRODUCTION_RELEASE_GATES.md`.
+
+The owner-approved storage exception now also includes explicitly downloaded licensed model weights, verified against a pinned size/SHA-256 before loading. Appearance remains the only persisted preference. Journals, prompts, model sessions, drafts and financial content are not stored. The local inference adapter serializes/cancels native work, requests cache cleanup and validates bounded structured output before display. No cloud inference is configured. Unsupported builds retain local templates. Physical-device and iOS model validation remain gates; the new mission build report records actual Android checks.

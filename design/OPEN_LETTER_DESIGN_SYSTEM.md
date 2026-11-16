@@ -90,3 +90,9 @@ Shared components use immediate press feedback with no decorative timed transiti
 Private writing never transfers into a chat automatically. Reflections are optional fixed local conversation prompts. Contact approval does not imply acceptance or verification. Skipping check-ins creates no nagging or penalty. Children can reach safety information and prepare words for another adult without guardian approval. Delivery, verification, scheduling and reporting claims must remain explicitly simulated.
 
 The master reviews the 24 native theme captures and comparisons in `spec/qa/open-letter/VISUAL_QA_REPORT.md`. Record missing captures, defects and unperformed tests. Saving images alone does not complete visual QA.
+
+## Family Envelopes and optional local model continuation
+
+The current mission keeps these visual tokens and four tabs. Chores & Goals opens from Home into editorial lists, readable financial records and progressive parent controls. Goal detail has a distinct nested screen so native Back returns to the goal list. Financial progress is a planning amount, never an emotional score or a provider balance.
+
+The journal's optional inline ideas are off by default per demo role. Model/source labels distinguish locally generated wording from deterministic templates; separate composition and explicit review remain required. Setup shows the licensed model's download/storage requirements before an intentional action. Appearance remains the only saved preference; explicitly downloaded model files are the additional approved asset storage, never private writing or model sessions. The mission QA report records current native screenshots; earlier Open Letter evidence remains historical and unchanged.

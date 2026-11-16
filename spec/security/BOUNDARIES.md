@@ -2,6 +2,8 @@
 
 Status: requirements and prototype limitations, not implemented production security.
 
+The current master mission permits optional on-device inference and explicitly downloaded, hash-verified licensed model assets. Only appearance preference and those model files persist. Journal/finance content, prompts and native sessions remain memory-only; no cloud inference or real financial transfer is authorized. See `../JOURNAL_INTELLIGENCE_SECURITY.md`, `FINANCE_BOUNDARIES.md` and `../mission/PRODUCTION_RELEASE_GATES.md`.
+
 ## Permission matrix
 
 | Action | Child/teen | Parent/guardian administrator |

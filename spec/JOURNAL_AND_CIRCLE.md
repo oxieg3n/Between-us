@@ -11,8 +11,8 @@ Between Us helps people put thoughts into words and reach someone they trust. It
 
 ## Journal rules
 1. Every entry is visible only to its author unless the author intentionally shares a separate message.
-2. The journal must never automatically copy entry text into a chat, push notification, or suggestion request.
-3. The optional **Open the Door reflection** runs through simple **local topic matching**, suggesting only someone to talk with and how to begin the conversation.
+2. The journal must never automatically copy entry text into a chat or push notification, or send it to an external suggestion service. Explicitly requested on-device inference may read the author's in-memory entry under the current master mission.
+3. The optional **Open the Door reflection** uses local topic matching, or the reviewed optional local model in a compatible native build, suggesting only someone to talk with and how to begin the conversation. Invalid or unsupported model output falls back to clearly labeled local templates.
 4. No psychological advice, mental-health interpretation, diagnoses, treatment recommendations, or emotional scoring.
 5. Suggestions are dismissible and never pressure the user to disclose anything.
 6. If writing suggests a recipient could be unsafe, never steer the child to contact that person. Provide alternatives and a visible way to seek human support, even when parental approval is inappropriate.
