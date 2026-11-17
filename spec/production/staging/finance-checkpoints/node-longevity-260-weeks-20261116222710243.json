@@ -1,0 +1,48 @@
+{
+  "format": 1,
+  "scope": "LOCAL Node pure engine and archive-index substitute; NOT hosted Edge/SQL evidence",
+  "measuredAt": "2026-11-16T22:27:10.238Z",
+  "node": "v26.13.0",
+  "platform": "win32 x64",
+  "weeks": 260,
+  "savings": true,
+  "matching": true,
+  "events": 6523,
+  "checkpoints": 266,
+  "visibleCapsules": 19,
+  "privateCapsules": 1729,
+  "maximums": {
+    "hotBytes": 193643,
+    "tail": 129,
+    "occurrences": 98,
+    "payouts": 14,
+    "allocations": 98,
+    "matches": 98
+  },
+  "finalHotBytes": 151180,
+  "archiveJsonBytes": 2642441,
+  "ledgerJsonBytes": 1646053,
+  "checkpointJsonBytes": 27381975,
+  "wallP95Ms": 22.035800000001473,
+  "cpuP95Ms": 31,
+  "cpuMaxMs": 110,
+  "goldenBalanceAndGoalPass": true,
+  "elapsedMs": 166652.6815,
+  "processMemory": {
+    "rss": 238645248,
+    "heapTotal": 150986752,
+    "heapUsed": 85154896,
+    "external": 5480148,
+    "arrayBuffers": 2614987
+  },
+  "freeLimits": {
+    "edgeCpuMs": 2000,
+    "edgeMemoryBytes": 268435456,
+    "databaseBytes": 500000000
+  },
+  "sources": [
+    "https://supabase.com/docs/guides/functions/limits",
+    "https://supabase.com/pricing"
+  ],
+  "safetyLimitsRaised": false
+}

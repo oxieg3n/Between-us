@@ -1,0 +1,2738 @@
+{
+  "format": 1,
+  "measuredAt": "2026-11-16T23:48:30.068Z",
+  "node": "v26.13.0",
+  "platform": "win32 x64",
+  "config": {
+    "weeks": 52,
+    "repeats": 10
+  },
+  "scope": "LOCAL Node JSON IPC client/RPC-server isolation; no DB, network service, hosted Edge or Auth qualification",
+  "measurementCorrection": "Earlier same-worker probes charged RPC-model hashing, serialization and retained database state to the client process. This run measures sibling processes separately; no estimated time/memory subtraction.",
+  "initialStateTransfer": "Coordinator sends original fixture only to RPC server. Client accepts a bounded descriptor with action, counts and hash; no initial state or golden ledger exists in client before baseline GC.",
+  "workers": [
+    {
+      "status": "passed",
+      "format": 1,
+      "weeks": 52,
+      "children": 1,
+      "role": "parent",
+      "repeats": 10,
+      "initialStateBytes": 244639,
+      "initialTail": 157,
+      "initialStateHash": "ec1d4b4ce357c67e122486dede36e9fa476389303d689caca03a5a7def3aea9d",
+      "initialTailPerChild": {
+        "visible": 126,
+        "hidden": 31
+      },
+      "originalTailLimits": {
+        "visible": 128,
+        "hidden": 32
+      },
+      "safetyLimitsRaised": false,
+      "initialStateOwnership": {
+        "receivedBeforeBaseline": false,
+        "coordinatorFixtureImported": false,
+        "initialStateReferenceAbsent": true,
+        "baselineGcCompleted": true
+      },
+      "node": "v26.13.0",
+      "pid": 42400,
+      "command": {
+        "count": 10,
+        "first": {
+          "wallMs": 268.04879999999997,
+          "cpuMs": 234
+        },
+        "wallMs": {
+          "minimum": 72.66640000000007,
+          "median": 90.77320000000009,
+          "p95": 268.04879999999997,
+          "maximum": 268.04879999999997
+        },
+        "cpuMs": {
+          "minimum": 47,
+          "median": 109,
+          "p95": 296,
+          "maximum": 296
+        }
+      },
+      "read": {
+        "count": 10,
+        "first": {
+          "wallMs": 90.48909999999995,
+          "cpuMs": 94
+        },
+        "wallMs": {
+          "minimum": 24.83770000000004,
+          "median": 27.36090000000013,
+          "p95": 90.48909999999995,
+          "maximum": 90.48909999999995
+        },
+        "cpuMs": {
+          "minimum": 15,
+          "median": 31,
+          "p95": 110,
+          "maximum": 110
+        }
+      },
+      "total": {
+        "wallMs": 1644.8573000000001,
+        "cpuMs": 1734
+      },
+      "memory": {
+        "baseline": {
+          "rss": 77197312,
+          "heapTotal": 18485248,
+          "heapUsed": 9504712,
+          "external": 6677682,
+          "arrayBuffers": 2535701
+        },
+        "sampledPeak": {
+          "rss": 148488192,
+          "heapUsed": 43641304,
+          "heapTotal": 80629760,
+          "external": 8337763,
+          "arrayBuffers": 5441832
+        },
+        "final": {
+          "rss": 148488192,
+          "heapTotal": 79454208,
+          "heapUsed": 23209712,
+          "external": 6105354,
+          "arrayBuffers": 3209423
+        },
+        "processLifetimeMaxRssKiB": 146936
+      },
+      "referenceComparison": {
+        "scope": "Node command CPU maximum and process lifetime RSS comparison only; NOT Supabase Edge qualification",
+        "commandCpu": {
+          "measuredMs": 296,
+          "limitMs": 2000,
+          "passed": true
+        },
+        "lifetimeRss": {
+          "measuredKiB": 146936,
+          "measuredBytes": 150462464,
+          "limitBytes": 268435456,
+          "passed": true
+        },
+        "referenceLimitsPassed": true
+      },
+      "responseJsonBytes": 1553220,
+      "scope": "LOCAL fresh Node client with JSON IPC RPC-server isolation; NOT hosted Edge, PostgreSQL or Auth qualification",
+      "server": {
+        "pid": 36764,
+        "node": "v26.13.0",
+        "scope": "Separate RPC model process; excluded from client CPU/RSS references",
+        "initialization": {
+          "wallMs": 33.08159999999998,
+          "cpuMs": 31
+        },
+        "total": {
+          "wallMs": 1969.3112999999998,
+          "cpuMs": 499
+        },
+        "memory": {
+          "baseline": {
+            "rss": 80519168,
+            "heapTotal": 20058112,
+            "heapUsed": 10048840,
+            "external": 5382155,
+            "arrayBuffers": 2486264
+          },
+          "sampledPeak": {
+            "rss": 137269248,
+            "heapUsed": 41274552,
+            "heapTotal": 71647232,
+            "external": 6674260,
+            "arrayBuffers": 3664999
+          },
+          "final": {
+            "rss": 137269248,
+            "heapTotal": 71647232,
+            "heapUsed": 34322144,
+            "external": 6278345,
+            "arrayBuffers": 3382286
+          },
+          "processLifetimeMaxRssKiB": 134052
+        },
+        "calls": [
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.3425999999999476,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 13.520200000000045,
+            "cpuMs": 31
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 8.146399999999971,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 11.376899999999978,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.1856000000000222,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 9.061399999999935,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.12959999999998217,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 7.048199999999952,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 5.539800000000014,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 10.748600000000124,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09239999999999782,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 12.40729999999985,
+            "cpuMs": 31
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.14010000000007494,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 9.564999999999827,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 7.1262000000001535,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 10.354199999999992,
+            "cpuMs": 31
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08449999999993452,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.312900000000127,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09739999999987958,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.976000000000113,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 3.661399999999958,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 6.0779,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.07709999999997308,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 5.080199999999877,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09809999999993124,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.332499999999982,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 4.141499999999951,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 5.991500000000087,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08249999999998181,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.416900000000169,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.12970000000018445,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 5.376499999999851,
+            "cpuMs": 31
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 3.5476000000001022,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 8.272300000000087,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08119999999985339,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.958900000000085,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.11030000000005202,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.252099999999928,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 4.309700000000021,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 6.248300000000199,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08529999999996107,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.84069999999997,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.0909999999998945,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 5.560600000000022,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 3.9390999999998257,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 7.559500000000071,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.10090000000013788,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.121499999999969,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.07029999999986103,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 5.005400000000009,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 5.0744000000004235,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 5.899600000000191,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.07990000000017972,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.290700000000015,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.07029999999986103,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 6.0888999999997395,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 6.0578999999997905,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 5.625,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.07829999999967185,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.166600000000017,
+            "cpuMs": 0
+          }
+        ],
+        "rpc": {
+          "calls": {
+            "finance_scope": 20,
+            "finance_load": 20,
+            "finance_archive_budget": 10,
+            "finance_commit": 10
+          },
+          "wireRequestBytes": 3514106,
+          "wireResponseBytes": 6379913,
+          "maximumEnvelopeBytes": 401009,
+          "serializationWallMs": 44.62750000000108,
+          "committed": 10,
+          "replays": 0
+        },
+        "finalSequence": 1474,
+        "finalStateBytes": 203597,
+        "finalStateHash": "141cb800da48ecd334a01c091052446c1483b7ed3fa02aadc0e2925498acb6c8"
+      },
+      "transport": {
+        "rpcRequests": 60,
+        "requestJsonBytes": 3518497,
+        "responseJsonBytes": 6382244,
+        "serializationMeasuredIn": "each sender/receiver process via Node JSON IPC; relay accounting is coordinator-only"
+      }
+    },
+    {
+      "status": "passed",
+      "format": 1,
+      "weeks": 52,
+      "children": 1,
+      "role": "child",
+      "repeats": 10,
+      "initialStateBytes": 244639,
+      "initialTail": 157,
+      "initialStateHash": "ec1d4b4ce357c67e122486dede36e9fa476389303d689caca03a5a7def3aea9d",
+      "initialTailPerChild": {
+        "visible": 126,
+        "hidden": 31
+      },
+      "originalTailLimits": {
+        "visible": 128,
+        "hidden": 32
+      },
+      "safetyLimitsRaised": false,
+      "initialStateOwnership": {
+        "receivedBeforeBaseline": false,
+        "coordinatorFixtureImported": false,
+        "initialStateReferenceAbsent": true,
+        "baselineGcCompleted": true
+      },
+      "node": "v26.13.0",
+      "pid": 35868,
+      "command": {
+        "count": 10,
+        "first": {
+          "wallMs": 251.20869999999996,
+          "cpuMs": 266
+        },
+        "wallMs": {
+          "minimum": 67.11809999999991,
+          "median": 74.2376999999999,
+          "p95": 251.20869999999996,
+          "maximum": 251.20869999999996
+        },
+        "cpuMs": {
+          "minimum": 47,
+          "median": 63,
+          "p95": 266,
+          "maximum": 266
+        }
+      },
+      "read": {
+        "count": 10,
+        "first": {
+          "wallMs": 82.43179999999995,
+          "cpuMs": 63
+        },
+        "wallMs": {
+          "minimum": 21.73980000000006,
+          "median": 30.24000000000001,
+          "p95": 82.43179999999995,
+          "maximum": 82.43179999999995
+        },
+        "cpuMs": {
+          "minimum": 15,
+          "median": 16,
+          "p95": 95,
+          "maximum": 95
+        }
+      },
+      "total": {
+        "wallMs": 1489.2259999999999,
+        "cpuMs": 1344
+      },
+      "memory": {
+        "baseline": {
+          "rss": 77242368,
+          "heapTotal": 17960960,
+          "heapUsed": 9448992,
+          "external": 6677680,
+          "arrayBuffers": 2535701
+        },
+        "sampledPeak": {
+          "rss": 148189184,
+          "heapUsed": 47727128,
+          "heapTotal": 82923520,
+          "external": 8830585,
+          "arrayBuffers": 5869118
+        },
+        "final": {
+          "rss": 146984960,
+          "heapTotal": 78598144,
+          "heapUsed": 30639896,
+          "external": 6779237,
+          "arrayBuffers": 3883306
+        },
+        "processLifetimeMaxRssKiB": 144960
+      },
+      "referenceComparison": {
+        "scope": "Node command CPU maximum and process lifetime RSS comparison only; NOT Supabase Edge qualification",
+        "commandCpu": {
+          "measuredMs": 266,
+          "limitMs": 2000,
+          "passed": true
+        },
+        "lifetimeRss": {
+          "measuredKiB": 144960,
+          "measuredBytes": 148439040,
+          "limitBytes": 268435456,
+          "passed": true
+        },
+        "referenceLimitsPassed": true
+      },
+      "responseJsonBytes": 968340,
+      "scope": "LOCAL fresh Node client with JSON IPC RPC-server isolation; NOT hosted Edge, PostgreSQL or Auth qualification",
+      "server": {
+        "pid": 34072,
+        "node": "v26.13.0",
+        "scope": "Separate RPC model process; excluded from client CPU/RSS references",
+        "initialization": {
+          "wallMs": 17.497299999999996,
+          "cpuMs": 47
+        },
+        "total": {
+          "wallMs": 1719.9449,
+          "cpuMs": 328
+        },
+        "memory": {
+          "baseline": {
+            "rss": 80027648,
+            "heapTotal": 20058112,
+            "heapUsed": 10076024,
+            "external": 5382154,
+            "arrayBuffers": 2486263
+          },
+          "sampledPeak": {
+            "rss": 122646528,
+            "heapUsed": 33598976,
+            "heapTotal": 62832640,
+            "external": 6672148,
+            "arrayBuffers": 3776185
+          },
+          "final": {
+            "rss": 122646528,
+            "heapTotal": 62832640,
+            "heapUsed": 33603928,
+            "external": 6210550,
+            "arrayBuffers": 3314523
+          },
+          "processLifetimeMaxRssKiB": 119772
+        },
+        "calls": [
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.34080000000000155,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 13.137299999999982,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 13.09050000000002,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.11069999999995161,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 7.189800000000105,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08780000000001564,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 7.478600000000029,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 11.403999999999996,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.10659999999995762,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 11.081000000000017,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.10099999999999909,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 8.547399999999925,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 9.518699999999853,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09549999999990177,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 6.724799999999959,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.0786000000000513,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.46770000000015,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 6.972600000000057,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09720000000015716,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.278700000000072,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.10459999999989122,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.412599999999884,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 7.151999999999816,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09439999999995052,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.966899999999896,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.07920000000012806,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 5.19360000000006,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 5.741600000000062,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.07009999999991123,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.227800000000116,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.07379999999989195,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.857199999999921,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 6.320300000000088,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09550000000012915,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 5.793799999999919,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.06999999999993634,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.266599999999926,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 6.312799999999925,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.06939999999985957,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.412199999999984,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.07719999999994798,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.197000000000116,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 7.154599999999846,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.06970000000001164,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.250299999999925,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.07319999999981519,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.769700000000057,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 6.831900000000132,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.1068000000000211,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 4.911299999999983,
+            "cpuMs": 0
+          }
+        ],
+        "rpc": {
+          "calls": {
+            "finance_scope": 20,
+            "finance_load": 20,
+            "finance_commit": 10
+          },
+          "wireRequestBytes": 3479812,
+          "wireResponseBytes": 6371598,
+          "maximumEnvelopeBytes": 400751,
+          "serializationWallMs": 41.49309999999991,
+          "committed": 10,
+          "replays": 0
+        },
+        "finalSequence": 1474,
+        "finalStateBytes": 203269,
+        "finalStateHash": "7e5cb8b4cd7aa9b6592bda74b1a1ddcbbedc963d57dec3c645b86b38d91b8bc5"
+      },
+      "transport": {
+        "rpcRequests": 50,
+        "requestJsonBytes": 3483383,
+        "responseJsonBytes": 6373539,
+        "serializationMeasuredIn": "each sender/receiver process via Node JSON IPC; relay accounting is coordinator-only"
+      }
+    },
+    {
+      "status": "passed",
+      "format": 1,
+      "weeks": 52,
+      "children": 2,
+      "role": "parent",
+      "repeats": 10,
+      "initialStateBytes": 489145,
+      "initialTail": 314,
+      "initialStateHash": "96f51e912d2c435e4a280f5d125eae8a2e518db6c87cbb160a7028e877df1bc1",
+      "initialTailPerChild": {
+        "visible": 126,
+        "hidden": 31
+      },
+      "originalTailLimits": {
+        "visible": 128,
+        "hidden": 32
+      },
+      "safetyLimitsRaised": false,
+      "initialStateOwnership": {
+        "receivedBeforeBaseline": false,
+        "coordinatorFixtureImported": false,
+        "initialStateReferenceAbsent": true,
+        "baselineGcCompleted": true
+      },
+      "node": "v26.13.0",
+      "pid": 36308,
+      "command": {
+        "count": 10,
+        "first": {
+          "wallMs": 438.10299999999995,
+          "cpuMs": 468
+        },
+        "wallMs": {
+          "minimum": 111.50329999999985,
+          "median": 156.85220000000027,
+          "p95": 438.10299999999995,
+          "maximum": 438.10299999999995
+        },
+        "cpuMs": {
+          "minimum": 47,
+          "median": 109,
+          "p95": 468,
+          "maximum": 468
+        }
+      },
+      "read": {
+        "count": 10,
+        "first": {
+          "wallMs": 180.97620000000006,
+          "cpuMs": 234
+        },
+        "wallMs": {
+          "minimum": 42.61440000000016,
+          "median": 60.7529999999997,
+          "p95": 180.97620000000006,
+          "maximum": 180.97620000000006
+        },
+        "cpuMs": {
+          "minimum": 31,
+          "median": 62,
+          "p95": 234,
+          "maximum": 234
+        }
+      },
+      "total": {
+        "wallMs": 2908.4876,
+        "cpuMs": 2547
+      },
+      "memory": {
+        "baseline": {
+          "rss": 77746176,
+          "heapTotal": 17960960,
+          "heapUsed": 9476952,
+          "external": 6677680,
+          "arrayBuffers": 2535701
+        },
+        "sampledPeak": {
+          "rss": 168206336,
+          "heapUsed": 56369480,
+          "heapTotal": 97714176,
+          "external": 10828921,
+          "arrayBuffers": 7867454
+        },
+        "final": {
+          "rss": 165810176,
+          "heapTotal": 89911296,
+          "heapUsed": 46656352,
+          "external": 7536320,
+          "arrayBuffers": 4640389
+        },
+        "processLifetimeMaxRssKiB": 164700
+      },
+      "referenceComparison": {
+        "scope": "Node command CPU maximum and process lifetime RSS comparison only; NOT Supabase Edge qualification",
+        "commandCpu": {
+          "measuredMs": 468,
+          "limitMs": 2000,
+          "passed": true
+        },
+        "lifetimeRss": {
+          "measuredKiB": 164700,
+          "measuredBytes": 168652800,
+          "limitBytes": 268435456,
+          "passed": true
+        },
+        "referenceLimitsPassed": true
+      },
+      "responseJsonBytes": 1553220,
+      "scope": "LOCAL fresh Node client with JSON IPC RPC-server isolation; NOT hosted Edge, PostgreSQL or Auth qualification",
+      "server": {
+        "pid": 38844,
+        "node": "v26.13.0",
+        "scope": "Separate RPC model process; excluded from client CPU/RSS references",
+        "initialization": {
+          "wallMs": 26.66239999999999,
+          "cpuMs": 78
+        },
+        "total": {
+          "wallMs": 3130.9151,
+          "cpuMs": 859
+        },
+        "memory": {
+          "baseline": {
+            "rss": 87846912,
+            "heapTotal": 25038848,
+            "heapUsed": 10398256,
+            "external": 5626661,
+            "arrayBuffers": 2730770
+          },
+          "sampledPeak": {
+            "rss": 164040704,
+            "heapUsed": 49792400,
+            "heapTotal": 100364288,
+            "external": 7661934,
+            "arrayBuffers": 4765875
+          },
+          "final": {
+            "rss": 163090432,
+            "heapTotal": 92024832,
+            "heapUsed": 38989856,
+            "external": 6542200,
+            "arrayBuffers": 3646205
+          },
+          "processLifetimeMaxRssKiB": 161308
+        },
+        "calls": [
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.3299999999999841,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 24.07480000000004,
+            "cpuMs": 62
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 11.712100000000078,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 22.537599999999998,
+            "cpuMs": 47
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.14070000000003802,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 13.234800000000064,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.11179999999990287,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 14.196299999999837,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 9.98219999999992,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 18.077199999999948,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09590000000002874,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 15.040000000000191,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08320000000003347,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 12.804899999999861,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 14.963700000000017,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 16.55989999999997,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09230000000002292,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 8.433499999999867,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09050000000002001,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 9.035700000000134,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 8.021600000000035,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 15.971700000000055,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09239999999999782,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 8.270100000000184,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.10729999999966822,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 12.997800000000097,
+            "cpuMs": 78
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 6.918999999999869,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 11.421100000000024,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08449999999993452,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 9.053199999999833,
+            "cpuMs": 78
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.07659999999987122,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 8.378300000000309,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 7.830300000000079,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 11.607700000000023,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08579999999983556,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 7.996599999999944,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09830000000010841,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 11.75,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 8.165899999999965,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 27.902000000000044,
+            "cpuMs": 32
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.1855000000000473,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 16.10030000000006,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.11049999999977445,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 11.099700000000212,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 10.857300000000123,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 13.686200000000099,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.0911999999998443,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 12.526600000000144,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.10669999999981883,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 10.753000000000156,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 9.462399999999889,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 14.732800000000225,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08019999999987704,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 8.471800000000258,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.07660000000032596,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 9.3125,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 6.9551000000001295,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 12.575800000000072,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.13979999999992287,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 14.530999999999949,
+            "cpuMs": 16
+          }
+        ],
+        "rpc": {
+          "calls": {
+            "finance_scope": 20,
+            "finance_load": 20,
+            "finance_archive_budget": 10,
+            "finance_commit": 10
+          },
+          "wireRequestBytes": 5690948,
+          "wireResponseBytes": 12696791,
+          "maximumEnvelopeBytes": 674173,
+          "serializationWallMs": 85.13100000000145,
+          "committed": 10,
+          "replays": 0
+        },
+        "finalSequence": 2938,
+        "finalStateBytes": 403829,
+        "finalStateHash": "cc0301694da4da42bde37993e3924a5efd62353da10d4ea0a6e0ad277750d755"
+      },
+      "transport": {
+        "rpcRequests": 60,
+        "requestJsonBytes": 5695339,
+        "responseJsonBytes": 12699122,
+        "serializationMeasuredIn": "each sender/receiver process via Node JSON IPC; relay accounting is coordinator-only"
+      }
+    },
+    {
+      "status": "passed",
+      "format": 1,
+      "weeks": 52,
+      "children": 2,
+      "role": "child",
+      "repeats": 10,
+      "initialStateBytes": 489145,
+      "initialTail": 314,
+      "initialStateHash": "96f51e912d2c435e4a280f5d125eae8a2e518db6c87cbb160a7028e877df1bc1",
+      "initialTailPerChild": {
+        "visible": 126,
+        "hidden": 31
+      },
+      "originalTailLimits": {
+        "visible": 128,
+        "hidden": 32
+      },
+      "safetyLimitsRaised": false,
+      "initialStateOwnership": {
+        "receivedBeforeBaseline": false,
+        "coordinatorFixtureImported": false,
+        "initialStateReferenceAbsent": true,
+        "baselineGcCompleted": true
+      },
+      "node": "v26.13.0",
+      "pid": 24896,
+      "command": {
+        "count": 10,
+        "first": {
+          "wallMs": 499.1735,
+          "cpuMs": 470
+        },
+        "wallMs": {
+          "minimum": 104.0947000000001,
+          "median": 173.10670000000027,
+          "p95": 499.1735,
+          "maximum": 499.1735
+        },
+        "cpuMs": {
+          "minimum": 62,
+          "median": 125,
+          "p95": 470,
+          "maximum": 470
+        }
+      },
+      "read": {
+        "count": 10,
+        "first": {
+          "wallMs": 191.61090000000002,
+          "cpuMs": 187
+        },
+        "wallMs": {
+          "minimum": 43.51859999999988,
+          "median": 55.75469999999996,
+          "p95": 191.61090000000002,
+          "maximum": 191.61090000000002
+        },
+        "cpuMs": {
+          "minimum": 16,
+          "median": 47,
+          "p95": 187,
+          "maximum": 187
+        }
+      },
+      "total": {
+        "wallMs": 2886.3845,
+        "cpuMs": 2439
+      },
+      "memory": {
+        "baseline": {
+          "rss": 77832192,
+          "heapTotal": 17960960,
+          "heapUsed": 9475368,
+          "external": 6677680,
+          "arrayBuffers": 2535701
+        },
+        "sampledPeak": {
+          "rss": 165023744,
+          "heapUsed": 48860528,
+          "heapTotal": 92520448,
+          "external": 10861184,
+          "arrayBuffers": 6969622
+        },
+        "final": {
+          "rss": 162684928,
+          "heapTotal": 86695936,
+          "heapUsed": 23067648,
+          "external": 7029092,
+          "arrayBuffers": 4133161
+        },
+        "processLifetimeMaxRssKiB": 162336
+      },
+      "referenceComparison": {
+        "scope": "Node command CPU maximum and process lifetime RSS comparison only; NOT Supabase Edge qualification",
+        "commandCpu": {
+          "measuredMs": 470,
+          "limitMs": 2000,
+          "passed": true
+        },
+        "lifetimeRss": {
+          "measuredKiB": 162336,
+          "measuredBytes": 166232064,
+          "limitBytes": 268435456,
+          "passed": true
+        },
+        "referenceLimitsPassed": true
+      },
+      "responseJsonBytes": 968340,
+      "scope": "LOCAL fresh Node client with JSON IPC RPC-server isolation; NOT hosted Edge, PostgreSQL or Auth qualification",
+      "server": {
+        "pid": 41780,
+        "node": "v26.13.0",
+        "scope": "Separate RPC model process; excluded from client CPU/RSS references",
+        "initialization": {
+          "wallMs": 27.668499999999995,
+          "cpuMs": 93
+        },
+        "total": {
+          "wallMs": 3093.4608,
+          "cpuMs": 656
+        },
+        "memory": {
+          "baseline": {
+            "rss": 86970368,
+            "heapTotal": 25038848,
+            "heapUsed": 10379744,
+            "external": 6115805,
+            "arrayBuffers": 2730769
+          },
+          "sampledPeak": {
+            "rss": 164847616,
+            "heapUsed": 50537568,
+            "heapTotal": 101900288,
+            "external": 7661430,
+            "arrayBuffers": 4765371
+          },
+          "final": {
+            "rss": 164016128,
+            "heapTotal": 88227840,
+            "heapUsed": 22861544,
+            "external": 6137781,
+            "arrayBuffers": 3241818
+          },
+          "processLifetimeMaxRssKiB": 161840
+        },
+        "calls": [
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.37119999999998754,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 23.37850000000003,
+            "cpuMs": 79
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 26.38059999999996,
+            "cpuMs": 31
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.10579999999993106,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 17.640199999999936,
+            "cpuMs": 47
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.11969999999996617,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 21.18820000000005,
+            "cpuMs": 31
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 21.824100000000044,
+            "cpuMs": 31
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.1146000000001095,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 12.477899999999863,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.10369999999988977,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 12.749300000000176,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 14.973000000000184,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09770000000003165,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 12.266400000000203,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08720000000016626,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 10.17840000000001,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 15.029899999999998,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08969999999999345,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 9.763600000000224,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.10860000000002401,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 20.653000000000247,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 16.92470000000003,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09990000000016153,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 8.966199999999844,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.10750000000007276,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 13.328100000000177,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 14.321400000000267,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08689999999978681,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 12.018300000000181,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.1431999999999789,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 13.217399999999998,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 14.52430000000004,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08100000000013097,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 9.87310000000025,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08689999999978681,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 8.350400000000263,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 16.960399999999936,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09720000000015716,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 11.052900000000136,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.12010000000009313,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 8.508100000000013,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 12.79760000000033,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08699999999998909,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 8.488299999999981,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09310000000004948,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 9.391500000000178,
+            "cpuMs": 16
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 11.294800000000123,
+            "cpuMs": 15
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08609999999998763,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 8.803100000000086,
+            "cpuMs": 0
+          }
+        ],
+        "rpc": {
+          "calls": {
+            "finance_scope": 20,
+            "finance_load": 20,
+            "finance_commit": 10
+          },
+          "wireRequestBytes": 5656654,
+          "wireResponseBytes": 12688476,
+          "maximumEnvelopeBytes": 673915,
+          "serializationWallMs": 89.44220000000144,
+          "committed": 10,
+          "replays": 0
+        },
+        "finalSequence": 2938,
+        "finalStateBytes": 403501,
+        "finalStateHash": "6724791e088771924d22bf6cba863a7ed84257fdb628e725e2c69bc8569f260b"
+      },
+      "transport": {
+        "rpcRequests": 50,
+        "requestJsonBytes": 5660225,
+        "responseJsonBytes": 12690417,
+        "serializationMeasuredIn": "each sender/receiver process via Node JSON IPC; relay accounting is coordinator-only"
+      }
+    },
+    {
+      "status": "passed",
+      "format": 1,
+      "weeks": 52,
+      "children": 12,
+      "role": "parent",
+      "repeats": 10,
+      "initialStateBytes": 2934208,
+      "initialTail": 1884,
+      "initialStateHash": "a11639edd2d5d010ba5b2e472f3592a7d2c0317723b20588b2532a68ecaefba2",
+      "initialTailPerChild": {
+        "visible": 126,
+        "hidden": 31
+      },
+      "originalTailLimits": {
+        "visible": 128,
+        "hidden": 32
+      },
+      "safetyLimitsRaised": false,
+      "initialStateOwnership": {
+        "receivedBeforeBaseline": false,
+        "coordinatorFixtureImported": false,
+        "initialStateReferenceAbsent": true,
+        "baselineGcCompleted": true
+      },
+      "node": "v26.13.0",
+      "pid": 34456,
+      "command": {
+        "count": 10,
+        "first": {
+          "wallMs": 2280.0915,
+          "cpuMs": 2062
+        },
+        "wallMs": {
+          "minimum": 510.22669999999925,
+          "median": 616.6157999999996,
+          "p95": 2280.0915,
+          "maximum": 2280.0915
+        },
+        "cpuMs": {
+          "minimum": 298,
+          "median": 391,
+          "p95": 2062,
+          "maximum": 2062
+        }
+      },
+      "read": {
+        "count": 10,
+        "first": {
+          "wallMs": 1032.3838,
+          "cpuMs": 1048
+        },
+        "wallMs": {
+          "minimum": 231.89149999999972,
+          "median": 272.5058999999983,
+          "p95": 1032.3838,
+          "maximum": 1032.3838
+        },
+        "cpuMs": {
+          "minimum": 218,
+          "median": 343,
+          "p95": 1048,
+          "maximum": 1048
+        }
+      },
+      "total": {
+        "wallMs": 13632.0898,
+        "cpuMs": 11219
+      },
+      "memory": {
+        "baseline": {
+          "rss": 76357632,
+          "heapTotal": 18223104,
+          "heapUsed": 9502736,
+          "external": 6677682,
+          "arrayBuffers": 2307002
+        },
+        "sampledPeak": {
+          "rss": 274579456,
+          "heapUsed": 85959112,
+          "heapTotal": 163758080,
+          "external": 40871973,
+          "arrayBuffers": 18499164
+        },
+        "final": {
+          "rss": 190394368,
+          "heapTotal": 97632256,
+          "heapUsed": 44648256,
+          "external": 11070109,
+          "arrayBuffers": 8179357
+        },
+        "processLifetimeMaxRssKiB": 275248
+      },
+      "referenceComparison": {
+        "scope": "Node command CPU maximum and process lifetime RSS comparison only; NOT Supabase Edge qualification",
+        "commandCpu": {
+          "measuredMs": 2062,
+          "limitMs": 2000,
+          "passed": false
+        },
+        "lifetimeRss": {
+          "measuredKiB": 275248,
+          "measuredBytes": 281853952,
+          "limitBytes": 268435456,
+          "passed": false
+        },
+        "referenceLimitsPassed": false
+      },
+      "responseJsonBytes": 1553220,
+      "scope": "LOCAL fresh Node client with JSON IPC RPC-server isolation; NOT hosted Edge, PostgreSQL or Auth qualification",
+      "server": {
+        "pid": 34476,
+        "node": "v26.13.0",
+        "scope": "Separate RPC model process; excluded from client CPU/RSS references",
+        "initialization": {
+          "wallMs": 109.6714,
+          "cpuMs": 157
+        },
+        "total": {
+          "wallMs": 13888.9917,
+          "cpuMs": 3796
+        },
+        "memory": {
+          "baseline": {
+            "rss": 116424704,
+            "heapTotal": 40505344,
+            "heapUsed": 13916280,
+            "external": 8071726,
+            "arrayBuffers": 5175835
+          },
+          "sampledPeak": {
+            "rss": 385499136,
+            "heapUsed": 162927768,
+            "heapTotal": 309035008,
+            "external": 15140801,
+            "arrayBuffers": 9716085
+          },
+          "final": {
+            "rss": 227287040,
+            "heapTotal": 150269952,
+            "heapUsed": 72013720,
+            "external": 12741642,
+            "arrayBuffers": 7314758
+          },
+          "processLifetimeMaxRssKiB": 386052
+        },
+        "calls": [
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.334699999999998,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 95.58600000000001,
+            "cpuMs": 188
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 65.45220000000018,
+            "cpuMs": 63
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 116.77539999999999,
+            "cpuMs": 124
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.17950000000018917,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 117.36429999999973,
+            "cpuMs": 110
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.22270000000025902,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 83.85710000000017,
+            "cpuMs": 94
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 65.9967999999999,
+            "cpuMs": 62
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 138.4377000000004,
+            "cpuMs": 141
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.1548000000002503,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 84.3778999999995,
+            "cpuMs": 78
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09739999999965221,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 71.89689999999973,
+            "cpuMs": 78
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 58.189000000000306,
+            "cpuMs": 62
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 84.59810000000016,
+            "cpuMs": 94
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.12219999999979336,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 50.120199999999386,
+            "cpuMs": 47
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.12010000000009313,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 56.40680000000066,
+            "cpuMs": 62
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 44.792999999999665,
+            "cpuMs": 47
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 83.15560000000005,
+            "cpuMs": 94
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.10050000000046566,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 62.164600000000064,
+            "cpuMs": 62
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.22629999999844586,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 77.43529999999919,
+            "cpuMs": 79
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 48.54399999999987,
+            "cpuMs": 109
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 77.30639999999948,
+            "cpuMs": 78
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.15129999999953725,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 54.55909999999858,
+            "cpuMs": 63
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.10939999999936845,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 50.57480000000032,
+            "cpuMs": 47
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 40.711200000001554,
+            "cpuMs": 47
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 69.86540000000059,
+            "cpuMs": 63
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09649999999965075,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 56.453199999999924,
+            "cpuMs": 62
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.07990000000063446,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 52.482999999998356,
+            "cpuMs": 46
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 40.93369999999959,
+            "cpuMs": 47
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 65.47630000000026,
+            "cpuMs": 62
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08979999999974098,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 51.48670000000129,
+            "cpuMs": 110
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09129999999822758,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 54.63849999999911,
+            "cpuMs": 62
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 45.424300000000585,
+            "cpuMs": 94
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 70.84499999999935,
+            "cpuMs": 125
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09679999999934807,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 52.04370000000017,
+            "cpuMs": 47
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.07250000000021828,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 51.196099999999205,
+            "cpuMs": 62
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 42.64220000000023,
+            "cpuMs": 47
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 66.3187999999991,
+            "cpuMs": 78
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08539999999993597,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 59.72320000000036,
+            "cpuMs": 62
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09140000000115833,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 53.1302999999989,
+            "cpuMs": 62
+          },
+          {
+            "rpc": "finance_archive_budget",
+            "wallMs": 43.65520000000106,
+            "cpuMs": 47
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 77.46199999999953,
+            "cpuMs": 63
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09519999999974971,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 54.08009999999922,
+            "cpuMs": 47
+          }
+        ],
+        "rpc": {
+          "calls": {
+            "finance_scope": 20,
+            "finance_load": 20,
+            "finance_archive_budget": 10,
+            "finance_commit": 10
+          },
+          "wireRequestBytes": 27459398,
+          "wireResponseBytes": 75865681,
+          "maximumEnvelopeBytes": 3405816,
+          "serializationWallMs": 465.30360000000155,
+          "committed": 10,
+          "replays": 0
+        },
+        "finalSequence": 17578,
+        "finalStateBytes": 2406152,
+        "finalStateHash": "163c9b6dda7a7ceebf5b6a10303eebf13cb26a4d5744f806b5cfe3fa858b0d80"
+      },
+      "transport": {
+        "rpcRequests": 60,
+        "requestJsonBytes": 27463789,
+        "responseJsonBytes": 75868012,
+        "serializationMeasuredIn": "each sender/receiver process via Node JSON IPC; relay accounting is coordinator-only"
+      }
+    },
+    {
+      "status": "passed",
+      "format": 1,
+      "weeks": 52,
+      "children": 12,
+      "role": "child",
+      "repeats": 10,
+      "initialStateBytes": 2934208,
+      "initialTail": 1884,
+      "initialStateHash": "a11639edd2d5d010ba5b2e472f3592a7d2c0317723b20588b2532a68ecaefba2",
+      "initialTailPerChild": {
+        "visible": 126,
+        "hidden": 31
+      },
+      "originalTailLimits": {
+        "visible": 128,
+        "hidden": 32
+      },
+      "safetyLimitsRaised": false,
+      "initialStateOwnership": {
+        "receivedBeforeBaseline": false,
+        "coordinatorFixtureImported": false,
+        "initialStateReferenceAbsent": true,
+        "baselineGcCompleted": true
+      },
+      "node": "v26.13.0",
+      "pid": 40372,
+      "command": {
+        "count": 10,
+        "first": {
+          "wallMs": 2213.4274,
+          "cpuMs": 2109
+        },
+        "wallMs": {
+          "minimum": 469.41029999999955,
+          "median": 506.6154000000006,
+          "p95": 2213.4274,
+          "maximum": 2213.4274
+        },
+        "cpuMs": {
+          "minimum": 296,
+          "median": 359,
+          "p95": 2109,
+          "maximum": 2109
+        }
+      },
+      "read": {
+        "count": 10,
+        "first": {
+          "wallMs": 1071.3334,
+          "cpuMs": 1094
+        },
+        "wallMs": {
+          "minimum": 252.9966999999997,
+          "median": 262.6342000000004,
+          "p95": 1071.3334,
+          "maximum": 1071.3334
+        },
+        "cpuMs": {
+          "minimum": 250,
+          "median": 344,
+          "p95": 1094,
+          "maximum": 1094
+        }
+      },
+      "total": {
+        "wallMs": 12908.0439,
+        "cpuMs": 11531
+      },
+      "memory": {
+        "baseline": {
+          "rss": 78524416,
+          "heapTotal": 17960960,
+          "heapUsed": 9475936,
+          "external": 6677680,
+          "arrayBuffers": 2535701
+        },
+        "sampledPeak": {
+          "rss": 249065472,
+          "heapUsed": 80060264,
+          "heapTotal": 129253376,
+          "external": 26470132,
+          "arrayBuffers": 15965457
+        },
+        "final": {
+          "rss": 188698624,
+          "heapTotal": 97079296,
+          "heapUsed": 45721000,
+          "external": 11233044,
+          "arrayBuffers": 8342292
+        },
+        "processLifetimeMaxRssKiB": 287200
+      },
+      "referenceComparison": {
+        "scope": "Node command CPU maximum and process lifetime RSS comparison only; NOT Supabase Edge qualification",
+        "commandCpu": {
+          "measuredMs": 2109,
+          "limitMs": 2000,
+          "passed": false
+        },
+        "lifetimeRss": {
+          "measuredKiB": 287200,
+          "measuredBytes": 294092800,
+          "limitBytes": 268435456,
+          "passed": false
+        },
+        "referenceLimitsPassed": false
+      },
+      "responseJsonBytes": 968340,
+      "scope": "LOCAL fresh Node client with JSON IPC RPC-server isolation; NOT hosted Edge, PostgreSQL or Auth qualification",
+      "server": {
+        "pid": 40000,
+        "node": "v26.13.0",
+        "scope": "Separate RPC model process; excluded from client CPU/RSS references",
+        "initialization": {
+          "wallMs": 100.65859999999998,
+          "cpuMs": 280
+        },
+        "total": {
+          "wallMs": 13167.4539,
+          "cpuMs": 3095
+        },
+        "memory": {
+          "baseline": {
+            "rss": 115933184,
+            "heapTotal": 39456768,
+            "heapUsed": 13916184,
+            "external": 8071725,
+            "arrayBuffers": 5175834
+          },
+          "sampledPeak": {
+            "rss": 336973824,
+            "heapUsed": 129964152,
+            "heapTotal": 256253952,
+            "external": 22742895,
+            "arrayBuffers": 14784058
+          },
+          "final": {
+            "rss": 284225536,
+            "heapTotal": 196894720,
+            "heapUsed": 73817224,
+            "external": 15273179,
+            "arrayBuffers": 9847458
+          },
+          "processLifetimeMaxRssKiB": 336108
+        },
+        "calls": [
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.3324000000000069,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 88.35090000000002,
+            "cpuMs": 94
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 138.63630000000012,
+            "cpuMs": 220
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.1289999999999054,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 98.40560000000005,
+            "cpuMs": 94
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.21590000000014697,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 74.54179999999997,
+            "cpuMs": 78
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 122.17529999999988,
+            "cpuMs": 188
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.10599999999976717,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 71.57190000000082,
+            "cpuMs": 62
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.3798000000006141,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 80.63670000000002,
+            "cpuMs": 140
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 92.32889999999952,
+            "cpuMs": 93
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08800000000064756,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 51.57659999999942,
+            "cpuMs": 31
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.13559999999961292,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 49.61410000000069,
+            "cpuMs": 94
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 86.2525999999998,
+            "cpuMs": 77
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.2790999999997439,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 61.134900000000926,
+            "cpuMs": 62
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09679999999934807,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 52.86119999999937,
+            "cpuMs": 48
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 69.09039999999914,
+            "cpuMs": 141
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.12930000000051223,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 52.23459999999977,
+            "cpuMs": 61
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.10280000000057044,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 56.359699999999066,
+            "cpuMs": 47
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 71.04620000000068,
+            "cpuMs": 187
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.15829999999914435,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 52.22149999999965,
+            "cpuMs": 47
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09299999999893771,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 50.792599999998856,
+            "cpuMs": 62
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 78.70130000000063,
+            "cpuMs": 141
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.11019999999916763,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 52.94330000000082,
+            "cpuMs": 62
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.09280000000035216,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 51.15070000000014,
+            "cpuMs": 47
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 70.09189999999944,
+            "cpuMs": 77
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.08700000000135333,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 51.55500000000029,
+            "cpuMs": 47
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.10300000000097498,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 49.39819999999963,
+            "cpuMs": 47
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 69.63299999999981,
+            "cpuMs": 62
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.11779999999998836,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 51.47739999999976,
+            "cpuMs": 63
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.0886000000009517,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 50.91740000000027,
+            "cpuMs": 47
+          },
+          {
+            "rpc": "finance_commit",
+            "wallMs": 77.36700000000019,
+            "cpuMs": 78
+          },
+          {
+            "rpc": "finance_scope",
+            "wallMs": 0.10289999999986321,
+            "cpuMs": 0
+          },
+          {
+            "rpc": "finance_load",
+            "wallMs": 64.63630000000012,
+            "cpuMs": 62
+          }
+        ],
+        "rpc": {
+          "calls": {
+            "finance_scope": 20,
+            "finance_load": 20,
+            "finance_commit": 10
+          },
+          "wireRequestBytes": 27425104,
+          "wireResponseBytes": 75857366,
+          "maximumEnvelopeBytes": 3405558,
+          "serializationWallMs": 458.2017999999958,
+          "committed": 10,
+          "replays": 0
+        },
+        "finalSequence": 17578,
+        "finalStateBytes": 2405824,
+        "finalStateHash": "7a3754b7779df48e103c125ea134cee92a1a43e5b39c6f2ec98bf85538a6fa7f"
+      },
+      "transport": {
+        "rpcRequests": 50,
+        "requestJsonBytes": 27428675,
+        "responseJsonBytes": 75859307,
+        "serializationMeasuredIn": "each sender/receiver process via Node JSON IPC; relay accounting is coordinator-only"
+      }
+    }
+  ],
+  "sourceHashes": {
+    "apps/mobile/src/finance/engine.ts": "62338c4ffcdaa8a6acf270979489883344164fc3f99076fb0fb03ff6213fbae7",
+    "apps/mobile/src/finance/checkpoint.ts": "9e77715072cdbacd28ae1ae6c5c2caa306f04722ec182ab72481b2777d90bb1c",
+    "apps/mobile/src/finance/types.ts": "8cbf5ee31f19a0a6df79f53103fe23901aef3b9e814da5de77cd42affe3a5e8b",
+    "apps/mobile/src/finance/money-calendar.ts": "63006abd19e84ac8e4de972de71d5e9c41b9a01948af2bd5a5a62531296b5202",
+    "services/backend/src/finance.ts": "7a0fadc2fa1643e9ee363fd24c0b0b9dc83a016b853379712e5c2995935c994c",
+    "services/backend/src/finance-checkpoints.ts": "8fef6bc12db536bbb6ec2d696f07b5ba394e43f2011aae7cd6f821de8d55ce9e",
+    "services/backend/scripts/finance-checkpoint-benchmark.mjs": "e5e49538c7f05158d4e7b3b3885cb3886009f23f7159d4d32c8c985f9d2cd9d1",
+    "services/backend/scripts/finance-checkpoint-family-probe.mjs": "313cf865a4fcd515895d22a345bcaa8b84af0ac23c0b09195945ecf6753d5215",
+    "services/backend/scripts/finance-checkpoint-client-probe.mjs": "43852b2057af93135c1fed9282d18c962b110d5a02af137081441a6dc5ecd4c7"
+  },
+  "finalSourceHashes": {
+    "apps/mobile/src/finance/engine.ts": "62338c4ffcdaa8a6acf270979489883344164fc3f99076fb0fb03ff6213fbae7",
+    "apps/mobile/src/finance/checkpoint.ts": "9e77715072cdbacd28ae1ae6c5c2caa306f04722ec182ab72481b2777d90bb1c",
+    "apps/mobile/src/finance/types.ts": "8cbf5ee31f19a0a6df79f53103fe23901aef3b9e814da5de77cd42affe3a5e8b",
+    "apps/mobile/src/finance/money-calendar.ts": "63006abd19e84ac8e4de972de71d5e9c41b9a01948af2bd5a5a62531296b5202",
+    "services/backend/src/finance.ts": "7a0fadc2fa1643e9ee363fd24c0b0b9dc83a016b853379712e5c2995935c994c",
+    "services/backend/src/finance-checkpoints.ts": "8fef6bc12db536bbb6ec2d696f07b5ba394e43f2011aae7cd6f821de8d55ce9e",
+    "services/backend/scripts/finance-checkpoint-benchmark.mjs": "e5e49538c7f05158d4e7b3b3885cb3886009f23f7159d4d32c8c985f9d2cd9d1",
+    "services/backend/scripts/finance-checkpoint-family-probe.mjs": "313cf865a4fcd515895d22a345bcaa8b84af0ac23c0b09195945ecf6753d5215",
+    "services/backend/scripts/finance-checkpoint-client-probe.mjs": "43852b2057af93135c1fed9282d18c962b110d5a02af137081441a6dc5ecd4c7"
+  },
+  "sourceUnchanged": true,
+  "referenceLimits": {
+    "commandCpuMs": 2000,
+    "lifetimeRssBytes": 268435456
+  },
+  "allWorkersPassed": true,
+  "referenceLimitsPassed": false,
+  "noHostedQualification": true,
+  "limitations": [
+    "Node IPC is not HTTP/TLS, PostgreSQL, Supabase Auth or Edge isolation.",
+    "Client process lifetime max RSS includes Node/tsx startup and actual SDK-equivalent parsed aggregate/envelope data; no RSS baseline subtraction.",
+    "Client CPU includes its own verified-load hashing, validation/sealing, projections, JSON IPC encoding/decoding and returned view encoding.",
+    "Server total CPU/memory and detailed RPC-model costs are reported separately and never compared as Edge-client cost.",
+    "Sampled heap peaks can miss allocations between samples; lifetime RSS is separately retained.",
+    "The same ten-or-more commands target the first child, with reads after each; all children start at126 visible/31 hidden tail events."
+  ]
+}

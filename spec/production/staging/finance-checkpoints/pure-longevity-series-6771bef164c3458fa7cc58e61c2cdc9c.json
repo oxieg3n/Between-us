@@ -1,0 +1,112 @@
+{
+    "format":  1,
+    "scope":  "LOCAL pure-domain longevity series; no Edge/PostgreSQL/Auth qualification",
+    "createdAt":  "2026-11-17T00:01:11.3317682Z",
+    "beforeSeriesSourceManifest":  "service-client-ipc-probe-0648702290454b0cb0a69a5096e5799a.json",
+    "sourceRecords":  [
+                          {
+                              "source":  "apps/mobile/src/finance/engine.ts",
+                              "beforeSeriesSha256":  "62338c4ffcdaa8a6acf270979489883344164fc3f99076fb0fb03ff6213fbae7",
+                              "afterSeriesSha256":  "62338c4ffcdaa8a6acf270979489883344164fc3f99076fb0fb03ff6213fbae7",
+                              "unchanged":  true
+                          },
+                          {
+                              "source":  "apps/mobile/src/finance/checkpoint.ts",
+                              "beforeSeriesSha256":  "9e77715072cdbacd28ae1ae6c5c2caa306f04722ec182ab72481b2777d90bb1c",
+                              "afterSeriesSha256":  "9e77715072cdbacd28ae1ae6c5c2caa306f04722ec182ab72481b2777d90bb1c",
+                              "unchanged":  true
+                          },
+                          {
+                              "source":  "apps/mobile/src/finance/types.ts",
+                              "beforeSeriesSha256":  "8cbf5ee31f19a0a6df79f53103fe23901aef3b9e814da5de77cd42affe3a5e8b",
+                              "afterSeriesSha256":  "8cbf5ee31f19a0a6df79f53103fe23901aef3b9e814da5de77cd42affe3a5e8b",
+                              "unchanged":  true
+                          },
+                          {
+                              "source":  "apps/mobile/src/finance/money-calendar.ts",
+                              "beforeSeriesSha256":  "63006abd19e84ac8e4de972de71d5e9c41b9a01948af2bd5a5a62531296b5202",
+                              "afterSeriesSha256":  "63006abd19e84ac8e4de972de71d5e9c41b9a01948af2bd5a5a62531296b5202",
+                              "unchanged":  true
+                          },
+                          {
+                              "source":  "services/backend/scripts/finance-checkpoint-benchmark.mjs",
+                              "beforeSeriesSha256":  "e5e49538c7f05158d4e7b3b3885cb3886009f23f7159d4d32c8c985f9d2cd9d1",
+                              "afterSeriesSha256":  "e5e49538c7f05158d4e7b3b3885cb3886009f23f7159d4d32c8c985f9d2cd9d1",
+                              "unchanged":  true
+                          }
+                      ],
+    "sourceUnchanged":  true,
+    "artifacts":  [
+                      {
+                          "file":  "node-longevity-52-weeks-20261116234901630.json",
+                          "sha256":  "faaf5a6a75e687daf2acdad0f54633ea3c92fb216ad1661718b88b2ea2af3a0e",
+                          "weeks":  52,
+                          "events":  1307,
+                          "exactGoldenBalanceAndGoals":  true,
+                          "maximums":  {
+                                           "hotBytes":  155439,
+                                           "tail":  129,
+                                           "occurrences":  98,
+                                           "payouts":  14,
+                                           "allocations":  98,
+                                           "matches":  98
+                                       },
+                          "checkpoints":  14,
+                          "visibleCapsules":  3,
+                          "privateCapsules":  273,
+                          "generatorElapsedMs":  4934.998500000001
+                      },
+                      {
+                          "file":  "node-longevity-260-weeks-20261116234947192.json",
+                          "sha256":  "7b739750f2d489b07378350ab52fbb85c139f62746bb4318593967a9da064896",
+                          "weeks":  260,
+                          "events":  6523,
+                          "exactGoldenBalanceAndGoals":  true,
+                          "maximums":  {
+                                           "hotBytes":  193643,
+                                           "tail":  129,
+                                           "occurrences":  98,
+                                           "payouts":  14,
+                                           "allocations":  98,
+                                           "matches":  98
+                                       },
+                          "checkpoints":  77,
+                          "visibleCapsules":  19,
+                          "privateCapsules":  1729,
+                          "generatorElapsedMs":  27493.180099999998
+                      },
+                      {
+                          "file":  "node-longevity-780-weeks-20261116235929548.json",
+                          "sha256":  "ff0859eb675158fa2c3bb1a360ebbfc0f2f625a32ba4326dfdab5d2be66c816d",
+                          "weeks":  780,
+                          "events":  19563,
+                          "exactGoldenBalanceAndGoals":  true,
+                          "maximums":  {
+                                           "hotBytes":  194569,
+                                           "tail":  129,
+                                           "occurrences":  98,
+                                           "payouts":  14,
+                                           "allocations":  98,
+                                           "matches":  98
+                                       },
+                          "checkpoints":  237,
+                          "visibleCapsules":  59,
+                          "privateCapsules":  5369,
+                          "generatorElapsedMs":  113423.8012
+                      }
+                  ],
+    "allExactGoldenPass":  true,
+    "safetyLimitsRaised":  false,
+    "limitations":  [
+                        "Per-process generator retains golden full-history ledger, capsules and checkpoints; generator RSS is not service-request memory.",
+                        "Hot source bounds remain100 occurrences/32 payouts/32 goals/8 savings rules; live connected components remain bounded work.",
+                        "Per-child tail limits remain128 visible/32 hidden events; observed combined tail129 contains both partitions.",
+                        "Physical database/storage/egress/cold runtime require separate qualification."
+                    ],
+    "interruptedAttempt":  {
+                               "session":  48239,
+                               "completed":  false,
+                               "reason":  "Owner reserved CPU slot; no measurement/report emitted before interruption.",
+                               "weeks":  780
+                           }
+}

@@ -1,0 +1,1755 @@
+{
+  "format": 1,
+  "scope": "LOCAL synthetic PostgreSQL TEMP JSONB/TOAST/index storage benchmark; NOT authoritative archive provenance or hosted Edge qualification",
+  "measuredAt": "2026-11-17T00:08:39.514Z",
+  "node": "v26.13.0",
+  "appTableWrites": false,
+  "rollback": true,
+  "identityNormalization": "Representative UUID chore/goal/child IDs and actorUUID:operationUUID event IDs; deterministic synthetic metadata hashes/bindings.",
+  "temporarySchemaSemantics": "LIKE INCLUDING ALL copies actual column types, storage/compression settings, CHECK constraints and indexes; PostgreSQL LIKE does not copy foreign keys, RLS policies or triggers. All required columns populated explicitly; no source verification or circuit enforcement proof.",
+  "tablesExcluded": [
+    "finance notification observations/signals",
+    "all nonfinance application tables"
+  ],
+  "hostedQualification": false,
+  "limits": {
+    "edgeCpuMs": 2000,
+    "edgeMemoryBytes": 268435456,
+    "databaseBytes": 500000000
+  },
+  "scenarios": [
+    {
+      "weeks": 52,
+      "generator": {
+        "wallMs": 5311.2464,
+        "cpuMs": 5624,
+        "memory": {
+          "rss": 205606912,
+          "heapTotal": 105795584,
+          "heapUsed": 51224312,
+          "external": 4593459,
+          "arrayBuffers": 1739357
+        },
+        "perCommand": {
+          "weeks": 52,
+          "savings": true,
+          "matching": true,
+          "events": 1307,
+          "checkpoints": 14,
+          "visibleCapsules": 3,
+          "privateCapsules": 273,
+          "maximums": {
+            "hotBytes": 155439,
+            "tail": 129,
+            "occurrences": 98,
+            "payouts": 14,
+            "allocations": 98,
+            "matches": 98
+          },
+          "finalHotBytes": 150347,
+          "archiveJsonBytes": 413419,
+          "ledgerJsonBytes": 327797,
+          "checkpointJsonBytes": 1208675,
+          "wallP95Ms": 3.9535000000000764,
+          "cpuP95Ms": 16,
+          "cpuMaxMs": 125,
+          "goldenBalanceAndGoalPass": true
+        },
+        "environment": "local Node generation+normalization; current process RSS/heap includes runner and prior scenarios, not peak perrequest physical memory or Edge CPU"
+      },
+      "populateAndAnalyzeMs": 566.3317999999999,
+      "storage": {
+        "tables": [
+          {
+            "table": "finance_aggregates",
+            "rows": 1,
+            "heapBytes": 8192,
+            "indexBytes": 16384,
+            "toastBytes": 81920,
+            "totalBytes": 106496
+          },
+          {
+            "table": "finance_events",
+            "rows": 1307,
+            "heapBytes": 770048,
+            "indexBytes": 778240,
+            "toastBytes": 65536,
+            "totalBytes": 1638400
+          },
+          {
+            "table": "finance_commands",
+            "rows": 1307,
+            "heapBytes": 262144,
+            "indexBytes": 172032,
+            "toastBytes": 8192,
+            "totalBytes": 466944
+          },
+          {
+            "table": "finance_checkpoints",
+            "rows": 14,
+            "heapBytes": 8192,
+            "indexBytes": 32768,
+            "toastBytes": 368640,
+            "totalBytes": 409600
+          },
+          {
+            "table": "finance_entity_ids",
+            "rows": 885,
+            "heapBytes": 131072,
+            "indexBytes": 188416,
+            "toastBytes": 8192,
+            "totalBytes": 352256
+          },
+          {
+            "table": "finance_archive_capsules",
+            "rows": 3,
+            "heapBytes": 8192,
+            "indexBytes": 49152,
+            "toastBytes": 106496,
+            "totalBytes": 163840
+          },
+          {
+            "table": "finance_archive_residency",
+            "rows": 3,
+            "heapBytes": 8192,
+            "indexBytes": 32768,
+            "toastBytes": 0,
+            "totalBytes": 40960
+          },
+          {
+            "table": "finance_archive_entity_keys",
+            "rows": 624,
+            "heapBytes": 106496,
+            "indexBytes": 311296,
+            "toastBytes": 8192,
+            "totalBytes": 450560
+          },
+          {
+            "table": "finance_archive_current_entities",
+            "rows": 624,
+            "heapBytes": 98304,
+            "indexBytes": 155648,
+            "toastBytes": 8192,
+            "totalBytes": 286720
+          },
+          {
+            "table": "finance_archived_occurrences",
+            "rows": 273,
+            "heapBytes": 57344,
+            "indexBytes": 90112,
+            "toastBytes": 8192,
+            "totalBytes": 180224
+          },
+          {
+            "table": "finance_archive_budget_heads",
+            "rows": 1,
+            "heapBytes": 8192,
+            "indexBytes": 16384,
+            "toastBytes": 8192,
+            "totalBytes": 32768
+          },
+          {
+            "table": "finance_archive_budget_periods",
+            "rows": 10,
+            "heapBytes": 8192,
+            "indexBytes": 32768,
+            "toastBytes": 8192,
+            "totalBytes": 49152
+          },
+          {
+            "table": "finance_private_match_origins",
+            "rows": 364,
+            "heapBytes": 73728,
+            "indexBytes": 65536,
+            "toastBytes": 8192,
+            "totalBytes": 172032
+          },
+          {
+            "table": "finance_private_match_capsules",
+            "rows": 273,
+            "heapBytes": 376832,
+            "indexBytes": 188416,
+            "toastBytes": 8192,
+            "totalBytes": 598016
+          },
+          {
+            "table": "finance_private_match_residency",
+            "rows": 273,
+            "heapBytes": 49152,
+            "indexBytes": 122880,
+            "toastBytes": 8192,
+            "totalBytes": 204800
+          },
+          {
+            "table": "finance_activity",
+            "rows": 1307,
+            "heapBytes": 606208,
+            "indexBytes": 507904,
+            "toastBytes": 8192,
+            "totalBytes": 1146880
+          },
+          {
+            "table": "finance_projection_snapshots",
+            "rows": 1,
+            "heapBytes": 8192,
+            "indexBytes": 16384,
+            "toastBytes": 73728,
+            "totalBytes": 98304
+          }
+        ],
+        "totalBytes": 6397952
+      },
+      "plans": {
+        "exactArchive": {
+          "planningMs": 0.64,
+          "executionMs": 0.059,
+          "plan": {
+            "nodeType": "Limit",
+            "actualRows": 1,
+            "loops": 1,
+            "actualTotalMs": 0.024,
+            "indexUsed": false,
+            "localReadBlocks": 0,
+            "localHitBlocks": 5,
+            "children": [
+              {
+                "nodeType": "Nested Loop",
+                "actualRows": 1,
+                "loops": 1,
+                "actualTotalMs": 0.023,
+                "indexUsed": false,
+                "localReadBlocks": 0,
+                "localHitBlocks": 5,
+                "children": [
+                  {
+                    "nodeType": "Nested Loop",
+                    "actualRows": 1,
+                    "loops": 1,
+                    "actualTotalMs": 0.021,
+                    "indexUsed": false,
+                    "localReadBlocks": 0,
+                    "localHitBlocks": 4,
+                    "children": [
+                      {
+                        "nodeType": "Index Scan",
+                        "actualRows": 1,
+                        "loops": 1,
+                        "actualTotalMs": 0.014,
+                        "indexUsed": true,
+                        "localReadBlocks": 0,
+                        "localHitBlocks": 3,
+                        "children": []
+                      },
+                      {
+                        "nodeType": "Seq Scan",
+                        "actualRows": 1,
+                        "loops": 1,
+                        "actualTotalMs": 0.004,
+                        "indexUsed": false,
+                        "localReadBlocks": 0,
+                        "localHitBlocks": 1,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "Seq Scan",
+                    "actualRows": 1,
+                    "loops": 1,
+                    "actualTotalMs": 0.002,
+                    "indexUsed": false,
+                    "localReadBlocks": 0,
+                    "localHitBlocks": 1,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "currentBudget": {
+          "planningMs": 0.12,
+          "executionMs": 0.025,
+          "plan": {
+            "nodeType": "Limit",
+            "actualRows": 0,
+            "loops": 1,
+            "actualTotalMs": 0.009,
+            "indexUsed": false,
+            "localReadBlocks": 0,
+            "localHitBlocks": 1,
+            "children": [
+              {
+                "nodeType": "Seq Scan",
+                "actualRows": 0,
+                "loops": 1,
+                "actualTotalMs": 0.008,
+                "indexUsed": false,
+                "localReadBlocks": 0,
+                "localHitBlocks": 1,
+                "children": []
+              }
+            ]
+          }
+        },
+        "maximumBudget": {
+          "planningMs": 0.088,
+          "executionMs": 0.027,
+          "plan": {
+            "nodeType": "Limit",
+            "actualRows": 1,
+            "loops": 1,
+            "actualTotalMs": 0.014,
+            "indexUsed": false,
+            "localReadBlocks": 0,
+            "localHitBlocks": 1,
+            "children": [
+              {
+                "nodeType": "Sort",
+                "actualRows": 1,
+                "loops": 1,
+                "actualTotalMs": 0.013,
+                "indexUsed": false,
+                "localReadBlocks": 0,
+                "localHitBlocks": 1,
+                "children": [
+                  {
+                    "nodeType": "Seq Scan",
+                    "actualRows": 10,
+                    "loops": 1,
+                    "actualTotalMs": 0.007,
+                    "indexUsed": false,
+                    "localReadBlocks": 0,
+                    "localHitBlocks": 1,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "historyPage": {
+          "planningMs": 0.163,
+          "executionMs": 0.04,
+          "plan": {
+            "nodeType": "Merge Join",
+            "actualRows": 3,
+            "loops": 1,
+            "actualTotalMs": 0.02,
+            "indexUsed": false,
+            "localReadBlocks": 0,
+            "localHitBlocks": 2,
+            "children": [
+              {
+                "nodeType": "Limit",
+                "actualRows": 3,
+                "loops": 1,
+                "actualTotalMs": 0.011,
+                "indexUsed": false,
+                "localReadBlocks": 0,
+                "localHitBlocks": 1,
+                "children": [
+                  {
+                    "nodeType": "Sort",
+                    "actualRows": 3,
+                    "loops": 1,
+                    "actualTotalMs": 0.01,
+                    "indexUsed": false,
+                    "localReadBlocks": 0,
+                    "localHitBlocks": 1,
+                    "children": [
+                      {
+                        "nodeType": "Seq Scan",
+                        "actualRows": 3,
+                        "loops": 1,
+                        "actualTotalMs": 0.005,
+                        "indexUsed": false,
+                        "localReadBlocks": 0,
+                        "localHitBlocks": 1,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "Sort",
+                "actualRows": 3,
+                "loops": 1,
+                "actualTotalMs": 0.006,
+                "indexUsed": false,
+                "localReadBlocks": 0,
+                "localHitBlocks": 1,
+                "children": [
+                  {
+                    "nodeType": "Seq Scan",
+                    "actualRows": 3,
+                    "loops": 1,
+                    "actualTotalMs": 0.002,
+                    "indexUsed": false,
+                    "localReadBlocks": 0,
+                    "localHitBlocks": 1,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "parentHistoryPage": {
+          "planningMs": 0.357,
+          "executionMs": 0.132,
+          "plan": {
+            "nodeType": "Sort",
+            "actualRows": 20,
+            "loops": 1,
+            "actualTotalMs": 0.108,
+            "indexUsed": false,
+            "localReadBlocks": 0,
+            "localHitBlocks": 66,
+            "children": [
+              {
+                "nodeType": "Hash Join",
+                "actualRows": 20,
+                "loops": 1,
+                "actualTotalMs": 0.095,
+                "indexUsed": false,
+                "localReadBlocks": 0,
+                "localHitBlocks": 66,
+                "children": [
+                  {
+                    "nodeType": "Seq Scan",
+                    "actualRows": 273,
+                    "loops": 1,
+                    "actualTotalMs": 0.042,
+                    "indexUsed": false,
+                    "localReadBlocks": 0,
+                    "localHitBlocks": 46,
+                    "children": []
+                  },
+                  {
+                    "nodeType": "Hash",
+                    "actualRows": 20,
+                    "loops": 1,
+                    "actualTotalMs": 0.024,
+                    "indexUsed": false,
+                    "localReadBlocks": 0,
+                    "localHitBlocks": 20,
+                    "children": [
+                      {
+                        "nodeType": "Limit",
+                        "actualRows": 20,
+                        "loops": 1,
+                        "actualTotalMs": 0.02,
+                        "indexUsed": false,
+                        "localReadBlocks": 0,
+                        "localHitBlocks": 20,
+                        "children": [
+                          {
+                            "nodeType": "Index Scan",
+                            "actualRows": 20,
+                            "loops": 1,
+                            "actualTotalMs": 0.018,
+                            "indexUsed": true,
+                            "localReadBlocks": 0,
+                            "localHitBlocks": 20,
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "activityPage": {
+          "planningMs": 0.17,
+          "executionMs": 0.107,
+          "plan": {
+            "nodeType": "Limit",
+            "actualRows": 20,
+            "loops": 1,
+            "actualTotalMs": 0.019,
+            "indexUsed": false,
+            "localReadBlocks": 0,
+            "localHitBlocks": 4,
+            "children": [
+              {
+                "nodeType": "Index Scan",
+                "actualRows": 20,
+                "loops": 1,
+                "actualTotalMs": 0.016,
+                "indexUsed": true,
+                "localReadBlocks": 0,
+                "localHitBlocks": 4,
+                "children": []
+              }
+            ]
+          }
+        },
+        "currentProjection": {
+          "planningMs": 0.096,
+          "executionMs": 0.021,
+          "plan": {
+            "nodeType": "Limit",
+            "actualRows": 1,
+            "loops": 1,
+            "actualTotalMs": 0.007,
+            "indexUsed": false,
+            "localReadBlocks": 0,
+            "localHitBlocks": 1,
+            "children": [
+              {
+                "nodeType": "Seq Scan",
+                "actualRows": 1,
+                "loops": 1,
+                "actualTotalMs": 0.006,
+                "indexUsed": false,
+                "localReadBlocks": 0,
+                "localHitBlocks": 1,
+                "children": []
+              }
+            ]
+          }
+        }
+      },
+      "forecast": {
+        "measuredChildFinanceBytes": 6397952,
+        "databaseBytes": 500000000,
+        "assumedUsableFraction": 0.7,
+        "assumptions": "Linear child-copy finance-only estimate;30% headroom; excludes auth, messaging, notifications, backups and other application tables.",
+        "scenarios": [
+          {
+            "childrenPerFamily": 1,
+            "estimatedMaximumFamilies": 54,
+            "families": [
+              {
+                "families": 10,
+                "estimatedFinanceBytes": 63979520,
+                "withinAssumedFinanceBudget": true
+              },
+              {
+                "families": 100,
+                "estimatedFinanceBytes": 639795200,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 500,
+                "estimatedFinanceBytes": 3198976000,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 1000,
+                "estimatedFinanceBytes": 6397952000,
+                "withinAssumedFinanceBudget": false
+              }
+            ]
+          },
+          {
+            "childrenPerFamily": 2,
+            "estimatedMaximumFamilies": 27,
+            "families": [
+              {
+                "families": 10,
+                "estimatedFinanceBytes": 127959040,
+                "withinAssumedFinanceBudget": true
+              },
+              {
+                "families": 100,
+                "estimatedFinanceBytes": 1279590400,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 500,
+                "estimatedFinanceBytes": 6397952000,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 1000,
+                "estimatedFinanceBytes": 12795904000,
+                "withinAssumedFinanceBudget": false
+              }
+            ]
+          },
+          {
+            "childrenPerFamily": 12,
+            "estimatedMaximumFamilies": 4,
+            "families": [
+              {
+                "families": 10,
+                "estimatedFinanceBytes": 767754240,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 100,
+                "estimatedFinanceBytes": 7677542400,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 500,
+                "estimatedFinanceBytes": 38387712000,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 1000,
+                "estimatedFinanceBytes": 76775424000,
+                "withinAssumedFinanceBudget": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weeks": 260,
+      "generator": {
+        "wallMs": 32176.528899999998,
+        "cpuMs": 33344,
+        "memory": {
+          "rss": 247238656,
+          "heapTotal": 147210240,
+          "heapUsed": 81677856,
+          "external": 4440619,
+          "arrayBuffers": 1389677
+        },
+        "perCommand": {
+          "weeks": 260,
+          "savings": true,
+          "matching": true,
+          "events": 6523,
+          "checkpoints": 77,
+          "visibleCapsules": 19,
+          "privateCapsules": 1729,
+          "maximums": {
+            "hotBytes": 193643,
+            "tail": 129,
+            "occurrences": 98,
+            "payouts": 14,
+            "allocations": 98,
+            "matches": 98
+          },
+          "finalHotBytes": 138592,
+          "archiveJsonBytes": 2642441,
+          "ledgerJsonBytes": 1646053,
+          "checkpointJsonBytes": 6816684,
+          "wallP95Ms": 3.224500000000262,
+          "cpuP95Ms": 16,
+          "cpuMaxMs": 360,
+          "goldenBalanceAndGoalPass": true
+        },
+        "environment": "local Node generation+normalization; current process RSS/heap includes runner and prior scenarios, not peak perrequest physical memory or Edge CPU"
+      },
+      "populateAndAnalyzeMs": 2840.717199999999,
+      "storage": {
+        "tables": [
+          {
+            "table": "finance_aggregates",
+            "rows": 1,
+            "heapBytes": 8192,
+            "indexBytes": 16384,
+            "toastBytes": 81920,
+            "totalBytes": 106496
+          },
+          {
+            "table": "finance_events",
+            "rows": 6523,
+            "heapBytes": 3809280,
+            "indexBytes": 3416064,
+            "toastBytes": 155648,
+            "totalBytes": 7405568
+          },
+          {
+            "table": "finance_commands",
+            "rows": 6523,
+            "heapBytes": 1310720,
+            "indexBytes": 655360,
+            "toastBytes": 8192,
+            "totalBytes": 1998848
+          },
+          {
+            "table": "finance_checkpoints",
+            "rows": 77,
+            "heapBytes": 32768,
+            "indexBytes": 32768,
+            "toastBytes": 1892352,
+            "totalBytes": 1982464
+          },
+          {
+            "table": "finance_entity_ids",
+            "rows": 4421,
+            "heapBytes": 622592,
+            "indexBytes": 794624,
+            "toastBytes": 8192,
+            "totalBytes": 1449984
+          },
+          {
+            "table": "finance_archive_capsules",
+            "rows": 19,
+            "heapBytes": 8192,
+            "indexBytes": 49152,
+            "toastBytes": 458752,
+            "totalBytes": 516096
+          },
+          {
+            "table": "finance_archive_residency",
+            "rows": 19,
+            "heapBytes": 8192,
+            "indexBytes": 32768,
+            "toastBytes": 0,
+            "totalBytes": 40960
+          },
+          {
+            "table": "finance_archive_entity_keys",
+            "rows": 3952,
+            "heapBytes": 630784,
+            "indexBytes": 1687552,
+            "toastBytes": 8192,
+            "totalBytes": 2351104
+          },
+          {
+            "table": "finance_archive_current_entities",
+            "rows": 3952,
+            "heapBytes": 622592,
+            "indexBytes": 802816,
+            "toastBytes": 8192,
+            "totalBytes": 1458176
+          },
+          {
+            "table": "finance_archived_occurrences",
+            "rows": 1729,
+            "heapBytes": 335872,
+            "indexBytes": 368640,
+            "toastBytes": 8192,
+            "totalBytes": 737280
+          },
+          {
+            "table": "finance_archive_budget_heads",
+            "rows": 1,
+            "heapBytes": 8192,
+            "indexBytes": 16384,
+            "toastBytes": 8192,
+            "totalBytes": 32768
+          },
+          {
+            "table": "finance_archive_budget_periods",
+            "rows": 57,
+            "heapBytes": 8192,
+            "indexBytes": 32768,
+            "toastBytes": 8192,
+            "totalBytes": 49152
+          },
+          {
+            "table": "finance_private_match_origins",
+            "rows": 1820,
+            "heapBytes": 352256,
+            "indexBytes": 352256,
+            "toastBytes": 8192,
+            "totalBytes": 737280
+          },
+          {
+            "table": "finance_private_match_capsules",
+            "rows": 1729,
+            "heapBytes": 2367488,
+            "indexBytes": 974848,
+            "toastBytes": 8192,
+            "totalBytes": 3375104
+          },
+          {
+            "table": "finance_private_match_residency",
+            "rows": 1729,
+            "heapBytes": 294912,
+            "indexBytes": 598016,
+            "toastBytes": 8192,
+            "totalBytes": 925696
+          },
+          {
+            "table": "finance_activity",
+            "rows": 6523,
+            "heapBytes": 3022848,
+            "indexBytes": 2203648,
+            "toastBytes": 8192,
+            "totalBytes": 5259264
+          },
+          {
+            "table": "finance_projection_snapshots",
+            "rows": 1,
+            "heapBytes": 8192,
+            "indexBytes": 16384,
+            "toastBytes": 73728,
+            "totalBytes": 98304
+          }
+        ],
+        "totalBytes": 28524544
+      },
+      "plans": {
+        "exactArchive": {
+          "planningMs": 0.61,
+          "executionMs": 0.073,
+          "plan": {
+            "nodeType": "Limit",
+            "actualRows": 1,
+            "loops": 1,
+            "actualTotalMs": 0.044,
+            "indexUsed": false,
+            "localReadBlocks": 4,
+            "localHitBlocks": 3,
+            "children": [
+              {
+                "nodeType": "Nested Loop",
+                "actualRows": 1,
+                "loops": 1,
+                "actualTotalMs": 0.043,
+                "indexUsed": false,
+                "localReadBlocks": 4,
+                "localHitBlocks": 3,
+                "children": [
+                  {
+                    "nodeType": "Hash Join",
+                    "actualRows": 1,
+                    "loops": 1,
+                    "actualTotalMs": 0.04,
+                    "indexUsed": false,
+                    "localReadBlocks": 4,
+                    "localHitBlocks": 1,
+                    "children": [
+                      {
+                        "nodeType": "Seq Scan",
+                        "actualRows": 1,
+                        "loops": 1,
+                        "actualTotalMs": 0.006,
+                        "indexUsed": false,
+                        "localReadBlocks": 0,
+                        "localHitBlocks": 1,
+                        "children": []
+                      },
+                      {
+                        "nodeType": "Hash",
+                        "actualRows": 1,
+                        "loops": 1,
+                        "actualTotalMs": 0.028,
+                        "indexUsed": false,
+                        "localReadBlocks": 4,
+                        "localHitBlocks": 0,
+                        "children": [
+                          {
+                            "nodeType": "Index Scan",
+                            "actualRows": 1,
+                            "loops": 1,
+                            "actualTotalMs": 0.026,
+                            "indexUsed": true,
+                            "localReadBlocks": 4,
+                            "localHitBlocks": 0,
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "Index Scan",
+                    "actualRows": 1,
+                    "loops": 1,
+                    "actualTotalMs": 0.001,
+                    "indexUsed": true,
+                    "localReadBlocks": 0,
+                    "localHitBlocks": 2,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "currentBudget": {
+          "planningMs": 0.178,
+          "executionMs": 0.033,
+          "plan": {
+            "nodeType": "Limit",
+            "actualRows": 0,
+            "loops": 1,
+            "actualTotalMs": 0.015,
+            "indexUsed": false,
+            "localReadBlocks": 0,
+            "localHitBlocks": 1,
+            "children": [
+              {
+                "nodeType": "Seq Scan",
+                "actualRows": 0,
+                "loops": 1,
+                "actualTotalMs": 0.014,
+                "indexUsed": false,
+                "localReadBlocks": 0,
+                "localHitBlocks": 1,
+                "children": []
+              }
+            ]
+          }
+        },
+        "maximumBudget": {
+          "planningMs": 0.138,
+          "executionMs": 0.075,
+          "plan": {
+            "nodeType": "Limit",
+            "actualRows": 1,
+            "loops": 1,
+            "actualTotalMs": 0.045,
+            "indexUsed": false,
+            "localReadBlocks": 1,
+            "localHitBlocks": 1,
+            "children": [
+              {
+                "nodeType": "Index Only Scan",
+                "actualRows": 1,
+                "loops": 1,
+                "actualTotalMs": 0.044,
+                "indexUsed": true,
+                "localReadBlocks": 1,
+                "localHitBlocks": 1,
+                "children": []
+              }
+            ]
+          }
+        },
+        "historyPage": {
+          "planningMs": 0.155,
+          "executionMs": 0.055,
+          "plan": {
+            "nodeType": "Merge Join",
+            "actualRows": 19,
+            "loops": 1,
+            "actualTotalMs": 0.036,
+            "indexUsed": false,
+            "localReadBlocks": 0,
+            "localHitBlocks": 2,
+            "children": [
+              {
+                "nodeType": "Limit",
+                "actualRows": 19,
+                "loops": 1,
+                "actualTotalMs": 0.017,
+                "indexUsed": false,
+                "localReadBlocks": 0,
+                "localHitBlocks": 1,
+                "children": [
+                  {
+                    "nodeType": "Sort",
+                    "actualRows": 19,
+                    "loops": 1,
+                    "actualTotalMs": 0.015,
+                    "indexUsed": false,
+                    "localReadBlocks": 0,
+                    "localHitBlocks": 1,
+                    "children": [
+                      {
+                        "nodeType": "Seq Scan",
+                        "actualRows": 19,
+                        "loops": 1,
+                        "actualTotalMs": 0.008,
+                        "indexUsed": false,
+                        "localReadBlocks": 0,
+                        "localHitBlocks": 1,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "Sort",
+                "actualRows": 19,
+                "loops": 1,
+                "actualTotalMs": 0.012,
+                "indexUsed": false,
+                "localReadBlocks": 0,
+                "localHitBlocks": 1,
+                "children": [
+                  {
+                    "nodeType": "Seq Scan",
+                    "actualRows": 19,
+                    "loops": 1,
+                    "actualTotalMs": 0.005,
+                    "indexUsed": false,
+                    "localReadBlocks": 0,
+                    "localHitBlocks": 1,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "parentHistoryPage": {
+          "planningMs": 0.324,
+          "executionMs": 0.096,
+          "plan": {
+            "nodeType": "Nested Loop",
+            "actualRows": 20,
+            "loops": 1,
+            "actualTotalMs": 0.078,
+            "indexUsed": false,
+            "localReadBlocks": 4,
+            "localHitBlocks": 78,
+            "children": [
+              {
+                "nodeType": "Limit",
+                "actualRows": 20,
+                "loops": 1,
+                "actualTotalMs": 0.032,
+                "indexUsed": false,
+                "localReadBlocks": 2,
+                "localHitBlocks": 20,
+                "children": [
+                  {
+                    "nodeType": "Index Only Scan",
+                    "actualRows": 20,
+                    "loops": 1,
+                    "actualTotalMs": 0.03,
+                    "indexUsed": true,
+                    "localReadBlocks": 2,
+                    "localHitBlocks": 20,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "nodeType": "Index Scan",
+                "actualRows": 1,
+                "loops": 20,
+                "actualTotalMs": 0.002,
+                "indexUsed": true,
+                "localReadBlocks": 2,
+                "localHitBlocks": 58,
+                "children": []
+              }
+            ]
+          }
+        },
+        "activityPage": {
+          "planningMs": 0.164,
+          "executionMs": 0.027,
+          "plan": {
+            "nodeType": "Limit",
+            "actualRows": 20,
+            "loops": 1,
+            "actualTotalMs": 0.013,
+            "indexUsed": false,
+            "localReadBlocks": 0,
+            "localHitBlocks": 4,
+            "children": [
+              {
+                "nodeType": "Index Scan",
+                "actualRows": 20,
+                "loops": 1,
+                "actualTotalMs": 0.011,
+                "indexUsed": true,
+                "localReadBlocks": 0,
+                "localHitBlocks": 4,
+                "children": []
+              }
+            ]
+          }
+        },
+        "currentProjection": {
+          "planningMs": 0.09,
+          "executionMs": 0.016,
+          "plan": {
+            "nodeType": "Limit",
+            "actualRows": 1,
+            "loops": 1,
+            "actualTotalMs": 0.006,
+            "indexUsed": false,
+            "localReadBlocks": 0,
+            "localHitBlocks": 1,
+            "children": [
+              {
+                "nodeType": "Seq Scan",
+                "actualRows": 1,
+                "loops": 1,
+                "actualTotalMs": 0.005,
+                "indexUsed": false,
+                "localReadBlocks": 0,
+                "localHitBlocks": 1,
+                "children": []
+              }
+            ]
+          }
+        }
+      },
+      "forecast": {
+        "measuredChildFinanceBytes": 28524544,
+        "databaseBytes": 500000000,
+        "assumedUsableFraction": 0.7,
+        "assumptions": "Linear child-copy finance-only estimate;30% headroom; excludes auth, messaging, notifications, backups and other application tables.",
+        "scenarios": [
+          {
+            "childrenPerFamily": 1,
+            "estimatedMaximumFamilies": 12,
+            "families": [
+              {
+                "families": 10,
+                "estimatedFinanceBytes": 285245440,
+                "withinAssumedFinanceBudget": true
+              },
+              {
+                "families": 100,
+                "estimatedFinanceBytes": 2852454400,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 500,
+                "estimatedFinanceBytes": 14262272000,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 1000,
+                "estimatedFinanceBytes": 28524544000,
+                "withinAssumedFinanceBudget": false
+              }
+            ]
+          },
+          {
+            "childrenPerFamily": 2,
+            "estimatedMaximumFamilies": 6,
+            "families": [
+              {
+                "families": 10,
+                "estimatedFinanceBytes": 570490880,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 100,
+                "estimatedFinanceBytes": 5704908800,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 500,
+                "estimatedFinanceBytes": 28524544000,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 1000,
+                "estimatedFinanceBytes": 57049088000,
+                "withinAssumedFinanceBudget": false
+              }
+            ]
+          },
+          {
+            "childrenPerFamily": 12,
+            "estimatedMaximumFamilies": 1,
+            "families": [
+              {
+                "families": 10,
+                "estimatedFinanceBytes": 3422945280,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 100,
+                "estimatedFinanceBytes": 34229452800,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 500,
+                "estimatedFinanceBytes": 171147264000,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 1000,
+                "estimatedFinanceBytes": 342294528000,
+                "withinAssumedFinanceBudget": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weeks": 780,
+      "generator": {
+        "wallMs": 154332.0746,
+        "cpuMs": 155859,
+        "memory": {
+          "rss": 387825664,
+          "heapTotal": 307662848,
+          "heapUsed": 254757552,
+          "external": 4238640,
+          "arrayBuffers": 1389677
+        },
+        "perCommand": {
+          "weeks": 780,
+          "savings": true,
+          "matching": true,
+          "events": 19563,
+          "checkpoints": 237,
+          "visibleCapsules": 59,
+          "privateCapsules": 5369,
+          "maximums": {
+            "hotBytes": 194569,
+            "tail": 129,
+            "occurrences": 98,
+            "payouts": 14,
+            "allocations": 98,
+            "matches": 98
+          },
+          "finalHotBytes": 145596,
+          "archiveJsonBytes": 8241967,
+          "ledgerJsonBytes": 4959158,
+          "checkpointJsonBytes": 23804005,
+          "wallP95Ms": 3.1833000000042375,
+          "cpuP95Ms": 16,
+          "cpuMaxMs": 1235,
+          "goldenBalanceAndGoalPass": true
+        },
+        "environment": "local Node generation+normalization; current process RSS/heap includes runner and prior scenarios, not peak perrequest physical memory or Edge CPU"
+      },
+      "populateAndAnalyzeMs": 8331.459200000012,
+      "storage": {
+        "tables": [
+          {
+            "table": "finance_aggregates",
+            "rows": 1,
+            "heapBytes": 8192,
+            "indexBytes": 16384,
+            "toastBytes": 81920,
+            "totalBytes": 106496
+          },
+          {
+            "table": "finance_events",
+            "rows": 19563,
+            "heapBytes": 11419648,
+            "indexBytes": 9945088,
+            "toastBytes": 368640,
+            "totalBytes": 21757952
+          },
+          {
+            "table": "finance_commands",
+            "rows": 19563,
+            "heapBytes": 3915776,
+            "indexBytes": 1957888,
+            "toastBytes": 8192,
+            "totalBytes": 5906432
+          },
+          {
+            "table": "finance_checkpoints",
+            "rows": 237,
+            "heapBytes": 81920,
+            "indexBytes": 49152,
+            "toastBytes": 6447104,
+            "totalBytes": 6602752
+          },
+          {
+            "table": "finance_entity_ids",
+            "rows": 13261,
+            "heapBytes": 1859584,
+            "indexBytes": 2457600,
+            "toastBytes": 8192,
+            "totalBytes": 4349952
+          },
+          {
+            "table": "finance_archive_capsules",
+            "rows": 59,
+            "heapBytes": 16384,
+            "indexBytes": 49152,
+            "toastBytes": 1351680,
+            "totalBytes": 1441792
+          },
+          {
+            "table": "finance_archive_residency",
+            "rows": 59,
+            "heapBytes": 8192,
+            "indexBytes": 32768,
+            "toastBytes": 0,
+            "totalBytes": 40960
+          },
+          {
+            "table": "finance_archive_entity_keys",
+            "rows": 12272,
+            "heapBytes": 1949696,
+            "indexBytes": 5021696,
+            "toastBytes": 8192,
+            "totalBytes": 7004160
+          },
+          {
+            "table": "finance_archive_current_entities",
+            "rows": 12272,
+            "heapBytes": 1916928,
+            "indexBytes": 2375680,
+            "toastBytes": 8192,
+            "totalBytes": 4325376
+          },
+          {
+            "table": "finance_archived_occurrences",
+            "rows": 5369,
+            "heapBytes": 1024000,
+            "indexBytes": 1105920,
+            "toastBytes": 8192,
+            "totalBytes": 2162688
+          },
+          {
+            "table": "finance_archive_budget_heads",
+            "rows": 1,
+            "heapBytes": 8192,
+            "indexBytes": 16384,
+            "toastBytes": 8192,
+            "totalBytes": 32768
+          },
+          {
+            "table": "finance_archive_budget_periods",
+            "rows": 177,
+            "heapBytes": 16384,
+            "indexBytes": 49152,
+            "toastBytes": 8192,
+            "totalBytes": 98304
+          },
+          {
+            "table": "finance_private_match_origins",
+            "rows": 5460,
+            "heapBytes": 1040384,
+            "indexBytes": 1056768,
+            "toastBytes": 8192,
+            "totalBytes": 2129920
+          },
+          {
+            "table": "finance_private_match_capsules",
+            "rows": 5369,
+            "heapBytes": 7331840,
+            "indexBytes": 3014656,
+            "toastBytes": 8192,
+            "totalBytes": 10379264
+          },
+          {
+            "table": "finance_private_match_residency",
+            "rows": 5369,
+            "heapBytes": 901120,
+            "indexBytes": 1867776,
+            "toastBytes": 8192,
+            "totalBytes": 2801664
+          },
+          {
+            "table": "finance_activity",
+            "rows": 19563,
+            "heapBytes": 9052160,
+            "indexBytes": 6356992,
+            "toastBytes": 8192,
+            "totalBytes": 15441920
+          },
+          {
+            "table": "finance_projection_snapshots",
+            "rows": 1,
+            "heapBytes": 8192,
+            "indexBytes": 16384,
+            "toastBytes": 73728,
+            "totalBytes": 98304
+          }
+        ],
+        "totalBytes": 84680704
+      },
+      "plans": {
+        "exactArchive": {
+          "planningMs": 0.55,
+          "executionMs": 0.075,
+          "plan": {
+            "nodeType": "Limit",
+            "actualRows": 1,
+            "loops": 1,
+            "actualTotalMs": 0.046,
+            "indexUsed": false,
+            "localReadBlocks": 4,
+            "localHitBlocks": 3,
+            "children": [
+              {
+                "nodeType": "Nested Loop",
+                "actualRows": 1,
+                "loops": 1,
+                "actualTotalMs": 0.045,
+                "indexUsed": false,
+                "localReadBlocks": 4,
+                "localHitBlocks": 3,
+                "children": [
+                  {
+                    "nodeType": "Hash Join",
+                    "actualRows": 1,
+                    "loops": 1,
+                    "actualTotalMs": 0.042,
+                    "indexUsed": false,
+                    "localReadBlocks": 4,
+                    "localHitBlocks": 1,
+                    "children": [
+                      {
+                        "nodeType": "Seq Scan",
+                        "actualRows": 1,
+                        "loops": 1,
+                        "actualTotalMs": 0.006,
+                        "indexUsed": false,
+                        "localReadBlocks": 0,
+                        "localHitBlocks": 1,
+                        "children": []
+                      },
+                      {
+                        "nodeType": "Hash",
+                        "actualRows": 1,
+                        "loops": 1,
+                        "actualTotalMs": 0.029,
+                        "indexUsed": false,
+                        "localReadBlocks": 4,
+                        "localHitBlocks": 0,
+                        "children": [
+                          {
+                            "nodeType": "Index Scan",
+                            "actualRows": 1,
+                            "loops": 1,
+                            "actualTotalMs": 0.027,
+                            "indexUsed": true,
+                            "localReadBlocks": 4,
+                            "localHitBlocks": 0,
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "Index Scan",
+                    "actualRows": 1,
+                    "loops": 1,
+                    "actualTotalMs": 0.002,
+                    "indexUsed": true,
+                    "localReadBlocks": 0,
+                    "localHitBlocks": 2,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "currentBudget": {
+          "planningMs": 0.102,
+          "executionMs": 0.039,
+          "plan": {
+            "nodeType": "Limit",
+            "actualRows": 0,
+            "loops": 1,
+            "actualTotalMs": 0.029,
+            "indexUsed": false,
+            "localReadBlocks": 2,
+            "localHitBlocks": 0,
+            "children": [
+              {
+                "nodeType": "Seq Scan",
+                "actualRows": 0,
+                "loops": 1,
+                "actualTotalMs": 0.029,
+                "indexUsed": false,
+                "localReadBlocks": 2,
+                "localHitBlocks": 0,
+                "children": []
+              }
+            ]
+          }
+        },
+        "maximumBudget": {
+          "planningMs": 0.099,
+          "executionMs": 0.06,
+          "plan": {
+            "nodeType": "Limit",
+            "actualRows": 1,
+            "loops": 1,
+            "actualTotalMs": 0.039,
+            "indexUsed": false,
+            "localReadBlocks": 1,
+            "localHitBlocks": 1,
+            "children": [
+              {
+                "nodeType": "Index Only Scan",
+                "actualRows": 1,
+                "loops": 1,
+                "actualTotalMs": 0.038,
+                "indexUsed": true,
+                "localReadBlocks": 1,
+                "localHitBlocks": 1,
+                "children": []
+              }
+            ]
+          }
+        },
+        "historyPage": {
+          "planningMs": 0.199,
+          "executionMs": 0.1,
+          "plan": {
+            "nodeType": "Sort",
+            "actualRows": 20,
+            "loops": 1,
+            "actualTotalMs": 0.074,
+            "indexUsed": false,
+            "localReadBlocks": 1,
+            "localHitBlocks": 2,
+            "children": [
+              {
+                "nodeType": "Hash Join",
+                "actualRows": 20,
+                "loops": 1,
+                "actualTotalMs": 0.064,
+                "indexUsed": false,
+                "localReadBlocks": 1,
+                "localHitBlocks": 2,
+                "children": [
+                  {
+                    "nodeType": "Seq Scan",
+                    "actualRows": 59,
+                    "loops": 1,
+                    "actualTotalMs": 0.021,
+                    "indexUsed": false,
+                    "localReadBlocks": 1,
+                    "localHitBlocks": 1,
+                    "children": []
+                  },
+                  {
+                    "nodeType": "Hash",
+                    "actualRows": 20,
+                    "loops": 1,
+                    "actualTotalMs": 0.03,
+                    "indexUsed": false,
+                    "localReadBlocks": 0,
+                    "localHitBlocks": 1,
+                    "children": [
+                      {
+                        "nodeType": "Limit",
+                        "actualRows": 20,
+                        "loops": 1,
+                        "actualTotalMs": 0.025,
+                        "indexUsed": false,
+                        "localReadBlocks": 0,
+                        "localHitBlocks": 1,
+                        "children": [
+                          {
+                            "nodeType": "Sort",
+                            "actualRows": 20,
+                            "loops": 1,
+                            "actualTotalMs": 0.023,
+                            "indexUsed": false,
+                            "localReadBlocks": 0,
+                            "localHitBlocks": 1,
+                            "children": [
+                              {
+                                "nodeType": "Seq Scan",
+                                "actualRows": 59,
+                                "loops": 1,
+                                "actualTotalMs": 0.011,
+                                "indexUsed": false,
+                                "localReadBlocks": 0,
+                                "localHitBlocks": 1,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "parentHistoryPage": {
+          "planningMs": 0.567,
+          "executionMs": 0.322,
+          "plan": {
+            "nodeType": "Nested Loop",
+            "actualRows": 20,
+            "loops": 1,
+            "actualTotalMs": 0.28,
+            "indexUsed": false,
+            "localReadBlocks": 40,
+            "localHitBlocks": 42,
+            "children": [
+              {
+                "nodeType": "Limit",
+                "actualRows": 20,
+                "loops": 1,
+                "actualTotalMs": 0.15,
+                "indexUsed": false,
+                "localReadBlocks": 19,
+                "localHitBlocks": 3,
+                "children": [
+                  {
+                    "nodeType": "Index Only Scan",
+                    "actualRows": 20,
+                    "loops": 1,
+                    "actualTotalMs": 0.145,
+                    "indexUsed": true,
+                    "localReadBlocks": 19,
+                    "localHitBlocks": 3,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "nodeType": "Index Scan",
+                "actualRows": 1,
+                "loops": 20,
+                "actualTotalMs": 0.006,
+                "indexUsed": true,
+                "localReadBlocks": 21,
+                "localHitBlocks": 39,
+                "children": []
+              }
+            ]
+          }
+        },
+        "activityPage": {
+          "planningMs": 0.23,
+          "executionMs": 0.04,
+          "plan": {
+            "nodeType": "Limit",
+            "actualRows": 20,
+            "loops": 1,
+            "actualTotalMs": 0.021,
+            "indexUsed": false,
+            "localReadBlocks": 2,
+            "localHitBlocks": 2,
+            "children": [
+              {
+                "nodeType": "Index Scan",
+                "actualRows": 20,
+                "loops": 1,
+                "actualTotalMs": 0.019,
+                "indexUsed": true,
+                "localReadBlocks": 2,
+                "localHitBlocks": 2,
+                "children": []
+              }
+            ]
+          }
+        },
+        "currentProjection": {
+          "planningMs": 0.14,
+          "executionMs": 0.027,
+          "plan": {
+            "nodeType": "Limit",
+            "actualRows": 1,
+            "loops": 1,
+            "actualTotalMs": 0.008,
+            "indexUsed": false,
+            "localReadBlocks": 0,
+            "localHitBlocks": 1,
+            "children": [
+              {
+                "nodeType": "Seq Scan",
+                "actualRows": 1,
+                "loops": 1,
+                "actualTotalMs": 0.007,
+                "indexUsed": false,
+                "localReadBlocks": 0,
+                "localHitBlocks": 1,
+                "children": []
+              }
+            ]
+          }
+        }
+      },
+      "forecast": {
+        "measuredChildFinanceBytes": 84680704,
+        "databaseBytes": 500000000,
+        "assumedUsableFraction": 0.7,
+        "assumptions": "Linear child-copy finance-only estimate;30% headroom; excludes auth, messaging, notifications, backups and other application tables.",
+        "scenarios": [
+          {
+            "childrenPerFamily": 1,
+            "estimatedMaximumFamilies": 4,
+            "families": [
+              {
+                "families": 10,
+                "estimatedFinanceBytes": 846807040,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 100,
+                "estimatedFinanceBytes": 8468070400,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 500,
+                "estimatedFinanceBytes": 42340352000,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 1000,
+                "estimatedFinanceBytes": 84680704000,
+                "withinAssumedFinanceBudget": false
+              }
+            ]
+          },
+          {
+            "childrenPerFamily": 2,
+            "estimatedMaximumFamilies": 2,
+            "families": [
+              {
+                "families": 10,
+                "estimatedFinanceBytes": 1693614080,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 100,
+                "estimatedFinanceBytes": 16936140800,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 500,
+                "estimatedFinanceBytes": 84680704000,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 1000,
+                "estimatedFinanceBytes": 169361408000,
+                "withinAssumedFinanceBudget": false
+              }
+            ]
+          },
+          {
+            "childrenPerFamily": 12,
+            "estimatedMaximumFamilies": 0,
+            "families": [
+              {
+                "families": 10,
+                "estimatedFinanceBytes": 10161684480,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 100,
+                "estimatedFinanceBytes": 101616844800,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 500,
+                "estimatedFinanceBytes": 508084224000,
+                "withinAssumedFinanceBudget": false
+              },
+              {
+                "families": 1000,
+                "estimatedFinanceBytes": 1016168448000,
+                "withinAssumedFinanceBudget": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "sourceSha256": {
+    "services/backend/scripts/finance-checkpoint-storage-benchmark.mjs": "bbd8eb0f95020843c8607891b8443e5d03ca0729b57dc92c204b27c33e64f25b",
+    "services/backend/scripts/finance-checkpoint-benchmark.mjs": "e5e49538c7f05158d4e7b3b3885cb3886009f23f7159d4d32c8c985f9d2cd9d1",
+    "apps/mobile/src/finance/engine.ts": "62338c4ffcdaa8a6acf270979489883344164fc3f99076fb0fb03ff6213fbae7",
+    "apps/mobile/src/finance/checkpoint.ts": "9e77715072cdbacd28ae1ae6c5c2caa306f04722ec182ab72481b2777d90bb1c",
+    "apps/mobile/src/finance/types.ts": "8cbf5ee31f19a0a6df79f53103fe23901aef3b9e814da5de77cd42affe3a5e8b",
+    "services/backend/supabase/migrations/202611160003_finance.sql": "f61d2b75bb613e5f7976de47b783c1cacdc23a79814b6ae39a7c2f6d6fb0e5dd",
+    "services/backend/supabase/migrations/202611160027_finance_checkpoints.sql": "b972e5e0a02a423475d4ad0a790447adf23f728e6929e36bed2d9a78ba5bb8f7",
+    "services/backend/supabase/migrations/202611160028_finance_private_match_archives.sql": "5a5a96c3fd97f2cc71166918e78b8d1eb6852e9cba1b9585a76067bb0266168b",
+    "services/backend/supabase/migrations/202611160029_finance_privacy_archives.sql": "71317e006de1afda040cda16aadad159b1831f7a212cd9d796e949fcb4feff31",
+    "services/backend/supabase/migrations/202611160030_finance_write_admission.sql": "d26782625c5d5a5cf046a9399c4dd2851ddd3e1c1ff1469f31cbe4b7e90879ab"
+  },
+  "postgresMajor": 17,
+  "actualSchemaSha256": "9b145707b8bf78d5168f3c77682b803bef09c317bb753f8214a6f0a18e7e8d51"
+}

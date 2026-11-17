@@ -1,0 +1,730 @@
+{
+  "format": 1,
+  "measuredAt": "2026-11-16T22:45:57.651Z",
+  "platform": "win32 x64",
+  "node": "v26.13.0",
+  "scope": "LOCAL Node finance service family-path probe; no DB/network/hosted execution or Edge qualification",
+  "config": {
+    "weeks": 52,
+    "repeats": 10
+  },
+  "workers": [
+    {
+      "status": "passed",
+      "format": 1,
+      "scope": "LOCAL isolated Node actual finance service with strict in-memory serialized RPC model; NOT Supabase Edge, PostgreSQL or Auth evidence",
+      "weeks": 52,
+      "children": 1,
+      "role": "parent",
+      "repeats": 10,
+      "initialTail": 157,
+      "initialTailPerChild": {
+        "visible": 126,
+        "hidden": 31
+      },
+      "originalTailLimits": {
+        "visible": 128,
+        "hidden": 32
+      },
+      "safetyLimitsRaised": false,
+      "node": "v26.13.0",
+      "pid": 32772,
+      "exposedGc": true,
+      "total": {
+        "wallMs": 2039.3827,
+        "cpuMs": 2297
+      },
+      "command": {
+        "count": 10,
+        "first": {
+          "wallMs": 381.2527,
+          "cpuMs": 485
+        },
+        "wallMs": {
+          "minimum": 153.21890000000008,
+          "median": 164.90949999999998,
+          "p95": 381.2527,
+          "maximum": 381.2527
+        },
+        "cpuMs": {
+          "minimum": 156,
+          "median": 173,
+          "p95": 485,
+          "maximum": 485
+        }
+      },
+      "read": {
+        "count": 10,
+        "first": {
+          "wallMs": 24.760299999999916,
+          "cpuMs": 47
+        },
+        "wallMs": {
+          "minimum": 15.767000000000053,
+          "median": 16.981599999999844,
+          "p95": 24.760299999999916,
+          "maximum": 24.760299999999916
+        },
+        "cpuMs": {
+          "minimum": 15,
+          "median": 16,
+          "p95": 78,
+          "maximum": 78
+        }
+      },
+      "rpc": {
+        "calls": {
+          "finance_scope": 20,
+          "finance_load": 20,
+          "finance_archive_budget": 10,
+          "finance_commit": 10
+        },
+        "wireRequestBytes": 3355407,
+        "wireResponseBytes": 6093549,
+        "maximumEnvelopeBytes": 356002,
+        "serializationWallMs": 42.39190000000036,
+        "committed": 10,
+        "replays": 0
+      },
+      "initialStateBytes": 244639,
+      "maximumStateBytes": 244639,
+      "finalStateBytes": 201784,
+      "responseJsonBytes": 1553220,
+      "sourceSequence": 1464,
+      "finalSequence": 1474,
+      "memory": {
+        "baseline": {
+          "rss": 78024704,
+          "heapTotal": 17436672,
+          "heapUsed": 9633376,
+          "external": 7235554,
+          "arrayBuffers": 3025180
+        },
+        "sampledPeak": {
+          "rss": 166076416,
+          "heapUsed": 60413256,
+          "heapTotal": 96264192,
+          "external": 10740560,
+          "arrayBuffers": 7915627
+        },
+        "final": {
+          "rss": 162689024,
+          "heapTotal": 90574848,
+          "heapUsed": 23809448,
+          "external": 6438840,
+          "arrayBuffers": 3614003
+        },
+        "processLifetimeMaxRssKiB": 162936
+      },
+      "mockLimits": [
+        "Source state and UUID fingerprints live in worker memory; remote database memory is not modeled.",
+        "JSON request/response cloning, actual service projections/activity/envelopes and digest work are measured.",
+        "Heap peaks are samples at RPC/service boundaries; process lifetime max RSS includes module startup.",
+        "Commands target the first child; all family children retain near-cap tails at worker start.",
+        "Fresh worker per role; first iteration is included, with subsequent JIT/cache effects visible in samples."
+      ]
+    },
+    {
+      "status": "passed",
+      "format": 1,
+      "scope": "LOCAL isolated Node actual finance service with strict in-memory serialized RPC model; NOT Supabase Edge, PostgreSQL or Auth evidence",
+      "weeks": 52,
+      "children": 1,
+      "role": "child",
+      "repeats": 10,
+      "initialTail": 157,
+      "initialTailPerChild": {
+        "visible": 126,
+        "hidden": 31
+      },
+      "originalTailLimits": {
+        "visible": 128,
+        "hidden": 32
+      },
+      "safetyLimitsRaised": false,
+      "node": "v26.13.0",
+      "pid": 35036,
+      "exposedGc": true,
+      "total": {
+        "wallMs": 2549.5342,
+        "cpuMs": 3141
+      },
+      "command": {
+        "count": 10,
+        "first": {
+          "wallMs": 615.1005,
+          "cpuMs": 782
+        },
+        "wallMs": {
+          "minimum": 113.62609999999995,
+          "median": 120.74039999999991,
+          "p95": 615.1005,
+          "maximum": 615.1005
+        },
+        "cpuMs": {
+          "minimum": 125,
+          "median": 172,
+          "p95": 782,
+          "maximum": 782
+        }
+      },
+      "read": {
+        "count": 10,
+        "first": {
+          "wallMs": 76.06490000000008,
+          "cpuMs": 94
+        },
+        "wallMs": {
+          "minimum": 15.483000000000175,
+          "median": 16.7800000000002,
+          "p95": 76.06490000000008,
+          "maximum": 76.06490000000008
+        },
+        "cpuMs": {
+          "minimum": 15,
+          "median": 16,
+          "p95": 94,
+          "maximum": 94
+        }
+      },
+      "rpc": {
+        "calls": {
+          "finance_scope": 20,
+          "finance_load": 20,
+          "finance_commit": 10
+        },
+        "wireRequestBytes": 3479812,
+        "wireResponseBytes": 6371598,
+        "maximumEnvelopeBytes": 400751,
+        "serializationWallMs": 46.460799999999324,
+        "committed": 10,
+        "replays": 0
+      },
+      "initialStateBytes": 244639,
+      "maximumStateBytes": 245337,
+      "finalStateBytes": 203269,
+      "responseJsonBytes": 968340,
+      "sourceSequence": 1464,
+      "finalSequence": 1474,
+      "memory": {
+        "baseline": {
+          "rss": 78290944,
+          "heapTotal": 17436672,
+          "heapUsed": 9633384,
+          "external": 7235552,
+          "arrayBuffers": 3025178
+        },
+        "sampledPeak": {
+          "rss": 163147776,
+          "heapUsed": 54050704,
+          "heapTotal": 95944704,
+          "external": 9382727,
+          "arrayBuffers": 6557794
+        },
+        "final": {
+          "rss": 160403456,
+          "heapTotal": 88621056,
+          "heapUsed": 27624824,
+          "external": 6235179,
+          "arrayBuffers": 3410214
+        },
+        "processLifetimeMaxRssKiB": 160484
+      },
+      "mockLimits": [
+        "Source state and UUID fingerprints live in worker memory; remote database memory is not modeled.",
+        "JSON request/response cloning, actual service projections/activity/envelopes and digest work are measured.",
+        "Heap peaks are samples at RPC/service boundaries; process lifetime max RSS includes module startup.",
+        "Commands target the first child; all family children retain near-cap tails at worker start.",
+        "Fresh worker per role; first iteration is included, with subsequent JIT/cache effects visible in samples."
+      ]
+    },
+    {
+      "status": "passed",
+      "format": 1,
+      "scope": "LOCAL isolated Node actual finance service with strict in-memory serialized RPC model; NOT Supabase Edge, PostgreSQL or Auth evidence",
+      "weeks": 52,
+      "children": 2,
+      "role": "parent",
+      "repeats": 10,
+      "initialTail": 314,
+      "initialTailPerChild": {
+        "visible": 126,
+        "hidden": 31
+      },
+      "originalTailLimits": {
+        "visible": 128,
+        "hidden": 32
+      },
+      "safetyLimitsRaised": false,
+      "node": "v26.13.0",
+      "pid": 35192,
+      "exposedGc": true,
+      "total": {
+        "wallMs": 3700.116,
+        "cpuMs": 4500
+      },
+      "command": {
+        "count": 10,
+        "first": {
+          "wallMs": 676.2361,
+          "cpuMs": 890
+        },
+        "wallMs": {
+          "minimum": 260.2826,
+          "median": 284.52890000000025,
+          "p95": 676.2361,
+          "maximum": 676.2361
+        },
+        "cpuMs": {
+          "minimum": 281,
+          "median": 360,
+          "p95": 890,
+          "maximum": 890
+        }
+      },
+      "read": {
+        "count": 10,
+        "first": {
+          "wallMs": 57.59820000000002,
+          "cpuMs": 141
+        },
+        "wallMs": {
+          "minimum": 30.97609999999986,
+          "median": 35.34140000000002,
+          "p95": 57.59820000000002,
+          "maximum": 57.59820000000002
+        },
+        "cpuMs": {
+          "minimum": 30,
+          "median": 31,
+          "p95": 141,
+          "maximum": 141
+        }
+      },
+      "rpc": {
+        "calls": {
+          "finance_scope": 20,
+          "finance_load": 20,
+          "finance_archive_budget": 10,
+          "finance_commit": 10
+        },
+        "wireRequestBytes": 5386385,
+        "wireResponseBytes": 12144783,
+        "maximumEnvelopeBytes": 584892,
+        "serializationWallMs": 82.80529999999888,
+        "committed": 10,
+        "replays": 0
+      },
+      "initialStateBytes": 489145,
+      "maximumStateBytes": 489145,
+      "finalStateBytes": 402016,
+      "responseJsonBytes": 1553220,
+      "sourceSequence": 2928,
+      "finalSequence": 2938,
+      "memory": {
+        "baseline": {
+          "rss": 78401536,
+          "heapTotal": 17436672,
+          "heapUsed": 10002184,
+          "external": 7724566,
+          "arrayBuffers": 2470074
+        },
+        "sampledPeak": {
+          "rss": 196321280,
+          "heapUsed": 79123240,
+          "heapTotal": 117067776,
+          "external": 13959016,
+          "arrayBuffers": 11134115
+        },
+        "final": {
+          "rss": 192745472,
+          "heapTotal": 103645184,
+          "heapUsed": 54931888,
+          "external": 8144049,
+          "arrayBuffers": 5319116
+        },
+        "processLifetimeMaxRssKiB": 195064
+      },
+      "mockLimits": [
+        "Source state and UUID fingerprints live in worker memory; remote database memory is not modeled.",
+        "JSON request/response cloning, actual service projections/activity/envelopes and digest work are measured.",
+        "Heap peaks are samples at RPC/service boundaries; process lifetime max RSS includes module startup.",
+        "Commands target the first child; all family children retain near-cap tails at worker start.",
+        "Fresh worker per role; first iteration is included, with subsequent JIT/cache effects visible in samples."
+      ]
+    },
+    {
+      "status": "passed",
+      "format": 1,
+      "scope": "LOCAL isolated Node actual finance service with strict in-memory serialized RPC model; NOT Supabase Edge, PostgreSQL or Auth evidence",
+      "weeks": 52,
+      "children": 2,
+      "role": "child",
+      "repeats": 10,
+      "initialTail": 314,
+      "initialTailPerChild": {
+        "visible": 126,
+        "hidden": 31
+      },
+      "originalTailLimits": {
+        "visible": 128,
+        "hidden": 32
+      },
+      "safetyLimitsRaised": false,
+      "node": "v26.13.0",
+      "pid": 31312,
+      "exposedGc": true,
+      "total": {
+        "wallMs": 4943.226600000001,
+        "cpuMs": 5391
+      },
+      "command": {
+        "count": 10,
+        "first": {
+          "wallMs": 1167.8636,
+          "cpuMs": 1328
+        },
+        "wallMs": {
+          "minimum": 208.91830000000027,
+          "median": 223.20830000000024,
+          "p95": 1167.8636,
+          "maximum": 1167.8636
+        },
+        "cpuMs": {
+          "minimum": 219,
+          "median": 282,
+          "p95": 1328,
+          "maximum": 1328
+        }
+      },
+      "read": {
+        "count": 10,
+        "first": {
+          "wallMs": 132.80539999999996,
+          "cpuMs": 156
+        },
+        "wallMs": {
+          "minimum": 30.696200000000317,
+          "median": 35.78099999999995,
+          "p95": 132.80539999999996,
+          "maximum": 132.80539999999996
+        },
+        "cpuMs": {
+          "minimum": 15,
+          "median": 31,
+          "p95": 156,
+          "maximum": 156
+        }
+      },
+      "rpc": {
+        "calls": {
+          "finance_scope": 20,
+          "finance_load": 20,
+          "finance_commit": 10
+        },
+        "wireRequestBytes": 5656654,
+        "wireResponseBytes": 12688476,
+        "maximumEnvelopeBytes": 673915,
+        "serializationWallMs": 88.7152999999985,
+        "committed": 10,
+        "replays": 0
+      },
+      "initialStateBytes": 489145,
+      "maximumStateBytes": 489843,
+      "finalStateBytes": 403501,
+      "responseJsonBytes": 968340,
+      "sourceSequence": 2928,
+      "finalSequence": 2938,
+      "memory": {
+        "baseline": {
+          "rss": 80637952,
+          "heapTotal": 17174528,
+          "heapUsed": 10002712,
+          "external": 7724564,
+          "arrayBuffers": 3514190
+        },
+        "sampledPeak": {
+          "rss": 184229888,
+          "heapUsed": 61357056,
+          "heapTotal": 108036096,
+          "external": 12151240,
+          "arrayBuffers": 9326371
+        },
+        "final": {
+          "rss": 182779904,
+          "heapTotal": 107745280,
+          "heapUsed": 60940768,
+          "external": 10349361,
+          "arrayBuffers": 7524428
+        },
+        "processLifetimeMaxRssKiB": 181364
+      },
+      "mockLimits": [
+        "Source state and UUID fingerprints live in worker memory; remote database memory is not modeled.",
+        "JSON request/response cloning, actual service projections/activity/envelopes and digest work are measured.",
+        "Heap peaks are samples at RPC/service boundaries; process lifetime max RSS includes module startup.",
+        "Commands target the first child; all family children retain near-cap tails at worker start.",
+        "Fresh worker per role; first iteration is included, with subsequent JIT/cache effects visible in samples."
+      ]
+    },
+    {
+      "status": "passed",
+      "format": 1,
+      "scope": "LOCAL isolated Node actual finance service with strict in-memory serialized RPC model; NOT Supabase Edge, PostgreSQL or Auth evidence",
+      "weeks": 52,
+      "children": 12,
+      "role": "parent",
+      "repeats": 10,
+      "initialTail": 1884,
+      "initialTailPerChild": {
+        "visible": 126,
+        "hidden": 31
+      },
+      "originalTailLimits": {
+        "visible": 128,
+        "hidden": 32
+      },
+      "safetyLimitsRaised": false,
+      "node": "v26.13.0",
+      "pid": 32116,
+      "exposedGc": true,
+      "total": {
+        "wallMs": 18963.0151,
+        "cpuMs": 20875
+      },
+      "command": {
+        "count": 10,
+        "first": {
+          "wallMs": 3240.2667,
+          "cpuMs": 3594
+        },
+        "wallMs": {
+          "minimum": 1444.3180000000011,
+          "median": 1508.5557000000008,
+          "p95": 3240.2667,
+          "maximum": 3240.2667
+        },
+        "cpuMs": {
+          "minimum": 1452,
+          "median": 1688,
+          "p95": 3594,
+          "maximum": 3594
+        }
+      },
+      "read": {
+        "count": 10,
+        "first": {
+          "wallMs": 193.89789999999994,
+          "cpuMs": 218
+        },
+        "wallMs": {
+          "minimum": 187.46969999999965,
+          "median": 201.60919999999987,
+          "p95": 241.5489000000016,
+          "maximum": 241.5489000000016
+        },
+        "cpuMs": {
+          "minimum": 188,
+          "median": 218,
+          "p95": 312,
+          "maximum": 312
+        }
+      },
+      "rpc": {
+        "calls": {
+          "finance_scope": 20,
+          "finance_load": 20,
+          "finance_archive_budget": 10,
+          "finance_commit": 10
+        },
+        "wireRequestBytes": 25696195,
+        "wireResponseBytes": 72657233,
+        "maximumEnvelopeBytes": 2873795,
+        "serializationWallMs": 435.1853999999954,
+        "committed": 10,
+        "replays": 0
+      },
+      "initialStateBytes": 2934208,
+      "maximumStateBytes": 2934208,
+      "finalStateBytes": 2404339,
+      "responseJsonBytes": 1553220,
+      "sourceSequence": 17568,
+      "finalSequence": 17578,
+      "memory": {
+        "baseline": {
+          "rss": 84037632,
+          "heapTotal": 19533824,
+          "heapUsed": 13507472,
+          "external": 5172193,
+          "arrayBuffers": 2307011
+        },
+        "sampledPeak": {
+          "rss": 319336448,
+          "heapUsed": 175736320,
+          "heapTotal": 232689664,
+          "external": 17254732,
+          "arrayBuffers": 14365269
+        },
+        "final": {
+          "rss": 265871360,
+          "heapTotal": 137101312,
+          "heapUsed": 68608016,
+          "external": 11979570,
+          "arrayBuffers": 9094440
+        },
+        "processLifetimeMaxRssKiB": 333956
+      },
+      "mockLimits": [
+        "Source state and UUID fingerprints live in worker memory; remote database memory is not modeled.",
+        "JSON request/response cloning, actual service projections/activity/envelopes and digest work are measured.",
+        "Heap peaks are samples at RPC/service boundaries; process lifetime max RSS includes module startup.",
+        "Commands target the first child; all family children retain near-cap tails at worker start.",
+        "Fresh worker per role; first iteration is included, with subsequent JIT/cache effects visible in samples."
+      ]
+    },
+    {
+      "status": "passed",
+      "format": 1,
+      "scope": "LOCAL isolated Node actual finance service with strict in-memory serialized RPC model; NOT Supabase Edge, PostgreSQL or Auth evidence",
+      "weeks": 52,
+      "children": 12,
+      "role": "child",
+      "repeats": 10,
+      "initialTail": 1884,
+      "initialTailPerChild": {
+        "visible": 126,
+        "hidden": 31
+      },
+      "originalTailLimits": {
+        "visible": 128,
+        "hidden": 32
+      },
+      "safetyLimitsRaised": false,
+      "node": "v26.13.0",
+      "pid": 40660,
+      "exposedGc": true,
+      "total": {
+        "wallMs": 26988.830700000002,
+        "cpuMs": 28687
+      },
+      "command": {
+        "count": 10,
+        "first": {
+          "wallMs": 6212.92,
+          "cpuMs": 6625
+        },
+        "wallMs": {
+          "minimum": 1164.6314999999995,
+          "median": 1298.1074999999983,
+          "p95": 6212.92,
+          "maximum": 6212.92
+        },
+        "cpuMs": {
+          "minimum": 1204,
+          "median": 1421,
+          "p95": 6625,
+          "maximum": 6625
+        }
+      },
+      "read": {
+        "count": 10,
+        "first": {
+          "wallMs": 750.1167000000005,
+          "cpuMs": 766
+        },
+        "wallMs": {
+          "minimum": 180.72949999999764,
+          "median": 207.3101999999999,
+          "p95": 750.1167000000005,
+          "maximum": 750.1167000000005
+        },
+        "cpuMs": {
+          "minimum": 171,
+          "median": 250,
+          "p95": 781,
+          "maximum": 781
+        }
+      },
+      "rpc": {
+        "calls": {
+          "finance_scope": 20,
+          "finance_load": 20,
+          "finance_commit": 10
+        },
+        "wireRequestBytes": 27425104,
+        "wireResponseBytes": 75857366,
+        "maximumEnvelopeBytes": 3405558,
+        "serializationWallMs": 490.333499999977,
+        "committed": 10,
+        "replays": 0
+      },
+      "initialStateBytes": 2934208,
+      "maximumStateBytes": 2934906,
+      "finalStateBytes": 2405824,
+      "responseJsonBytes": 968340,
+      "sourceSequence": 17568,
+      "finalSequence": 17578,
+      "memory": {
+        "baseline": {
+          "rss": 84312064,
+          "heapTotal": 19795968,
+          "heapUsed": 13508768,
+          "external": 5172193,
+          "arrayBuffers": 2307011
+        },
+        "sampledPeak": {
+          "rss": 381648896,
+          "heapUsed": 206278696,
+          "heapTotal": 305463296,
+          "external": 17411809,
+          "arrayBuffers": 13353173
+        },
+        "final": {
+          "rss": 238067712,
+          "heapTotal": 147320832,
+          "heapUsed": 87354272,
+          "external": 15390986,
+          "arrayBuffers": 12505792
+        },
+        "processLifetimeMaxRssKiB": 397768
+      },
+      "mockLimits": [
+        "Source state and UUID fingerprints live in worker memory; remote database memory is not modeled.",
+        "JSON request/response cloning, actual service projections/activity/envelopes and digest work are measured.",
+        "Heap peaks are samples at RPC/service boundaries; process lifetime max RSS includes module startup.",
+        "Commands target the first child; all family children retain near-cap tails at worker start.",
+        "Fresh worker per role; first iteration is included, with subsequent JIT/cache effects visible in samples."
+      ]
+    }
+  ],
+  "sourceHashes": {
+    "apps/mobile/src/finance/engine.ts": "f8743803fa1783b5b8b06eb746bdf95b5ee849d5803ff2038491e1dd86090451",
+    "apps/mobile/src/finance/checkpoint.ts": "c81a35c6d1a77d6223fb1e8586597ac46f422ea6ec755201091d49bdd56aeccd",
+    "apps/mobile/src/finance/types.ts": "8cbf5ee31f19a0a6df79f53103fe23901aef3b9e814da5de77cd42affe3a5e8b",
+    "apps/mobile/src/finance/money-calendar.ts": "63006abd19e84ac8e4de972de71d5e9c41b9a01948af2bd5a5a62531296b5202",
+    "services/backend/src/finance.ts": "24ea8877fabd56717fe96fe20e3400a5141e381157265fdd66978428846d7c42",
+    "services/backend/src/finance-checkpoints.ts": "e3345246cbc16660751ea67b7c8941c55aac72eb7ef21d09236cfff5b424987a",
+    "services/backend/scripts/finance-checkpoint-benchmark.mjs": "079d60d51f30c8dc0d28f107058122d1e9a5e6fb23ea6a018393b9bb76b27a2a",
+    "services/backend/scripts/finance-checkpoint-family-probe.mjs": "983c69ba68e1c6e6f6bfd52bae392ca4a187139b03cdeff7b6d9c6af129e6c40"
+  },
+  "finalSourceHashes": {
+    "apps/mobile/src/finance/engine.ts": "f8743803fa1783b5b8b06eb746bdf95b5ee849d5803ff2038491e1dd86090451",
+    "apps/mobile/src/finance/checkpoint.ts": "c81a35c6d1a77d6223fb1e8586597ac46f422ea6ec755201091d49bdd56aeccd",
+    "apps/mobile/src/finance/types.ts": "8cbf5ee31f19a0a6df79f53103fe23901aef3b9e814da5de77cd42affe3a5e8b",
+    "apps/mobile/src/finance/money-calendar.ts": "63006abd19e84ac8e4de972de71d5e9c41b9a01948af2bd5a5a62531296b5202",
+    "services/backend/src/finance.ts": "24ea8877fabd56717fe96fe20e3400a5141e381157265fdd66978428846d7c42",
+    "services/backend/src/finance-checkpoints.ts": "e3345246cbc16660751ea67b7c8941c55aac72eb7ef21d09236cfff5b424987a",
+    "services/backend/scripts/finance-checkpoint-benchmark.mjs": "079d60d51f30c8dc0d28f107058122d1e9a5e6fb23ea6a018393b9bb76b27a2a",
+    "services/backend/scripts/finance-checkpoint-family-probe.mjs": "983c69ba68e1c6e6f6bfd52bae392ca4a187139b03cdeff7b6d9c6af129e6c40"
+  },
+  "sourceUnchanged": true,
+  "allWorkersPassed": true,
+  "audit": [
+    "The adapter independently replays/clones the family in exportBooks, financeView, applyFinanceCommand, checkpointState, financeEventActivity and final projections.",
+    "One target child therefore pays repeated work over all siblings; Node CPU/RSS must be reviewed before any hosted limit claim.",
+    "The mock also hashes/serializes source state as the RPC endpoint would; this adds local CPU and memory absent from an actual remote client process.",
+    "Command/read summaries include real role projections and output JSON encoding; RPC metrics include full envelope/activity/projection encoding."
+  ],
+  "noHostedQualification": true,
+  "inputLimitBytes": 3145728
+}
