@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { applyFinanceCommand, checkpointState, createFinanceState, exportBooks, financeEventActivity, financeView } from "../src/finance/engine";
-import { compactBook, compactPrivateMatches, hydrateBook, hydratePrivateMatch, potentialBook, potentialBookBytes, potentialCheckpointBytes, validateBook, validateCheckpoint, validateCapsule, validatePrivateCapsule, FinanceBudgetBasisError } from "../src/finance/checkpoint";
+import { applyFinanceCommand, checkpointState, createFinanceState, exportBooks, financeEventActivity, financeView, readFinanceBooks, sealFinanceState } from "../src/finance/engine";
+import { compactBook, compactPrivateMatches, hydrateBook, hydratePrivateMatch, potentialBook, potentialBookBytes, potentialCheckpointBytes, validateBook, validateCheckpoint, validateCapsule, validatePrivateCapsule, FinanceBudgetBasisError, FinanceCapacityError, FinanceCheckpointError } from "../src/finance/checkpoint";
 import type { ChildBook, FinanceActor, FinanceCommand, FinanceState } from "../src/finance/types";
 
 const child = { role: "child", childId: "child" } as const, parent = { role: "parent" } as const;
@@ -224,4 +224,84 @@ test("a server-added roster child starts empty without invalidating an older imm
   assert.throws(() => validateCheckpoint(foreign, ["child", "new-child"]));
   const missingCache = json(original.checkpoint!); delete (missingCache.activity as Record<string, unknown>).child;
   assert.throws(() => validateCheckpoint(missingCache, ["child", "new-child"]));
+});
+
+test("deep sealing traverses a caller's shallow freeze and rejects forged source trees", () => {
+  const raw = json(checkpointState(fixture(true).state)); Object.freeze(raw);
+  assert.equal(Object.isFrozen(raw.checkpoint!.books.child.occurrences), false);
+  const sealed = sealFinanceState(raw), refs = readFinanceBooks(sealed);
+  assert.equal(sealed, raw); assert.equal(sealFinanceState(sealed), sealed);
+  assert.equal(readFinanceBooks(sealed), refs);
+  assert.equal(Object.isFrozen(raw.checkpoint!.books.child.occurrences), true);
+  assert.equal(Object.isFrozen(refs.child.payouts[0].payments[0].lots[0]), true);
+  assert.throws(() => { raw.checkpoint!.books.child.earnedCents++; });
+  const corrupt = json(checkpointState(fixture().state)); corrupt.checkpoint!.books.child.archivedPaidCents++;
+  Object.freeze(corrupt);
+  assert.throws(() => sealFinanceState(corrupt));
+  const invalidEvent = json(fixture().state); invalidEvent.events[0].actor = { role: "child", childId: "another-child" };
+  assert.throws(() => sealFinanceState(invalidEvent));
+  const invalidEffect = json(fixture().state); invalidEffect.events[0].effects = [{ kind: "correction_due", referenceId: "fictional", cents: .5 }];
+  assert.throws(() => sealFinanceState(invalidEffect));
+  const accessor = json(fixture().state); Object.defineProperty(accessor, "events", { get: () => [] });
+  assert.throws(() => sealFinanceState(accessor));
+});
+
+test("mutable inputs are never cached and exported mutable books cannot alter sealed source or sibling references", () => {
+  const raw = json(checkpointState(fixture().state));
+  const first = readFinanceBooks(raw);
+  raw.checkpoint!.books.child.plan!.budgetCents = 20000;
+  const second = readFinanceBooks(raw);
+  assert.notEqual(first, second); assert.equal(first.child.plan!.budgetCents, 10000); assert.equal(second.child.plan!.budgetCents, 20000);
+  const expanded = { ...raw, children: [...raw.children, { id: "sibling", name: "Fictional sibling" }] };
+  const sealed = sealFinanceState(expanded), before = readFinanceBooks(sealed), beforeJson = JSON.stringify(sealed);
+  const exported = exportBooks(sealed); exported.child.earnedCents = 0; exported.child.payouts[0].payments[0].lots[0].cents = 0;
+  assert.equal(JSON.stringify(sealed), beforeJson); assert.equal(before.child.earnedCents, 100);
+  const next = applyFinanceCommand(sealed, parent, { kind: "configure_plan", plan, id: "cache-plan", childId: "child", at: date });
+  const after = readFinanceBooks(next);
+  assert.notEqual(after.child, before.child); assert.equal(after.sibling, before.sibling);
+  assert.equal(JSON.stringify(sealed), beforeJson); assert.equal(readFinanceBooks(sealed), before);
+  assert.throws(() => { after.child.plan!.budgetCents++; });
+  const published = checkpointState(next);
+  assert.equal(readFinanceBooks(published).sibling, after.sibling);
+  assert.equal(published.checkpoint!.books.sibling, after.sibling);
+  assert.deepEqual(financeEventActivity(next), view(next, parent).activity.filter(row => row.id === "cache-plan"));
+});
+
+test("valid full active occurrences and reopened archives reject with capacity_review without consuming folded money", () => {
+  const { state } = fixture(), settled = compactBook(exportBooks(state).child, "child"), book = json(settled.book);
+  book.occurrences = Array.from({ length: 100 }, (_, i) => ({ id: `active-${i}`, choreId: `active-${i}`, title: "Fictional active task",
+    instructions: "", dueDate: "2026-01-01", rewardCents: 1, status: "not_started", note: "" }));
+  validateBook(book); const before = JSON.stringify(book);
+  assert.throws(() => hydrateBook(book, settled.capsules[0], "child"), error => error instanceof FinanceCapacityError && error.code === "capacity_review");
+  assert.equal(JSON.stringify(book), before); assert.equal(book.archivedPaidCents, 100); assert.equal(book.earnedCents, 100);
+  const candidate = json(book); candidate.occurrences.push({ ...candidate.occurrences[0], id: "new-active", choreId: "new-active" });
+  const candidateBefore = JSON.stringify(candidate);
+  assert.throws(() => compactBook(candidate, "child"), FinanceCapacityError);
+  assert.equal(JSON.stringify(candidate), candidateBefore);
+  const corrupt = json(candidate); corrupt.archivedPaidCents++;
+  assert.throws(() => compactBook(corrupt, "child"), error => error instanceof FinanceCheckpointError && !(error instanceof FinanceCapacityError));
+  const corruptCapsule = json(settled.capsules[0]); corruptCapsule.paidCents++;
+  assert.throws(() => hydrateBook(book, corruptCapsule, "child"), FinanceCheckpointError);
+});
+
+test("valid33-payout transient candidate stays bounded and gives an explicit capacity rejection when every payout remains held", () => {
+  const initial = fixture().state, retired = compactBook(exportBooks(initial).child, "child");
+  retired.book.archivedBudget!.byPeriod["2026-01"] = 100; // Exact indexed fixture totals for the prospective hot period.
+  let state = checkpointState(initial, { child: retired.book }); let id = 0;
+  const send = (action: Record<string, unknown>, actor: FinanceActor = parent) => {
+    state = applyFinanceCommand(state, actor, { ...action, id: `capacity-${++id}`, childId: "child", at: date } as FinanceCommand);
+  };
+  send({ kind: "assign_chore", choreId: "capacity", title: "Fictional task", rewardCents: 3300, dates: ["2026-01-01"] });
+  send({ kind: "submit_chore", occurrenceId: "capacity:2026-01-01" }, child);
+  send({ kind: "review_chore", occurrenceId: "capacity:2026-01-01", decision: "approved" });
+  for (let n = 0; n < 33; n++) send({ kind: "request_payout", amountCents: 100 }, child);
+  const candidate = exportBooks(state).child, before = JSON.stringify(candidate);
+  assert.equal(candidate.payouts.length, 33);
+  assert.throws(() => compactBook(candidate, "child"), FinanceCapacityError);
+  assert.equal(JSON.stringify(candidate), before); assert.equal(candidate.archivedPaidCents, 100);
+  assert.equal(candidate.payouts.reduce((sum, payout) => sum + payout.lots.reduce((total, lot) => total + lot.cents, 0), 0), 3300);
+  for (const payout of candidate.payouts) send({ kind: "report_payment", payoutId: payout.id, amountCents: 100, method: "manual", paidAt: date });
+  const connected = exportBooks(state).child, connectedBefore = JSON.stringify(connected);
+  assert.throws(() => compactBook(connected, "child"), FinanceCapacityError, "one33-payout connected component cannot be silently split or serialized oversized");
+  assert.equal(JSON.stringify(connected), connectedBefore); assert.equal(connected.archivedPaidCents, 100);
 });

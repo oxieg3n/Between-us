@@ -4,6 +4,7 @@ export type { ArchivedBudgetBasis, ArchivedMatchBasis, BookLot, BookPayout, Chil
 
 export const CHECKPOINT_LIMITS = Object.freeze({ bytes: 67_108_864, bookBytes: 1_048_576, sourceRows: 4096, allocations: 512, matches: 2048 });
 export class FinanceCheckpointError extends Error { readonly code = "invalid_checkpoint"; constructor() { super("Financial checkpoint could not be verified."); } }
+export class FinanceCapacityError extends Error { readonly code = "capacity_review"; constructor() { super("This active financial record requires a capacity review before more actions."); } }
 export class FinanceBudgetBasisError extends Error { readonly code = "budget_basis_required"; constructor() { super("Historical allowance budget must be verified."); } }
 const fail = (): never => { throw new FinanceCheckpointError(); };
 const check: (condition: unknown) => asserts condition = condition => { if (!condition) fail(); };
@@ -26,6 +27,30 @@ function numericMap(v: unknown, limit: number): asserts v is Record<string, numb
 }
 const clone = <T>(v: T): T => JSON.parse(JSON.stringify(v)) as T;
 export const cloneBook = (book: ChildBook): ChildBook => clone(book);
+const deeplyFrozen = new WeakSet<object>();
+const bookProofs = new WeakMap<object, { actualBytes: number; potentialBytes: number }>();
+const checkpointProofs = new WeakMap<object, string[]>();
+/** Only this traversal establishes deep immutability; a caller's shallow freeze proves nothing. */
+export function freezeFinanceValue<T>(value: T): T {
+  const active = new Set<object>();
+  const visit = (item: unknown) => {
+    if (item === null || item === undefined || typeof item === "boolean" || typeof item === "string") return;
+    if (typeof item === "number") { check(integer(item)); return; }
+    check(item && typeof item === "object" && (Array.isArray(item) || object(item)) && !active.has(item));
+    if (deeplyFrozen.has(item)) return;
+    active.add(item);
+    for (const key of Reflect.ownKeys(item)) {
+      check(typeof key === "string"); const descriptor = Object.getOwnPropertyDescriptor(item, key)!;
+      check(Object.hasOwn(descriptor, "value") && (descriptor.enumerable || Array.isArray(item) && key === "length")); visit(descriptor.value);
+    }
+    Object.freeze(item); active.delete(item); deeplyFrozen.add(item);
+  };
+  visit(value); return value;
+}
+export function sealFinanceBook(book: ChildBook): ChildBook { freezeFinanceValue(book); validateBook(book); return book; }
+export function sealFinanceCheckpoint(checkpoint: FinanceCheckpoint, childIds: readonly string[]): FinanceCheckpoint {
+  freezeFinanceValue(checkpoint); validateCheckpoint(checkpoint, childIds); return checkpoint;
+}
 function serialized(v: unknown, limit: number) {
   let nodes = 0; const seen = new Set<object>();
   const visit = (item: unknown, depth: number) => {
@@ -123,6 +148,7 @@ export function potentialBook(book: ChildBook): ChildBook {
   return potential;
 }
 export const potentialBookBytes = (book: ChildBook) => {
+  const proof = bookProofs.get(book); if (proof) return proof.potentialBytes;
   const potential = publicPotentialBook(book);
   return encodedBytes(potential) + hydrationReserveBytes + (potential.matches.length ? 1 : 0);
 };
@@ -142,6 +168,7 @@ export const potentialCheckpointBytes = (value: FinanceCheckpoint) => {
 const paid = (p: BookPayout) => sum(p.payments.filter(pay => !pay.reversed).map(pay => pay.amountCents));
 const allPayoutLots = (p: BookPayout) => [...p.lots, ...p.payments.flatMap(pay => pay.lots)];
 export function validateBook(value: unknown, options: { candidate?: boolean; privateCandidate?: boolean } = {}): asserts value is ChildBook {
+  if (value && typeof value === "object" && bookProofs.has(value)) return;
   serialized(value, options.candidate || options.privateCandidate ? CHECKPOINT_LIMITS.bookBytes * 2 : CHECKPOINT_LIMITS.bookBytes);
   shape(value, ["occurrences", "goals", "free", "allocations", "payouts", "matches", "savingsRules", "matchingRule", "earnedCents", "correctionDueCents", "archivedPaidCents"], ["plan", "archivedBudget", "archivedMatches"]);
   if (value.plan !== undefined) plan(value.plan); if (value.archivedBudget !== undefined) budget(value.archivedBudget);
@@ -172,7 +199,8 @@ export function validateBook(value: unknown, options: { candidate?: boolean; pri
       && Number(m.cents) - Number(m.reversedCents) === m.activeCents && Number(m.correctionDueCents) <= Number(m.fundedCents));
   }
   const book = value as unknown as ChildBook;
-  const visibleBudget = publicPotentialBook(book), visibleBytes = potentialBookBytes(book);
+  const visibleBudget = publicPotentialBook(book);
+  const visibleBytes = encodedBytes(visibleBudget) + hydrationReserveBytes + (visibleBudget.matches.length ? 1 : 0);
   check(visibleBytes <= CHECKPOINT_LIMITS.bookBytes);
   if (book.archivedMatches !== undefined) {
     const basis = book.archivedMatches; shape(basis, ["month", "usedCents", "byGoal"]);
@@ -209,7 +237,10 @@ export function validateBook(value: unknown, options: { candidate?: boolean; pri
   const own = sum(book.free.map(l => l.cents)) + sum(book.allocations.flatMap(a => a.lots).map(l => l.cents))
     + sum(book.payouts.flatMap(p => p.lots).map(l => l.cents)) + sum(book.payouts.map(paid)) + book.archivedPaidCents;
   check(cents(book.earnedCents + book.correctionDueCents) === cents(own));
-  if (!options.candidate && !options.privateCandidate) check(encodedBytes(book) <= visibleBytes);
+  if (!options.candidate && !options.privateCandidate) {
+    const actualBytes = encodedBytes(book); check(actualBytes <= visibleBytes);
+    if (deeplyFrozen.has(book)) bookProofs.set(book, { actualBytes, potentialBytes: visibleBytes });
+  }
 }
 
 function cachedActivity(value: unknown, visible: boolean) {
@@ -224,7 +255,12 @@ function cachedActivity(value: unknown, visible: boolean) {
   unique(value as FinanceView["activity"]);
 }
 export function validateCheckpoint(value: unknown, childIds: readonly string[]): asserts value is FinanceCheckpoint {
-  serialized(value, CHECKPOINT_LIMITS.bytes); shape(value, ["version", "lastEventAt", "books", "activity"]);
+  const proof = value && typeof value === "object" ? checkpointProofs.get(value) : undefined;
+  if (proof) {
+    check(childIds.length > 0 && childIds.length <= 12 && new Set(childIds).size === childIds.length
+      && childIds.every(id => text(id)) && proof.every(id => childIds.includes(id))); return;
+  }
+  shape(value, ["version", "lastEventAt", "books", "activity"]);
   check(value.version === 1 && (value.lastEventAt === null || instant(value.lastEventAt)) && childIds.length > 0 && childIds.length <= 12
     && new Set(childIds).size === childIds.length && childIds.every(id => text(id)) && object(value.books) && object(value.activity));
   // A server-authorized roster may grow after an immutable checkpoint was stored.
@@ -238,7 +274,13 @@ export function validateCheckpoint(value: unknown, childIds: readonly string[]):
     if (value.lastEventAt !== null) check([...(activity.visible as FinanceView["activity"]), ...(activity.parent as FinanceView["activity"])].every(a => a.at <= String(value.lastEventAt)));
   }
   const potential = potentialCheckpointBytes(value as unknown as FinanceCheckpoint);
-  check(potential <= CHECKPOINT_LIMITS.bytes && encodedBytes(value) <= potential);
+  // Static outer shape and validated books/cache rows bound depth and JSON types.
+  // Sum exact book bytes instead of serializing every unchanged sibling again.
+  const books = value.books as Record<string, ChildBook>;
+  const actual = encodedBytes({ ...value, books: {} }) + storedIds.reduce((total, id) => total + encodedBytes(id) + 1
+    + (bookProofs.get(books[id])?.actualBytes ?? encodedBytes(books[id])), 0) + Math.max(0, storedIds.length - 1);
+  check(potential <= CHECKPOINT_LIMITS.bytes && actual <= potential);
+  if (deeplyFrozen.has(value)) checkpointProofs.set(value, storedIds);
 }
 export function validateCapsule(value: unknown, expectedChildId: string): asserts value is FinanceSettledCapsule {
   serialized(value, CHECKPOINT_LIMITS.bookBytes); shape(value, ["version", "childId", "occurrences", "payouts", "allocations", "paidCents"]);
@@ -296,6 +338,9 @@ export function compactBook(input: ChildBook, childId: string): { book: ChildBoo
     // Never inspect private matching here: it must not decide visible archive eligibility/capacity.
     if (occurrences.length !== ids.size || occurrences.some(o => !["approved", "cancelled", "expired", "declined"].includes(o.status))
       || [...ids].some(id => liveSources.has(id)) || connected.some(p => p.lots.some(l => l.cents > 0))) continue;
+    // A bounded transient request may connect more rows than one immutable
+    // capsule can hold. Retain it and reject final hot capacity explicitly.
+    if (occurrences.length > 100 || connected.length > 32) continue;
     const allocations = book.allocations.filter(a => Object.keys(a.sourceCents).some(id => ids.has(id)));
     const capsule: FinanceSettledCapsule = { version: 1, childId, occurrences, payouts: connected, allocations, paidCents: sum(connected.map(paid)) };
     validateCapsule(capsule, childId); capsules.push(capsule);
@@ -313,6 +358,7 @@ export function compactBook(input: ChildBook, childId: string): { book: ChildBoo
   book.archivedPaidCents = cents(book.archivedPaidCents + sum(capsules.map(c => c.paidCents)));
   if (basis) book.archivedBudget = basis;
   // V1 retires occurrence/payout components only. Visible goal retention cannot depend on private matches.
+  if (book.occurrences.length > 100 || book.payouts.length > 32) throw new FinanceCapacityError();
   validateBook(book, { privateCandidate: true }); return { book, capsules: clone(capsules), needsBudgetRefresh: false };
 }
 
@@ -321,6 +367,7 @@ export function hydrateBook(input: ChildBook, capsule: FinanceSettledCapsule, ex
   check(book.archivedPaidCents >= restored.paidCents
     && restored.occurrences.every(o => !book.occurrences.some(hot => hot.id === o.id)) && restored.payouts.every(p => !book.payouts.some(hot => hot.id === p.id)));
   check(restored.allocations.every(a => !book.allocations.some(hot => hot.id === a.id)));
+  if (book.occurrences.length + restored.occurrences.length > 100 || book.payouts.length + restored.payouts.length > 32) throw new FinanceCapacityError();
   book.archivedPaidCents -= restored.paidCents; book.occurrences.push(...restored.occurrences); book.payouts.push(...restored.payouts); book.allocations.push(...restored.allocations);
   if (!book.archivedBudget) throw new FinanceBudgetBasisError();
   const indexed = restored.occurrences.filter(o => !["cancelled", "expired", "declined"].includes(o.status)).map(o => o.id);

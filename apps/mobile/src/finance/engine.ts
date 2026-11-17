@@ -1,6 +1,6 @@
 import { cents, localDate, percentage, periodKey, payoutPeriod, sum, validDate, validInstant } from "./money-calendar";
 import type { BookLot as Lot, BookGoal as Goal, BookPayout as Payout, BookMatch as MatchRecord, ChildBook, ChoreOccurrence, FinanceActor, FinanceCommand, FinanceEffect, FinanceEvent, FinanceState, FinanceView, MatchingRule, MatchView, PaymentMethod, PayoutView } from "./types";
-import { cloneBook, validateCheckpoint, FinanceBudgetBasisError, FinanceCheckpointError } from "./checkpoint";
+import { cloneBook, validateCheckpoint, sealFinanceCheckpoint, freezeFinanceValue, FinanceBudgetBasisError, FinanceCheckpointError } from "./checkpoint";
 
 const defaultMatching: MatchingRule = { enabled: false, percent: 100, monthlyCapCents: 2000, parentBudgetCents: 2000, surprise: true };
 const commandFields: Record<FinanceCommand["kind"], string[]> = {
@@ -315,24 +315,68 @@ function apply(book: ChildBook, command: FinanceCommand, actor: FinanceActor, zo
     default: throw new Error("Unknown financial action.");
   }
 }
-function replay(state: FinanceState): Map<string, ChildBook> {
+const immutableBooks = new WeakMap<FinanceState, Readonly<Record<string, ChildBook>>>();
+function sourceShape(state: FinanceState) {
+  onlyFields(state, ["timezone", "children", "events", "checkpoint"]);
+  check(typeof state.timezone === "string", "Invalid financial timezone.");
+  new Intl.DateTimeFormat("en-US", { timeZone: state.timezone }).format(new Date(0));
+  check(Array.isArray(state.children) && state.children.length > 0 && new Set(state.children.map(c => c.id)).size === state.children.length, "Invalid financial roster.");
+  for (const child of state.children) { onlyFields(child, ["id", "name"]); text(child.id, "a child ID", 512); text(child.name, "a child name", 160); }
+  check(Array.isArray(state.events), "Invalid financial events.");
+  const ids = new Set<string>(); let previousAt = state.checkpoint?.lastEventAt;
+  for (const event of state.events) {
+    const { actor, effects, ...command } = event; validateCommand(command);
+    text(event.id, "an operation ID"); validInstant(event.at);
+    check(!ids.has(event.id) && (!previousAt || Date.parse(event.at) >= Date.parse(previousAt)), "Invalid financial event order.");
+    ids.add(event.id); previousAt = event.at;
+    onlyFields(actor, ["role", "childId"]); authorize(state, actor, event.childId);
+    check(actor.role === "parent" || actor.role === "child", "Invalid financial actor.");
+    check(Array.isArray(effects), "Invalid financial effects.");
+    for (const effect of effects) { onlyFields(effect, ["kind", "referenceId", "cents"]);
+      check(["match_committed", "match_reversed", "correction_due", "automatic_allocation"].includes(effect.kind), "Invalid financial effect.");
+      text(effect.referenceId, "an effect reference", 512); cents(effect.cents); }
+  }
+}
+function deriveBooks(state: FinanceState, reuseCheckpointBooks = false): Record<string, ChildBook> {
   if (state.checkpoint) validateCheckpoint(state.checkpoint, state.children.map(c => c.id));
-  const books = new Map(state.children.map(c => [c.id, state.checkpoint?.books[c.id] ? cloneBook(state.checkpoint.books[c.id]) : emptyBook()]));
+  const books = Object.fromEntries(state.children.map(c => [c.id, state.checkpoint?.books[c.id]
+    ? reuseCheckpointBooks ? state.checkpoint.books[c.id] : cloneBook(state.checkpoint.books[c.id]) : emptyBook()]));
+  const writable = new Set<string>();
   if (state.checkpoint?.lastEventAt && state.events.some(e => Date.parse(e.at) < Date.parse(state.checkpoint!.lastEventAt!))) throw new Error("Invalid finance checkpoint tail.");
-  for (const e of state.events) apply(books.get(e.childId)!, e, e.actor, state.timezone, []);
+  for (const e of state.events) {
+    if (reuseCheckpointBooks && !writable.has(e.childId)) { books[e.childId] = cloneBook(books[e.childId]); writable.add(e.childId); }
+    apply(books[e.childId], e, e.actor, state.timezone, []);
+  }
   return books;
 }
+function cacheState(state: FinanceState, books: Record<string, ChildBook>): FinanceState {
+  freezeFinanceValue(state); freezeFinanceValue(books); immutableBooks.set(state, books); return state;
+}
 /** Server-only derivation: these books include private matching and are never client projections. */
-export function exportBooks(state: FinanceState): Record<string, ChildBook> { return Object.fromEntries(replay(state)); }
+export function exportBooks(state: FinanceState): Record<string, ChildBook> {
+  return Object.fromEntries(Object.entries(readFinanceBooks(state)).map(([id, book]) => [id, cloneBook(book)]));
+}
+/** Read-only cache exists only for states recursively sealed by this module, never caller-frozen mutable trees. */
+export function readFinanceBooks(state: FinanceState): Readonly<Record<string, ChildBook>> {
+  const known = immutableBooks.get(state); if (known) return known;
+  sourceShape(state); return freezeFinanceValue(deriveBooks(state));
+}
+export function sealFinanceState(state: FinanceState): FinanceState {
+  if (immutableBooks.has(state)) return state;
+  // Traverse before trusting any shallow Object.freeze supplied by a caller.
+  freezeFinanceValue(state); sourceShape(state);
+  if (state.checkpoint) sealFinanceCheckpoint(state.checkpoint, state.children.map(c => c.id));
+  return cacheState(state, deriveBooks(state, true));
+}
 export const replayBooks = exportBooks;
 /** Server-only exact tail activity; includes private actions and never returns cached rows. */
 export function financeEventActivity(state: FinanceState): FinanceView["activity"] {
-  const books = exportBooks(state);
+  const books = readFinanceBooks(state);
   return state.events.map(event => activity(books[event.childId], event));
 }
 /** Caller atomically publishes the matching immutable tail/archive before using this state. */
 export function checkpointState(state: FinanceState, books?: Record<string, ChildBook>): FinanceState {
-  const sourceBooks = exportBooks(state);
+  const sourceBooks = readFinanceBooks(state);
   const checkpointBooks = books ?? sourceBooks;
   if (Object.keys(checkpointBooks).length !== state.children.length || state.children.some(child => !Object.hasOwn(checkpointBooks, child.id))) throw new FinanceCheckpointError();
   const activityCache = Object.fromEntries(state.children.map(c => [c.id, {
@@ -340,14 +384,14 @@ export function checkpointState(state: FinanceState, books?: Record<string, Chil
     parent: [...(state.checkpoint?.activity[c.id]?.parent ?? []), ...state.events.filter(e => e.childId === c.id).map(e => activity(sourceBooks[c.id], e))].slice(-100),
   }]));
   const checkpoint = { version: 1 as const, lastEventAt: state.events.at(-1)?.at ?? state.checkpoint?.lastEventAt ?? null, books: checkpointBooks, activity: activityCache };
-  validateCheckpoint(checkpoint, state.children.map(c => c.id));
-  return freeze({ timezone: state.timezone, children: state.children.map(c => ({ ...c })), events: [], checkpoint: JSON.parse(JSON.stringify(checkpoint)) });
+  sealFinanceCheckpoint(checkpoint, state.children.map(c => c.id));
+  return cacheState({ timezone: state.timezone, children: state.children, events: [], checkpoint }, checkpoint.books);
 }
 export const stateCheckpoint = checkpointState;
 export function createFinanceState(timezone = "America/New_York", children = [{ id: "sam", name: "Sam" }, { id: "robin", name: "Robin" }]): FinanceState {
   new Intl.DateTimeFormat("en-US", { timeZone: timezone }).format(new Date(0));
   check(children.length > 0 && new Set(children.map(c => c.id)).size === children.length && children.every(c => c.id && c.name), "Choose distinct child records.");
-  return freeze({ timezone, children: children.map(c => ({ ...c })), events: [] });
+  return cacheState({ timezone, children: children.map(c => ({ ...c })), events: [] }, Object.fromEntries(children.map(c => [c.id, emptyBook()])));
 }
 export function applyFinanceCommand(state: FinanceState, actor: FinanceActor, command: FinanceCommand): FinanceState {
   validateCommand(command);
@@ -360,14 +404,10 @@ export function applyFinanceCommand(state: FinanceState, actor: FinanceActor, co
   }
   const lastAt = state.events.at(-1)?.at ?? state.checkpoint?.lastEventAt;
   check(!lastAt || Date.parse(command.at) >= Date.parse(lastAt), "Use chronological event timestamps; retroactive edits require a correction.");
-  const book = replay(state).get(command.childId)!; const effects: FinanceEffect[] = [];
+  const books = readFinanceBooks(state), book = cloneBook(books[command.childId]); const effects: FinanceEffect[] = [];
   apply(book, command, actor, state.timezone, effects);
   const event = JSON.parse(JSON.stringify({ ...command, actor: { ...actor }, effects })) as FinanceEvent;
-  return freeze({ ...state, events: [...state.events, event] });
-}
-function freeze<T>(value: T): T {
-  if (value && typeof value === "object" && !Object.isFrozen(value)) { for (const nested of Object.values(value)) freeze(nested); Object.freeze(value); }
-  return value;
+  return cacheState({ ...state, events: [...state.events, event] }, { ...books, [command.childId]: book });
 }
 function canonical(value: unknown): string {
   if (Array.isArray(value)) return "[" + value.map(canonical).join(",") + "]";
@@ -394,7 +434,7 @@ function activity(book: ChildBook, event: FinanceEvent): FinanceView["activity"]
   return { id: event.id, at: event.at, label: activityLabel[event.kind], actorRole: event.actor.role, referenceId, amountCents, note: "note" in event ? event.note : undefined };
 }
 export function financeView(state: FinanceState, actor: FinanceActor, childId: string, at = new Date().toISOString()): FinanceView {
-  authorize(state, actor, childId); validInstant(at); const book = replay(state).get(childId)!;
+  authorize(state, actor, childId); validInstant(at); const book = readFinanceBooks(state)[childId];
   const visibleMatches = actor.role === "parent" ? book.matches : book.matches.filter(m => m.revealed);
   const available = totalLots(book.free), earmarked = sum(book.goals.map(g => own(book, g.id))), held = sum(book.payouts.map(p => totalLots(p.lots))), paid = cents(book.archivedPaidCents + sum(book.payouts.map(p => payoutView(p).paidCents)));
   const date = localDate(at, state.timezone), period = book.plan ? payoutPeriod(at, state.timezone, book.plan.payoutCadence, book.plan.anchorDate) : "";
