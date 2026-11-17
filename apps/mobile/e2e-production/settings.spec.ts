@@ -23,7 +23,8 @@ async function enterCredential(target:Locator,value:string) {
 }
 async function signIn(page:Page,account:Credentials) {
   await page.goto('/accounts');
-  await expect(heading(page,'A place to start, together.')).toBeVisible();
+  // A cold development bundle can exceed the normal interaction timeout.
+  await expect(heading(page,'A place to start, together.')).toBeVisible({timeout:60_000});
   await button(page,'Sign in').click();
   await expect(heading(page,'Welcome back')).toBeVisible();
   await enterCredential(field(page,'Email or child account identifier'),account.email);

@@ -9,6 +9,8 @@ import type { FinancePlan, FinanceView, MatchingRule, PaymentMethod } from "../f
 import { accountApi, accountClient, backendUrl, type AccountContext } from "./client";
 import { createFinanceMutation, type ProductionFinanceAction } from './pending-finance-policy';
 import { pendingFinanceStore } from './pending-finance';
+import { ArchivedFinanceHistory } from './FinanceHistory';
+import { ParentMatchHistory } from './ParentMatchHistory';
 export { createFinanceMutation } from './pending-finance-policy';
 export type { ProductionFinanceAction } from './pending-finance-policy';
 
@@ -57,6 +59,7 @@ type FinanceRuntime={mutation:ReturnType<typeof createFinanceMutation>;current:(
 function FinanceWorkspace({scope,onBack,onPending}:{scope:Scope;onBack:()=>void;onPending:(value:boolean)=>void}) {
   const {theme}=useAppearance();
   const [view,setView]=useState<FinanceView|null>(null),[section,setSection]=useState<Section>("overview"),[error,setError]=useState("");
+  const [historyMode,setHistoryMode]=useState<"recent"|"settled">("recent"),[parentHistory,setParentHistory]=useState(false);
   const [authorized,setAuthorized]=useState(false),[runtime,setRuntime]=useState<FinanceRuntime|null>(null);
   const [busy,setBusy]=useState(true),[review,setReview]=useState<{title:string;detail:string;attempted:boolean;recovered?:boolean}|null>(null);
   const submitting=useRef(false),scroll=useRef<ComponentRef<typeof ScrollView>>(null);
@@ -142,9 +145,10 @@ function FinanceWorkspace({scope,onBack,onPending}:{scope:Scope;onBack:()=>void;
         {section==="plan"&&scope.parent&&<PlanForm view={view} review={stage}/>}
         {section==="chores"&&<Chores view={view} parent={scope.parent} review={stage}/>}
         {section==="goals"&&<Goals view={view} parent={scope.parent} review={stage}/>}
-        {section==="matching"&&scope.parent&&<Matching view={view} review={stage}/>}
+        {section==="matching"&&scope.parent&&<><Button label={parentHistory?"Matching settings and latest contributions":"Open and older matching records"} selected={parentHistory} onPress={()=>{setParentHistory(!parentHistory);scroll.current?.scrollTo({y:0,animated:false});}}/>{parentHistory?<ParentMatchHistory key={view.activity.at(-1)?.id??"empty"} path={path} authorId={scope.actorId} review={stage}/>:<Matching view={view} review={stage}/>}</>}
         {section==="payouts"&&<Payouts view={view} parent={scope.parent} review={stage}/>}
-        {section==="history"&&<><Heading>A clear record</Heading><Body muted>Latest 100 visible actions. Corrections retain the original history. This is not a bank statement; journals are never included.</Body>{[...view.activity].reverse().map(item=><Paper key={item.id}><Body>{item.label}</Body>{item.amountCents!==undefined&&<Balance label="Recorded amount" cents={item.amountCents}/>}<Body muted>{item.actorRole} · {item.at}</Body>{!!item.note&&<Body>{item.note}</Body>}</Paper>)}{!view.activity.length&&<Body>No financial activity yet.</Body>}</>}
+        {section==="history"&&<><Heading>A clear record</Heading><Body muted>Corrections retain the original history. This is not a bank statement; journals are never included.</Body><Button label="Recent financial activity" selected={historyMode==="recent"} onPress={()=>setHistoryMode("recent")}/><Button label="Older settled financial records" selected={historyMode==="settled"} onPress={()=>setHistoryMode("settled")}/>{historyMode==="settled"?<ArchivedFinanceHistory key={view.activity.at(-1)?.id??"empty"} path={path} authorId={scope.actorId} parent={scope.parent} review={stage}/>:<><Body muted>Latest 100 visible actions.</Body>{[...view.activity].reverse().map(item=><Paper key={item.id}><Body>{item.label}</Body>{item.amountCents!==undefined&&<Balance label="Recorded amount" cents={item.amountCents}/>}<Body muted>{item.actorRole} · {item.at}</Body>{!!item.note&&<Body>{item.note}</Body>}</Paper>)}{!view.activity.length&&<Body>No financial activity yet.</Body>}</>}</>}
+
       </View>}
     </View>
   </ScrollView>;

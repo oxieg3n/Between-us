@@ -2,7 +2,7 @@
   "expo": {
     "name": "Between Us",
     "slug": "between-us",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "orientation": "default",
     "icon": "./assets/brand/app-icon.png",
     "scheme": "between-us",
@@ -10,7 +10,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.oxieg3n.betweenus",
-      "buildNumber": "4"
+      "buildNumber": "5"
     },
     "android": {
       "package": "com.oxieg3n.betweenus",
@@ -26,7 +26,7 @@
         "android.permission.VIBRATE",
         "android.permission.RECORD_AUDIO"
       ],
-      "versionCode": 4
+      "versionCode": 5
     },
     "web": {
       "output": "static",
@@ -70,7 +70,7 @@
       "./plugins/withPrivateCapturePermissions.cjs"
     ],
     "extra": {
-      "buildId": "1116-StagingQualification-r1"
+      "buildId": "1116-FinanceCheckpoints-r1"
     }
   }
 }

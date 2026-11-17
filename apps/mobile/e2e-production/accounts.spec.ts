@@ -8,6 +8,7 @@ type MobileFixture = {
   parent: Credentials;
   child: Credentials & { name: string };
   conversation: { id: string };
+  financeArchiveQa?: { occurrenceId: string };
 };
 function readFixture(): MobileFixture {
   try { return JSON.parse(readFileSync(localUiFixturePath(process.env.BETWEENUS_PRODUCTION_UI_FIXTURE), "utf8")); }
@@ -27,7 +28,8 @@ async function scan(page: Page) {
 }
 async function start(page: Page) {
   await page.goto("/accounts");
-  await expect(heading(page, "A place to start, together.")).toBeVisible();
+  // A cold Expo development bundle is setup; interaction assertions retain their shorter default.
+  await expect(heading(page, "A place to start, together.")).toBeVisible({ timeout: 60_000 });
 }
 async function signIn(page: Page, account: Credentials) {
   await button(page, "Sign in").click();
@@ -298,4 +300,52 @@ test('late previous-author verification denial cannot cover the next signed-in a
     await expect(button(page,'Talk to someone')).toBeEnabled();
     await expect(button(page,'Write privately')).toBeEnabled();
   }finally{release();}
+});
+
+
+test('financial history keeps bounded older records and private parent matching behind the current account', async ({page}) => {
+  test.setTimeout(180_000);
+  const openOlder = async () => {
+    await button(page, 'Financial history').click();
+    await button(page, 'Older settled financial records').click();
+    await button(page, 'Load older settled records').click();
+    await expect(button(page, 'Refresh older records')).toBeEnabled();
+  };
+  const chooseGarden = async () => {
+    const garden = button(page, 'Open settled record: Fictional garden watering · ' + fixture.financeArchiveQa!.occurrenceId.slice(-10));
+    for (let pageNumber = 0; pageNumber < 6 && await garden.count() === 0; pageNumber++) {
+      await button(page, 'Next page of settled records').click();
+      await expect(button(page, 'Refresh older records')).toBeEnabled();
+    }
+    await garden.click();
+    await expect(heading(page, 'Fictional garden watering')).toBeVisible();
+  };
+  await start(page); await signIn(page, fixture.child); await openFinance(page);
+  await expect(button(page, 'Parent matching')).toHaveCount(0);
+  await openOlder();
+  if (fixture.financeArchiveQa) {
+    await chooseGarden();
+    await button(page, 'Review historical receipt acknowledgment').click();
+    await expect(heading(page, 'Did you receive this amount?')).toBeVisible();
+    await expect(button(page, 'Confirm financial action')).toBeEnabled();
+    await button(page, 'Return to editing').click();
+  } else await expect(page.getByText('No older settled records are available in this page.', {exact: true})).toBeVisible();
+  await scan(page);
+  await button(page, 'Back to account').click(); await signOut(page);
+  await signIn(page, fixture.parent); await openFinance(page); await openOlder();
+  if (fixture.financeArchiveQa) {
+    await chooseGarden();
+    await page.getByRole('textbox', {name: 'Reason for a historical correction', exact: true}).fill('Fictional review only; original sources stay intact.');
+    await button(page, 'Review historical earning correction: Fictional garden watering').click();
+    await expect(heading(page, 'Correct this historical earning?')).toBeVisible();
+    await button(page, 'Return to editing').click();
+  }
+  await button(page, 'All financial sections').click(); await button(page, 'Parent matching').click();
+  await button(page, 'Open and older matching records').click();
+  await button(page, 'Load open matching records').click();
+  await expect(button(page, 'Refresh open matching records')).toBeEnabled();
+  await button(page, 'Load older parent matching records').click();
+  await expect(button(page, 'Refresh parent matching history')).toBeEnabled();
+  if (fixture.financeArchiveQa) await expect(button(page, 'Review revealing this retained contribution')).toBeEnabled();
+  await scan(page);
 });
