@@ -5,11 +5,18 @@ export const FREE_QUOTAS = Object.freeze({
   realtimeMessages: 2_000_000, peakRealtimeConnections: 200, realtimeMessagesPerSecond: 100, channelJoinsPerSecond: 100,
 });
 export const OPERATION_LIMITS = Object.freeze({ jsonBytes: 8192, pageRows: 50, notificationBatch: 20, maxRetries: 3, usageFreshnessMs: 900_000 });
-/** Observed p3 finance.ts guard; this inventory never raises or bypasses it. */
+/** Unchanged HOT working-set limits; immutable history is retained separately. */
 export const APP_FINANCE_CAPACITY = Object.freeze({ visibleEventsPerChild: 128, hiddenEventsPerChild: 32, occurrences: 100, goals: 32, savingsRules: 8, payouts: 32, paymentsPerPayout: 32 });
+/** Physical local TEMP table/index footprint; not hosted capacity or an approved retention policy. */
+export const FINANCE_STORAGE_MEASUREMENT = Object.freeze({
+  report: 'spec/production/staging/finance-checkpoints/local-postgres-storage-20261117001203359-52a9a7b2.json',
+  sha256: 'bd8ab482d906cd9ef67efe92daa84f21b039982c9ea7e62eea0275e0db6c60e0',
+  weeks: 52, events: 1307, bytesIncludingIndexes: 6_397_952,
+  scope: 'LOCAL synthetic PostgreSQL JSONB/TOAST/indexes; no hosted proof',
+});
 export const DEFAULT_CAPACITY_ASSUMPTIONS = Object.freeze({
   accountsPerFamily: 4, daysPerMonth: 30, messagesPerFamilyDay: 10, messageHistoryDays: 30, storedMessageBytes: 4096,
-  financeCommandsPerFamilyDay: 6, financeGrowthDays: 365, storedFinanceCommandBytes: 1536,
+  financeCommandsPerFamilyDay: 8, financeGrowthDays: 365, storedFinanceCommandBytes: 5000,
   childrenPerFamily: 2, financeHiddenCommandFraction: 0.1, financeEventsPerCommand: 1,
   identityConsentBytesPerFamily: 65_536, checkinsPerFamilyDay: 2, checkinHistoryDays: 30, storedCheckinBytes: 512,
   notificationsPerFamilyDay: 12, notificationHistoryDays: 30, storedNotificationBytes: 512,
@@ -59,10 +66,11 @@ export function estimateCapacity(families: number, overrides: Partial<CapacityAs
     ? APP_FINANCE_CAPACITY.visibleEventsPerChild / (perChildEvents * (1 - a.financeHiddenCommandFraction)) : null;
   const daysUntilHiddenCapacity = perChildEvents * a.financeHiddenCommandFraction > 0
     ? APP_FINANCE_CAPACITY.hiddenEventsPerChild / (perChildEvents * a.financeHiddenCommandFraction) : null;
-  return { kind: 'estimate' as const, families, assumptions: a, databaseComponents, backupEgressBytes, writesPerDay,
-    applicationCapacity: { limits: APP_FINANCE_CAPACITY, daysUntilVisibleCapacity, daysUntilHiddenCapacity,
-      forecastExceedsCurrentApplicationCapacity: [daysUntilVisibleCapacity, daysUntilHiddenCapacity].some(d => d !== null && a.financeGrowthDays > d),
-      actualEventsPerCommandMeasured: false, automaticDeletion: false },
+  return { kind: 'estimate' as const, families, assumptions: a, financeStorageMeasurement: FINANCE_STORAGE_MEASUREMENT, databaseComponents, backupEgressBytes, writesPerDay,
+    applicationCapacity: { limits: APP_FINANCE_CAPACITY, historyMode: 'validated_checkpoint_archive' as const,
+      hotTailRolloverDays: { visible: daysUntilVisibleCapacity, hidden: daysUntilHiddenCapacity },
+      outstandingWorkCapacityProven: false, hostedRuntimeCapacityProven: false,
+      settledHistoryRetained: true, actualEventsPerCommandMeasured: false, automaticDeletion: false },
     averageWritesPerSecond: writesPerDay / 86_400, estimates,
     limits: Object.entries(estimates).map(([name, used]) => ({ name, used, quota: FREE_QUOTAS[name as Metric], ratio: used / FREE_QUOTAS[name as Metric], band: band(used / FREE_QUOTAS[name as Metric]) })),
     burstCapacityProven: false, hostingCapacityProven: false };

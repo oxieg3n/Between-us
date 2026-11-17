@@ -26,19 +26,22 @@ test('capacity scenarios repeat exactly and expose finance horizon, index overhe
     const result = estimateCapacity(families);
     assert.deepEqual(result, estimateCapacity(families));
     assert.equal(result.estimates.monthlyActiveUsers, families * 4);
-    assert.equal(result.databaseComponents.financeBytes, families * 6 * 365 * 1536);
+    assert.equal(result.databaseComponents.financeBytes, families * 8 * 365 * 5000);
     assert.equal(result.backupEgressBytes, result.estimates.databaseBytes * 4);
     assert.equal(result.estimates.uncachedEgressBytes, Math.ceil(families * 4 * 100_000 * 30 * 1.1 + result.backupEgressBytes));
     assert.equal(result.hostingCapacityProven, false);
+    assert.ok(result.assumptions.storedFinanceCommandBytes >= result.financeStorageMeasurement.bytesIncludingIndexes / result.financeStorageMeasurement.events);
+    assert.equal(result.financeStorageMeasurement.sha256.length, 64);
   }
   assert.ok(estimateCapacity(100).estimates.databaseBytes > FREE_QUOTAS.databaseBytes);
   assert.ok(estimateCapacity(500).estimates.edgeInvocations > FREE_QUOTAS.edgeInvocations);
   assert.ok(estimateCapacity(1000).estimates.peakRealtimeConnections > FREE_QUOTAS.peakRealtimeConnections);
   const cap = estimateCapacity(10).applicationCapacity;
   assert.equal(cap.limits.visibleEventsPerChild, 128); assert.equal(cap.limits.hiddenEventsPerChild, 32);
-  assert.ok(cap.daysUntilVisibleCapacity! < 48); assert.ok(cap.daysUntilHiddenCapacity! < 107);
-  assert.equal(cap.forecastExceedsCurrentApplicationCapacity, true); assert.equal(cap.automaticDeletion, false);
-  assert.equal(estimateCapacity(10, { financeCommandsPerFamilyDay: 0 }).applicationCapacity.daysUntilVisibleCapacity, null);
+  assert.ok(cap.hotTailRolloverDays.visible! < 36); assert.ok(cap.hotTailRolloverDays.hidden! <= 80);
+  assert.equal(cap.historyMode, 'validated_checkpoint_archive'); assert.equal(cap.settledHistoryRetained, true);
+  assert.equal(cap.outstandingWorkCapacityProven, false); assert.equal(cap.hostedRuntimeCapacityProven, false); assert.equal(cap.automaticDeletion, false);
+  assert.equal(estimateCapacity(10, { financeCommandsPerFamilyDay: 0 }).applicationCapacity.hotTailRolloverDays.visible, null);
   const short = estimateCapacity(10, { financeGrowthDays: 30 });
   assert.ok(short.estimates.databaseBytes < estimateCapacity(10).estimates.databaseBytes);
   assert.ok(estimateCapacity(10, { fullExportsPerMonth: 30 }).estimates.uncachedEgressBytes > estimateCapacity(10).estimates.uncachedEgressBytes);

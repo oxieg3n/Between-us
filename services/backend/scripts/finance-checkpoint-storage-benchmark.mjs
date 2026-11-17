@@ -171,24 +171,26 @@ export function summarizeExplain(source) {
 }
 async function queryPlans(client, sample) {
   const queries = {
-    exactArchive: [`select c.payload from ${temp('finance_archive_current_entities')} k join ${temp('finance_archive_capsules')} c on c.id=k.capsule_id
+    exactArchive: [`select c.payload,c.hash=app_private.finance_state_hash(c.payload) hash_valid from ${temp('finance_archive_current_entities')} k join ${temp('finance_archive_capsules')} c on c.id=k.capsule_id
       join ${temp('finance_archive_residency')} r on r.capsule_id=c.id and r.active
       where k.family_id=$1 and k.child_id=$2 and k.kind='occurrence' and k.entity_id=$3 limit 1`, [familyId, childId, sample.occurrenceId]],
     currentBudget: [`select total_cents from ${temp('finance_archive_budget_periods')} where family_id=$1 and child_id=$2 and period_key=$3 limit 1`, [familyId, childId, sample.periodKey]],
     maximumBudget: [`select total_cents from ${temp('finance_archive_budget_periods')} where family_id=$1 and child_id=$2 order by total_cents desc limit 1`, [familyId, childId]],
-    historyPage: [`select c.payload from (select capsule_id from ${temp('finance_archive_residency')}
+    historyPage: [`select c.payload,c.hash=app_private.finance_state_hash(c.payload) hash_valid from (select capsule_id from ${temp('finance_archive_residency')}
       where family_id=$1 and child_id=$2 and active and capsule_id>$3 order by capsule_id limit 20) r
-      join ${temp('finance_archive_capsules')} c on c.id=r.capsule_id order by c.id`, [familyId, childId, sample.afterId]],
-    parentHistoryPage: [`select c.payload from (select capsule_id from ${temp('finance_private_match_residency')}
+      cross join lateral(select id,payload,hash from ${temp('finance_archive_capsules')} where id=r.capsule_id and family_id=$1 and child_id=$2 offset 0) c order by c.id`, [familyId, childId, sample.afterId]],
+    parentHistoryPage: [`select c.payload,c.hash=app_private.finance_state_hash(c.payload) hash_valid from (select capsule_id from ${temp('finance_private_match_residency')}
       where family_id=$1 and child_id=$2 and active and capsule_id>$3 order by capsule_id limit 20) r
-      join ${temp('finance_private_match_capsules')} c on c.id=r.capsule_id order by c.id`, [familyId, childId, sample.afterId]],
+      cross join lateral(select id,payload,hash from ${temp('finance_private_match_capsules')} where id=r.capsule_id and family_id=$1 and child_id=$2 offset 0) c order by c.id`, [familyId, childId, sample.afterId]],
     activityPage: [`select activity from ${temp('finance_activity')} where family_id=$1 and child_id=$2 order by sequence desc limit 20`, [familyId, childId]],
     currentProjection: [`select child_projection,parent_projection from ${temp('finance_projection_snapshots')} where family_id=$1 and child_id=$2 limit 1`, [familyId, childId]],
   };
-  return Object.fromEntries(await Promise.all(Object.entries(queries).map(async ([name, [sql, args]]) => {
+  const plans = {};
+  for (const [name, [sql, args]] of Object.entries(queries)) {
     const result = await client.query(`explain (analyze, buffers, format json) ${sql}`, args);
-    return [name, summarizeExplain(result.rows[0]['QUERY PLAN'])];
-  })));
+    plans[name] = summarizeExplain(result.rows[0]['QUERY PLAN']);
+  }
+  return plans;
 }
 async function footprints(client, dataset) {
   const values = [];
@@ -219,7 +221,8 @@ async function sourceManifest() {
     'services/backend/supabase/migrations/202611160003_finance.sql', 'services/backend/supabase/migrations/202611160027_finance_checkpoints.sql',
     'services/backend/supabase/migrations/202611160028_finance_private_match_archives.sql',
     'services/backend/supabase/migrations/202611160029_finance_privacy_archives.sql',
-    'services/backend/supabase/migrations/202611160030_finance_write_admission.sql'];
+    'services/backend/supabase/migrations/202611160030_finance_write_admission.sql',
+    'services/backend/supabase/migrations/202611160031_finance_archive_page_reads.sql'];
   return Object.fromEntries(await Promise.all(sources.map(async name => [name, hash(await readFile(path.join(root, name), 'utf8'))])));
 }
 export async function main(args = process.argv.slice(2)) {
