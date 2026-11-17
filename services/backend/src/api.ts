@@ -32,7 +32,7 @@ export function createApi(config: ApiConfig) {
   async function route(request: Request): Promise<Response> {
     try {
       const url = new URL(request.url); const path = url.pathname.replace(/^\/functions\/v1\/api/, '');
-      if (request.method === 'GET' && path === '/health') return json({ service: 'between-us', publicEnrollment: false, build: '1116-StagingQualification-r1' });
+      if (request.method === 'GET' && path === '/health') return json({ service: 'between-us', publicEnrollment: false, build: '1116-FinanceCheckpoints-r1' });
       if (request.method === 'POST' && path === '/v1/enrollment/parent') {
         if (!config.syntheticLocal || !['127.0.0.1', 'localhost', '[::1]'].includes(url.hostname)) return json({ error: 'Enrollment is unavailable.' }, 403);
         const data = await body(request); exact(data, ['email']);
@@ -76,6 +76,12 @@ export function createApi(config: ApiConfig) {
         return json({ email: bound.email, acceptanceToken: bound.token, needsEmailVerification: !bound.authAlias,
           guardianManaged: true, instruction: 'The child signs in with their own credential and accepts this invitation.' }, 201);
       }
+      const history = /^\/v1\/finance\/([^/]+)\/([^/]+)\/(history|parent-history|parent-open-history)$/.exec(path);
+      if (history && request.method === 'GET') {
+        if ([...url.searchParams.keys()].some(key => key !== 'after') || url.searchParams.getAll('after').length > 1) throw new RequestError(400, 'Invalid financial history request.');
+        const handler = createFinanceService({ userClient: user, serviceClient: service });
+        return json(await (history[3] === 'parent-open-history' ? handler.parentHotHistory : history[3] === 'parent-history' ? handler.parentHistory : handler.history)(history[1], history[2], url.searchParams.get('after')));
+      }
       const finance = /^\/v1\/finance\/([^/]+)\/([^/]+)$/.exec(path);
       if (finance && (request.method === 'GET' || request.method === 'POST')) {
         const handler = createFinanceService({ userClient: user, serviceClient: service });
@@ -86,7 +92,7 @@ export function createApi(config: ApiConfig) {
       return json({ error: 'Not found.' }, 404);
     } catch (error) {
       if (error instanceof RequestError) return json({ error: error.message }, error.status);
-      if (error instanceof FinanceServiceError) return json({ error: error.message }, error.code === 'not_authorized' ? 403 : error.code === 'invalid_action' ? 400 : 503);
+      if (error instanceof FinanceServiceError) return json({ error: error.message }, error.code === 'not_authorized' ? 403 : error.code === 'invalid_action' ? 400 : error.code === 'rate_limited' ? 429 : 503);
       if (error instanceof PrivacyServiceError) return json({error:error.message},error.code === 'not_authorized' ? 403 : error.code === 'invalid_request' ? 400 : 503);
       // Never echo backend exceptions, credentials, request content or private SQL details.
       return json({ error: 'Service is temporarily unavailable.' }, 503);

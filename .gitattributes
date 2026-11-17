@@ -1,0 +1,2 @@
+# Financial migration function bodies and source hashes must be reproducible on Windows.
+services/backend/supabase/migrations/*.sql text eol=lf

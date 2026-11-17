@@ -1,6 +1,7 @@
 import { createClient, type User } from '@supabase/supabase-js';
 import { financeView } from '../../../apps/mobile/src/finance/engine.ts';
 import type { FinanceState } from '../../../apps/mobile/src/finance/types.ts';
+import { mergeFinancePrivacy } from './finance-privacy.ts';
 
 type ServiceClient = {
   rpc(name: string, args?: Record<string, unknown>): PromiseLike<{ data: unknown; error: { code?: string; message: string } | null }>;
@@ -129,6 +130,30 @@ export function createPrivacyService({ url, publicKey, serviceClient }: { url: s
           if (source.status === 'blocked' || source.status === 'ready') {
             return { id: jobId, status: source.status, completed: source.status === 'ready', journalIncluded: false };
           }
+          if (Array.isArray(source.scopes)) {
+            if (!Array.isArray(source.families) || source.families.length > 4 || source.scopes.length > 48
+              || typeof source.sourceHash !== 'string' || !/^[a-f0-9]{64}$/.test(source.sourceHash) || typeof source.serverAt !== 'string') unavailable();
+            const familyStates = new Map<string, FinanceState>();
+            for (const family of source.families) {
+              if (!record(family) || typeof family.familyId !== 'string' || !uuid.test(family.familyId) || familyStates.has(family.familyId) || !record(family.state)) unavailable();
+              familyStates.set(family.familyId, family.state as unknown as FinanceState);
+            }
+            const projections: { familyId: string; childId: string; view: ReturnType<typeof financeView> }[] = [], seen = new Set<string>();
+            for (const scope of source.scopes) {
+              if (!record(scope) || typeof scope.familyId !== 'string' || typeof scope.childId !== 'string' || !uuid.test(scope.childId)
+                || seen.has(scope.childId) || !familyStates.has(scope.familyId)) unavailable();
+              seen.add(scope.childId);
+              try { projections.push({ familyId: scope.familyId, childId: scope.childId,
+                view: mergeFinancePrivacy(scope, familyStates.get(scope.familyId)!, { role: 'parent' }, scope.childId, source.serverAt) }); }
+              catch { unavailable(); }
+            }
+            const attached = await rpc(serviceClient, 'attach_privacy_parent_finance_projections', {
+              p_job_id: jobId, p_operator_id: operatorId, p_source_hash: source.sourceHash, p_projections: projections,
+            });
+            if (['ready', 'partial_ready', 'blocked'].includes(String(attached.status))) return { id: jobId, status: String(attached.status), completed: attached.status === 'ready', journalIncluded: false };
+            if (attached.status === 'conflict') continue;
+            unavailable();
+          }
           if (source.status !== 'partial_ready' || !record(source.actor) || source.actor.role !== 'parent'
             || !Array.isArray(source.families) || source.families.length > 4 || typeof source.sourceHash !== 'string'
             || !/^[a-f0-9]{64}$/.test(source.sourceHash) || typeof source.serverAt !== 'string' || !Number.isFinite(Date.parse(source.serverAt))) unavailable();
@@ -161,6 +186,21 @@ export function createPrivacyService({ url, publicKey, serviceClient }: { url: s
       }
       for (let attempt = 0; attempt < 3; attempt++) {
         const source = await rpc(serviceClient, 'privacy_finance_sources', { p_job_id: jobId, p_operator_id: operatorId });
+        if (source.status === 'blocked' || source.status === 'ready') return { id: jobId, status: source.status, completed: source.status === 'ready', journalIncluded: false };
+        if (record(source.projection)) {
+          if (typeof source.childId !== 'string' || !uuid.test(source.childId) || !record(source.actor) || source.actor.role !== 'child'
+            || source.actor.childId !== source.childId || !record(source.state) || typeof source.serverAt !== 'string'
+            || typeof source.sourceHash !== 'string' || !/^[a-f0-9]{64}$/.test(source.sourceHash)) unavailable();
+          let projection;
+          try { projection = mergeFinancePrivacy(source, source.state as unknown as FinanceState, { role: 'child', childId: source.childId }, source.childId, source.serverAt); }
+          catch { unavailable(); }
+          const attached = await rpc(serviceClient, 'attach_privacy_finance_projection', {
+            p_job_id: jobId, p_operator_id: operatorId, p_source_hash: source.sourceHash, p_projection: projection,
+          });
+          if (attached.status === 'ready' || attached.status === 'blocked') return { id: jobId, status: attached.status, completed: attached.status === 'ready', journalIncluded: false };
+          if (attached.status === 'conflict') continue;
+          unavailable();
+        }
         if (typeof source.childId !== 'string' || !uuid.test(source.childId) || !record(source.actor) || source.actor.role !== 'child'
           || source.actor.childId !== source.childId || !record(source.state) || !Array.isArray(source.state.children) || !Array.isArray(source.state.events)
           || typeof source.sourceHash !== 'string' || !/^[a-f0-9]{64}$/.test(source.sourceHash) || typeof source.serverAt !== 'string') unavailable();
