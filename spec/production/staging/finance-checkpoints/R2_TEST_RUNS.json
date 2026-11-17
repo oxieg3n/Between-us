@@ -1,0 +1,57 @@
+{
+  "format": 1,
+  "build": "1116-FinanceCheckpoints-r2",
+  "recordedAtUtc": "2026-11-17T02:43:33.325958+00:00",
+  "scope": "Actual local reruns after native raw-text correction; fictional test data only. No hosted staging result.",
+  "runs": [
+    {
+      "check": "mobile unit",
+      "result": "PASS",
+      "tests": 295,
+      "failed": 0,
+      "logPathIgnored": "apps/mobile/.expo/r2-final-unit.log",
+      "logBytes": 61904,
+      "logSha256": "a11ad3d81a4d29ecb79e1133bb451c07c71656164c9380ae459a0382127afd45",
+      "modifiedAtUtc": "2026-11-17T02:34:07.881759+00:00"
+    },
+    {
+      "check": "backend unit",
+      "result": "PASS",
+      "tests": 151,
+      "failed": 0,
+      "logPathIgnored": "services/backend/.local/r2-final-unit.log",
+      "logBytes": 32786,
+      "logSha256": "2f7d5906a55300ec5b0ce8adcc2c5f257bc6676f9edbd181c4311cbc967eb6ba",
+      "modifiedAtUtc": "2026-11-17T02:33:53.342905+00:00"
+    },
+    {
+      "check": "managed local integration",
+      "result": "PASS",
+      "tests": 21,
+      "failed": 0,
+      "logPathIgnored": "services/backend/.local/r2-final-integration.log",
+      "logBytes": 10962,
+      "logSha256": "edf8c2f16fe2c0075862aed6215a28623920c55efcf871f057c646a67c637e78",
+      "modifiedAtUtc": "2026-11-17T02:37:37.823432+00:00"
+    }
+  ],
+  "operatorObservedChecks": [
+    {
+      "check": "mobile TypeScript and ESLint",
+      "toolSession": 14673,
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "check": "backend TypeScript and bundle build",
+      "toolSession": 92736,
+      "exitCode": 0,
+      "result": "PASS"
+    }
+  ],
+  "schemaAndRestoreReceipts": [
+    "fresh-migrations-031.json",
+    "recovery-031.json"
+  ],
+  "nativeAndBrowserResults": "Separate final QA and receipt; not inferred from these tests."
+}

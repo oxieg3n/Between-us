@@ -1,0 +1,182 @@
+{
+  "format": 1,
+  "completedAt": "2026-11-17T01:33:21.1490148Z",
+  "inventoryCreatedAt": "2026-11-17T01:30:33Z",
+  "reviewedOriginalHelper": {
+    "sha256": "6bb19ff3cd8e661cd7c7fd6ec3a5d0c1319192d7b8c6f04e680d8529f1e973a4",
+    "path": "services/backend/scripts/release-inventory.mjs"
+  },
+  "adaptedHelper": {
+    "changes": [
+      "Repository root traversal adjusted for this evidence folder",
+      "Output fixed to this owned folder",
+      "SPDX/Markdown writes use CreateNew flag to preserve snapshots"
+    ],
+    "path": "inventory.mjs",
+    "sha256": "44c27d4d5141503e29612d62d4600b81c5b4eb435264ef6e87d946cdfafe2dbc"
+  },
+  "inputAndHistoricalPreservation": [
+    {
+      "path": "apps/mobile/package.json",
+      "beforeSha256": "8d2a3b8c8424ca49f449b52b6f4761ea59c8ea0e0a1f17bd132200d826b46ce7",
+      "afterSha256": "8d2a3b8c8424ca49f449b52b6f4761ea59c8ea0e0a1f17bd132200d826b46ce7",
+      "unchanged": true
+    },
+    {
+      "path": "apps/mobile/package-lock.json",
+      "beforeSha256": "262d6db1ac8e0c04d01048affa3df5d84e6f781332bc03e6f9b136ad3365adae",
+      "afterSha256": "262d6db1ac8e0c04d01048affa3df5d84e6f781332bc03e6f9b136ad3365adae",
+      "unchanged": true
+    },
+    {
+      "path": "services/backend/package.json",
+      "beforeSha256": "6476a494a177f6009f5267354cf93bc7514960284242b58b5a209b4d994a3bd9",
+      "afterSha256": "6476a494a177f6009f5267354cf93bc7514960284242b58b5a209b4d994a3bd9",
+      "unchanged": true
+    },
+    {
+      "path": "services/backend/package-lock.json",
+      "beforeSha256": "2fc6ae62460b6d93d0ee6ba51984c52b248d5199b019efa8d26f85b50be6e1d4",
+      "afterSha256": "2fc6ae62460b6d93d0ee6ba51984c52b248d5199b019efa8d26f85b50be6e1d4",
+      "unchanged": true
+    },
+    {
+      "path": "services/backend/scripts/release-inventory.mjs",
+      "beforeSha256": "6bb19ff3cd8e661cd7c7fd6ec3a5d0c1319192d7b8c6f04e680d8529f1e973a4",
+      "afterSha256": "6bb19ff3cd8e661cd7c7fd6ec3a5d0c1319192d7b8c6f04e680d8529f1e973a4",
+      "unchanged": true
+    },
+    {
+      "path": "spec/production/release/SBOM.json",
+      "beforeSha256": "a0d3eaf68807faeacf7b2baf4f647e383f31968059c5cfdd0a2bf594f7197139",
+      "afterSha256": "a0d3eaf68807faeacf7b2baf4f647e383f31968059c5cfdd0a2bf594f7197139",
+      "unchanged": true
+    },
+    {
+      "path": "spec/production/release/DEPENDENCY_LICENSES.md",
+      "beforeSha256": "06e9bd8a76f1f758a2014aec388ca8d168537ce8ba13c0b5638ed498acc2dff7",
+      "afterSha256": "06e9bd8a76f1f758a2014aec388ca8d168537ce8ba13c0b5638ed498acc2dff7",
+      "unchanged": true
+    },
+    {
+      "path": "spec/production/staging/evidence/dependencies/SBOM.json",
+      "beforeSha256": "5f81598bed0a8854fed297a5a4cd7577bfb4ce9a9f551ae04f997793affe8f25",
+      "afterSha256": "5f81598bed0a8854fed297a5a4cd7577bfb4ce9a9f551ae04f997793affe8f25",
+      "unchanged": true
+    },
+    {
+      "path": "spec/production/staging/evidence/dependencies/DEPENDENCY_LICENSES.md",
+      "beforeSha256": "0dc6ae01a6dee66f5920133c060162287e9f105c4c245d7cb950108d9fdb7207",
+      "afterSha256": "0dc6ae01a6dee66f5920133c060162287e9f105c4c245d7cb950108d9fdb7207",
+      "unchanged": true
+    }
+  ],
+  "allInputsAndHistoricalArtifactsUnchanged": true,
+  "components": {
+    "lockLocationsWithNotice": 785,
+    "installedMetadataMatches": 882,
+    "nativeEntries": 7,
+    "optionalModelMetadataEntries": 1,
+    "npmLicenseNoAssertion": 1,
+    "nativeNoAssertion": 4,
+    "npmLockLocations": 981,
+    "spdxPackages": 992,
+    "distinctNameVersionLicenseGroups": 881
+  },
+  "scopeCounts": [
+    {
+      "scope": "apps/mobile",
+      "lockLocations": 911,
+      "installedMetadataMatches": 845,
+      "withNoticeFiles": 751,
+      "licenseNoAssertion": 1
+    },
+    {
+      "scope": "services/backend",
+      "lockLocations": 70,
+      "installedMetadataMatches": 37,
+      "withNoticeFiles": 34,
+      "licenseNoAssertion": 0
+    }
+  ],
+  "npmNoAssertionDetails": [
+    {
+      "name": "node-forge",
+      "version": "1.4.3",
+      "scope": "apps/mobile",
+      "raw": "(BSD-3-Clause OR GPL-2.0)"
+    }
+  ],
+  "audits": [
+    {
+      "file": "mobile-npm-audit-20261117013101461-f6d2d08f.json",
+      "scope": "apps/mobile",
+      "startedAt": "2026-11-17T01:30:47.6262780Z",
+      "completedAt": "2026-11-17T01:31:01.4167102Z",
+      "status": "completed",
+      "exitCode": 0,
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "inputsUnchanged": true
+    },
+    {
+      "file": "backend-npm-audit-20261117013101280-9ca19e1c.json",
+      "scope": "services/backend",
+      "startedAt": "2026-11-17T01:30:47.6298215Z",
+      "completedAt": "2026-11-17T01:31:01.2336168Z",
+      "status": "completed",
+      "exitCode": 0,
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "inputsUnchanged": true
+    }
+  ],
+  "structuralChecks": {
+    "allLicenseConclusionsNoAssertion": true,
+    "relationshipReferencesResolved": true,
+    "formalSpdxSchemaValidatorRun": false,
+    "uniquePackageIds": true,
+    "spdxVersion": "SPDX-2.3"
+  },
+  "legalApproval": false,
+  "builtArtifactSbom": false,
+  "nativeBinaryLicenseAudit": false,
+  "packageBytesVerified": false,
+  "modelWeightsRead": false,
+  "upgradesOrInstalls": false,
+  "scope": "Fresh lock/installed top-level notice metadata plus separate known-advisory npm audit; no release/publication approval",
+  "commands": [
+    "node .\\spec\\production\\staging\\finance-checkpoints\\dependencies\\inventory.mjs",
+    ".\\spec\\production\\staging\\finance-checkpoints\\dependencies\\audit.ps1 -Scope mobile",
+    ".\\spec\\production\\staging\\finance-checkpoints\\dependencies\\audit.ps1 -Scope backend"
+  ],
+  "packageVersionChecks": [
+    {
+      "scope": "apps/mobile",
+      "packageVersion": "0.6.0",
+      "lockVersion": "0.6.0",
+      "rootLockEntryVersion": "0.6.0",
+      "consistent": true
+    },
+    {
+      "scope": "services/backend",
+      "packageVersion": "0.1.0",
+      "lockVersion": "0.1.0",
+      "rootLockEntryVersion": "0.1.0",
+      "consistent": true
+    }
+  ],
+  "privateConfigurationInspectedByCollector": false
+}

@@ -1,0 +1,5956 @@
+{
+  "format": 1,
+  "measuredAt": "2026-11-17T00:21:32.876Z",
+  "scope": "LOCAL official Edge user isolates+fictional HTTP RPC model; NOT hosted Auth/SQL qualification",
+  "expectedImage": "public.ecr.aws/supabase/edge-runtime@sha256:362e9177660ae4d3affb6978480cc6161a8ea0764f1c2c7f738348eda1c3fbf2",
+  "imageAttestation": "Owner-reviewed pinned Docker command; this script never executes or inspects Docker.",
+  "limits": {
+    "memoryLimitMb": 256,
+    "cpuTimeSoftLimitMs": 2000,
+    "cpuTimeHardLimitMs": 2000,
+    "workerTimeoutMs": 150000
+  },
+  "policy": "oneshot",
+  "coldUserWorkerPerRequest": true,
+  "node": "v26.13.0",
+  "scenarios": [
+    {
+      "children": 1,
+      "role": "parent",
+      "weeks": 52,
+      "repeats": 10,
+      "originalTailPerChild": {
+        "visible": 126,
+        "hidden": 31
+      },
+      "invocationIds": [
+        "d07c9f9d7f6e49a79b2db8bf123070cf-1",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-2",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-3",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-4",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-5",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-6",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-7",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-8",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-9",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-10",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-11",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-12",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-13",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-14",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-15",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-16",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-17",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-18",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-19",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-20"
+      ],
+      "functionalPass": true,
+      "rpc": {
+        "calls": {
+          "finance_scope": 20,
+          "finance_load": 20,
+          "finance_archive_budget": 10,
+          "finance_commit": 10
+        },
+        "wireRequestBytes": 3514106,
+        "wireResponseBytes": 4271144,
+        "maximumEnvelopeBytes": 401009,
+        "serializationWallMs": 37.73060000000987,
+        "committed": 10,
+        "replays": 0
+      },
+      "committedExactlyTen": true
+    },
+    {
+      "children": 1,
+      "role": "child",
+      "weeks": 52,
+      "repeats": 10,
+      "originalTailPerChild": {
+        "visible": 126,
+        "hidden": 31
+      },
+      "invocationIds": [
+        "d07c9f9d7f6e49a79b2db8bf123070cf-21",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-22",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-23",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-24",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-25",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-26",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-27",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-28",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-29",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-30",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-31",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-32",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-33",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-34",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-35",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-36",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-37",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-38",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-39",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-40"
+      ],
+      "functionalPass": true,
+      "rpc": {
+        "calls": {
+          "finance_scope": 20,
+          "finance_load": 20,
+          "finance_commit": 10
+        },
+        "wireRequestBytes": 3479812,
+        "wireResponseBytes": 4264803,
+        "maximumEnvelopeBytes": 400751,
+        "serializationWallMs": 35.69810000000325,
+        "committed": 10,
+        "replays": 0
+      },
+      "committedExactlyTen": true
+    },
+    {
+      "children": 2,
+      "role": "parent",
+      "weeks": 52,
+      "repeats": 10,
+      "originalTailPerChild": {
+        "visible": 126,
+        "hidden": 31
+      },
+      "invocationIds": [
+        "d07c9f9d7f6e49a79b2db8bf123070cf-41",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-42",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-43",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-44",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-45",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-46",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-47",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-48",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-49",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-50",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-51",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-52",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-53",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-54",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-55",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-56",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-57",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-58",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-59",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-60"
+      ],
+      "functionalPass": true,
+      "rpc": {
+        "calls": {
+          "finance_scope": 20,
+          "finance_load": 20,
+          "finance_archive_budget": 10,
+          "finance_commit": 10
+        },
+        "wireRequestBytes": 5690948,
+        "wireResponseBytes": 8497154,
+        "maximumEnvelopeBytes": 674173,
+        "serializationWallMs": 60.60350000000835,
+        "committed": 10,
+        "replays": 0
+      },
+      "committedExactlyTen": true
+    },
+    {
+      "children": 2,
+      "role": "child",
+      "weeks": 52,
+      "repeats": 10,
+      "originalTailPerChild": {
+        "visible": 126,
+        "hidden": 31
+      },
+      "invocationIds": [
+        "d07c9f9d7f6e49a79b2db8bf123070cf-61",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-62",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-63",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-64",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-65",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-66",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-67",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-68",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-69",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-70",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-71",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-72",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-73",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-74",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-75",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-76",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-77",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-78",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-79",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-80"
+      ],
+      "functionalPass": true,
+      "rpc": {
+        "calls": {
+          "finance_scope": 20,
+          "finance_load": 20,
+          "finance_commit": 10
+        },
+        "wireRequestBytes": 5656654,
+        "wireResponseBytes": 8490813,
+        "maximumEnvelopeBytes": 673915,
+        "serializationWallMs": 57.418200000025536,
+        "committed": 10,
+        "replays": 0
+      },
+      "committedExactlyTen": true
+    },
+    {
+      "children": 12,
+      "role": "parent",
+      "weeks": 52,
+      "repeats": 10,
+      "originalTailPerChild": {
+        "visible": 126,
+        "hidden": 31
+      },
+      "invocationIds": [
+        "d07c9f9d7f6e49a79b2db8bf123070cf-81",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-82",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-83",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-84",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-85",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-86",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-87",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-88",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-89",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-90",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-91",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-92",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-93",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-94",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-95",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-96",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-97",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-98",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-99",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-100"
+      ],
+      "functionalPass": true,
+      "rpc": {
+        "calls": {
+          "finance_scope": 20,
+          "finance_load": 20,
+          "finance_archive_budget": 10,
+          "finance_commit": 10
+        },
+        "wireRequestBytes": 27459398,
+        "wireResponseBytes": 50757334,
+        "maximumEnvelopeBytes": 3405816,
+        "serializationWallMs": 378.9466000000466,
+        "committed": 10,
+        "replays": 0
+      },
+      "committedExactlyTen": true
+    },
+    {
+      "children": 12,
+      "role": "child",
+      "weeks": 52,
+      "repeats": 10,
+      "originalTailPerChild": {
+        "visible": 126,
+        "hidden": 31
+      },
+      "invocationIds": [
+        "d07c9f9d7f6e49a79b2db8bf123070cf-101",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-102",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-103",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-104",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-105",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-106",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-107",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-108",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-109",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-110",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-111",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-112",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-113",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-114",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-115",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-116",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-117",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-118",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-119",
+        "d07c9f9d7f6e49a79b2db8bf123070cf-120"
+      ],
+      "functionalPass": true,
+      "rpc": {
+        "calls": {
+          "finance_scope": 20,
+          "finance_load": 20,
+          "finance_commit": 10
+        },
+        "wireRequestBytes": 27425104,
+        "wireResponseBytes": 50750993,
+        "maximumEnvelopeBytes": 3405558,
+        "serializationWallMs": 360.5560000000478,
+        "committed": 10,
+        "replays": 0
+      },
+      "committedExactlyTen": true
+    }
+  ],
+  "invocations": [
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-1",
+      "children": 1,
+      "role": "parent",
+      "iteration": 1,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "87369134-08b7-4a70-b386-26edc4ddee5d",
+      "projectionHash": "bc48f720f66f32acbe66d1fa9a4f3ffc5e52656705fd8a433404adefd60228d5",
+      "expectedProjectionHash": "bc48f720f66f32acbe66d1fa9a4f3ffc5e52656705fd8a433404adefd60228d5",
+      "wallMs": 482.85909999999967
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-2",
+      "children": 1,
+      "role": "parent",
+      "iteration": 1,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "1cadb08c-444c-4fc5-bb04-78b50c5f45d9",
+      "projectionHash": "bc48f720f66f32acbe66d1fa9a4f3ffc5e52656705fd8a433404adefd60228d5",
+      "expectedProjectionHash": "bc48f720f66f32acbe66d1fa9a4f3ffc5e52656705fd8a433404adefd60228d5",
+      "wallMs": 276.53379999999925
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-3",
+      "children": 1,
+      "role": "parent",
+      "iteration": 2,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "25f56bf7-44ee-4978-b5e9-302c3f23444f",
+      "projectionHash": "69ff91a6eb6f840ba5e1848d72f90c3f866dd9679e962dc1e5b899c251536cf2",
+      "expectedProjectionHash": "69ff91a6eb6f840ba5e1848d72f90c3f866dd9679e962dc1e5b899c251536cf2",
+      "wallMs": 379.4918000000007
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-4",
+      "children": 1,
+      "role": "parent",
+      "iteration": 2,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "6c6a680e-7f93-4c0a-84b8-03a6fbb3ff20",
+      "projectionHash": "69ff91a6eb6f840ba5e1848d72f90c3f866dd9679e962dc1e5b899c251536cf2",
+      "expectedProjectionHash": "69ff91a6eb6f840ba5e1848d72f90c3f866dd9679e962dc1e5b899c251536cf2",
+      "wallMs": 253.79189999999926
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-5",
+      "children": 1,
+      "role": "parent",
+      "iteration": 3,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "2f98929b-0584-43c6-8d0b-c1e293f0bc52",
+      "projectionHash": "837465357c98b9ea4671210517f7f51f2ae1f1e12b796dae7dd6c458441751a8",
+      "expectedProjectionHash": "837465357c98b9ea4671210517f7f51f2ae1f1e12b796dae7dd6c458441751a8",
+      "wallMs": 312.4515000000001
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-6",
+      "children": 1,
+      "role": "parent",
+      "iteration": 3,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "9c99a135-a143-4287-b61a-ce34f7caaa58",
+      "projectionHash": "837465357c98b9ea4671210517f7f51f2ae1f1e12b796dae7dd6c458441751a8",
+      "expectedProjectionHash": "837465357c98b9ea4671210517f7f51f2ae1f1e12b796dae7dd6c458441751a8",
+      "wallMs": 150.5565999999999
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-7",
+      "children": 1,
+      "role": "parent",
+      "iteration": 4,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "68f44b4d-c0b3-4fd1-b784-c688709948b3",
+      "projectionHash": "fff1e257bc2e91adeb7bc1303135b10d782930eae15462c1f8ed0c8f68cc81e6",
+      "expectedProjectionHash": "fff1e257bc2e91adeb7bc1303135b10d782930eae15462c1f8ed0c8f68cc81e6",
+      "wallMs": 229.35699999999997
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-8",
+      "children": 1,
+      "role": "parent",
+      "iteration": 4,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "ab01ebb3-85cd-4e6f-b900-3722137e66c0",
+      "projectionHash": "fff1e257bc2e91adeb7bc1303135b10d782930eae15462c1f8ed0c8f68cc81e6",
+      "expectedProjectionHash": "fff1e257bc2e91adeb7bc1303135b10d782930eae15462c1f8ed0c8f68cc81e6",
+      "wallMs": 216.73499999999967
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-9",
+      "children": 1,
+      "role": "parent",
+      "iteration": 5,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "9b5afa86-aa19-44b1-a0fd-41855f9237b6",
+      "projectionHash": "9dc0cd13db096d380352e5f7c69be8705888bcc3d61bb3d2db4661c353954e32",
+      "expectedProjectionHash": "9dc0cd13db096d380352e5f7c69be8705888bcc3d61bb3d2db4661c353954e32",
+      "wallMs": 233.2527000000009
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-10",
+      "children": 1,
+      "role": "parent",
+      "iteration": 5,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "d27e4444-6cc1-4a32-a9b6-b3e6e607bd5d",
+      "projectionHash": "9dc0cd13db096d380352e5f7c69be8705888bcc3d61bb3d2db4661c353954e32",
+      "expectedProjectionHash": "9dc0cd13db096d380352e5f7c69be8705888bcc3d61bb3d2db4661c353954e32",
+      "wallMs": 153.18039999999928
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-11",
+      "children": 1,
+      "role": "parent",
+      "iteration": 6,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "99042385-16ae-44a5-96d1-25bdf71d4c93",
+      "projectionHash": "863f8b1ccd357d2cf2359336ad10858232cf967057ba57bf92d62b45607f735a",
+      "expectedProjectionHash": "863f8b1ccd357d2cf2359336ad10858232cf967057ba57bf92d62b45607f735a",
+      "wallMs": 223.9979000000003
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-12",
+      "children": 1,
+      "role": "parent",
+      "iteration": 6,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "6989e21c-1229-4160-9a5b-1685cee8024b",
+      "projectionHash": "863f8b1ccd357d2cf2359336ad10858232cf967057ba57bf92d62b45607f735a",
+      "expectedProjectionHash": "863f8b1ccd357d2cf2359336ad10858232cf967057ba57bf92d62b45607f735a",
+      "wallMs": 154.07430000000022
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-13",
+      "children": 1,
+      "role": "parent",
+      "iteration": 7,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "d309f4eb-1871-4d56-bb52-22780e0e7d59",
+      "projectionHash": "94db605dd27719fd53a6797f4dff9c8d547b689dc8714bb1e122ce8794fdf35c",
+      "expectedProjectionHash": "94db605dd27719fd53a6797f4dff9c8d547b689dc8714bb1e122ce8794fdf35c",
+      "wallMs": 219.65890000000036
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-14",
+      "children": 1,
+      "role": "parent",
+      "iteration": 7,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "7cdf3de7-82ab-4258-b35f-068b82d5d1c8",
+      "projectionHash": "94db605dd27719fd53a6797f4dff9c8d547b689dc8714bb1e122ce8794fdf35c",
+      "expectedProjectionHash": "94db605dd27719fd53a6797f4dff9c8d547b689dc8714bb1e122ce8794fdf35c",
+      "wallMs": 152.78850000000057
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-15",
+      "children": 1,
+      "role": "parent",
+      "iteration": 8,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "7640671d-61e8-4551-bdec-ed3e61f65723",
+      "projectionHash": "c23c601cc01c6a5271e32855cbb125d12a1425d240ca5c1095d774cb17d91337",
+      "expectedProjectionHash": "c23c601cc01c6a5271e32855cbb125d12a1425d240ca5c1095d774cb17d91337",
+      "wallMs": 233.52499999999964
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-16",
+      "children": 1,
+      "role": "parent",
+      "iteration": 8,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "c8571306-dbe7-4a18-b4fe-bc7d82d03642",
+      "projectionHash": "c23c601cc01c6a5271e32855cbb125d12a1425d240ca5c1095d774cb17d91337",
+      "expectedProjectionHash": "c23c601cc01c6a5271e32855cbb125d12a1425d240ca5c1095d774cb17d91337",
+      "wallMs": 171.20690000000104
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-17",
+      "children": 1,
+      "role": "parent",
+      "iteration": 9,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "70dffde5-d4b4-40a9-8235-7596a0e24bf1",
+      "projectionHash": "e7068c0e83dbdc82ad6080b6506cc1defe1f39fc070b67fc6f6307b26b1e8143",
+      "expectedProjectionHash": "e7068c0e83dbdc82ad6080b6506cc1defe1f39fc070b67fc6f6307b26b1e8143",
+      "wallMs": 253.23409999999967
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-18",
+      "children": 1,
+      "role": "parent",
+      "iteration": 9,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "d24eef27-37a0-45e5-a344-63a6ae8a20fa",
+      "projectionHash": "e7068c0e83dbdc82ad6080b6506cc1defe1f39fc070b67fc6f6307b26b1e8143",
+      "expectedProjectionHash": "e7068c0e83dbdc82ad6080b6506cc1defe1f39fc070b67fc6f6307b26b1e8143",
+      "wallMs": 151.20579999999973
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-19",
+      "children": 1,
+      "role": "parent",
+      "iteration": 10,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "efe6941a-4d30-45d8-ad57-35a267a90b27",
+      "projectionHash": "539eb147d35b9dc8bb684f173a22d8e350fbc9a5f80fb3392e29fb17d9c75da5",
+      "expectedProjectionHash": "539eb147d35b9dc8bb684f173a22d8e350fbc9a5f80fb3392e29fb17d9c75da5",
+      "wallMs": 317.51530000000093
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-20",
+      "children": 1,
+      "role": "parent",
+      "iteration": 10,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "b13eda53-4fa6-4cb2-b176-731b2d70a72d",
+      "projectionHash": "539eb147d35b9dc8bb684f173a22d8e350fbc9a5f80fb3392e29fb17d9c75da5",
+      "expectedProjectionHash": "539eb147d35b9dc8bb684f173a22d8e350fbc9a5f80fb3392e29fb17d9c75da5",
+      "wallMs": 174.6831000000002
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-21",
+      "children": 1,
+      "role": "child",
+      "iteration": 1,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "8b52872a-c0ca-4a93-9ca1-fb957df47018",
+      "projectionHash": "45ad40791d5812d8a4b8cca7c3c8f6647a2cbde998c0b0077fa0846e0e02e066",
+      "expectedProjectionHash": "45ad40791d5812d8a4b8cca7c3c8f6647a2cbde998c0b0077fa0846e0e02e066",
+      "wallMs": 328.6103999999996
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-22",
+      "children": 1,
+      "role": "child",
+      "iteration": 1,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "debbbb20-d819-41a6-965e-a35295e1ab1b",
+      "projectionHash": "45ad40791d5812d8a4b8cca7c3c8f6647a2cbde998c0b0077fa0846e0e02e066",
+      "expectedProjectionHash": "45ad40791d5812d8a4b8cca7c3c8f6647a2cbde998c0b0077fa0846e0e02e066",
+      "wallMs": 272.2426000000014
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-23",
+      "children": 1,
+      "role": "child",
+      "iteration": 2,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "03d5c751-fc91-4348-8808-d7e5503ce434",
+      "projectionHash": "82d4dd7ba22693f775bd5e678d9bb06638b937ca5737853e65ac1b2b31f0088d",
+      "expectedProjectionHash": "82d4dd7ba22693f775bd5e678d9bb06638b937ca5737853e65ac1b2b31f0088d",
+      "wallMs": 305.9511000000002
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-24",
+      "children": 1,
+      "role": "child",
+      "iteration": 2,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "4aecb0fe-f6fa-4c99-be5d-66ff6ed0c9fc",
+      "projectionHash": "82d4dd7ba22693f775bd5e678d9bb06638b937ca5737853e65ac1b2b31f0088d",
+      "expectedProjectionHash": "82d4dd7ba22693f775bd5e678d9bb06638b937ca5737853e65ac1b2b31f0088d",
+      "wallMs": 251.01759999999922
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-25",
+      "children": 1,
+      "role": "child",
+      "iteration": 3,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "719a3cb5-6345-4d24-9cd7-9505ca3adda8",
+      "projectionHash": "03edc5f0d3b193be18a9984d1c787330b7310831c83be495c6c1e8381e6d27fe",
+      "expectedProjectionHash": "03edc5f0d3b193be18a9984d1c787330b7310831c83be495c6c1e8381e6d27fe",
+      "wallMs": 293.27700000000004
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-26",
+      "children": 1,
+      "role": "child",
+      "iteration": 3,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "915fb59f-322e-48bc-a3ae-e77698e97d33",
+      "projectionHash": "03edc5f0d3b193be18a9984d1c787330b7310831c83be495c6c1e8381e6d27fe",
+      "expectedProjectionHash": "03edc5f0d3b193be18a9984d1c787330b7310831c83be495c6c1e8381e6d27fe",
+      "wallMs": 149.91469999999936
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-27",
+      "children": 1,
+      "role": "child",
+      "iteration": 4,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "4f9c689f-5aba-4c04-acfb-aa908514190d",
+      "projectionHash": "a33dd30bbfaa4e0cf6e90a96d01bab4610d197da947d747cbd8c7227d1ebc7ba",
+      "expectedProjectionHash": "a33dd30bbfaa4e0cf6e90a96d01bab4610d197da947d747cbd8c7227d1ebc7ba",
+      "wallMs": 206.52659999999923
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-28",
+      "children": 1,
+      "role": "child",
+      "iteration": 4,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "c9fe94af-b82b-47cc-acba-047584debced",
+      "projectionHash": "a33dd30bbfaa4e0cf6e90a96d01bab4610d197da947d747cbd8c7227d1ebc7ba",
+      "expectedProjectionHash": "a33dd30bbfaa4e0cf6e90a96d01bab4610d197da947d747cbd8c7227d1ebc7ba",
+      "wallMs": 154.45550000000003
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-29",
+      "children": 1,
+      "role": "child",
+      "iteration": 5,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "52e8d44f-f2db-419d-9db6-735968d4b55f",
+      "projectionHash": "320f9e9572100ccee2e987c6421a8ebe177d34c9ddbbfe8374e447b1d7c23a90",
+      "expectedProjectionHash": "320f9e9572100ccee2e987c6421a8ebe177d34c9ddbbfe8374e447b1d7c23a90",
+      "wallMs": 214.10419999999976
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-30",
+      "children": 1,
+      "role": "child",
+      "iteration": 5,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "778246ba-afe4-4b37-89aa-de84948e0e9c",
+      "projectionHash": "320f9e9572100ccee2e987c6421a8ebe177d34c9ddbbfe8374e447b1d7c23a90",
+      "expectedProjectionHash": "320f9e9572100ccee2e987c6421a8ebe177d34c9ddbbfe8374e447b1d7c23a90",
+      "wallMs": 141.32699999999932
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-31",
+      "children": 1,
+      "role": "child",
+      "iteration": 6,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "3330e42d-ef33-42e3-9a84-99330696515e",
+      "projectionHash": "0191d0d06bd39c4f7c3ec0aca69ef66728a71adea5a1dacf7db518f1b76ae330",
+      "expectedProjectionHash": "0191d0d06bd39c4f7c3ec0aca69ef66728a71adea5a1dacf7db518f1b76ae330",
+      "wallMs": 196.86839999999938
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-32",
+      "children": 1,
+      "role": "child",
+      "iteration": 6,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "6d8746f0-5c58-46d7-b4fa-7bc0c07f3c64",
+      "projectionHash": "0191d0d06bd39c4f7c3ec0aca69ef66728a71adea5a1dacf7db518f1b76ae330",
+      "expectedProjectionHash": "0191d0d06bd39c4f7c3ec0aca69ef66728a71adea5a1dacf7db518f1b76ae330",
+      "wallMs": 142.03089999999975
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-33",
+      "children": 1,
+      "role": "child",
+      "iteration": 7,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "8ee79b4c-6168-4c23-b265-9a6b1bc703e3",
+      "projectionHash": "20a983d4938106b2117d98bbd5aed3ca87886e62353a8872ceb5aadc08f14dc1",
+      "expectedProjectionHash": "20a983d4938106b2117d98bbd5aed3ca87886e62353a8872ceb5aadc08f14dc1",
+      "wallMs": 220.46869999999944
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-34",
+      "children": 1,
+      "role": "child",
+      "iteration": 7,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "47deb18c-fec7-40c9-9f0c-f51b4713489f",
+      "projectionHash": "20a983d4938106b2117d98bbd5aed3ca87886e62353a8872ceb5aadc08f14dc1",
+      "expectedProjectionHash": "20a983d4938106b2117d98bbd5aed3ca87886e62353a8872ceb5aadc08f14dc1",
+      "wallMs": 159.2990000000009
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-35",
+      "children": 1,
+      "role": "child",
+      "iteration": 8,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "d54e4142-32d3-4af3-9bb6-e422aac3442b",
+      "projectionHash": "3f9f17171f12101b1383a928ae8db1261ca13f03e0184b194dd162d246f7ba52",
+      "expectedProjectionHash": "3f9f17171f12101b1383a928ae8db1261ca13f03e0184b194dd162d246f7ba52",
+      "wallMs": 208.04709999999977
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-36",
+      "children": 1,
+      "role": "child",
+      "iteration": 8,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "69ca1e52-3ef9-42b7-9d4c-990a6e756476",
+      "projectionHash": "3f9f17171f12101b1383a928ae8db1261ca13f03e0184b194dd162d246f7ba52",
+      "expectedProjectionHash": "3f9f17171f12101b1383a928ae8db1261ca13f03e0184b194dd162d246f7ba52",
+      "wallMs": 140.85670000000027
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-37",
+      "children": 1,
+      "role": "child",
+      "iteration": 9,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "989a77bf-f375-4ecc-bd24-e909ae456803",
+      "projectionHash": "94d274026705be804d269de7d6eb2fb5f02f8e083df353017def378f9fdaa698",
+      "expectedProjectionHash": "94d274026705be804d269de7d6eb2fb5f02f8e083df353017def378f9fdaa698",
+      "wallMs": 202.22830000000067
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-38",
+      "children": 1,
+      "role": "child",
+      "iteration": 9,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "058aaac4-03e4-4fdb-83a0-0992fd104d5a",
+      "projectionHash": "94d274026705be804d269de7d6eb2fb5f02f8e083df353017def378f9fdaa698",
+      "expectedProjectionHash": "94d274026705be804d269de7d6eb2fb5f02f8e083df353017def378f9fdaa698",
+      "wallMs": 146.26490000000013
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-39",
+      "children": 1,
+      "role": "child",
+      "iteration": 10,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "0b760fa9-8554-4ca9-856d-d23bcaafff57",
+      "projectionHash": "e0d9a8054951dfd88721f50f046f427a3fa3016f55ace6e639399ca632a87e6a",
+      "expectedProjectionHash": "e0d9a8054951dfd88721f50f046f427a3fa3016f55ace6e639399ca632a87e6a",
+      "wallMs": 201.6740000000009
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-40",
+      "children": 1,
+      "role": "child",
+      "iteration": 10,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "e59f42f9-2850-4452-9b2a-91551e246b47",
+      "projectionHash": "e0d9a8054951dfd88721f50f046f427a3fa3016f55ace6e639399ca632a87e6a",
+      "expectedProjectionHash": "e0d9a8054951dfd88721f50f046f427a3fa3016f55ace6e639399ca632a87e6a",
+      "wallMs": 153.6224999999995
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-41",
+      "children": 2,
+      "role": "parent",
+      "iteration": 1,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "aec37dea-57d0-418a-9ac5-b69c067fe167",
+      "projectionHash": "4be6b43767fc36294adbe23568db93c3cb5c38e110af053a0ad3086604753c19",
+      "expectedProjectionHash": "4be6b43767fc36294adbe23568db93c3cb5c38e110af053a0ad3086604753c19",
+      "wallMs": 487.33530000000064
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-42",
+      "children": 2,
+      "role": "parent",
+      "iteration": 1,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "873097f7-097e-4b83-860f-ce7e3c8c25e0",
+      "projectionHash": "4be6b43767fc36294adbe23568db93c3cb5c38e110af053a0ad3086604753c19",
+      "expectedProjectionHash": "4be6b43767fc36294adbe23568db93c3cb5c38e110af053a0ad3086604753c19",
+      "wallMs": 431.0187999999998
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-43",
+      "children": 2,
+      "role": "parent",
+      "iteration": 2,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "4873dbb5-392b-4551-838c-ada559b0bff1",
+      "projectionHash": "fbdf27f03285ba1deaba598f0ee010c28c02ce454ad52f1d0a948a3ffd75410a",
+      "expectedProjectionHash": "fbdf27f03285ba1deaba598f0ee010c28c02ce454ad52f1d0a948a3ffd75410a",
+      "wallMs": 507.08120000000054
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-44",
+      "children": 2,
+      "role": "parent",
+      "iteration": 2,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "7aae5743-eef8-41d0-8f40-47a97fd0f579",
+      "projectionHash": "fbdf27f03285ba1deaba598f0ee010c28c02ce454ad52f1d0a948a3ffd75410a",
+      "expectedProjectionHash": "fbdf27f03285ba1deaba598f0ee010c28c02ce454ad52f1d0a948a3ffd75410a",
+      "wallMs": 405.3513000000021
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-45",
+      "children": 2,
+      "role": "parent",
+      "iteration": 3,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "28d83bc4-6ed8-4b38-9c67-cce9b406ad39",
+      "projectionHash": "87fb70780e5636ed7576625e9d95df5092938e2464d9faea829e91e8f7e00c00",
+      "expectedProjectionHash": "87fb70780e5636ed7576625e9d95df5092938e2464d9faea829e91e8f7e00c00",
+      "wallMs": 611.068299999999
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-46",
+      "children": 2,
+      "role": "parent",
+      "iteration": 3,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "1536504a-0ede-44be-8451-1c671ee7526c",
+      "projectionHash": "87fb70780e5636ed7576625e9d95df5092938e2464d9faea829e91e8f7e00c00",
+      "expectedProjectionHash": "87fb70780e5636ed7576625e9d95df5092938e2464d9faea829e91e8f7e00c00",
+      "wallMs": 211.1850000000013
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-47",
+      "children": 2,
+      "role": "parent",
+      "iteration": 4,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "f56e9a4b-4b30-43f0-a70f-9d1ff30029d1",
+      "projectionHash": "c34220acb86c196c250e1358e30c74519421c50c4100a2206a73af5f6e9cc37a",
+      "expectedProjectionHash": "c34220acb86c196c250e1358e30c74519421c50c4100a2206a73af5f6e9cc37a",
+      "wallMs": 286.872800000001
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-48",
+      "children": 2,
+      "role": "parent",
+      "iteration": 4,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "d1cb6d23-5123-4ccb-9936-ce8055894b90",
+      "projectionHash": "c34220acb86c196c250e1358e30c74519421c50c4100a2206a73af5f6e9cc37a",
+      "expectedProjectionHash": "c34220acb86c196c250e1358e30c74519421c50c4100a2206a73af5f6e9cc37a",
+      "wallMs": 191.64170000000013
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-49",
+      "children": 2,
+      "role": "parent",
+      "iteration": 5,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "8edb3209-941b-48ca-802a-3319b41c59c0",
+      "projectionHash": "4d12beb0fb1d113a91705db4f690dbfdd3ed5e5ec3739601c8f1db8cfc9f0b8f",
+      "expectedProjectionHash": "4d12beb0fb1d113a91705db4f690dbfdd3ed5e5ec3739601c8f1db8cfc9f0b8f",
+      "wallMs": 292.59189999999944
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-50",
+      "children": 2,
+      "role": "parent",
+      "iteration": 5,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "79564b84-e332-405f-b7f9-c1e3115fbce0",
+      "projectionHash": "4d12beb0fb1d113a91705db4f690dbfdd3ed5e5ec3739601c8f1db8cfc9f0b8f",
+      "expectedProjectionHash": "4d12beb0fb1d113a91705db4f690dbfdd3ed5e5ec3739601c8f1db8cfc9f0b8f",
+      "wallMs": 225.48470000000088
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-51",
+      "children": 2,
+      "role": "parent",
+      "iteration": 6,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "acc22687-e8fd-49c9-8879-8d2feb5bc7ad",
+      "projectionHash": "171e41edc0594f03f2d0925a8f8ef917ea18723b148a1cdfa46412f3157cfa90",
+      "expectedProjectionHash": "171e41edc0594f03f2d0925a8f8ef917ea18723b148a1cdfa46412f3157cfa90",
+      "wallMs": 266.47769999999946
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-52",
+      "children": 2,
+      "role": "parent",
+      "iteration": 6,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "00bb5709-e153-4140-8b8d-85f8d574cb87",
+      "projectionHash": "171e41edc0594f03f2d0925a8f8ef917ea18723b148a1cdfa46412f3157cfa90",
+      "expectedProjectionHash": "171e41edc0594f03f2d0925a8f8ef917ea18723b148a1cdfa46412f3157cfa90",
+      "wallMs": 205.6815999999999
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-53",
+      "children": 2,
+      "role": "parent",
+      "iteration": 7,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "eae0e4d0-51d0-4ad7-81ba-52769e4691c8",
+      "projectionHash": "d038b8ccb77f65a02463cd12fa2a8f719853358b8772694dcbeafc2559418b85",
+      "expectedProjectionHash": "d038b8ccb77f65a02463cd12fa2a8f719853358b8772694dcbeafc2559418b85",
+      "wallMs": 284.90399999999863
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-54",
+      "children": 2,
+      "role": "parent",
+      "iteration": 7,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "6b138784-fbac-4c69-a192-a99b24007a2e",
+      "projectionHash": "d038b8ccb77f65a02463cd12fa2a8f719853358b8772694dcbeafc2559418b85",
+      "expectedProjectionHash": "d038b8ccb77f65a02463cd12fa2a8f719853358b8772694dcbeafc2559418b85",
+      "wallMs": 208.80459999999948
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-55",
+      "children": 2,
+      "role": "parent",
+      "iteration": 8,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "453e7f26-a84e-48a1-a861-c9362dcf2355",
+      "projectionHash": "1faf31518efca99955a29ac155c3161e9f7b2a59decdcfd74015c1551231aff9",
+      "expectedProjectionHash": "1faf31518efca99955a29ac155c3161e9f7b2a59decdcfd74015c1551231aff9",
+      "wallMs": 270.5190999999977
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-56",
+      "children": 2,
+      "role": "parent",
+      "iteration": 8,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "21ece188-1805-41f7-9a0a-184047c9281e",
+      "projectionHash": "1faf31518efca99955a29ac155c3161e9f7b2a59decdcfd74015c1551231aff9",
+      "expectedProjectionHash": "1faf31518efca99955a29ac155c3161e9f7b2a59decdcfd74015c1551231aff9",
+      "wallMs": 222.92889999999898
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-57",
+      "children": 2,
+      "role": "parent",
+      "iteration": 9,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "d6cfc7f3-2c69-469f-b622-1ffe34ce8a25",
+      "projectionHash": "9859d9e4d17e3c5cd0276659a4249f4ad40c00916e3f305621e8178f23a4dfe8",
+      "expectedProjectionHash": "9859d9e4d17e3c5cd0276659a4249f4ad40c00916e3f305621e8178f23a4dfe8",
+      "wallMs": 263.20340000000215
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-58",
+      "children": 2,
+      "role": "parent",
+      "iteration": 9,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "8c52522b-86ef-462e-84bb-a232e9e4369d",
+      "projectionHash": "9859d9e4d17e3c5cd0276659a4249f4ad40c00916e3f305621e8178f23a4dfe8",
+      "expectedProjectionHash": "9859d9e4d17e3c5cd0276659a4249f4ad40c00916e3f305621e8178f23a4dfe8",
+      "wallMs": 210.84649999999965
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-59",
+      "children": 2,
+      "role": "parent",
+      "iteration": 10,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "385e8fc3-2541-4749-adef-e77ef37777ab",
+      "projectionHash": "e8a6b11bb085c8adb4a7b5789dd3e7e28ccb856ddfaef12a6bcdab7ce4053212",
+      "expectedProjectionHash": "e8a6b11bb085c8adb4a7b5789dd3e7e28ccb856ddfaef12a6bcdab7ce4053212",
+      "wallMs": 275.0172999999995
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-60",
+      "children": 2,
+      "role": "parent",
+      "iteration": 10,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "3aadf053-8e15-4b4a-989d-045f1f3da071",
+      "projectionHash": "e8a6b11bb085c8adb4a7b5789dd3e7e28ccb856ddfaef12a6bcdab7ce4053212",
+      "expectedProjectionHash": "e8a6b11bb085c8adb4a7b5789dd3e7e28ccb856ddfaef12a6bcdab7ce4053212",
+      "wallMs": 192.8863999999994
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-61",
+      "children": 2,
+      "role": "child",
+      "iteration": 1,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "534e2feb-b656-43a4-bb2d-f8e77d12424e",
+      "projectionHash": "d5c6f7c8d520ea2c970b2f8dec72fed124f98c708fb2c4f8d3727a0a26d266da",
+      "expectedProjectionHash": "d5c6f7c8d520ea2c970b2f8dec72fed124f98c708fb2c4f8d3727a0a26d266da",
+      "wallMs": 477.2330000000002
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-62",
+      "children": 2,
+      "role": "child",
+      "iteration": 1,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "d691d6f8-6b90-44fe-ab88-e90ef9d97ae2",
+      "projectionHash": "d5c6f7c8d520ea2c970b2f8dec72fed124f98c708fb2c4f8d3727a0a26d266da",
+      "expectedProjectionHash": "d5c6f7c8d520ea2c970b2f8dec72fed124f98c708fb2c4f8d3727a0a26d266da",
+      "wallMs": 378.29859999999826
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-63",
+      "children": 2,
+      "role": "child",
+      "iteration": 2,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "1da786eb-21a3-4df2-a13d-8c245a847232",
+      "projectionHash": "5457480730a95a21ad5232a17b4fecc67cde65fe0a9d9d8b6887e74c8f6f3b73",
+      "expectedProjectionHash": "5457480730a95a21ad5232a17b4fecc67cde65fe0a9d9d8b6887e74c8f6f3b73",
+      "wallMs": 483.43109999999797
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-64",
+      "children": 2,
+      "role": "child",
+      "iteration": 2,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "f08b33f2-f9aa-4415-813f-d2f14ea38054",
+      "projectionHash": "5457480730a95a21ad5232a17b4fecc67cde65fe0a9d9d8b6887e74c8f6f3b73",
+      "expectedProjectionHash": "5457480730a95a21ad5232a17b4fecc67cde65fe0a9d9d8b6887e74c8f6f3b73",
+      "wallMs": 397.1840999999986
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-65",
+      "children": 2,
+      "role": "child",
+      "iteration": 3,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "20ecc307-bdfc-4a51-88eb-e83a8d7632f9",
+      "projectionHash": "7c787d5ae293b61ea5f6273787c4b2e8cc9dde2a8b59e3ee92774aaae7c83e47",
+      "expectedProjectionHash": "7c787d5ae293b61ea5f6273787c4b2e8cc9dde2a8b59e3ee92774aaae7c83e47",
+      "wallMs": 402.1939999999995
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-66",
+      "children": 2,
+      "role": "child",
+      "iteration": 3,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "b597edcc-5d61-49a6-ad51-389265db9a1e",
+      "projectionHash": "7c787d5ae293b61ea5f6273787c4b2e8cc9dde2a8b59e3ee92774aaae7c83e47",
+      "expectedProjectionHash": "7c787d5ae293b61ea5f6273787c4b2e8cc9dde2a8b59e3ee92774aaae7c83e47",
+      "wallMs": 193.83440000000337
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-67",
+      "children": 2,
+      "role": "child",
+      "iteration": 4,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "138ba9b5-1c96-47e4-ac96-649885c60030",
+      "projectionHash": "0f17a633dfc19c05c68a5b50b03f964f977424143c27dd57f1769457b7ef640a",
+      "expectedProjectionHash": "0f17a633dfc19c05c68a5b50b03f964f977424143c27dd57f1769457b7ef640a",
+      "wallMs": 262.69630000000325
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-68",
+      "children": 2,
+      "role": "child",
+      "iteration": 4,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "949e0770-0f23-437f-b2bf-af72e50f42b9",
+      "projectionHash": "0f17a633dfc19c05c68a5b50b03f964f977424143c27dd57f1769457b7ef640a",
+      "expectedProjectionHash": "0f17a633dfc19c05c68a5b50b03f964f977424143c27dd57f1769457b7ef640a",
+      "wallMs": 299.2436000000016
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-69",
+      "children": 2,
+      "role": "child",
+      "iteration": 5,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "a117b414-6904-4d42-b84e-7210daf8fba0",
+      "projectionHash": "52cb24558e9f4ab1004b26250d9ca54acd40a3a5ee607a4a80a801201a4f45ce",
+      "expectedProjectionHash": "52cb24558e9f4ab1004b26250d9ca54acd40a3a5ee607a4a80a801201a4f45ce",
+      "wallMs": 283.33850000000166
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-70",
+      "children": 2,
+      "role": "child",
+      "iteration": 5,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "052c49d1-5543-44d8-9697-a92241912d28",
+      "projectionHash": "52cb24558e9f4ab1004b26250d9ca54acd40a3a5ee607a4a80a801201a4f45ce",
+      "expectedProjectionHash": "52cb24558e9f4ab1004b26250d9ca54acd40a3a5ee607a4a80a801201a4f45ce",
+      "wallMs": 211.6118000000024
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-71",
+      "children": 2,
+      "role": "child",
+      "iteration": 6,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "45043d68-91b8-4df5-89f4-9cc96e4aeb97",
+      "projectionHash": "9785308f393e8638a73850465bcd9ebc150fcb7abe1f3f9e5e7a6da25f7dab36",
+      "expectedProjectionHash": "9785308f393e8638a73850465bcd9ebc150fcb7abe1f3f9e5e7a6da25f7dab36",
+      "wallMs": 274.2756999999983
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-72",
+      "children": 2,
+      "role": "child",
+      "iteration": 6,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "2798787e-759f-48e1-8f8a-ca0a5b3094c3",
+      "projectionHash": "9785308f393e8638a73850465bcd9ebc150fcb7abe1f3f9e5e7a6da25f7dab36",
+      "expectedProjectionHash": "9785308f393e8638a73850465bcd9ebc150fcb7abe1f3f9e5e7a6da25f7dab36",
+      "wallMs": 206.22110000000248
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-73",
+      "children": 2,
+      "role": "child",
+      "iteration": 7,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "dc177e0f-c2a5-4008-a6dd-575edca8e74e",
+      "projectionHash": "acda8ae008f5ad27ab92f3d0cec0ab04ff520fdefd7953b5655dd86f693f10bc",
+      "expectedProjectionHash": "acda8ae008f5ad27ab92f3d0cec0ab04ff520fdefd7953b5655dd86f693f10bc",
+      "wallMs": 253.6117000000013
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-74",
+      "children": 2,
+      "role": "child",
+      "iteration": 7,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "cb411f84-2f81-499c-bbb4-ef6c6bcf5672",
+      "projectionHash": "acda8ae008f5ad27ab92f3d0cec0ab04ff520fdefd7953b5655dd86f693f10bc",
+      "expectedProjectionHash": "acda8ae008f5ad27ab92f3d0cec0ab04ff520fdefd7953b5655dd86f693f10bc",
+      "wallMs": 215.86449999999968
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-75",
+      "children": 2,
+      "role": "child",
+      "iteration": 8,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "2ed0ee9d-e4f6-4d06-963c-1a83d837d59d",
+      "projectionHash": "978ca450135fb90cf054a158373b64672deaf5b2c6a847008d2a32791e3e425b",
+      "expectedProjectionHash": "978ca450135fb90cf054a158373b64672deaf5b2c6a847008d2a32791e3e425b",
+      "wallMs": 254.64069999999992
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-76",
+      "children": 2,
+      "role": "child",
+      "iteration": 8,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "92b85034-42ce-4997-99c6-fd9c022e4529",
+      "projectionHash": "978ca450135fb90cf054a158373b64672deaf5b2c6a847008d2a32791e3e425b",
+      "expectedProjectionHash": "978ca450135fb90cf054a158373b64672deaf5b2c6a847008d2a32791e3e425b",
+      "wallMs": 195.92380000000048
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-77",
+      "children": 2,
+      "role": "child",
+      "iteration": 9,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "3cefa54f-4163-4bd8-88da-77adbdf30d8b",
+      "projectionHash": "47f43ff44c7890b0b3b89a25c3cf479f9f9b1cd54cd09f04367d8282840a9345",
+      "expectedProjectionHash": "47f43ff44c7890b0b3b89a25c3cf479f9f9b1cd54cd09f04367d8282840a9345",
+      "wallMs": 284.1255999999994
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-78",
+      "children": 2,
+      "role": "child",
+      "iteration": 9,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "68894d69-9089-4250-9b42-2a65358cc8bb",
+      "projectionHash": "47f43ff44c7890b0b3b89a25c3cf479f9f9b1cd54cd09f04367d8282840a9345",
+      "expectedProjectionHash": "47f43ff44c7890b0b3b89a25c3cf479f9f9b1cd54cd09f04367d8282840a9345",
+      "wallMs": 246.0498000000007
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-79",
+      "children": 2,
+      "role": "child",
+      "iteration": 10,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "86a22076-d8ee-4584-af44-bfd9e83d4c12",
+      "projectionHash": "a403edf0e3414a61c4a8c8e664804475f73a175bd0bacc7637dabd749771cd2a",
+      "expectedProjectionHash": "a403edf0e3414a61c4a8c8e664804475f73a175bd0bacc7637dabd749771cd2a",
+      "wallMs": 287.8283999999985
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-80",
+      "children": 2,
+      "role": "child",
+      "iteration": 10,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "c75e2c1b-ba50-44b1-b2e6-2f6dc62c9b17",
+      "projectionHash": "a403edf0e3414a61c4a8c8e664804475f73a175bd0bacc7637dabd749771cd2a",
+      "expectedProjectionHash": "a403edf0e3414a61c4a8c8e664804475f73a175bd0bacc7637dabd749771cd2a",
+      "wallMs": 231.8754000000008
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-81",
+      "children": 12,
+      "role": "parent",
+      "iteration": 1,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "9899d5ef-c05a-4193-9e35-02ab2fbb8cb2",
+      "projectionHash": "022355c53ad3e6a29a04b10c9fff7bcec9c52ced65caf789e283db189527662b",
+      "expectedProjectionHash": "022355c53ad3e6a29a04b10c9fff7bcec9c52ced65caf789e283db189527662b",
+      "wallMs": 2213.8212999999996
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-82",
+      "children": 12,
+      "role": "parent",
+      "iteration": 1,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "ccfb5b59-5867-4313-aca1-46064f4bf88d",
+      "projectionHash": "022355c53ad3e6a29a04b10c9fff7bcec9c52ced65caf789e283db189527662b",
+      "expectedProjectionHash": "022355c53ad3e6a29a04b10c9fff7bcec9c52ced65caf789e283db189527662b",
+      "wallMs": 2024.386599999998
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-83",
+      "children": 12,
+      "role": "parent",
+      "iteration": 2,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "e6496f2f-e7a3-4cc4-ab83-b0391907e78d",
+      "projectionHash": "834f440cdf6d3b8943c072780bc91defa01d77a78486ef9adb938efe38eabd19",
+      "expectedProjectionHash": "834f440cdf6d3b8943c072780bc91defa01d77a78486ef9adb938efe38eabd19",
+      "wallMs": 2273.0777000000016
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-84",
+      "children": 12,
+      "role": "parent",
+      "iteration": 2,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "8c18813b-3516-4ab4-9017-5ba37d622e72",
+      "projectionHash": "834f440cdf6d3b8943c072780bc91defa01d77a78486ef9adb938efe38eabd19",
+      "expectedProjectionHash": "834f440cdf6d3b8943c072780bc91defa01d77a78486ef9adb938efe38eabd19",
+      "wallMs": 1917.564400000003
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-85",
+      "children": 12,
+      "role": "parent",
+      "iteration": 3,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "6539ac7c-b2fa-4250-8420-47e50072904e",
+      "projectionHash": "7d274e747f04bcc0f8918f12ce1bfe48b82cea893a15e6447526b413375bca52",
+      "expectedProjectionHash": "7d274e747f04bcc0f8918f12ce1bfe48b82cea893a15e6447526b413375bca52",
+      "wallMs": 1963.9058000000005
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-86",
+      "children": 12,
+      "role": "parent",
+      "iteration": 3,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "2f1592da-200d-4505-869b-5346a27bfde4",
+      "projectionHash": "7d274e747f04bcc0f8918f12ce1bfe48b82cea893a15e6447526b413375bca52",
+      "expectedProjectionHash": "7d274e747f04bcc0f8918f12ce1bfe48b82cea893a15e6447526b413375bca52",
+      "wallMs": 673.3671000000031
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-87",
+      "children": 12,
+      "role": "parent",
+      "iteration": 4,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "fddf7b80-880f-4a5f-941c-ace5784471d5",
+      "projectionHash": "35900993f8703173a211da25829121b32f7bd75466dd342a8a723b25f65e6169",
+      "expectedProjectionHash": "35900993f8703173a211da25829121b32f7bd75466dd342a8a723b25f65e6169",
+      "wallMs": 909.5432000000001
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-88",
+      "children": 12,
+      "role": "parent",
+      "iteration": 4,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "b033290f-6028-4dfc-b3d2-67b24d0d9ea7",
+      "projectionHash": "35900993f8703173a211da25829121b32f7bd75466dd342a8a723b25f65e6169",
+      "expectedProjectionHash": "35900993f8703173a211da25829121b32f7bd75466dd342a8a723b25f65e6169",
+      "wallMs": 642.0184000000008
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-89",
+      "children": 12,
+      "role": "parent",
+      "iteration": 5,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "fa6d82b3-33c6-4045-8a66-2beaecec042a",
+      "projectionHash": "a2b8876120660464ee0a1da15dae808be99e7782f296d3ca2e4b612a2365a5f0",
+      "expectedProjectionHash": "a2b8876120660464ee0a1da15dae808be99e7782f296d3ca2e4b612a2365a5f0",
+      "wallMs": 895.0786000000007
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-90",
+      "children": 12,
+      "role": "parent",
+      "iteration": 5,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "dc4cc8e2-7147-48c4-8e23-c26b4d31d16e",
+      "projectionHash": "a2b8876120660464ee0a1da15dae808be99e7782f296d3ca2e4b612a2365a5f0",
+      "expectedProjectionHash": "a2b8876120660464ee0a1da15dae808be99e7782f296d3ca2e4b612a2365a5f0",
+      "wallMs": 645.7838000000047
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-91",
+      "children": 12,
+      "role": "parent",
+      "iteration": 6,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "32201186-b5f6-459b-9008-49684ec6ce91",
+      "projectionHash": "d539964bc0a84ccf81052d84eed6db615912c08a67351bafe643ea59779ba66f",
+      "expectedProjectionHash": "d539964bc0a84ccf81052d84eed6db615912c08a67351bafe643ea59779ba66f",
+      "wallMs": 882.309500000003
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-92",
+      "children": 12,
+      "role": "parent",
+      "iteration": 6,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "cb01282f-1712-4ad2-83aa-6f182bc1ada4",
+      "projectionHash": "d539964bc0a84ccf81052d84eed6db615912c08a67351bafe643ea59779ba66f",
+      "expectedProjectionHash": "d539964bc0a84ccf81052d84eed6db615912c08a67351bafe643ea59779ba66f",
+      "wallMs": 676.5849000000017
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-93",
+      "children": 12,
+      "role": "parent",
+      "iteration": 7,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "9438e2d2-abf3-454f-80b9-51b2b16e2bbb",
+      "projectionHash": "ffeb049bec28a26890efb2d73cfa89720acef678c23b353cdd78ec7acf23cc4c",
+      "expectedProjectionHash": "ffeb049bec28a26890efb2d73cfa89720acef678c23b353cdd78ec7acf23cc4c",
+      "wallMs": 840.5619999999981
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-94",
+      "children": 12,
+      "role": "parent",
+      "iteration": 7,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "426c6721-d2bc-4625-9d36-233d8d4d1da5",
+      "projectionHash": "ffeb049bec28a26890efb2d73cfa89720acef678c23b353cdd78ec7acf23cc4c",
+      "expectedProjectionHash": "ffeb049bec28a26890efb2d73cfa89720acef678c23b353cdd78ec7acf23cc4c",
+      "wallMs": 785.5054000000018
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-95",
+      "children": 12,
+      "role": "parent",
+      "iteration": 8,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "0822009e-3dee-4e0b-aa4b-112102d1afd8",
+      "projectionHash": "831fe2625e88bb36fb355986fc39653d96fab651aac11246da392c02271fb191",
+      "expectedProjectionHash": "831fe2625e88bb36fb355986fc39653d96fab651aac11246da392c02271fb191",
+      "wallMs": 855.8134999999966
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-96",
+      "children": 12,
+      "role": "parent",
+      "iteration": 8,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "729a6534-4e07-4c61-bd14-fed131083a87",
+      "projectionHash": "831fe2625e88bb36fb355986fc39653d96fab651aac11246da392c02271fb191",
+      "expectedProjectionHash": "831fe2625e88bb36fb355986fc39653d96fab651aac11246da392c02271fb191",
+      "wallMs": 810.4185999999972
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-97",
+      "children": 12,
+      "role": "parent",
+      "iteration": 9,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "7944e34c-1c07-4ef3-8f30-edae45d09947",
+      "projectionHash": "f168fdb4715d4c39a873ce0e191fc74a7feef50748c8f34138efc9a44512ac59",
+      "expectedProjectionHash": "f168fdb4715d4c39a873ce0e191fc74a7feef50748c8f34138efc9a44512ac59",
+      "wallMs": 959.8417000000045
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-98",
+      "children": 12,
+      "role": "parent",
+      "iteration": 9,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "f0078789-9c69-4c99-a331-d9383626fd50",
+      "projectionHash": "f168fdb4715d4c39a873ce0e191fc74a7feef50748c8f34138efc9a44512ac59",
+      "expectedProjectionHash": "f168fdb4715d4c39a873ce0e191fc74a7feef50748c8f34138efc9a44512ac59",
+      "wallMs": 695.7716999999975
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-99",
+      "children": 12,
+      "role": "parent",
+      "iteration": 10,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "a92c5d33-604b-4da2-8fcd-82d1159fcb58",
+      "projectionHash": "384486a2653cb2fcdf325140b21b2f28c236d84e734ba7476249c19d71bdd5a1",
+      "expectedProjectionHash": "384486a2653cb2fcdf325140b21b2f28c236d84e734ba7476249c19d71bdd5a1",
+      "wallMs": 910.8513000000021
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-100",
+      "children": 12,
+      "role": "parent",
+      "iteration": 10,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "d5905115-6bbf-46f9-bf29-c4fb7136837b",
+      "projectionHash": "384486a2653cb2fcdf325140b21b2f28c236d84e734ba7476249c19d71bdd5a1",
+      "expectedProjectionHash": "384486a2653cb2fcdf325140b21b2f28c236d84e734ba7476249c19d71bdd5a1",
+      "wallMs": 727.4756999999954
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-101",
+      "children": 12,
+      "role": "child",
+      "iteration": 1,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "5cb7641f-12e1-406b-b755-5dff0989a0e7",
+      "projectionHash": "63fe32ad49f110eae6a6878d0c0c7d6c8fab294e4dc095f551cd331a88d408bf",
+      "expectedProjectionHash": "63fe32ad49f110eae6a6878d0c0c7d6c8fab294e4dc095f551cd331a88d408bf",
+      "wallMs": 2374.5112999999983
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-102",
+      "children": 12,
+      "role": "child",
+      "iteration": 1,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "8d035dcd-ad27-4164-844d-5962275f111e",
+      "projectionHash": "63fe32ad49f110eae6a6878d0c0c7d6c8fab294e4dc095f551cd331a88d408bf",
+      "expectedProjectionHash": "63fe32ad49f110eae6a6878d0c0c7d6c8fab294e4dc095f551cd331a88d408bf",
+      "wallMs": 1854.1794999999984
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-103",
+      "children": 12,
+      "role": "child",
+      "iteration": 2,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "dec4f4ac-2742-4f38-9564-39fdeb776ea5",
+      "projectionHash": "ea5db1daefa5ed31be2d6009fd55c14f9ea6a5f37a5e3bcf3cea8943adeef43a",
+      "expectedProjectionHash": "ea5db1daefa5ed31be2d6009fd55c14f9ea6a5f37a5e3bcf3cea8943adeef43a",
+      "wallMs": 2145.9767999999967
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-104",
+      "children": 12,
+      "role": "child",
+      "iteration": 2,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "d2bae685-2552-4804-863c-aaf0038f7ba8",
+      "projectionHash": "ea5db1daefa5ed31be2d6009fd55c14f9ea6a5f37a5e3bcf3cea8943adeef43a",
+      "expectedProjectionHash": "ea5db1daefa5ed31be2d6009fd55c14f9ea6a5f37a5e3bcf3cea8943adeef43a",
+      "wallMs": 2233.0146999999997
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-105",
+      "children": 12,
+      "role": "child",
+      "iteration": 3,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "36a23d91-1039-4df1-9bc0-3058bfc2d23b",
+      "projectionHash": "20a8f2841d6e7fef3a4e9060dc6090fc6b12bcb94ef04b5c44fd8d1131d4987c",
+      "expectedProjectionHash": "20a8f2841d6e7fef3a4e9060dc6090fc6b12bcb94ef04b5c44fd8d1131d4987c",
+      "wallMs": 1781.8348000000042
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-106",
+      "children": 12,
+      "role": "child",
+      "iteration": 3,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "b9ff1478-e700-4822-8c4b-3c9a93f87ee7",
+      "projectionHash": "20a8f2841d6e7fef3a4e9060dc6090fc6b12bcb94ef04b5c44fd8d1131d4987c",
+      "expectedProjectionHash": "20a8f2841d6e7fef3a4e9060dc6090fc6b12bcb94ef04b5c44fd8d1131d4987c",
+      "wallMs": 712.5284000000029
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-107",
+      "children": 12,
+      "role": "child",
+      "iteration": 4,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "bcaad756-a540-42fd-bd07-73708ad810ec",
+      "projectionHash": "beb297004b0981f20ff01e371066c007fd512377de90d85a30e916253b36927b",
+      "expectedProjectionHash": "beb297004b0981f20ff01e371066c007fd512377de90d85a30e916253b36927b",
+      "wallMs": 869.0009000000064
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-108",
+      "children": 12,
+      "role": "child",
+      "iteration": 4,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "ec5143d0-92a1-4ae6-9331-94136a6b082d",
+      "projectionHash": "beb297004b0981f20ff01e371066c007fd512377de90d85a30e916253b36927b",
+      "expectedProjectionHash": "beb297004b0981f20ff01e371066c007fd512377de90d85a30e916253b36927b",
+      "wallMs": 665.5309999999954
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-109",
+      "children": 12,
+      "role": "child",
+      "iteration": 5,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "37f02479-e18d-4ecb-9fc7-bb0970907df3",
+      "projectionHash": "b45a0409a375e40798f988c93cf260fbc71186634bb6422686d2d41fca5625a1",
+      "expectedProjectionHash": "b45a0409a375e40798f988c93cf260fbc71186634bb6422686d2d41fca5625a1",
+      "wallMs": 852.2055000000037
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-110",
+      "children": 12,
+      "role": "child",
+      "iteration": 5,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "dc359e4c-a82b-4ab7-bcd9-462b39807084",
+      "projectionHash": "b45a0409a375e40798f988c93cf260fbc71186634bb6422686d2d41fca5625a1",
+      "expectedProjectionHash": "b45a0409a375e40798f988c93cf260fbc71186634bb6422686d2d41fca5625a1",
+      "wallMs": 709.9559000000008
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-111",
+      "children": 12,
+      "role": "child",
+      "iteration": 6,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "e9ec6838-8ddc-4844-968b-41e0855ce469",
+      "projectionHash": "3788255ac8c92a96bb17a36ae3d57d455c143151c378c2e16f831693bae1e0a6",
+      "expectedProjectionHash": "3788255ac8c92a96bb17a36ae3d57d455c143151c378c2e16f831693bae1e0a6",
+      "wallMs": 957.231200000002
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-112",
+      "children": 12,
+      "role": "child",
+      "iteration": 6,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "256a2416-7200-407d-a54f-f31d8bd8d45b",
+      "projectionHash": "3788255ac8c92a96bb17a36ae3d57d455c143151c378c2e16f831693bae1e0a6",
+      "expectedProjectionHash": "3788255ac8c92a96bb17a36ae3d57d455c143151c378c2e16f831693bae1e0a6",
+      "wallMs": 601.457699999999
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-113",
+      "children": 12,
+      "role": "child",
+      "iteration": 7,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "a7b691cd-70f5-48ad-b36e-c44ad750f07d",
+      "projectionHash": "8388ee84284256d84c8565c72d37eb017888527e2a210fedf4a05403a2f0c6ef",
+      "expectedProjectionHash": "8388ee84284256d84c8565c72d37eb017888527e2a210fedf4a05403a2f0c6ef",
+      "wallMs": 777.3041000000085
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-114",
+      "children": 12,
+      "role": "child",
+      "iteration": 7,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "81452056-26fe-44d3-aed5-0e23b58724b9",
+      "projectionHash": "8388ee84284256d84c8565c72d37eb017888527e2a210fedf4a05403a2f0c6ef",
+      "expectedProjectionHash": "8388ee84284256d84c8565c72d37eb017888527e2a210fedf4a05403a2f0c6ef",
+      "wallMs": 641.6025999999983
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-115",
+      "children": 12,
+      "role": "child",
+      "iteration": 8,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "a71af3f0-a49d-4c5e-9d2e-d910eccd8e07",
+      "projectionHash": "a67668d4ed557f8a9051b78859b2a4e4ad5a72537adc895d53bdd8e88a7ee596",
+      "expectedProjectionHash": "a67668d4ed557f8a9051b78859b2a4e4ad5a72537adc895d53bdd8e88a7ee596",
+      "wallMs": 831.7629000000015
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-116",
+      "children": 12,
+      "role": "child",
+      "iteration": 8,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "598d4ff0-9ba4-45e1-bb25-f00208c07ef3",
+      "projectionHash": "a67668d4ed557f8a9051b78859b2a4e4ad5a72537adc895d53bdd8e88a7ee596",
+      "expectedProjectionHash": "a67668d4ed557f8a9051b78859b2a4e4ad5a72537adc895d53bdd8e88a7ee596",
+      "wallMs": 713.5154000000039
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-117",
+      "children": 12,
+      "role": "child",
+      "iteration": 9,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "a2e5aba7-a1c4-4aa2-af84-48f241e8625c",
+      "projectionHash": "bb32da1b662d6733c0dadb16172e08c603352a3ae14fc445e69c84c745ab02d9",
+      "expectedProjectionHash": "bb32da1b662d6733c0dadb16172e08c603352a3ae14fc445e69c84c745ab02d9",
+      "wallMs": 938.7206999999908
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-118",
+      "children": 12,
+      "role": "child",
+      "iteration": 9,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "edf26f25-5ce8-48a9-b955-2a4d422de435",
+      "projectionHash": "bb32da1b662d6733c0dadb16172e08c603352a3ae14fc445e69c84c745ab02d9",
+      "expectedProjectionHash": "bb32da1b662d6733c0dadb16172e08c603352a3ae14fc445e69c84c745ab02d9",
+      "wallMs": 676.4703000000009
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-119",
+      "children": 12,
+      "role": "child",
+      "iteration": 10,
+      "mode": "command",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "f89e616d-412e-408c-b3b3-ef85fbd71cbc",
+      "projectionHash": "ab4ca28574aa0beaa00e016ab8b4ce293c85b31469ef4247e6462cfb15a8827a",
+      "expectedProjectionHash": "ab4ca28574aa0beaa00e016ab8b4ce293c85b31469ef4247e6462cfb15a8827a",
+      "wallMs": 963.6382000000012
+    },
+    {
+      "id": "d07c9f9d7f6e49a79b2db8bf123070cf-120",
+      "children": 12,
+      "role": "child",
+      "iteration": 10,
+      "mode": "read",
+      "status": 200,
+      "exactProjection": true,
+      "executionId": "1a289b37-5065-480c-bec8-eb7f541b12ce",
+      "projectionHash": "ab4ca28574aa0beaa00e016ab8b4ce293c85b31469ef4247e6462cfb15a8827a",
+      "expectedProjectionHash": "ab4ca28574aa0beaa00e016ab8b4ce293c85b31469ef4247e6462cfb15a8827a",
+      "wallMs": 704.7385000000068
+    }
+  ],
+  "events": [
+    {
+      "executionId": "87369134-08b7-4a70-b386-26edc4ddee5d",
+      "type": "Boot",
+      "bootMs": 142
+    },
+    {
+      "executionId": "87369134-08b7-4a70-b386-26edc4ddee5d",
+      "type": "Shutdown",
+      "cpuMs": 194,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 16622001,
+        "heap": 12878600,
+        "external": 3743401
+      }
+    },
+    {
+      "executionId": "1cadb08c-444c-4fc5-bb04-78b50c5f45d9",
+      "type": "Boot",
+      "bootMs": 44
+    },
+    {
+      "executionId": "1cadb08c-444c-4fc5-bb04-78b50c5f45d9",
+      "type": "Shutdown",
+      "cpuMs": 138,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14443619,
+        "heap": 11101040,
+        "external": 3342579
+      }
+    },
+    {
+      "executionId": "25f56bf7-44ee-4978-b5e9-302c3f23444f",
+      "type": "Boot",
+      "bootMs": 46
+    },
+    {
+      "executionId": "25f56bf7-44ee-4978-b5e9-302c3f23444f",
+      "type": "Shutdown",
+      "cpuMs": 196,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 16410581,
+        "heap": 12666072,
+        "external": 3744509
+      }
+    },
+    {
+      "executionId": "6c6a680e-7f93-4c0a-84b8-03a6fbb3ff20",
+      "type": "Boot",
+      "bootMs": 42
+    },
+    {
+      "executionId": "6c6a680e-7f93-4c0a-84b8-03a6fbb3ff20",
+      "type": "Shutdown",
+      "cpuMs": 125,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14755866,
+        "heap": 11412912,
+        "external": 3342954
+      }
+    },
+    {
+      "executionId": "2f98929b-0584-43c6-8d0b-c1e293f0bc52",
+      "type": "Boot",
+      "bootMs": 42
+    },
+    {
+      "executionId": "2f98929b-0584-43c6-8d0b-c1e293f0bc52",
+      "type": "Shutdown",
+      "cpuMs": 203,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 16686153,
+        "heap": 12985328,
+        "external": 3700825
+      }
+    },
+    {
+      "executionId": "9c99a135-a143-4287-b61a-ce34f7caaa58",
+      "type": "Boot",
+      "bootMs": 38
+    },
+    {
+      "executionId": "9c99a135-a143-4287-b61a-ce34f7caaa58",
+      "type": "Shutdown",
+      "cpuMs": 80,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 13356209,
+        "heap": 10057672,
+        "external": 3298537
+      }
+    },
+    {
+      "executionId": "68f44b4d-c0b3-4fd1-b784-c688709948b3",
+      "type": "Boot",
+      "bootMs": 44
+    },
+    {
+      "executionId": "68f44b4d-c0b3-4fd1-b784-c688709948b3",
+      "type": "Shutdown",
+      "cpuMs": 130,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 15118223,
+        "heap": 11490224,
+        "external": 3627999
+      }
+    },
+    {
+      "executionId": "ab01ebb3-85cd-4e6f-b900-3722137e66c0",
+      "type": "Boot",
+      "bootMs": 49
+    },
+    {
+      "executionId": "ab01ebb3-85cd-4e6f-b900-3722137e66c0",
+      "type": "Shutdown",
+      "cpuMs": 91,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 13425072,
+        "heap": 10126160,
+        "external": 3298912
+      }
+    },
+    {
+      "executionId": "9b5afa86-aa19-44b1-a0fd-41855f9237b6",
+      "type": "Boot",
+      "bootMs": 42
+    },
+    {
+      "executionId": "9b5afa86-aa19-44b1-a0fd-41855f9237b6",
+      "type": "Shutdown",
+      "cpuMs": 128,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14971051,
+        "heap": 11341944,
+        "external": 3629107
+      }
+    },
+    {
+      "executionId": "d27e4444-6cc1-4a32-a9b6-b3e6e607bd5d",
+      "type": "Boot",
+      "bootMs": 42
+    },
+    {
+      "executionId": "d27e4444-6cc1-4a32-a9b6-b3e6e607bd5d",
+      "type": "Shutdown",
+      "cpuMs": 75,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 13573167,
+        "heap": 10273880,
+        "external": 3299287
+      }
+    },
+    {
+      "executionId": "99042385-16ae-44a5-96d1-25bdf71d4c93",
+      "type": "Boot",
+      "bootMs": 42
+    },
+    {
+      "executionId": "99042385-16ae-44a5-96d1-25bdf71d4c93",
+      "type": "Shutdown",
+      "cpuMs": 127,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14738951,
+        "heap": 10766920,
+        "external": 3972031
+      }
+    },
+    {
+      "executionId": "6989e21c-1229-4160-9a5b-1685cee8024b",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "6989e21c-1229-4160-9a5b-1685cee8024b",
+      "type": "Shutdown",
+      "cpuMs": 80,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 13339422,
+        "heap": 10039760,
+        "external": 3299662
+      }
+    },
+    {
+      "executionId": "d309f4eb-1871-4d56-bb52-22780e0e7d59",
+      "type": "Boot",
+      "bootMs": 40
+    },
+    {
+      "executionId": "d309f4eb-1871-4d56-bb52-22780e0e7d59",
+      "type": "Shutdown",
+      "cpuMs": 126,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14976436,
+        "heap": 11345112,
+        "external": 3631324
+      }
+    },
+    {
+      "executionId": "7cdf3de7-82ab-4258-b35f-068b82d5d1c8",
+      "type": "Boot",
+      "bootMs": 40
+    },
+    {
+      "executionId": "7cdf3de7-82ab-4258-b35f-068b82d5d1c8",
+      "type": "Shutdown",
+      "cpuMs": 83,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 13387997,
+        "heap": 10087960,
+        "external": 3300037
+      }
+    },
+    {
+      "executionId": "7640671d-61e8-4551-bdec-ed3e61f65723",
+      "type": "Boot",
+      "bootMs": 44
+    },
+    {
+      "executionId": "7640671d-61e8-4551-bdec-ed3e61f65723",
+      "type": "Shutdown",
+      "cpuMs": 133,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14974432,
+        "heap": 11342000,
+        "external": 3632432
+      }
+    },
+    {
+      "executionId": "c8571306-dbe7-4a18-b4fe-bc7d82d03642",
+      "type": "Boot",
+      "bootMs": 40
+    },
+    {
+      "executionId": "c8571306-dbe7-4a18-b4fe-bc7d82d03642",
+      "type": "Shutdown",
+      "cpuMs": 96,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 13605668,
+        "heap": 10305256,
+        "external": 3300412
+      }
+    },
+    {
+      "executionId": "70dffde5-d4b4-40a9-8235-7596a0e24bf1",
+      "type": "Boot",
+      "bootMs": 57
+    },
+    {
+      "executionId": "70dffde5-d4b4-40a9-8235-7596a0e24bf1",
+      "type": "Shutdown",
+      "cpuMs": 136,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14982652,
+        "heap": 11349112,
+        "external": 3633540
+      }
+    },
+    {
+      "executionId": "d24eef27-37a0-45e5-a344-63a6ae8a20fa",
+      "type": "Boot",
+      "bootMs": 40
+    },
+    {
+      "executionId": "d24eef27-37a0-45e5-a344-63a6ae8a20fa",
+      "type": "Shutdown",
+      "cpuMs": 79,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 13924052,
+        "heap": 10623264,
+        "external": 3300788
+      }
+    },
+    {
+      "executionId": "efe6941a-4d30-45d8-ad57-35a267a90b27",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "efe6941a-4d30-45d8-ad57-35a267a90b27",
+      "type": "Shutdown",
+      "cpuMs": 192,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 15090403,
+        "heap": 11455752,
+        "external": 3634651
+      }
+    },
+    {
+      "executionId": "b13eda53-4fa6-4cb2-b176-731b2d70a72d",
+      "type": "Boot",
+      "bootMs": 57
+    },
+    {
+      "executionId": "b13eda53-4fa6-4cb2-b176-731b2d70a72d",
+      "type": "Shutdown",
+      "cpuMs": 81,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 13373643,
+        "heap": 10072480,
+        "external": 3301163
+      }
+    },
+    {
+      "executionId": "8b52872a-c0ca-4a93-9ca1-fb957df47018",
+      "type": "Boot",
+      "bootMs": 46
+    },
+    {
+      "executionId": "8b52872a-c0ca-4a93-9ca1-fb957df47018",
+      "type": "Shutdown",
+      "cpuMs": 180,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 16181821,
+        "heap": 12438832,
+        "external": 3742989
+      }
+    },
+    {
+      "executionId": "debbbb20-d819-41a6-965e-a35295e1ab1b",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "debbbb20-d819-41a6-965e-a35295e1ab1b",
+      "type": "Shutdown",
+      "cpuMs": 134,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14658081,
+        "heap": 11315528,
+        "external": 3342553
+      }
+    },
+    {
+      "executionId": "03d5c751-fc91-4348-8808-d7e5503ce434",
+      "type": "Boot",
+      "bootMs": 42
+    },
+    {
+      "executionId": "03d5c751-fc91-4348-8808-d7e5503ce434",
+      "type": "Shutdown",
+      "cpuMs": 169,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 16011883,
+        "heap": 12267928,
+        "external": 3743955
+      }
+    },
+    {
+      "executionId": "4aecb0fe-f6fa-4c99-be5d-66ff6ed0c9fc",
+      "type": "Boot",
+      "bootMs": 42
+    },
+    {
+      "executionId": "4aecb0fe-f6fa-4c99-be5d-66ff6ed0c9fc",
+      "type": "Shutdown",
+      "cpuMs": 134,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14430902,
+        "heap": 11088000,
+        "external": 3342902
+      }
+    },
+    {
+      "executionId": "719a3cb5-6345-4d24-9cd7-9505ca3adda8",
+      "type": "Boot",
+      "bootMs": 44
+    },
+    {
+      "executionId": "719a3cb5-6345-4d24-9cd7-9505ca3adda8",
+      "type": "Shutdown",
+      "cpuMs": 198,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 17410580,
+        "heap": 13368704,
+        "external": 4041876
+      }
+    },
+    {
+      "executionId": "915fb59f-322e-48bc-a3ae-e77698e97d33",
+      "type": "Boot",
+      "bootMs": 42
+    },
+    {
+      "executionId": "915fb59f-322e-48bc-a3ae-e77698e97d33",
+      "type": "Shutdown",
+      "cpuMs": 78,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 13294479,
+        "heap": 9996088,
+        "external": 3298391
+      }
+    },
+    {
+      "executionId": "4f9c689f-5aba-4c04-acfb-aa908514190d",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "4f9c689f-5aba-4c04-acfb-aa908514190d",
+      "type": "Shutdown",
+      "cpuMs": 121,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 15559232,
+        "heap": 11768704,
+        "external": 3790528
+      }
+    },
+    {
+      "executionId": "c9fe94af-b82b-47cc-acba-047584debced",
+      "type": "Boot",
+      "bootMs": 42
+    },
+    {
+      "executionId": "c9fe94af-b82b-47cc-acba-047584debced",
+      "type": "Shutdown",
+      "cpuMs": 82,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 13309180,
+        "heap": 10010440,
+        "external": 3298740
+      }
+    },
+    {
+      "executionId": "52e8d44f-f2db-419d-9db6-735968d4b55f",
+      "type": "Boot",
+      "bootMs": 45
+    },
+    {
+      "executionId": "52e8d44f-f2db-419d-9db6-735968d4b55f",
+      "type": "Shutdown",
+      "cpuMs": 122,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 15478974,
+        "heap": 11687480,
+        "external": 3791494
+      }
+    },
+    {
+      "executionId": "778246ba-afe4-4b37-89aa-de84948e0e9c",
+      "type": "Boot",
+      "bootMs": 42
+    },
+    {
+      "executionId": "778246ba-afe4-4b37-89aa-de84948e0e9c",
+      "type": "Shutdown",
+      "cpuMs": 72,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 13413689,
+        "heap": 10114600,
+        "external": 3299089
+      }
+    },
+    {
+      "executionId": "3330e42d-ef33-42e3-9a84-99330696515e",
+      "type": "Boot",
+      "bootMs": 39
+    },
+    {
+      "executionId": "3330e42d-ef33-42e3-9a84-99330696515e",
+      "type": "Shutdown",
+      "cpuMs": 117,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 15689732,
+        "heap": 11897272,
+        "external": 3792460
+      }
+    },
+    {
+      "executionId": "6d8746f0-5c58-46d7-b4fa-7bc0c07f3c64",
+      "type": "Boot",
+      "bootMs": 39
+    },
+    {
+      "executionId": "6d8746f0-5c58-46d7-b4fa-7bc0c07f3c64",
+      "type": "Shutdown",
+      "cpuMs": 76,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 13340294,
+        "heap": 10040856,
+        "external": 3299438
+      }
+    },
+    {
+      "executionId": "8ee79b4c-6168-4c23-b265-9a6b1bc703e3",
+      "type": "Boot",
+      "bootMs": 43
+    },
+    {
+      "executionId": "8ee79b4c-6168-4c23-b265-9a6b1bc703e3",
+      "type": "Shutdown",
+      "cpuMs": 115,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 16072942,
+        "heap": 12101144,
+        "external": 3971798
+      }
+    },
+    {
+      "executionId": "47deb18c-fec7-40c9-9f0c-f51b4713489f",
+      "type": "Boot",
+      "bootMs": 38
+    },
+    {
+      "executionId": "47deb18c-fec7-40c9-9f0c-f51b4713489f",
+      "type": "Shutdown",
+      "cpuMs": 73,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 13488899,
+        "heap": 10189112,
+        "external": 3299787
+      }
+    },
+    {
+      "executionId": "d54e4142-32d3-4af3-9bb6-e422aac3442b",
+      "type": "Boot",
+      "bootMs": 39
+    },
+    {
+      "executionId": "d54e4142-32d3-4af3-9bb6-e422aac3442b",
+      "type": "Shutdown",
+      "cpuMs": 125,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 16118908,
+        "heap": 12146144,
+        "external": 3972764
+      }
+    },
+    {
+      "executionId": "69ca1e52-3ef9-42b7-9d4c-990a6e756476",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "69ca1e52-3ef9-42b7-9d4c-990a6e756476",
+      "type": "Shutdown",
+      "cpuMs": 74,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 13586144,
+        "heap": 10286008,
+        "external": 3300136
+      }
+    },
+    {
+      "executionId": "989a77bf-f375-4ecc-bd24-e909ae456803",
+      "type": "Boot",
+      "bootMs": 43
+    },
+    {
+      "executionId": "989a77bf-f375-4ecc-bd24-e909ae456803",
+      "type": "Shutdown",
+      "cpuMs": 115,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14657338,
+        "heap": 10683608,
+        "external": 3973730
+      }
+    },
+    {
+      "executionId": "058aaac4-03e4-4fdb-83a0-0992fd104d5a",
+      "type": "Boot",
+      "bootMs": 39
+    },
+    {
+      "executionId": "058aaac4-03e4-4fdb-83a0-0992fd104d5a",
+      "type": "Shutdown",
+      "cpuMs": 76,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 13687590,
+        "heap": 10387104,
+        "external": 3300486
+      }
+    },
+    {
+      "executionId": "0b760fa9-8554-4ca9-856d-d23bcaafff57",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "0b760fa9-8554-4ca9-856d-d23bcaafff57",
+      "type": "Shutdown",
+      "cpuMs": 118,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14613650,
+        "heap": 10638952,
+        "external": 3974698
+      }
+    },
+    {
+      "executionId": "e59f42f9-2850-4452-9b2a-91551e246b47",
+      "type": "Boot",
+      "bootMs": 40
+    },
+    {
+      "executionId": "e59f42f9-2850-4452-9b2a-91551e246b47",
+      "type": "Shutdown",
+      "cpuMs": 79,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 13616691,
+        "heap": 10315856,
+        "external": 3300835
+      }
+    },
+    {
+      "executionId": "aec37dea-57d0-418a-9ac5-b69c067fe167",
+      "type": "Boot",
+      "bootMs": 39
+    },
+    {
+      "executionId": "aec37dea-57d0-418a-9ac5-b69c067fe167",
+      "type": "Shutdown",
+      "cpuMs": 258,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 15764977,
+        "heap": 12059088,
+        "external": 3705889
+      }
+    },
+    {
+      "executionId": "873097f7-097e-4b83-860f-ce7e3c8c25e0",
+      "type": "Boot",
+      "bootMs": 44
+    },
+    {
+      "executionId": "873097f7-097e-4b83-860f-ce7e3c8c25e0",
+      "type": "Shutdown",
+      "cpuMs": 229,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 18424885,
+        "heap": 14837800,
+        "external": 3587085
+      }
+    },
+    {
+      "executionId": "4873dbb5-392b-4551-838c-ada559b0bff1",
+      "type": "Boot",
+      "bootMs": 43
+    },
+    {
+      "executionId": "4873dbb5-392b-4551-838c-ada559b0bff1",
+      "type": "Shutdown",
+      "cpuMs": 268,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 15795484,
+        "heap": 12088592,
+        "external": 3706892
+      }
+    },
+    {
+      "executionId": "7aae5743-eef8-41d0-8f40-47a97fd0f579",
+      "type": "Boot",
+      "bootMs": 43
+    },
+    {
+      "executionId": "7aae5743-eef8-41d0-8f40-47a97fd0f579",
+      "type": "Shutdown",
+      "cpuMs": 199,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 18236316,
+        "heap": 14648856,
+        "external": 3587460
+      }
+    },
+    {
+      "executionId": "28d83bc4-6ed8-4b38-9c67-cce9b406ad39",
+      "type": "Boot",
+      "bootMs": 47
+    },
+    {
+      "executionId": "28d83bc4-6ed8-4b38-9c67-cce9b406ad39",
+      "type": "Shutdown",
+      "cpuMs": 442,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 15917902,
+        "heap": 11957528,
+        "external": 3960374
+      }
+    },
+    {
+      "executionId": "1536504a-0ede-44be-8451-1c671ee7526c",
+      "type": "Boot",
+      "bootMs": 42
+    },
+    {
+      "executionId": "1536504a-0ede-44be-8451-1c671ee7526c",
+      "type": "Shutdown",
+      "cpuMs": 100,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 15476777,
+        "heap": 11978008,
+        "external": 3498769
+      }
+    },
+    {
+      "executionId": "f56e9a4b-4b30-43f0-a70f-9d1ff30029d1",
+      "type": "Boot",
+      "bootMs": 44
+    },
+    {
+      "executionId": "f56e9a4b-4b30-43f0-a70f-9d1ff30029d1",
+      "type": "Shutdown",
+      "cpuMs": 156,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 16758399,
+        "heap": 12388120,
+        "external": 4370279
+      }
+    },
+    {
+      "executionId": "d1cb6d23-5123-4ccb-9936-ce8055894b90",
+      "type": "Boot",
+      "bootMs": 40
+    },
+    {
+      "executionId": "d1cb6d23-5123-4ccb-9936-ce8055894b90",
+      "type": "Shutdown",
+      "cpuMs": 104,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14862624,
+        "heap": 11363480,
+        "external": 3499144
+      }
+    },
+    {
+      "executionId": "8edb3209-941b-48ca-802a-3319b41c59c0",
+      "type": "Boot",
+      "bootMs": 44
+    },
+    {
+      "executionId": "8edb3209-941b-48ca-802a-3319b41c59c0",
+      "type": "Shutdown",
+      "cpuMs": 153,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 16769123,
+        "heap": 12397736,
+        "external": 4371387
+      }
+    },
+    {
+      "executionId": "79564b84-e332-405f-b7f9-c1e3115fbce0",
+      "type": "Boot",
+      "bootMs": 42
+    },
+    {
+      "executionId": "79564b84-e332-405f-b7f9-c1e3115fbce0",
+      "type": "Shutdown",
+      "cpuMs": 113,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14981431,
+        "heap": 11481912,
+        "external": 3499519
+      }
+    },
+    {
+      "executionId": "acc22687-e8fd-49c9-8879-8d2feb5bc7ad",
+      "type": "Boot",
+      "bootMs": 40
+    },
+    {
+      "executionId": "acc22687-e8fd-49c9-8879-8d2feb5bc7ad",
+      "type": "Shutdown",
+      "cpuMs": 137,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 16718495,
+        "heap": 12346000,
+        "external": 4372495
+      }
+    },
+    {
+      "executionId": "00bb5709-e153-4140-8b8d-85f8d574cb87",
+      "type": "Boot",
+      "bootMs": 40
+    },
+    {
+      "executionId": "00bb5709-e153-4140-8b8d-85f8d574cb87",
+      "type": "Shutdown",
+      "cpuMs": 101,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14981526,
+        "heap": 11481632,
+        "external": 3499894
+      }
+    },
+    {
+      "executionId": "eae0e4d0-51d0-4ad7-81ba-52769e4691c8",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "eae0e4d0-51d0-4ad7-81ba-52769e4691c8",
+      "type": "Shutdown",
+      "cpuMs": 153,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 17376268,
+        "heap": 13344480,
+        "external": 4031788
+      }
+    },
+    {
+      "executionId": "6b138784-fbac-4c69-a192-a99b24007a2e",
+      "type": "Boot",
+      "bootMs": 39
+    },
+    {
+      "executionId": "6b138784-fbac-4c69-a192-a99b24007a2e",
+      "type": "Shutdown",
+      "cpuMs": 103,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14933237,
+        "heap": 11432968,
+        "external": 3500269
+      }
+    },
+    {
+      "executionId": "453e7f26-a84e-48a1-a861-c9362dcf2355",
+      "type": "Boot",
+      "bootMs": 43
+    },
+    {
+      "executionId": "453e7f26-a84e-48a1-a861-c9362dcf2355",
+      "type": "Shutdown",
+      "cpuMs": 142,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 17343672,
+        "heap": 13310776,
+        "external": 4032896
+      }
+    },
+    {
+      "executionId": "21ece188-1805-41f7-9a0a-184047c9281e",
+      "type": "Boot",
+      "bootMs": 39
+    },
+    {
+      "executionId": "21ece188-1805-41f7-9a0a-184047c9281e",
+      "type": "Shutdown",
+      "cpuMs": 123,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14916660,
+        "heap": 11416016,
+        "external": 3500644
+      }
+    },
+    {
+      "executionId": "d6cfc7f3-2c69-469f-b622-1ffe34ce8a25",
+      "type": "Boot",
+      "bootMs": 42
+    },
+    {
+      "executionId": "d6cfc7f3-2c69-469f-b622-1ffe34ce8a25",
+      "type": "Shutdown",
+      "cpuMs": 139,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 17397380,
+        "heap": 13363376,
+        "external": 4034004
+      }
+    },
+    {
+      "executionId": "8c52522b-86ef-462e-84bb-a232e9e4369d",
+      "type": "Boot",
+      "bootMs": 44
+    },
+    {
+      "executionId": "8c52522b-86ef-462e-84bb-a232e9e4369d",
+      "type": "Shutdown",
+      "cpuMs": 98,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 15134196,
+        "heap": 11633176,
+        "external": 3501020
+      }
+    },
+    {
+      "executionId": "385e8fc3-2541-4749-adef-e77ef37777ab",
+      "type": "Boot",
+      "bootMs": 40
+    },
+    {
+      "executionId": "385e8fc3-2541-4749-adef-e77ef37777ab",
+      "type": "Shutdown",
+      "cpuMs": 147,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 17342363,
+        "heap": 13307248,
+        "external": 4035115
+      }
+    },
+    {
+      "executionId": "3aadf053-8e15-4b4a-989d-045f1f3da071",
+      "type": "Boot",
+      "bootMs": 40
+    },
+    {
+      "executionId": "3aadf053-8e15-4b4a-989d-045f1f3da071",
+      "type": "Shutdown",
+      "cpuMs": 96,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 15059171,
+        "heap": 11557776,
+        "external": 3501395
+      }
+    },
+    {
+      "executionId": "534e2feb-b656-43a4-bb2d-f8e77d12424e",
+      "type": "Boot",
+      "bootMs": 39
+    },
+    {
+      "executionId": "534e2feb-b656-43a4-bb2d-f8e77d12424e",
+      "type": "Shutdown",
+      "cpuMs": 254,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 15608026,
+        "heap": 11902280,
+        "external": 3705746
+      }
+    },
+    {
+      "executionId": "d691d6f8-6b90-44fe-ab88-e90ef9d97ae2",
+      "type": "Boot",
+      "bootMs": 39
+    },
+    {
+      "executionId": "1da786eb-21a3-4df2-a13d-8c245a847232",
+      "type": "Boot",
+      "bootMs": 48
+    },
+    {
+      "executionId": "1da786eb-21a3-4df2-a13d-8c245a847232",
+      "type": "Shutdown",
+      "cpuMs": 263,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 15613139,
+        "heap": 11906776,
+        "external": 3706363
+      }
+    },
+    {
+      "executionId": "f08b33f2-f9aa-4415-813f-d2f14ea38054",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "f08b33f2-f9aa-4415-813f-d2f14ea38054",
+      "type": "Shutdown",
+      "cpuMs": 198,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 18139008,
+        "heap": 14551600,
+        "external": 3587408
+      }
+    },
+    {
+      "executionId": "20ecc307-bdfc-4a51-88eb-e83a8d7632f9",
+      "type": "Boot",
+      "bootMs": 38
+    },
+    {
+      "executionId": "20ecc307-bdfc-4a51-88eb-e83a8d7632f9",
+      "type": "Shutdown",
+      "cpuMs": 285,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 15109166,
+        "heap": 11491288,
+        "external": 3617878
+      }
+    },
+    {
+      "executionId": "b597edcc-5d61-49a6-ad51-389265db9a1e",
+      "type": "Boot",
+      "bootMs": 39
+    },
+    {
+      "executionId": "b597edcc-5d61-49a6-ad51-389265db9a1e",
+      "type": "Shutdown",
+      "cpuMs": 92,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 15390527,
+        "heap": 11891904,
+        "external": 3498623
+      }
+    },
+    {
+      "executionId": "138ba9b5-1c96-47e4-ac96-649885c60030",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "949e0770-0f23-437f-b2bf-af72e50f42b9",
+      "type": "Boot",
+      "bootMs": 47
+    },
+    {
+      "executionId": "949e0770-0f23-437f-b2bf-af72e50f42b9",
+      "type": "Shutdown",
+      "cpuMs": 153,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14921780,
+        "heap": 11422808,
+        "external": 3498972
+      }
+    },
+    {
+      "executionId": "a117b414-6904-4d42-b84e-7210daf8fba0",
+      "type": "Boot",
+      "bootMs": 46
+    },
+    {
+      "executionId": "a117b414-6904-4d42-b84e-7210daf8fba0",
+      "type": "Shutdown",
+      "cpuMs": 160,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 17621966,
+        "heap": 13430008,
+        "external": 4191958
+      }
+    },
+    {
+      "executionId": "052c49d1-5543-44d8-9697-a92241912d28",
+      "type": "Boot",
+      "bootMs": 43
+    },
+    {
+      "executionId": "052c49d1-5543-44d8-9697-a92241912d28",
+      "type": "Shutdown",
+      "cpuMs": 103,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 15564705,
+        "heap": 12065384,
+        "external": 3499321
+      }
+    },
+    {
+      "executionId": "45043d68-91b8-4df5-89f4-9cc96e4aeb97",
+      "type": "Boot",
+      "bootMs": 52
+    },
+    {
+      "executionId": "45043d68-91b8-4df5-89f4-9cc96e4aeb97",
+      "type": "Shutdown",
+      "cpuMs": 142,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 17712492,
+        "heap": 13519568,
+        "external": 4192924
+      }
+    },
+    {
+      "executionId": "2798787e-759f-48e1-8f8a-ca0a5b3094c3",
+      "type": "Boot",
+      "bootMs": 43
+    },
+    {
+      "executionId": "2798787e-759f-48e1-8f8a-ca0a5b3094c3",
+      "type": "Shutdown",
+      "cpuMs": 106,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14871046,
+        "heap": 11371376,
+        "external": 3499670
+      }
+    },
+    {
+      "executionId": "dc177e0f-c2a5-4008-a6dd-575edca8e74e",
+      "type": "Boot",
+      "bootMs": 43
+    },
+    {
+      "executionId": "dc177e0f-c2a5-4008-a6dd-575edca8e74e",
+      "type": "Shutdown",
+      "cpuMs": 143,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 18129374,
+        "heap": 13757112,
+        "external": 4372262
+      }
+    },
+    {
+      "executionId": "cb411f84-2f81-499c-bbb4-ef6c6bcf5672",
+      "type": "Boot",
+      "bootMs": 42
+    },
+    {
+      "executionId": "cb411f84-2f81-499c-bbb4-ef6c6bcf5672",
+      "type": "Shutdown",
+      "cpuMs": 107,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14829811,
+        "heap": 11329792,
+        "external": 3500019
+      }
+    },
+    {
+      "executionId": "2ed0ee9d-e4f6-4d06-963c-1a83d837d59d",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "2ed0ee9d-e4f6-4d06-963c-1a83d837d59d",
+      "type": "Shutdown",
+      "cpuMs": 142,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 16655660,
+        "heap": 12282432,
+        "external": 4373228
+      }
+    },
+    {
+      "executionId": "92b85034-42ce-4997-99c6-fd9c022e4529",
+      "type": "Boot",
+      "bootMs": 39
+    },
+    {
+      "executionId": "92b85034-42ce-4997-99c6-fd9c022e4529",
+      "type": "Shutdown",
+      "cpuMs": 93,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14834624,
+        "heap": 11334256,
+        "external": 3500368
+      }
+    },
+    {
+      "executionId": "3cefa54f-4163-4bd8-88da-77adbdf30d8b",
+      "type": "Boot",
+      "bootMs": 44
+    },
+    {
+      "executionId": "3cefa54f-4163-4bd8-88da-77adbdf30d8b",
+      "type": "Shutdown",
+      "cpuMs": 150,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 16823354,
+        "heap": 12449160,
+        "external": 4374194
+      }
+    },
+    {
+      "executionId": "68894d69-9089-4250-9b42-2a65358cc8bb",
+      "type": "Boot",
+      "bootMs": 59
+    },
+    {
+      "executionId": "68894d69-9089-4250-9b42-2a65358cc8bb",
+      "type": "Shutdown",
+      "cpuMs": 115,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14836510,
+        "heap": 11335792,
+        "external": 3500718
+      }
+    },
+    {
+      "executionId": "86a22076-d8ee-4584-af44-bfd9e83d4c12",
+      "type": "Boot",
+      "bootMs": 43
+    },
+    {
+      "executionId": "86a22076-d8ee-4584-af44-bfd9e83d4c12",
+      "type": "Shutdown",
+      "cpuMs": 149,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 16828730,
+        "heap": 12453568,
+        "external": 4375162
+      }
+    },
+    {
+      "executionId": "c75e2c1b-ba50-44b1-b2e6-2f6dc62c9b17",
+      "type": "Boot",
+      "bootMs": 49
+    },
+    {
+      "executionId": "c75e2c1b-ba50-44b1-b2e6-2f6dc62c9b17",
+      "type": "Shutdown",
+      "cpuMs": 106,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 14950323,
+        "heap": 11449256,
+        "external": 3501067
+      }
+    },
+    {
+      "executionId": "9899d5ef-c05a-4193-9e35-02ab2fbb8cb2",
+      "type": "Boot",
+      "bootMs": 43
+    },
+    {
+      "executionId": "9899d5ef-c05a-4193-9e35-02ab2fbb8cb2",
+      "type": "Shutdown",
+      "cpuMs": 1062,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 32178346,
+        "heap": 25740544,
+        "external": 6437802
+      }
+    },
+    {
+      "executionId": "ccfb5b59-5867-4313-aca1-46064f4bf88d",
+      "type": "Boot",
+      "bootMs": 42
+    },
+    {
+      "executionId": "ccfb5b59-5867-4313-aca1-46064f4bf88d",
+      "type": "Shutdown",
+      "cpuMs": 1065,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 27744683,
+        "heap": 18843688,
+        "external": 8900995
+      }
+    },
+    {
+      "executionId": "e6496f2f-e7a3-4cc4-ab83-b0391907e78d",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "8c18813b-3516-4ab4-9017-5ba37d622e72",
+      "type": "Boot",
+      "bootMs": 48
+    },
+    {
+      "executionId": "6539ac7c-b2fa-4250-8420-47e50072904e",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "2f1592da-200d-4505-869b-5346a27bfde4",
+      "type": "Boot",
+      "bootMs": 42
+    },
+    {
+      "executionId": "2f1592da-200d-4505-869b-5346a27bfde4",
+      "type": "Shutdown",
+      "cpuMs": 346,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 23197907,
+        "heap": 15359024,
+        "external": 7838883
+      }
+    },
+    {
+      "executionId": "fddf7b80-880f-4a5f-941c-ace5784471d5",
+      "type": "Boot",
+      "bootMs": 39
+    },
+    {
+      "executionId": "fddf7b80-880f-4a5f-941c-ace5784471d5",
+      "type": "Shutdown",
+      "cpuMs": 424,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 29310061,
+        "heap": 18939160,
+        "external": 10370901
+      }
+    },
+    {
+      "executionId": "b033290f-6028-4dfc-b3d2-67b24d0d9ea7",
+      "type": "Boot",
+      "bootMs": 39
+    },
+    {
+      "executionId": "b033290f-6028-4dfc-b3d2-67b24d0d9ea7",
+      "type": "Shutdown",
+      "cpuMs": 314,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 23270361,
+        "heap": 15430728,
+        "external": 7839633
+      }
+    },
+    {
+      "executionId": "fa6d82b3-33c6-4045-8a66-2beaecec042a",
+      "type": "Boot",
+      "bootMs": 39
+    },
+    {
+      "executionId": "fa6d82b3-33c6-4045-8a66-2beaecec042a",
+      "type": "Shutdown",
+      "cpuMs": 417,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 29406512,
+        "heap": 19034128,
+        "external": 10372384
+      }
+    },
+    {
+      "executionId": "dc4cc8e2-7147-48c4-8e23-c26b4d31d16e",
+      "type": "Boot",
+      "bootMs": 40
+    },
+    {
+      "executionId": "dc4cc8e2-7147-48c4-8e23-c26b4d31d16e",
+      "type": "Shutdown",
+      "cpuMs": 326,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 23296311,
+        "heap": 15455928,
+        "external": 7840383
+      }
+    },
+    {
+      "executionId": "32201186-b5f6-459b-9008-49684ec6ce91",
+      "type": "Boot",
+      "bootMs": 38
+    },
+    {
+      "executionId": "32201186-b5f6-459b-9008-49684ec6ce91",
+      "type": "Shutdown",
+      "cpuMs": 395,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 29261611,
+        "heap": 18887744,
+        "external": 10373867
+      }
+    },
+    {
+      "executionId": "cb01282f-1712-4ad2-83aa-6f182bc1ada4",
+      "type": "Boot",
+      "bootMs": 51
+    },
+    {
+      "executionId": "cb01282f-1712-4ad2-83aa-6f182bc1ada4",
+      "type": "Shutdown",
+      "cpuMs": 331,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 23277293,
+        "heap": 15436160,
+        "external": 7841133
+      }
+    },
+    {
+      "executionId": "9438e2d2-abf3-454f-80b9-51b2b16e2bbb",
+      "type": "Boot",
+      "bootMs": 43
+    },
+    {
+      "executionId": "9438e2d2-abf3-454f-80b9-51b2b16e2bbb",
+      "type": "Shutdown",
+      "cpuMs": 358,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 29570854,
+        "heap": 19195504,
+        "external": 10375350
+      }
+    },
+    {
+      "executionId": "426c6721-d2bc-4625-9d36-233d8d4d1da5",
+      "type": "Boot",
+      "bootMs": 39
+    },
+    {
+      "executionId": "426c6721-d2bc-4625-9d36-233d8d4d1da5",
+      "type": "Shutdown",
+      "cpuMs": 361,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 23228299,
+        "heap": 15386416,
+        "external": 7841883
+      }
+    },
+    {
+      "executionId": "0822009e-3dee-4e0b-aa4b-112102d1afd8",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "0822009e-3dee-4e0b-aa4b-112102d1afd8",
+      "type": "Shutdown",
+      "cpuMs": 383,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 29489361,
+        "heap": 19112528,
+        "external": 10376833
+      }
+    },
+    {
+      "executionId": "729a6534-4e07-4c61-bd14-fed131083a87",
+      "type": "Boot",
+      "bootMs": 51
+    },
+    {
+      "executionId": "729a6534-4e07-4c61-bd14-fed131083a87",
+      "type": "Shutdown",
+      "cpuMs": 379,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 23351657,
+        "heap": 15509024,
+        "external": 7842633
+      }
+    },
+    {
+      "executionId": "7944e34c-1c07-4ef3-8f30-edae45d09947",
+      "type": "Boot",
+      "bootMs": 53
+    },
+    {
+      "executionId": "7944e34c-1c07-4ef3-8f30-edae45d09947",
+      "type": "Shutdown",
+      "cpuMs": 407,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 29404780,
+        "heap": 19026464,
+        "external": 10378316
+      }
+    },
+    {
+      "executionId": "f0078789-9c69-4c99-a331-d9383626fd50",
+      "type": "Boot",
+      "bootMs": 44
+    },
+    {
+      "executionId": "f0078789-9c69-4c99-a331-d9383626fd50",
+      "type": "Shutdown",
+      "cpuMs": 373,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 23357431,
+        "heap": 15514048,
+        "external": 7843383
+      }
+    },
+    {
+      "executionId": "a92c5d33-604b-4da2-8fcd-82d1159fcb58",
+      "type": "Boot",
+      "bootMs": 43
+    },
+    {
+      "executionId": "a92c5d33-604b-4da2-8fcd-82d1159fcb58",
+      "type": "Shutdown",
+      "cpuMs": 399,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 29560369,
+        "heap": 19180568,
+        "external": 10379801
+      }
+    },
+    {
+      "executionId": "d5905115-6bbf-46f9-bf29-c4fb7136837b",
+      "type": "Boot",
+      "bootMs": 47
+    },
+    {
+      "executionId": "d5905115-6bbf-46f9-bf29-c4fb7136837b",
+      "type": "Shutdown",
+      "cpuMs": 342,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 23450901,
+        "heap": 15606768,
+        "external": 7844133
+      }
+    },
+    {
+      "executionId": "5cb7641f-12e1-406b-b755-5dff0989a0e7",
+      "type": "Boot",
+      "bootMs": 46
+    },
+    {
+      "executionId": "5cb7641f-12e1-406b-b755-5dff0989a0e7",
+      "type": "Shutdown",
+      "cpuMs": 1213,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 31816902,
+        "heap": 25379480,
+        "external": 6437422
+      }
+    },
+    {
+      "executionId": "8d035dcd-ad27-4164-844d-5962275f111e",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "8d035dcd-ad27-4164-844d-5962275f111e",
+      "type": "Shutdown",
+      "cpuMs": 980,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 27880847,
+        "heap": 18979904,
+        "external": 8900943
+      }
+    },
+    {
+      "executionId": "dec4f4ac-2742-4f38-9564-39fdeb776ea5",
+      "type": "Boot",
+      "bootMs": 42
+    },
+    {
+      "executionId": "d2bae685-2552-4804-863c-aaf0038f7ba8",
+      "type": "Boot",
+      "bootMs": 45
+    },
+    {
+      "executionId": "36a23d91-1039-4df1-9bc0-3058bfc2d23b",
+      "type": "Boot",
+      "bootMs": 62
+    },
+    {
+      "executionId": "b9ff1478-e700-4822-8c4b-3c9a93f87ee7",
+      "type": "Boot",
+      "bootMs": 39
+    },
+    {
+      "executionId": "b9ff1478-e700-4822-8c4b-3c9a93f87ee7",
+      "type": "Shutdown",
+      "cpuMs": 374,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 23777039,
+        "heap": 15938448,
+        "external": 7838591
+      }
+    },
+    {
+      "executionId": "bcaad756-a540-42fd-bd07-73708ad810ec",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "bcaad756-a540-42fd-bd07-73708ad810ec",
+      "type": "Shutdown",
+      "cpuMs": 422,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 29183785,
+        "heap": 18813944,
+        "external": 10369841
+      }
+    },
+    {
+      "executionId": "ec5143d0-92a1-4ae6-9331-94136a6b082d",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "ec5143d0-92a1-4ae6-9331-94136a6b082d",
+      "type": "Shutdown",
+      "cpuMs": 336,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 23179449,
+        "heap": 15340160,
+        "external": 7839289
+      }
+    },
+    {
+      "executionId": "37f02479-e18d-4ecb-9fc7-bb0970907df3",
+      "type": "Boot",
+      "bootMs": 46
+    },
+    {
+      "executionId": "37f02479-e18d-4ecb-9fc7-bb0970907df3",
+      "type": "Shutdown",
+      "cpuMs": 420,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 29044940,
+        "heap": 18673784,
+        "external": 10371156
+      }
+    },
+    {
+      "executionId": "dc359e4c-a82b-4ab7-bcd9-462b39807084",
+      "type": "Boot",
+      "bootMs": 39
+    },
+    {
+      "executionId": "dc359e4c-a82b-4ab7-bcd9-462b39807084",
+      "type": "Shutdown",
+      "cpuMs": 335,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 23182659,
+        "heap": 15342672,
+        "external": 7839987
+      }
+    },
+    {
+      "executionId": "e9ec6838-8ddc-4844-968b-41e0855ce469",
+      "type": "Boot",
+      "bootMs": 74
+    },
+    {
+      "executionId": "e9ec6838-8ddc-4844-968b-41e0855ce469",
+      "type": "Shutdown",
+      "cpuMs": 417,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 29468263,
+        "heap": 19095792,
+        "external": 10372471
+      }
+    },
+    {
+      "executionId": "256a2416-7200-407d-a54f-f31d8bd8d45b",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "256a2416-7200-407d-a54f-f31d8bd8d45b",
+      "type": "Shutdown",
+      "cpuMs": 311,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 23243677,
+        "heap": 15402992,
+        "external": 7840685
+      }
+    },
+    {
+      "executionId": "a7b691cd-70f5-48ad-b36e-c44ad750f07d",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "a7b691cd-70f5-48ad-b36e-c44ad750f07d",
+      "type": "Shutdown",
+      "cpuMs": 361,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 29290202,
+        "heap": 18916416,
+        "external": 10373786
+      }
+    },
+    {
+      "executionId": "81452056-26fe-44d3-aed5-0e23b58724b9",
+      "type": "Boot",
+      "bootMs": 40
+    },
+    {
+      "executionId": "81452056-26fe-44d3-aed5-0e23b58724b9",
+      "type": "Shutdown",
+      "cpuMs": 347,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 23255839,
+        "heap": 15414456,
+        "external": 7841383
+      }
+    },
+    {
+      "executionId": "a71af3f0-a49d-4c5e-9d2e-d910eccd8e07",
+      "type": "Boot",
+      "bootMs": 38
+    },
+    {
+      "executionId": "a71af3f0-a49d-4c5e-9d2e-d910eccd8e07",
+      "type": "Shutdown",
+      "cpuMs": 399,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 29118421,
+        "heap": 18743320,
+        "external": 10375101
+      }
+    },
+    {
+      "executionId": "598d4ff0-9ba4-45e1-bb25-f00208c07ef3",
+      "type": "Boot",
+      "bootMs": 53
+    },
+    {
+      "executionId": "598d4ff0-9ba4-45e1-bb25-f00208c07ef3",
+      "type": "Shutdown",
+      "cpuMs": 370,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 23297465,
+        "heap": 15455384,
+        "external": 7842081
+      }
+    },
+    {
+      "executionId": "a2e5aba7-a1c4-4aa2-af84-48f241e8625c",
+      "type": "Boot",
+      "bootMs": 42
+    },
+    {
+      "executionId": "a2e5aba7-a1c4-4aa2-af84-48f241e8625c",
+      "type": "Shutdown",
+      "cpuMs": 456,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 29219616,
+        "heap": 18843200,
+        "external": 10376416
+      }
+    },
+    {
+      "executionId": "edf26f25-5ce8-48a9-b955-2a4d422de435",
+      "type": "Boot",
+      "bootMs": 41
+    },
+    {
+      "executionId": "edf26f25-5ce8-48a9-b955-2a4d422de435",
+      "type": "Shutdown",
+      "cpuMs": 327,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 23351819,
+        "heap": 15509040,
+        "external": 7842779
+      }
+    },
+    {
+      "executionId": "f89e616d-412e-408c-b3b3-ef85fbd71cbc",
+      "type": "Boot",
+      "bootMs": 44
+    },
+    {
+      "executionId": "f89e616d-412e-408c-b3b3-ef85fbd71cbc",
+      "type": "Shutdown",
+      "cpuMs": 519,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 29246092,
+        "heap": 18868360,
+        "external": 10377732
+      }
+    },
+    {
+      "executionId": "1a289b37-5065-480c-bec8-eb7f541b12ce",
+      "type": "Boot",
+      "bootMs": 40
+    },
+    {
+      "executionId": "1a289b37-5065-480c-bec8-eb7f541b12ce",
+      "type": "Shutdown",
+      "cpuMs": 351,
+      "reason": "EarlyDrop",
+      "memory": {
+        "total": 23358989,
+        "heap": 15515512,
+        "external": 7843477
+      }
+    }
+  ],
+  "sourceHashes": {
+    "apps/mobile/src/finance/engine.ts": "62338c4ffcdaa8a6acf270979489883344164fc3f99076fb0fb03ff6213fbae7",
+    "apps/mobile/src/finance/checkpoint.ts": "9e77715072cdbacd28ae1ae6c5c2caa306f04722ec182ab72481b2777d90bb1c",
+    "apps/mobile/src/finance/types.ts": "8cbf5ee31f19a0a6df79f53103fe23901aef3b9e814da5de77cd42affe3a5e8b",
+    "apps/mobile/src/finance/money-calendar.ts": "63006abd19e84ac8e4de972de71d5e9c41b9a01948af2bd5a5a62531296b5202",
+    "services/backend/src/finance.ts": "4f2dcca4ec12c7cce95b147a62fa686bd795975bba58188224fe60724d75e040",
+    "services/backend/src/finance-checkpoints.ts": "8fef6bc12db536bbb6ec2d696f07b5ba394e43f2011aae7cd6f821de8d55ce9e",
+    "services/backend/src/finance-history.ts": "27122c47f749c39d532359c7ede3faf8c62eea30cf3dde19ac6476c294c32b54",
+    "services/backend/scripts/finance-checkpoint-benchmark.mjs": "e5e49538c7f05158d4e7b3b3885cb3886009f23f7159d4d32c8c985f9d2cd9d1",
+    "services/backend/scripts/finance-checkpoint-family-probe.mjs": "adf02d62bb0f547667876085d624787e68189a10c53db2827dd72b1004fd3baf",
+    "services/backend/scripts/finance-checkpoint-client-probe.mjs": "43852b2057af93135c1fed9282d18c962b110d5a02af137081441a6dc5ecd4c7",
+    "services/backend/scripts/finance-checkpoint-edge-probe.mjs": "3a0ec586f301f224f0e2b755749aba2aa046a90abc84756f37ff91d9b0d784ee"
+  },
+  "generatedHashes": {
+    "main/index.ts": "09238652e0febe78bf63382a694bce94936dfa184f269f81e2883ad3e18a0271",
+    "user/index.ts": "afa4f9d78001947874fa8254b54a7f49ce814a19c069763e014b7455b256b408",
+    "user/finance.bundle.js": "6b6908cc7d08f9d693250d42a04fa039c5b2d99018758c9bc352486464b12830",
+    "events/index.ts": "a869ee34a777068cb8f0d2e48a0fdc19535dabb6086d4ea2b67bc7ee7d189430"
+  },
+  "references": {
+    "options": "https://github.com/supabase/edge-runtime/blob/v1.78.1/examples/main/index.ts",
+    "events": "https://github.com/supabase/edge-runtime/blob/v1.78.1/ext/event_worker/events.rs",
+    "eventWorker": "https://github.com/supabase/edge-runtime/blob/v1.78.1/examples/event-manager/index.ts",
+    "policies": "https://github.com/supabase/edge-runtime/blob/v1.78.1/cli/src/flags.rs",
+    "hostNetworking": "https://docs.docker.com/desktop/features/networking/networking-how-tos/",
+    "hostedLimits": "https://supabase.com/docs/guides/functions/limits"
+  },
+  "noHostedQualification": true,
+  "productionApiModified": false,
+  "jwtVerificationDisabled": false,
+  "nodeModelMemoryNotCountedAsIsolate": true,
+  "transport": "127.0.0.1 host HTTP, Docker host.docker.internal, ephemeral synthetic capability; no real credentials",
+  "limitations": [
+    "Cold isolate per command/read differs from warm NodeIPC worker reuse and is reported explicitly.",
+    "Runtime shutdown memory is a snapshot, not a certified peak; hard-limit termination events are retained and count as failures.",
+    "Model replaces SQL/Auth; local runtime/image/Docker is not the hosted deployment.",
+    "No source/runtime/storage limits raised."
+  ],
+  "hostLoopbackHandshake": true,
+  "verdicts": [
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-1",
+      "executionId": "87369134-08b7-4a70-b386-26edc4ddee5d",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "87369134-08b7-4a70-b386-26edc4ddee5d",
+        "type": "Shutdown",
+        "cpuMs": 194,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 16622001,
+          "heap": 12878600,
+          "external": 3743401
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-2",
+      "executionId": "1cadb08c-444c-4fc5-bb04-78b50c5f45d9",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "1cadb08c-444c-4fc5-bb04-78b50c5f45d9",
+        "type": "Shutdown",
+        "cpuMs": 138,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14443619,
+          "heap": 11101040,
+          "external": 3342579
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-3",
+      "executionId": "25f56bf7-44ee-4978-b5e9-302c3f23444f",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "25f56bf7-44ee-4978-b5e9-302c3f23444f",
+        "type": "Shutdown",
+        "cpuMs": 196,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 16410581,
+          "heap": 12666072,
+          "external": 3744509
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-4",
+      "executionId": "6c6a680e-7f93-4c0a-84b8-03a6fbb3ff20",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "6c6a680e-7f93-4c0a-84b8-03a6fbb3ff20",
+        "type": "Shutdown",
+        "cpuMs": 125,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14755866,
+          "heap": 11412912,
+          "external": 3342954
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-5",
+      "executionId": "2f98929b-0584-43c6-8d0b-c1e293f0bc52",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "2f98929b-0584-43c6-8d0b-c1e293f0bc52",
+        "type": "Shutdown",
+        "cpuMs": 203,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 16686153,
+          "heap": 12985328,
+          "external": 3700825
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-6",
+      "executionId": "9c99a135-a143-4287-b61a-ce34f7caaa58",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "9c99a135-a143-4287-b61a-ce34f7caaa58",
+        "type": "Shutdown",
+        "cpuMs": 80,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 13356209,
+          "heap": 10057672,
+          "external": 3298537
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-7",
+      "executionId": "68f44b4d-c0b3-4fd1-b784-c688709948b3",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "68f44b4d-c0b3-4fd1-b784-c688709948b3",
+        "type": "Shutdown",
+        "cpuMs": 130,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 15118223,
+          "heap": 11490224,
+          "external": 3627999
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-8",
+      "executionId": "ab01ebb3-85cd-4e6f-b900-3722137e66c0",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "ab01ebb3-85cd-4e6f-b900-3722137e66c0",
+        "type": "Shutdown",
+        "cpuMs": 91,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 13425072,
+          "heap": 10126160,
+          "external": 3298912
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-9",
+      "executionId": "9b5afa86-aa19-44b1-a0fd-41855f9237b6",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "9b5afa86-aa19-44b1-a0fd-41855f9237b6",
+        "type": "Shutdown",
+        "cpuMs": 128,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14971051,
+          "heap": 11341944,
+          "external": 3629107
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-10",
+      "executionId": "d27e4444-6cc1-4a32-a9b6-b3e6e607bd5d",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "d27e4444-6cc1-4a32-a9b6-b3e6e607bd5d",
+        "type": "Shutdown",
+        "cpuMs": 75,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 13573167,
+          "heap": 10273880,
+          "external": 3299287
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-11",
+      "executionId": "99042385-16ae-44a5-96d1-25bdf71d4c93",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "99042385-16ae-44a5-96d1-25bdf71d4c93",
+        "type": "Shutdown",
+        "cpuMs": 127,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14738951,
+          "heap": 10766920,
+          "external": 3972031
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-12",
+      "executionId": "6989e21c-1229-4160-9a5b-1685cee8024b",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "6989e21c-1229-4160-9a5b-1685cee8024b",
+        "type": "Shutdown",
+        "cpuMs": 80,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 13339422,
+          "heap": 10039760,
+          "external": 3299662
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-13",
+      "executionId": "d309f4eb-1871-4d56-bb52-22780e0e7d59",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "d309f4eb-1871-4d56-bb52-22780e0e7d59",
+        "type": "Shutdown",
+        "cpuMs": 126,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14976436,
+          "heap": 11345112,
+          "external": 3631324
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-14",
+      "executionId": "7cdf3de7-82ab-4258-b35f-068b82d5d1c8",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "7cdf3de7-82ab-4258-b35f-068b82d5d1c8",
+        "type": "Shutdown",
+        "cpuMs": 83,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 13387997,
+          "heap": 10087960,
+          "external": 3300037
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-15",
+      "executionId": "7640671d-61e8-4551-bdec-ed3e61f65723",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "7640671d-61e8-4551-bdec-ed3e61f65723",
+        "type": "Shutdown",
+        "cpuMs": 133,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14974432,
+          "heap": 11342000,
+          "external": 3632432
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-16",
+      "executionId": "c8571306-dbe7-4a18-b4fe-bc7d82d03642",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "c8571306-dbe7-4a18-b4fe-bc7d82d03642",
+        "type": "Shutdown",
+        "cpuMs": 96,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 13605668,
+          "heap": 10305256,
+          "external": 3300412
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-17",
+      "executionId": "70dffde5-d4b4-40a9-8235-7596a0e24bf1",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "70dffde5-d4b4-40a9-8235-7596a0e24bf1",
+        "type": "Shutdown",
+        "cpuMs": 136,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14982652,
+          "heap": 11349112,
+          "external": 3633540
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-18",
+      "executionId": "d24eef27-37a0-45e5-a344-63a6ae8a20fa",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "d24eef27-37a0-45e5-a344-63a6ae8a20fa",
+        "type": "Shutdown",
+        "cpuMs": 79,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 13924052,
+          "heap": 10623264,
+          "external": 3300788
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-19",
+      "executionId": "efe6941a-4d30-45d8-ad57-35a267a90b27",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "efe6941a-4d30-45d8-ad57-35a267a90b27",
+        "type": "Shutdown",
+        "cpuMs": 192,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 15090403,
+          "heap": 11455752,
+          "external": 3634651
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-20",
+      "executionId": "b13eda53-4fa6-4cb2-b176-731b2d70a72d",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "b13eda53-4fa6-4cb2-b176-731b2d70a72d",
+        "type": "Shutdown",
+        "cpuMs": 81,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 13373643,
+          "heap": 10072480,
+          "external": 3301163
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-21",
+      "executionId": "8b52872a-c0ca-4a93-9ca1-fb957df47018",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "8b52872a-c0ca-4a93-9ca1-fb957df47018",
+        "type": "Shutdown",
+        "cpuMs": 180,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 16181821,
+          "heap": 12438832,
+          "external": 3742989
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-22",
+      "executionId": "debbbb20-d819-41a6-965e-a35295e1ab1b",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "debbbb20-d819-41a6-965e-a35295e1ab1b",
+        "type": "Shutdown",
+        "cpuMs": 134,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14658081,
+          "heap": 11315528,
+          "external": 3342553
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-23",
+      "executionId": "03d5c751-fc91-4348-8808-d7e5503ce434",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "03d5c751-fc91-4348-8808-d7e5503ce434",
+        "type": "Shutdown",
+        "cpuMs": 169,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 16011883,
+          "heap": 12267928,
+          "external": 3743955
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-24",
+      "executionId": "4aecb0fe-f6fa-4c99-be5d-66ff6ed0c9fc",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "4aecb0fe-f6fa-4c99-be5d-66ff6ed0c9fc",
+        "type": "Shutdown",
+        "cpuMs": 134,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14430902,
+          "heap": 11088000,
+          "external": 3342902
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-25",
+      "executionId": "719a3cb5-6345-4d24-9cd7-9505ca3adda8",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "719a3cb5-6345-4d24-9cd7-9505ca3adda8",
+        "type": "Shutdown",
+        "cpuMs": 198,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 17410580,
+          "heap": 13368704,
+          "external": 4041876
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-26",
+      "executionId": "915fb59f-322e-48bc-a3ae-e77698e97d33",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "915fb59f-322e-48bc-a3ae-e77698e97d33",
+        "type": "Shutdown",
+        "cpuMs": 78,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 13294479,
+          "heap": 9996088,
+          "external": 3298391
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-27",
+      "executionId": "4f9c689f-5aba-4c04-acfb-aa908514190d",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "4f9c689f-5aba-4c04-acfb-aa908514190d",
+        "type": "Shutdown",
+        "cpuMs": 121,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 15559232,
+          "heap": 11768704,
+          "external": 3790528
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-28",
+      "executionId": "c9fe94af-b82b-47cc-acba-047584debced",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "c9fe94af-b82b-47cc-acba-047584debced",
+        "type": "Shutdown",
+        "cpuMs": 82,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 13309180,
+          "heap": 10010440,
+          "external": 3298740
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-29",
+      "executionId": "52e8d44f-f2db-419d-9db6-735968d4b55f",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "52e8d44f-f2db-419d-9db6-735968d4b55f",
+        "type": "Shutdown",
+        "cpuMs": 122,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 15478974,
+          "heap": 11687480,
+          "external": 3791494
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-30",
+      "executionId": "778246ba-afe4-4b37-89aa-de84948e0e9c",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "778246ba-afe4-4b37-89aa-de84948e0e9c",
+        "type": "Shutdown",
+        "cpuMs": 72,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 13413689,
+          "heap": 10114600,
+          "external": 3299089
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-31",
+      "executionId": "3330e42d-ef33-42e3-9a84-99330696515e",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "3330e42d-ef33-42e3-9a84-99330696515e",
+        "type": "Shutdown",
+        "cpuMs": 117,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 15689732,
+          "heap": 11897272,
+          "external": 3792460
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-32",
+      "executionId": "6d8746f0-5c58-46d7-b4fa-7bc0c07f3c64",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "6d8746f0-5c58-46d7-b4fa-7bc0c07f3c64",
+        "type": "Shutdown",
+        "cpuMs": 76,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 13340294,
+          "heap": 10040856,
+          "external": 3299438
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-33",
+      "executionId": "8ee79b4c-6168-4c23-b265-9a6b1bc703e3",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "8ee79b4c-6168-4c23-b265-9a6b1bc703e3",
+        "type": "Shutdown",
+        "cpuMs": 115,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 16072942,
+          "heap": 12101144,
+          "external": 3971798
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-34",
+      "executionId": "47deb18c-fec7-40c9-9f0c-f51b4713489f",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "47deb18c-fec7-40c9-9f0c-f51b4713489f",
+        "type": "Shutdown",
+        "cpuMs": 73,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 13488899,
+          "heap": 10189112,
+          "external": 3299787
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-35",
+      "executionId": "d54e4142-32d3-4af3-9bb6-e422aac3442b",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "d54e4142-32d3-4af3-9bb6-e422aac3442b",
+        "type": "Shutdown",
+        "cpuMs": 125,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 16118908,
+          "heap": 12146144,
+          "external": 3972764
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-36",
+      "executionId": "69ca1e52-3ef9-42b7-9d4c-990a6e756476",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "69ca1e52-3ef9-42b7-9d4c-990a6e756476",
+        "type": "Shutdown",
+        "cpuMs": 74,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 13586144,
+          "heap": 10286008,
+          "external": 3300136
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-37",
+      "executionId": "989a77bf-f375-4ecc-bd24-e909ae456803",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "989a77bf-f375-4ecc-bd24-e909ae456803",
+        "type": "Shutdown",
+        "cpuMs": 115,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14657338,
+          "heap": 10683608,
+          "external": 3973730
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-38",
+      "executionId": "058aaac4-03e4-4fdb-83a0-0992fd104d5a",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "058aaac4-03e4-4fdb-83a0-0992fd104d5a",
+        "type": "Shutdown",
+        "cpuMs": 76,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 13687590,
+          "heap": 10387104,
+          "external": 3300486
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-39",
+      "executionId": "0b760fa9-8554-4ca9-856d-d23bcaafff57",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "0b760fa9-8554-4ca9-856d-d23bcaafff57",
+        "type": "Shutdown",
+        "cpuMs": 118,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14613650,
+          "heap": 10638952,
+          "external": 3974698
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-40",
+      "executionId": "e59f42f9-2850-4452-9b2a-91551e246b47",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "e59f42f9-2850-4452-9b2a-91551e246b47",
+        "type": "Shutdown",
+        "cpuMs": 79,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 13616691,
+          "heap": 10315856,
+          "external": 3300835
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-41",
+      "executionId": "aec37dea-57d0-418a-9ac5-b69c067fe167",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "aec37dea-57d0-418a-9ac5-b69c067fe167",
+        "type": "Shutdown",
+        "cpuMs": 258,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 15764977,
+          "heap": 12059088,
+          "external": 3705889
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-42",
+      "executionId": "873097f7-097e-4b83-860f-ce7e3c8c25e0",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "873097f7-097e-4b83-860f-ce7e3c8c25e0",
+        "type": "Shutdown",
+        "cpuMs": 229,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 18424885,
+          "heap": 14837800,
+          "external": 3587085
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-43",
+      "executionId": "4873dbb5-392b-4551-838c-ada559b0bff1",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "4873dbb5-392b-4551-838c-ada559b0bff1",
+        "type": "Shutdown",
+        "cpuMs": 268,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 15795484,
+          "heap": 12088592,
+          "external": 3706892
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-44",
+      "executionId": "7aae5743-eef8-41d0-8f40-47a97fd0f579",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "7aae5743-eef8-41d0-8f40-47a97fd0f579",
+        "type": "Shutdown",
+        "cpuMs": 199,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 18236316,
+          "heap": 14648856,
+          "external": 3587460
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-45",
+      "executionId": "28d83bc4-6ed8-4b38-9c67-cce9b406ad39",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "28d83bc4-6ed8-4b38-9c67-cce9b406ad39",
+        "type": "Shutdown",
+        "cpuMs": 442,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 15917902,
+          "heap": 11957528,
+          "external": 3960374
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-46",
+      "executionId": "1536504a-0ede-44be-8451-1c671ee7526c",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "1536504a-0ede-44be-8451-1c671ee7526c",
+        "type": "Shutdown",
+        "cpuMs": 100,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 15476777,
+          "heap": 11978008,
+          "external": 3498769
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-47",
+      "executionId": "f56e9a4b-4b30-43f0-a70f-9d1ff30029d1",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "f56e9a4b-4b30-43f0-a70f-9d1ff30029d1",
+        "type": "Shutdown",
+        "cpuMs": 156,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 16758399,
+          "heap": 12388120,
+          "external": 4370279
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-48",
+      "executionId": "d1cb6d23-5123-4ccb-9936-ce8055894b90",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "d1cb6d23-5123-4ccb-9936-ce8055894b90",
+        "type": "Shutdown",
+        "cpuMs": 104,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14862624,
+          "heap": 11363480,
+          "external": 3499144
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-49",
+      "executionId": "8edb3209-941b-48ca-802a-3319b41c59c0",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "8edb3209-941b-48ca-802a-3319b41c59c0",
+        "type": "Shutdown",
+        "cpuMs": 153,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 16769123,
+          "heap": 12397736,
+          "external": 4371387
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-50",
+      "executionId": "79564b84-e332-405f-b7f9-c1e3115fbce0",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "79564b84-e332-405f-b7f9-c1e3115fbce0",
+        "type": "Shutdown",
+        "cpuMs": 113,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14981431,
+          "heap": 11481912,
+          "external": 3499519
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-51",
+      "executionId": "acc22687-e8fd-49c9-8879-8d2feb5bc7ad",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "acc22687-e8fd-49c9-8879-8d2feb5bc7ad",
+        "type": "Shutdown",
+        "cpuMs": 137,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 16718495,
+          "heap": 12346000,
+          "external": 4372495
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-52",
+      "executionId": "00bb5709-e153-4140-8b8d-85f8d574cb87",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "00bb5709-e153-4140-8b8d-85f8d574cb87",
+        "type": "Shutdown",
+        "cpuMs": 101,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14981526,
+          "heap": 11481632,
+          "external": 3499894
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-53",
+      "executionId": "eae0e4d0-51d0-4ad7-81ba-52769e4691c8",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "eae0e4d0-51d0-4ad7-81ba-52769e4691c8",
+        "type": "Shutdown",
+        "cpuMs": 153,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 17376268,
+          "heap": 13344480,
+          "external": 4031788
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-54",
+      "executionId": "6b138784-fbac-4c69-a192-a99b24007a2e",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "6b138784-fbac-4c69-a192-a99b24007a2e",
+        "type": "Shutdown",
+        "cpuMs": 103,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14933237,
+          "heap": 11432968,
+          "external": 3500269
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-55",
+      "executionId": "453e7f26-a84e-48a1-a861-c9362dcf2355",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "453e7f26-a84e-48a1-a861-c9362dcf2355",
+        "type": "Shutdown",
+        "cpuMs": 142,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 17343672,
+          "heap": 13310776,
+          "external": 4032896
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-56",
+      "executionId": "21ece188-1805-41f7-9a0a-184047c9281e",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "21ece188-1805-41f7-9a0a-184047c9281e",
+        "type": "Shutdown",
+        "cpuMs": 123,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14916660,
+          "heap": 11416016,
+          "external": 3500644
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-57",
+      "executionId": "d6cfc7f3-2c69-469f-b622-1ffe34ce8a25",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "d6cfc7f3-2c69-469f-b622-1ffe34ce8a25",
+        "type": "Shutdown",
+        "cpuMs": 139,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 17397380,
+          "heap": 13363376,
+          "external": 4034004
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-58",
+      "executionId": "8c52522b-86ef-462e-84bb-a232e9e4369d",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "8c52522b-86ef-462e-84bb-a232e9e4369d",
+        "type": "Shutdown",
+        "cpuMs": 98,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 15134196,
+          "heap": 11633176,
+          "external": 3501020
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-59",
+      "executionId": "385e8fc3-2541-4749-adef-e77ef37777ab",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "385e8fc3-2541-4749-adef-e77ef37777ab",
+        "type": "Shutdown",
+        "cpuMs": 147,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 17342363,
+          "heap": 13307248,
+          "external": 4035115
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-60",
+      "executionId": "3aadf053-8e15-4b4a-989d-045f1f3da071",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "3aadf053-8e15-4b4a-989d-045f1f3da071",
+        "type": "Shutdown",
+        "cpuMs": 96,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 15059171,
+          "heap": 11557776,
+          "external": 3501395
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-61",
+      "executionId": "534e2feb-b656-43a4-bb2d-f8e77d12424e",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "534e2feb-b656-43a4-bb2d-f8e77d12424e",
+        "type": "Shutdown",
+        "cpuMs": 254,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 15608026,
+          "heap": 11902280,
+          "external": 3705746
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-62",
+      "executionId": "d691d6f8-6b90-44fe-ab88-e90ef9d97ae2",
+      "completeMetrics": false,
+      "functionalPass": true,
+      "shutdown": null,
+      "fatal": false,
+      "localIsolateReferencePass": false
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-63",
+      "executionId": "1da786eb-21a3-4df2-a13d-8c245a847232",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "1da786eb-21a3-4df2-a13d-8c245a847232",
+        "type": "Shutdown",
+        "cpuMs": 263,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 15613139,
+          "heap": 11906776,
+          "external": 3706363
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-64",
+      "executionId": "f08b33f2-f9aa-4415-813f-d2f14ea38054",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "f08b33f2-f9aa-4415-813f-d2f14ea38054",
+        "type": "Shutdown",
+        "cpuMs": 198,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 18139008,
+          "heap": 14551600,
+          "external": 3587408
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-65",
+      "executionId": "20ecc307-bdfc-4a51-88eb-e83a8d7632f9",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "20ecc307-bdfc-4a51-88eb-e83a8d7632f9",
+        "type": "Shutdown",
+        "cpuMs": 285,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 15109166,
+          "heap": 11491288,
+          "external": 3617878
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-66",
+      "executionId": "b597edcc-5d61-49a6-ad51-389265db9a1e",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "b597edcc-5d61-49a6-ad51-389265db9a1e",
+        "type": "Shutdown",
+        "cpuMs": 92,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 15390527,
+          "heap": 11891904,
+          "external": 3498623
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-67",
+      "executionId": "138ba9b5-1c96-47e4-ac96-649885c60030",
+      "completeMetrics": false,
+      "functionalPass": true,
+      "shutdown": null,
+      "fatal": false,
+      "localIsolateReferencePass": false
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-68",
+      "executionId": "949e0770-0f23-437f-b2bf-af72e50f42b9",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "949e0770-0f23-437f-b2bf-af72e50f42b9",
+        "type": "Shutdown",
+        "cpuMs": 153,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14921780,
+          "heap": 11422808,
+          "external": 3498972
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-69",
+      "executionId": "a117b414-6904-4d42-b84e-7210daf8fba0",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "a117b414-6904-4d42-b84e-7210daf8fba0",
+        "type": "Shutdown",
+        "cpuMs": 160,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 17621966,
+          "heap": 13430008,
+          "external": 4191958
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-70",
+      "executionId": "052c49d1-5543-44d8-9697-a92241912d28",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "052c49d1-5543-44d8-9697-a92241912d28",
+        "type": "Shutdown",
+        "cpuMs": 103,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 15564705,
+          "heap": 12065384,
+          "external": 3499321
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-71",
+      "executionId": "45043d68-91b8-4df5-89f4-9cc96e4aeb97",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "45043d68-91b8-4df5-89f4-9cc96e4aeb97",
+        "type": "Shutdown",
+        "cpuMs": 142,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 17712492,
+          "heap": 13519568,
+          "external": 4192924
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-72",
+      "executionId": "2798787e-759f-48e1-8f8a-ca0a5b3094c3",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "2798787e-759f-48e1-8f8a-ca0a5b3094c3",
+        "type": "Shutdown",
+        "cpuMs": 106,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14871046,
+          "heap": 11371376,
+          "external": 3499670
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-73",
+      "executionId": "dc177e0f-c2a5-4008-a6dd-575edca8e74e",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "dc177e0f-c2a5-4008-a6dd-575edca8e74e",
+        "type": "Shutdown",
+        "cpuMs": 143,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 18129374,
+          "heap": 13757112,
+          "external": 4372262
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-74",
+      "executionId": "cb411f84-2f81-499c-bbb4-ef6c6bcf5672",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "cb411f84-2f81-499c-bbb4-ef6c6bcf5672",
+        "type": "Shutdown",
+        "cpuMs": 107,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14829811,
+          "heap": 11329792,
+          "external": 3500019
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-75",
+      "executionId": "2ed0ee9d-e4f6-4d06-963c-1a83d837d59d",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "2ed0ee9d-e4f6-4d06-963c-1a83d837d59d",
+        "type": "Shutdown",
+        "cpuMs": 142,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 16655660,
+          "heap": 12282432,
+          "external": 4373228
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-76",
+      "executionId": "92b85034-42ce-4997-99c6-fd9c022e4529",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "92b85034-42ce-4997-99c6-fd9c022e4529",
+        "type": "Shutdown",
+        "cpuMs": 93,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14834624,
+          "heap": 11334256,
+          "external": 3500368
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-77",
+      "executionId": "3cefa54f-4163-4bd8-88da-77adbdf30d8b",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "3cefa54f-4163-4bd8-88da-77adbdf30d8b",
+        "type": "Shutdown",
+        "cpuMs": 150,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 16823354,
+          "heap": 12449160,
+          "external": 4374194
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-78",
+      "executionId": "68894d69-9089-4250-9b42-2a65358cc8bb",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "68894d69-9089-4250-9b42-2a65358cc8bb",
+        "type": "Shutdown",
+        "cpuMs": 115,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14836510,
+          "heap": 11335792,
+          "external": 3500718
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-79",
+      "executionId": "86a22076-d8ee-4584-af44-bfd9e83d4c12",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "86a22076-d8ee-4584-af44-bfd9e83d4c12",
+        "type": "Shutdown",
+        "cpuMs": 149,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 16828730,
+          "heap": 12453568,
+          "external": 4375162
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-80",
+      "executionId": "c75e2c1b-ba50-44b1-b2e6-2f6dc62c9b17",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "c75e2c1b-ba50-44b1-b2e6-2f6dc62c9b17",
+        "type": "Shutdown",
+        "cpuMs": 106,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 14950323,
+          "heap": 11449256,
+          "external": 3501067
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-81",
+      "executionId": "9899d5ef-c05a-4193-9e35-02ab2fbb8cb2",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "9899d5ef-c05a-4193-9e35-02ab2fbb8cb2",
+        "type": "Shutdown",
+        "cpuMs": 1062,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 32178346,
+          "heap": 25740544,
+          "external": 6437802
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-82",
+      "executionId": "ccfb5b59-5867-4313-aca1-46064f4bf88d",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "ccfb5b59-5867-4313-aca1-46064f4bf88d",
+        "type": "Shutdown",
+        "cpuMs": 1065,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 27744683,
+          "heap": 18843688,
+          "external": 8900995
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-83",
+      "executionId": "e6496f2f-e7a3-4cc4-ab83-b0391907e78d",
+      "completeMetrics": false,
+      "functionalPass": true,
+      "shutdown": null,
+      "fatal": false,
+      "localIsolateReferencePass": false
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-84",
+      "executionId": "8c18813b-3516-4ab4-9017-5ba37d622e72",
+      "completeMetrics": false,
+      "functionalPass": true,
+      "shutdown": null,
+      "fatal": false,
+      "localIsolateReferencePass": false
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-85",
+      "executionId": "6539ac7c-b2fa-4250-8420-47e50072904e",
+      "completeMetrics": false,
+      "functionalPass": true,
+      "shutdown": null,
+      "fatal": false,
+      "localIsolateReferencePass": false
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-86",
+      "executionId": "2f1592da-200d-4505-869b-5346a27bfde4",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "2f1592da-200d-4505-869b-5346a27bfde4",
+        "type": "Shutdown",
+        "cpuMs": 346,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 23197907,
+          "heap": 15359024,
+          "external": 7838883
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-87",
+      "executionId": "fddf7b80-880f-4a5f-941c-ace5784471d5",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "fddf7b80-880f-4a5f-941c-ace5784471d5",
+        "type": "Shutdown",
+        "cpuMs": 424,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 29310061,
+          "heap": 18939160,
+          "external": 10370901
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-88",
+      "executionId": "b033290f-6028-4dfc-b3d2-67b24d0d9ea7",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "b033290f-6028-4dfc-b3d2-67b24d0d9ea7",
+        "type": "Shutdown",
+        "cpuMs": 314,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 23270361,
+          "heap": 15430728,
+          "external": 7839633
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-89",
+      "executionId": "fa6d82b3-33c6-4045-8a66-2beaecec042a",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "fa6d82b3-33c6-4045-8a66-2beaecec042a",
+        "type": "Shutdown",
+        "cpuMs": 417,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 29406512,
+          "heap": 19034128,
+          "external": 10372384
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-90",
+      "executionId": "dc4cc8e2-7147-48c4-8e23-c26b4d31d16e",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "dc4cc8e2-7147-48c4-8e23-c26b4d31d16e",
+        "type": "Shutdown",
+        "cpuMs": 326,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 23296311,
+          "heap": 15455928,
+          "external": 7840383
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-91",
+      "executionId": "32201186-b5f6-459b-9008-49684ec6ce91",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "32201186-b5f6-459b-9008-49684ec6ce91",
+        "type": "Shutdown",
+        "cpuMs": 395,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 29261611,
+          "heap": 18887744,
+          "external": 10373867
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-92",
+      "executionId": "cb01282f-1712-4ad2-83aa-6f182bc1ada4",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "cb01282f-1712-4ad2-83aa-6f182bc1ada4",
+        "type": "Shutdown",
+        "cpuMs": 331,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 23277293,
+          "heap": 15436160,
+          "external": 7841133
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-93",
+      "executionId": "9438e2d2-abf3-454f-80b9-51b2b16e2bbb",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "9438e2d2-abf3-454f-80b9-51b2b16e2bbb",
+        "type": "Shutdown",
+        "cpuMs": 358,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 29570854,
+          "heap": 19195504,
+          "external": 10375350
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-94",
+      "executionId": "426c6721-d2bc-4625-9d36-233d8d4d1da5",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "426c6721-d2bc-4625-9d36-233d8d4d1da5",
+        "type": "Shutdown",
+        "cpuMs": 361,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 23228299,
+          "heap": 15386416,
+          "external": 7841883
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-95",
+      "executionId": "0822009e-3dee-4e0b-aa4b-112102d1afd8",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "0822009e-3dee-4e0b-aa4b-112102d1afd8",
+        "type": "Shutdown",
+        "cpuMs": 383,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 29489361,
+          "heap": 19112528,
+          "external": 10376833
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-96",
+      "executionId": "729a6534-4e07-4c61-bd14-fed131083a87",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "729a6534-4e07-4c61-bd14-fed131083a87",
+        "type": "Shutdown",
+        "cpuMs": 379,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 23351657,
+          "heap": 15509024,
+          "external": 7842633
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-97",
+      "executionId": "7944e34c-1c07-4ef3-8f30-edae45d09947",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "7944e34c-1c07-4ef3-8f30-edae45d09947",
+        "type": "Shutdown",
+        "cpuMs": 407,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 29404780,
+          "heap": 19026464,
+          "external": 10378316
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-98",
+      "executionId": "f0078789-9c69-4c99-a331-d9383626fd50",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "f0078789-9c69-4c99-a331-d9383626fd50",
+        "type": "Shutdown",
+        "cpuMs": 373,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 23357431,
+          "heap": 15514048,
+          "external": 7843383
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-99",
+      "executionId": "a92c5d33-604b-4da2-8fcd-82d1159fcb58",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "a92c5d33-604b-4da2-8fcd-82d1159fcb58",
+        "type": "Shutdown",
+        "cpuMs": 399,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 29560369,
+          "heap": 19180568,
+          "external": 10379801
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-100",
+      "executionId": "d5905115-6bbf-46f9-bf29-c4fb7136837b",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "d5905115-6bbf-46f9-bf29-c4fb7136837b",
+        "type": "Shutdown",
+        "cpuMs": 342,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 23450901,
+          "heap": 15606768,
+          "external": 7844133
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-101",
+      "executionId": "5cb7641f-12e1-406b-b755-5dff0989a0e7",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "5cb7641f-12e1-406b-b755-5dff0989a0e7",
+        "type": "Shutdown",
+        "cpuMs": 1213,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 31816902,
+          "heap": 25379480,
+          "external": 6437422
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-102",
+      "executionId": "8d035dcd-ad27-4164-844d-5962275f111e",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "8d035dcd-ad27-4164-844d-5962275f111e",
+        "type": "Shutdown",
+        "cpuMs": 980,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 27880847,
+          "heap": 18979904,
+          "external": 8900943
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-103",
+      "executionId": "dec4f4ac-2742-4f38-9564-39fdeb776ea5",
+      "completeMetrics": false,
+      "functionalPass": true,
+      "shutdown": null,
+      "fatal": false,
+      "localIsolateReferencePass": false
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-104",
+      "executionId": "d2bae685-2552-4804-863c-aaf0038f7ba8",
+      "completeMetrics": false,
+      "functionalPass": true,
+      "shutdown": null,
+      "fatal": false,
+      "localIsolateReferencePass": false
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-105",
+      "executionId": "36a23d91-1039-4df1-9bc0-3058bfc2d23b",
+      "completeMetrics": false,
+      "functionalPass": true,
+      "shutdown": null,
+      "fatal": false,
+      "localIsolateReferencePass": false
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-106",
+      "executionId": "b9ff1478-e700-4822-8c4b-3c9a93f87ee7",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "b9ff1478-e700-4822-8c4b-3c9a93f87ee7",
+        "type": "Shutdown",
+        "cpuMs": 374,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 23777039,
+          "heap": 15938448,
+          "external": 7838591
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-107",
+      "executionId": "bcaad756-a540-42fd-bd07-73708ad810ec",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "bcaad756-a540-42fd-bd07-73708ad810ec",
+        "type": "Shutdown",
+        "cpuMs": 422,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 29183785,
+          "heap": 18813944,
+          "external": 10369841
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-108",
+      "executionId": "ec5143d0-92a1-4ae6-9331-94136a6b082d",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "ec5143d0-92a1-4ae6-9331-94136a6b082d",
+        "type": "Shutdown",
+        "cpuMs": 336,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 23179449,
+          "heap": 15340160,
+          "external": 7839289
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-109",
+      "executionId": "37f02479-e18d-4ecb-9fc7-bb0970907df3",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "37f02479-e18d-4ecb-9fc7-bb0970907df3",
+        "type": "Shutdown",
+        "cpuMs": 420,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 29044940,
+          "heap": 18673784,
+          "external": 10371156
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-110",
+      "executionId": "dc359e4c-a82b-4ab7-bcd9-462b39807084",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "dc359e4c-a82b-4ab7-bcd9-462b39807084",
+        "type": "Shutdown",
+        "cpuMs": 335,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 23182659,
+          "heap": 15342672,
+          "external": 7839987
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-111",
+      "executionId": "e9ec6838-8ddc-4844-968b-41e0855ce469",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "e9ec6838-8ddc-4844-968b-41e0855ce469",
+        "type": "Shutdown",
+        "cpuMs": 417,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 29468263,
+          "heap": 19095792,
+          "external": 10372471
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-112",
+      "executionId": "256a2416-7200-407d-a54f-f31d8bd8d45b",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "256a2416-7200-407d-a54f-f31d8bd8d45b",
+        "type": "Shutdown",
+        "cpuMs": 311,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 23243677,
+          "heap": 15402992,
+          "external": 7840685
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-113",
+      "executionId": "a7b691cd-70f5-48ad-b36e-c44ad750f07d",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "a7b691cd-70f5-48ad-b36e-c44ad750f07d",
+        "type": "Shutdown",
+        "cpuMs": 361,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 29290202,
+          "heap": 18916416,
+          "external": 10373786
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-114",
+      "executionId": "81452056-26fe-44d3-aed5-0e23b58724b9",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "81452056-26fe-44d3-aed5-0e23b58724b9",
+        "type": "Shutdown",
+        "cpuMs": 347,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 23255839,
+          "heap": 15414456,
+          "external": 7841383
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-115",
+      "executionId": "a71af3f0-a49d-4c5e-9d2e-d910eccd8e07",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "a71af3f0-a49d-4c5e-9d2e-d910eccd8e07",
+        "type": "Shutdown",
+        "cpuMs": 399,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 29118421,
+          "heap": 18743320,
+          "external": 10375101
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-116",
+      "executionId": "598d4ff0-9ba4-45e1-bb25-f00208c07ef3",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "598d4ff0-9ba4-45e1-bb25-f00208c07ef3",
+        "type": "Shutdown",
+        "cpuMs": 370,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 23297465,
+          "heap": 15455384,
+          "external": 7842081
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-117",
+      "executionId": "a2e5aba7-a1c4-4aa2-af84-48f241e8625c",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "a2e5aba7-a1c4-4aa2-af84-48f241e8625c",
+        "type": "Shutdown",
+        "cpuMs": 456,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 29219616,
+          "heap": 18843200,
+          "external": 10376416
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-118",
+      "executionId": "edf26f25-5ce8-48a9-b955-2a4d422de435",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "edf26f25-5ce8-48a9-b955-2a4d422de435",
+        "type": "Shutdown",
+        "cpuMs": 327,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 23351819,
+          "heap": 15509040,
+          "external": 7842779
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-119",
+      "executionId": "f89e616d-412e-408c-b3b3-ef85fbd71cbc",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "f89e616d-412e-408c-b3b3-ef85fbd71cbc",
+        "type": "Shutdown",
+        "cpuMs": 519,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 29246092,
+          "heap": 18868360,
+          "external": 10377732
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    },
+    {
+      "invocation": "d07c9f9d7f6e49a79b2db8bf123070cf-120",
+      "executionId": "1a289b37-5065-480c-bec8-eb7f541b12ce",
+      "completeMetrics": true,
+      "functionalPass": true,
+      "shutdown": {
+        "executionId": "1a289b37-5065-480c-bec8-eb7f541b12ce",
+        "type": "Shutdown",
+        "cpuMs": 351,
+        "reason": "EarlyDrop",
+        "memory": {
+          "total": 23358989,
+          "heap": 15515512,
+          "external": 7843477
+        }
+      },
+      "fatal": false,
+      "localIsolateReferencePass": true
+    }
+  ],
+  "finalSourceHashes": {
+    "apps/mobile/src/finance/engine.ts": "62338c4ffcdaa8a6acf270979489883344164fc3f99076fb0fb03ff6213fbae7",
+    "apps/mobile/src/finance/checkpoint.ts": "9e77715072cdbacd28ae1ae6c5c2caa306f04722ec182ab72481b2777d90bb1c",
+    "apps/mobile/src/finance/types.ts": "8cbf5ee31f19a0a6df79f53103fe23901aef3b9e814da5de77cd42affe3a5e8b",
+    "apps/mobile/src/finance/money-calendar.ts": "63006abd19e84ac8e4de972de71d5e9c41b9a01948af2bd5a5a62531296b5202",
+    "services/backend/src/finance.ts": "4f2dcca4ec12c7cce95b147a62fa686bd795975bba58188224fe60724d75e040",
+    "services/backend/src/finance-checkpoints.ts": "8fef6bc12db536bbb6ec2d696f07b5ba394e43f2011aae7cd6f821de8d55ce9e",
+    "services/backend/src/finance-history.ts": "27122c47f749c39d532359c7ede3faf8c62eea30cf3dde19ac6476c294c32b54",
+    "services/backend/scripts/finance-checkpoint-benchmark.mjs": "e5e49538c7f05158d4e7b3b3885cb3886009f23f7159d4d32c8c985f9d2cd9d1",
+    "services/backend/scripts/finance-checkpoint-family-probe.mjs": "adf02d62bb0f547667876085d624787e68189a10c53db2827dd72b1004fd3baf",
+    "services/backend/scripts/finance-checkpoint-client-probe.mjs": "43852b2057af93135c1fed9282d18c962b110d5a02af137081441a6dc5ecd4c7",
+    "services/backend/scripts/finance-checkpoint-edge-probe.mjs": "3a0ec586f301f224f0e2b755749aba2aa046a90abc84756f37ff91d9b0d784ee"
+  },
+  "sourceUnchanged": true,
+  "allFunctionalPass": true,
+  "localIsolateReferencesPass": false
+}

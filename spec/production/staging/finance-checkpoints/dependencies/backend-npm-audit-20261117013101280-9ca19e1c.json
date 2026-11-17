@@ -1,0 +1,39 @@
+{
+    "format":  1,
+    "scope":  "services/backend",
+    "command":  "npm audit --json --ignore-scripts",
+    "startedAt":  "2026-11-17T01:30:47.6298215Z",
+    "completedAt":  "2026-11-17T01:31:01.2336168Z",
+    "exitCode":  0,
+    "status":  "completed",
+    "vulnerabilities":  {
+                            "info":  0,
+                            "low":  0,
+                            "moderate":  0,
+                            "high":  0,
+                            "critical":  0,
+                            "total":  0
+                        },
+    "dependencyCounts":  {
+                             "prod":  10,
+                             "dev":  61,
+                             "optional":  36,
+                             "peer":  0,
+                             "peerOptional":  0,
+                             "total":  70
+                         },
+    "beforeSha256":  {
+                         "package.json":  "6476a494a177f6009f5267354cf93bc7514960284242b58b5a209b4d994a3bd9",
+                         "package-lock.json":  "2fc6ae62460b6d93d0ee6ba51984c52b248d5199b019efa8d26f85b50be6e1d4"
+                     },
+    "afterSha256":  {
+                        "package.json":  "6476a494a177f6009f5267354cf93bc7514960284242b58b5a209b4d994a3bd9",
+                        "package-lock.json":  "2fc6ae62460b6d93d0ee6ba51984c52b248d5199b019efa8d26f85b50be6e1d4"
+                    },
+    "inputsUnchanged":  true,
+    "knownAdvisoryCheckOnly":  true,
+    "installedBytesVerified":  false,
+    "nativeArtifactAudit":  false,
+    "legalApproval":  false,
+    "errorDetailsRetained":  false
+}

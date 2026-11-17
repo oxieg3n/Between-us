@@ -1,0 +1,39 @@
+{
+    "format":  1,
+    "scope":  "apps/mobile",
+    "command":  "npm audit --json --ignore-scripts",
+    "startedAt":  "2026-11-17T01:30:47.6262780Z",
+    "completedAt":  "2026-11-17T01:31:01.4167102Z",
+    "exitCode":  0,
+    "status":  "completed",
+    "vulnerabilities":  {
+                            "info":  0,
+                            "low":  0,
+                            "moderate":  0,
+                            "high":  0,
+                            "critical":  0,
+                            "total":  0
+                        },
+    "dependencyCounts":  {
+                             "prod":  562,
+                             "dev":  291,
+                             "optional":  71,
+                             "peer":  36,
+                             "peerOptional":  0,
+                             "total":  911
+                         },
+    "beforeSha256":  {
+                         "package.json":  "8d2a3b8c8424ca49f449b52b6f4761ea59c8ea0e0a1f17bd132200d826b46ce7",
+                         "package-lock.json":  "262d6db1ac8e0c04d01048affa3df5d84e6f781332bc03e6f9b136ad3365adae"
+                     },
+    "afterSha256":  {
+                        "package.json":  "8d2a3b8c8424ca49f449b52b6f4761ea59c8ea0e0a1f17bd132200d826b46ce7",
+                        "package-lock.json":  "262d6db1ac8e0c04d01048affa3df5d84e6f781332bc03e6f9b136ad3365adae"
+                    },
+    "inputsUnchanged":  true,
+    "knownAdvisoryCheckOnly":  true,
+    "installedBytesVerified":  false,
+    "nativeArtifactAudit":  false,
+    "legalApproval":  false,
+    "errorDetailsRetained":  false
+}

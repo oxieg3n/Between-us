@@ -1,0 +1,32 @@
+{
+  "checkedAtUtc": "2026-11-17T02:40:28.230981+00:00",
+  "method": "Read official published pages; no hosted project provisioned or provider hardware measured.",
+  "sources": [
+    {
+      "url": "https://supabase.com/docs/guides/functions/limits",
+      "limits": {
+        "edgeMemoryPublishedMB": 256,
+        "edgeCpuMillisecondsPerRequest": 2000,
+        "freeWallSeconds": 150
+      }
+    },
+    {
+      "url": "https://supabase.com/pricing",
+      "limits": {
+        "freeDatabaseMB": 500,
+        "freeSharedDatabaseRamMB": 500,
+        "freeEgressGB": 5,
+        "freeCachedEgressGB": 5,
+        "freeStorageGB": 1,
+        "activeProjects": 2,
+        "inactivityPauseDays": 7
+      }
+    },
+    {
+      "url": "https://supabase.com/docs/guides/platform/compute-and-disk",
+      "note": "Free shared database resources are distinct from Edge user-worker limits; local SQL timings do not establish hosted throughput."
+    }
+  ],
+  "hostedQualification": false,
+  "paidResourcesActivated": false
+}

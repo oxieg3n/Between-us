@@ -1,0 +1,167 @@
+{
+  "format": 1,
+  "runId": "f7c653fdebc543d19b85d73c93aae535",
+  "scope": "LOCAL synthetic logical recovery",
+  "status": "PASS",
+  "sourceDatabaseMutations": "new owned fixture only",
+  "hostedDR": false,
+  "offsiteCopy": false,
+  "providerDeletion": false,
+  "journalRecovery": false,
+  "targetQuarantined": true,
+  "tool": {
+    "version": "1.3.2",
+    "archiveBytes": 20250704,
+    "archiveSha256": "f48d8f8f9ebe903ab5027ed067652f2cc1db94bc206976430133b905dcd8e8c7",
+    "license": "BSD-3-Clause"
+  },
+  "startedAt": "2026-11-17T00:38:31.610Z",
+  "stage": "complete-quarantine-retained",
+  "databaseVersion": "170011",
+  "dumpVersion": "pg_dump (PostgreSQL) 17.11",
+  "operation": "finance-exact-approval-retry",
+  "ownFixtureCreated": true,
+  "sourcePostSnapshotRevocation": true,
+  "sourceManagedOldTokenDenied": true,
+  "backup": {
+    "ciphertextHash": "2b9b844cb9daa8b0e1257a94f242456b66c0891148174b5c7627070fca5c439e",
+    "ciphertextBytes": 2243899,
+    "snapshotAt": "2026-11-17T00:38:35.423Z",
+    "tableCount": 88,
+    "totalRows": 17807,
+    "migrations": [
+      "202611160001",
+      "202611160002",
+      "202611160003",
+      "202611160004",
+      "202611160005",
+      "202611160006",
+      "202611160007",
+      "202611160008",
+      "202611160009",
+      "202611160010",
+      "202611160011",
+      "202611160012",
+      "202611160013",
+      "202611160014",
+      "202611160015",
+      "202611160016",
+      "202611160017",
+      "202611160018",
+      "202611160019",
+      "202611160020",
+      "202611160021",
+      "202611160022",
+      "202611160023",
+      "202611160024",
+      "202611160025",
+      "202611160026",
+      "202611160027",
+      "202611160028",
+      "202611160029",
+      "202611160030",
+      "202611160031"
+    ],
+    "structureHash": "7ef1b9517317c6dc4540896331bd657a42a79ae7f1f4d14215e5894e240d2659",
+    "sourceArchives": {
+      "families": 86,
+      "checkpoints": 23,
+      "visibleCapsules": 200,
+      "activeVisibleCapsules": 197,
+      "visibleCurrentEntities": 563,
+      "archivedOccurrences": 200,
+      "privateOrigins": 194,
+      "privateCapsules": 131,
+      "activePrivateCapsules": 125,
+      "projectionSnapshots": 29,
+      "activityRows": 2094,
+      "actualArchiveCoverage": true,
+      "checks": "canonical checkpoint/capsule/snapshot hashes; covered ledger prefixes; source/origin/residency/current-entity bindings"
+    }
+  },
+  "faults": {
+    "corruption": "maintained age CLI denied before target creation",
+    "truncation": "maintained age CLI denied before target creation",
+    "wrongKey": "maintained age CLI denied before target creation"
+  },
+  "restoredSourceArchives": {
+    "families": 86,
+    "checkpoints": 23,
+    "visibleCapsules": 200,
+    "activeVisibleCapsules": 197,
+    "visibleCurrentEntities": 563,
+    "archivedOccurrences": 200,
+    "privateOrigins": 194,
+    "privateCapsules": 131,
+    "activePrivateCapsules": 125,
+    "projectionSnapshots": 29,
+    "activityRows": 2094,
+    "actualArchiveCoverage": true,
+    "checks": "canonical checkpoint/capsule/snapshot hashes; covered ledger prefixes; source/origin/residency/current-entity bindings"
+  },
+  "snapshotIntegrity": "exact rows, table ACL/RLS, functions/policies, indexes/constraints/triggers, migrations, actual source archive integrity",
+  "restoredSqlSuites": [
+    {
+      "file": "finance.test.sql",
+      "sha256": "8916fe49dc5ad68d59c11edd4d9e90ff6954fe443c78e2f807a69618404f5311",
+      "assertions": 31
+    },
+    {
+      "file": "communication.test.sql",
+      "sha256": "238ce16d1b34592832d23d22cf21875d1aa32023ca7d95b9a9b46095e799254c",
+      "assertions": 82
+    },
+    {
+      "file": "privacy_lifecycle.test.sql",
+      "sha256": "f252a9db047dafad715539a01d5c89092718576079ef7eb96660c4bf78e42c6a",
+      "assertions": 71
+    },
+    {
+      "file": "message_receipts.test.sql",
+      "sha256": "743daf18332deaaba4625eb3da5f8276f511968d52754b10d3ad27b146abb116",
+      "assertions": 16
+    },
+    {
+      "file": "finance_checkpoints.test.sql",
+      "sha256": "0d0538e9a56537cbd85d84e17f24173d012a2863b05b2d279d5632b9a2749a95",
+      "assertions": 49
+    },
+    {
+      "file": "finance_private_archives.test.sql",
+      "sha256": "bbff524f7b05322c7e2b629f96503759e1b9ea90f0c3a3cede98ec5c2629b1c1",
+      "assertions": 40
+    },
+    {
+      "file": "finance_privacy_archives.test.sql",
+      "sha256": "8399aded1c1bc7447669b3281afc3b0e161813f0975bd1f66d691c73c35da1f4",
+      "assertions": 74
+    },
+    {
+      "file": "finance_write_admission.test.sql",
+      "sha256": "ec44b227a9e38213fa961d75e998c4e91e8010a4daa8a61edb3da6cf416035a3",
+      "assertions": 24
+    },
+    {
+      "file": "finance_archive_page_reads.test.sql",
+      "sha256": "7ac00d59cb42922345f7f0fc0a36dadd105f2bbca0eb8292682f90ca9d452318",
+      "assertions": 10
+    }
+  ],
+  "persistedIdempotency": {
+    "savedMessageUuidCount": 1,
+    "approvalCount": 1,
+    "earnedCents": 400,
+    "changedBodyFinanceDenied": true
+  },
+  "replayAssertions": {
+    "erased": 0,
+    "retained": 1,
+    "commands": 1,
+    "sessions": 0,
+    "operators": 0
+  },
+  "restoreMilliseconds": 51563,
+  "snapshotAgeAtRecoveryMilliseconds": 53513,
+  "replayRuns": 2,
+  "completedAt": "2026-11-17T00:39:28.936Z"
+}
