@@ -1,0 +1,1572 @@
+{
+  "format": 1,
+  "recordedAtUtc": "2026-11-17T04:48:05.701632+00:00",
+  "engineeringCommit": "6d27b3a30e7049c9e6b7dd9119f9583f67a90a82",
+  "uiEngineeringCommit": "4cb4d0f",
+  "mobileBuild": "1116-FinanceCheckpoints-r3",
+  "backendBuild": "1116-FinanceCheckpoints-r2",
+  "branch": "feature/staging-release-qualification",
+  "root": "D:/projects/BetweenUs",
+  "sourceHashesAreRawWorktreeBytes": true,
+  "crossOsLineEndingNote": "Git source identity is authoritative; raw non-SQL newline hashes may differ on checkout. SQL migrations are pinned LF.",
+  "protectedPublicDemoBrandDiff": "none vs044450f",
+  "diagnostic": "intentionally untracked; unchangedSHA25634acb427bf1f0a4a1749104a4066bb389a54680641c2f9437fdfdc4186f8c56c",
+  "edgeBenchmark11CurrentSourceHashesMatch": true,
+  "sources": [
+    {
+      "path": ".gitattributes",
+      "sha256": "c1222b8ed23641ed6fd3b32e5b4d3179b07745fb53e74daa2f7c0d8729b368da",
+      "bytes": 144
+    },
+    {
+      "path": "Scripts/Start-ProductionAndroid.ps1",
+      "sha256": "53663fd2ca5da4b2707d9015cd1ae5710c06019256acab5b7e3c7c9e55382944",
+      "bytes": 15138
+    },
+    {
+      "path": "apps/mobile/app.json",
+      "sha256": "67743df68bb56f8aaf94c3f455928a375ff1801a54df1fc790e0d42508ac31c6",
+      "bytes": 2092
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/.gitignore",
+      "sha256": "6342787b4ab298195d8078b45f0b08c5915fb174d0c7589c3d4951d45e2d494c",
+      "bytes": 126
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/README.md",
+      "sha256": "1632871f9b05d33daf1db3aeff22ea9c69ba359b4fc3e5f1495d64bd4995329d",
+      "bytes": 3031
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/android/build.gradle",
+      "sha256": "c00b5d9a215ca78faa2b988f10ef6b110ca65d771d2a2158bc7d5a2cc8a33b85",
+      "bytes": 247
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/android/src/main/AndroidManifest.xml",
+      "sha256": "343d5be1ac17cdd45d1a2f2ddc616c509290e655869125a9422a96d88aa66066",
+      "bytes": 72
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/android/src/main/java/com/oxieg3n/betweenus/protection/BetweenUsProtectionModule.kt",
+      "sha256": "3363cfb0275513768bb585c24396f579b302ee3fdb11396319a48de37faf0223",
+      "bytes": 3343
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/expo-module.config.json",
+      "sha256": "ab558091028289deb1a06cd06186fc637e29c6ddf0a07dbf63cc24547dd4ef12",
+      "bytes": 189
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/index.ts",
+      "sha256": "124191ee3163126a75d2a43a2e5fc6c2c4dca946c30034f061a6771705d788b4",
+      "bytes": 517
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/ios/BetweenUsProtection.podspec",
+      "sha256": "c9624a04d7c65d2923d35e429afa47367f62a19d99371f89f875518f3ba21237",
+      "bytes": 584
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/ios/BetweenUsProtectionModule.swift",
+      "sha256": "e207074567e2bd289c0e0fa17fc33ffafaa6f86045718cb08785b89bbbd83d83",
+      "bytes": 3927
+    },
+    {
+      "path": "apps/mobile/modules/between-us-protection/package.json",
+      "sha256": "2f8581f105d0ef672d25f54dd323acff7a78f8e1ed5fcc833f7e4086ef425510",
+      "bytes": 101
+    },
+    {
+      "path": "apps/mobile/package-lock.json",
+      "sha256": "262d6db1ac8e0c04d01048affa3df5d84e6f781332bc03e6f9b136ad3365adae",
+      "bytes": 480329
+    },
+    {
+      "path": "apps/mobile/package.json",
+      "sha256": "8d2a3b8c8424ca49f449b52b6f4761ea59c8ea0e0a1f17bd132200d826b46ce7",
+      "bytes": 1992
+    },
+    {
+      "path": "apps/mobile/plugins/with-adaptive-display.js",
+      "sha256": "685d34280068f2838b9261db3f53a5484424f54ac01687d4d239bc80725402fb",
+      "bytes": 4361
+    },
+    {
+      "path": "apps/mobile/plugins/with-short-native-paths.js",
+      "sha256": "9604a4b8a6f60caeed5ab8e97e3412ce71e354b7ac7f06ee64a2fad164e8d6c1",
+      "bytes": 1702
+    },
+    {
+      "path": "apps/mobile/plugins/withPrivateCapturePermissions.cjs",
+      "sha256": "189cab22b2c73cc6f18cb03437055b0c4f4357e9a5281812582c6d4fda30e471",
+      "bytes": 1647
+    },
+    {
+      "path": "apps/mobile/plugins/withProductionSigning.cjs",
+      "sha256": "2cddd79ed9be55c97866296dad83de4cbf613b16a50b5513578f80fba1c6ad56",
+      "bytes": 8190
+    },
+    {
+      "path": "apps/mobile/plugins/withProductionTransport.cjs",
+      "sha256": "3eaeda7602fd3273e1159a1d0edb16ccee0460bdd64e2075bd9da7328ca39c2f",
+      "bytes": 7925
+    },
+    {
+      "path": "apps/mobile/plugins/withWritingConfiguration.cjs",
+      "sha256": "2c5bb659f90bfeec22788e50a85c5ac541697f060b1666db095e1dcfd4b3f2ae",
+      "bytes": 1299
+    },
+    {
+      "path": "apps/mobile/scripts/android-smoke.ps1",
+      "sha256": "affcaf4276560594de73623e687d29ff9e7492db6c24035512b481014f8f2c73",
+      "bytes": 8045
+    },
+    {
+      "path": "apps/mobile/scripts/capture-finance-checkpoints.py",
+      "sha256": "8d12221e42dde475cda850591ce6be4f074a7ccfb29b1b4d1060df41a3524ab3",
+      "bytes": 11231
+    },
+    {
+      "path": "apps/mobile/scripts/capture-finance-device-checks.py",
+      "sha256": "7928f26dc8ece8a4617917361c5b776c566f770fa1c62de1cc027d59667abb23",
+      "bytes": 10909
+    },
+    {
+      "path": "apps/mobile/scripts/capture-mission.py",
+      "sha256": "29b560f5c5ca36731f40fe3bfbf302acbadd9c119d09311919989eb0cdee3ad5",
+      "bytes": 32614
+    },
+    {
+      "path": "apps/mobile/scripts/capture-open-letter.py",
+      "sha256": "d6deb6f5ecbb438f336a14e82752b23153428e95f67d61f6f00c8d1bbcbbf6f6",
+      "bytes": 16267
+    },
+    {
+      "path": "apps/mobile/scripts/native-device-checks.py",
+      "sha256": "f41b550e5bb852e7fcbf7329b82f6305e8cadfa9df312a6da0c667306cc86a12",
+      "bytes": 7179
+    },
+    {
+      "path": "apps/mobile/scripts/native-mission-checks.py",
+      "sha256": "938d685a535ec22643b521abce1fe7543ea1fdebe82c8c2abb33234c7a79a160",
+      "bytes": 27691
+    },
+    {
+      "path": "apps/mobile/scripts/open-letter-comparisons.ps1",
+      "sha256": "9929e99e4bb9378b8b5ead22dd7caca860bacc313a85964fbf0fb25160b71a4a",
+      "bytes": 3593
+    },
+    {
+      "path": "apps/mobile/scripts/start-demo-qa.mjs",
+      "sha256": "46d72bea79aca32627cad87ecab79ec1081159ea0df665febb88702dbcdc85dd",
+      "bytes": 3172
+    },
+    {
+      "path": "apps/mobile/scripts/test-native-snapshot.py",
+      "sha256": "c77dfdc9e734be2815e17d0e48658c71e2e9c3603a5fa973e1e066180d764b73",
+      "bytes": 2749
+    },
+    {
+      "path": "apps/mobile/src/adaptive-writing-text.tsx",
+      "sha256": "55dc65b4a5ebe9b849e8a34aff4420bd115fa2ac876856c63cd9b8390487d121",
+      "bytes": 4409
+    },
+    {
+      "path": "apps/mobile/src/app/_layout.tsx",
+      "sha256": "ddb28c2c79dc02971b7b996a1962c35d40fa0af424a3f631fb85a88d07cf20fc",
+      "bytes": 785
+    },
+    {
+      "path": "apps/mobile/src/app/accounts.tsx",
+      "sha256": "a8bce0f8525ca6b42a463d7fcb5c9ff657c47002c7e363fc002e03f88959ff30",
+      "bytes": 53
+    },
+    {
+      "path": "apps/mobile/src/app/auth/callback.tsx",
+      "sha256": "c3726f8d846ceac7ebb93a51e5f9a737e614cf3b43c1ec0aa69b9b04fded72ac",
+      "bytes": 3824
+    },
+    {
+      "path": "apps/mobile/src/app/index.tsx",
+      "sha256": "afb294cafb59cbe466a1ee51515a11c1bd7661d8c75f63886f5aad5e81fd94e7",
+      "bytes": 13378
+    },
+    {
+      "path": "apps/mobile/src/app/native-check.tsx",
+      "sha256": "486c9a0b926be91b9e8c76bc5b071a37a4e6ffbac636d4a0c4d772c2b974396a",
+      "bytes": 2036
+    },
+    {
+      "path": "apps/mobile/src/appearance.tsx",
+      "sha256": "797f2dca5d1e5a6e8d91a4cae1daa8bb95594c2470f9b9b15ff7047a2faaea22",
+      "bytes": 2584
+    },
+    {
+      "path": "apps/mobile/src/build.ts",
+      "sha256": "f4c7d9e1d78c317dba70dc549fbff4e7b0280487ed08ab1831cf424ca2600063",
+      "bytes": 61
+    },
+    {
+      "path": "apps/mobile/src/communication.ts",
+      "sha256": "4d70a76bb24cf84902b865e7e5b955d1864b2fd460d306e36434124bf177f03c",
+      "bytes": 3364
+    },
+    {
+      "path": "apps/mobile/src/finance-state.tsx",
+      "sha256": "5b19f75aa8b77095fd782ca040f53d6c0dc7a4cb3efcd06110a5cb78e0f7f567",
+      "bytes": 2243
+    },
+    {
+      "path": "apps/mobile/src/finance/checkpoint.ts",
+      "sha256": "9e77715072cdbacd28ae1ae6c5c2caa306f04722ec182ab72481b2777d90bb1c",
+      "bytes": 36019
+    },
+    {
+      "path": "apps/mobile/src/finance/engine.ts",
+      "sha256": "62338c4ffcdaa8a6acf270979489883344164fc3f99076fb0fb03ff6213fbae7",
+      "bytes": 44551
+    },
+    {
+      "path": "apps/mobile/src/finance/fixtures.ts",
+      "sha256": "51035fdf2b34d9ec4a5e6a52de7de01eea5795b2c2fa90b4c39c6c0842cee43c",
+      "bytes": 1946
+    },
+    {
+      "path": "apps/mobile/src/finance/index.ts",
+      "sha256": "94da45fc8381aa18fddc07e5740b8d2d2d9e5bcd9a5050323fe2e67cc2b90920",
+      "bytes": 113
+    },
+    {
+      "path": "apps/mobile/src/finance/money-calendar.ts",
+      "sha256": "63006abd19e84ac8e4de972de71d5e9c41b9a01948af2bd5a5a62531296b5202",
+      "bytes": 4587
+    },
+    {
+      "path": "apps/mobile/src/finance/types.ts",
+      "sha256": "8cbf5ee31f19a0a6df79f53103fe23901aef3b9e814da5de77cd42affe3a5e8b",
+      "bytes": 7992
+    },
+    {
+      "path": "apps/mobile/src/id.native.ts",
+      "sha256": "67ab634d4173bff4cfc2521d3ed8c55e3e2f1722a7dfecb31ae7ba94ce89dd07",
+      "bytes": 182
+    },
+    {
+      "path": "apps/mobile/src/id.ts",
+      "sha256": "b4aa236b6a2a161bffd0a10c13b6c56de89077d8811dfe38621159eb1f7d0706",
+      "bytes": 300
+    },
+    {
+      "path": "apps/mobile/src/journal-intelligence/index.ts",
+      "sha256": "6e00ffb92726959632d9b3c5649b506d530d5ea3840a3eaaac0469173ce48a92",
+      "bytes": 16429
+    },
+    {
+      "path": "apps/mobile/src/journal.ts",
+      "sha256": "76d3425ea333fdfdd93d28148124eafe93f473cd6a18f1b2882297affa7fdba7",
+      "bytes": 454
+    },
+    {
+      "path": "apps/mobile/src/local-model-contract.ts",
+      "sha256": "b31766f8e95cb827871bdfd0828824056d7a5f4d1c6fb09e4906730a981d6504",
+      "bytes": 5090
+    },
+    {
+      "path": "apps/mobile/src/local-model.native.ts",
+      "sha256": "277230c6753c352fe24aa3031ebadf611fcbc99a011b04750f868a9cd7b826ff",
+      "bytes": 6556
+    },
+    {
+      "path": "apps/mobile/src/local-model.ts",
+      "sha256": "5698ce9bf7cff69515fdb19d4cc9782899cfec9b3e142a195463bb67d9d503b3",
+      "bytes": 953
+    },
+    {
+      "path": "apps/mobile/src/messaging-logic.ts",
+      "sha256": "4967c20fe04c19beb255e5d03ccc2f22af596bdd28fffd599549727d7f949954",
+      "bytes": 1066
+    },
+    {
+      "path": "apps/mobile/src/model.ts",
+      "sha256": "6b78e03ea80f3fd03935e45ea9dd1788d65ebc83b29c1e372241b2f0f2ad357e",
+      "bytes": 2094
+    },
+    {
+      "path": "apps/mobile/src/native-text-host.ts",
+      "sha256": "f4846cb003e4af269326643f22d6aa6e7c84340ee89c5c591ce99ae0a9037445",
+      "bytes": 1130
+    },
+    {
+      "path": "apps/mobile/src/production/Account.tsx",
+      "sha256": "b7bc35becd725f4d30900b436a560fa9edcd4c0fcf2973fb90e811ff971766f1",
+      "bytes": 19088
+    },
+    {
+      "path": "apps/mobile/src/production/Application.tsx",
+      "sha256": "8c42aff0ed0a5f9ba959b45c663546b406bfc6293b61c504c9350773e116bfe2",
+      "bytes": 79182
+    },
+    {
+      "path": "apps/mobile/src/production/Checkins.tsx",
+      "sha256": "b1d1bab92f515703d9279d142e7939d230b73c76596189a6d214549681a5e43b",
+      "bytes": 18644
+    },
+    {
+      "path": "apps/mobile/src/production/Circle.tsx",
+      "sha256": "17a20b381aa389320f5f4086fffb36b346752cac3830c22d8667f48401d0d911",
+      "bytes": 26507
+    },
+    {
+      "path": "apps/mobile/src/production/Conversation.tsx",
+      "sha256": "6d6514f669e11c6829b7b45eda0626dab48dcd89ce20f5c1dcd371418e50fe86",
+      "bytes": 17323
+    },
+    {
+      "path": "apps/mobile/src/production/Family.tsx",
+      "sha256": "92afe9ced860386e4050ede5b8bbd3bb90090f3f661e599ffa8d31fa5af9a9c1",
+      "bytes": 10858
+    },
+    {
+      "path": "apps/mobile/src/production/Finance.tsx",
+      "sha256": "11aad73c31d6173cd2882fedc5e034c2dbd5300b5656648ff452427c6d56465b",
+      "bytes": 40292
+    },
+    {
+      "path": "apps/mobile/src/production/FinanceHistory.tsx",
+      "sha256": "477fc14bcd7bf80101919cf21f375ca947e1c617031fc8084ebea74a14d57381",
+      "bytes": 5468
+    },
+    {
+      "path": "apps/mobile/src/production/Journal.tsx",
+      "sha256": "ee6acb0b460bb156c239460e7c4bc3bbbd567b6bf9b8abcb03ecdda71b72b9a8",
+      "bytes": 57417
+    },
+    {
+      "path": "apps/mobile/src/production/Notifications.tsx",
+      "sha256": "d07db5c272f748de07e8e9e9f9b351b59ea29fd534e79542fe346b1f79591141",
+      "bytes": 6334
+    },
+    {
+      "path": "apps/mobile/src/production/ParentMatchHistory.tsx",
+      "sha256": "0c17999be1df64c510f2f970b2756b67b9641960a0af0f28726bea462a47037c",
+      "bytes": 8547
+    },
+    {
+      "path": "apps/mobile/src/production/account-failures.ts",
+      "sha256": "11bfbf614c89dd3dfb8e82e3814e99a233327293e603186bb2b2a7480c41b0dc",
+      "bytes": 2581
+    },
+    {
+      "path": "apps/mobile/src/production/app-privacy.native.ts",
+      "sha256": "1238f5ea48c76478739cac8f04028707f79bcc067a478667996c9b646f56b735",
+      "bytes": 605
+    },
+    {
+      "path": "apps/mobile/src/production/app-privacy.ts",
+      "sha256": "b61f3b4291b7f39339c90acd1aad729380718d39aec8c14ce7dc11df91ff9d95",
+      "bytes": 177
+    },
+    {
+      "path": "apps/mobile/src/production/auth-callback-policy.ts",
+      "sha256": "38fd92fca041709edc2027f550a9dd5ea5a53d941500837c6faad31d84ae74bd",
+      "bytes": 3348
+    },
+    {
+      "path": "apps/mobile/src/production/auth-crypto-policy.ts",
+      "sha256": "ffaed09faa35af8c58289b45760d20b33aa7432f279f9c12acf1fd89b0097c58",
+      "bytes": 2413
+    },
+    {
+      "path": "apps/mobile/src/production/auth-crypto.native.ts",
+      "sha256": "39ec7d2a0684500f3506d00d17ed13f318563069b8806752f0147c842bac178d",
+      "bytes": 889
+    },
+    {
+      "path": "apps/mobile/src/production/auth-crypto.ts",
+      "sha256": "cfd5ae6fb78eeded346a34734fdfcd5d2f969d0b374debddc6173214b8837e55",
+      "bytes": 344
+    },
+    {
+      "path": "apps/mobile/src/production/auth-mutation.ts",
+      "sha256": "3ce0a8ef5ad6f78523405699b7913a36382896d5df4d50412fb9509b76b4cc1e",
+      "bytes": 1131
+    },
+    {
+      "path": "apps/mobile/src/production/auth-redirect.ts",
+      "sha256": "124a792a60e278ab2f48236624eb64aef7195f1a6c00cc5c06b701b806b862d7",
+      "bytes": 950
+    },
+    {
+      "path": "apps/mobile/src/production/client.ts",
+      "sha256": "c2f9dae487003d5fc3510fce98ea3ee9fd200f5ebdcd7a81face20ff8d9b228a",
+      "bytes": 14408
+    },
+    {
+      "path": "apps/mobile/src/production/deployment-target.ts",
+      "sha256": "3f43cd12ff384432376f7b7a496ee9575ead56e03b714eea2835077553c5c3c4",
+      "bytes": 6825
+    },
+    {
+      "path": "apps/mobile/src/production/durable-message-send.ts",
+      "sha256": "da2699487f4a6e225fc1ab39a6a89c45d32775eb5c5f47e64383f99b2a5c093b",
+      "bytes": 4838
+    },
+    {
+      "path": "apps/mobile/src/production/finance-history-types.ts",
+      "sha256": "ad43e883ada51fc044b0e50a6caa9005123c3a2c8b0e4b0226e17c595feee720",
+      "bytes": 621
+    },
+    {
+      "path": "apps/mobile/src/production/journal-access.ts",
+      "sha256": "beae6a8435b4e0dcbc1428598bbbde2fdd1c28d8b2c2a75ee9a2be73280dd4d7",
+      "bytes": 7240
+    },
+    {
+      "path": "apps/mobile/src/production/journal-contacts.ts",
+      "sha256": "2cc354f9ab955506b28f23c36d02be07e51d31aef50459ea2fb25775efa417f5",
+      "bytes": 2952
+    },
+    {
+      "path": "apps/mobile/src/production/journal-draft.ts",
+      "sha256": "07204ff7f96f620b1761a2889617a82b121c0822b11b0df0db5a09b3178a858a",
+      "bytes": 4383
+    },
+    {
+      "path": "apps/mobile/src/production/journal-model.ts",
+      "sha256": "8230a932065eba9102ec62705f69dc6e7548d71e9d91056aa68c6f3db434445f",
+      "bytes": 2371
+    },
+    {
+      "path": "apps/mobile/src/production/journal-offline-lease.ts",
+      "sha256": "dfc987acec0d561b0a91efca4297de4b86815451f5bcc656ff28a901f49ee796",
+      "bytes": 3461
+    },
+    {
+      "path": "apps/mobile/src/production/journal-storage-controls.ts",
+      "sha256": "18dfff54611e588152925da56f1076f9cd26637872c20239b08ea14e3afb6573",
+      "bytes": 3035
+    },
+    {
+      "path": "apps/mobile/src/production/message-outbox-policy.ts",
+      "sha256": "c90dd9e7d03de3185877c2b6088fb4ca5a52d671795c9e8f7e9be6e135ee9471",
+      "bytes": 9990
+    },
+    {
+      "path": "apps/mobile/src/production/message-outbox.native.ts",
+      "sha256": "75c719e7f0b384cdb84539d2c64961cb215809c9c407dceb991f56aaa879c805",
+      "bytes": 6367
+    },
+    {
+      "path": "apps/mobile/src/production/message-outbox.ts",
+      "sha256": "8291cc32e99e31e95c925576703791d090ba5a4d6723fbcdfc6ab4464ae337bf",
+      "bytes": 470
+    },
+    {
+      "path": "apps/mobile/src/production/native-check.native.ts",
+      "sha256": "2972d12e0c7427b5135e1abc352cf1bcc0e5b659f13a552c3bb6d0869c33694d",
+      "bytes": 3785
+    },
+    {
+      "path": "apps/mobile/src/production/native-check.ts",
+      "sha256": "8cb12f14aa02e093b06f79e308520f4c1a1ba316cf72eeb4b6327daf91a2b217",
+      "bytes": 232
+    },
+    {
+      "path": "apps/mobile/src/production/pending-finance-policy.ts",
+      "sha256": "8993221bb2b5c661c325000e99ec902a8d98cbc0809fbae116b09e28b318f13c",
+      "bytes": 14865
+    },
+    {
+      "path": "apps/mobile/src/production/pending-finance.native.ts",
+      "sha256": "5756d66ad216c98162cfba316d31355dc07aa8abdd1162a9f5d5c31bde18cb94",
+      "bytes": 729
+    },
+    {
+      "path": "apps/mobile/src/production/pending-finance.ts",
+      "sha256": "5b95722d80156caa586a8c2f8915552144681b030fbe233680c1b4f3254e7d3a",
+      "bytes": 499
+    },
+    {
+      "path": "apps/mobile/src/production/private-message-draft-policy.ts",
+      "sha256": "964019490ea90e45cce76add45e1b3512083a914148d2082e5203c7740cb0257",
+      "bytes": 8850
+    },
+    {
+      "path": "apps/mobile/src/production/private-message-drafts.native.ts",
+      "sha256": "f13cf8b5067d0819ee5e10606d83291e01f3b197141fe869cb96d4f199996586",
+      "bytes": 2051
+    },
+    {
+      "path": "apps/mobile/src/production/private-message-drafts.ts",
+      "sha256": "6c89fd70f62aca6041b8046e7337a939d97e252221c8a9a4cf67eaba780448f6",
+      "bytes": 539
+    },
+    {
+      "path": "apps/mobile/src/production/private-screen-capture-lease.ts",
+      "sha256": "c2689779bed9ae378776ac6dbf6415b6b4a28802d239b685e523642423320349",
+      "bytes": 1799
+    },
+    {
+      "path": "apps/mobile/src/production/private-screen-capture.native.ts",
+      "sha256": "b699adf3462c4d04263c958c520c51b082228fd7393205377d6ad36aa19af43d",
+      "bytes": 1222
+    },
+    {
+      "path": "apps/mobile/src/production/private-screen-capture.ts",
+      "sha256": "7c97f3e79a1fa82eb4d0f93801b353b5b575dfe85e25e7aba7436d5ea1a6141b",
+      "bytes": 313
+    },
+    {
+      "path": "apps/mobile/src/production/private-writing-lifetime.ts",
+      "sha256": "e48e80cbbb4579fc4ab654beb8f035982daa8aa9a2e7957d0c3f21acc1fd0d29",
+      "bytes": 1630
+    },
+    {
+      "path": "apps/mobile/src/production/push-registration.native.ts",
+      "sha256": "803cb3c348b707fe0429f1bd92f78d74a143e8973bf456387e22e88fb8bbe479",
+      "bytes": 1462
+    },
+    {
+      "path": "apps/mobile/src/production/push-registration.ts",
+      "sha256": "9f996f3230b892acb07b344c24397c9a316508fcf4c0c086fd26448b51655bc8",
+      "bytes": 246
+    },
+    {
+      "path": "apps/mobile/src/production/recovery-proof.ts",
+      "sha256": "4368b962c838a5aae3dc97fda26d8fa31cc3eb03d15dd8e7651c135ac3e95b34",
+      "bytes": 939
+    },
+    {
+      "path": "apps/mobile/src/production/reviewed-send-coordinator.ts",
+      "sha256": "151c5734bbe04f71c663597168968a844e06f3a4ba7a7e62e898086a985b448b",
+      "bytes": 4878
+    },
+    {
+      "path": "apps/mobile/src/production/reviewed-send.ts",
+      "sha256": "f1d41e98d18d4a5c37bfb45f8518841a2b4beee762340087a4fef900ba033d7c",
+      "bytes": 2515
+    },
+    {
+      "path": "apps/mobile/src/production/session-boundary.ts",
+      "sha256": "ab145a5bc1f747b2e99948a2787bf468bec0bcfa01de03c717ea317b9fd04124",
+      "bytes": 1033
+    },
+    {
+      "path": "apps/mobile/src/production/session-storage.native.ts",
+      "sha256": "9155988f7aac8deb08427f98c84d46f5117c93bd18a8448b722fc8ff51e1852e",
+      "bytes": 499
+    },
+    {
+      "path": "apps/mobile/src/production/session-storage.ts",
+      "sha256": "67cc7f4df9783dd23da030d3e5920cf913b465d3b58b7ef12605083d5e32890d",
+      "bytes": 380
+    },
+    {
+      "path": "apps/mobile/src/production/transport.ts",
+      "sha256": "e1f59fb639d40d9b6b687e4e0a74ede18f165479f3cd8e57c6e1f39fd0336568",
+      "bytes": 1013
+    },
+    {
+      "path": "apps/mobile/src/production/vault/README.md",
+      "sha256": "787ab13831156a5659a1e53de2b9eebe95a89b7edc952f0e1336dc0dd852355c",
+      "bytes": 9031
+    },
+    {
+      "path": "apps/mobile/src/production/vault/core.ts",
+      "sha256": "8a6b38dbe9e951b91a0c384130d1a67b828036bc41f62b20a03bee5bdb97b3d5",
+      "bytes": 21741
+    },
+    {
+      "path": "apps/mobile/src/production/vault/exclusive.ts",
+      "sha256": "7aac4ec5c50d5989008b66b967cfc94694c91daf112033a671be38ba5bbf2c08",
+      "bytes": 893
+    },
+    {
+      "path": "apps/mobile/src/production/vault/index.ts",
+      "sha256": "91cb31593f8f4beca9a952a2dcb774b7a4ca0ecece4e248765171bef8c2adb05",
+      "bytes": 73
+    },
+    {
+      "path": "apps/mobile/src/production/vault/platform.native.ts",
+      "sha256": "adb3165de2e91747211cc6fef1e7f549ac1e5e9fbd39b344eef56804f6ecf0ff",
+      "bytes": 7859
+    },
+    {
+      "path": "apps/mobile/src/production/vault/platform.ts",
+      "sha256": "d12fe0c235d380eac334383d1a20382cba1b7b1c003ff159c5b9502e7aae710b",
+      "bytes": 1327
+    },
+    {
+      "path": "apps/mobile/src/production/vault/types.ts",
+      "sha256": "fde6d82869889788f573d1bf01d886c5037dea01f99159d63101adf840ae4d23",
+      "bytes": 4341
+    },
+    {
+      "path": "apps/mobile/src/screens/Checkins.tsx",
+      "sha256": "6ecf89e1d5a3fbf5144d6e4f6303b50857ba4d1e9f8bb7715b2f54c21f8387c3",
+      "bytes": 8404
+    },
+    {
+      "path": "apps/mobile/src/screens/Circle.tsx",
+      "sha256": "0f873055cfc85e1ffda5a00407550d79c756f6afed71acfd2c4969a7cbf6f19e",
+      "bytes": 9962
+    },
+    {
+      "path": "apps/mobile/src/screens/Finance.tsx",
+      "sha256": "d9e37c83f54886902d557de5c56dff97fe938372b8d33cf53dd4ed0294624b64",
+      "bytes": 53395
+    },
+    {
+      "path": "apps/mobile/src/screens/Home.tsx",
+      "sha256": "c8a7e70a6c81f97daa3c6ab4f9213b9750d8f9aa8e8857ec9eb4569b65655101",
+      "bytes": 8624
+    },
+    {
+      "path": "apps/mobile/src/screens/Journal.tsx",
+      "sha256": "924ea2e888c0e7bcf3b0978d4a8d9a0c1fd6aa15a264d87c5ae6be3669548454",
+      "bytes": 13140
+    },
+    {
+      "path": "apps/mobile/src/screens/LocalModel.tsx",
+      "sha256": "c16b598ca46ec786462efc9ac1b61a07efa44fef7cecd04e75269662a5377b0e",
+      "bytes": 4419
+    },
+    {
+      "path": "apps/mobile/src/screens/Messaging.tsx",
+      "sha256": "d5965b9a559d4ee2c34ff9559279b3950593f08c4d5d6c40c528d51c3dfe4682",
+      "bytes": 21247
+    },
+    {
+      "path": "apps/mobile/src/state.tsx",
+      "sha256": "1b6ad496a19efe2a77b59857efc04869314fce5987be1fec69114f5e761a1bd5",
+      "bytes": 11291
+    },
+    {
+      "path": "apps/mobile/src/theme.ts",
+      "sha256": "1aa9abed252b2b831adf6a761bac120b4a4a4352fe3877f94608fbad2dffc24b",
+      "bytes": 1606
+    },
+    {
+      "path": "apps/mobile/src/ui.tsx",
+      "sha256": "d04becac89f271ce85a941470ba32a38e3608af78d72f0591242b691d9f1c44c",
+      "bytes": 8567
+    },
+    {
+      "path": "apps/mobile/src/writing-keyboard-view.tsx",
+      "sha256": "3cb2230e5a8e7cd43a9223c404ff0426b386f05a08a7ee8faf03ad7ecaeb17a1",
+      "bytes": 896
+    },
+    {
+      "path": "apps/mobile/tests/account-failures.test.ts",
+      "sha256": "32f960afeb4b2706f821bcb287f242143fcadd0aac762c783473d53e0dbdaee2",
+      "bytes": 5831
+    },
+    {
+      "path": "apps/mobile/tests/auth-callback.test.ts",
+      "sha256": "33b486fdbc7655cb9fd768754d75e1992fc1570d0af6498c45f22c70858dcd01",
+      "bytes": 4043
+    },
+    {
+      "path": "apps/mobile/tests/auth-crypto.test.ts",
+      "sha256": "1d15c26874e2b6f75ca3a03ed4888a4e8c65019f74e9710ccd3e16301a968a20",
+      "bytes": 3903
+    },
+    {
+      "path": "apps/mobile/tests/auth-mutation.test.ts",
+      "sha256": "8635b42967e175320eac902f283a7fec98a63227110f711ce030be60701dd798",
+      "bytes": 4992
+    },
+    {
+      "path": "apps/mobile/tests/blocking.test.ts",
+      "sha256": "42ec61790b87d03790ec23f7c308ca099a2f24b937381f4d7181fc213dc9e9b6",
+      "bytes": 6000
+    },
+    {
+      "path": "apps/mobile/tests/communication.test.ts",
+      "sha256": "4bf0ab617a4a5e1361c1c8960dc6a75d1ecc1fb6266d6585b64fda065327bab3",
+      "bytes": 2851
+    },
+    {
+      "path": "apps/mobile/tests/demo-qa-isolation.test.ts",
+      "sha256": "fb90b60949b9de443e32d71e90316b6006c3f4e5b6239c5c0832ee8e2e05c28e",
+      "bytes": 4286
+    },
+    {
+      "path": "apps/mobile/tests/dependency-compat.test.ts",
+      "sha256": "03ae955c5e0098e622ed6f4423bfe0b9f6f74e8c2dca0683d273fbd7ff236fdb",
+      "bytes": 1073
+    },
+    {
+      "path": "apps/mobile/tests/deployment-target.test.ts",
+      "sha256": "ebe3fa5709fa3bdc2087275e7ae2ac1fec33f22bf63bb9c7d7187f925f80d072",
+      "bytes": 6544
+    },
+    {
+      "path": "apps/mobile/tests/durable-message-send.test.ts",
+      "sha256": "7fd3ab1a5eade15918755594e08b8266ed9a1c2c9f632ca95944ab3c8baf20d2",
+      "bytes": 6721
+    },
+    {
+      "path": "apps/mobile/tests/finance-checkpoint.test.ts",
+      "sha256": "e46c5f2b0681d1ddc6b9753bfd149bb4e11159ccf1fa6fd08da928779d0fcd50",
+      "bytes": 24024
+    },
+    {
+      "path": "apps/mobile/tests/finance.test.ts",
+      "sha256": "ede41494fd877f09f1252d7996026667c3bc46fa543cb5173c5a5d102616e6ef",
+      "bytes": 32084
+    },
+    {
+      "path": "apps/mobile/tests/id.test.ts",
+      "sha256": "6e9986c164e050b25a8a19d3fed18209ff8fff608fe8a177e091095b5eb5dd20",
+      "bytes": 4015
+    },
+    {
+      "path": "apps/mobile/tests/journal-contacts.test.ts",
+      "sha256": "0ef10b0a50faa4c6196b52a78e38810e52f08e278ab9faa807a344a68d39e9b3",
+      "bytes": 3014
+    },
+    {
+      "path": "apps/mobile/tests/journal-draft.test.ts",
+      "sha256": "d7294afa999d0176a05175545913c7a98b938f23cf0794b1db19ad30db19edb8",
+      "bytes": 6430
+    },
+    {
+      "path": "apps/mobile/tests/journal-intelligence.test.ts",
+      "sha256": "5d599ec8a2188f9dc7a911dd2a532f96c8c8035a6a0872368a25662785e27abc",
+      "bytes": 11472
+    },
+    {
+      "path": "apps/mobile/tests/journal-offline-lease.test.ts",
+      "sha256": "fdf9ecd53f3298c52bff88eae428d2664b172bfd40481825f555f1635ca5be33",
+      "bytes": 7395
+    },
+    {
+      "path": "apps/mobile/tests/journal-storage-controls.test.ts",
+      "sha256": "534f90786912b407466ca5bff956c5d4e97d5161a76926aab6b93292f7b372e2",
+      "bytes": 6099
+    },
+    {
+      "path": "apps/mobile/tests/journal.test.ts",
+      "sha256": "1dcd8c486af0411bff8d12dc684a63930b38f5f2ec93102694685942d214d679",
+      "bytes": 1207
+    },
+    {
+      "path": "apps/mobile/tests/local-model.test.ts",
+      "sha256": "a298a37e72f5a27c067f0b6ce3305f8fa46aa8324351c409dfe20b6c97734c84",
+      "bytes": 7404
+    },
+    {
+      "path": "apps/mobile/tests/message-outbox.test.ts",
+      "sha256": "f105ad1fbc971748889776542a3a8818bd6466504dc61ef3be95a512f0d676b4",
+      "bytes": 8304
+    },
+    {
+      "path": "apps/mobile/tests/messaging.test.ts",
+      "sha256": "e9af3224267f628cadc78bf72ee70207b6f408fd06b8dace6c19945432ddd200",
+      "bytes": 1474
+    },
+    {
+      "path": "apps/mobile/tests/model.test.ts",
+      "sha256": "e750c165afddb13cf1514f2efed9920c6a3f0017545eb063cc9c68bad15977c0",
+      "bytes": 4399
+    },
+    {
+      "path": "apps/mobile/tests/native-config.test.ts",
+      "sha256": "31567bafef9a504e472b98e31a20bcb72f2174b95886365abba17b60b5c27ff0",
+      "bytes": 6873
+    },
+    {
+      "path": "apps/mobile/tests/native-text-host.test.ts",
+      "sha256": "4a050add83aec6495c4de7d49744840b46521a62d94f2d446dc085cce7c443dc",
+      "bytes": 2957
+    },
+    {
+      "path": "apps/mobile/tests/pending-finance.test.ts",
+      "sha256": "5d29b2a5cfe84e0ca944239d9e06c9642d908db6e4226455dab52019deba5192",
+      "bytes": 11670
+    },
+    {
+      "path": "apps/mobile/tests/private-message-drafts.test.ts",
+      "sha256": "9452d4a166e68cb150737fee6fdfe4759c58a89d05760f16229ef0fe5cc0c896",
+      "bytes": 10212
+    },
+    {
+      "path": "apps/mobile/tests/private-screen-capture.test.ts",
+      "sha256": "7df6deb231c71dc994284f3e721d0e6b2404c2ecbe84cc577f0077cec56cc5df",
+      "bytes": 5599
+    },
+    {
+      "path": "apps/mobile/tests/private-writing-lifetime.test.ts",
+      "sha256": "8a0ee947bca9ffcac5c27dddcd6cbc1659032e1d1a59d90447008e6a3e883b04",
+      "bytes": 5735
+    },
+    {
+      "path": "apps/mobile/tests/production-backup-policy.test.ts",
+      "sha256": "6d6f98c077c29c234cb759777c2815cf4c5be26c762fe86d60ffb0a77fd736b4",
+      "bytes": 7056
+    },
+    {
+      "path": "apps/mobile/tests/production-capture-permissions.test.ts",
+      "sha256": "e90b024cf73a86f7fe1c8a480c349c9d5c18b3ba6a816eb3090ef55381bdf7a9",
+      "bytes": 1887
+    },
+    {
+      "path": "apps/mobile/tests/production-circle.test.ts",
+      "sha256": "13e913f9dc4212617fbcea9a30d46d435b42bb4e99adf4191e8a63a4f196b461",
+      "bytes": 7838
+    },
+    {
+      "path": "apps/mobile/tests/production-finance-native-text.test.ts",
+      "sha256": "00f798fdece3af30ae060dfb11627ac0c2624147ba2d59dc19058d9220adc36e",
+      "bytes": 5449
+    },
+    {
+      "path": "apps/mobile/tests/production-finance-review.test.ts",
+      "sha256": "83780a316bba9a56d9c9aa110e67902d1e43c5a456d7c4f33bca61ddd39a5867",
+      "bytes": 13298
+    },
+    {
+      "path": "apps/mobile/tests/production-finance.test.ts",
+      "sha256": "ebed2f16fb7b7201117e19b1e65c2520ff569f6048c0c47d38e6d2afd8393876",
+      "bytes": 7712
+    },
+    {
+      "path": "apps/mobile/tests/production-fixture-path.test.ts",
+      "sha256": "f3cd717d8bb226738b0959896aa352edb00dd60013993d7604e43d9d307121fa",
+      "bytes": 3031
+    },
+    {
+      "path": "apps/mobile/tests/production-journal-model.test.ts",
+      "sha256": "7b217d12ef8c5ac08d8bd3542d937967e3442c18f3f5799baeaf4b26a58c752d",
+      "bytes": 4535
+    },
+    {
+      "path": "apps/mobile/tests/production-journal.test.ts",
+      "sha256": "4fb4f8ee75fcbd5269fcb7f75a0334e0a18eaabe8bc3d232bb13cc4aa08977be",
+      "bytes": 12749
+    },
+    {
+      "path": "apps/mobile/tests/production-messaging.test.ts",
+      "sha256": "92b107fff36da0a11596a6597dfadbd844d6ed085639fb11824e818b8703fa86",
+      "bytes": 2532
+    },
+    {
+      "path": "apps/mobile/tests/production-recovery.test.ts",
+      "sha256": "da5fa842faa49871b567d169fcb17d9c1473895e3e17fdc7d0cdc9f8f8d9e177",
+      "bytes": 1347
+    },
+    {
+      "path": "apps/mobile/tests/production-session.test.ts",
+      "sha256": "8a7a5fa330a4549acf7ff7924fdb89fa5250dc89ce62ebcc2247e221aca7fb69",
+      "bytes": 2057
+    },
+    {
+      "path": "apps/mobile/tests/production-transport.test.ts",
+      "sha256": "1e442d1bfbcd0dcf19d8440c5b57108f79eca86a81754bb12f3c894a1cb4491a",
+      "bytes": 5946
+    },
+    {
+      "path": "apps/mobile/tests/production-writing-configuration.test.ts",
+      "sha256": "b5c94a6c6418932feef374b3acfdfa16a90508689c3cb06c8c61cc17cf4a8ab4",
+      "bytes": 4593
+    },
+    {
+      "path": "apps/mobile/tests/reviewed-send-coordinator.test.ts",
+      "sha256": "f30e7af926b27d359b454ca1400bfd8e5ede7f135f30680a34853db1ad128b0d",
+      "bytes": 8943
+    },
+    {
+      "path": "apps/mobile/tests/vault-exclusive.test.ts",
+      "sha256": "0c0740dacbced2cd385fe8fa167d0b1ebfcdbfc4b5d6f848e76f3532ebd0025f",
+      "bytes": 1325
+    },
+    {
+      "path": "apps/mobile/tests/vault.test.ts",
+      "sha256": "f27eab2fc499c1b470e46c312c3d148e8f21960dcff3eab256adb4cca4e0da0a",
+      "bytes": 23301
+    },
+    {
+      "path": "services/backend/package-lock.json",
+      "sha256": "2fc6ae62460b6d93d0ee6ba51984c52b248d5199b019efa8d26f85b50be6e1d4",
+      "bytes": 33900
+    },
+    {
+      "path": "services/backend/package.json",
+      "sha256": "6476a494a177f6009f5267354cf93bc7514960284242b58b5a209b4d994a3bd9",
+      "bytes": 615
+    },
+    {
+      "path": "services/backend/recovery/database.mjs",
+      "sha256": "dc6db09ec17a290ffdf47a0607927512832b07fce96c1b534a27a5fd9290c0ad",
+      "bytes": 21871
+    },
+    {
+      "path": "services/backend/recovery/fixture.mjs",
+      "sha256": "4761bf550e75c3ce3e3c5f663da1c5513a9e0697d4464375e65c9f9a04883a91",
+      "bytes": 13163
+    },
+    {
+      "path": "services/backend/recovery/guards.mjs",
+      "sha256": "b7592e5863113f9e6d690cee55c6bbf79f7f7fb4444790f15f1a5dfdf34eb223",
+      "bytes": 5659
+    },
+    {
+      "path": "services/backend/recovery/mobile-fixture-path.mjs",
+      "sha256": "dbf7fb91adfd11437b3a3aca3874656cfa5d7acf7dd0a2b87bdd1897e9f09557",
+      "bytes": 609
+    },
+    {
+      "path": "services/backend/recovery/qualification.mjs",
+      "sha256": "224968381a124afd7efb3d49eb9835ec40fe344b2f3ea139b73240688582e70c",
+      "bytes": 2483
+    },
+    {
+      "path": "services/backend/scripts/backup-recovery.mjs",
+      "sha256": "854336bb16ee60f579a5e7f130e11706c316e1d9a0502a5e8889bef4c866a7b6",
+      "bytes": 22216
+    },
+    {
+      "path": "services/backend/scripts/build.mjs",
+      "sha256": "4105aa482fac6188f4a1ad42f189f9d5c88832b847b7fb402403eafcc03dc047",
+      "bytes": 254
+    },
+    {
+      "path": "services/backend/scripts/finance-capacity-benchmark.mjs",
+      "sha256": "10cc5dc96d81aaa27b35f9418903fa4e38c132f54177d808f23a09f507fb50bb",
+      "bytes": 26875
+    },
+    {
+      "path": "services/backend/scripts/finance-checkpoint-benchmark.mjs",
+      "sha256": "e5e49538c7f05158d4e7b3b3885cb3886009f23f7159d4d32c8c985f9d2cd9d1",
+      "bytes": 9644
+    },
+    {
+      "path": "services/backend/scripts/finance-checkpoint-client-probe.mjs",
+      "sha256": "43852b2057af93135c1fed9282d18c962b110d5a02af137081441a6dc5ecd4c7",
+      "bytes": 18560
+    },
+    {
+      "path": "services/backend/scripts/finance-checkpoint-edge-probe.mjs",
+      "sha256": "e6c8ef23ea6edeafe8de47dc24827ccb9580f32254b59edcfecf366794048dd6",
+      "bytes": 27538
+    },
+    {
+      "path": "services/backend/scripts/finance-checkpoint-family-probe.mjs",
+      "sha256": "adf02d62bb0f547667876085d624787e68189a10c53db2827dd72b1004fd3baf",
+      "bytes": 23881
+    },
+    {
+      "path": "services/backend/scripts/finance-checkpoint-qa-fixture.mjs",
+      "sha256": "c4866f6c211d7f669b374a74a803648a7ebe54c30987b65557d6f8ab18b1a65e",
+      "bytes": 6672
+    },
+    {
+      "path": "services/backend/scripts/finance-checkpoint-storage-benchmark.mjs",
+      "sha256": "0dbe3c74a783fb3adb9b9a6ad9b33f9200f647017145489c59b8a065b6e6f5bf",
+      "bytes": 25328
+    },
+    {
+      "path": "services/backend/scripts/free-plan-dashboard.mjs",
+      "sha256": "7bed78bd0e42b439d4fc1d15a7d6a2b8718539d46fced2b406f71044b042850d",
+      "bytes": 5624
+    },
+    {
+      "path": "services/backend/scripts/mobile-fixture.mjs",
+      "sha256": "6e7b8013463658b78284eec88a0d6c9f012feaf8450c0692481cafcf337c1a32",
+      "bytes": 10652
+    },
+    {
+      "path": "services/backend/scripts/notification-cycle.mjs",
+      "sha256": "2ba39e4929b7f0341eaa671a41bfc6cf683c47c59bbfaecbeb151a3cb22a70c3",
+      "bytes": 5438
+    },
+    {
+      "path": "services/backend/scripts/qualification-database.mjs",
+      "sha256": "18ddc6b15b72c0e61680995967853b842fcdffd03cd42734e3344fe6d7742c41",
+      "bytes": 15237
+    },
+    {
+      "path": "services/backend/scripts/release-inventory.mjs",
+      "sha256": "6bb19ff3cd8e661cd7c7fd6ec3a5d0c1319192d7b8c6f04e680d8529f1e973a4",
+      "bytes": 15088
+    },
+    {
+      "path": "services/backend/scripts/seed-local.mjs",
+      "sha256": "f032c8052df829e2b039d0b4d91b1101f2dca797504b63665b1f9e1506525d65",
+      "bytes": 1664
+    },
+    {
+      "path": "services/backend/scripts/staging-plan.mjs",
+      "sha256": "1a85dae50b2c7258021ae9b57cb25a18f218cbf144c8c80e9bb4c09455174025",
+      "bytes": 2194
+    },
+    {
+      "path": "services/backend/scripts/staging-preflight.mjs",
+      "sha256": "1d765070b610b882f790e09ba1f6d6cd64822a20ca087cf41f43cdfc770da951",
+      "bytes": 7929
+    },
+    {
+      "path": "services/backend/scripts/wait-local-edge.mjs",
+      "sha256": "cc4ce810c3cf38326c8332fb5fd6fe1df836e29b68add85457b6e66f5557d847",
+      "bytes": 3554
+    },
+    {
+      "path": "services/backend/src/api.ts",
+      "sha256": "10ab08ff92cc81cbf062b315f2fb44cd3dda30ddeda89118a8fc3135308e7060",
+      "bytes": 9871
+    },
+    {
+      "path": "services/backend/src/edge-mount.ts",
+      "sha256": "aaf9a2986f28c6c853a46bf8efe2fc7c3ebc303d253ace1bd8382b38a40a42bc",
+      "bytes": 631
+    },
+    {
+      "path": "services/backend/src/finance-checkpoints.ts",
+      "sha256": "8fef6bc12db536bbb6ec2d696f07b5ba394e43f2011aae7cd6f821de8d55ce9e",
+      "bytes": 3648
+    },
+    {
+      "path": "services/backend/src/finance-history.ts",
+      "sha256": "27122c47f749c39d532359c7ede3faf8c62eea30cf3dde19ac6476c294c32b54",
+      "bytes": 3435
+    },
+    {
+      "path": "services/backend/src/finance-notifications.ts",
+      "sha256": "08efa07515d32b117456bc3969611851ad694a8bb7c05f0a23a5fe71a0489171",
+      "bytes": 7150
+    },
+    {
+      "path": "services/backend/src/finance-privacy.ts",
+      "sha256": "aac08bf4d219403d63b8359241fa75cd40323d7d81664e86b4b83cf0244310f9",
+      "bytes": 4433
+    },
+    {
+      "path": "services/backend/src/finance.ts",
+      "sha256": "4f2dcca4ec12c7cce95b147a62fa686bd795975bba58188224fe60724d75e040",
+      "bytes": 20306
+    },
+    {
+      "path": "services/backend/src/free-plan.ts",
+      "sha256": "69b25053bc2af9b6c24cfd47e26e50a9bd1c22048ee3e3f4203f27683d7342aa",
+      "bytes": 9281
+    },
+    {
+      "path": "services/backend/src/local-server.ts",
+      "sha256": "2792edf37238146a5cca6ad0f5de78a4085472226ab285eb3c5c850d36585a92",
+      "bytes": 1625
+    },
+    {
+      "path": "services/backend/src/notification-cycle.ts",
+      "sha256": "cd7a86693af6e3e2bc290ed0e871d350157f714b26f30f21354a63816c5f6baf",
+      "bytes": 5363
+    },
+    {
+      "path": "services/backend/src/notifications.ts",
+      "sha256": "7d486c5b90e2a150d98a81630d80f6303773fd04c1a2b3adf0e16eed0e04aadf",
+      "bytes": 13815
+    },
+    {
+      "path": "services/backend/src/privacy.ts",
+      "sha256": "a2522e0c2466c9f1201ea1438ec5e0ae8dfeea5f356a8de7700d7511e4d97190",
+      "bytes": 16180
+    },
+    {
+      "path": "services/backend/supabase/.gitignore",
+      "sha256": "507699eb91144818edf61d3a079212cacf31d8db520eae428e3b48fcf0d6919c",
+      "bytes": 72
+    },
+    {
+      "path": "services/backend/supabase/config.toml",
+      "sha256": "018029d051314b7688048f39e0feb7139b0fd867b04e4ec117bfeba223c21caf",
+      "bytes": 16690
+    },
+    {
+      "path": "services/backend/supabase/functions/api/index.ts",
+      "sha256": "13a9a9a7d33a8d4289424f6040960326761e5fe16a7ca0bbb559455a8ca59e3f",
+      "bytes": 354
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160001_identity.sql",
+      "sha256": "b622999f0138baa0d6878d6eeca8781358c1c4830c23b09fe7843903d5e76a72",
+      "bytes": 33659
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160002_communication.sql",
+      "sha256": "4b8dcb093739dd945080106837c68140c5e35ed45eca257e1a8aac09f3d82b88",
+      "bytes": 48618
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160003_finance.sql",
+      "sha256": "f61d2b75bb613e5f7976de47b783c1cacdc23a79814b6ae39a7c2f6d6fb0e5dd",
+      "bytes": 15372
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160004_privacy_lifecycle.sql",
+      "sha256": "48fc970218033b6b79f949a764a3ecee6b5d524c3f8b47107cf1867ec94f066a",
+      "bytes": 44477
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160005_case_authorization.sql",
+      "sha256": "2979b4bab240fd39e85ea4818b5184b00b2eb0953a29efcc4d0818544ea8b9c6",
+      "bytes": 1583
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160006_auth_metadata.sql",
+      "sha256": "0ca4c7462455e72450e18c5943a032818a1e2036a00e98c8549e6f5beec7c6b0",
+      "bytes": 1509
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160007_auth_updates.sql",
+      "sha256": "09281514ff1d1a12a9189f8f2660a7af0eec11ae45fca0a6b3a1ab4bca4df590",
+      "bytes": 807
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160008_external_contacts.sql",
+      "sha256": "9550b6fe16fdfe76ade4ba8a814fa70f06d5d85612daab4178515ce63ba5777c",
+      "bytes": 47678
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160009_notification_receipts.sql",
+      "sha256": "7b2a4a667b4006bb8e045e96042bd5bc3fe190b939adb988bde161e6c07fd072",
+      "bytes": 9958
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160010_checkins.sql",
+      "sha256": "cc7d829432c8b9124cddd605922fa71948d9da7bc8234c61ecb74b7095e5c85c",
+      "bytes": 22643
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160011_account_management.sql",
+      "sha256": "fe982fecb3ad12e2bc769e3a53693c1433407f26a345a6cdec70ead6b830409a",
+      "bytes": 11156
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160012_receipt_lock_order.sql",
+      "sha256": "353b9e9cdf99c5176ae7be200ecb0c60c92b85bfaf14c64d94978dc0a4b00a99",
+      "bytes": 3753
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160013_domain_notifications.sql",
+      "sha256": "8134a0fe4be9e0420bbb77b8e6bd8cb3623a44b766503e9af2cebfb5444c71c9",
+      "bytes": 37032
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160014_parent_finance_export.sql",
+      "sha256": "3afe9cd0002b22beafda0b109a61fc73dd6800354fe7e8997e6cdd42276bbcf4",
+      "bytes": 18473
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160015_privacy_execution_fix.sql",
+      "sha256": "20e2a6a4052e504259fc9be631c2afffe16feef5a89cfb8df36aa75bdf977eef",
+      "bytes": 1489
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160016_conversation_previews.sql",
+      "sha256": "56ba150ea7966d7f31ab87e433483c294b668140135cbdf1d186f34cd829e4dd",
+      "bytes": 4979
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160017_invalidation_authorization.sql",
+      "sha256": "0e7b47fe65943a1e40a3313acf4cfccef7e80e7e2c3a17238e1353b79935ac32",
+      "bytes": 2417
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160018_message_response_preferences.sql",
+      "sha256": "08a657c40cc1f1e3805d42b150f0bf45742387f909e60026c65177242abb77df",
+      "bytes": 2498
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160019_family_administration.sql",
+      "sha256": "02e7246fa142b33db3d8737a1841ef53afa2304891672e16e4c1bac951423495",
+      "bytes": 2913
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160020_invalidation_retention.sql",
+      "sha256": "8c152791f4fe35c3a430b35355212986cb8d14848117d2f1894a5a7317435b03",
+      "bytes": 4207
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160021_context_child_eligibility.sql",
+      "sha256": "01894061cd76e93f857113c424e3f07ffd9459782db548d39eae6bb38b51cd66",
+      "bytes": 2094
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160022_message_receipts.sql",
+      "sha256": "9099f80505c9dbaa55a6fddcafbfcb4e1e0e20263cc0c725379a93d5b9b71c1a",
+      "bytes": 1431
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160023_finance_notifications.sql",
+      "sha256": "e9351749e9547d5e55307fd1223dd7b046911dfdeecb65948396474e6f6fc978",
+      "bytes": 33900
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160024_journal_session_lease.sql",
+      "sha256": "1954ccf577a864415547d67ce01ac34c3d0048e056d7941a6f827fb9af80f6c2",
+      "bytes": 3425
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160025_current_actor_clock.sql",
+      "sha256": "92a41670cf94747acb662bcfacbf7464ccd2b9045d865f1f6c0bf0182c5c5654",
+      "bytes": 13460
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160026_resource_guardrails.sql",
+      "sha256": "cc4529281429f713c25e610063ab56f6ff7ab634b3c2242638d1c142c809e1cd",
+      "bytes": 10001
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160027_finance_checkpoints.sql",
+      "sha256": "b972e5e0a02a423475d4ad0a790447adf23f728e6929e36bed2d9a78ba5bb8f7",
+      "bytes": 56827
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160028_finance_private_match_archives.sql",
+      "sha256": "5a5a96c3fd97f2cc71166918e78b8d1eb6852e9cba1b9585a76067bb0266168b",
+      "bytes": 23740
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160029_finance_privacy_archives.sql",
+      "sha256": "71317e006de1afda040cda16aadad159b1831f7a212cd9d796e949fcb4feff31",
+      "bytes": 56022
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160030_finance_write_admission.sql",
+      "sha256": "ce5f447c430616077f7bb3530c76991df065f89b135a5d74d431294f5e1323b8",
+      "bytes": 5515
+    },
+    {
+      "path": "services/backend/supabase/migrations/202611160031_finance_archive_page_reads.sql",
+      "sha256": "248431361d079b27fb3c6b33863ea4dcf87a87d119621b81e7594639817ce345",
+      "bytes": 4917
+    },
+    {
+      "path": "services/backend/supabase/templates/confirmation.html",
+      "sha256": "fb79df60f8841c79803914e1496d11cb634348742b76c549bc9559735debb5c8",
+      "bytes": 1995
+    },
+    {
+      "path": "services/backend/supabase/templates/recovery.html",
+      "sha256": "ef975a1d44010051c3775c063ab7075e28321eb05b30cfaebd680f318d251c2f",
+      "bytes": 2002
+    },
+    {
+      "path": "services/backend/supabase/tests/account_management.test.sql",
+      "sha256": "ec0bcc23304d1e294d927046bde6f75a036d7b6de528c0618f83c0700003aded",
+      "bytes": 20496
+    },
+    {
+      "path": "services/backend/supabase/tests/checkins.test.sql",
+      "sha256": "7c53fab748765e966ade8ce5b7b217682e57aeff67eb4f9fa78a553ff60bd1ab",
+      "bytes": 24093
+    },
+    {
+      "path": "services/backend/supabase/tests/child_context_eligibility.test.sql",
+      "sha256": "8f0be0345f077e170e8b0e05a6f2afa4278c2b51a8bea20b52bae107ae9fe82d",
+      "bytes": 10408
+    },
+    {
+      "path": "services/backend/supabase/tests/communication.test.sql",
+      "sha256": "238ce16d1b34592832d23d22cf21875d1aa32023ca7d95b9a9b46095e799254c",
+      "bytes": 25118
+    },
+    {
+      "path": "services/backend/supabase/tests/conversation_previews.test.sql",
+      "sha256": "e2260aee24d40067cfceec5b7badf7c7466e220a5b895bc92103ca60267d7cf6",
+      "bytes": 15652
+    },
+    {
+      "path": "services/backend/supabase/tests/domain_notifications.test.sql",
+      "sha256": "ec1ad9e4e775a1d91c13ca82ffb572d2981da2fb22af17647545ad6a966eb935",
+      "bytes": 22365
+    },
+    {
+      "path": "services/backend/supabase/tests/external_contacts.test.sql",
+      "sha256": "e9bcac65223984c5b4093fb14ff24d10c1675af8042532b298c1fc94d19940bc",
+      "bytes": 31191
+    },
+    {
+      "path": "services/backend/supabase/tests/family_administration.test.sql",
+      "sha256": "c147311e84f3e45584269033d505fa41b8d8d659a457a84b2f17f32a10c98caf",
+      "bytes": 11829
+    },
+    {
+      "path": "services/backend/supabase/tests/finance.test.sql",
+      "sha256": "8916fe49dc5ad68d59c11edd4d9e90ff6954fe443c78e2f807a69618404f5311",
+      "bytes": 11902
+    },
+    {
+      "path": "services/backend/supabase/tests/finance_archive_page_reads.test.sql",
+      "sha256": "7ac00d59cb42922345f7f0fc0a36dadd105f2bbca0eb8292682f90ca9d452318",
+      "bytes": 4129
+    },
+    {
+      "path": "services/backend/supabase/tests/finance_checkpoints.test.sql",
+      "sha256": "0d0538e9a56537cbd85d84e17f24173d012a2863b05b2d279d5632b9a2749a95",
+      "bytes": 19602
+    },
+    {
+      "path": "services/backend/supabase/tests/finance_notifications.test.sql",
+      "sha256": "80ab7444dfbb0ec9dc858c23251ff8ba58e3df8c67daa974133c55ec896dda64",
+      "bytes": 28273
+    },
+    {
+      "path": "services/backend/supabase/tests/finance_privacy_archives.test.sql",
+      "sha256": "8399aded1c1bc7447669b3281afc3b0e161813f0975bd1f66d691c73c35da1f4",
+      "bytes": 34982
+    },
+    {
+      "path": "services/backend/supabase/tests/finance_private_archives.test.sql",
+      "sha256": "bbff524f7b05322c7e2b629f96503759e1b9ea90f0c3a3cede98ec5c2629b1c1",
+      "bytes": 18840
+    },
+    {
+      "path": "services/backend/supabase/tests/finance_write_admission.test.sql",
+      "sha256": "ec44b227a9e38213fa961d75e998c4e91e8010a4daa8a61edb3da6cf416035a3",
+      "bytes": 12303
+    },
+    {
+      "path": "services/backend/supabase/tests/identity.test.sql",
+      "sha256": "846dc857eea75b48e5c82a078bdd1225842425e6089b4a9715d22b302e1e6344",
+      "bytes": 13894
+    },
+    {
+      "path": "services/backend/supabase/tests/invalidation_authorization.test.sql",
+      "sha256": "ff775a0c5eb56cd8d71ed787d3b456a5f2e43f5eba4f4790f49b97748c02231e",
+      "bytes": 11258
+    },
+    {
+      "path": "services/backend/supabase/tests/invalidation_retention.test.sql",
+      "sha256": "2e0ad8c023ea1fe28f94e703409be9678a0d4e567801eb2ee2fd413175ea52d3",
+      "bytes": 10373
+    },
+    {
+      "path": "services/backend/supabase/tests/journal_session_lease.test.sql",
+      "sha256": "fbe9be18c5fd80a8d51cd975a3b86ea6e28a218d7b39d4a293884c9bcec3f3fd",
+      "bytes": 12766
+    },
+    {
+      "path": "services/backend/supabase/tests/message_receipts.test.sql",
+      "sha256": "743daf18332deaaba4625eb3da5f8276f511968d52754b10d3ad27b146abb116",
+      "bytes": 6621
+    },
+    {
+      "path": "services/backend/supabase/tests/message_response_preferences.test.sql",
+      "sha256": "ee5b1c1f7ea70391778e22d944b4678bd002d9da0062a78701c3adb7972c7935",
+      "bytes": 9992
+    },
+    {
+      "path": "services/backend/supabase/tests/notification_receipts.test.sql",
+      "sha256": "f0a35b696eb15cf48302749d35cb353a8fbd0cf18cd6d0eec96429a0547ff00a",
+      "bytes": 10856
+    },
+    {
+      "path": "services/backend/supabase/tests/parent_finance_export.test.sql",
+      "sha256": "52f2f58121f19a70abb237a2e773152a3eb72dd3e8a5b73f20157417909f498d",
+      "bytes": 19136
+    },
+    {
+      "path": "services/backend/supabase/tests/privacy_lifecycle.test.sql",
+      "sha256": "f252a9db047dafad715539a01d5c89092718576079ef7eb96660c4bf78e42c6a",
+      "bytes": 25305
+    },
+    {
+      "path": "services/backend/supabase/tests/qualification_security.test.sql",
+      "sha256": "1a326c97c61507954ab97bd8c9c6b5657d250bd5a65468d2c8dde5a49538bcba",
+      "bytes": 10009
+    },
+    {
+      "path": "services/backend/supabase/tests/resource_guardrails.test.sql",
+      "sha256": "0080891f7c704223cec13dfbaad9b222e4ba8153f10046b9dd18680b22b6cfeb",
+      "bytes": 20514
+    },
+    {
+      "path": "services/backend/tests/api.test.ts",
+      "sha256": "bdde45b0c6e77f813fac5f48761369b24d7984c289eb92864959137a7d90ec41",
+      "bytes": 1280
+    },
+    {
+      "path": "services/backend/tests/edge-mount.test.ts",
+      "sha256": "211fe9362850f8863bec7b0ac1abc6a46f8f926db5633998284d5600604da3b3",
+      "bytes": 1355
+    },
+    {
+      "path": "services/backend/tests/finance-capacity-benchmark.test.ts",
+      "sha256": "b0826e92a3c9a2a8db717668c174faf9d64712a95849c14105f8141c4e55c036",
+      "bytes": 4100
+    },
+    {
+      "path": "services/backend/tests/finance-checkpoint-benchmark.test.ts",
+      "sha256": "9bd063243346cbd0bde826fa010e80c9efc6a92ce88c0a60f992a31956c3575c",
+      "bytes": 959
+    },
+    {
+      "path": "services/backend/tests/finance-checkpoint-client-probe.test.ts",
+      "sha256": "fa99057634e1c5b6b74079130973da2578a2c9b3d9eaf4f447b6d014532c07c6",
+      "bytes": 7244
+    },
+    {
+      "path": "services/backend/tests/finance-checkpoint-edge-probe.test.ts",
+      "sha256": "16c99ed8daeb77488eeecc9553d7c6cb4bf08341d3884cdb85611fadcd0fa178",
+      "bytes": 8167
+    },
+    {
+      "path": "services/backend/tests/finance-checkpoint-family-probe.test.ts",
+      "sha256": "d7ea9d82108b5928cee43ac9a4f72ab0555c9199131e7f8d422332b51cd712c7",
+      "bytes": 7001
+    },
+    {
+      "path": "services/backend/tests/finance-checkpoint-helpers.test.ts",
+      "sha256": "d298cf3a8d04aab745bad85fd7a750d56ccf8a2b88e550013d33b582b9b7af5e",
+      "bytes": 1896
+    },
+    {
+      "path": "services/backend/tests/finance-checkpoint-security.test.ts",
+      "sha256": "4484b2b8e6f9eab6975ff9f2c6da935a1154887e80e8fe5253ff8bebe927605a",
+      "bytes": 26243
+    },
+    {
+      "path": "services/backend/tests/finance-checkpoint-service.test.ts",
+      "sha256": "93509ee20f9e93296f4b44d7c228a3327f7b5e18d84a814fba2e889b0d34b203",
+      "bytes": 18895
+    },
+    {
+      "path": "services/backend/tests/finance-checkpoint-storage-benchmark.test.ts",
+      "sha256": "cd90818a45da3bfeddcfdf692f97bed6c10cf46af954fde22c7b4e9529929ab3",
+      "bytes": 8242
+    },
+    {
+      "path": "services/backend/tests/finance-history.test.ts",
+      "sha256": "5ba47329dd1ae81c2625ea474f09c5ad6b157a20a343b20c89972a9b54bc1e4e",
+      "bytes": 2938
+    },
+    {
+      "path": "services/backend/tests/finance-hot-history-security.test.ts",
+      "sha256": "649a15a73f598495e4d70836a91cd1f7de1b252120870683c5f6b1821065b446",
+      "bytes": 7462
+    },
+    {
+      "path": "services/backend/tests/finance-notifications.test.ts",
+      "sha256": "ac36699d209e2f8f1892b54accce1fa5d6d714eec121088fbda8100a47028a39",
+      "bytes": 8188
+    },
+    {
+      "path": "services/backend/tests/finance-privacy.test.ts",
+      "sha256": "b373117207986f97930fbc53512cdd9f55a5a121cf06f7515010f3d85a2fc371",
+      "bytes": 5482
+    },
+    {
+      "path": "services/backend/tests/finance-service.test.ts",
+      "sha256": "6c206edd7d14c77b40239ab650f816061c551386ee770a3d3780ea12b09efd88",
+      "bytes": 9911
+    },
+    {
+      "path": "services/backend/tests/free-plan.test.ts",
+      "sha256": "2a8104e99818283d25e5c13970f9253e34a0b32726b6a68c5fa0f40e62d39074",
+      "bytes": 12042
+    },
+    {
+      "path": "services/backend/tests/integration/accounts.test.ts",
+      "sha256": "ee6541a8d309c5f1e4a6b5c1f1d364aaebb4421fedf77fdf123a9f2f5449bb57",
+      "bytes": 9808
+    },
+    {
+      "path": "services/backend/tests/integration/finance-admission.test.ts",
+      "sha256": "d22c8a0972cecad39cd6256df885f2ba2ebd6827ba812062acceebd9637e204b",
+      "bytes": 6993
+    },
+    {
+      "path": "services/backend/tests/integration/finance-checkpoints-http.test.ts",
+      "sha256": "152de16fa8ac086035d9096879d8c7a25721951f196c25ae87cf26051ddef3f6",
+      "bytes": 13049
+    },
+    {
+      "path": "services/backend/tests/integration/finance-edge-http.test.ts",
+      "sha256": "112d878e85d802dcee828b7dff34e4086a0a704fb7b284ab2553864a7b64f089",
+      "bytes": 3009
+    },
+    {
+      "path": "services/backend/tests/integration/finance-http.test.ts",
+      "sha256": "937036bbc02db6c7c34a4e3b3636a8c9cb018e1a2c6844723011f286831c5115",
+      "bytes": 6719
+    },
+    {
+      "path": "services/backend/tests/integration/finance-notification-locks.test.ts",
+      "sha256": "7b72cfdfaa3d51a683a3c9b787f1a2c36d06b92256c289359bdbe4b2e4b14935",
+      "bytes": 9035
+    },
+    {
+      "path": "services/backend/tests/integration/integration-fixtures.ts",
+      "sha256": "f0eb6b67f704a2e53ff5a3a3b0f9bc61c7444f85dbf87edbdbd93939c37f346a",
+      "bytes": 9754
+    },
+    {
+      "path": "services/backend/tests/integration/parent-export.test.ts",
+      "sha256": "02f7d212abbdcde5e64b39eeee29b733c0cf27f76b56c815cdd0e965ca6c5cc7",
+      "bytes": 11177
+    },
+    {
+      "path": "services/backend/tests/integration/privacy-http.test.ts",
+      "sha256": "df88b19d18954472e339c31d498e9414fa0a3f6ee25d2919715a9e45de3bb045",
+      "bytes": 12304
+    },
+    {
+      "path": "services/backend/tests/integration/qualification-security.test.ts",
+      "sha256": "26392e0df0a2501187b93cf1466821a1d53c2dd5bd8d8522b8b6b3d262e04737",
+      "bytes": 14840
+    },
+    {
+      "path": "services/backend/tests/integration/realtime.test.ts",
+      "sha256": "73c918fae3c1bd52c1739fd217df23b8d9696a9208b24c4c0f79425a81bcbca1",
+      "bytes": 20598
+    },
+    {
+      "path": "services/backend/tests/integration/receipt-locks.test.ts",
+      "sha256": "b5d0a1bd9cfc5bee1048b8cead86c557b2f235ab8805e18e4ae38170b37d58d5",
+      "bytes": 11681
+    },
+    {
+      "path": "services/backend/tests/mobile-fixture-path.test.ts",
+      "sha256": "80d8388709f42cda212af3244e5d3a15048398b06f18b52f0d62a85853e04bc6",
+      "bytes": 3558
+    },
+    {
+      "path": "services/backend/tests/notification-cycle.test.ts",
+      "sha256": "21f09c391d57b1adc9a73295c02be95c81374951c0b602e2b0ff9569c4720b98",
+      "bytes": 12513
+    },
+    {
+      "path": "services/backend/tests/notifications.test.ts",
+      "sha256": "22e96147acb6a79ce4e7745f52c04acc10cf636a1077847d739617cf430c8084",
+      "bytes": 9886
+    },
+    {
+      "path": "services/backend/tests/privacy-service.test.ts",
+      "sha256": "43ffa7c8b2d45750e1d52f8bb91d6c33ff78a03ee9354d0d60fe0a44720d8945",
+      "bytes": 16868
+    },
+    {
+      "path": "services/backend/tests/qualification-database.test.ts",
+      "sha256": "5c5e6f83edb0b6ee18458e2a5e76f9e2842b77151a3de5bef279b2052ccf3abd",
+      "bytes": 3757
+    },
+    {
+      "path": "services/backend/tests/recovery.test.ts",
+      "sha256": "a343594f645a7339a14d3277912b5e33d162beb2dfc03e1236cf5a2d623b912f",
+      "bytes": 13758
+    },
+    {
+      "path": "services/backend/tests/wait-local-edge.test.ts",
+      "sha256": "fab56cebf402cdea0e915c6ffb6bb1c31c9338cf09fdabd5766c633a8f3f1438",
+      "bytes": 5345
+    },
+    {
+      "path": "spec/production/release/production-checks.workflow.yml",
+      "sha256": "762248f4114c599a3862205731b639f92f876842bcae65bf96cada4934829839",
+      "bytes": 7860
+    }
+  ]
+}

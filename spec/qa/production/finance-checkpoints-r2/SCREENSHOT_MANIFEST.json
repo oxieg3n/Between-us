@@ -1,0 +1,686 @@
+{
+  "format": 1,
+  "build": "1116-FinanceCheckpoints-r2",
+  "captures": [
+    {
+      "file": "light/parent-appearance.png",
+      "theme": "light",
+      "description": "Theme changed through actual app appearance settings.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "914fab8e459584bd27f4304976c584b935ba76f83660f2caacd8580b2f7e6d34"
+    },
+    {
+      "file": "light/parent-build.png",
+      "theme": "light",
+      "description": "Actual installed0.6.0/code5 source build identifier.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "9098b56266e3a07d28b6486e895bd7d768412757338f1cffae2f7923ea68596d"
+    },
+    {
+      "file": "light/parent-home.png",
+      "theme": "light",
+      "description": "Actual parent home with the approved branding.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "4ce0db4fef9738e1d8cb6a177ec9a3ea3b869b9ab32826957e1b5ea52870d1fa"
+    },
+    {
+      "file": "light/parent-finances.png",
+      "theme": "light",
+      "description": "Authoritative family financial summary with retained paid basis.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "29f35d66a689dacc9018e5c10d9c433d55790287660b562a6b82ca152c16a443"
+    },
+    {
+      "file": "light/parent-history-entry.png",
+      "theme": "light",
+      "description": "Direct access to older settled records without scrolling through100 recent actions.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "fb1ea8b0476b4bb3bfb4386109540f67d5fc316dbd02a4b67454f1130887567a"
+    },
+    {
+      "file": "light/parent-archive-page.png",
+      "theme": "light",
+      "description": "Twenty-record server-authorized archive page.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "93d5274fe1eef67e9301a0660b2f64498b7e015a8f3bcc81f6d513035d075cbd"
+    },
+    {
+      "file": "light/parent-settled-record.png",
+      "theme": "light",
+      "description": "Actual retained earning and manual payout report; no provider transfer.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "38fc70939bd8d467ed5fbf4503df3bf6b67c5ae55f8e8eda720c6ac3350cf721"
+    },
+    {
+      "file": "light/parent-note-keyboard.png",
+      "theme": "light",
+      "description": "Native historical correction field with the actual Android keyboard.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "930cbb50e5da56a8ec6af677c6707dd920f4bd0a4ef7306ca1a2d79b976c475d"
+    },
+    {
+      "file": "light/parent-earning-review.png",
+      "theme": "light",
+      "description": "Explicit compensating-event review; confirmation was not pressed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "b095135cda05e95da0fad683cf86340c103337203731793e9e0e5c562ae2e870"
+    },
+    {
+      "file": "light/parent-goals.png",
+      "theme": "light",
+      "description": "Savings goal view; surprise parent contributions are absent for the child.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "06352ec9c5deb08ecc5e1f8509b4141e0c096157ff6e25817441e4bf7f858fec"
+    },
+    {
+      "file": "light/parent-payouts.png",
+      "theme": "light",
+      "description": "Manual family reports and cash-out controls; retained paid totals remain exact.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "ed8aef1010250f81e0671e7d2d6955ce588806d7c425758d20bc9ffc948d62a3"
+    },
+    {
+      "file": "light/parent-payment-row.png",
+      "theme": "light",
+      "description": "Actual saved cash payment row renders on Android without a raw text error.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "ef6d23c17826f43212b475e7f96ca74c370884f1d792b86a8435211211f9cc1c"
+    },
+    {
+      "file": "light/parent-matching.png",
+      "theme": "light",
+      "description": "Parent-only matching configuration and current summary.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "c4b69245295bc1a2a26df9354fbb24d4508986155fd81b8d074fe01eb6d9d6f4"
+    },
+    {
+      "file": "light/parent-matching-history.png",
+      "theme": "light",
+      "description": "Parent-only retained surprise contribution and reconciliation record.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "b137972842b60ed72a65de4970c49951df1b1dfd81181226ba817d741a13c213"
+    },
+    {
+      "file": "light/parent-matching-review.png",
+      "theme": "light",
+      "description": "Explicit reveal review; no reveal was confirmed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "736a0daa9bdc35e86393edccee11a5ae7c0c40177c9c33f3a46e68ce052f4cd6"
+    },
+    {
+      "file": "light/parent-circle.png",
+      "theme": "light",
+      "description": "Verified fictional trusted circle; relationship state remains distinct from journal access.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "76b3193fdbed009d9a2492103d973ac570f42e732607e324f433e56791da3c9e"
+    },
+    {
+      "file": "dark/parent-appearance.png",
+      "theme": "dark",
+      "description": "Theme changed through actual app appearance settings.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "2373a70d96683c06aeebfa6e684d0dbb7f897a4dd3629f83ff691498348fa9ac"
+    },
+    {
+      "file": "dark/parent-build.png",
+      "theme": "dark",
+      "description": "Actual installed0.6.0/code5 source build identifier.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "6af17eca4956d10bc55d266e2943d04e59c0f47b0305829cebee5f8fffa59103"
+    },
+    {
+      "file": "dark/parent-home.png",
+      "theme": "dark",
+      "description": "Actual parent home with the approved branding.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "2698c5306ebe58a9d792041980dbb8880b25d5e7e18d9a7461904e52378c0df0"
+    },
+    {
+      "file": "dark/parent-finances.png",
+      "theme": "dark",
+      "description": "Authoritative family financial summary with retained paid basis.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "5b011800cbdeefcd894cb9562c547e6700b4920e387ca120b588176eac32a4f6"
+    },
+    {
+      "file": "dark/parent-history-entry.png",
+      "theme": "dark",
+      "description": "Direct access to older settled records without scrolling through100 recent actions.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "f95f95c52b4dcc763ac75db6b6a1c5461f978220120afe91ff96d2c96f7d716d"
+    },
+    {
+      "file": "dark/parent-archive-page.png",
+      "theme": "dark",
+      "description": "Twenty-record server-authorized archive page.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "828b41d4e289d0964b7be52c7c3b079db74b4ad31fbda21334d70ba7324e360b"
+    },
+    {
+      "file": "dark/parent-settled-record.png",
+      "theme": "dark",
+      "description": "Actual retained earning and manual payout report; no provider transfer.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "e9426d2a239266a27607494333816413f147f7567dae1c87e46a5e2e68eb0389"
+    },
+    {
+      "file": "dark/parent-note-keyboard.png",
+      "theme": "dark",
+      "description": "Native historical correction field with the actual Android keyboard.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "d2828d195c50029b197fd31d1cf49b9d0bf48d7b83e80fd40c11976a128d1b4a"
+    },
+    {
+      "file": "dark/parent-earning-review.png",
+      "theme": "dark",
+      "description": "Explicit compensating-event review; confirmation was not pressed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "12ce8d07ce93dd3bc2387816964f451bda086b532e6cc70589aee3c3bf01356e"
+    },
+    {
+      "file": "dark/parent-goals.png",
+      "theme": "dark",
+      "description": "Savings goal view; surprise parent contributions are absent for the child.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "4b1b6fd0ea43cde4669a7482eaf06f425ad3c83fb8815b2e6785761531b2c59a"
+    },
+    {
+      "file": "dark/parent-payouts.png",
+      "theme": "dark",
+      "description": "Manual family reports and cash-out controls; retained paid totals remain exact.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "7f7ae02488107d28f717075ab2ce4453a2523fcccf22cedd022b88f4eadc574f"
+    },
+    {
+      "file": "dark/parent-payment-row.png",
+      "theme": "dark",
+      "description": "Actual saved cash payment row renders on Android without a raw text error.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "1cb026516144bc38762f2eff5e930517907b5d22edcaefaccd336a8fcec0afde"
+    },
+    {
+      "file": "dark/parent-matching.png",
+      "theme": "dark",
+      "description": "Parent-only matching configuration and current summary.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "15a9187e3c3616dedb8e54021854e46b4c52c7d3bb9e38bb68c9bad054f1fcfe"
+    },
+    {
+      "file": "dark/parent-matching-history.png",
+      "theme": "dark",
+      "description": "Parent-only retained surprise contribution and reconciliation record.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "6dffd1b45bb6f5269427ecceb90dea2302ed794e81f03b680d17dd08b2c14ee0"
+    },
+    {
+      "file": "dark/parent-matching-review.png",
+      "theme": "dark",
+      "description": "Explicit reveal review; no reveal was confirmed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "8699c59b1fabc235c1ec894edc1f77670d3eb990d358e7609875b817918647d6"
+    },
+    {
+      "file": "dark/parent-circle.png",
+      "theme": "dark",
+      "description": "Verified fictional trusted circle; relationship state remains distinct from journal access.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "ca8390eb1ffaa2ff5411d7ef02964722d714e7103101328c263bb0aeaacc0e39"
+    },
+    {
+      "file": "light/child-appearance.png",
+      "theme": "light",
+      "description": "Theme changed through actual app appearance settings.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "e56ff01d1ff8522470f56527a6ee3203a0f9427c63e707339c8fb7042b11c00e"
+    },
+    {
+      "file": "light/child-build.png",
+      "theme": "light",
+      "description": "Actual installed0.6.0/code5 source build identifier.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "b213ccf4a7205a3764b055f4b9e227228498dc0c493f74be63680ba16502b12f"
+    },
+    {
+      "file": "light/child-home.png",
+      "theme": "light",
+      "description": "Actual child home with the approved branding.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "b98117905c1af6eade3d92d8658843f559ef1d2a6d7fafeb75a3be28d08c10af"
+    },
+    {
+      "file": "light/child-finances.png",
+      "theme": "light",
+      "description": "Authoritative family financial summary with retained paid basis.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "16776072f28153fdff05bea1af0e144527966fa696d7ea30acfbe42b6bbb1ffc"
+    },
+    {
+      "file": "light/child-history-entry.png",
+      "theme": "light",
+      "description": "Direct access to older settled records without scrolling through100 recent actions.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "642f8d39ac0f9bc1cdf65940c4d33bfe7c9477f462ae24435da5828e35b88f6c"
+    },
+    {
+      "file": "light/child-archive-page.png",
+      "theme": "light",
+      "description": "Twenty-record server-authorized archive page.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "e4ee4be498e5dc1364ba067996ed964800d91526cf69977136d6cf911a08ce3a"
+    },
+    {
+      "file": "light/child-settled-record.png",
+      "theme": "light",
+      "description": "Actual retained earning and manual payout report; no provider transfer.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "3e9d75fa8b754eeffd0d21bef2e4aa8f6a273a88bb0bb5c16e2a12f7ec130721"
+    },
+    {
+      "file": "light/child-receipt-review.png",
+      "theme": "light",
+      "description": "Explicit review of the archived receipt; confirmation was not pressed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "6a3fd0ba614af49251f1559cf658c22371a5b6d2c4a5cc263d645f62da5660b4"
+    },
+    {
+      "file": "light/child-goals.png",
+      "theme": "light",
+      "description": "Savings goal view; surprise parent contributions are absent for the child.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "954921ed6c1af2a41f5bc59a221df21c96bf32bf3531fb3f23662b9353590502"
+    },
+    {
+      "file": "light/child-payouts.png",
+      "theme": "light",
+      "description": "Manual family reports and cash-out controls; retained paid totals remain exact.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "98fe1cd775150c63fe463beb942864157e607a8a552ae619006572ea502feb36"
+    },
+    {
+      "file": "light/child-payment-row.png",
+      "theme": "light",
+      "description": "Actual saved cash payment row renders on Android without a raw text error.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "9664458995b20db2ecd3482bee7bcb47230ba6291d5727860c6f2d1c7618088f"
+    },
+    {
+      "file": "light/child-cashout-review.png",
+      "theme": "light",
+      "description": "An ordinary cash-out request still requires explicit review; confirmation was not pressed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "33e6b7811750d5a92d3ba8784692c070be674eda4ba15ed8d02ed59ef2f9427e"
+    },
+    {
+      "file": "light/child-circle.png",
+      "theme": "light",
+      "description": "Verified fictional trusted circle; relationship state remains distinct from journal access.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "749e264db7e3283ed1ad2ee6d104a1f7209113f84ff54a326aa6249a2ea629ef"
+    },
+    {
+      "file": "dark/child-appearance.png",
+      "theme": "dark",
+      "description": "Theme changed through actual app appearance settings.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "1ffc5a2985b6ec91134455805e443024692afab9845042954d3987855e6727ae"
+    },
+    {
+      "file": "dark/child-build.png",
+      "theme": "dark",
+      "description": "Actual installed0.6.0/code5 source build identifier.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "c41eb53ab2d9541804650709643871cf448a493b77c4215d7f53e7c953ce147b"
+    },
+    {
+      "file": "dark/child-home.png",
+      "theme": "dark",
+      "description": "Actual child home with the approved branding.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "15fd9826d12398b73318e00bf3627fcdaf983fb1cbc4e4c51cc2ce7e3ca1666b"
+    },
+    {
+      "file": "dark/child-finances.png",
+      "theme": "dark",
+      "description": "Authoritative family financial summary with retained paid basis.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "a5b9d808eb116d84aa700ad1cabbb5bf750799b3b0d4ae3b4578214a4e067d49"
+    },
+    {
+      "file": "dark/child-history-entry.png",
+      "theme": "dark",
+      "description": "Direct access to older settled records without scrolling through100 recent actions.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "06cb4b2ad111f188cc16467f76e752ea869f1fa407b9beb2ee44e6bcd71e1f97"
+    },
+    {
+      "file": "dark/child-archive-page.png",
+      "theme": "dark",
+      "description": "Twenty-record server-authorized archive page.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "ba0caf94762c54736343076a6d150ee9f296ff3e31687dd44cf85c1a63c9109c"
+    },
+    {
+      "file": "dark/child-settled-record.png",
+      "theme": "dark",
+      "description": "Actual retained earning and manual payout report; no provider transfer.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "9a8ba211ab8bfa1ae5d23d4d954d9821edeba91e7c3bf73fad5f084a63ece29b"
+    },
+    {
+      "file": "dark/child-receipt-review.png",
+      "theme": "dark",
+      "description": "Explicit review of the archived receipt; confirmation was not pressed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "4acd2e215736097d3adef69792c8aa2335e0981e62cae67cfad47dd2e90dc2d0"
+    },
+    {
+      "file": "dark/child-goals.png",
+      "theme": "dark",
+      "description": "Savings goal view; surprise parent contributions are absent for the child.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "3516ae9a47d67d2d0e32d8fe51fc607ee51de3f9c9ab7c05029be2ced91f67b5"
+    },
+    {
+      "file": "dark/child-payouts.png",
+      "theme": "dark",
+      "description": "Manual family reports and cash-out controls; retained paid totals remain exact.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "a7db4fcb05f672c8e86b4566474132e5589ebb063783a220f9ef82fc8dc4ab4d"
+    },
+    {
+      "file": "dark/child-payment-row.png",
+      "theme": "dark",
+      "description": "Actual saved cash payment row renders on Android without a raw text error.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "dfa0140886247fea247c7eaedb53cb748e953525e8b50a189bf5c1114f7e008a"
+    },
+    {
+      "file": "dark/child-cashout-review.png",
+      "theme": "dark",
+      "description": "An ordinary cash-out request still requires explicit review; confirmation was not pressed.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "7a5d28eed9981188bd126e2bd5855c266a7c5626df279b50986faa7d2abb65d0"
+    },
+    {
+      "file": "dark/child-circle.png",
+      "theme": "dark",
+      "description": "Verified fictional trusted circle; relationship state remains distinct from journal access.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "4549e04936688bfbc3677239225a2b83e9f81fa5f4e6d8a16dcb469e388818e8"
+    },
+    {
+      "file": "extra/child-receipt-confirmed.png",
+      "theme": "extra",
+      "description": "Actual native archived receipt acknowledgment saved by the local server; no transfer.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "c5ccf4f3c02673a46b6e96c721dfce9a7c3f2cc922efddf5507222786cb18504"
+    },
+    {
+      "file": "extra/child-payout-font-200.png",
+      "theme": "extra",
+      "description": "Actual200percent hot text change preserved the unsent2.00USD input; no payout requested.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "e3308ba870fcaaa0ba163e1824999cbb26835576305adc76fa8425957ed3e70b"
+    },
+    {
+      "file": "responsive/small-financial-overview.png",
+      "theme": "responsive",
+      "description": "Night Harbor financial viewport on the same Pixel_10 override; not separate hardware.",
+      "width": 840,
+      "height": 1680,
+      "sha256": "6bf1dbd58d50faff9ca80c89e06e61af0b3ccd73d6890cb4a49bacabc2621e27"
+    },
+    {
+      "file": "responsive/small-history-entry.png",
+      "theme": "responsive",
+      "description": "Actual bounded history entry and accessible controls on the same AVD override.",
+      "width": 840,
+      "height": 1680,
+      "sha256": "3048a88a488393313b5aeaae68d997b286225f6bc471114e1f9f96461298a7ac"
+    },
+    {
+      "file": "responsive/standard-financial-overview.png",
+      "theme": "responsive",
+      "description": "Night Harbor financial viewport on the same Pixel_10 override; not separate hardware.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "5438bf9b5a9ff039c0a1f4fd64a3f0aa8f8418a773ae2f7f249f62610210ff7e"
+    },
+    {
+      "file": "responsive/standard-history-entry.png",
+      "theme": "responsive",
+      "description": "Actual bounded history entry and accessible controls on the same AVD override.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "e0c5f2b248aea4ebb4eb3f17369afa70553afc98292b4bbacc805d4338c67f0a"
+    },
+    {
+      "file": "responsive/large-financial-overview.png",
+      "theme": "responsive",
+      "description": "Night Harbor financial viewport on the same Pixel_10 override; not separate hardware.",
+      "width": 1260,
+      "height": 2730,
+      "sha256": "886349c5125978719122ac87181ae0c508a14492a5d2d38c5ed53ae2f1513a93"
+    },
+    {
+      "file": "responsive/large-history-entry.png",
+      "theme": "responsive",
+      "description": "Actual bounded history entry and accessible controls on the same AVD override.",
+      "width": 1260,
+      "height": 2730,
+      "sha256": "8917f4c75bdf65a7ce84df8792002c673d2887ab5dc1801cec3b3d2f58969c33"
+    },
+    {
+      "file": "responsive/tablet-financial-overview.png",
+      "theme": "responsive",
+      "description": "Night Harbor financial viewport on the same Pixel_10 override; not separate hardware.",
+      "width": 1920,
+      "height": 2560,
+      "sha256": "d6fd526a0ea9c07c40b64cbf0ec083b98cc0a1ee9d923fd78336887abd849365"
+    },
+    {
+      "file": "responsive/tablet-history-entry.png",
+      "theme": "responsive",
+      "description": "Actual bounded history entry and accessible controls on the same AVD override.",
+      "width": 1920,
+      "height": 2560,
+      "sha256": "3bc29a28ebe00d4a1053120f84841b8928b7d6316a9f4b4e4ad7c3e070333b19"
+    }
+  ],
+  "checks": [
+    {
+      "run": "parent-light",
+      "result": "FAIL"
+    },
+    {
+      "case": "distinct managed sign-in",
+      "role": "parent",
+      "result": "PASS",
+      "credentialValuesLogged": false
+    },
+    {
+      "case": "native archive navigation and review cancellation",
+      "role": "parent",
+      "theme": "light",
+      "result": "PASS",
+      "realTransfers": false
+    },
+    {
+      "run": "parent-light",
+      "result": "PASS"
+    },
+    {
+      "case": "distinct managed sign-in",
+      "role": "parent",
+      "result": "PASS",
+      "credentialValuesLogged": false
+    },
+    {
+      "case": "native archive navigation and review cancellation",
+      "role": "parent",
+      "theme": "dark",
+      "result": "PASS",
+      "realTransfers": false
+    },
+    {
+      "run": "parent-dark",
+      "result": "PASS"
+    },
+    {
+      "case": "distinct managed sign-in",
+      "role": "child",
+      "result": "PASS",
+      "credentialValuesLogged": false
+    },
+    {
+      "case": "native archive navigation and review cancellation",
+      "role": "child",
+      "theme": "light",
+      "result": "PASS",
+      "realTransfers": false
+    },
+    {
+      "run": "child-light",
+      "result": "PASS"
+    },
+    {
+      "case": "distinct managed sign-in",
+      "role": "child",
+      "result": "PASS",
+      "credentialValuesLogged": false
+    },
+    {
+      "case": "native archive navigation and review cancellation",
+      "role": "child",
+      "theme": "dark",
+      "result": "PASS",
+      "realTransfers": false
+    },
+    {
+      "run": "child-dark",
+      "result": "PASS"
+    },
+    {
+      "case": "hot200percent text",
+      "result": "PASS",
+      "unsentAmountPreserved": true,
+      "financialActionSubmitted": false
+    },
+    {
+      "case": "Android financial nested Back",
+      "result": "PASS"
+    },
+    {
+      "case": "viewport small",
+      "result": "PASS",
+      "pixels": [
+        840,
+        1680
+      ],
+      "density": 420,
+      "physicalDevice": false
+    },
+    {
+      "case": "viewport standard",
+      "result": "PASS",
+      "pixels": [
+        1080,
+        2424
+      ],
+      "density": 420,
+      "physicalDevice": false
+    },
+    {
+      "case": "viewport large",
+      "result": "PASS",
+      "pixels": [
+        1260,
+        2730
+      ],
+      "density": 420,
+      "physicalDevice": false
+    },
+    {
+      "case": "viewport tablet",
+      "result": "PASS",
+      "pixels": [
+        1920,
+        2560
+      ],
+      "density": 320,
+      "physicalDevice": false
+    }
+  ],
+  "gitHeadAtCapture": "c46bbd71c7b05953c7844f71284b579647f10e76",
+  "device": {
+    "avd": "Pixel_10",
+    "serial": "emulator-5554",
+    "android": "17",
+    "sdk": "37",
+    "resolution": "Physical size: 1080x2424",
+    "density": "Physical density: 420"
+  },
+  "actualNativeAdbCaptures": true,
+  "credentialsIncluded": false,
+  "protectedWindowsBypassed": false
+}

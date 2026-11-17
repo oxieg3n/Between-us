@@ -1,5 +1,17 @@
 # Release artifact manifest
 
+## Current financial checkpoint continuation
+
+Build `1116-FinanceCheckpoints-r3`, mobile **0.6.0 / Android code5 / iOS source build5**, branch `feature/staging-release-qualification`. Current [qualification](FINAL_RELEASE_QUALIFICATION.md) and [checkpoint report](FINANCE_CHECKPOINT_REPORT.md) supersede the historical r1 gate below for the tested settled workload. No hosted service, signed release, physical Android or iOS runtime is qualified.
+
+- Actual debug APK:414,309,977bytes, SHA256 `f78cf067dd0989647e414824386f3d533c5f970eb1234ff6b7fc11a973882e6a`. [Read-only artifact inventory](finance-checkpoints/ANDROID_ARTIFACT.json) verifies package/version, debug certificate,130 library-directory `.so` files plus5 additional ggml assets,135 complete native byte hashes and29 declared uses-permissions. The r3 JavaScript-only record-review fix and earlier r2 payment-rendering fix use this unchanged native binary through Metro. This APK contains no recognized bundled JS; it is not a frozen production artifact.
+- Actual merged debug manifest has `debuggable=true`, `usesCleartextTraffic=true` and `allowBackup=true`. These are explicit release-inspection gates, not a claim of secure release defaults. Release transport/signing guards and final merged manifest/data-extraction rules must be verified in the owner-signed artifact. Do not publish this debug build.
+- [Fresh dependency/notice inventory](finance-checkpoints/dependencies/SCAN_RECEIPT.json), SPDX and installed notice evidence preserve original historical inventory bytes. Both fresh npm audits report zero advisories; this does not certify native dependencies, model redistribution or unknown vulnerabilities. One legacy npm license expression and native/NOTICE review remain open.
+- Backend001-031 migrations, actual local Auth/SQL/Edge integration, encrypted source archive restoration and source-bound resource measurements are detailed in the current report. Local isolated official Edge execution is not hosted Supabase Free qualification.
+- Current r3 evidence: [70 actual Android originals and four comparisons](../../qa/production/finance-checkpoints-r3/VISUAL_QA_REPORT.md). Earlier r1/r2 failures and captures remain preserved. [Final verification](finance-checkpoints/FINAL_VERIFICATION.json), [current source hashes](finance-checkpoints/CURRENT_SOURCE_MANIFEST.json) and the [backup policy review](finance-checkpoints/ANDROID_BACKUP_REVIEW.md) identify tested scope; historical image counts below remain historical. Android/iOS/web JavaScript export passed with72 inventoried files, without an iOS native build or upload.
+
+## Historical Staging Qualification r1 artifact evidence
+
 Build `1116-StagingQualification-r1`, mobile 0.5.0, Android code4/iOS source build4; branch `feature/staging-release-qualification`. **Prepared for review; not a signed or approved release.** The [source manifest](evidence/SOURCE_MANIFEST.json) records the immutable engineering commit separately from this evidence commit. Hashes are SHA-256 of actual local bytes; newline normalization may differ in a fresh checkout.
 
 | Artifact | Actual identity / status |

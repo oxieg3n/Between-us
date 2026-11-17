@@ -1,0 +1,26 @@
+{
+  "format": 1,
+  "scope": "Actual fictional native archived receipt acknowledgment; not provider verification",
+  "writeBuild": "1116-FinanceCheckpoints-r1",
+  "verifiedAfterBuild": "1116-FinanceCheckpoints-r2",
+  "measuredAt": "2026-11-17T02:17:25.133Z",
+  "before": 0,
+  "after": 1,
+  "nativeSavedConfirmationScreenshot": "extra/child-receipt-confirmed.png",
+  "screenshotSha256": "ee0def88ed178e04c3ef01088099334ecd88648dbf097a20cbdb5ad9803e2606",
+  "ownChildReadStatus": 200,
+  "ownBalancesAfter": {
+    "plannedCents": 0,
+    "pendingCents": 0,
+    "earnedCents": 700,
+    "availableCents": 600,
+    "earmarkedCents": 0,
+    "heldPayoutCents": 0,
+    "paidCents": 100,
+    "unpaidCents": 600,
+    "correctionDueCents": 0
+  },
+  "hiddenMatchingReturned": false,
+  "realTransferExecuted": false,
+  "credentialsIncluded": false
+}

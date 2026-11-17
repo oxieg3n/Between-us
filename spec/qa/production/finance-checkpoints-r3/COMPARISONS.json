@@ -1,0 +1,114 @@
+{
+    "format":  1,
+    "status":  "complete",
+    "generatedAtUtc":  "2026-11-17T03:30:46.5168925Z",
+    "captureRoot":  "spec/qa/production/finance-checkpoints-r3",
+    "helper":  "spec/production/staging/finance-checkpoints/CREATE_COMPARISONS.ps1",
+    "helperSha256":  "79cdc6f36d91dcd9d334224673f7a87315cd0b78d0b5120f7b740ec576f93161",
+    "operation":  "System.Drawing DrawImageUnscaled; light left/dark right; no crop, retouch, resizing or upscaling",
+    "sourceWidth":  1080,
+    "sourceHeight":  2424,
+    "headerPixels":  100,
+    "font":  "OS Segoe UI 28px",
+    "sourceProvenance":  "Root-approved native capture paths/hashes; this composition does not independently certify capture origin or UI correctness.",
+    "sources":  [
+                    {
+                        "path":  "light/child-home.png",
+                        "width":  1080,
+                        "height":  2424,
+                        "bytes":  182329,
+                        "sha256":  "f91e2ca2c7695487114c3712cf8a19283dabe70a559b63ed4e4e3a060926d613"
+                    },
+                    {
+                        "path":  "dark/child-home.png",
+                        "width":  1080,
+                        "height":  2424,
+                        "bytes":  185145,
+                        "sha256":  "24bcc73c7b96dca189f113e69d61a115c02af5840f4c1d8ba58b31624a96f50d"
+                    },
+                    {
+                        "path":  "light/child-finances.png",
+                        "width":  1080,
+                        "height":  2424,
+                        "bytes":  233942,
+                        "sha256":  "af0dc1b912b34328ee84d5c8d6e3b1336665db117a092c7090fd0ddc6014ad3a"
+                    },
+                    {
+                        "path":  "dark/child-finances.png",
+                        "width":  1080,
+                        "height":  2424,
+                        "bytes":  237146,
+                        "sha256":  "60675b740614bbf3a4770d6e58d2df80d3a23b06a3757d917050cbe1464d6a95"
+                    },
+                    {
+                        "path":  "light/parent-earning-review.png",
+                        "width":  1080,
+                        "height":  2424,
+                        "bytes":  301944,
+                        "sha256":  "a093b68d468d095d6bb9093e037a1fd3aac3b6a9a43ffc155048c46537193824"
+                    },
+                    {
+                        "path":  "dark/parent-earning-review.png",
+                        "width":  1080,
+                        "height":  2424,
+                        "bytes":  301387,
+                        "sha256":  "cc3cc6e516bb029a4099bcc143c534c1b54a739f6de47a13c4f2bc8a075d846f"
+                    },
+                    {
+                        "path":  "light/parent-matching-history.png",
+                        "width":  1080,
+                        "height":  2424,
+                        "bytes":  226519,
+                        "sha256":  "42a7830fe01fa7c7b004498e2658518ae5e8a4555b9c2ceea57114c6d43a1d4b"
+                    },
+                    {
+                        "path":  "dark/parent-matching-history.png",
+                        "width":  1080,
+                        "height":  2424,
+                        "bytes":  229227,
+                        "sha256":  "f0536ec50bfe0627c8204ce961e19feae066cdda873c2d1059a78603c2c53681"
+                    }
+                ],
+    "outputs":  [
+                    {
+                        "path":  "comparisons/home-side-by-side.png",
+                        "screen":  "Child home",
+                        "width":  2160,
+                        "height":  2524,
+                        "bytes":  307322,
+                        "sha256":  "d2575db4ef5e0ffe0d0e3a4dfcaceb6d6e6604ceae836f1a1fdd58d640587983",
+                        "leftSource":  "light/child-home.png",
+                        "rightSource":  "dark/child-home.png"
+                    },
+                    {
+                        "path":  "comparisons/financial-summary-side-by-side.png",
+                        "screen":  "Child finances",
+                        "width":  2160,
+                        "height":  2524,
+                        "bytes":  421323,
+                        "sha256":  "cab15245b76f71ffe8c350dde82ebf06e5e4b005c0486b9590a636191c64712f",
+                        "leftSource":  "light/child-finances.png",
+                        "rightSource":  "dark/child-finances.png"
+                    },
+                    {
+                        "path":  "comparisons/historical-review-side-by-side.png",
+                        "screen":  "Historical earning review",
+                        "width":  2160,
+                        "height":  2524,
+                        "bytes":  540923,
+                        "sha256":  "e0ecc17066c3d0e27a4187b5cfca13366aad9dec6aa2d6d8f4c496a75208b0ae",
+                        "leftSource":  "light/parent-earning-review.png",
+                        "rightSource":  "dark/parent-earning-review.png"
+                    },
+                    {
+                        "path":  "comparisons/matching-history-side-by-side.png",
+                        "screen":  "Parent matching history",
+                        "width":  2160,
+                        "height":  2524,
+                        "bytes":  388429,
+                        "sha256":  "d56b728d4a1ee3f0d25afa4b788b080a1ccd49685908605037736374e472bf62",
+                        "leftSource":  "light/parent-matching-history.png",
+                        "rightSource":  "dark/parent-matching-history.png"
+                    }
+                ]
+}

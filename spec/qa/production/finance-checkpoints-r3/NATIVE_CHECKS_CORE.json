@@ -1,0 +1,31 @@
+{
+  "build": "1116-FinanceCheckpoints-r3",
+  "overallResult": "PASS",
+  "checks": [
+    {
+      "case": "native existing conversation composer",
+      "result": "PASS",
+      "screenshotTaken": false,
+      "secureFlagObserved": true,
+      "messageSent": false
+    },
+    {
+      "case": "native author-only journal lock boundary",
+      "result": "PASS",
+      "screenshotTaken": false,
+      "secureFlagObserved": true,
+      "journalUnlockedOrChanged": false,
+      "journalState": "locked"
+    }
+  ],
+  "restored": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "fontScale": "1.0"
+  },
+  "original": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "fontScale": "1.0"
+  }
+}

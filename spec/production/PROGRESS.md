@@ -1,5 +1,13 @@
 # Production completion progress
 
+## Current financial checkpoint continuation
+
+Build **1116-FinanceCheckpoints-r3 /0.6.0**, Android version code **5**, on `feature/staging-release-qualification` at `D:\projects\BetweenUs`. The [checkpoint qualification report](staging/FINANCE_CHECKPOINT_REPORT.md) and [current release matrix](staging/FINAL_RELEASE_QUALIFICATION.md) identify the continuation's source-bound evidence and open gates. The P3 delivery notes and earlier snapshots below remain historical; their clean-tree, source and test statements do not identify the current candidate.
+
+Current local checks: **309 mobile units/type/lint; 157 backend units/type/build; 21/21 managed integration scenarios, including the latest rerun; 1,222 SQL assertions/26 files**. Fresh installation through migration 031 and an actual encrypted source restore with **397 restored assertions** passed locally. Counts overlap earlier snapshots and are not added. Final r3 local qualification passed:70 actual Android screenshots/four comparisons, scoped native interaction/privacy/restart checks, fresh isolated17/17 authenticated browser and19/19 demo scenarios. Android/iOS/web JS exports passed; owner signing remains correctly denied. Earlier mixed-run browser failure is preserved and explained in the current staging report.
+
+## Preserved production foundation history
+
 Git delivery verified on2026-11-16: source/evidence commit **920cf3cceb7e3fbe460e01f64e550da1e6c079bb** is on origin/feature/production-foundation with an exact matching remote ref. Working tree is clean except the intentionally preserved diagnostic. This follow-up supersedes earlier pending-push notes below; application source remains0c2d325. CI is an inactive owner-installable template because the current credential lacks workflow permission. See [delivery receipt](DELIVERY_RECEIPT.md). No main merge, workflow run or production deployment.
 
 

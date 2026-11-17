@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "mobileBuild": "1116-FinanceCheckpoints-r3",
+  "nativeVersion": "0.6.0/code5",
+  "selectedPreferenceAfterRestart": "dark",
+  "themeSelectionChangedDuringVerification": false,
+  "restartLogSha256": "32f1ce6c35466ec3ad8aaeb7a300603eb23db62f96fe5a09e6ee4b03ea2b8978",
+  "screenshot": {
+    "file": "extra/restarted-dark-appearance.png",
+    "theme": "extra",
+    "description": "Actual selected Dark preference persisted across a guarded process restart; no theme selection was changed for this proof.",
+    "width": 1080,
+    "height": 2424,
+    "sha256": "7c7ba8c152ccae58d5ff04fd740aa7419ee7ac80c4ca0dba6c3266ddd74fee9d"
+  }
+}

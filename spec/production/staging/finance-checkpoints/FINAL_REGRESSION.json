@@ -1,0 +1,99 @@
+{
+    "format":  1,
+    "mobileBuild":  "1116-FinanceCheckpoints-r3",
+    "backendBuild":  "1116-FinanceCheckpoints-r2",
+    "overallResult":  "FAIL",
+    "scope":  "Actual serial local regression; fictional data only; not hosted qualification",
+    "checks":  [
+                   {
+                       "name":  "Backend unit",
+                       "startedAtUtc":  "2026-11-17T03:54:30.6238380Z",
+                       "completedAtUtc":  "2026-11-17T03:54:37.5672117Z",
+                       "exitCode":  0,
+                       "result":  "PASS",
+                       "logPath":  "services/backend/.local/r3-complete-backend-unit.log",
+                       "logSha256":  "bfb2ee676343105052346189aabd73cfa4fb09271a2d6f4f16ee9974b9ddbaa4"
+                   },
+                   {
+                       "name":  "Backend TypeScript",
+                       "startedAtUtc":  "2026-11-17T03:54:37.6730223Z",
+                       "completedAtUtc":  "2026-11-17T03:54:41.7662990Z",
+                       "exitCode":  0,
+                       "result":  "PASS",
+                       "logPath":  "services/backend/.local/r3-complete-backend-type.log",
+                       "logSha256":  "47c77805b82807c25eda7e5edea4f16a2a47c39420b5be1fb0676351e116cfcf"
+                   },
+                   {
+                       "name":  "Backend bundle",
+                       "startedAtUtc":  "2026-11-17T03:54:41.7779095Z",
+                       "completedAtUtc":  "2026-11-17T03:54:42.5879422Z",
+                       "exitCode":  0,
+                       "result":  "PASS",
+                       "logPath":  "services/backend/.local/r3-complete-backend-build.log",
+                       "logSha256":  "f6d4d659e6e9255d59a0ccfb1b97f620de3d7ad4bb9e0b481e3d7be816398bbf"
+                   },
+                   {
+                       "name":  "SQL pgTAP",
+                       "startedAtUtc":  "2026-11-17T03:54:42.6010411Z",
+                       "completedAtUtc":  "2026-11-17T03:56:22.7693413Z",
+                       "exitCode":  0,
+                       "result":  "PASS",
+                       "logPath":  "services/backend/.local/r3-complete-sql.log",
+                       "logSha256":  "4f565a74cabae77c07b008c2cf2b933bea668bdc132e8269b43e1dab58d6253f"
+                   },
+                   {
+                       "name":  "Local JWT Edge availability",
+                       "startedAtUtc":  "2026-11-17T03:56:22.7754208Z",
+                       "completedAtUtc":  "2026-11-17T03:56:23.0514371Z",
+                       "exitCode":  0,
+                       "result":  "PASS",
+                       "logPath":  "services/backend/.local/r3-complete-edge-ready.log",
+                       "logSha256":  "4cdef275ff445d7eb574bdae1ca9dad8b0d0876acc0e81b811c8b3c2379bc9ae"
+                   },
+                   {
+                       "name":  "Managed Auth SQL Edge Realtime integration",
+                       "startedAtUtc":  "2026-11-17T03:56:23.0569529Z",
+                       "completedAtUtc":  "2026-11-17T03:59:26.3460817Z",
+                       "exitCode":  0,
+                       "result":  "PASS",
+                       "logPath":  "services/backend/.local/r3-complete-integration.log",
+                       "logSha256":  "51853f46608abb13efc842a25667d06af46406ddfc0c08c633b67b48262a902a"
+                   },
+                   {
+                       "name":  "Mobile unit",
+                       "startedAtUtc":  "2026-11-17T03:59:26.3511054Z",
+                       "completedAtUtc":  "2026-11-17T03:59:30.6920116Z",
+                       "exitCode":  0,
+                       "result":  "PASS",
+                       "logPath":  "apps/mobile/.expo/r3-complete-mobile-unit.log",
+                       "logSha256":  "a7c908be44354016830cb04f60906c8ff5a974614fea49400c7ec95f6c038a90"
+                   },
+                   {
+                       "name":  "Mobile TypeScript",
+                       "startedAtUtc":  "2026-11-17T03:59:30.6990212Z",
+                       "completedAtUtc":  "2026-11-17T03:59:37.6406828Z",
+                       "exitCode":  0,
+                       "result":  "PASS",
+                       "logPath":  "apps/mobile/.expo/r3-complete-mobile-type.log",
+                       "logSha256":  "9aca2d90d49d6aac914566d58c792955ac9cb50e0b1e7eeb4c26e145b721d0e8"
+                   },
+                   {
+                       "name":  "Mobile ESLint",
+                       "startedAtUtc":  "2026-11-17T03:59:37.6461418Z",
+                       "completedAtUtc":  "2026-11-17T04:00:03.1508600Z",
+                       "exitCode":  0,
+                       "result":  "PASS",
+                       "logPath":  "apps/mobile/.expo/r3-complete-mobile-lint.log",
+                       "logSha256":  "b3038b46800c922427d77a00c9fadc523f6192bf93bf097b28f2aa939b0cf70d"
+                   },
+                   {
+                       "name":  "Production browser",
+                       "startedAtUtc":  "2026-11-17T04:00:03.1683287Z",
+                       "completedAtUtc":  "2026-11-17T04:05:00.4371393Z",
+                       "exitCode":  1,
+                       "result":  "FAIL",
+                       "logPath":  "apps/mobile/.expo/r3-complete-production-ui.log",
+                       "logSha256":  "c13e4f99cff235052a3988de36922285d0c7c729875e7dc587aba3349a475228"
+                   }
+               ]
+}

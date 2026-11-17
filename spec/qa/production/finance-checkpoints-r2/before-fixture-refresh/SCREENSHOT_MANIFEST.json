@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "build": "1116-FinanceCheckpoints-r2",
+  "captures": [
+    {
+      "file": "light/parent-appearance.png",
+      "theme": "light",
+      "description": "Theme changed through actual app appearance settings.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "342c301cfe9a8310d38f8e4b6547601db0d475284c184bf1a81aae66004e674e"
+    },
+    {
+      "file": "light/parent-build.png",
+      "theme": "light",
+      "description": "Actual installed0.6.0/code5 source build identifier.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "774612ce3edfa96d7ebd3b86f2207dc26006a580a5da4db1a8ee9cf29219206c"
+    },
+    {
+      "file": "light/parent-home.png",
+      "theme": "light",
+      "description": "Actual parent home with the approved branding.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "54f39d78e7f7ab4eb91c3d2bce427a03c13cee9877b43f533c724d1d311fa5fe"
+    },
+    {
+      "file": "light/parent-finances.png",
+      "theme": "light",
+      "description": "Authoritative family financial summary with retained paid basis.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "256e93e99230107fddce1410bc4a93018909bd701d1efb5640a1ccb168fbcfe6"
+    },
+    {
+      "file": "light/parent-history-entry.png",
+      "theme": "light",
+      "description": "Direct access to older settled records without scrolling through100 recent actions.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "b96e3d590ffe49d3a3724086759f74a8ca191c8136aefc930e2d4600cacd3124"
+    },
+    {
+      "file": "light/parent-archive-page.png",
+      "theme": "light",
+      "description": "Twenty-record server-authorized archive page.",
+      "width": 1080,
+      "height": 2424,
+      "sha256": "96ff692515db4028ef41c457c81877f366c4c1b4f3fc4a0ce4f86d58dc9ac5a2"
+    }
+  ],
+  "checks": [
+    {
+      "case": "distinct managed sign-in",
+      "role": "parent",
+      "result": "PASS",
+      "credentialValuesLogged": false
+    },
+    {
+      "run": "parent-light",
+      "result": "FAIL"
+    }
+  ],
+  "gitHeadAtCapture": "7343bf7a2b877171cf31cf4d010c3445d7098ed6",
+  "device": {
+    "avd": "Pixel_10",
+    "serial": "emulator-5554",
+    "android": "17",
+    "sdk": "37",
+    "resolution": "Physical size: 1080x2424",
+    "density": "Physical density: 420"
+  },
+  "actualNativeAdbCaptures": true,
+  "credentialsIncluded": false,
+  "protectedWindowsBypassed": false
+}

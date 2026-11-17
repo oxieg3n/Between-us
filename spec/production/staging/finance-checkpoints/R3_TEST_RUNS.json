@@ -1,0 +1,21 @@
+{
+  "format": 1,
+  "mobileBuild": "1116-FinanceCheckpoints-r3",
+  "backendBuildUnchanged": "1116-FinanceCheckpoints-r2",
+  "engineeringCommit": "4cb4d0f",
+  "recordedAtUtc": "2026-11-17T03:08:38.610794+00:00",
+  "mobileUnit": {
+    "tests": 301,
+    "pass": 301,
+    "fail": 0,
+    "log": "apps/mobile/.expo/r3-final-unit.log",
+    "logSha256": "5a54f45db48a34521febcc2572e5f5f6ca2a71d75e57153fb7757f5a4ad86bfe"
+  },
+  "mobileTypeLint": {
+    "result": "PASS",
+    "observedToolSession": 21823,
+    "exitCode": 0
+  },
+  "unchangedBackendActualRuns": "R2_TEST_RUNS.json",
+  "browserAndNative": "In progress; separate actual receipts required."
+}

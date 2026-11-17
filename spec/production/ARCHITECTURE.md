@@ -1,5 +1,19 @@
 # Production foundation architecture
 
+## Financial checkpoint continuation
+
+Current build **1116-FinanceCheckpoints-r3 /0.6.0 /Android code5**, on `feature/staging-release-qualification`. The [checkpoint qualification report](staging/FINANCE_CHECKPOINT_REPORT.md) and [release matrix](staging/FINAL_RELEASE_QUALIFICATION.md) give the current implementation, measured scope and open gates; the original foundation decision below remains historical context.
+
+Ordinary financial operations start from a validated versioned checkpoint plus a bounded hot tail, retaining the unchanged **128 visible/32 private events per child**. Internally sealed read-only books avoid repeated sibling replay; mutable input is never accepted as a cache proof. Checkpointing does not delete accepted source events, permanent UUID/entity identities or older immutable archive versions. The active-work bounds remain **100 hot occurrences/32 hot payouts**; other bounded collections and source-connected obligations can still require capacity review.
+
+Fully settled connected components move into immutable visible capsules with exact earning, original allocation and payment provenance. Fully invalidated parent matching history has a separate private archive and bounded exact summaries. Private matching cannot determine visible retirement eligibility; child projections/exports exclude raw books, private sources, hashes and parent-only commitments. Parent history and correction lookups recheck current role/family/session authority.
+
+A correction hydrates the exact source-bound archived component, removes its folded basis once, applies the existing integer-cent command and appends new audit history. SQL commits event, command identity, checkpoint, archive/residency changes and role-safe activity/projection capture atomically under the original authorization and CAS/family-lock rules. Failed writes roll back together; verified retries retain their original identity. No automatic deletion, limit increase, financial transfer or journal synchronization is introduced.
+
+Current local qualification includes **295 mobile units/type/lint, 151 backend units/type/build, 21/21 managed integration scenarios with the latest rerun PASS, 1,222 SQL assertions/26 files, fresh installation through migration 031 and 397 actual restored assertions PASS**. Final r2 native/browser checks remain in progress. Settled-pattern longevity and local runtime/restore tests do not qualify unlimited open work, the finite 500 MB Free database, hosted concurrency, legal/operator decisions, physical devices or release signing.
+
+## Preserved foundation decision
+
 Decision: 2026-11-16. Baseline `c301148536db955525d429600323bfbf39f751e3`, branch `feature/production-foundation`. This is the implementation contract and threat-model input before persistent service development, not legal approval or production certification. Fictional local integration is authorized; public enrollment is not.
 
 ## Selected system

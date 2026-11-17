@@ -1,5 +1,51 @@
 # Encrypted logical recovery qualification
 
+## Migration031 local qualification — PASS
+
+Root completed fresh001–031application migration qualification and an actual encrypted logical restore on2026-11-17UTC. The [fresh031receipt](finance-checkpoints/fresh-migrations-031.json) records all1,222SQL assertions/26files, exact schema parity, source archive audit and owned connection/crash rollback checks. The [encrypted031receipt](finance-checkpoints/recovery-031.json) records exact snapshot recovery, independent audits of actual source/restored archive records,397restored SQL assertions/nine files, original message/financial UUID replay and two post-snapshot revocation replays. Additive031changes only the visible/private archive page read functions. Earlier025/026receipts below remain historical and are not relabeled. The20portable recovery/fresh-harness tests pass, including declined archive/hydration behavior and archive-audit metadata failure cases.
+
+| Actual031execution | Observed result |
+| --- | --- |
+| Fresh application database | Run`33dfa2ecf582464482010460daf67ad6`,00:34:58.986–00:36:16.707UTC; all31migrations and1,222SQL assertions PASS; schema/owner/RLS/ACL/function/index/constraint/trigger parity and closed defaults PASS; owned generic/financial SQL transaction crash checks PASS |
+| Encrypted restore | Run`f7c653fdebc543d19b85d73c93aae535`,00:38:31.610–00:39:28.936UTC;88selected tables,17,807rows; exact rows/code/RLS/ACL/index/constraint/trigger/migration parity PASS |
+| Ciphertext | 2,243,899bytes; SHA-256`2b9b844cb9daa8b0e1257a94f242456b66c0891148174b5c7627070fca5c439e`; maintained age rejects corrupt/truncated ciphertext and the wrong key before target creation |
+| Actual source/restored archive audits | Equal:86finance aggregates,23checkpoints,200visible capsule versions(197active),131private capsule versions(125active),563current visible entity pointers,200permanent occurrence bases,194private origins,29projection snapshots and2,094activity rows |
+| Persisted operation/revocation proof | One original400-cent approval and saved message UUID retained; changed financial body denied; two tombstone passes; old managed child token denied; target remains quarantined |
+| Verified restore work | 51,563ms,including audits and nine SQL suites; snapshot age53,513ms at verified completion. These are local drill timings, not operator RTO or a production RPO guarantee. |
+
+All new targets and historical evidence are retained. The first fresh attempt failed the strict source/fresh function-definition comparison because030contained CRLF bytes while the installed definition used LF. Root normalized030toLF, applied the exact two function bodies and added SQL LF attributes, then used a new database for the passing fresh run. No hash comparison was weakened and no financial source row changed. An initial backup invocation omitted the`tsx`loader and failed before database I/O; the corrected command below completed the passing drill.
+
+The encrypted snapshot includes all tables in`app_private`, including checkpoint chains, immutable ledger/command identities, visible/private capsule versions and origins, entity-version keys, mutable active residency/current entity pointers, permanent occurrence budget bases/period caches, activity and projection snapshots. Every table receives an exact count and cryptographic row digest in the same exported repeatable-read snapshot. Index definitions, constraint definitions/validation and trigger definitions/enabled state now have a separate structure digest, covering active partial indexes and030write-admission expression indexes. Existing table owner/RLS/full ACL, function/policy and migration checks remain.
+
+An additional read-only audit independently checks every aggregate's bounded immutable tail, each checkpoint's canonical hash and covered ledger prefix, visible/private payload hashes and source/checkpoint/origin bindings, hydration-event/residency references, complete current-entity pointers and folded paid basis, permanent occurrence identities, and activity/projection source hashes. Source counts must include actual checkpoint, visible capsule and private capsule rows; an empty database cannot qualify that coverage. The restored audit equaled the source audit before and after the nine rollback-only restored SQL suites. Only counts and success metadata enter the safe result; capsule payloads, identities, claims and keys stay private. Permanent occurrence budget bindings are immutable across capsule versions: declined is terminal after hydration, the permanent basis has an immutability trigger and rearchive rejects a changed budget cost. Historical zero-cost declined versions cannot legitimately become approved versions with a different basis.
+
+Those nine suites are`finance`, `communication`, `privacy_lifecycle`, `message_receipts`, `finance_checkpoints`, `finance_private_archives`, `finance_privacy_archives`, `finance_write_admission`and`finance_archive_page_reads`. Their source hashes and actual TAP counts are recorded per run. The new page suite models5369temporary capsule rows and requires20one-row index probes for the exact correlated payload/hash query shape, without a broad capsule scan/hash join. Root separately owns the measured real-schema benchmark query. Other suites' synthetic old-target correction tests are separate from preserving the actual preexisting integration archive dataset: the latter receives exact row/schema parity and semantic hash/source checks, without bypassing its authentication or replaying another fixture's operation.
+
+Migration031first obtains at most`limit+1`active residency UUIDs, trims the extra UUID before fetching payloads, then uses a correlated primary-key lookup with`OFFSET0`to prevent join flattening. It validates hashes and scope within those bounded payload reads, eliminating the old second validation join. Output/cursor/parent authority/8MiB limits remain the same. The prior storage receipt observed a52-week hash join scanning273private capsules and a780-week nested-loop plan reading20of5369capsules; this statistics-dependent choice motivated an explicit query barrier. The temporary5369-row point-read plan checks passed in both fresh and restored suites; real-schema sizing benchmarks and hosted limits remain separate qualification work.
+
+Root used the following commands. Future runs still require source review/freeze and serialized database execution after CPU-heavy benchmarks:
+
+```powershell
+Set-Location -LiteralPath 'D:\projects\BetweenUs\services\backend'
+node --import tsx --test .\tests\recovery.test.ts .\tests\qualification-database.test.ts
+if ($LASTEXITCODE -ne 0) { throw 'Recovery portable checks failed.' }
+node .\scripts\qualification-database.mjs plan
+node --import tsx .\scripts\backup-recovery.mjs plan
+# Root review and serialized database execution only:
+node .\scripts\qualification-database.mjs --execute --confirm-local-synthetic-qualification
+if ($LASTEXITCODE -ne 0) { throw 'Fresh qualification failed closed; retain the new quarantined target.' }
+node --import tsx .\scripts\backup-recovery.mjs drill --execute --confirm-local-synthetic-recovery
+if ($LASTEXITCODE -ne 0) { throw 'Encrypted recovery failed closed; retain owned resources and private metadata.' }
+```
+
+The existing protected loopback status, verified local`supabase_admin`authority, healthy owned container, exact PostgreSQL/dump/restore version, pinned isolated age tools, closed public policy, local synthetic mode and sufficient disk remain runtime preconditions. Only Root can inspect protected configuration or execute these operations. No new source fixture extension is needed: Root confirmed the source already contains actual archived integration families. Fresh SQL fixtures run only in the new quarantined target; encrypted recovery creates only its existing run-owned fictional fixture in the source. Both targets remain quarantined. A failed semantic audit is a blocker to investigate, not permission to weaken a hash/source check or mutate a preexisting family.
+
+Fresh-schema qualification intentionally copies zero source Auth/data rows. Its source archive audit describes the upgraded source; its empty fresh archive audit does not claim to have restored those records. Actual source archival recovery is established only by the separate encrypted drill. The fixed128MiB streaming/decrypted archive limit and local-only operator/key/registry assumptions remain unchanged.
+
+These results qualify a fictional local logical recovery exercise. They do not establish a running restored Auth/Realtime service, hosted disaster recovery, an offsite copy or independent backup/key registry, production key custody, an operated schedule, provider deletion or recovery of device journals/keys. No existing source family was used to bypass authentication or replay an old archived command; its data received exact parity and semantic source/hash validation, while controlled restored SQL fixtures exercised correction behavior.
+
+## Historical025/026qualification
+
 2026-11-16. LOCAL fictional data only. **Actual encrypted logical restore, fresh application migrations and financial SQL transaction crash rollback PASS through026.** Latest [restore evidence](evidence/backup-restore-026.json), [fresh financial crash evidence](evidence/fresh-financial-crash-026.json), earlier [fresh-schema/crash-probe evidence](evidence/fresh-migrations-026.json), and separately preserved [025restore evidence](evidence/backup-restore-025.json) include exact commands and harness source hashes. No hosted project, offsite copy, production recovery service, operational backup schedule, named recovery operator or complete provider deletion is qualified. This file preserves the [earlier unverified recovery plan](../runbooks/RECOVERY_AND_BACKUPS.md). Journal/draft content and author device keys are outside every server backup and cannot be recovered by a guardian or operator.
 
 ## Executable procedure and boundaries

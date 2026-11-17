@@ -1,7 +1,25 @@
-﻿# Between Us mobile
+# Between Us mobile
 
-See the repository [README](../../README.md#open-letter-mobile-application) for PowerShell startup, Android setup, checks and privacy limits.
+Current fictional/local qualification build: **1116-FinanceCheckpoints-r3**, version0.6.0 (Android code5 / iOS source build5). The Open Letter design and Safe Harbor/Night Harbor themes are preserved.
 
-This package is a fictional in-memory prototype. `npm start` opens Expo; `npm run web` opens the browser preview. There is no backend, persistent journal storage, real delivery, identity verification or report submission.
+Production mode uses the local Supabase Auth/database and authorized API for distinct accounts, family permissions, messaging and the transactional financial ledger. Financial checkpoints bound ordinary replay while immutable events and archived correction sources remain retained. Parent matching history is parent-only. Payments are family reports; no money is transferred.
 
-Current build: `1114-OpenLetterRedesign-r3`, app version 0.2.2. Only the appearance preference persists. Journals and messages stay in memory. See the [Open Letter design system](../../design/OPEN_LETTER_DESIGN_SYSTEM.md) and [native visual QA](../../spec/qa/open-letter/VISUAL_QA_REPORT.md).
+The isolated r12 demo remains memory-only. It is separate from authenticated mode. Public enrollment, real-child data and hosted production deployment remain disabled. Native journals and protected drafts use their separately reviewed author-local domain; browser journal storage remains unavailable.
+
+With the existing fictional local stack/API, debug APK and Pixel_10 ready:
+
+```powershell
+Set-Location -LiteralPath 'D:\projects\BetweenUs'
+.\Scripts\Start-ProductionAndroid.ps1 -Serial 'emulator-5554'
+```
+
+The guarded helper verifies the selected checkout, package, local endpoints and Metro8081. It preserves unrelated processes and does not install or provision anything. See [first-time setup](../../spec/production/runbooks/LOCAL_AND_CI.md) and [Android startup](../../spec/production/ANDROID_LAUNCH.md). Expo Go cannot provide the protected native storage/runtime.
+
+```powershell
+Set-Location -LiteralPath 'D:\projects\BetweenUs\apps\mobile'
+npm run typecheck
+npm run lint
+npm test
+```
+
+[Current qualification](../../spec/production/staging/FINAL_RELEASE_QUALIFICATION.md), [checkpoint evidence](../../spec/production/staging/FINANCE_CHECKPOINT_REPORT.md) and [design system](../../design/OPEN_LETTER_DESIGN_SYSTEM.md) distinguish local results from remaining hosted, hardware, legal and operational release gates. No signed release or iOS runtime result is claimed.

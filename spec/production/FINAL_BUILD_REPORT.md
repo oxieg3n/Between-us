@@ -1,5 +1,15 @@
 # Production foundation P3 build handoff
 
+## Current financial checkpoint continuation
+
+Current candidate: **1116-FinanceCheckpoints-r3 /0.6.0 /Android code5**, `feature/staging-release-qualification`, canonical workspace `D:\projects\BetweenUs`. iOS build5 is source configuration, not an executed iOS build. Use the [checkpoint qualification report](staging/FINANCE_CHECKPOINT_REPORT.md) and [current release matrix](staging/FINAL_RELEASE_QUALIFICATION.md) for this continuation. The P3 handoff and artifact/source identities below are preserved historical evidence, not the current r3 artifact receipt.
+
+Actual current local checks: **309 mobile units/type/lint, 157 backend units/type/build, 21/21 managed integration scenarios and 1,222 SQL assertions/26 files PASS**. Fresh installation through migration 031 and an actual encrypted restore with **397 restored assertions PASS** are separately recorded. Final isolated authenticated browser **17/17**, preserved demo **19/19**, and Android emulator qualification for the documented scope passed. The r3 evidence includes **70 actual native images and four comparison sheets**, role/theme and reviewed history interactions, hot text scaling, four viewport profiles, protected-window checks and theme restart persistence. Android/iOS/web JavaScript exports passed; physical devices, TalkBack, native iOS and owner signing remain gates. Earlier failures are retained with their corrections in the staging report.
+
+The financial continuation preserves append-only events/UUID identities while using validated **128 visible/32 private hot-tail checkpoints**, settled visible archives, separate parent-private matching archives and exact correction hydration. Event, checkpoint, archive residency and role-safe audit/projection capture share the authorized commit transaction. The implemented settled-pattern longevity does not remove finite open-work or 500 MB retained-storage limits. Hosted operation, legal/operator decisions, physical/iOS qualification, signing and publication remain gated; no new Git delivery or production-readiness claim is made here.
+
+## Preserved P3 handoff
+
 Git delivery verified on2026-11-16: source/evidence commit **920cf3cceb7e3fbe460e01f64e550da1e6c079bb** is on origin/feature/production-foundation with an exact matching remote ref. Working tree is clean except the intentionally preserved diagnostic. This follow-up supersedes earlier pending-push notes below; application source remains0c2d325. CI is an inactive owner-installable template because the current credential lacks workflow permission. See [delivery receipt](DELIVERY_RECEIPT.md). No main merge, workflow run or production deployment.
 
 

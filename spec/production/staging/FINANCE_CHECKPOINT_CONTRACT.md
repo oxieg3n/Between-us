@@ -1,8 +1,8 @@
-# Finance checkpoint and paid archive contract — DRAFT
+# Financial checkpoint and settled archive contract
 
-2026-11-16. **Implementation contract in progress, not a completed or qualified feature.** Root owns integration, database execution and Git. The database specialist owns migration027 and its SQL tests; the finance specialist owns the pure engine/types/checkpoint seam; Root owns service, UI, privacy/export and notification integration. No database, private fixture, service or Git operation is authorized for the specialist. Existing ledger, command identities, source fixtures and prior evidence remain intact.
+Implemented locally in `1116-FinanceCheckpoints-r3` on `feature/staging-release-qualification`. Root integrated the finance, database and security specialists' bounded work. The existing source ledger, command identities, fictional fixtures, public demo and historical evidence remain intact. Local qualification includes1,222SQL assertions/26files,21managed integration scenarios and a31-migration fresh/restore proof. See [actual qualification](FINANCE_CHECKPOINT_REPORT.md) for measured runtime/storage limits and the remaining hosted, legal and operational gates. No production deployment or real-child enrollment is approved.
 
-## Agreed first implementation
+## Implementation
 
 Keep the family `finance_aggregates` row, current public finance DTO and RPC names. Extend internal `FinanceState` with:
 
@@ -120,3 +120,13 @@ Checkpoints/archives are financial copies included in finite-retention, finance/
 Migrations027/028 and their tests are not yet executed. Source tests cover legacy compatibility,300visible immutable appends across rollover, checkpoint/hash/tail corruption, permanent ID reuse, zero-allocation reference guards, private source eligibility, actual transactional private publication/hydration/rearchive, exact folded summary, parent-only lookup/page, stored payload corruption and revoked sessions. Required remaining evidence includes visible settled-capsule lifecycle, broader budget/old-target corrections, equivalent child payloads/archive pages/cursors with different private histories, current authority after lock waits, resource-circuit atomic rollback and actual crash/restore tests. Source coverage is not a passing execution result.
 
 Update fresh/upgrade and encrypted restore harnesses from their explicitly reviewed026inventory to027only after integration. Schema-selected dumps include the new tables automatically, but restored evidence must additionally verify checkpoint/capsule source hashes, all historical command identities, old-target correction after restore, residency and budget basis, then deletion/revocation replay. Prior026PASS evidence remains historical and is not relabeled as027proof. No hosted DR, offsite custody, provider deletion, legal certification or production enrollment is established by local tests.
+
+## Captured exports and bounded write admission (029-030)
+
+Every new accepted command captures exact role-filtered activity and current child/parent projections atomically with its financial publication. Legacy snapshots may be warmed only from bounded, complete event coverage and the same source CAS. Corruption or incomplete history blocks export rather than producing a partial artifact marked ready. Captured exports merge all retained entities while excluding raw lots, checkpoints, source hashes and surprise information from child artifacts.
+
+The outer commit wrapper applies indexed admission in the same family transaction:60 writes/minute per actor/child/visibility stream,1,000 visible/day per child and200 private/day per child. Exact retries do not consume new admissions. A denied write rolls back checkpoint, archive, activity and ledger publication together. These are additional ceilings;128/32 hot replay windows and existing collection caps remain unchanged.
+
+For a successful new envelope, `finance_commit` returns only its existing status/time metadata and omits the duplicate `state`. The trusted adapter projects its already sealed exact candidate only on `committed` and exact matching server time. A racing `replayed` result retains current database state. Legacy bare-state callers retain their original response shape. This reduces transport and duplicate replay work without changing financial authority.
+
+Parent live matching records beyond the100-record summary are discoverable through a separate20-record `parent-open-history` page. Every page verifies current parent authority and source integrity. Logical-ID cursor absence fails explicitly; it is not a stable snapshot across concurrent corrections. Retired private capsules remain a distinct parent-only page.

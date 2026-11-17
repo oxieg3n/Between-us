@@ -6,7 +6,8 @@ Example: & .\CREATE_COMPARISONS.ps1 -ExpectedSourceHashes $approvedCaptureHashes
 No capture, build, installation, ADB, network, Git or database operation is performed.
 #>
 [CmdletBinding()]
-param([Parameter(Mandatory = $true)][hashtable]$ExpectedSourceHashes)
+param([Parameter(Mandatory = $true)][hashtable]$ExpectedSourceHashes,
+    [ValidateSet('finance-checkpoints-r2', 'finance-checkpoints-r3')][string]$CaptureFolder = 'finance-checkpoints-r3')
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
@@ -50,14 +51,14 @@ function Save-NewPng([System.Drawing.Bitmap]$Bitmap, [string]$Path) {
 
 $null = Assert-PlainPath $repositoryRoot $true
 $null = Assert-PlainPath $PSCommandPath $false
-$captureRoot = Join-Path $repositoryRoot 'spec\qa\production\finance-checkpoints-r2'
+$captureRoot = Join-Path $repositoryRoot ('spec\qa\production\' + $CaptureFolder)
 $null = Assert-PlainPath $captureRoot $true
 $comparisonRoot = Join-Path $captureRoot 'comparisons'
 $manifestPath = Join-Path $captureRoot 'COMPARISONS.json'
 $screens = @(
     [pscustomobject]@{ Input = 'child-home.png'; Output = 'home-side-by-side.png'; Label = 'Child home' },
     [pscustomobject]@{ Input = 'child-finances.png'; Output = 'financial-summary-side-by-side.png'; Label = 'Child finances' },
-    [pscustomobject]@{ Input = 'parent-settled-record.png'; Output = 'settled-record-side-by-side.png'; Label = 'Parent settled record' },
+    [pscustomobject]@{ Input = 'parent-earning-review.png'; Output = 'historical-review-side-by-side.png'; Label = 'Historical earning review' },
     [pscustomobject]@{ Input = 'parent-matching-history.png'; Output = 'matching-history-side-by-side.png'; Label = 'Parent matching history' }
 )
 $sourceKeys = @($screens | ForEach-Object { 'light/' + $_.Input; 'dark/' + $_.Input })
@@ -139,7 +140,7 @@ try {
     }
     $manifest = [ordered]@{
         format = 1; status = 'complete'; generatedAtUtc = [DateTime]::UtcNow.ToString('o');
-        captureRoot = 'spec/qa/production/finance-checkpoints-r2'; helper = 'spec/production/staging/finance-checkpoints/CREATE_COMPARISONS.ps1';
+        captureRoot = ('spec/qa/production/' + $CaptureFolder); helper = 'spec/production/staging/finance-checkpoints/CREATE_COMPARISONS.ps1';
         helperSha256 = (Get-FileHash -LiteralPath $PSCommandPath -Algorithm SHA256).Hash.ToLowerInvariant();
         operation = 'System.Drawing DrawImageUnscaled; light left/dark right; no crop, retouch, resizing or upscaling';
         sourceWidth = 1080; sourceHeight = 2424; headerPixels = 100; font = 'OS Segoe UI 28px';
@@ -151,7 +152,7 @@ try {
     $manifestStream = [System.IO.File]::Open($manifestPath, [System.IO.FileMode]::CreateNew, [System.IO.FileAccess]::Write, [System.IO.FileShare]::None)
     try { $manifestStream.Write($manifestBytes, 0, $manifestBytes.Length); $manifestStream.Flush($true) }
     finally { $manifestStream.Dispose() }
-    Write-Output 'Created four full-resolution comparison sheets and r2/COMPARISONS.json.'
+    Write-Output 'Created four full-resolution comparison sheets and the capture-folder COMPARISONS.json.'
 } finally {
     foreach ($resource in @($font, $lightBrush, $darkBrush, $lightHeader, $darkHeader)) { if ($null -ne $resource) { $resource.Dispose() } }
     foreach ($source in $loaded.Values) { $source.Image.Dispose(); $source.Stream.Dispose() }

@@ -1,0 +1,31 @@
+{
+  "format": 1,
+  "measuredAtUtc": "2026-11-17T03:22:41.693Z",
+  "scope": "Actual local inventory negative control using an exclusive temporary copy of the committed baseline module; no live source reversal, credentials or network.",
+  "baselineCommit": "c46bbd7",
+  "before": [
+    {
+      "name": "../../apps/mobile/src/finance/checkpoint.ts",
+      "included": false
+    },
+    {
+      "name": "../../apps/mobile/src/production/finance-history-types.ts",
+      "included": false
+    }
+  ],
+  "after": [
+    {
+      "name": "../../apps/mobile/src/finance/checkpoint.ts",
+      "included": true
+    },
+    {
+      "name": "../../apps/mobile/src/production/finance-history-types.ts",
+      "included": true
+    }
+  ],
+  "distinctFingerprints": true,
+  "migrations": 31,
+  "networkPerformed": false,
+  "credentialsRead": false,
+  "result": "PASS"
+}

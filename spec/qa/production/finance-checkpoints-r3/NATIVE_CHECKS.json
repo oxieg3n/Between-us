@@ -1,0 +1,22 @@
+{
+  "build": "1116-FinanceCheckpoints-r3",
+  "overallResult": "FAIL",
+  "checks": [
+    {
+      "case": "hot200percent text",
+      "result": "PASS",
+      "unsentAmountPreserved": true,
+      "financialActionSubmitted": false
+    }
+  ],
+  "restored": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "fontScale": "1.0"
+  },
+  "original": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "fontScale": "1.0"
+  }
+}

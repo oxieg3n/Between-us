@@ -1,0 +1,186 @@
+[
+  {
+    "time": "2026-11-16T21:52:02-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T21:52:09-0500",
+    "message": "Tapped: Chores & savings"
+  },
+  {
+    "time": "2026-11-16T21:52:17-0500",
+    "message": "Tapped: Financial history"
+  },
+  {
+    "time": "2026-11-16T21:52:22-0500",
+    "message": "Tapped: Older settled financial records"
+  },
+  {
+    "time": "2026-11-16T21:52:28-0500",
+    "message": "Tapped: Load older settled records"
+  },
+  {
+    "time": "2026-11-16T21:52:53-0500",
+    "message": "Tapped: Review historical receipt acknowledgment"
+  },
+  {
+    "time": "2026-11-16T21:52:58-0500",
+    "message": "Tapped: Confirm financial action"
+  },
+  {
+    "time": "2026-11-16T21:53:03-0500",
+    "message": "Captured extra/child-receipt-confirmed.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T21:53:08-0500",
+    "message": "Tapped: Back to account"
+  },
+  {
+    "time": "2026-11-16T21:53:11-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T21:53:18-0500",
+    "message": "Tapped: Chores & savings"
+  },
+  {
+    "time": "2026-11-16T21:53:26-0500",
+    "message": "Tapped: My earnings and cash-out"
+  },
+  {
+    "time": "2026-11-16T21:53:32-0500",
+    "message": "Tapped: Payout or payment amount (USD)"
+  },
+  {
+    "time": "2026-11-16T21:53:40-0500",
+    "message": "Captured extra/child-payout-font-200.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T21:54:10-0500",
+    "message": "Tapped: Back to account"
+  },
+  {
+    "time": "2026-11-16T21:54:12-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T21:54:21-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T21:54:28-0500",
+    "message": "Tapped: Chores & savings"
+  },
+  {
+    "time": "2026-11-16T21:54:42-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T21:54:48-0500",
+    "message": "Tapped: Chores & savings"
+  },
+  {
+    "time": "2026-11-16T21:54:55-0500",
+    "message": "Captured responsive/small-financial-overview.png (840 x 1680)"
+  },
+  {
+    "time": "2026-11-16T21:55:04-0500",
+    "message": "Tapped: Financial history"
+  },
+  {
+    "time": "2026-11-16T21:55:16-0500",
+    "message": "Tapped: Older settled financial records"
+  },
+  {
+    "time": "2026-11-16T21:55:22-0500",
+    "message": "Captured responsive/small-history-entry.png (840 x 1680)"
+  },
+  {
+    "time": "2026-11-16T21:55:47-0500",
+    "message": "Tapped: Back to account"
+  },
+  {
+    "time": "2026-11-16T21:55:53-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T21:56:00-0500",
+    "message": "Tapped: Chores & savings"
+  },
+  {
+    "time": "2026-11-16T21:56:07-0500",
+    "message": "Captured responsive/standard-financial-overview.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T21:56:12-0500",
+    "message": "Tapped: Financial history"
+  },
+  {
+    "time": "2026-11-16T21:56:23-0500",
+    "message": "Tapped: Older settled financial records"
+  },
+  {
+    "time": "2026-11-16T21:56:26-0500",
+    "message": "Captured responsive/standard-history-entry.png (1080 x 2424)"
+  },
+  {
+    "time": "2026-11-16T21:56:48-0500",
+    "message": "Tapped: Back to account"
+  },
+  {
+    "time": "2026-11-16T21:56:54-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T21:57:00-0500",
+    "message": "Tapped: Chores & savings"
+  },
+  {
+    "time": "2026-11-16T21:57:07-0500",
+    "message": "Captured responsive/large-financial-overview.png (1260 x 2730)"
+  },
+  {
+    "time": "2026-11-16T21:57:12-0500",
+    "message": "Tapped: Financial history"
+  },
+  {
+    "time": "2026-11-16T21:57:20-0500",
+    "message": "Tapped: Older settled financial records"
+  },
+  {
+    "time": "2026-11-16T21:57:23-0500",
+    "message": "Captured responsive/large-history-entry.png (1260 x 2730)"
+  },
+  {
+    "time": "2026-11-16T21:57:26-0500",
+    "message": "Tapped: Back to account"
+  },
+  {
+    "time": "2026-11-16T21:57:35-0500",
+    "message": "Tapped: Home"
+  },
+  {
+    "time": "2026-11-16T21:57:42-0500",
+    "message": "Tapped: Chores & savings"
+  },
+  {
+    "time": "2026-11-16T21:57:48-0500",
+    "message": "Captured responsive/tablet-financial-overview.png (1920 x 2560)"
+  },
+  {
+    "time": "2026-11-16T21:57:54-0500",
+    "message": "Tapped: Financial history"
+  },
+  {
+    "time": "2026-11-16T21:58:02-0500",
+    "message": "Tapped: Older settled financial records"
+  },
+  {
+    "time": "2026-11-16T21:58:05-0500",
+    "message": "Captured responsive/tablet-history-entry.png (1920 x 2560)"
+  },
+  {
+    "time": "2026-11-16T21:58:08-0500",
+    "message": "Tapped: Back to account"
+  }
+]

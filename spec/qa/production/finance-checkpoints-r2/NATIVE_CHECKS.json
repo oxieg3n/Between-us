@@ -1,0 +1,64 @@
+{
+  "checks": [
+    {
+      "case": "hot200percent text",
+      "result": "PASS",
+      "unsentAmountPreserved": true,
+      "financialActionSubmitted": false
+    },
+    {
+      "case": "Android financial nested Back",
+      "result": "PASS"
+    },
+    {
+      "case": "viewport small",
+      "result": "PASS",
+      "pixels": [
+        840,
+        1680
+      ],
+      "density": 420,
+      "physicalDevice": false
+    },
+    {
+      "case": "viewport standard",
+      "result": "PASS",
+      "pixels": [
+        1080,
+        2424
+      ],
+      "density": 420,
+      "physicalDevice": false
+    },
+    {
+      "case": "viewport large",
+      "result": "PASS",
+      "pixels": [
+        1260,
+        2730
+      ],
+      "density": 420,
+      "physicalDevice": false
+    },
+    {
+      "case": "viewport tablet",
+      "result": "PASS",
+      "pixels": [
+        1920,
+        2560
+      ],
+      "density": 320,
+      "physicalDevice": false
+    }
+  ],
+  "restored": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "fontScale": "1.0"
+  },
+  "original": {
+    "size": "Physical size: 1080x2424",
+    "density": "Physical density: 420",
+    "fontScale": "1.0"
+  }
+}

@@ -2,7 +2,25 @@
 
 2026-11-16. Owner mission `MASTER_STAGING_RELEASE_QUALIFICATION.md`, remote `f859bfb`, baseline `53f7ebe`. Workspace `D:\projects\BetweenUs`, new branch `feature/staging-release-qualification`. Supabase Free is the selected intended provider. This is engineering qualification with fictional local data; hosted provisioning, credentials, public enrollment, signing, paid resources and real-child data are not authorized.
 
-## Phase ledger
+## Financial checkpoint continuation
+
+Build`1116-FinanceCheckpoints-r3` /0.6.0/code5, from verified remote`044450f`, on the same canonical root/feature branch. Implemented validated immutable checkpoints, settled/private archives, permanent UUID/entity identities, bounded role-safe mobile pages, correction hydration, captured full exports, legal-hold/closure retention and atomic write admission. No existing limit raised, audit erased, provider changed or real transfer activated.
+
+Actual current backend evidence:309 mobile tests/type/lint,157 backend tests/type/build,1,222SQL assertions/26files,21managed integration scenarios including real local Edge JWTtrue. Fresh31schema and full assertions PASS. Encrypted actual-source restore PASS88tables/397restored assertions,23checkpoints/200visible/131private capsules intact.15-year golden fixture PASS19,563events; official cold Edge-isolate model120/120functional+resource references with complete terminal metrics. Local physical storage and conservative forecast updated; hosted/warm/concurrent capacity remain unqualified.
+
+Authenticated browser17/17 and preserved demo19/19 PASS after verified own Metro cache restart; original15/17 failures retained. Android0.6.0/code5 debug installed/welcome verified; r3 native financial/theme/keyboard/responsive/privacy/restart checks passed. Current [checkpoint report](FINANCE_CHECKPOINT_REPORT.md) and [release matrix](FINAL_RELEASE_QUALIFICATION.md) supersede the historical lifetime-window blocker below for the tested settled workload. Public release remains NO-GO for external legal, operational, hosted, hardware and signing gates.
+
+Specialist ownership: finance/domain+benchmarks, database/schema+recovery, security/adversarial+matching discovery; Root reviewed integration and owns all Git, shared database, native/build and final evidence operations. No helper operated the emulator, shared Docker/database or Git.
+
+## Final local handoff
+
+Current results:309mobile/157backend unit tests plus type/lint/build PASS;1,222SQL assertions/26files and21managed integration scenarios PASS. Final isolated production browser17/17 and demo19/19 PASS. Native r3:70original images/four comparisons and documented financial/theme/device/privacy/restart flows PASS. Android/iOS/web JS exports:72files PASS; actual release transport guard passed and owner-signing guard denied missing owner material. The earlier mixed-run15/17 failure remains in FINAL_REGRESSION.json; the final isolated correction is in FINAL_VERIFICATION.json.
+
+[Full report](FINANCE_CHECKPOINT_REPORT.md), [visual QA](../../qa/production/finance-checkpoints-r3/VISUAL_QA_REPORT.md), [release matrix](FINAL_RELEASE_QUALIFICATION.md). Lifecycle storage/history is retained; finite active-work/export/Free capacity limits and hosted/legal/operator/hardware/signing gates remain explicit. Development branch push is not production approval.
+
+## Historical Staging Qualification r1 phase ledger
+
+
 
 | Phase | Current status / evidence |
 | --- | --- |
