@@ -20,7 +20,7 @@ export default function NativeCheck() {
       <ScrollView contentContainerStyle={{ padding: 24, gap: 20 }}>
         <Heading>Native storage verification</Heading>
         <Body>
-          1116-FinanceCheckpoints-r2. Synthetic temporary data only. This does
+          1116-FinanceCheckpoints-r3. Synthetic temporary data only. This does
           not certify device biometrics or production readiness.
         </Body>
         <Button

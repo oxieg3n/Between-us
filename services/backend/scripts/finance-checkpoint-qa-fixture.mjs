@@ -54,6 +54,13 @@ async function main() {
       await command(0, { kind: 'assign_chore', choreId: id, title: 'Fictional cancelled practice task', rewardCents: 1, dates });
       for (const date of dates) await command(0, { kind: 'close_chore', occurrenceId: `${id}:${date}`, status: 'cancelled', note: 'Cancelled fictional QA task' });
     }
+    // Keep one current paid row alongside the retained unacknowledged garden receipt.
+    const currentChore = randomUUID(), currentOccurrence = `${currentChore}:${today}`;
+    await command(0, { kind: 'assign_chore', choreId: currentChore, title: 'Fictional current payment task', rewardCents: 1000, dates: [today] });
+    await command(1, { kind: 'submit_chore', occurrenceId: currentOccurrence });
+    await command(0, { kind: 'review_chore', occurrenceId: currentOccurrence, decision: 'approved' });
+    const currentPayout = randomUUID(); await command(1, { kind: 'request_payout', amountCents: 100 }, currentPayout);
+    await command(0, { kind: 'report_payment', payoutId: `${fixture.child.id}:${currentPayout}`, amountCents: 100, method: 'cash', paidAt });
     const records = await fetch(`${endpoint}/history`, { headers: { authorization: `Bearer ${people[1].token}` } }).then(r => r.ok ? r.json() : Promise.reject());
     const parent = await fetch(`${endpoint}/parent-history`, { headers: { authorization: `Bearer ${people[0].token}` } }).then(r => r.ok ? r.json() : Promise.reject());
     if (!records.items.length || !parent.items.some(r => r.match.id === matchId)) throw Error();

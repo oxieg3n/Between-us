@@ -36,7 +36,8 @@ export default defineConfig({
   },
   webServer: {
     command: "node node_modules/expo/bin/cli start --web --localhost --port 8081",
-    url: "http://127.0.0.1:8081",
+    // Availability uses Metro status; cold web compilation is checked by the actual welcome screen.
+    url: "http://127.0.0.1:8081/status",
     timeout: 120_000,
     // The root operator separately verifies the running Metro project and production environment.
     reuseExistingServer: process.env.BETWEENUS_REUSE_QA_METRO === "1",

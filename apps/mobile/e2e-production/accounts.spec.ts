@@ -8,7 +8,7 @@ type MobileFixture = {
   parent: Credentials;
   child: Credentials & { name: string };
   conversation: { id: string };
-  financeArchiveQa?: { occurrenceId: string };
+  financeArchiveQa?: { occurrenceId: string; matchId: string };
 };
 function readFixture(): MobileFixture {
   try { return JSON.parse(readFileSync(localUiFixturePath(process.env.BETWEENUS_PRODUCTION_UI_FIXTURE), "utf8")); }
@@ -327,6 +327,8 @@ test('financial history keeps bounded older records and private parent matching 
     await chooseGarden();
     await button(page, 'Review historical receipt acknowledgment').click();
     await expect(heading(page, 'Did you receive this amount?')).toBeVisible();
+    await expect(page.getByText(/^Acknowledge personally receiving /)).toContainText('$1.00');
+    await expect(page.getByText(/^Acknowledge personally receiving /)).toContainText('Payment reference:');
     await expect(button(page, 'Confirm financial action')).toBeEnabled();
     await button(page, 'Return to editing').click();
   } else await expect(page.getByText('No older settled records are available in this page.', {exact: true})).toBeVisible();
@@ -338,6 +340,8 @@ test('financial history keeps bounded older records and private parent matching 
     await page.getByRole('textbox', {name: 'Reason for a historical correction', exact: true}).fill('Fictional review only; original sources stay intact.');
     await button(page, 'Review historical earning correction: Fictional garden watering').click();
     await expect(heading(page, 'Correct this historical earning?')).toBeVisible();
+    await expect(page.getByText(/^Fictional garden watering, due /)).toContainText('Earning reference: ' + fixture.financeArchiveQa.occurrenceId);
+    await expect(page.getByText(/^Fictional garden watering, due /)).toContainText('Fictional review only; original sources stay intact.');
     await button(page, 'Return to editing').click();
   }
   await button(page, 'All financial sections').click(); await button(page, 'Parent matching').click();
@@ -346,6 +350,12 @@ test('financial history keeps bounded older records and private parent matching 
   await expect(button(page, 'Refresh open matching records')).toBeEnabled();
   await button(page, 'Load older parent matching records').click();
   await expect(button(page, 'Refresh parent matching history')).toBeEnabled();
-  if (fixture.financeArchiveQa) await expect(button(page, 'Review revealing this retained contribution')).toBeEnabled();
+  if (fixture.financeArchiveQa) {
+    await button(page, 'Review revealing this retained contribution').click();
+    await expect(heading(page, 'Reveal this retained contribution?')).toBeVisible();
+    await expect(page.getByText(/^Contribution for /)).toContainText('Reference: ' + fixture.financeArchiveQa.matchId);
+    await expect(page.getByText(/^Contribution for /)).toContainText('$0.50');
+    await button(page, 'Return to editing').click();
+  }
   await scan(page);
 });
