@@ -65,7 +65,7 @@ export async function runPreflight({ local = false, targetPath } = {}) {
   const migrations = await inventoryMigrations(path.join(root, 'supabase/migrations'));
   const files = ['package.json', 'package-lock.json', 'supabase/config.toml', 'supabase/functions/api/index.ts', 'supabase/functions/_shared/api.bundle.js',
     'config/staging/approved-targets.json', 'scripts/staging-preflight.mjs', 'scripts/staging-plan.mjs', 'scripts/build.mjs',
-    '../../apps/mobile/src/finance/engine.ts', '../../apps/mobile/src/finance/types.ts', '../../apps/mobile/src/finance/money-calendar.ts',
+    '../../apps/mobile/src/finance/engine.ts', '../../apps/mobile/src/finance/checkpoint.ts', '../../apps/mobile/src/production/finance-history-types.ts', '../../apps/mobile/src/finance/types.ts', '../../apps/mobile/src/finance/money-calendar.ts',
     '../../apps/mobile/src/production/deployment-target.ts', '../../apps/mobile/src/production/client.ts',
     '../../apps/mobile/app.json', '../../apps/mobile/package.json', '../../apps/mobile/package-lock.json', '../../apps/mobile/src/build.ts'];
   for (const entry of await readdir(path.join(root, 'src'), { withFileTypes: true })) {

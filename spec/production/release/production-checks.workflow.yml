@@ -74,6 +74,7 @@ jobs:
           if (process.env.SUPABASE_ACCESS_TOKEN || process.env.SUPABASE_DB_PASSWORD) throw Error('Hosted credentials are not allowed in this job.');
           const config = await readFile('supabase/config.toml', 'utf8');
           if (!config.includes('project_id = "betweenus-production-local"') || !config.includes('schemas = ["api"]')) throw Error('Unexpected local stack configuration.');
+          if (!/^\[functions\.api\]\r?\nverify_jwt = true(?:\r?\n|$)/m.test(config)) throw Error('Local API JWT verification must stay enabled.');
           JS
           node node_modules/supabase/dist/supabase.js --version
       - name: Start disposable Supabase without printing generated credentials
@@ -117,6 +118,32 @@ jobs:
             echo '::error::Loopback-only fictional seed failed.'
             exit 1
           fi
+          edge_pid=''
+          retire_edge() {
+            # jobs -pr proves this is still the live child launched by this shell, not a reused PID.
+            if [ -n "$edge_pid" ] && [ "$(jobs -pr)" = "$edge_pid" ]; then
+              kill -TERM "$edge_pid" 2>/dev/null || true
+              for attempt in {1..20}; do
+                [ "$(jobs -pr)" = "$edge_pid" ] || break
+                sleep 0.25
+              done
+              if [ "$(jobs -pr)" = "$edge_pid" ]; then kill -KILL "$edge_pid" 2>/dev/null || true; fi
+            fi
+            if [ -n "$edge_pid" ]; then wait "$edge_pid" 2>/dev/null || true; fi
+          }
+          trap retire_edge EXIT
+          trap 'exit 130' INT
+          trap 'exit 143' TERM
+          node node_modules/supabase/dist/supabase.js functions serve api >.local/ci-edge.log 2>&1 &
+          edge_pid=$!
+          if ! node scripts/wait-local-edge.mjs >.local/ci-edge-ready.log 2>&1; then
+            echo '::error::JWT-verified local API readiness failed. Raw logs and credentials are withheld.'
+            exit 1
+          fi
+          if ! kill -0 "$edge_pid" 2>/dev/null; then
+            echo '::error::The owned local API server exited before integration.'
+            exit 1
+          fi
           if ! npm run test:integration >.local/ci-auth-tests.log 2>&1; then
             echo '::error::Real local Auth fixture tests failed. Raw identity/session output is withheld.'
             exit 1
@@ -131,5 +158,5 @@ jobs:
           if [ -f node_modules/supabase/dist/supabase.js ]; then
             node node_modules/supabase/dist/supabase.js stop --no-backup >.local/ci-stop.log 2>&1 || true
           fi
-          rm -f .local/status.json .local/ci-start.log .local/ci-status.log .local/ci-sql-tests.log .local/ci-seed.log .local/ci-auth-tests.log .local/ci-stop.log
+          rm -f .local/status.json .local/ci-start.log .local/ci-status.log .local/ci-sql-tests.log .local/ci-seed.log .local/ci-auth-tests.log .local/ci-edge.log .local/ci-edge-ready.log .local/ci-stop.log
           # No credential/log/build artifact upload, deployment, signing or paid resource step.

@@ -1,4 +1,5 @@
 import { test } from 'node:test';
+import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import { mkdtemp, writeFile, readFile, rm } from 'node:fs/promises';
 import os from 'node:os';
@@ -121,6 +122,11 @@ test('local preflight hashes source without network or credential reads and host
   assert.match(result.fingerprint, /^[a-f0-9]{64}$/); assert.ok(result.migrations.length >= 24);
   assert.ok(result.artifacts.some((f: { name: string }) => f.name === 'src/free-plan.ts'));
   assert.ok(result.artifacts.some((f: { name: string }) => f.name === '../../apps/mobile/src/finance/engine.ts'));
+  for (const name of ['../../apps/mobile/src/finance/checkpoint.ts', '../../apps/mobile/src/production/finance-history-types.ts']) {
+    const artifact = result.artifacts.find((item: { name: string }) => item.name === name);
+    assert.ok(artifact, `The reviewed plan must cover shared finance dependency ${name}`);
+    assert.equal(artifact.sha256, createHash('sha256').update(await readFile(new URL(`../${name}`, import.meta.url))).digest('hex'));
+  }
   await assert.rejects(runPreflight());
 });
 test('dashboard writes numeric-only offline sample, and refuses content-bearing input without echo', async () => {
