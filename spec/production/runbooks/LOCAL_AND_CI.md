@@ -79,7 +79,7 @@ try {
 }
 ```
 
-The isolated r12 demo suite owns **8084**, explicitly selects `EXPO_PUBLIC_APP_MODE=demo`, and refuses reuse:
+The isolated r12 demo suite owns **8084**, explicitly selects `EXPO_PUBLIC_APP_MODE=demo`, and refuses reuse. Before running it, quiesce native/production QA and stop Metro in its verified owner-started terminal. The guarded launcher checks both `127.0.0.1:8081` and `[::1]:8081` before starting Expo or clearing its cache; an active listener, unknown socket error or bounded probe timeout refuses the run. Do not kill a listener using a stale PID or start another pipeline during this check/run. Playwright owns and tears down the launcher/Expo process tree; the launcher does not detach or invoke a shell. These point-in-time checks supplement the serialized operator procedure. After demo teardown, use the guarded native launcher with its reviewed cache-clear/restart procedure before resuming native QA.
 
 ```powershell
 Set-Location -LiteralPath 'D:\projects\BetweenUs\apps\mobile'

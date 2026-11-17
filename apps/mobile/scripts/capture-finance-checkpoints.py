@@ -76,6 +76,14 @@ def finance():
 def older():
  tap('Financial history');tap('Older settled financial records');snap('history-entry','Direct access to older settled records without scrolling through100 recent actions.')
  tap('Load older settled records');require('Refresh older records');snap('archive-page','Twenty-record server-authorized archive page.')
+ hint=fixture['financeArchiveQa'].get('gardenPageIndex')
+ if hint is not None:
+  if not isinstance(hint,int) or not 0<=hint<=6:raise RuntimeError('Bounded fictional navigation hint refused.')
+  for _ in range(hint):tap('Next page of settled records')
+  node=n.locate('Open settled record: Fictional garden watering',prefix=True,clickable=True)
+  x,y=n.bounds(node);n.command('shell','input','tap',x,y);time.sleep(.2)
+  align('Retained record');snap('settled-record','Actual retained earning and manual payout report; no provider transfer.')
+  return
  for page in range(7):
   node=None
   for position in range(6):
@@ -125,6 +133,6 @@ finally:
  previous=json.loads(manifest.read_text()) if manifest.exists() else {'format':1,'build':BUILD,'captures':[],'checks':[]}
  captures={item['file']:item for item in previous['captures']}
  captures.update({item['file']:item for item in n.records})
- previous.update({'build':BUILD,'gitHeadAtCapture':subprocess.check_output(['git','-C',str(ROOT),'rev-parse','HEAD'],text=True).strip(),'captures':list(captures.values()),'checks':previous['checks']+checks+[{'run':args.role+'-'+args.theme,'result':status}], 'device':{'avd':'Pixel_10','serial':'emulator-5554','android':n.command('shell','getprop','ro.build.version.release'),'sdk':n.command('shell','getprop','ro.build.version.sdk'),'resolution':n.command('shell','wm','size'),'density':n.command('shell','wm','density')},'actualNativeAdbCaptures':True,'credentialsIncluded':False,'protectedWindowsBypassed':False})
+ previous.update({'build':BUILD,'backendBuild':fixture['financeArchiveQa']['build'],'fixtureSha256':hashlib.sha256(file.read_bytes()).hexdigest(),'gitHeadAtCapture':subprocess.check_output(['git','-C',str(ROOT),'rev-parse','HEAD'],text=True).strip(),'captures':list(captures.values()),'checks':previous['checks']+checks+[{'run':args.role+'-'+args.theme,'result':status}], 'device':{'avd':'Pixel_10','serial':'emulator-5554','android':n.command('shell','getprop','ro.build.version.release'),'sdk':n.command('shell','getprop','ro.build.version.sdk'),'resolution':n.command('shell','wm','size'),'density':n.command('shell','wm','density')},'actualNativeAdbCaptures':True,'credentialsIncluded':False,'protectedWindowsBypassed':False})
  manifest.write_text(json.dumps(previous,indent=2)+'\n',encoding='utf8')
 print(json.dumps({'status':status,'role':args.role,'theme':args.theme,'captures':len(n.records)}))
