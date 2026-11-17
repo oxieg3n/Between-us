@@ -6,10 +6,11 @@ import { randomUUID } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import pg from 'pg';
+import assert from 'node:assert/strict';
 import { CONTAINER, MAX_BYTES, SCHEMAS, sha256, fail, sourceGuard, targetGuard, spaceGuard, versionGuard,
   authenticatedRestore, tapSummary, tombstoneGuard, safeFailure } from '../recovery/guards.mjs';
 import { createFixture, fixtureRecord, revokeFixture, retireOwnedIdentities } from '../recovery/fixture.mjs';
-import { inventory, assertSnapshot, quarantineGuard, replayFixture, assertReplay, withClaims } from '../recovery/database.mjs';
+import { inventory, assertSnapshot, financeArchiveIntegrity, quarantineGuard, replayFixture, assertReplay, withClaims } from '../recovery/database.mjs';
 
 const backend = path.resolve(fileURLToPath(new URL('../', import.meta.url)));
 const privateRoot = path.join(backend, '.local', 'recovery');
@@ -144,12 +145,15 @@ async function main() {
     report.ownFixtureCreated = true;
     report.stage = 'snapshot-encrypted-export';
     await source.query('begin isolation level repeatable read read only');
-    let snapshot, encrypted, snapshotAt;
+    let snapshot, encrypted, snapshotAt, sourceArchives;
     try {
       const state = (await source.query('select pg_export_snapshot() as snapshot_id,clock_timestamp() as observed_at')).rows[0];
       if (!/^[A-Fa-f0-9-]+$/.test(state.snapshot_id)) fail();
       snapshotAt = state.observed_at.toISOString();
       snapshot = await inventory(source);
+      report.stage = 'source-archive-integrity';
+      sourceArchives = await financeArchiveIntegrity(source, true);
+      report.stage = 'snapshot-encrypted-export';
       encrypted = await encryptedDump(state.snapshot_id, recipient);
       await source.query('commit');
     } catch (error) { await source.query('rollback'); throw error; }
@@ -158,7 +162,7 @@ async function main() {
     await writeExclusive(partial, encrypted);
     // link() publishes without replacing any existing destination; the encrypted partial is retained as evidence.
     await link(partial, backup);
-    const trustedRegistry = { format: 1, runId, ciphertextHash, snapshotAt, snapshot,
+    const trustedRegistry = { format: 1, runId, ciphertextHash, snapshotAt, snapshot, sourceArchives,
       archive: 'snapshot.age', tool: TOOL_RELEASE, operatorOriginVerification: 'local root only; off-host registry not qualified' };
     await writeExclusive(path.join(registry, 'snapshot.json'), trustedRegistry);
     report.stage = 'source-owned-post-snapshot-revocation';
@@ -169,7 +173,8 @@ async function main() {
     await writeExclusive(path.join(registry, 'tombstone.json'), { runId, snapshotHash: ciphertextHash, ciphertextHash: sha256(tombstoneBytes) });
     await writeExclusive(path.join(archives, 'fixture.age'), await encrypt(Buffer.from(JSON.stringify(f))));
     report.backup = { ciphertextHash, ciphertextBytes: encrypted.length, snapshotAt, tableCount: snapshot.tables.length,
-      totalRows: snapshot.tables.reduce((n, table) => n + table.count, 0), migrations: snapshot.migrations };
+      totalRows: snapshot.tables.reduce((n, table) => n + table.count, 0), migrations: snapshot.migrations,
+      structureHash: snapshot.structureHash, sourceArchives };
     report.stage = 'actual-age-faults';
     const faults = {};
     for (const kind of ['corruption', 'truncation', 'wrongKey']) {
@@ -227,15 +232,22 @@ async function main() {
         await quarantineGuard(target, name, runId);
         if (stage === 'snapshot') {
           assertSnapshot(await inventory(target), snapshot);
-          report.snapshotIntegrity = 'exact rows, table ACL/RLS, functions/policies, migrations';
+          report.stage = 'restored-source-archive-integrity';
+          const restoredArchives = await financeArchiveIntegrity(target, true);
+          assert.deepEqual(restoredArchives, trusted.sourceArchives);
+          report.restoredSourceArchives = restoredArchives;
+          report.snapshotIntegrity = 'exact rows, table ACL/RLS, functions/policies, indexes/constraints/triggers, migrations, actual source archive integrity';
           const suites = [];
-          for (const file of ['finance.test.sql', 'communication.test.sql', 'privacy_lifecycle.test.sql', 'message_receipts.test.sql']) {
+          for (const file of ['finance.test.sql', 'communication.test.sql', 'privacy_lifecycle.test.sql', 'message_receipts.test.sql',
+            'finance_checkpoints.test.sql', 'finance_private_archives.test.sql', 'finance_privacy_archives.test.sql', 'finance_write_admission.test.sql',
+            'finance_archive_page_reads.test.sql']) {
             report.stage = `restored-sql-${file}`;
             const sql = await readFile(path.join(backend, 'supabase/tests', file), 'utf8');
             suites.push({ file, sha256: sha256(sql), assertions: tapSummary(await target.query(sql)) });
           }
           report.restoredSqlSuites = suites;
           assertSnapshot(await inventory(target), snapshot);
+          assert.deepEqual(await financeArchiveIntegrity(target, true), restoredArchives);
           // Real persisted pre-snapshot commands replay against restored SQL, preserving the 400-cent earning.
           const parent = f.parentClaims;
           await withClaims(target, parent, 'authenticated', 'select api.send_message($1,$2,$3,$4)',

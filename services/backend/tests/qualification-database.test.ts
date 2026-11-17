@@ -10,11 +10,11 @@ test('financial crash fixture preserves initial BEGIN and removes only the exact
     'begin;\nselect 1;\nrollback;\n']) assert.throws(() => heldFinanceTransaction(sql));
 });
 test('fresh qualification requires the entire reviewed contiguous migration set', () => {
-  const files = Array.from({ length: 26 }, (_, i) => `20261116${String(i + 1).padStart(4, '0')}_reviewed.sql`);
-  assert.equal(migrationPlan(files.reverse()).length, 26);
+  const files = Array.from({ length: 31 }, (_, i) => `20261116${String(i + 1).padStart(4, '0')}_reviewed.sql`);
+  assert.equal(migrationPlan(files.reverse()).length, 31);
   assert.throws(() => migrationPlan(files.slice(1)));
   assert.throws(() => migrationPlan([...files, 'new.pending']));
-  assert.throws(() => migrationPlan([...files.slice(1), '202611160027_unreviewed.sql']));
+  assert.throws(() => migrationPlan([...files.slice(1), '202611160032_unreviewed.sql']));
 });
 test('platform bootstrap omits only the three app triggers that migrations recreate and rejects other dependencies/data', () => {
   const sql = 'CREATE SCHEMA auth;\n' + [ ['between_us_auth_profile', 'on_auth_user_created', 'AFTER INSERT'],
@@ -38,12 +38,13 @@ test('connection termination requires the exact fresh database, run application 
 });
 test('fresh schema parity ignores intended empty data while enforcing owners, RLS, grants, code and migration state', () => {
   const source = { tables: [{ schema: 'api', name: 'data', owner: 'postgres', rls: true, acl: [], count: 10, hash: 'old' }],
-    codeHash: 'same', extensionSchema: [], migrations: ['001'] };
+    codeHash: 'same', structureHash: 'same-structure', extensionSchema: [], migrations: ['001'] };
   const fresh = { ...source, tables: [{ ...source.tables[0], count: 0, hash: 'empty' }] };
   schemaParity(fresh, source);
   for (const property of ['owner', 'rls', 'acl']) {
     assert.throws(() => schemaParity({ ...fresh, tables: [{ ...fresh.tables[0], [property]: 'changed' }] }, source));
   }
   assert.throws(() => schemaParity({ ...fresh, codeHash: 'changed' }, source));
+  assert.throws(() => schemaParity({ ...fresh, structureHash: 'changed-index-or-trigger' }, source));
   assert.throws(() => schemaParity({ ...fresh, migrations: [] }, source));
 });

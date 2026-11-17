@@ -5,7 +5,7 @@ import { randomUUID } from 'node:crypto';
 import path from 'node:path';
 import pg from 'pg';
 import { CONTAINER, MAX_BYTES, sourceGuard, targetGuard, versionGuard, fail, sha256, tapSummary, safeFailure } from '../recovery/guards.mjs';
-import { inventory, quarantineGuard } from '../recovery/database.mjs';
+import { inventory, financeArchiveIntegrity, quarantineGuard } from '../recovery/database.mjs';
 import { migrationPlan, platformBootstrap, ownedProbePid, schemaParity, heldFinanceTransaction } from '../recovery/qualification.mjs';
 
 const backend = path.resolve(fileURLToPath(new URL('../', import.meta.url)));
@@ -26,7 +26,7 @@ const docker = (program, args, input) => command('docker', ['exec', '-i', CONTAI
 async function main() {
   const args = process.argv.slice(2);
   if (!args.length || args.length === 1 && args[0] === 'plan') {
-    console.log(JSON.stringify({ mode: 'dry-run', operation: 'fresh-application-schema-qualification', migrations: 26,
+    console.log(JSON.stringify({ mode: 'dry-run', operation: 'fresh-application-schema-qualification', migrations: 31,
       sourceWrites: false, creates: 'new quarantined database only', termination: 'own uncommitted probe connection only',
       hostedFreshInstall: false, financialCrashProof: false })); return;
   }
@@ -51,7 +51,8 @@ async function main() {
     const policy = (await source.query('select local_synthetic,public_enrollment_enabled,real_child_data_enabled,public_reports_enabled from app_private.deployment_policy where singleton')).rows[0];
     if (!policy.local_synthetic || policy.public_enrollment_enabled || policy.real_child_data_enabled || policy.public_reports_enabled) fail();
     const expected = await inventory(source);
-    if (expected.migrations.length !== 26 || expected.migrations.at(-1) !== '202611160026') fail();
+    report.sourceArchives = await financeArchiveIntegrity(source);
+    if (expected.migrations.length !== 31 || expected.migrations.at(-1) !== '202611160031') fail();
     const parent = path.join(backend, '.local/qualification'); await mkdir(parent, { recursive: true, mode: 0o700 });
     if ((await realpath(parent)).toLowerCase() !== parent.toLowerCase()) fail();
     output = path.join(parent, runId); await mkdir(output, { mode: 0o700 });
@@ -101,6 +102,7 @@ async function main() {
     report.stage = 'fresh-schema-parity';
     const actual = await inventory(target); schemaParity(actual, expected);
     report.schemaParity = { tableCount: actual.tables.length, functionsPoliciesHash: actual.codeHash,
+      structureHash: actual.structureHash,
       ownersRlsGrantsAndMigrationsEqual: true };
     const closed = (await target.query(`select not d.local_synthetic and not d.public_enrollment_enabled and not d.real_child_data_enabled
       and not d.public_reports_enabled and d.guardian_managed_children and not c.public_report_intake
@@ -115,6 +117,7 @@ async function main() {
       const sql = await readFile(path.join(backend, 'supabase/tests', file), 'utf8');
       report.sqlSuites.push({ file, sha256: sha256(sql), assertions: tapSummary(await target.query(sql)) });
     }
+    report.freshArchiveIntegrity = await financeArchiveIntegrity(target);
     report.stage = 'owned-connection-crash';
     await quarantineGuard(target, name, runId, 'qualification');
     await target.query('create schema qualification_probe; create table qualification_probe.atomic_probe(id uuid primary key)');

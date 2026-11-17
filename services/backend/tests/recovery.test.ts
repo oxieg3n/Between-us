@@ -1,12 +1,60 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { applyFinanceCommand, checkpointState, createFinanceState, exportBooks } from '../../../apps/mobile/src/finance/engine.ts';
+import { compactBook, hydrateBook } from '../../../apps/mobile/src/finance/checkpoint.ts';
 // @ts-expect-error Recovery orchestration is ordinary ESM used by the reviewed CLI.
 import { sourceGuard, targetGuard, spaceGuard, versionGuard, tombstoneGuard, scheduleHealth, sha256, authenticatedRestore, tapSummary, MAX_BYTES, checkedResult, safeFailure, canonicalAcl } from '../recovery/guards.mjs';
 // @ts-expect-error Root-only fixture orchestration has a fake SQL port in this portable failure test.
 import { retireOwnedIdentities } from '../recovery/fixture.mjs';
+// @ts-expect-error Read-only recovery audit has a portable SQL port for corruption and metadata tests.
+import { archiveAuditSummary, financeArchiveIntegrity, assertSnapshot } from '../recovery/database.mjs';
 
 const run = 'a'.repeat(32);
 const local = { DB_URL: 'postgresql://postgres:fictional@127.0.0.1:54322/postgres', API_URL: 'http://127.0.0.1:54321', ANON_KEY: 'fictional', SERVICE_ROLE_KEY: 'fictional' };
+
+const archived = { families: 2, checkpoints: 8, visibleCapsules: 3, activeVisibleCapsules: 2, visibleCurrentEntities: 10,
+  archivedOccurrences: 5, privateOrigins: 4, privateCapsules: 4, activePrivateCapsules: 1, projectionSnapshots: 2, activityRows: 20, issues: 0 };
+test('declined archived occurrence remains terminal after hydration and cannot change its permanent zero budget basis', () => {
+  const childId = 'fictional-declined-child', at = '2026-01-01T12:00:00.000Z';
+  let state = createFinanceState('UTC', [{ id: childId, name: 'Fictional child' }]);
+  state = applyFinanceCommand(state, { role: 'parent' }, { id: 'plan', childId, at, kind: 'configure_plan', plan: {
+    budgetCents: 5000, period: 'monthly', anchorDate: '2026-01-01', payoutCadence: 'per_task', minimumPayoutCents: 0, allowGoalRelease: true } });
+  state = applyFinanceCommand(state, { role: 'parent' }, { id: 'assign', childId, at, kind: 'assign_chore', choreId: 'declined', title: 'Fictional chore', rewardCents: 100, dates: ['2026-01-01'] });
+  state = applyFinanceCommand(state, { role: 'child', childId }, { id: 'submit', childId, at, kind: 'submit_chore', occurrenceId: 'declined:2026-01-01' });
+  state = applyFinanceCommand(state, { role: 'parent' }, { id: 'decline', childId, at, kind: 'review_chore', occurrenceId: 'declined:2026-01-01', decision: 'declined' });
+  const compacted = compactBook(exportBooks(state)[childId], childId);
+  assert.equal(compacted.capsules.length, 1);assert.equal(compacted.book.archivedBudget!.maximumCents, 0);
+  const archivedState = checkpointState(state, { [childId]: compacted.book });
+  const restored = checkpointState(archivedState, { [childId]: hydrateBook(compacted.book, compacted.capsules[0], childId) });
+  assert.throws(() => applyFinanceCommand(restored, { role: 'child', childId }, { id: 'resubmit', childId, at, kind: 'submit_chore', occurrenceId: 'declined:2026-01-01' }), /cannot be submitted again/);
+  assert.throws(() => applyFinanceCommand(restored, { role: 'parent' }, { id: 'approve', childId, at, kind: 'review_chore', occurrenceId: 'declined:2026-01-01', decision: 'approved' }), /submitted chore/);
+});
+test('actual archive audit cannot silently qualify empty, malformed, or corrupted source history', () => {
+  assert.equal(archiveAuditSummary(archived, true).actualArchiveCoverage, true);
+  const empty = Object.fromEntries(Object.keys(archived).map(key => [key, 0]));
+  assert.equal(archiveAuditSummary(empty).actualArchiveCoverage, false);assert.throws(() => archiveAuditSummary(empty, true));
+  for (const change of [{ issues: 1 }, { issues: undefined }, { checkpoints: -1 }, { privateCapsules: NaN }, { activeVisibleCapsules: 4 }, { families: 1.1 }]) {
+    assert.throws(() => archiveAuditSummary({ ...archived, ...change }, true));
+  }
+  assert.equal(JSON.stringify(archiveAuditSummary({ ...archived, privateIdentity: 'must-not-escape' })).includes('must-not-escape'), false);
+});
+test('read-only archive audit first verifies live aggregate sources and fails any returned integrity issue', async () => {
+  const calls: string[] = [];
+  const db = { async query(sql: string) {
+    calls.push(sql);assert.doesNotMatch(sql, /\b(insert|update|delete|alter|create|drop)\b/i);
+    return calls.length === 1 ? { rowCount: 2, rows: [{ checked: '' }, { checked: '' }] } : { rows: [archived] };
+  } };
+  assert.deepEqual(await financeArchiveIntegrity(db, true), archiveAuditSummary(archived, true));
+  assert.match(calls[0], /finance_verify_source/);
+  await assert.rejects(financeArchiveIntegrity({ async query(sql: string) {
+    return sql.includes(' checked ') ? { rowCount: 2, rows: [] } : { rows: [{ ...archived, issues: 1 }] };
+  } }, true));
+});
+test('restore parity rejects changed or missing index, constraint and trigger definition digests', () => {
+  const expected = { tables: [], codeHash: 'code', structureHash: 'structure', migrations: [], extensionSchema: [] };
+  assertSnapshot({ ...expected }, expected);
+  for (const structureHash of [undefined, 'different']) assert.throws(() => assertSnapshot({ ...expected, structureHash }, expected));
+});
 test('ACL order is irrelevant while every grantor, grantee, privilege and grant option remains integrity checked', () => {
   const a = { grantor: 'owner', grantee: 'PUBLIC', privilege: 'EXECUTE', grantable: false };
   const b = { grantor: 'owner', grantee: 'authenticated', privilege: 'EXECUTE', grantable: false };

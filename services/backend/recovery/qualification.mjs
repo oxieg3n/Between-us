@@ -2,7 +2,7 @@ import { fail, targetGuard, sha256 } from './guards.mjs';
 
 export function migrationPlan(files) {
   const selected = files.filter(name => name.endsWith('.sql')).sort();
-  if (files.some(name => name.endsWith('.pending')) || selected.length !== 26) fail();
+  if (files.some(name => name.endsWith('.pending')) || selected.length !== 31) fail();
   selected.forEach((name, index) => {
     if (!new RegExp(`^20261116${String(index + 1).padStart(4, '0')}_[a-z_]+\\.sql$`).test(name)) fail();
   });
@@ -29,7 +29,9 @@ export function ownedProbePid(actual, name, runId, administrativePid) {
 }
 export function schemaParity(actual, expected) {
   const tables = value => value.tables.map(({ count, hash, ...schema }) => schema);
-  if (JSON.stringify(tables(actual)) !== JSON.stringify(tables(expected)) || actual.codeHash !== expected.codeHash
+  if (typeof actual.structureHash !== 'string' || typeof expected.structureHash !== 'string'
+    || JSON.stringify(tables(actual)) !== JSON.stringify(tables(expected)) || actual.codeHash !== expected.codeHash
+    || actual.structureHash !== expected.structureHash
     || JSON.stringify(actual.extensionSchema) !== JSON.stringify(expected.extensionSchema)
     || JSON.stringify(actual.migrations) !== JSON.stringify(expected.migrations)) fail();
 }
