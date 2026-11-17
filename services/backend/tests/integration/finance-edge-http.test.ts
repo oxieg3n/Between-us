@@ -15,7 +15,7 @@ test('real local Edge gateway preserves managed identity, finance idempotency an
     });
     const health = await fetch('http://127.0.0.1:54321/functions/v1/api/health', { headers: { authorization: `Bearer ${f.publicKey}`, apikey: f.publicKey } });
     assert.equal(health.status, 200, 'start pinned local functions serve with JWT verification enabled');
-    assert.equal((await health.json()).build, '1116-FinanceCheckpoints-r1');
+    assert.equal((await health.json()).build, '1116-FinanceCheckpoints-r2');
     const plan = { budgetCents: 5000, period: 'monthly', anchorDate: f.today, payoutCadence: 'per_task', minimumPayoutCents: 0, allowGoalRelease: true };
     const id = randomUUID(), action = { kind: 'configure_plan', plan };
     const accepted = await request(f.parent, '', { id, action }); assert.equal(accepted.status, 200);

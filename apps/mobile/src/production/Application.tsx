@@ -1416,7 +1416,7 @@ export default function ProductionApplication() {
             {busy && <Body>Checking with the account service…</Body>}
             {content}
             {['Chats','conversation','review'].includes(screen) && !!connectionNotice && <Body muted>{connectionNotice}</Body>}
-            <Body muted style={{fontSize:11}}>1116-FinanceCheckpoints-r1 · {deploymentTarget.statusLabel}</Body>
+            <Body muted style={{fontSize:11}}>1116-FinanceCheckpoints-r2 · {deploymentTarget.statusLabel}</Body>
             <Button label="Help & safety" quiet onPress={() => go("safety")} />
           </ScrollView>
         </View>
