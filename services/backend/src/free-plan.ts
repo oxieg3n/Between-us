@@ -14,6 +14,12 @@ export const FINANCE_STORAGE_MEASUREMENT = Object.freeze({
   weeks: 52, events: 1307, bytesIncludingIndexes: 6_397_952,
   scope: 'LOCAL synthetic PostgreSQL JSONB/TOAST/indexes; no hosted proof',
 });
+/** Owner-approved planning targets only. No hosted enrollment/retention enforcement is implied. */
+export const PILOT_SCOPE_REQUIREMENTS = Object.freeze({
+  intendedFamilies: 3, historyWindowMonths: 12, financeForecastDays: 365,
+  enrollmentCapEnforced: false, automaticFinancialDeletionApproved: false,
+  scope: 'owner-accepted pilot target; external legal/privacy and hosted release gates remain closed',
+});
 export const DEFAULT_CAPACITY_ASSUMPTIONS = Object.freeze({
   accountsPerFamily: 4, daysPerMonth: 30, messagesPerFamilyDay: 10, messageHistoryDays: 30, storedMessageBytes: 4096,
   financeCommandsPerFamilyDay: 8, financeGrowthDays: 365, storedFinanceCommandBytes: 5000,

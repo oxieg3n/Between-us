@@ -1,3 +1,5 @@
+> **2026-11-17 owner decision:** Trial **3 families maximum**; intended financial history **one year / rolling 12 months**, expandable through future server policy, not an automatic destructive cut-off. Documentation and pilot-first budget scenario approved; backend admission enforcement, history-window UX, lawful expiry and hosted proof still require Codex implementation/review. [Scope & implementation requirements](PILOT_3_FAMILIES_1_YEAR.md). Prior longevity numbers are stress evidence, not default retention. No live-family enrollment is approved.
+
 # Staging release qualification progress
 
 2026-11-16. Owner mission `MASTER_STAGING_RELEASE_QUALIFICATION.md`, remote `f859bfb`, baseline `53f7ebe`. Workspace `D:\projects\BetweenUs`, new branch `feature/staging-release-qualification`. Supabase Free is the selected intended provider. This is engineering qualification with fictional local data; hosted provisioning, credentials, public enrollment, signing, paid resources and real-child data are not authorized.

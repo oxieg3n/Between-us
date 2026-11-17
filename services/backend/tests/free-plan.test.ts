@@ -6,7 +6,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { FREE_QUOTAS, DEFAULT_CAPACITY_ASSUMPTIONS, estimateCapacity, assessUsage, OPERATION_LIMITS } from '../src/free-plan.ts';
+import { FREE_QUOTAS, DEFAULT_CAPACITY_ASSUMPTIONS, estimateCapacity, assessUsage, OPERATION_LIMITS, PILOT_SCOPE_REQUIREMENTS } from '../src/free-plan.ts';
 const { validateTarget, inventoryMigrations, runPreflight } = await import(new URL('../scripts/staging-preflight.mjs', import.meta.url).href);
 const { prepareCommands } = await import(new URL('../scripts/staging-plan.mjs', import.meta.url).href);
 const now = 1_000_000;
@@ -23,7 +23,7 @@ const target = () => ({ environment: 'hosted-staging', plan: 'free', projectRef:
   publicEnrollmentEnabled: false, realChildDataEnabled: false, publicReportsEnabled: false, pushDeliveryEnabled: false, approvalId: 'OWNER_SYNTHETIC_STAGE' });
 
 test('capacity scenarios repeat exactly and expose finance horizon, index overhead, backup egress and quotas', () => {
-  for (const families of [10, 100, 500, 1000]) {
+  for (const families of [3, 10, 100, 500]) {
     const result = estimateCapacity(families);
     assert.deepEqual(result, estimateCapacity(families));
     assert.equal(result.estimates.monthlyActiveUsers, families * 4);
@@ -34,6 +34,13 @@ test('capacity scenarios repeat exactly and expose finance horizon, index overhe
     assert.ok(result.assumptions.storedFinanceCommandBytes >= result.financeStorageMeasurement.bytesIncludingIndexes / result.financeStorageMeasurement.events);
     assert.equal(result.financeStorageMeasurement.sha256.length, 64);
   }
+  assert.equal(PILOT_SCOPE_REQUIREMENTS.intendedFamilies, 3);
+  assert.equal(PILOT_SCOPE_REQUIREMENTS.historyWindowMonths, 12);
+  assert.equal(PILOT_SCOPE_REQUIREMENTS.financeForecastDays, 365);
+  assert.equal(PILOT_SCOPE_REQUIREMENTS.enrollmentCapEnforced, false);
+  assert.equal(PILOT_SCOPE_REQUIREMENTS.automaticFinancialDeletionApproved, false);
+  assert.equal(estimateCapacity(3).estimates.databaseBytes, 112_514_311);
+  assert.ok(estimateCapacity(3).estimates.databaseBytes < FREE_QUOTAS.databaseBytes);
   assert.ok(estimateCapacity(100).estimates.databaseBytes > FREE_QUOTAS.databaseBytes);
   assert.ok(estimateCapacity(500).estimates.edgeInvocations > FREE_QUOTAS.edgeInvocations);
   assert.ok(estimateCapacity(1000).estimates.peakRealtimeConnections > FREE_QUOTAS.peakRealtimeConnections);

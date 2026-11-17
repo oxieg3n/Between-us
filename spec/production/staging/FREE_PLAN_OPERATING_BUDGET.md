@@ -1,3 +1,7 @@
+> **Owner scope update (2026-11-17): The planned initial trial is 3 families with a one-year (12-month) financial-history target, expandable later.** [Approved pilot specification](PILOT_3_FAMILIES_1_YEAR.md) controls new plans. The current source `financeGrowthDays:365` is already a one-year **forecast**, not a deletion policy. The existing 5- and 15-year results remain historical durability/stress evidence, not approved retention. No automatic purge, legal retention schedule or production 3-family admission cap has been implemented by this documentation change.
+>
+> **Pilot-first figures:** actual local one-year finance footprint for 2 children/family × 3 families = **38,387,712 bytes** (38.39 MB, finance-only); the current conservative full-service forecast at 3 families is approximately **112.51 MB DB**, **0.490 GB/month uncached egress including 4 exports**, **15,841 monthly Edge invocations** and **5,941 Realtime messages**. These are modeled, not hosted measurements. Subsequent sections with 10+ families are expansion stress scenarios, not the launch cohort.
+
 # Supabase Free operating budget
 
 Reviewed 2026-11-16. Supabase Free is the selected backend. **LOCAL implementation and estimates only; hosted project remains unprovisioned.** Owner spending authorization is $0. No automated upgrade, paid fallback, cloud inference, SMS or financial transfer is implemented. Existing hardware, storage, domain ownership, labor and specialist review still have costs.

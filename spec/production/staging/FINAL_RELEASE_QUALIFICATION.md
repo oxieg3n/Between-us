@@ -1,3 +1,5 @@
+> **Approved pilot scope change (2026-11-17):** The owner intends an initial trial of **3 families** and a **rolling 12-month financial-history target**, expandable by versioned policy later. See [PILOT_3_FAMILIES_1_YEAR.md](PILOT_3_FAMILIES_1_YEAR.md). Older 5-/15-year capacity comparisons below are immutable historical test evidence, **not** the owner's requested retention default. These requirements have not yet been qualified as a server-enforced pilot cap or approved automatic retention/deletion program. Current public-release decision remains **NO-GO**.
+
 # Staging release qualification - financial checkpoint continuation
 
 2026-11-16 (New York); **1116-FinanceCheckpoints-r3 /0.6.0/code5**, `feature/staging-release-qualification`, canonical workspace `D:\projects\BetweenUs`, origin `https://github.com/oxieg3n/Between-us.git`. Starting verified remote baseline `044450f`. The earlier Staging Qualification r1 evidence remains in Git history and `spec/qa/production/staging-r1/`.
